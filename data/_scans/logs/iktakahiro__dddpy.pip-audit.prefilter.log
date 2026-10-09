@@ -1,0 +1,39 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because uvloop==0.22.1 has no usable wheels and you require
+      uvloop==0.22.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `uvloop` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=0 ---
+=26.2
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pydantic==2.12.5
+ + pydantic-core==2.41.5
+ + pydantic-extra-types==2.11.1
+ + pydantic-settings==2.13.1
+ + pyrefly==0.59.1
+ + pytest==9.0.2
+ + python-dotenv==1.2.2
+ + python-multipart==0.0.22
+ + pyyaml==6.0.3
+ - rich==15.0.0
+ + rich==14.3.3
+ + rich-toolkit==0.19.7
+ + rignore==0.7.6
+ + ruff==0.15.9
+ + sentry-sdk==2.57.0
+ + shellingham==1.5.4
+ + sqlalchemy==2.0.48
+ + starlette==0.50.0
+ + typer==0.24.1
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ - urllib3==2.7.0
+ + urllib3==2.6.3
+ + uvicorn==0.42.0
+ + watchfiles==1.1.1
+ + websockets==16.0

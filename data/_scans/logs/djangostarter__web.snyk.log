@@ -1,0 +1,29 @@
+# project: djangostarter__web
+# scanner: snyk
+# time: Fri Jul 10 19:25:11 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\djangostarter__web.json
+# exit code: 0
+=== STDOUT ===
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\djangostarter__web...
+
+Organization:      wuwuyn
+Package manager:   pnpm
+Target file:       pnpm-lock.yaml
+Project name:      django_starter
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\djangostarter__web
+Licenses:          enabled
+
+✔ Tested 9 dependencies for known issues, no vulnerable paths found.
+
+Next steps:
+- Run `snyk monitor` to be notified about new related vulnerabilities.
+- Run `snyk test` as part of your CI/test.
+
+
+
+=== STDERR ===
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

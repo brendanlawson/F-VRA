@@ -1,0 +1,471 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-13T03:35:51.239641Z",
+  "source": {
+    "environment_manifest": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\interim\\resolved_versions\\project_environment_manifest.csv",
+    "benchmark": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\final\\cve_vf_benchmark_accepted.jsonl"
+  },
+  "project_count": 28,
+  "missing_project_count": 0,
+  "missing_projects": [],
+  "projects": [
+    {
+      "id": "alerta__alerta",
+      "name": "alerta__alerta",
+      "repo_full_name": "alerta/alerta",
+      "repo_url": "https://github.com/alerta/alerta.git",
+      "commit": "4ac0106300cd428b26ad4b373cf4a78f55f6b542",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\alerta__alerta",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "requirements-ci.txt",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "pyproject.toml",
+        "setup.py"
+      ],
+      "resolved_package_count": 26
+    },
+    {
+      "id": "alexferl__flask-simpleldap",
+      "name": "alexferl__flask-simpleldap",
+      "repo_full_name": "alexferl/flask-simpleldap",
+      "repo_url": "https://github.com/alexferl/flask-simpleldap.git",
+      "commit": "d6253303025d2764929c1f6110f0fa146354dc58",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\alexferl__flask-simpleldap",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "requirements.txt",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 23
+    },
+    {
+      "id": "Amm1rr__WebAI-to-API",
+      "name": "Amm1rr__WebAI-to-API",
+      "repo_full_name": "Amm1rr/WebAI-to-API",
+      "repo_url": "https://github.com/Amm1rr/WebAI-to-API.git",
+      "commit": "f81aa1248e0d78e53f7171c9bdb416952d71d4b6",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\Amm1rr__WebAI-to-API",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "requirements.txt",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 60
+    },
+    {
+      "id": "ATH-MaaS__Pixelle-MCP",
+      "name": "ATH-MaaS__Pixelle-MCP",
+      "repo_full_name": "ATH-MaaS/Pixelle-MCP",
+      "repo_url": "https://github.com/ATH-MaaS/Pixelle-MCP.git",
+      "commit": "b30e749655a91c5d8896f029ba83572aebf2d9a5",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\ATH-MaaS__Pixelle-MCP",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 181
+    },
+    {
+      "id": "benavlabs__FastAPI-boilerplate",
+      "name": "benavlabs__FastAPI-boilerplate",
+      "repo_full_name": "benavlabs/FastAPI-boilerplate",
+      "repo_url": "https://github.com/benavlabs/FastAPI-boilerplate.git",
+      "commit": "ae1b27dcf51fa06e8f9aee0d3dbaa9159afff4e3",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\benavlabs__FastAPI-boilerplate",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 106
+    },
+    {
+      "id": "benoitc__gunicorn",
+      "name": "benoitc__gunicorn",
+      "repo_full_name": "benoitc/gunicorn",
+      "repo_url": "https://github.com/benoitc/gunicorn.git",
+      "commit": "a8283bbf5e1416d0dd13f994f71ec2761988aeab",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\benoitc__gunicorn",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "requirements_dev.txt",
+        "requirements_test.txt",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 34
+    },
+    {
+      "id": "Chainlit__chainlit",
+      "name": "Chainlit__chainlit",
+      "repo_full_name": "Chainlit/chainlit",
+      "repo_url": "https://github.com/Chainlit/chainlit.git",
+      "commit": "b094a8fb208f313ec858f3bff3bb4e8c7e430ebc",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\Chainlit__chainlit",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 296
+    },
+    {
+      "id": "Cinnamon__kotaemon",
+      "name": "Cinnamon__kotaemon",
+      "repo_full_name": "Cinnamon/kotaemon",
+      "repo_url": "https://github.com/Cinnamon/kotaemon.git",
+      "commit": "9ad3e4e49aa35b8acddd235918a5d9753c1cfdf9",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\Cinnamon__kotaemon",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 420
+    },
+    {
+      "id": "djangostarter__web",
+      "name": "djangostarter__web",
+      "repo_full_name": "djangostarter/web",
+      "repo_url": "https://github.com/djangostarter/web.git",
+      "commit": "2cce2f972b9a794e4830e29d1320f7e470246080",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\djangostarter__web",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 91
+    },
+    {
+      "id": "eightBEC__fastapi-ml-skeleton",
+      "name": "eightBEC__fastapi-ml-skeleton",
+      "repo_full_name": "eightBEC/fastapi-ml-skeleton",
+      "repo_url": "https://github.com/eightBEC/fastapi-ml-skeleton.git",
+      "commit": "b7e21d8304b11201ea045c59c200d30ba40c96fa",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\eightBEC__fastapi-ml-skeleton",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 53
+    },
+    {
+      "id": "eosphoros-ai__DB-GPT",
+      "name": "eosphoros-ai__DB-GPT",
+      "repo_full_name": "eosphoros-ai/DB-GPT",
+      "repo_url": "https://github.com/eosphoros-ai/DB-GPT.git",
+      "commit": "209588ddd582e0501232a2bc5a3921997c2a5a7d",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\eosphoros-ai__DB-GPT",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 529
+    },
+    {
+      "id": "fastapi__asyncer",
+      "name": "fastapi__asyncer",
+      "repo_full_name": "fastapi/asyncer",
+      "repo_url": "https://github.com/fastapi/asyncer.git",
+      "commit": "325abe34e1974f10aab814b2663a758c8681dd54",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\fastapi__asyncer",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 82
+    },
+    {
+      "id": "FuzzyGrim__Yamtrack",
+      "name": "FuzzyGrim__Yamtrack",
+      "repo_full_name": "FuzzyGrim/Yamtrack",
+      "repo_url": "https://github.com/FuzzyGrim/Yamtrack.git",
+      "commit": "32f47fed61831e7b77f0eab621f1f692401aad03",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\FuzzyGrim__Yamtrack",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 122
+    },
+    {
+      "id": "iktakahiro__dddpy",
+      "name": "iktakahiro__dddpy",
+      "repo_full_name": "iktakahiro/dddpy",
+      "repo_url": "https://github.com/iktakahiro/dddpy.git",
+      "commit": "f9a2cfe542b7a08e8a2ca224ad38457814f0dc5b",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\iktakahiro__dddpy",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 52
+    },
+    {
+      "id": "laurentS__slowapi",
+      "name": "laurentS__slowapi",
+      "repo_full_name": "laurentS/slowapi",
+      "repo_url": "https://github.com/laurentS/slowapi.git",
+      "commit": "d3442b2e1425a9db535732a0a06248470c7f9fd5",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\laurentS__slowapi",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 9
+    },
+    {
+      "id": "LedFx__LedFx",
+      "name": "LedFx__LedFx",
+      "repo_full_name": "LedFx/LedFx",
+      "repo_url": "https://github.com/LedFx/LedFx.git",
+      "commit": "091b72396bf71e151a552e416df98be28d71d784",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\LedFx__LedFx",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 193
+    },
+    {
+      "id": "milesmcc__shynet",
+      "name": "milesmcc__shynet",
+      "repo_full_name": "milesmcc/shynet",
+      "repo_url": "https://github.com/milesmcc/shynet.git",
+      "commit": "ca35caba3af2b888acc990b99152c500a1c44461",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\milesmcc__shynet",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 83
+    },
+    {
+      "id": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "name": "Open-LLM-VTuber__Open-LLM-VTuber",
+      "repo_full_name": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "repo_url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber.git",
+      "commit": "992309c0aa19845960228f880013d4685fde93b5",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\Open-LLM-VTuber__Open-LLM-VTuber",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "requirements-bilibili.txt",
+        "requirements.txt",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 307
+    },
+    {
+      "id": "OWASP__Nettacker",
+      "name": "OWASP__Nettacker",
+      "repo_full_name": "OWASP/Nettacker",
+      "repo_url": "https://github.com/OWASP/Nettacker.git",
+      "commit": "13f5cec82143db88dead462b4715bdeee181e41a",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\OWASP__Nettacker",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 65
+    },
+    {
+      "id": "rtzll__flask-todolist",
+      "name": "rtzll__flask-todolist",
+      "repo_full_name": "rtzll/flask-todolist",
+      "repo_url": "https://github.com/rtzll/flask-todolist.git",
+      "commit": "6bfd32f7797782582cabfa27dcdf263fef579498",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\rtzll__flask-todolist",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 38
+    },
+    {
+      "id": "sloria__environs",
+      "name": "sloria__environs",
+      "repo_full_name": "sloria/environs",
+      "repo_url": "https://github.com/sloria/environs.git",
+      "commit": "fd0a8e45964cc5e909675149d1a1972dc976921b",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\sloria__environs",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 43
+    },
+    {
+      "id": "sparckles__Robyn",
+      "name": "sparckles__Robyn",
+      "repo_full_name": "sparckles/Robyn",
+      "repo_url": "https://github.com/sparckles/Robyn.git",
+      "commit": "749e571b653361bbd0486e5c97bfadc7f6eb9cd0",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\sparckles__Robyn",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml",
+        "setup.py"
+      ],
+      "resolved_package_count": 27
+    },
+    {
+      "id": "spiral-project__ihatemoney",
+      "name": "spiral-project__ihatemoney",
+      "repo_full_name": "spiral-project/ihatemoney",
+      "repo_url": "https://github.com/spiral-project/ihatemoney.git",
+      "commit": "3ee8e078f472fb2a1e48c406f840c1f919224ce1",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\spiral-project__ihatemoney",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 101
+    },
+    {
+      "id": "sunscrapers__djoser",
+      "name": "sunscrapers__djoser",
+      "repo_full_name": "sunscrapers/djoser",
+      "repo_url": "https://github.com/sunscrapers/djoser.git",
+      "commit": "07c267131470c0fc7be67fc854371a9ccffe55b4",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\sunscrapers__djoser",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 86
+    },
+    {
+      "id": "teamhide__fastapi-boilerplate",
+      "name": "teamhide__fastapi-boilerplate",
+      "repo_full_name": "teamhide/fastapi-boilerplate",
+      "repo_url": "https://github.com/teamhide/fastapi-boilerplate.git",
+      "commit": "df4e6d4f817ec187eeaf2d1c5a877b27c06bb77b",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\teamhide__fastapi-boilerplate",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "poetry.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 46
+    },
+    {
+      "id": "Thysrael__Horizon",
+      "name": "Thysrael__Horizon",
+      "repo_full_name": "Thysrael/Horizon",
+      "repo_url": "https://github.com/Thysrael/Horizon.git",
+      "commit": "0414f12b5e6e10faa4eece7eb37a1e70f9c80f4e",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\Thysrael__Horizon",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 153
+    },
+    {
+      "id": "tropicoo__yt-dlp-bot",
+      "name": "tropicoo__yt-dlp-bot",
+      "repo_full_name": "tropicoo/yt-dlp-bot",
+      "repo_url": "https://github.com/tropicoo/yt-dlp-bot.git",
+      "commit": "ded26973a35b4acd7f1842e0b93c5e9a0057bf22",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\tropicoo__yt-dlp-bot",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 75
+    },
+    {
+      "id": "yezz123__authx",
+      "name": "yezz123__authx",
+      "repo_full_name": "yezz123/authx",
+      "repo_url": "https://github.com/yezz123/authx.git",
+      "commit": "ef6f00dc18a21961ec5c879b1b2b624d7d7415e1",
+      "path": "C:\\Users\\admin\\Documents\\Lab Workplace\\F-VRA\\data\\raw\\projects\\yezz123__authx",
+      "enabled": true,
+      "environment_status": "resolved_from_lockfile_or_manifest",
+      "version_source": "lockfile_or_manifest",
+      "manifest_files": [
+        "uv.lock",
+        "pyproject.toml"
+      ],
+      "resolved_package_count": 141
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# project: yezz123__authx
+# scanner: pip-audit
+# time: Sat Jul 11 10:10:53 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\yezz123__authx.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\yezz123__authx.json
+# exit code: 1
+# note: attempt 1 reject=[] net=False skipped=[]
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Cannot install -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\yezz123__authx.req.txt (line 6) and redis==6.1.0 because these package versions have conflicting dependencies.
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+
+ERROR:pip_audit._cli:Failed to install packages: ['C:\\Users\\admin\\AppData\\Local\\Temp\\tmp34sipuj9\\Scripts\\python.exe', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', 'C:\\Users\\admin\\AppData\\Local\\Temp\\tmptohs0ew9\\tmp8lau86hx', '-r', 'C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\_scans\\_tmp\\yezz123__authx.req.txt']

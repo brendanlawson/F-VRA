@@ -1,0 +1,196 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 82 packages in 661ms
+Downloading pynacl (1.3MiB)
+Downloading cryptography (4.3MiB)
+Downloading ty (11.8MiB)
+Downloading ruff (11.1MiB)
+Downloading prek (5.9MiB)
+Downloading zizmor (8.8MiB)
+Downloading zensical (12.5MiB)
+Downloading mypy (14.4MiB)
+Downloading mkdocs (3.7MiB)
+Downloading pillow (6.8MiB)
+ Downloaded pynacl
+ Downloaded mkdocs
+ Downloaded cryptography
+Downloading mypy (14.4MiB)
+Downloading pillow (6.8MiB)
+Downloading ty (11.8MiB)
+Downloading ruff (11.1MiB)
+Downloading prek (5.9MiB)
+Downloading zizmor (8.8MiB)
+Downloading zensical (12.5MiB)
+ Downloaded prek
+ Downloaded pillow
+ Downloaded zizmor
+ Downloaded ruff
+ Downloaded ty
+ Downloaded zensical
+ Downloaded mypy
+Prepared 46 packages in 4m 14s
+Installed 82 packages in 3.68s
+ + annotated-doc==0.0.4
+ + annotated-types==0.7.0
+ + anyio==4.14.1
+ + ast-serialize==0.3.0
+ + cairocffi==1.7.1
+ + cairosvg==2.9.0
+ + certifi==2026.1.4
+ + cffi==2.0.0
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + colorama==0.4.6
+ + coverage==7.13.4
+ + cryptography==46.0.5
+ + cssselect2==0.9.0
+ + cyclic==1.0.0
+ + deepmerge==2.0
+ + defusedxml==0.7.1
+ + exceptiongroup==1.3.1
+ + ghp-import==2.1.0
+ + griffe-typingdoc==0.3.1
+ + griffe-warnings-deprecated==1.1.1
+ + griffelib==2.0.0
+ + h11==0.16.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + idna==3.11
+ + iniconfig==2.3.0
+ + jinja2==3.1.6
+ + librt==0.11.0
+ + markdown==3.10.2
+ + markdown-include-variants==0.0.8
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + mdurl==0.1.2
+ + mdx-include==1.4.2
+ + mergedeep==1.3.4
+ + mkdocs==1.6.1
+ + mkdocs-autorefs==1.4.4
+ + mkdocs-get-deps==0.2.0
+ + mkdocstrings==1.0.3
+ + mkdocstrings-python==2.0.3
+ + mypy==2.1.0
+ + mypy-extensions==1.1.0
+ + packaging==26.0
+ + pathspec==1.0.4
+ + pillow==12.2.0
+ + platformdirs==4.9.2
+ + pluggy==1.6.0
+ + prek==0.4.5
+ + pycparser==3.0
+ + pydantic==2.13.4
+ + pydantic-core==2.46.4
+ + pydantic-settings==2.14.2
+ + pygithub==2.9.1
+ + pygments==2.20.0
+ + pyjwt==2.11.0
+ + pymdown-extensions==10.21.3
+ + pynacl==1.6.2
+ + pytest==9.1.1
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.1
+ + pyyaml==6.0.3
+ + pyyaml-env-tag==1.1
+ + rcslice==1.1.0
+ + requests==2.32.5
+ + rich==14.3.3
+ + ruff==0.15.19
+ + shellingham==1.5.4
+ + six==1.17.0
+ + smokeshow==0.5.0
+ + sniffio==1.3.1
+ + tinycss2==1.5.1
+ + tomli==2.4.0
+ + ty==0.0.53
+ + typer==0.26.7
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + urllib3==2.6.3
+ + watchdog==6.0.0
+ + webencodings==0.5.1
+ + zensical==0.0.46
+ + zizmor==1.26.1
+ONE_SHOT_INSTALL_OK
+
+Testing /work/fastapi__asyncer...
+
+Tested 82 dependencies for known issues, found 20 issues, 54 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 8 other path(s)
+
+  Upgrade cryptography@46.0.5 to cryptography@48.0.1 to fix
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@46.0.5
+    introduced by cryptography@46.0.5
+  ✗ Out-of-bounds Write [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15953315] in cryptography@46.0.5
+    introduced by cryptography@46.0.5
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@46.0.5
+    introduced by cryptography@46.0.5
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 7 other path(s)
+
+  Upgrade pillow@12.2.0 to pillow@12.3.0 to fix
+  ✗ Command Injection (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824467] in pillow@12.2.0
+    introduced by pillow@12.2.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824465] in pillow@12.2.0
+    introduced by pillow@12.2.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824466] in pillow@12.2.0
+    introduced by pillow@12.2.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824468] in pillow@12.2.0
+    introduced by pillow@12.2.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824469] in pillow@12.2.0
+    introduced by pillow@12.2.0 and 1 other path(s)
+
+  Upgrade pyjwt@2.11.0 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.11.0
+    introduced by pyjwt@2.11.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.11.0
+    introduced by pyjwt@2.11.0 and 1 other path(s)
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.11.0
+    introduced by pyjwt@2.11.0 and 1 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.11.0
+    introduced by pyjwt@2.11.0 and 1 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-15518059] in pyjwt@2.11.0
+    introduced by pyjwt@2.11.0 and 1 other path(s)
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.11.0
+    introduced by pyjwt@2.11.0 and 1 other path(s)
+
+  Upgrade python-dotenv@1.2.1 to python-dotenv@1.2.2 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONDOTENV-16115271] in python-dotenv@1.2.1
+    introduced by python-dotenv@1.2.1 and 1 other path(s)
+
+  Upgrade requests@2.32.5 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.5
+    introduced by requests@2.32.5 and 1 other path(s)
+
+  Upgrade urllib3@2.6.3 to urllib3@2.7.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 3 other path(s)
+  ✗ Decompression Bomb [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642059] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 3 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      fastapi__asyncer
+Open source:       no
+Project path:      /work/fastapi__asyncer
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

@@ -1,0 +1,69 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 22 packages in 724ms
+Prepared 8 packages in 512ms
+Installed 22 packages in 111ms
+ + blinker==1.9.0
+ + cfgv==3.5.0
+ + click==8.3.1
+ + colorama==0.4.6
+ + coverage==7.13.0
+ + distlib==0.4.0
+ + filelock==3.20.1
+ + flask==3.1.3
+ + identify==2.6.16
+ + itsdangerous==2.2.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.3
+ + nodeenv==1.10.0
+ + platformdirs==4.5.1
+ + pre-commit==4.5.1
+ + pyasn1==0.6.2
+ + pyasn1-modules==0.4.2
+ + pyyaml==6.0.3
+ + ruff==0.14.14
+ + typing-extensions==4.15.0
+ + virtualenv==20.36.1
+ + werkzeug==3.1.5
+ONE_SHOT_INSTALL_OK
+
+Testing /work/alexferl__flask-simpleldap...
+
+Tested 22 dependencies for known issues, found 4 issues, 9 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 1 other path(s)
+
+  Upgrade filelock@3.20.1 to filelock@3.20.3 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FILELOCK-14912448] in filelock@3.20.1
+    introduced by filelock@3.20.1 and 2 other path(s)
+
+  Upgrade pyasn1@0.6.2 to pyasn1@0.6.3 to fix
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYASN1-15674561] in pyasn1@0.6.2
+    introduced by pyasn1@0.6.2 and 1 other path(s)
+
+  Upgrade werkzeug@3.1.5 to werkzeug@3.1.6 to fix
+  ✗ Improper Handling of Windows Device Names [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-WERKZEUG-15322677] in werkzeug@3.1.5
+    introduced by werkzeug@3.1.5 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      alexferl__flask-simpleldap
+Open source:       no
+Project path:      /work/alexferl__flask-simpleldap
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

@@ -1,0 +1,108 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 43 packages in 1.84s
+Downloading babel (9.7MiB)
+Downloading brotli (1.4MiB)
+Downloading accessible-pygments (1.3MiB)
+Downloading django (7.9MiB)
+Downloading sphinx (3.3MiB)
+ Downloaded accessible-pygments
+ Downloaded brotli
+ Downloaded sphinx
+ Downloaded django
+ Downloaded babel
+Prepared 26 packages in 21.74s
+Installed 43 packages in 1.66s
+ + accessible-pygments==0.0.5
+ + alabaster==1.0.0
+ + asgiref==3.11.1
+ + babel==2.18.0
+ + beautifulsoup4==4.14.3
+ + brotli==1.2.0
+ + certifi==2026.4.22
+ + charset-normalizer==3.4.7
+ + colorama==0.4.6
+ + coverage==7.14.0
+ + django==5.2.14
+ + docutils==0.21.2
+ + exceptiongroup==1.3.1
+ + furo==2025.12.19
+ + idna==3.15
+ + imagesize==2.0.0
+ + iniconfig==2.3.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.3
+ + packaging==26.2
+ + pluggy==1.6.0
+ + pygments==2.20.0
+ + pytest==9.0.3
+ + pytest-randomly==4.1.0
+ + requests==2.34.0
+ + roman-numerals==4.1.0
+ + snowballstemmer==3.0.1
+ + soupsieve==2.8.3
+ + sphinx==8.1.3
+ + sphinx-basic-ng==1.0.0b2
+ + sphinx-copybutton==0.5.2
+ + sphinxcontrib-applehelp==2.0.0
+ + sphinxcontrib-devhelp==2.0.0
+ + sphinxcontrib-htmlhelp==2.1.0
+ + sphinxcontrib-jsmath==1.0.1
+ + sphinxcontrib-qthelp==2.0.0
+ + sphinxcontrib-serializinghtml==2.0.0
+ + sqlparse==0.5.5
+ + tomli==2.4.1
+ + typing-extensions==4.15.0
+ + tzdata==2026.2
+ + urllib3==2.7.0
+ + whitenoise==6.12.0
+ONE_SHOT_INSTALL_OK
+
+Testing /work/evansd__whitenoise...
+
+Tested 43 dependencies for known issues, found 10 issues, 14 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade django@5.2.14 to django@5.2.16 to fix
+  ✗ Improper Handling of Case Sensitivity [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151726] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Cleartext Transmission of Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151727] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Improper Verification of Cryptographic Signature [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151728] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Incomplete Comparison with Missing Factors [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151772] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151780] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Use of Cache Containing Sensitive Information (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881428] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Improper Neutralization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881426] in django@5.2.14
+    introduced by django@5.2.14
+  ✗ Buffer Access with Incorrect Length Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881427] in django@5.2.14
+    introduced by django@5.2.14
+
+  Upgrade soupsieve@2.8.3 to soupsieve@2.8.4 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911084] in soupsieve@2.8.3
+    introduced by soupsieve@2.8.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911087] in soupsieve@2.8.3
+    introduced by soupsieve@2.8.3 and 2 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      evansd__whitenoise
+Open source:       no
+Project path:      /work/evansd__whitenoise
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

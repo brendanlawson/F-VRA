@@ -1,0 +1,12 @@
+# project: marshmallow-code__flask-smorest
+# scanner: osv-scanner
+# time: Fri Jul 10 19:20:38 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.exe scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\marshmallow-code__flask-smorest.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\marshmallow-code__flask-smorest
+# exit code: 0
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\marshmallow-code__flask-smorest
+Starting filesystem walk for root: C:\
+End status: 1 dirs visited, 1 inodes visited, 0 Extract calls, 0s elapsed, 0s wall time
+No package sources found

@@ -1,0 +1,36 @@
+# project=spiral-project__ihatemoney
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.1.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.1.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 6 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.2.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.2.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 6 known vulnerabilities in 4 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.3.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.3.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 4 known vulnerabilities in 2 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.4.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.4.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 5 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.5.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-spiral-project__ihatemoney-2ez3bouh/spiral-project__ihatemoney.5.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 15 known vulnerabilities in 3 packages
+

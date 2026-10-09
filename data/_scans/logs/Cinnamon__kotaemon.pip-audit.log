@@ -1,0 +1,11 @@
+# project: Cinnamon__kotaemon
+# scanner: pip-audit
+# time: Sat Jul 11 09:40:50 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\Cinnamon__kotaemon.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\Cinnamon__kotaemon.json
+# exit code: n/a
+# note: TIMEOUT@420s (skipped=['chroma-hnswlib', 'grpcio-tools', 'html2text', 'langdetect', 'llama-cpp-python', 'lxml', 'markupsafe', 'ml-dtypes', 'mmh3', 'numpy', 'fastembed', 'llama-hub'])
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes

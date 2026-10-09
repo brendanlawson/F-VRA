@@ -1,0 +1,120 @@
+schema_version: f_vra.protocol.v9
+protocol_id: f_vra-main-study-v9
+frozen_on: 2026-09-19
+
+entrypoints:
+  include_types:
+    - main
+    - cli
+    - web
+  ignore_directories:
+    - tests
+    - test
+    - docs
+    - examples
+    - example
+    - tutorials
+    - benchmarks
+    - benchmark
+  include_maintenance_scripts: true
+
+environment:
+  dependency_profile: production_main
+  uv_args:
+    - --frozen
+    - --no-dev
+  uv_workspace_scope: all-packages-without-local-install
+  poetry_versions:
+    lock_1_x_2_0: 1.8.5
+    lock_2_1_pep621: 2.1.4
+  poetry_lock_policy: regenerate-no-update-and-freeze
+  install_local_project_distribution: false
+  legacy_build_overrides:
+    django-allauth==0.45.0: pip-no-use-pep517-no-deps
+    PyYAML==5.4.1: cython-lt-3-build-constraint-no-deps
+  poetry_groups:
+    - main
+  pipfile_include_dev: false
+  requirements_entrypoint: requirements.txt
+  build_network: true
+  build_system_packages:
+    - build-essential
+    - gcc
+    - g++
+    - pkg-config
+    - git
+    - libpq-dev
+    - libldap2-dev
+    - libsasl2-dev
+    - libssl-dev
+    - libffi-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - zlib1g-dev
+    - libjpeg-dev
+    - default-libmysqlclient-dev
+    - portaudio19-dev
+    - libasound2-dev
+    - libsndfile1-dev
+  docker_context_ignore:
+    - .git
+    - .venv
+    - __pycache__
+    - '*.pyc'
+  python_selection:
+    preserve_exact_patch: true
+    poetry_caret_uses_minimum_minor: true
+    choose_lowest_compatible_minor: true
+    general_preference:
+      - '3.8'
+      - '3.9'
+      - '3.10'
+      - '3.11'
+      - '3.12'
+      - '3.13'
+      - '3.14'
+  build_timeout_s: 7200
+  analysis_network: none
+  cpus: 8
+  memory_gb: 16
+
+backend:
+  project_backend: jarvis
+  package_backend: jarvis
+  jarvis_python: "3.8"
+  ast_runtime: target_python
+  ast_adapter_version: ast-boundary-v5-namespace-paths
+  fragment_schema_version: "1"
+  precision: true
+  fragment_timeout_s: 300
+  query_timeout_s: 600
+  witness_display_limit: 100
+
+decisions:
+  values:
+    - REACHABLE
+    - UNREACHABLE
+    - UNKNOWN
+  potentially_reachable_mapping: UNKNOWN
+  incomplete_frontier_mapping: UNKNOWN
+
+oracle:
+  accepted_review_status: accepted
+  target_minimum: 300
+  target_maximum: 400
+  require_reachable_witness: true
+  require_unreachable_complete_frontier: true
+
+workload:
+  fixed_orders:
+    - PROJECT_MAJOR
+    - CVE_MAJOR
+  random_seed_start: 1
+  random_seed_end: 30
+
+statistics:
+  proportion_interval: wilson_95
+  dependent_query_interval: project_cluster_bootstrap_95
+  bootstrap_iterations: 2000
+  bootstrap_seed: 17
+

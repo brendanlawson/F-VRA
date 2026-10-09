@@ -1,0 +1,23 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyaes==1.6.1 has no usable wheels and you require pyaes==1.6.1,
+      we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyaes` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because uvloop==0.21.0 has no usable wheels and you require
+      uvloop==0.21.0, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `uvloop` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=2) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because yt-dlp-bot was not found in the package registry and you
+      require yt-dlp-bot==0.1.0, we can conclude that your requirements are
+      unsatisfiable.

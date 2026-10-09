@@ -1,0 +1,11 @@
+# project: spiral-project__ihatemoney
+# scanner: pip-audit
+# time: Sat Jul 11 10:05:48 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\spiral-project__ihatemoney.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\spiral-project__ihatemoney.json
+# exit code: n/a
+# note: TIMEOUT@420s (skipped=[])
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes

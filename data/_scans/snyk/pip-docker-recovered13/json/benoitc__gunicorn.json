@@ -1,0 +1,2810 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-PYTHON-IDNA-16769942",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,3.15)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "3.15"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 5.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "idna",
+      "references": [
+        {
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) through the `idna.encode()` function when processing very large domain name inputs that exploit the `valid_contexto()` function before length validation. This is triggered by arbitrarily large inputs that would not occur in normal usage, like `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` for large `N`. Such values may be passed to the library if there is no preliminary input validation by the higher-level application.\n\n**Note:** This is a bypass of the fix for the vulnerability described in [CVE-2024-3651](https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975).\n\n## Workaround \nThis vulnerability can be mitigated by enforcing a maximum domain name length of 253 characters before passing input to the function.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `idna` to version 3.15 or higher.\n## References\n- [GitHub Advisory](https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx)\n- [GitHub Commit](https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0)\n- [GitHub Commit](https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583)\n",
+      "epssDetails": {
+        "percentile": "0.32394",
+        "probability": "0.00408",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-45409"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ],
+        "GHSA": [
+          "GHSA-65pc-fj4g-8rjx"
+        ]
+      },
+      "packageName": "idna",
+      "proprietary": false,
+      "creationTime": "2026-05-20T07:37:24.687332Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-12T21:00:00Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-20T07:37:24.999155Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-10T07:09:14.461249Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "idna@3.11"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "idna",
+      "version": "3.11"
+    },
+    {
+      "id": "SNYK-PYTHON-IDNA-16769942",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,3.15)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "3.15"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 5.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "idna",
+      "references": [
+        {
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) through the `idna.encode()` function when processing very large domain name inputs that exploit the `valid_contexto()` function before length validation. This is triggered by arbitrarily large inputs that would not occur in normal usage, like `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` for large `N`. Such values may be passed to the library if there is no preliminary input validation by the higher-level application.\n\n**Note:** This is a bypass of the fix for the vulnerability described in [CVE-2024-3651](https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975).\n\n## Workaround \nThis vulnerability can be mitigated by enforcing a maximum domain name length of 253 characters before passing input to the function.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `idna` to version 3.15 or higher.\n## References\n- [GitHub Advisory](https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx)\n- [GitHub Commit](https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0)\n- [GitHub Commit](https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583)\n",
+      "epssDetails": {
+        "percentile": "0.32394",
+        "probability": "0.00408",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-45409"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ],
+        "GHSA": [
+          "GHSA-65pc-fj4g-8rjx"
+        ]
+      },
+      "packageName": "idna",
+      "proprietary": false,
+      "creationTime": "2026-05-20T07:37:24.687332Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-12T21:00:00Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-20T07:37:24.999155Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-10T07:09:14.461249Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "anyio@4.13.0",
+        "idna@3.11"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "idna",
+      "version": "3.11"
+    },
+    {
+      "id": "SNYK-PYTHON-IDNA-16769942",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,3.15)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "3.15"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 5.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "idna",
+      "references": [
+        {
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) through the `idna.encode()` function when processing very large domain name inputs that exploit the `valid_contexto()` function before length validation. This is triggered by arbitrarily large inputs that would not occur in normal usage, like `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` for large `N`. Such values may be passed to the library if there is no preliminary input validation by the higher-level application.\n\n**Note:** This is a bypass of the fix for the vulnerability described in [CVE-2024-3651](https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975).\n\n## Workaround \nThis vulnerability can be mitigated by enforcing a maximum domain name length of 253 characters before passing input to the function.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `idna` to version 3.15 or higher.\n## References\n- [GitHub Advisory](https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx)\n- [GitHub Commit](https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0)\n- [GitHub Commit](https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583)\n",
+      "epssDetails": {
+        "percentile": "0.32394",
+        "probability": "0.00408",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-45409"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ],
+        "GHSA": [
+          "GHSA-65pc-fj4g-8rjx"
+        ]
+      },
+      "packageName": "idna",
+      "proprietary": false,
+      "creationTime": "2026-05-20T07:37:24.687332Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-12T21:00:00Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-20T07:37:24.999155Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-10T07:09:14.461249Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "httpx@0.28.1",
+        "idna@3.11"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "idna",
+      "version": "3.11"
+    },
+    {
+      "id": "SNYK-PYTHON-IDNA-16769942",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,3.15)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "3.15"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 5.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "idna",
+      "references": [
+        {
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:14.461249Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-16T01:18:56.327901Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T07:09:13.801592Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:03.243331Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) through the `idna.encode()` function when processing very large domain name inputs that exploit the `valid_contexto()` function before length validation. This is triggered by arbitrarily large inputs that would not occur in normal usage, like `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` for large `N`. Such values may be passed to the library if there is no preliminary input validation by the higher-level application.\n\n**Note:** This is a bypass of the fix for the vulnerability described in [CVE-2024-3651](https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975).\n\n## Workaround \nThis vulnerability can be mitigated by enforcing a maximum domain name length of 253 characters before passing input to the function.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `idna` to version 3.15 or higher.\n## References\n- [GitHub Advisory](https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx)\n- [GitHub Commit](https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0)\n- [GitHub Commit](https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583)\n",
+      "epssDetails": {
+        "percentile": "0.32394",
+        "probability": "0.00408",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-45409"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ],
+        "GHSA": [
+          "GHSA-65pc-fj4g-8rjx"
+        ]
+      },
+      "packageName": "idna",
+      "proprietary": false,
+      "creationTime": "2026-05-20T07:37:24.687332Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-12T21:00:00Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-20T07:37:24.999155Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-10T07:09:14.461249Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "httpx@0.28.1",
+        "anyio@4.13.0",
+        "idna@3.11"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "idna",
+      "version": "3.11"
+    },
+    {
+      "id": "SNYK-PYTHON-PYGMENTS-15746419",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.20.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.20.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 4.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pygments",
+      "references": [
+        {
+          "url": "https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/issues/3058",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py%23L296",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) via the `AdlLexer` class in the `archetype.py` file. A user can cause excessive resource consumption.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `pygments` to version 2.20.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc)\n- [GitHub Issue](https://github.com/pygments/pygments/issues/3058)\n- [Vulnerable Code](https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py#L296)\n",
+      "epssDetails": {
+        "percentile": "0.05119",
+        "probability": "0.00156",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-4539"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ]
+      },
+      "packageName": "pygments",
+      "proprietary": false,
+      "creationTime": "2026-03-22T11:17:23.655026Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-03-22T08:38:02Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-03-23T10:24:00.819893Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-15T16:00:25.521122Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "pygments@2.19.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pygments",
+      "version": "2.19.2"
+    },
+    {
+      "id": "SNYK-PYTHON-PYGMENTS-15746419",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.20.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.20.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 4.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pygments",
+      "references": [
+        {
+          "url": "https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/issues/3058",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py%23L296",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) via the `AdlLexer` class in the `archetype.py` file. A user can cause excessive resource consumption.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `pygments` to version 2.20.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc)\n- [GitHub Issue](https://github.com/pygments/pygments/issues/3058)\n- [Vulnerable Code](https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py#L296)\n",
+      "epssDetails": {
+        "percentile": "0.05119",
+        "probability": "0.00156",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-4539"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ]
+      },
+      "packageName": "pygments",
+      "proprietary": false,
+      "creationTime": "2026-03-22T11:17:23.655026Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-03-22T08:38:02Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-03-23T10:24:00.819893Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-15T16:00:25.521122Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "pytest@9.0.2",
+        "pygments@2.19.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pygments",
+      "version": "2.19.2"
+    },
+    {
+      "id": "SNYK-PYTHON-PYGMENTS-15746419",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.20.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.20.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 4.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pygments",
+      "references": [
+        {
+          "url": "https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/issues/3058",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py%23L296",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) via the `AdlLexer` class in the `archetype.py` file. A user can cause excessive resource consumption.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `pygments` to version 2.20.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc)\n- [GitHub Issue](https://github.com/pygments/pygments/issues/3058)\n- [Vulnerable Code](https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py#L296)\n",
+      "epssDetails": {
+        "percentile": "0.05119",
+        "probability": "0.00156",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-4539"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ]
+      },
+      "packageName": "pygments",
+      "proprietary": false,
+      "creationTime": "2026-03-22T11:17:23.655026Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-03-22T08:38:02Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-03-23T10:24:00.819893Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-15T16:00:25.521122Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "pytest-asyncio@1.3.0",
+        "pytest@9.0.2",
+        "pygments@2.19.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pygments",
+      "version": "2.19.2"
+    },
+    {
+      "id": "SNYK-PYTHON-PYGMENTS-15746419",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.20.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.20.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 4.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pygments",
+      "references": [
+        {
+          "url": "https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/issues/3058",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py%23L296",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.3,
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-15T16:00:25.521122Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "NVD",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-22T13:24:15.820972Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-26T08:44:47.789783Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-04T06:07:58.006602Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) via the `AdlLexer` class in the `archetype.py` file. A user can cause excessive resource consumption.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `pygments` to version 2.20.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc)\n- [GitHub Issue](https://github.com/pygments/pygments/issues/3058)\n- [Vulnerable Code](https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py#L296)\n",
+      "epssDetails": {
+        "percentile": "0.05119",
+        "probability": "0.00156",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-4539"
+        ],
+        "CWE": [
+          "CWE-1333"
+        ]
+      },
+      "packageName": "pygments",
+      "proprietary": false,
+      "creationTime": "2026-03-22T11:17:23.655026Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-03-22T08:38:02Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-03-23T10:24:00.819893Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-15T16:00:25.521122Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "pytest-cov@7.0.0",
+        "pytest@9.0.2",
+        "pygments@2.19.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pygments",
+      "version": "2.19.2"
+    },
+    {
+      "id": "SNYK-PYTHON-TORNADO-17337026",
+      "title": "Buffer Over-read",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
+      "credit": [
+        "sondt99"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,6.5.6)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "6.5.6"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "tornado",
+      "references": [
+        {
+          "url": "https://github.com/tornadoweb/tornado/commit/96dc88c2a05705287856b2cd6b4b4034f9a6aaac",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-cx3h-4qpv-8hc9",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2026-07-02T11:05:39.850071Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-02T11:05:40.136160Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:40.136160Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:39.850071Z"
+        }
+      ],
+      "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Buffer Over-read via the `websocket_mask` function in the `speedups` component. An attacker can trigger a read past the end of the mask string by supplying a mask value shorter or longer than 4 bytes. This can expose adjacent process memory to the caller and can crash the interpreter when the optimized masking path is used.\n\n**Notes**\n\n- The vulnerable path is the native `tornado.speedups` extension, which is optional and can be disabled by setting `TORNADO_EXTENSION=0`; deployments that never load the C extension use the pure-Python masking code instead.\n- The behavior is only reachable from Tornado's XSRF token decoder when `xsrf_cookies=True` and the native extension is active.\n\n**Workarounds**\n\n- Set `TORNADO_EXTENSION=0` before starting the application to disable the native `tornado.speedups` extension and avoid the vulnerable `websocket_mask` path, at the cost of reduced websocket performance.\n## Remediation\nUpgrade `tornado` to version 6.5.6 or higher.\n## References\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/96dc88c2a05705287856b2cd6b4b4034f9a6aaac)\n- [Maintainer's Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-cx3h-4qpv-8hc9)\n",
+      "epssDetails": {
+        "percentile": "0.08248",
+        "probability": "0.00027",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-49854"
+        ],
+        "CWE": [
+          "CWE-126"
+        ],
+        "GHSA": [
+          "GHSA-cx3h-4qpv-8hc9"
+        ]
+      },
+      "packageName": "tornado",
+      "proprietary": false,
+      "creationTime": "2026-06-14T11:50:38.231799Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-12T18:30:19Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-14T11:50:38.418245Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-02T11:05:40.136160Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "tornado@6.5.5"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "tornado",
+      "version": "6.5.5"
+    },
+    {
+      "id": "SNYK-PYTHON-TORNADO-17356107",
+      "title": "Incorrect Resource Transfer Between Spheres",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "credit": [
+        "Yannick Wang"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,6.5.6)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "6.5.6"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "tornado",
+      "references": [
+        {
+          "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-3x9g-8vmp-wqvf",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/tornadoweb/tornado/commit/e8fc7edb238f1022e39f9d0b9d297fc7c21fb0a5",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.4,
+          "modificationTime": "2026-07-02T11:05:06.823879Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:L/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-02T11:05:07.240465Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.1,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:07.240465Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:06.823879Z"
+        }
+      ],
+      "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Incorrect Resource Transfer Between Spheres via `SimpleAsyncHTTPClient`. An attacker can obtain sensitive credentials by exploiting cross-origin redirects when the `Authorization` header is improperly forwarded to a different origin. \r\n\r\n**Note:** This is only exploitable if `follow_redirects` is enabled and a redirect changes the scheme, host, or port of the URL. This is the default configuration.\n## Remediation\nUpgrade `tornado` to version 6.5.6 or higher.\n## References\n- [GitHub Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-3x9g-8vmp-wqvf)\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/e8fc7edb238f1022e39f9d0b9d297fc7c21fb0a5)\n",
+      "epssDetails": {
+        "percentile": "0.10595",
+        "probability": "0.00034",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-49853"
+        ],
+        "CWE": [
+          "CWE-669"
+        ],
+        "GHSA": [
+          "GHSA-3x9g-8vmp-wqvf"
+        ]
+      },
+      "packageName": "tornado",
+      "proprietary": false,
+      "creationTime": "2026-06-17T11:12:12.966531Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:20:00Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-17T11:12:13.134581Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-02T11:05:07.240465Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "tornado@6.5.5"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "tornado",
+      "version": "6.5.5"
+    },
+    {
+      "id": "SNYK-PYTHON-TORNADO-17356108",
+      "title": "Improper Handling of Highly Compressed Data (Data Amplification)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Yuichiro Kedashiro (keda)"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,6.5.6)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "6.5.6"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "tornado",
+      "references": [
+        {
+          "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-mgf9-4vpg-hj56",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/tornadoweb/tornado/commit/ff808b33adc52d89a549376a5e3628e92abbc8ff",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-02T11:05:05.550809Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-02T11:05:06.015139Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:06.015139Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:05.550809Z"
+        }
+      ],
+      "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Improper Handling of Highly Compressed Data (Data Amplification) in the `AsyncHTTPClient`. An attacker can cause excessive memory consumption by sending a response with a small compressed size that decompresses to a very large payload, leading to resource exhaustion. \r\n\r\n**Note:** This is only exploitable if `decompress_request=True` is set on `HTTPServer`.\r\n\r\n## Workaround \r\n\r\nThis vulnerability can be mitigated by setting `decompress_response=False` or using `CurlAsyncHTTPClient`.\n## Remediation\nUpgrade `tornado` to version 6.5.6 or higher.\n## References\n- [GitHub Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-mgf9-4vpg-hj56)\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/ff808b33adc52d89a549376a5e3628e92abbc8ff)\n",
+      "epssDetails": {
+        "percentile": "0.16936",
+        "probability": "0.00052",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-49855"
+        ],
+        "CWE": [
+          "CWE-409"
+        ],
+        "GHSA": [
+          "GHSA-mgf9-4vpg-hj56"
+        ]
+      },
+      "packageName": "tornado",
+      "proprietary": false,
+      "creationTime": "2026-06-17T11:14:10.320218Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:19:28Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-17T11:14:10.491779Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-02T11:05:06.015139Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "tornado@6.5.5"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "tornado",
+      "version": "6.5.5"
+    },
+    {
+      "id": "SNYK-PYTHON-TORNADO-17356157",
+      "title": "Operation on a Resource after Expiration or Release",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N/E:P",
+      "credit": [
+        "Koh Jun Sheng"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,6.5.7)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "6.5.7"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "tornado",
+      "references": [
+        {
+          "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-pw6j-qg29-8w7f",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/tornadoweb/tornado/commit/3154caabc9a60cb0b6953d28877b2785fbd3ab43",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:L/VA:N/SC:H/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-17T11:24:46.492682Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-17T11:24:46.492682Z"
+        }
+      ],
+      "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Operation on a Resource after Expiration or Release in the `CurlAsyncHTTPClient`, where per-request credentials such as client TLS certificates or proxy authentication details are not properly cleared when reusing handles across requests. An attacker can obtain sensitive credentials intended for a previous request by triggering a subsequent request to a different host or proxy, causing the credentials to be sent to an unintended recipient.\r\n\r\n**Note:** This is only exploitable if the application uses the optional `CurlAsyncHTTPClient` backend and is configured in a manner that matches the affected proxy-related usage patterns. Applications using the default `SimpleAsyncHTTPClient` backend are not affected, as it does not support proxies.\n## Remediation\nUpgrade `tornado` to version 6.5.7 or higher.\n## References\n- [GitHub Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-pw6j-qg29-8w7f)\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/3154caabc9a60cb0b6953d28877b2785fbd3ab43)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-672"
+        ],
+        "GHSA": [
+          "GHSA-pw6j-qg29-8w7f"
+        ]
+      },
+      "packageName": "tornado",
+      "proprietary": false,
+      "creationTime": "2026-06-17T11:23:33.476750Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:37:24Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-17T11:23:33.638511Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-17T11:24:46.492682Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "benoitc__gunicorn@0.0.0",
+        "tornado@6.5.5"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "tornado",
+      "version": "6.5.5"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 33,
+  "org": "wuwuyn",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "pip",
+  "ignoreSettings": {
+    "adminOnly": false,
+    "reasonRequired": false,
+    "disregardFilesystemIgnores": false
+  },
+  "summary": "12 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [
+      {
+        "id": "SNYK-PYTHON-IDNA-16769942",
+        "title": "Regular Expression Denial of Service (ReDoS)",
+        "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "credit": [
+          "Unknown"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,3.15)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "3.15"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 5.1,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "idna",
+        "references": [
+          {
+            "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "NVD",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 5.3,
+            "modificationTime": "2026-06-16T01:18:56.327901Z"
+          },
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 5.3,
+            "modificationTime": "2026-07-10T07:09:13.801592Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "cvssV3BaseScore": 5.3,
+            "modificationTime": "2026-07-02T11:06:03.243331Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 5.1,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-10T07:09:14.461249Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-10T07:09:14.461249Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "NVD",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-16T01:18:56.327901Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-10T07:09:13.801592Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "assigner": "SUSE",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:06:03.243331Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) through the `idna.encode()` function when processing very large domain name inputs that exploit the `valid_contexto()` function before length validation. This is triggered by arbitrarily large inputs that would not occur in normal usage, like `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` for large `N`. Such values may be passed to the library if there is no preliminary input validation by the higher-level application.\n\n**Note:** This is a bypass of the fix for the vulnerability described in [CVE-2024-3651](https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975).\n\n## Workaround \nThis vulnerability can be mitigated by enforcing a maximum domain name length of 253 characters before passing input to the function.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `idna` to version 3.15 or higher.\n## References\n- [GitHub Advisory](https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx)\n- [GitHub Commit](https://github.com/kjd/idna/commit/420aebc7e8dd35d929a035e7869f7ffd8288d3d0)\n- [GitHub Commit](https://github.com/kjd/idna/commit/ab7d46cbfd1e997fd82cfe05b44713eee009c583)\n",
+        "epssDetails": {
+          "percentile": "0.32394",
+          "probability": "0.00408",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-45409"
+          ],
+          "CWE": [
+            "CWE-1333"
+          ],
+          "GHSA": [
+            "GHSA-65pc-fj4g-8rjx"
+          ]
+        },
+        "packageName": "idna",
+        "proprietary": false,
+        "creationTime": "2026-05-20T07:37:24.687332Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-05-12T21:00:00Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-20T07:37:24.999155Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-10T07:09:14.461249Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "benoitc__gunicorn@0.0.0",
+          "httpx@0.28.1",
+          "anyio@4.13.0",
+          "idna@3.11"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "idna",
+        "version": "3.11",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-PYGMENTS-15746419",
+        "title": "Regular Expression Denial of Service (ReDoS)",
+        "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+        "credit": [
+          "Unknown"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.20.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "2.20.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 4.8,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pygments",
+        "references": [
+          {
+            "url": "https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/pygments/pygments/issues/3058",
+            "title": "GitHub Issue"
+          },
+          {
+            "url": "https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py%23L296",
+            "title": "Vulnerable Code"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "NVD",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 3.3,
+            "modificationTime": "2026-03-22T13:24:15.820972Z"
+          },
+          {
+            "assigner": "Red Hat",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 3.3,
+            "modificationTime": "2026-03-26T08:44:47.789783Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 3.3,
+            "modificationTime": "2026-05-04T06:07:58.006602Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.8,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-15T16:00:25.521122Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P",
+            "assigner": "Snyk",
+            "severity": "low",
+            "baseScore": 3.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-15T16:00:25.521122Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "NVD",
+            "severity": "low",
+            "baseScore": 3.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-03-22T13:24:15.820972Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "Red Hat",
+            "severity": "low",
+            "baseScore": 3.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-03-26T08:44:47.789783Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "SUSE",
+            "severity": "low",
+            "baseScore": 3.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-05-04T06:07:58.006602Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) via the `AdlLexer` class in the `archetype.py` file. A user can cause excessive resource consumption.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `pygments` to version 2.20.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pygments/pygments/commit/24b8aa76c6cd6d70f39c6dd605cce319c98e2ccc)\n- [GitHub Issue](https://github.com/pygments/pygments/issues/3058)\n- [Vulnerable Code](https://github.com/pygments/pygments/blob/c288c0eb7e59f88a0cdffaf2ee501fb8f5226938/pygments/lexers/archetype.py#L296)\n",
+        "epssDetails": {
+          "percentile": "0.05119",
+          "probability": "0.00156",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-4539"
+          ],
+          "CWE": [
+            "CWE-1333"
+          ]
+        },
+        "packageName": "pygments",
+        "proprietary": false,
+        "creationTime": "2026-03-22T11:17:23.655026Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-03-22T08:38:02Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-03-23T10:24:00.819893Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-15T16:00:25.521122Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "benoitc__gunicorn@0.0.0",
+          "pytest-cov@7.0.0",
+          "pytest@9.0.2",
+          "pygments@2.19.2"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pygments",
+        "version": "2.19.2",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-TORNADO-17337026",
+        "title": "Buffer Over-read",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
+        "credit": [
+          "sondt99"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,6.5.6)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "6.5.6"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6.3,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "tornado",
+        "references": [
+          {
+            "url": "https://github.com/tornadoweb/tornado/commit/96dc88c2a05705287856b2cd6b4b4034f9a6aaac",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-cx3h-4qpv-8hc9",
+            "title": "Maintainer's Advisory"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "SUSE",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "cvssV3BaseScore": 3.7,
+            "modificationTime": "2026-07-02T11:05:39.850071Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.3,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-02T11:05:40.136160Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:40.136160Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "assigner": "SUSE",
+            "severity": "low",
+            "baseScore": 3.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:39.850071Z"
+          }
+        ],
+        "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Buffer Over-read via the `websocket_mask` function in the `speedups` component. An attacker can trigger a read past the end of the mask string by supplying a mask value shorter or longer than 4 bytes. This can expose adjacent process memory to the caller and can crash the interpreter when the optimized masking path is used.\n\n**Notes**\n\n- The vulnerable path is the native `tornado.speedups` extension, which is optional and can be disabled by setting `TORNADO_EXTENSION=0`; deployments that never load the C extension use the pure-Python masking code instead.\n- The behavior is only reachable from Tornado's XSRF token decoder when `xsrf_cookies=True` and the native extension is active.\n\n**Workarounds**\n\n- Set `TORNADO_EXTENSION=0` before starting the application to disable the native `tornado.speedups` extension and avoid the vulnerable `websocket_mask` path, at the cost of reduced websocket performance.\n## Remediation\nUpgrade `tornado` to version 6.5.6 or higher.\n## References\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/96dc88c2a05705287856b2cd6b4b4034f9a6aaac)\n- [Maintainer's Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-cx3h-4qpv-8hc9)\n",
+        "epssDetails": {
+          "percentile": "0.08248",
+          "probability": "0.00027",
+          "modelVersion": "v2025.03.14"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-49854"
+          ],
+          "CWE": [
+            "CWE-126"
+          ],
+          "GHSA": [
+            "GHSA-cx3h-4qpv-8hc9"
+          ]
+        },
+        "packageName": "tornado",
+        "proprietary": false,
+        "creationTime": "2026-06-14T11:50:38.231799Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-12T18:30:19Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-14T11:50:38.418245Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-02T11:05:40.136160Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "benoitc__gunicorn@0.0.0",
+          "tornado@6.5.5"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "tornado",
+        "version": "6.5.5",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-TORNADO-17356107",
+        "title": "Incorrect Resource Transfer Between Spheres",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "credit": [
+          "Yannick Wang"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,6.5.6)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "6.5.6"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 5.3,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "tornado",
+        "references": [
+          {
+            "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-3x9g-8vmp-wqvf",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/tornadoweb/tornado/commit/e8fc7edb238f1022e39f9d0b9d297fc7c21fb0a5",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "SUSE",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+            "cvssV3BaseScore": 7.4,
+            "modificationTime": "2026-07-02T11:05:06.823879Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:L/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-02T11:05:07.240465Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.1,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:07.240465Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+            "assigner": "SUSE",
+            "severity": "high",
+            "baseScore": 7.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:06.823879Z"
+          }
+        ],
+        "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Incorrect Resource Transfer Between Spheres via `SimpleAsyncHTTPClient`. An attacker can obtain sensitive credentials by exploiting cross-origin redirects when the `Authorization` header is improperly forwarded to a different origin. \r\n\r\n**Note:** This is only exploitable if `follow_redirects` is enabled and a redirect changes the scheme, host, or port of the URL. This is the default configuration.\n## Remediation\nUpgrade `tornado` to version 6.5.6 or higher.\n## References\n- [GitHub Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-3x9g-8vmp-wqvf)\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/e8fc7edb238f1022e39f9d0b9d297fc7c21fb0a5)\n",
+        "epssDetails": {
+          "percentile": "0.10595",
+          "probability": "0.00034",
+          "modelVersion": "v2025.03.14"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-49853"
+          ],
+          "CWE": [
+            "CWE-669"
+          ],
+          "GHSA": [
+            "GHSA-3x9g-8vmp-wqvf"
+          ]
+        },
+        "packageName": "tornado",
+        "proprietary": false,
+        "creationTime": "2026-06-17T11:12:12.966531Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-15T20:20:00Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-17T11:12:13.134581Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-02T11:05:07.240465Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "benoitc__gunicorn@0.0.0",
+          "tornado@6.5.5"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "tornado",
+        "version": "6.5.5",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-TORNADO-17356108",
+        "title": "Improper Handling of Highly Compressed Data (Data Amplification)",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "credit": [
+          "Yuichiro Kedashiro (keda)"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,6.5.6)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "6.5.6"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "tornado",
+        "references": [
+          {
+            "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-mgf9-4vpg-hj56",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/tornadoweb/tornado/commit/ff808b33adc52d89a549376a5e3628e92abbc8ff",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "SUSE",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-02T11:05:05.550809Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-02T11:05:06.015139Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:06.015139Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "SUSE",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:05.550809Z"
+          }
+        ],
+        "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Improper Handling of Highly Compressed Data (Data Amplification) in the `AsyncHTTPClient`. An attacker can cause excessive memory consumption by sending a response with a small compressed size that decompresses to a very large payload, leading to resource exhaustion. \r\n\r\n**Note:** This is only exploitable if `decompress_request=True` is set on `HTTPServer`.\r\n\r\n## Workaround \r\n\r\nThis vulnerability can be mitigated by setting `decompress_response=False` or using `CurlAsyncHTTPClient`.\n## Remediation\nUpgrade `tornado` to version 6.5.6 or higher.\n## References\n- [GitHub Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-mgf9-4vpg-hj56)\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/ff808b33adc52d89a549376a5e3628e92abbc8ff)\n",
+        "epssDetails": {
+          "percentile": "0.16936",
+          "probability": "0.00052",
+          "modelVersion": "v2025.03.14"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-49855"
+          ],
+          "CWE": [
+            "CWE-409"
+          ],
+          "GHSA": [
+            "GHSA-mgf9-4vpg-hj56"
+          ]
+        },
+        "packageName": "tornado",
+        "proprietary": false,
+        "creationTime": "2026-06-17T11:14:10.320218Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-15T20:19:28Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-17T11:14:10.491779Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-02T11:05:06.015139Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "benoitc__gunicorn@0.0.0",
+          "tornado@6.5.5"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "tornado",
+        "version": "6.5.5",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-TORNADO-17356157",
+        "title": "Operation on a Resource after Expiration or Release",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N/E:P",
+        "credit": [
+          "Koh Jun Sheng"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,6.5.7)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "6.5.7"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "tornado",
+        "references": [
+          {
+            "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-pw6j-qg29-8w7f",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/tornadoweb/tornado/commit/3154caabc9a60cb0b6953d28877b2785fbd3ab43",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:L/VA:N/SC:H/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-17T11:24:46.492682Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.9,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-17T11:24:46.492682Z"
+          }
+        ],
+        "description": "## Overview\n[tornado](https://github.com/tornadoweb/tornado) is a Python web framework and asynchronous networking library, originally developed at FriendFeed.\n\nAffected versions of this package are vulnerable to Operation on a Resource after Expiration or Release in the `CurlAsyncHTTPClient`, where per-request credentials such as client TLS certificates or proxy authentication details are not properly cleared when reusing handles across requests. An attacker can obtain sensitive credentials intended for a previous request by triggering a subsequent request to a different host or proxy, causing the credentials to be sent to an unintended recipient.\r\n\r\n**Note:** This is only exploitable if the application uses the optional `CurlAsyncHTTPClient` backend and is configured in a manner that matches the affected proxy-related usage patterns. Applications using the default `SimpleAsyncHTTPClient` backend are not affected, as it does not support proxies.\n## Remediation\nUpgrade `tornado` to version 6.5.7 or higher.\n## References\n- [GitHub Advisory](https://github.com/tornadoweb/tornado/security/advisories/GHSA-pw6j-qg29-8w7f)\n- [GitHub Commit](https://github.com/tornadoweb/tornado/commit/3154caabc9a60cb0b6953d28877b2785fbd3ab43)\n",
+        "epssDetails": null,
+        "identifiers": {
+          "CVE": [],
+          "CWE": [
+            "CWE-672"
+          ],
+          "GHSA": [
+            "GHSA-pw6j-qg29-8w7f"
+          ]
+        },
+        "packageName": "tornado",
+        "proprietary": false,
+        "creationTime": "2026-06-17T11:23:33.476750Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-15T20:37:24Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-17T11:23:33.638511Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-17T11:24:46.492682Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "benoitc__gunicorn@0.0.0",
+          "tornado@6.5.5"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "tornado",
+        "version": "6.5.5",
+        "severityWithCritical": "high"
+      }
+    ],
+    "upgrade": {},
+    "patch": {},
+    "ignore": {},
+    "pin": {
+      "idna@3.11": {
+        "upgradeTo": "idna@3.15",
+        "vulns": [
+          "SNYK-PYTHON-IDNA-16769942"
+        ],
+        "isTransitive": false
+      },
+      "pygments@2.19.2": {
+        "upgradeTo": "pygments@2.20.0",
+        "vulns": [
+          "SNYK-PYTHON-PYGMENTS-15746419"
+        ],
+        "isTransitive": false
+      },
+      "tornado@6.5.5": {
+        "upgradeTo": "tornado@6.5.7",
+        "vulns": [
+          "SNYK-PYTHON-TORNADO-17337026",
+          "SNYK-PYTHON-TORNADO-17356107",
+          "SNYK-PYTHON-TORNADO-17356108",
+          "SNYK-PYTHON-TORNADO-17356157"
+        ],
+        "isTransitive": false
+      }
+    }
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 6,
+  "projectName": "benoitc__gunicorn",
+  "displayTargetFile": "requirements.txt",
+  "hasUnknownVersions": false,
+  "path": "/work/benoitc__gunicorn"
+}

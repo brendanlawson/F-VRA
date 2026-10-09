@@ -1,0 +1,289 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 85 packages in 473ms
+Downloading sphinx (2.9MiB)
+Downloading sphinx-rtd-theme (2.7MiB)
+Downloading black (1.7MiB)
+Downloading django (7.6MiB)
+Downloading djangorestframework (1.0MiB)
+Downloading babel (9.7MiB)
+Downloading ruff (10.7MiB)
+Downloading cryptography (3.8MiB)
+Downloading virtualenv (5.8MiB)
+ Downloaded djangorestframework
+ Downloaded black
+ Downloaded sphinx-rtd-theme
+ Downloaded sphinx
+ Downloaded cryptography
+ Downloaded virtualenv
+Downloading ruff (10.7MiB)
+Downloading django (7.6MiB)
+Downloading babel (9.7MiB)
+ Downloaded django
+ Downloaded babel
+ Downloaded ruff
+Prepared 57 packages in 2m 26s
+Installed 85 packages in 1.35s
+ + alabaster==0.7.16
+ + asgiref==3.9.1
+ + babel==2.17.0
+ + black==25.1.0
+ + cachetools==6.1.0
+ + cbor2==5.6.5
+ + certifi==2025.7.9
+ + cffi==1.17.1
+ + cfgv==3.4.0
+ + chardet==5.2.0
+ + charset-normalizer==3.4.2
+ + click==8.1.8
+ + colorama==0.4.6
+ + coverage==7.9.2
+ + cryptography==43.0.3
+ + deepdiff==8.5.0
+ + defusedxml==0.7.1
+ + distlib==0.3.9
+ + django==4.2.23
+ + djangorestframework==3.16.0
+ + djangorestframework-simplejwt==5.5.0
+ + djet==0.3.0
+ + docformatter==1.7.7
+ + docutils==0.18.1
+ + exceptiongroup==1.3.0
+ + filelock==3.18.0
+ + future==1.0.0
+ + identify==2.6.12
+ + idna==3.10
+ + imagesize==1.4.1
+ + importlib-metadata==8.7.0
+ + iniconfig==2.1.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.2
+ + mypy-extensions==1.1.0
+ + nodeenv==1.9.1
+ + oauthlib==3.3.1
+ + orderly-set==5.5.0
+ + packaging==25.0
+ + pathspec==0.12.1
+ + platformdirs==4.3.8
+ + pluggy==1.6.0
+ + pre-commit==4.2.0
+ + pre-commit-hooks==5.0.0
+ + pycparser==2.22
+ + pygments==2.19.2
+ + pyjwt==2.9.0
+ + pyopenssl==25.1.0
+ + pyproject-api==1.9.1
+ + pytest==7.4.4
+ + pytest-cov==4.1.0
+ + pytest-django==4.11.1
+ + pytest-mock==3.14.1
+ + python3-openid==3.2.0
+ + pyupgrade==3.20.0
+ + pyyaml==6.0.2
+ + requests==2.32.4
+ + requests-oauthlib==2.0.0
+ + ruamel-yaml==0.18.14
+ + ruamel-yaml-clib==0.2.12
+ + ruff==0.8.6
+ + six==1.17.0
+ + snowballstemmer==3.0.1
+ + social-auth-app-django==5.4.3
+ + social-auth-core==4.7.0
+ + sphinx==6.2.1
+ + sphinx-rtd-theme==1.3.0
+ + sphinxcontrib-applehelp==2.0.0
+ + sphinxcontrib-devhelp==2.0.0
+ + sphinxcontrib-htmlhelp==2.1.0
+ + sphinxcontrib-jquery==4.1
+ + sphinxcontrib-jsmath==1.0.1
+ + sphinxcontrib-qthelp==2.0.0
+ + sphinxcontrib-serializinghtml==2.0.0
+ + sqlparse==0.5.3
+ + tokenize-rt==6.2.0
+ + toml==0.10.2
+ + tomli==2.2.1
+ + tox==4.27.0
+ + typing-extensions==4.14.1
+ + tzdata==2025.2
+ + urllib3==2.5.0
+ + virtualenv==20.31.2
+ + webauthn==0.4.7
+ + zipp==3.23.0
+ONE_SHOT_INSTALL_OK
+
+Testing /work/sunscrapers__djoser...
+
+Tested 86 dependencies for known issues, found 60 issues, 296 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade black@25.1.0 to black@26.3.1 to fix
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-15518063] in black@25.1.0
+    introduced by black@25.1.0
+
+  Upgrade cbor2@5.6.5 to cbor2@5.9.0 to fix
+  ✗ Improper Removal of Sensitive Information Before Storage or Transfer [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CBOR2-14742478] in cbor2@5.6.5
+    introduced by cbor2@5.6.5 and 1 other path(s)
+  ✗ Missing Release of Memory after Effective Lifetime [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CBOR2-14049181] in cbor2@5.6.5
+    introduced by cbor2@5.6.5 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CBOR2-15762225] in cbor2@5.6.5
+    introduced by cbor2@5.6.5 and 1 other path(s)
+
+  Upgrade cryptography@43.0.3 to cryptography@48.0.1 to fix
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@43.0.3
+    introduced by cryptography@43.0.3 and 5 other path(s)
+  ✗ Missing Report of Error Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-8715586] in cryptography@43.0.3
+    introduced by cryptography@43.0.3 and 5 other path(s)
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@43.0.3
+    introduced by cryptography@43.0.3 and 5 other path(s)
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@43.0.3
+    introduced by cryptography@43.0.3 and 5 other path(s)
+
+  Upgrade deepdiff@8.5.0 to deepdiff@8.6.2 to fix
+  ✗ Improperly Controlled Modification of Dynamically-Determined Object Attributes [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DEEPDIFF-15692487] in deepdiff@8.5.0
+    introduced by deepdiff@8.5.0
+  ✗ Class Pollution [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DEEPDIFF-12485343] in deepdiff@8.5.0
+    introduced by deepdiff@8.5.0
+
+  Upgrade django@4.2.23 to django@5.2.16 to fix
+  ✗ Race Condition [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15371388] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ User Impersonation [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923569] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Improper Handling of Case Sensitivity [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151726] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Cleartext Transmission of Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151727] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151728] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Incomplete Comparison with Missing Factors [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151772] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151780] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Use of Cache Containing Sensitive Information (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881428] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13179650] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13836728] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198929] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Timing Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198930] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15199281] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15371389] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Missing Authorization [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923535] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923566] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923567] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Missing Authorization [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923568] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Improper Neutralization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881426] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Buffer Access with Incorrect Length Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881427] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-12485156] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Relative Path Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13179425] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13837025] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-14157807] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-14157810] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15183335] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198931] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198932] in django@4.2.23
+    introduced by django@4.2.23 and 4 other path(s)
+
+  Upgrade djangorestframework-simplejwt@5.5.0 to djangorestframework-simplejwt@5.5.1 to fix
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGORESTFRAMEWORKSIMPLEJWT-6450220] in djangorestframework-simplejwt@5.5.0
+    introduced by djangorestframework-simplejwt@5.5.0
+
+  Upgrade filelock@3.18.0 to filelock@3.20.3 to fix
+  ✗ Time-of-check Time-of-use (TOCTOU) Race Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FILELOCK-14458335] in filelock@3.18.0
+    introduced by filelock@3.18.0 and 4 other path(s)
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FILELOCK-14912448] in filelock@3.18.0
+    introduced by filelock@3.18.0 and 4 other path(s)
+
+  Upgrade idna@3.10 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.10
+    introduced by idna@3.10 and 10 other path(s)
+
+  Upgrade pygments@2.19.2 to pygments@2.20.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYGMENTS-15746419] in pygments@2.19.2
+    introduced by pygments@2.19.2 and 4 other path(s)
+
+  Upgrade pyjwt@2.9.0 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+  ✗ Inadequate Encryption Strength [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-11356591] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-15518059] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.9.0
+    introduced by pyjwt@2.9.0 and 3 other path(s)
+
+  Upgrade pyopenssl@25.1.0 to pyopenssl@26.0.0 to fix
+  ✗ Not Failing Securely ('Failing Open') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674458] in pyopenssl@25.1.0
+    introduced by pyopenssl@25.1.0 and 1 other path(s)
+  ✗ Buffer Overflow [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674459] in pyopenssl@25.1.0
+    introduced by pyopenssl@25.1.0 and 1 other path(s)
+
+  Upgrade requests@2.32.4 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.4
+    introduced by requests@2.32.4 and 9 other path(s)
+
+  Upgrade social-auth-app-django@5.4.3 to social-auth-app-django@5.6.0 to fix
+  ✗ Authentication Bypass by Spoofing [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOCIALAUTHAPPDJANGO-13512562] in social-auth-app-django@5.4.3
+    introduced by social-auth-app-django@5.4.3
+
+  Upgrade sqlparse@0.5.3 to sqlparse@0.5.4 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SQLPARSE-14157217] in sqlparse@0.5.3
+    introduced by sqlparse@0.5.3 and 5 other path(s)
+
+  Upgrade urllib3@2.5.0 to urllib3@2.7.0 to fix
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 10 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 10 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 10 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 10 other path(s)
+
+  Upgrade virtualenv@20.31.2 to virtualenv@20.36.1 to fix
+  ✗ Symlink Attack [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-VIRTUALENV-14912451] in virtualenv@20.31.2
+    introduced by virtualenv@20.31.2 and 2 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      sunscrapers__djoser
+Open source:       no
+Project path:      /work/sunscrapers__djoser
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

@@ -1,0 +1,210 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 53 packages in 523ms
+Downloading mypy (2.1MiB)
+Downloading mkdocs (6.1MiB)
+Downloading setuptools (1.2MiB)
+ Downloaded setuptools
+ Downloaded mypy
+ Downloaded mkdocs
+Prepared 47 packages in 19.52s
+Installed 53 packages in 362ms
+ + anyio==3.6.2
+ + attrs==22.2.0
+ + black==23.3.0
+ + certifi==2022.12.7
+ + charset-normalizer==3.1.0
+ + click==8.1.3
+ + colorama==0.4.6
+ + deprecated==1.2.13
+ + fastapi==0.89.1
+ + flake8==4.0.1
+ + ghp-import==2.1.0
+ + h11==0.14.0
+ + httpcore==0.16.3
+ + httpx==0.23.3
+ + idna==3.4
+ + importlib-metadata==4.2.0
+ + importlib-resources==5.12.0
+ + iniconfig==2.0.0
+ + isort==4.3.21
+ + jinja2==3.1.2
+ + limits==3.3.1
+ + markdown==3.3.4
+ + mccabe==0.6.1
+ + mergedeep==1.3.4
+ + mkdocs==1.2.4
+ + mock==4.0.3
+ + mypy==0.910
+ + packaging==23.0
+ + pathspec==0.11.1
+ + platformdirs==3.2.0
+ + pluggy==1.0.0
+ + py==1.11.0
+ + pycodestyle==2.8.0
+ + pydantic==1.10.7
+ + pyflakes==2.4.0
+ + pytest==6.2.5
+ + python-dateutil==2.8.2
+ + pyyaml-env-tag==0.1
+ + redis==3.5.3
+ + requests==2.28.2
+ + rfc3986==1.5.0
+ + setuptools==65.7.0
+ + six==1.16.0
+ + sniffio==1.3.0
+ + starlette==0.22.0
+ + toml==0.10.2
+ + tomli==2.0.1
+ + types-redis==3.5.18
+ + typing-extensions==4.5.0
+ + urllib3==1.26.15
+ + watchdog==3.0.0
+ + wrapt==1.15.0
+ + zipp==3.15.0
+ONE_SHOT_INSTALL_OK
+
+Testing /work/laurentS__slowapi...
+
+Tested 56 dependencies for known issues, found 44 issues, 97 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade anyio@3.6.2 to anyio@4.4.0 to fix
+  ✗ Race Condition [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-ANYIO-7361842] in anyio@3.6.2
+    introduced by anyio@3.6.2 and 4 other path(s)
+
+  Upgrade black@23.3.0 to black@26.3.1 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-6256273] in black@23.3.0
+    introduced by black@23.3.0
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-15518063] in black@23.3.0
+    introduced by black@23.3.0
+
+  Upgrade certifi@2022.12.7 to certifi@2024.7.4 to fix
+  ✗ Insufficient Verification of Data Authenticity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CERTIFI-7430173] in certifi@2022.12.7
+    introduced by certifi@2022.12.7 and 4 other path(s)
+  ✗ Improper Following of a Certificate's Chain of Trust [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CERTIFI-5805047] in certifi@2022.12.7
+    introduced by certifi@2022.12.7 and 4 other path(s)
+
+  Upgrade fastapi@0.89.1 to fastapi@0.109.1 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FASTAPI-6228055] in fastapi@0.89.1
+    introduced by fastapi@0.89.1
+
+  Upgrade h11@0.14.0 to h11@0.16.0 to fix
+  ✗ HTTP Request Smuggling [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-H11-10293728] in h11@0.14.0
+    introduced by h11@0.14.0 and 2 other path(s)
+
+  Upgrade idna@3.4 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.4
+    introduced by idna@3.4 and 6 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975] in idna@3.4
+    introduced by idna@3.4 and 6 other path(s)
+
+  Upgrade jinja2@3.1.2 to jinja2@3.1.6 to fix
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-6150717] in jinja2@3.1.2
+    introduced by jinja2@3.1.2 and 1 other path(s)
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-6809379] in jinja2@3.1.2
+    introduced by jinja2@3.1.2 and 1 other path(s)
+  ✗ Template Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-8548181] in jinja2@3.1.2
+    introduced by jinja2@3.1.2 and 1 other path(s)
+  ✗ Improper Neutralization [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-8548987] in jinja2@3.1.2
+    introduced by jinja2@3.1.2 and 1 other path(s)
+  ✗ Template Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-9292516] in jinja2@3.1.2
+    introduced by jinja2@3.1.2 and 1 other path(s)
+
+  Upgrade markdown@3.3.4 to markdown@3.8.1 to fix
+  ✗ Uncaught Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MARKDOWN-15428352] in markdown@3.3.4
+    introduced by markdown@3.3.4 and 1 other path(s)
+
+  Upgrade mkdocs@1.2.4 to mkdocs@1.3.0 to fix
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MKDOCS-2438396] in mkdocs@1.2.4
+    introduced by mkdocs@1.2.4
+
+  Upgrade pydantic@1.10.7 to pydantic@1.10.13 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYDANTIC-5907722] in pydantic@1.10.7
+    introduced by pydantic@1.10.7 and 1 other path(s)
+
+  Upgrade redis@3.5.3 to redis@4.3.6 to fix
+  ✗ Exposure of Data Element to Wrong Session [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REDIS-5291195] in redis@3.5.3
+    introduced by redis@3.5.3
+
+  Upgrade requests@2.28.2 to requests@2.33.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-10305723] in requests@2.28.2
+    introduced by requests@2.28.2
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.28.2
+    introduced by requests@2.28.2
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-5595532] in requests@2.28.2
+    introduced by requests@2.28.2
+  ✗ Always-Incorrect Control Flow Implementation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-6928867] in requests@2.28.2
+    introduced by requests@2.28.2
+
+  Upgrade starlette@0.22.0 to starlette@1.3.1 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-10874054] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-3319937] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-13733964] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-5538332] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-8186175] in starlette@0.22.0
+    introduced by starlette@0.22.0 and 1 other path(s)
+
+  Upgrade urllib3@1.26.15 to urllib3@2.7.0 to fix
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-10390194] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Information Exposure Through Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-5926907] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Information Exposure Through Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-6002459] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Improper Removal of Sensitive Information Before Storage or Transfer [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-7267250] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@1.26.15
+    introduced by urllib3@1.26.15 and 1 other path(s)
+
+  Upgrade zipp@3.15.0 to zipp@3.19.1 to fix
+  ✗ Infinite loop [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-ZIPP-7430899] in zipp@3.15.0
+    introduced by zipp@3.15.0 and 2 other path(s)
+
+  Pin setuptools@65.7.0 to setuptools@83.0.0 to fix
+  ✗ Improper Handling of Unicode Encoding (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-17895075] in setuptools@65.7.0
+    introduced by limits@3.3.1 > setuptools@65.7.0
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-9964606] in setuptools@65.7.0
+    introduced by limits@3.3.1 > setuptools@65.7.0
+  ✗ Improper Control of Generation of Code ('Code Injection') [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-7448482] in setuptools@65.7.0
+    introduced by limits@3.3.1 > setuptools@65.7.0
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      laurentS__slowapi
+Open source:       no
+Project path:      /work/laurentS__slowapi
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

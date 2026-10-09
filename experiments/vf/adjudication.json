@@ -1,0 +1,220 @@
+{
+  "schema_version": "pyshare.rq3.adjudication.v1",
+  "policy": "Only APPROVED rows affect preparation. Pending rows remain unresolved and are never guessed.",
+  "cases": [
+    {
+      "group_id": "CVE-2019-1020019::invenio-previewer",
+      "status": "APPROVED",
+      "vulnerable_ref": "fd12f0cd848fed0dd0936296a4f0401c63ef0ecd",
+      "patch_base_sha": "fd12f0cd848fed0dd0936296a4f0401c63ef0ecd",
+      "reason": "The benchmark vulnerable_ref is not a commit in the declared repository. The canonical fixing commit exists and identifies this exact commit as its sole direct parent; that parent is therefore the unambiguous pre-fix snapshot and patch base.",
+      "evidence": [
+        "https://api.github.com/repos/inveniosoftware/invenio-previewer/commits/fd12f0cba1e764cabc9db77e3f9b7f6f6f26c34a (no commit found)",
+        "https://api.github.com/repos/inveniosoftware/invenio-previewer/commits/720e739a7aab0aeffbbb39de784c3fc2fd2dd974 (sole parent fd12f0cd848fed0dd0936296a4f0401c63ef0ecd)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2022-23522::mindsdb",
+      "status": "APPROVED",
+      "patch_unavailable": true,
+      "patch_unavailable_reason": "The benchmark's canonical fixing commit is a merge commit whose first-parent diff does not modify the reported vulnerable file/function; its recorded parent_sha is not a direct parent either. The benchmark's patch mapping is therefore not valid evidence for P_MODIFIED or P_DUAL/PATCH_PRESENT. Keep the source/description case, but exclude patch-conditioned localization rather than treating it as PATCH_ABSENT.",
+      "reason": "GitHub identifies the fixing commit as a two-parent merge. The official compare result for the benchmark vulnerable revision to that commit lists changes in 12 unrelated files and does not include mindsdb/interfaces/storage/fs.py, where the benchmark places the VF. No alternate verified fixing commit was found. The source-based D_LEX/D_SEM case remains eligible; patch modes are explicitly unavailable.",
+      "evidence": [
+        "https://api.github.com/repos/mindsdb/mindsdb/commits/980d793902b0a4e8c60f33352dd39c2e7e96f510 (two direct parents)",
+        "https://api.github.com/repos/mindsdb/mindsdb/compare/69c76e727b8067f32b06ab83bb835a8c416c4f21...980d793902b0a4e8c60f33352dd39c2e7e96f510 (changed-file list excludes mindsdb/interfaces/storage/fs.py)",
+        "https://github.com/mindsdb/mindsdb/blob/69c76e727b8067f32b06ab83bb835a8c416c4f21/mindsdb/interfaces/storage/fs.py"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "GHSA-PCJH-6R5H-R92R::django-sendfile2",
+      "status": "APPROVED",
+      "package_name": "django-sendfile2",
+      "vulnerable_ref": "pypi:django-sendfile2==0.6.1",
+      "source_archive": {
+        "version": "0.6.1",
+        "url": "https://files.pythonhosted.org/packages/81/79/c03e92b4199f045dc61557a6039e1d2d3243f08598be536fce059338c1ab/django-sendfile2-0.6.1.tar.gz",
+        "sha256": "312b4501960e6b3a3390c48a6bdcfdae2c0516efacf24bdd0c97c6f2f2d2fc30"
+      },
+      "fix_archive": {
+        "version": "0.7.0",
+        "url": "https://files.pythonhosted.org/packages/cb/5c/6624eb8cefe73578b206fa63febd54f0e0183a5bc7dbcc4685995aab70a9/django-sendfile2-0.7.0.tar.gz",
+        "sha256": "d900b1557cb1ba881798728de7ed7c82bff808868f331136b867a106e73bcd1f"
+      },
+      "reason": "The benchmark's Git object IDs are not present in the declared archived repository. PyPI publishes source distributions for the exact vulnerable version named by the advisory (0.6.1) and first fixed release (0.7.0); both artifact hashes were checked against PyPI JSON. Use this explicit release-artifact adaptation and retain the reported sendfile VF, which exists in the vulnerable artifact.",
+      "evidence": [
+        "https://api.github.com/repos/moggers87/django-sendfile2/commits/d011d7502b5062fe731f1b66951ab141b6796ccd (no commit found)",
+        "https://api.github.com/repos/moggers87/django-sendfile2/commits/4c370859023292e3715200a57843f86c5ef3cd77 (no commit found)",
+        "https://pypi.org/pypi/django-sendfile2/0.6.1/json",
+        "https://pypi.org/pypi/django-sendfile2/0.7.0/json"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "GHSA-6R3C-8XF3-GGRR::django-sendfile2",
+      "status": "APPROVED",
+      "package_name": "django-sendfile2",
+      "vulnerable_ref": "pypi:django-sendfile2==0.5.1",
+      "source_archive": {
+        "version": "0.5.1",
+        "url": "https://files.pythonhosted.org/packages/e9/db/c1a2e91369b5a1db601d048a80e6510d603cc677964b361727ac93f884ca/django-sendfile2-0.5.1.tar.gz",
+        "sha256": "695c635bdc26fe35e22565f046c92126a03fafb587e11415baec6da9df1be04e"
+      },
+      "fix_archive": {
+        "version": "0.6.0",
+        "url": "https://files.pythonhosted.org/packages/20/24/f76d8eb40732ea91f5aa2857f76ce48f6d4e2ade2d1f486fd87f73c30e32/django-sendfile2-0.6.0.tar.gz",
+        "sha256": "7f850040ddc29c9c42192ed85b915465a3ed7cced916c4fafdd5eda057dd06ec"
+      },
+      "verified_vfs": [
+        {"qualified_name": "django_sendfile.backends.simple.sendfile", "file_path": "django_sendfile/backends/simple.py", "label": "root_cause_vf"},
+        {"qualified_name": "django_sendfile.backends.development.sendfile", "file_path": "django_sendfile/backends/development.py", "label": "root_cause_vf"}
+      ],
+      "reason": "The benchmark's Git object IDs are not present in the declared archived repository. PyPI publishes the vulnerable 0.5.1 and first fixed 0.6.0 source distributions, with hashes matching PyPI JSON. The vulnerable 0.5.1 artifact has no django_sendfile/utils.py; unsafe path handling is in the simple and development backend sendfile functions, so the gold functions are corrected to those two source-present VFs based on the advisory and release diff.",
+      "evidence": [
+        "https://api.github.com/repos/moggers87/django-sendfile2/commits/72239470c0737dd6d0d36a44602afc9d75aa34b9 (no commit found)",
+        "https://api.github.com/repos/moggers87/django-sendfile2/commits/f870c52398a55b9b5189932dd8caa24efb4bc1e1 (no commit found)",
+        "https://pypi.org/pypi/django-sendfile2/0.5.1/json",
+        "https://pypi.org/pypi/django-sendfile2/0.6.0/json",
+        "https://github.com/moggers87/django-sendfile2/security/advisories/GHSA-6r3c-8xf3-ggrr"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2021-28359::apache-airflow",
+      "status": "APPROVED",
+      "vulnerable_ref": "d2c2a2285c176ef232452e72a28e355667b8b50b",
+      "patch_base_sha": "d2c2a2285c176ef232452e72a28e355667b8b50b",
+      "verified_vfs": [
+        {"qualified_name": "airflow.www.views.get_safe_url", "file_path": "airflow/www/views.py", "label": "root_cause_vf"}
+      ],
+      "reason": "The benchmark labels airflow/www_rbac/views.py::get_safe_url, but that file does not exist in the declared vulnerable snapshot. The reported function exists at airflow/www/views.py in the source, and the canonical fix modifies this exact function there. Pin the vulnerable snapshot and patch base to the canonical fix's sole direct parent, and correct the file path to the source-present function.",
+      "evidence": [
+        "https://github.com/apache/airflow/commit/409c249121bd9c8902fc2ba551b21873ab41f953 (canonical fix; sole parent d2c2a2285c176ef232452e72a28e355667b8b50b; diff modifies get_safe_url)",
+        "https://github.com/apache/airflow/blob/d2c2a2285c176ef232452e72a28e355667b8b50b/airflow/www/views.py",
+        "https://github.com/apache/airflow/blob/87645b331ab1fb3f44f6958a2095b559f40646d2/airflow/www/views.py (benchmark revision; source-present function path)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2026-6907::django",
+      "status": "APPROVED",
+      "patch_sha": "44ad76efcbe3c4ca0f08bb9dabe916f6374596c9",
+      "patch_base_sha": "1b0184aa657bc3f5859aeb0206e7c1e94e48b103",
+      "reason": "The benchmark vulnerable revision is on Django's 6.0.x line. The canonical fix commit is on a different branch and does not have the declared vulnerable revision as its parent; the benchmark also supplies a 6.0.x backport whose commit message identifies the same CVE and whose sole direct parent is exactly the vulnerable revision. Use that branch-applicable fixing commit for the explicit diff.",
+      "evidence": [
+        "https://github.com/django/django/commit/c79bdfc1351ef2a2ad95df36241a74c736ef20a1 (canonical fix; parent is not benchmark vulnerable revision)",
+        "https://github.com/django/django/commit/44ad76efcbe3c4ca0f08bb9dabe916f6374596c9 (6.0.x backport; sole parent is benchmark vulnerable revision)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "PYSEC-2019-9::django",
+      "status": "APPROVED",
+      "patch_sha": "afddabf8428ddc89a332f7a78d0d21eaf2b5a673",
+      "patch_base_sha": "4a1d25b39f8265178f72c90a1bd5fce583babd54",
+      "reason": "The benchmark vulnerable revision is on Django's 2.2.x line. The canonical fix commit is on a different branch and does not have the declared vulnerable revision as its parent; the benchmark also supplies a 2.2.x backport whose commit message identifies the same CVE and whose sole direct parent is exactly the vulnerable revision. Use that branch-applicable fixing commit for the explicit diff.",
+      "evidence": [
+        "https://github.com/django/django/commit/deeba6d92006999fee9adfbd8be79bf0a59e8008 (canonical fix; parent is not benchmark vulnerable revision)",
+        "https://github.com/django/django/commit/afddabf8428ddc89a332f7a78d0d21eaf2b5a673 (2.2.x backport; sole parent is benchmark vulnerable revision)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2023-27489::kiwitcms",
+      "status": "APPROVED",
+      "evaluation_ineligible_reason": "VF_NOT_IN_REPOSITORY: the reported attachments.forms.AttachmentForm is absent from the exact Kiwi TCMS source snapshot; it belongs to an external attachment package, so no repository-local function can be evaluated.",
+      "reason": "The frozen vulnerable snapshot has no attachments/forms.py or AttachmentForm definition. The fixing commit changes Kiwi TCMS middleware/configuration and does not modify the reported external form. Retain the raw benchmark record for audit, but exclude it from repository-local VF localization metrics.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case CVE-2023-27489::kiwitcms: frozen source snapshot 724e510f1dd8115001e1195cfbf5f4ef6c89c254b40c552980b95c9cf2eb8eb8 has no attachments/forms.py or AttachmentForm",
+        "https://github.com/kiwitcms/Kiwi/commit/6617cee0fb70cc394b7be6bbc86ef84e6e9de077 (changed files do not include attachments/forms.py)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2026-27482::ray",
+      "status": "APPROVED",
+      "verified_vf_updates": {
+        "python.ray.dashboard.modules.job.http_server_agent.HttpServerAgent.start": {
+          "file_path": "python/ray/dashboard/http_server_agent.py",
+          "qualified_name": "python.ray.dashboard.http_server_agent.HttpServerAgent.start"
+        }
+      },
+      "reason": "The supplied source snapshot and fixing commit place HttpServerAgent.start in python/ray/dashboard/http_server_agent.py, not python/ray/dashboard/modules/job/http_server_agent.py. The function is present at the corrected path and that path is changed by the fixing commit; correct only this VF path/module mapping.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case CVE-2026-27482::ray: HttpServerAgent.start is present at python/ray/dashboard/http_server_agent.py",
+        "https://github.com/ray-project/ray/commit/0fda8b824cdc9dc6edd763bb28dfd7d1cc9b02a4 (patch changes python/ray/dashboard/http_server_agent.py)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2026-27602::modoboa",
+      "status": "APPROVED",
+      "verified_vf_updates": {
+        "modoboa.admin._manage_dkim_keys.create_new_dkim_key": {
+          "file_path": "modoboa/admin/management/commands/subcommands/_manage_dkim_keys.py",
+          "qualified_name": "modoboa.admin.management.commands.subcommands._manage_dkim_keys.ManageDKIMKeys.create_new_dkim_key"
+        }
+      },
+      "reason": "The fixing commit changes the reported create_new_dkim_key method in the nested management-command module. In the exact vulnerable source snapshot the method is inside ManageDKIMKeys at that path; correct the file and qualified name to the source-present method.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case CVE-2026-27602::modoboa: method is defined in modoboa/admin/management/commands/subcommands/_manage_dkim_keys.py",
+        "https://github.com/modoboa/modoboa/commit/27a7aa133d3608fe8c25ae39125d1012c333cbfa (patch changes the same management-command module)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2026-27962::authlib",
+      "status": "APPROVED",
+      "verified_vf_updates": {
+        "authlib.jose.rfc7516.jwe.prepare_key": {
+          "file_path": "authlib/jose/rfc7516/jwe.py"
+        }
+      },
+      "reason": "The reported prepare_key function is present in authlib/jose/rfc7516/jwe.py, and the fixing commit changes that module. The benchmark's file path incorrectly names jws.py; correct the path without changing the function identity.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case CVE-2026-27962::authlib: prepare_key is defined in authlib/jose/rfc7516/jwe.py",
+        "https://github.com/authlib/authlib/commit/a5d4b2d4c9e46bfa11c82f85fdc2bcc0b50ae681 (patch changes authlib/jose/rfc7516/jwe.py)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2026-28413::products-isurlinportal",
+      "status": "APPROVED",
+      "verified_vf_updates": {
+        "Products.isurlinportal.isURLInPortal": {
+          "file_path": "src/Products/isurlinportal/__init__.py"
+        }
+      },
+      "reason": "The function is present at src/Products/isurlinportal/__init__.py in the exact snapshot and the fixing commit modifies that path. The benchmark omitted the repository's src/ prefix; correct the path only.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case CVE-2026-28413::products-isurlinportal: isURLInPortal is defined in src/Products/isurlinportal/__init__.py",
+        "https://github.com/plone/products.isurlinportal/commit/44f863c394290b4a57c6bffbdaf794e5362b3201 (patch changes src/Products/isurlinportal/__init__.py)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "CVE-2026-8596::sagemaker",
+      "status": "APPROVED",
+      "verified_vf_exclusions": [
+        "sagemaker.serve.model_server.triton.triton_builder.Triton._hmac_signing"
+      ],
+      "reason": "The benchmark lists a duplicate _hmac_signing VF at triton_builder.py, but that file/class is absent from the exact snapshot. The same case already identifies the root-cause method _ModelBuilderUtils._hmac_signing in model_builder_utils.py; the fixing commit changes that source-present method. Exclude only the duplicate stale label.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case CVE-2026-8596::sagemaker: _ModelBuilderUtils._hmac_signing exists in sagemaker-serve/src/sagemaker/serve/model_builder_utils.py; triton_builder.py does not exist",
+        "https://github.com/aws/sagemaker-python-sdk/commit/387213b1b70fcd60bee8ff0a49967a219db72878 (patch changes model_builder_utils.py)"
+      ],
+      "checked_at": "2026-09-25"
+    },
+    {
+      "group_id": "GHSA-63CX-G855-HVV4::mitmproxy",
+      "status": "APPROVED",
+      "evaluation_ineligible_reason": "VF_NOT_IN_REPOSITORY: the reported h2.utilities._reject_unpermitted_characters function is not part of the frozen mitmproxy repository source snapshot; it belongs to the separate h2 dependency.",
+      "reason": "The exact mitmproxy snapshot does not contain src/h2/utilities.py or the reported function, and no patch is supplied. This is a dependency-level VF rather than a repository-local VF, so retain it for audit but exclude it from this repository-local localization evaluation.",
+      "evidence": [
+        "prepared_manifest_v5.jsonl case GHSA-63CX-G855-HVV4::mitmproxy: frozen source snapshot 2dbddd0c6d547a090a1ea8b14881e89827e651619929c0cfa491abd3c68299cc has no src/h2/utilities.py or _reject_unpermitted_characters"
+      ],
+      "checked_at": "2026-09-25"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+# project: milesmcc__shynet
+# scanner: pip-audit
+# time: Sat Jul 11 09:58:47 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\milesmcc__shynet.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\milesmcc__shynet.json
+# exit code: 1
+# note: attempt 3 reject=[] net=True skipped=[]
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+
+  
+
+  Getting requirements to build wheel did not run successfully.
+
+  exit code: 1
+
+  
+
+  [39 lines of output]
+
+  Traceback (most recent call last):
+
+    File "C:\Users\admin\AppData\Local\Temp\tmp6p32icml\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 389, in <module>
+
+      main()
+
+      ~~~~^^
+
+    File "C:\Users\admin\AppData\Local\Temp\tmp6p32icml\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 373, in main
+
+      json_out["return_val"] = hook(**hook_input["kwargs"])
+
+                               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\tmp6p32icml\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 143, in get_requires_for_build_wheel
+
+      return hook(config_settings)
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\build_meta.py", line 333, in get_requires_for_build_wheel
+
+      return self._get_build_requires(config_settings, requirements=[])
+
+             ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\build_meta.py", line 301, in _get_build_requires
+
+      self.run_setup()
+
+      ~~~~~~~~~~~~~~^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\build_meta.py", line 520, in run_setup
+
+      super().run_setup(setup_script=setup_script)
+
+      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\build_meta.py", line 317, in run_setup
+
+      exec(code, locals())
+
+      ~~~~^^^^^^^^^^^^^^^^
+
+    File "<string>", line 126, in <module>
+
+    File "<string>", line 105, in uses_msvc
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\_distutils\command\config.py", line 203, in try_compile
+
+      self._compile(body, headers, include_dirs, lang)
+
+      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\_distutils\command\config.py", line 127, in _compile
+
+      self.compiler.compile([src], include_dirs=include_dirs)
+
+      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\_distutils\compilers\C\msvc.py", line 385, in compile
+
+      self.initialize()
+
+      ~~~~~~~~~~~~~~~^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\_distutils\compilers\C\msvc.py", line 295, in initialize
+
+      vc_env = _get_vc_env(plat_spec)
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-lpul8xx0\overlay\Lib\site-packages\setuptools\_distutils\compilers\C\msvc.py", line 156, in _get_vc_env
+
+      raise DistutilsPlatformError(
+
+      ...<3 lines>...
+
+      )
+
+  distutils.errors.DistutilsPlatformError: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+  [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+ERROR: Failed to build 'cffi' when getting requirements to build wheel
+
+
+ERROR:pip_audit._cli:Failed to install packages: ['C:\\Users\\admin\\AppData\\Local\\Temp\\tmp6p32icml\\Scripts\\python.exe', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', 'C:\\Users\\admin\\AppData\\Local\\Temp\\tmpyman27hx\\tmpyy24pi78', '-r', 'C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\_scans\\_tmp\\milesmcc__shynet.req.txt']

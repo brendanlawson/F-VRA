@@ -1,0 +1,17 @@
+# project: spiral-project__ihatemoney
+# scanner: snyk
+# time: Fri Jul 10 19:28:01 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\spiral-project__ihatemoney.json
+# exit code: 3
+=== STDOUT ===
+
+ FATAL   No supported files found (SNYK-CLI-0008)
+                                                                                                                                                         
+           Could not detect supported target files in C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\spiral-project__ihatemoney. 
+           Please see our documentation for supported languages and target files: https://snyk.co/udVgQ and make sure you are in the right directory.    
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0008 
+                                                                         
+ID:      urn:snyk:interaction:5d69a2de-1bc0-4acd-a5ca-2e7cc8eda9fc 
+
+=== STDERR ===

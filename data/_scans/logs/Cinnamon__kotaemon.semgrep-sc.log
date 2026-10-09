@@ -1,0 +1,2450 @@
+# project: Cinnamon__kotaemon
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 20:35:15 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=Cinnamon__kotaemon -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/Cinnamon__kotaemon:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/Cinnamon__kotaemon.json
+# exit code: 0
+# note: native lock: uv.lock
+=== STDOUT ===
+                                      
+                                      
+┌────────────────────────────────────┐
+│ 46 Reachable Supply Chain Findings │
+└────────────────────────────────────┘
+                                                                          
+    libs/kotaemon/kotaemon/contribs/promptui/base.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            1┆ import gradio as gr
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            1┆ import gradio as gr
+                                                                            
+    libs/kotaemon/kotaemon/contribs/promptui/themes.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            5┆ from gradio.themes.base import Base
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            5┆ from gradio.themes.base import Base
+   
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            6┆ from gradio.themes.utils import colors, fonts, sizes
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            6┆ from gradio.themes.utils import colors, fonts, sizes
+                                                                                 
+    libs/kotaemon/kotaemon/contribs/promptui/ui/__init__.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            3┆ import gradio as gr
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            3┆ import gradio as gr
+                                                                               
+    libs/kotaemon/kotaemon/contribs/promptui/ui/blocks.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            6┆ from gradio import ChatInterface
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            6┆ from gradio import ChatInterface
+   
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            7┆ from gradio.components import Component, get_component_instance
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            7┆ from gradio.components import Component, get_component_instance
+   
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            8┆ from gradio.events import on
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            8┆ from gradio.events import on
+   
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            9┆ from gradio.helpers import special_args
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            9┆ from gradio.helpers import special_args
+   
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+           10┆ from gradio.routes import Request
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+           10┆ from gradio.routes import Request
+                                                                             
+    libs/kotaemon/kotaemon/contribs/promptui/ui/chat.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            5┆ import gradio as gr
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            5┆ import gradio as gr
+   
+   ❯❯❱ gradio - CVE-2024-10648
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Path Traversal. A vulnerability in Gradio’s audio     
+          component allows an attacker to exploit a path traversal flaw by manipulating the audio file format.
+          This can result in arbitrary file content being wiped—resetting files to empty—potentially leading  
+          to a denial of service on the server.                                                               
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 
+          118┆ likes = gr.Radio(["like", "dislike", "neutral"], value="neutral")
+                                                                                 
+    libs/kotaemon/kotaemon/contribs/promptui/ui/pipeline.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            7┆ import gradio as gr
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            7┆ import gradio as gr
+                                                                                 
+    libs/kotaemon/kotaemon/embeddings/tei_endpoint_embed.py with lockfile uv.lock
+    ❯❱ aiohttp - CVE-2026-54277
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The optimized C HTTP parser in aiohttp validates each fragment of an HTTP request/response line     
+          individually against max_line_size instead of the accumulated total. An attacker can split an       
+          oversized line across multiple network reads, bypassing the limit and causing excessive memory      
+          consumption, leading to denial of service. This affects both server-side request-target parsing and 
+          client-side response reason-phrase parsing.                                                         
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           36┆ async with aiohttp.ClientSession() as session:
+                                                                                                
+    libs/kotaemon/kotaemon/loaders/azureai_document_intelligence_loader.py with lockfile uv.lock
+   ❯❯❱ pillow - CVE-2026-42311
+          Severity: HIGH                                                                                     
+          Affected versions of pillow are vulnerable to Integer Overflow or Wraparound / Out-of-bounds Write.
+          An integer overflow in Pillow's PSD tile bounds-checking logic can be triggered by loading a       
+          specially crafted PSD file, leading to an out-of-bounds write that may cause memory corruption,    
+          crashes, or arbitrary code execution.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for pillow at version: 12.2.0
+           44┆ img = Image.open(file_path)
+   
+   ❯❯❱ pillow - CVE-2026-25990
+          Severity: HIGH                                                                                
+          Affected versions of pillow are vulnerable to Out-of-bounds Write. An out-of-bounds write in  
+          Pillow's PSD image parser can be triggered by loading a specially crafted PSD file, leading to
+          memory corruption that may allow a crash or arbitrary code execution.                         
+                                                                                                        
+           ▶▶┆ Fixed for pillow at version: 12.1.1
+           44┆ img = Image.open(file_path)
+   
+   ❯❯❱ pillow - CVE-2026-40192
+          Severity: HIGH                                                                                      
+          Affected versions of pillow are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption. Pillow is vulnerable to a decompression bomb when decoding GZIP- 
+          compressed FITS images, because it does not limit the amount of compressed data read. A crafted FITS
+          file can trigger unbounded memory consumption, causing denial of service through OOM crashes or     
+          severe performance degradation.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for pillow at version: 12.2.0
+           44┆ img = Image.open(file_path)
+   
+   ❯❯❱ pillow - CVE-2026-42311
+          Severity: HIGH                                                                                     
+          Affected versions of pillow are vulnerable to Integer Overflow or Wraparound / Out-of-bounds Write.
+          An integer overflow in Pillow's PSD tile bounds-checking logic can be triggered by loading a       
+          specially crafted PSD file, leading to an out-of-bounds write that may cause memory corruption,    
+          crashes, or arbitrary code execution.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for pillow at version: 12.2.0
+           47┆ img = Image.open(file_path)
+   
+   ❯❯❱ pillow - CVE-2026-25990
+          Severity: HIGH                                                                                
+          Affected versions of pillow are vulnerable to Out-of-bounds Write. An out-of-bounds write in  
+          Pillow's PSD image parser can be triggered by loading a specially crafted PSD file, leading to
+          memory corruption that may allow a crash or arbitrary code execution.                         
+                                                                                                        
+           ▶▶┆ Fixed for pillow at version: 12.1.1
+           47┆ img = Image.open(file_path)
+   
+   ❯❯❱ pillow - CVE-2026-40192
+          Severity: HIGH                                                                                      
+          Affected versions of pillow are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption. Pillow is vulnerable to a decompression bomb when decoding GZIP- 
+          compressed FITS images, because it does not limit the amount of compressed data read. A crafted FITS
+          file can trigger unbounded memory consumption, causing denial of service through OOM crashes or     
+          severe performance degradation.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for pillow at version: 12.2.0
+           47┆ img = Image.open(file_path)
+                                         
+    sso_app_demo.py with lockfile uv.lock
+   ❯❯❱ gradio - CVE-2024-47870
+          Severity: HIGH                                                                                  
+          Affected versions of gradio are vulnerable to Concurrent Execution using Shared Resource with   
+          Improper Synchronization ('Race Condition'). This vulnerability involves a race condition in the
+          `update_root_in_config` function, allowing an attacker to modify the root URL used by the Gradio
+          frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user
+          traffic to a malicious server.                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+            3┆ import gradio as gr
+   
+   ❯❯❱ gradio - CVE-2024-47084
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error. The 
+          Gradio server fails to validate a request origin when a cookie is present. This allows an attacker's
+          website to make unauthorized requests to a local Gradio server. This can be remediated by manually  
+          modifying the `CustomCORSMiddleware` class in the local Gradio server code to specifically bypass   
+          the condition that skips CORS validation for requests containing cookies.                           
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+            3┆ import gradio as gr
+           
+    uv.lock
+   ❯❯❱ aiohttp - CVE-2025-69223
+          Severity: HIGH                                                                                     
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Improper Handling of Highly Compressed Data (Data Amplification). Unbounded decompression of     
+          compressed request bodies in aiohttp's server allows an attacker to send a specially crafted "zip  
+          bomb" (e.g. via Content-Encoding: gzip) that expands to an arbitrarily large payload in memory,    
+          exhausting host resources and causing a denial-of-service.                                         
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+   ❯❯❱ azure-core - CVE-2026-21226
+          Severity: HIGH                                                                                      
+          Affected versions of azure-core are vulnerable to Deserialization of Untrusted Data. Deserialization
+          of untrusted data in the azure-core shared client library allows an authorized attacker to send     
+          crafted serialized payloads over the network; when the client deserializes this data, it may execute
+          arbitrary code.                                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for azure-core at version: 1.38.0
+          351┆ [[package]]
+   
+   ❯❯❱ black - CVE-2026-32274
+          Severity: HIGH                                                                                     
+          Affected versions of black are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Black's cache filename construction embeds the `--python-cell-magics`
+          option value without sanitization, allowing an attacker who can control this argument to perform a 
+          path traversal and write Black cache files to arbitrary filesystem locations.                      
+                                                                                                             
+           ▶▶┆ Fixed for black at version: 26.3.1
+          492┆ [[package]]
+   
+   ❯❯❱ cryptography - GHSA-537c-gmf6-5ccf
+          Severity: HIGH                                                                                      
+          Affected versions of cryptography are vulnerable to Dependency on Vulnerable Third-Party Component /
+          Out-of-bounds Read. The PyPI wheels for the cryptography package statically link a version of       
+          OpenSSL that contains security vulnerabilities (including a high-severity use-after-free in         
+          PKCS7_verify and several denial-of-service and forgery issues). Any application installed from an   
+          affected wheel ships the vulnerable OpenSSL binary, so an attacker may trigger out-of-bounds reads, 
+          crashes, or other memory-safety issues through cryptographic operations that reach the bundled      
+          OpenSSL code.                                                                                       
+                                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 48.0.1
+          1249┆ [[package]]
+   
+   ❯❯❱ deepdiff - CVE-2026-33155
+          Severity: HIGH                                                                                      
+          Affected versions of deepdiff are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Uncontrolled Resource Consumption. This vulnerability allows extremely small pickle or delta      
+          payloads to trigger disproportionately large memory allocations—often in the gigabyte               
+          range—resulting in Denial of Service (DoS) conditions when handling untrusted serialized data.      
+                                                                                                              
+           ▶▶┆ Fixed for deepdiff at version: 8.6.2
+          1367┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-44017
+          Severity: HIGH                                                                                      
+          Affected versions of docling are vulnerable to Improper Limitation of a Pathname to a Restricted    
+          Directory ('Path Traversal'). The EasyOCR model download routine in docling extracts downloaded     
+          model ZIP archives without validating member paths ("Zip Slip"). A maliciously crafted model archive
+          can write files outside the intended directory, leading to arbitrary file write and potential remote
+          code execution. Reachable via EasyOcrModel.download_models() and via                                
+          model_downloader.download_models(with_easyocr=True).                                                
+                                                                                                              
+           ▶▶┆ Fixed for docling at version: 2.91.0
+          1487┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-31247
+          Severity: HIGH                                                                                      
+          Affected versions of docling are vulnerable to Uncontrolled Resource Consumption. docling's JATS XML
+          backend (`docling.backend.xml.jats_backend.JatsDocumentBackend`) parses XML with                    
+          `lxml.etree.parse()` and no parser hardening, leaving external entity resolution and entity         
+          expansion enabled. An attacker who supplies a crafted JATS XML file can trigger XML External Entity 
+          (XXE) reads or 'billion laughs' style entity-expansion attacks, leading to information disclosure or
+          denial of service.                                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for docling at version: 
+          1487┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-31248
+          Severity: HIGH                                                                                      
+          Affected versions of docling are vulnerable to Improper Restriction of Recursive Entity References  
+          in DTDs ('XML Entity Expansion'). Docling's MetsGbsDocumentBackend parses METS XML and OCR content  
+          from tar.gz archives with lxml.etree.fromstring(...) without disabling entity resolution. A crafted 
+          METS-GBS archive can trigger XML entity expansion ("billion laughs") and exhaust CPU/RAM, leading to
+          denial-of-service.                                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for docling at version: 
+          1487┆ [[package]]
+   
+   ❯❯❱ docling-core - CVE-2026-44023
+          Severity: HIGH                                                                                     
+          Affected versions of docling-core are vulnerable to Improper Limitation of a Pathname to a         
+          Restricted Directory ('Path Traversal') / Server-Side Request Forgery (SSRF). docling-core did not 
+          sufficiently restrict remote request destinations and could resolve a server-provided Content-     
+          Disposition header to a local path in an unsafe manner. An application that passes an untrusted URL
+          to the remote source-resolution helpers (resolve_source_to_stream, resolve_source_to_path, or the  
+          deprecated resolve_file_source) can be exploited for server-side request forgery (SSRF) against    
+          internal addresses and for path traversal outside the intended cache/working directory.            
+                                                                                                             
+           ▶▶┆ Fixed for docling-core at version: 2.74.1
+          1514┆ [[package]]
+   
+   ❯❯❱ lightrag-hku - CVE-2026-30762
+          Severity: HIGH                                                                                    
+          Affected versions of lightrag-hku are vulnerable to Improper Authentication. LightRAG has user    
+          authentication enabled via AUTH_ACCOUNTS. If TOKEN_SECRET is not explicitly set to a custom value,
+          the server signs JWT tokens with a publicly known default secret, allowing an attacker to forge   
+          valid authentication tokens and gain unauthorized access to all protected API endpoints.          
+                                                                                                            
+           ▶▶┆ Fixed for lightrag-hku at version: 1.4.13
+          3735┆ [[package]]
+   
+   ❯❯❱ llama-index - CVE-2025-7707
+          Severity: HIGH                                                                                   
+          Affected versions of llama-index are vulnerable to Insecure Temporary File. LlamaIndex configures
+          NLTK to use a shared, world-writable data directory under its codebase by default. In multi-user 
+          environments, local users can overwrite, delete, or corrupt NLTK data files, leading to denial of
+          service, data tampering, or potential privilege escalation.                                      
+                                                                                                           
+           ▶▶┆ Fixed for llama-index at version: 0.13.0
+          3797┆ [[package]]
+   
+   ❯❯❱ llama-index-cli - CVE-2025-1753
+          Severity: HIGH                                                                                    
+          Affected versions of llama-index-cli are vulnerable to Improper Neutralization of Special Elements
+          used in an OS Command ('OS Command Injection'). LLama-Index CLI passes the user-supplied --files  
+          argument directly into the underlying system call without proper sanitization. This allows an     
+          attacker, who can control the argument (either locally or via a web application), to inject       
+          arbitrary shell commands and achieve remote code execution on the affected system.                
+                                                                                                            
+           ▶▶┆ Fixed for llama-index-cli at version: 0.4.1
+          3834┆ [[package]]
+   
+   ❯❯❱ llama-index-core - CVE-2025-7647
+          Severity: HIGH                                                                                    
+          Affected versions of llama-index-core are vulnerable to Creation of Temporary File With Insecure  
+          Permissions. The `get_cache_dir()` function in llama-index-core uses a hardcoded, predictable     
+          `/tmp/llama_index` directory on Linux with no proper locking or permissions. On multi-user systems
+          this lets an attacker read proprietary models, poison cached embeddings, or perform symlink/race- 
+          condition attacks.                                                                                
+                                                                                                            
+           ▶▶┆ Fixed for llama-index-core at version: 0.13.0
+          3848┆ [[package]]
+   
+   ❯❯❱ pyarrow - CVE-2026-25087
+          Severity: HIGH                                                                                    
+          Affected versions of pyarrow are vulnerable to Use After Free. pyarrow is affected by a use-after-
+          free in Apache Arrow C++ when reading an Arrow IPC file with pre-buffering enabled (via the C++   
+          RecordBatchFileReader::PreBufferMetadata API) on files containing variadic buffers such as Binary 
+          View and String View data. Multi-threaded IO timing can trigger a write to a dangling pointer,    
+          leading to crashes or memory corruption. The vulnerable pre-buffering API is not exposed in the   
+          Python binding, so this code path is not reachable from Python; upgrade to a fixed version to     
+          remediate.                                                                                        
+                                                                                                            
+           ▶▶┆ Fixed for pyarrow at version: 23.0.1
+          5940┆ [[package]]
+                                          
+                                          
+┌────────────────────────────────────────┐
+│ 128 Undetermined Supply Chain Findings │
+└────────────────────────────────────────┘
+           
+    uv.lock
+     ❱ aiohttp - CVE-2026-54279
+          Severity: LOW                                                          
+          Affected versions of aiohttp are vulnerable to Improper Initialization.
+                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34518
+          Severity: LOW                                                                                      
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor.                                                                                             
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2025-69224
+          Severity: LOW                                                                                     
+          Affected versions of aiohttp are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34515
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Absolute Path Traversal / Server-Side Request Forgery
+          (SSRF).                                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-54280
+          Severity: LOW                                                                        
+          Affected versions of aiohttp are vulnerable to Improper Resource Shutdown or Release.
+                                                                                               
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-54275
+          Severity: LOW                                                                              
+          Affected versions of aiohttp are vulnerable to Improper Validation of Certificate with Host
+          Mismatch.                                                                                  
+                                                                                                     
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34513
+          Severity: LOW                                                                                       
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-50269
+          Severity: LOW                                                                                  
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF
+          Injection') / Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response
+          Splitting').                                                                                   
+                                                                                                         
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34519
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34525
+          Severity: MODERATE                                                                     
+          Affected versions of aiohttp are vulnerable to Improper Input Validation / Inconsistent
+          Interpretation of HTTP Requests ('HTTP Request/Response Smuggling').                   
+                                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-47265
+          Severity: MODERATE                                                     
+          Affected versions of aiohttp are vulnerable to Origin Validation Error.
+                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34514
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34517
+          Severity: LOW                                                                                       
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2025-69226
+          Severity: LOW                                                                                
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information Through Data
+          Queries / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').    
+                                                                                                       
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34520
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34516
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2025-69227
+          Severity: MODERATE                                                                            
+          Affected versions of aiohttp are vulnerable to Loop with Unreachable Exit Condition ('Infinite
+          Loop').                                                                                       
+                                                                                                        
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2025-69230
+          Severity: LOW                                                            
+          Affected versions of aiohttp are vulnerable to Logging of Excessive Data.
+                                                                                   
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2025-69229
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+     ❱ aiohttp - CVE-2025-69225
+          Severity: LOW                                                                                     
+          Affected versions of aiohttp are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34993
+          Severity: MODERATE                                                               
+          Affected versions of aiohttp are vulnerable to Deserialization of Untrusted Data.
+                                                                                           
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2025-69228
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-22815
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Uncontrolled Resource Consumption.                                                               
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           88┆ [[package]]
+   
+    ❯❱ authlib - CVE-2026-44681
+          Severity: MODERATE                                                                         
+          Affected versions of authlib are vulnerable to Incorrect Authorization / URL Redirection to
+          Untrusted Site ('Open Redirect').                                                          
+                                                                                                     
+           ▶▶┆ Fixed for authlib at versions: 1.6.12, 1.7.1
+          325┆ [[package]]
+   
+    ❯❱ authlib - CVE-2025-62706
+          Severity: MODERATE                                                                                 
+          Affected versions of authlib are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Uncontrolled Resource Consumption.                                                               
+                                                                                                             
+           ▶▶┆ Fixed for authlib at version: 1.6.5
+          325┆ [[package]]
+   
+    ❯❱ authlib - CVE-2025-68158
+          Severity: MODERATE                                                               
+          Affected versions of authlib are vulnerable to Cross-Site Request Forgery (CSRF).
+                                                                                           
+           ▶▶┆ Fixed for authlib at version: 1.6.6
+          325┆ [[package]]
+   
+    ❯❱ authlib - CVE-2026-41425
+          Severity: MODERATE                                                               
+          Affected versions of authlib are vulnerable to Cross-Site Request Forgery (CSRF).
+                                                                                           
+           ▶▶┆ Fixed for authlib at version: 1.6.11
+          325┆ [[package]]
+   
+    ❯❱ authlib - CVE-2026-41479
+          Severity: MODERATE                                                                                 
+          Affected versions of authlib are vulnerable to URL Redirection to Untrusted Site ('Open Redirect').
+                                                                                                             
+           ▶▶┆ Fixed for authlib at versions: 1.6.10, 1.7.1
+          325┆ [[package]]
+   
+     ❱ cryptography - CVE-2026-34073
+          Severity: LOW                                                                       
+          Affected versions of cryptography are vulnerable to Improper Certificate Validation.
+                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 46.0.6
+          1249┆ [[package]]
+   
+    ❯❱ cryptography - CVE-2026-39892
+          Severity: MODERATE                                                                               
+          Affected versions of cryptography are vulnerable to Improper Restriction of Operations within the
+          Bounds of a Memory Buffer.                                                                       
+                                                                                                           
+           ▶▶┆ Fixed for cryptography at version: 46.0.7
+          1249┆ [[package]]
+   
+    ❯❱ diskcache - CVE-2025-69872
+          Severity: MODERATE                                                                           
+          Affected versions of diskcache are vulnerable to Deserialization of Untrusted Data / Improper
+          Control of Generation of Code ('Code Injection').                                            
+                                                                                                       
+           ▶▶┆ Fixed for diskcache at version: 
+          1460┆ [[package]]
+   
+    ❯❱ fonttools - CVE-2025-66034
+          Severity: MODERATE                                                                         
+          Affected versions of fonttools are vulnerable to XML Injection (aka Blind XPath Injection).
+                                                                                                     
+           ▶▶┆ Fixed for fonttools at version: 4.60.2
+          1956┆ [[package]]
+   
+    ❯❱ gradio - CVE-2026-28415
+          Severity: MODERATE                                                                                
+          Affected versions of gradio are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Access Control / URL Redirection to Untrusted Site ('Open Redirect') / Use of    
+          Insufficiently Random Values.                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for gradio at version: 6.6.0
+          2260┆ [[package]]
+   
+     ❱ gradio - CVE-2026-27167
+          Severity: LOW                                                                                    
+          Affected versions of gradio are vulnerable to Insufficiently Protected Credentials / Use of Hard-
+          coded Credentials.                                                                               
+                                                                                                           
+           ▶▶┆ Fixed for gradio at version: 6.6.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-12217
+          Severity: MODERATE                                                                             
+          Affected versions of gradio are vulnerable to Improper Limitation of a Pathname to a Restricted
+          Directory ('Path Traversal') / Improper Resolution of Path Equivalence.                        
+                                                                                                         
+           ▶▶┆ Fixed for gradio at version: 
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47167
+          Severity: MODERATE                                                               
+          Affected versions of gradio are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                           
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-48052
+          Severity: MODERATE                                                               
+          Affected versions of gradio are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                           
+           ▶▶┆ Fixed for gradio at version: 
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47166
+          Severity: MODERATE                                                                             
+          Affected versions of gradio are vulnerable to Improper Limitation of a Pathname to a Restricted
+          Directory ('Path Traversal').                                                                  
+                                                                                                         
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47165
+          Severity: MODERATE                                                                             
+          Affected versions of gradio are vulnerable to Improper Authorization / Origin Validation Error.
+                                                                                                         
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+     ❱ gradio - CVE-2024-47168
+          Severity: LOW                                                                              
+          Affected versions of gradio are vulnerable to Always-Incorrect Control Flow Implementation.
+                                                                                                     
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+          2260┆ [[package]]
+   
+     ❱ gradio - GHSA-26jh-r8g2-6fpr
+          Severity: LOW                                                                    
+          Affected versions of gradio are vulnerable to Reliance on Uncontrolled Component.
+                                                                                           
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47872
+          Severity: MODERATE                                                                            
+          Affected versions of gradio are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                          
+                                                                                                        
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2025-48889
+          Severity: MODERATE                                                                            
+          Affected versions of gradio are vulnerable to Unrestricted Upload of File with Dangerous Type.
+                                                                                                        
+           ▶▶┆ Fixed for gradio at version: 5.31.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47869
+          Severity: MODERATE                                                                      
+          Affected versions of gradio are vulnerable to Observable Discrepancy / Observable Timing
+          Discrepancy.                                                                            
+                                                                                                  
+           ▶▶┆ Fixed for gradio at version: 4.44.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47164
+          Severity: MODERATE                                                                             
+          Affected versions of gradio are vulnerable to Improper Limitation of a Pathname to a Restricted
+          Directory ('Path Traversal').                                                                  
+                                                                                                         
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+    ❯❱ gradio - CVE-2024-47868
+          Severity: MODERATE                                                                                
+          Affected versions of gradio are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').           
+                                                                                                            
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+    ❯❱ idna - CVE-2026-45409
+          Severity: MODERATE                                                                    
+          Affected versions of idna are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                
+           ▶▶┆ Fixed for idna at version: 3.15
+          2693┆ [[package]]
+   
+    ❯❱ langchain - CVE-2026-55443
+          Severity: MODERATE                                                                                 
+          Affected versions of langchain and langchain-anthropic are vulnerable to Improper Limitation of a  
+          Pathname to a Restricted Directory ('Path Traversal') / Improper Link Resolution Before File Access
+          ('Link Following').                                                                                
+                                                                                                             
+           ▶▶┆ Fixed for langchain at version: 1.3.9
+          3518┆ [[package]]
+            ⋮┆----------------------------------------
+          3540┆ [[package]]
+   
+     ❱ langchain-community - CVE-2024-8309
+          Severity: LOW                                                                                       
+          Affected versions of langchain and langchain-community are vulnerable to Improper Neutralization of 
+          Special Elements in Output Used by a Downstream Component ('Injection') / Improper Neutralization of
+          Special Elements used in an SQL Command ('SQL Injection').                                          
+                                                                                                              
+           ▶▶┆ Fixed for langchain-community at version: 0.2.19
+          3570┆ [[package]]
+   
+     ❱ langchain-core - CVE-2026-26013
+          Severity: LOW                                                                            
+          Affected versions of langchain-core are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                                   
+           ▶▶┆ Fixed for langchain-core at version: 1.2.11
+          3591┆ [[package]]
+   
+    ❯❱ langchain-core - CVE-2026-40087
+          Severity: MODERATE                                                                        
+          Affected versions of langchain-core are vulnerable to Improper Input Validation / Improper
+          Neutralization of Special Elements Used in a Template Engine.                             
+                                                                                                    
+           ▶▶┆ Fixed for langchain-core at versions: 0.3.84, 1.2.28
+          3591┆ [[package]]
+   
+     ❱ langchain-openai - CVE-2026-41488
+          Severity: LOW                                                                              
+          Affected versions of langchain-openai are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                                     
+           ▶▶┆ Fixed for langchain-openai at version: 1.1.14
+          3663┆ [[package]]
+   
+    ❯❱ langchain-text-splitters - CVE-2026-41481
+          Severity: MODERATE                                                                                 
+          Affected versions of langchain-text-splitters are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                                             
+           ▶▶┆ Fixed for langchain-text-splitters at version: 1.1.2
+          3677┆ [[package]]
+   
+    ❯❱ langsmith - CVE-2026-41182
+          Severity: MODERATE                                                                             
+          Affected versions of langsmith are vulnerable to Exposure of Private Personal Information to an
+          Unauthorized Actor / Exposure of Sensitive Information to an Unauthorized Actor / Insertion of 
+          Sensitive Information into Log File.                                                           
+                                                                                                         
+           ▶▶┆ Fixed for langsmith at version: 0.7.31
+          3698┆ [[package]]
+   
+    ❯❱ lightrag-hku - CVE-2025-6773
+          Severity: MODERATE                                                                        
+          Affected versions of lightrag-hku are vulnerable to Improper Limitation of a Pathname to a
+          Restricted Directory ('Path Traversal').                                                  
+                                                                                                    
+           ▶▶┆ Fixed for lightrag-hku at version: 1.3.8
+          3735┆ [[package]]
+   
+    ❯❱ lightrag-hku - CVE-2026-39413
+          Severity: MODERATE                                                                        
+          Affected versions of lightrag-hku are vulnerable to Improper Verification of Cryptographic
+          Signature.                                                                                
+                                                                                                    
+           ▶▶┆ Fixed for lightrag-hku at version: 1.4.14
+          3735┆ [[package]]
+   
+    ❯❱ llama-index - CVE-2024-12910
+          Severity: MODERATE                                                                               
+          Affected versions of llama-index are vulnerable to Uncontrolled Recursion / Uncontrolled Resource
+          Consumption.                                                                                     
+                                                                                                           
+           ▶▶┆ Fixed for llama-index at version: 0.12.9
+          3797┆ [[package]]
+   
+    ❯❱ llama-index - CVE-2025-6211
+          Severity: MODERATE                                                                          
+          Affected versions of llama-index and llama-index-readers-docugami are vulnerable to Expected
+          Behavior Violation.                                                                         
+                                                                                                      
+           ▶▶┆ Fixed for llama-index at version: 0.12.41
+          3797┆ [[package]]
+   
+    ❯❱ llama-index-core - CVE-2025-5472
+          Severity: MODERATE                                                             
+          Affected versions of llama-index-core are vulnerable to Uncontrolled Recursion.
+                                                                                         
+           ▶▶┆ Fixed for llama-index-core at version: 0.12.38
+          3848┆ [[package]]
+   
+    ❯❱ llama-index-core - CVE-2025-6208
+          Severity: MODERATE                                                                        
+          Affected versions of llama-index-core are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                    
+           ▶▶┆ Fixed for llama-index-core at version: 0.12.41
+          3848┆ [[package]]
+   
+    ❯❱ marshmallow - CVE-2025-68480
+          Severity: MODERATE                                                                                 
+          Affected versions of marshmallow are vulnerable to Asymmetric Resource Consumption (Amplification).
+                                                                                                             
+           ▶▶┆ Fixed for marshmallow at versions: 3.26.2, 4.1.2
+          4239┆ [[package]]
+   
+    ❯❱ nltk - CVE-2026-33230
+          Severity: MODERATE                                                                          
+          Affected versions of nltk are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                        
+                                                                                                      
+           ▶▶┆ Fixed for nltk at version: 3.9.4
+          4749┆ [[package]]
+   
+    ❯❱ nltk - GHSA-rf74-v2fm-23pw
+          Severity: MODERATE                                                 
+          Affected versions of nltk are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for nltk at version: 
+          4749┆ [[package]]
+   
+    ❯❱ onnx - CVE-2026-34446
+          Severity: MODERATE                                                                           
+          Affected versions of onnx are vulnerable to Improper Limitation of a Pathname to a Restricted
+          Directory ('Path Traversal') / UNIX Symbolic Link (Symlink) Following.                       
+                                                                                                       
+           ▶▶┆ Fixed for onnx at version: 1.21.0
+          5000┆ [[package]]
+   
+    ❯❱ onnx - CVE-2026-34447
+          Severity: MODERATE                                                                           
+          Affected versions of onnx are vulnerable to Improper Limitation of a Pathname to a Restricted
+          Directory ('Path Traversal') / UNIX Symbolic Link (Symlink) Following.                       
+                                                                                                       
+           ▶▶┆ Fixed for onnx at version: 1.21.0
+          5000┆ [[package]]
+   
+    ❯❱ onnx - CVE-2026-44512
+          Severity: MODERATE                                                   
+          Affected versions of onnx are vulnerable to NULL Pointer Dereference.
+                                                                               
+           ▶▶┆ Fixed for onnx at version: 1.22.0
+          5000┆ [[package]]
+   
+    ❯❱ pillow - CVE-2026-42310
+          Severity: MODERATE                                                                           
+          Affected versions of pillow are vulnerable to Loop with Unreachable Exit Condition ('Infinite
+          Loop').                                                                                      
+                                                                                                       
+           ▶▶┆ Fixed for pillow at version: 12.2.0
+          5543┆ [[package]]
+   
+    ❯❱ pillow - CVE-2026-42308
+          Severity: MODERATE                                                           
+          Affected versions of pillow are vulnerable to Integer Overflow or Wraparound.
+                                                                                       
+           ▶▶┆ Fixed for pillow at version: 12.2.0
+          5543┆ [[package]]
+   
+    ❯❱ pydantic-settings - GHSA-4xgf-cpjx-pc3j
+          Severity: MODERATE                                                                             
+          Affected versions of pydantic-settings are vulnerable to Improper Limitation of a Pathname to a
+          Restricted Directory ('Path Traversal') / Improper Link Resolution Before File Access ('Link   
+          Following') / Uncontrolled Resource Consumption.                                               
+                                                                                                         
+           ▶▶┆ Fixed for pydantic-settings at version: 2.14.2
+          6178┆ [[package]]
+   
+     ❱ pygments - CVE-2026-4539
+          Severity: LOW                                                                              
+          Affected versions of Pygments are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                         
+                                                                                                     
+           ▶▶┆ Fixed for pygments at version: 2.20.0
+          6210┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-40260
+          Severity: MODERATE                                                                                 
+          Affected versions of pypdf are vulnerable to Improper Restriction of Recursive Entity References in
+          DTDs ('XML Entity Expansion').                                                                     
+                                                                                                             
+           ▶▶┆ Fixed for pypdf at version: 6.10.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2025-66019
+          Severity: MODERATE                                                                            
+          Affected versions of pypdf are vulnerable to Improper Handling of Highly Compressed Data (Data
+          Amplification) / Uncontrolled Resource Consumption.                                           
+                                                                                                        
+           ▶▶┆ Fixed for pypdf at version: 6.4.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-49460
+          Severity: MODERATE                                                              
+          Affected versions of pypdf are vulnerable to Inefficient Algorithmic Complexity.
+                                                                                          
+           ▶▶┆ Fixed for pypdf at version: 6.12.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-33699
+          Severity: MODERATE                                                                                  
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.9.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-31826
+          Severity: MODERATE                                                                                
+          Affected versions of pypdf are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                            
+           ▶▶┆ Fixed for pypdf at version: 6.8.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-48156
+          Severity: MODERATE                                               
+          Affected versions of pypdf are vulnerable to Excessive Iteration.
+                                                                           
+           ▶▶┆ Fixed for pypdf at version: 6.12.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-27888
+          Severity: MODERATE                                                             
+          Affected versions of pypdf are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pypdf at version: 6.7.3
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-54530
+          Severity: MODERATE                                                                                  
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.13.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2025-62707
+          Severity: MODERATE                                               
+          Affected versions of pypdf are vulnerable to Excessive Iteration.
+                                                                           
+           ▶▶┆ Fixed for pypdf at version: 6.1.3
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2025-55197
+          Severity: MODERATE                                                                                 
+          Affected versions of pypdf are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption.                                                                 
+                                                                                                             
+           ▶▶┆ Fixed for pypdf at version: 6.0.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-54651
+          Severity: MODERATE                                                                                  
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.13.1
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-27025
+          Severity: MODERATE                                               
+          Affected versions of pypdf are vulnerable to Excessive Iteration.
+                                                                           
+           ▶▶┆ Fixed for pypdf at version: 6.7.1
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-28804
+          Severity: MODERATE                                                              
+          Affected versions of pypdf are vulnerable to Inefficient Algorithmic Complexity.
+                                                                                          
+           ▶▶┆ Fixed for pypdf at version: 6.7.5
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-48155
+          Severity: MODERATE                                                             
+          Affected versions of pypdf are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pypdf at version: 6.12.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-28351
+          Severity: MODERATE                                                             
+          Affected versions of pypdf are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pypdf at version: 6.7.4
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-33123
+          Severity: MODERATE                                                                            
+          Affected versions of pypdf are vulnerable to Inefficient Algorithmic Complexity / Uncontrolled
+          Resource Consumption.                                                                         
+                                                                                                        
+           ▶▶┆ Fixed for pypdf at version: 6.9.1
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-48735
+          Severity: MODERATE                                                                                
+          Affected versions of pypdf are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                            
+           ▶▶┆ Fixed for pypdf at version: 6.12.1
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2025-62708
+          Severity: MODERATE                                                                            
+          Affected versions of pypdf are vulnerable to Improper Handling of Highly Compressed Data (Data
+          Amplification).                                                                               
+                                                                                                        
+           ▶▶┆ Fixed for pypdf at version: 6.1.3
+          6296┆ [[package]]
+   
+     ❱ pypdf - CVE-2026-22690
+          Severity: LOW                                                                  
+          Affected versions of pypdf are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pypdf at version: 6.6.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - GHSA-jm82-fx9c-mx94
+          Severity: MODERATE                                                                                 
+          Affected versions of pypdf are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption.                                                                 
+                                                                                                             
+           ▶▶┆ Fixed for pypdf at version: 6.13.3
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-49461
+          Severity: MODERATE                                                             
+          Affected versions of pypdf are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pypdf at version: 6.12.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-27026
+          Severity: MODERATE                                                                                
+          Affected versions of pypdf are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                            
+           ▶▶┆ Fixed for pypdf at version: 6.7.1
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-41312
+          Severity: MODERATE                                                                       
+          Affected versions of pypdf are vulnerable to Memory Allocation with Excessive Size Value.
+                                                                                                   
+           ▶▶┆ Fixed for pypdf at version: 6.10.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-24688
+          Severity: MODERATE                                                                                  
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.6.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-41168
+          Severity: MODERATE                                               
+          Affected versions of pypdf are vulnerable to Excessive Iteration.
+                                                                           
+           ▶▶┆ Fixed for pypdf at version: 6.10.1
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-41313
+          Severity: MODERATE                                               
+          Affected versions of pypdf are vulnerable to Excessive Iteration.
+                                                                           
+           ▶▶┆ Fixed for pypdf at version: 6.10.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-41314
+          Severity: MODERATE                                                                       
+          Affected versions of pypdf are vulnerable to Memory Allocation with Excessive Size Value.
+                                                                                                   
+           ▶▶┆ Fixed for pypdf at version: 6.10.2
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-27024
+          Severity: MODERATE                                                                                  
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.7.1
+          6296┆ [[package]]
+   
+     ❱ pypdf - CVE-2026-27628
+          Severity: LOW                                                                                       
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.7.2
+          6296┆ [[package]]
+   
+     ❱ pypdf - CVE-2026-22691
+          Severity: LOW                                                                           
+          Affected versions of pypdf are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                      
+                                                                                                  
+           ▶▶┆ Fixed for pypdf at version: 6.6.0
+          6296┆ [[package]]
+   
+    ❯❱ pypdf - CVE-2026-54531
+          Severity: MODERATE                                                                                  
+          Affected versions of pypdf are vulnerable to Loop with Unreachable Exit Condition ('Infinite Loop').
+                                                                                                              
+           ▶▶┆ Fixed for pypdf at version: 6.13.0
+          6296┆ [[package]]
+   
+    ❯❱ pytest - CVE-2025-71176
+          Severity: MODERATE                                                                                 
+          Affected versions of pytest are vulnerable to Creation of Temporary File in Directory with Insecure
+          Permissions.                                                                                       
+                                                                                                             
+           ▶▶┆ Fixed for pytest at version: 9.0.3
+          6367┆ [[package]]
+   
+    ❯❱ python-dotenv - CVE-2026-28684
+          Severity: MODERATE                                                                              
+          Affected versions of python-dotenv are vulnerable to Improper Link Resolution Before File Access
+          ('Link Following') / UNIX Symbolic Link (Symlink) Following.                                    
+                                                                                                          
+           ▶▶┆ Fixed for python-dotenv at version: 1.2.2
+          6549┆ [[package]]
+   
+     ❱ python-multipart - CVE-2026-53540
+          Severity: LOW                                                                                       
+          Affected versions of python-multipart are vulnerable to Improper Validation of Specified Quantity in
+          Input.                                                                                              
+                                                                                                              
+           ▶▶┆ Fixed for python-multipart at version: 0.0.31
+          6576┆ [[package]]
+   
+     ❱ python-multipart - CVE-2026-53537
+          Severity: LOW                                                                                     
+          Affected versions of python-multipart are vulnerable to Improper Input Validation / Interpretation
+          Conflict.                                                                                         
+                                                                                                            
+           ▶▶┆ Fixed for python-multipart at version: 0.0.30
+          6576┆ [[package]]
+   
+    ❯❱ python-multipart - CVE-2026-40347
+          Severity: MODERATE                                                                                 
+          Affected versions of python-multipart are vulnerable to Excessive Iteration / Uncontrolled Resource
+          Consumption.                                                                                       
+                                                                                                             
+           ▶▶┆ Fixed for python-multipart at version: 0.0.26
+          6576┆ [[package]]
+   
+     ❱ python-multipart - CVE-2026-53538
+          Severity: LOW                                                                                       
+          Affected versions of python-multipart are vulnerable to Inconsistent Interpretation of HTTP Requests
+          ('HTTP Request/Response Smuggling') / Interpretation Conflict.                                      
+                                                                                                              
+           ▶▶┆ Fixed for python-multipart at version: 0.0.30
+          6576┆ [[package]]
+   
+    ❯❱ requests - CVE-2026-25645
+          Severity: MODERATE                                                      
+          Affected versions of requests are vulnerable to Insecure Temporary File.
+                                                                                  
+           ▶▶┆ Fixed for requests at version: 2.33.0
+          6933┆ [[package]]
+   
+   ❯❯❱ soupsieve - CVE-2026-49476
+          Severity: HIGH                                                                            
+          Affected versions of soupsieve are vulnerable to Allocation of Resources Without Limits or
+          Throttling / Uncontrolled Resource Consumption.                                           
+                                                                                                    
+           ▶▶┆ Fixed for soupsieve at version: 2.8.4
+          7847┆ [[package]]
+   
+   ❯❯❱ soupsieve - CVE-2026-49477
+          Severity: HIGH                                                                              
+          Affected versions of soupsieve are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                          
+                                                                                                      
+           ▶▶┆ Fixed for soupsieve at version: 2.8.4
+          7847┆ [[package]]
+   
+     ❱ starlette - CVE-2026-54282
+          Severity: LOW                                                                                   
+          Affected versions of Starlette are vulnerable to Improper Input Validation / Use of Incorrectly-
+          Resolved Name or Reference.                                                                     
+                                                                                                          
+           ▶▶┆ Fixed for starlette at version: 1.3.0
+          8079┆ [[package]]
+   
+    ❯❱ torch - CVE-2025-3730
+          Severity: MODERATE                                                                 
+          Affected versions of torch are vulnerable to Improper Resource Shutdown or Release.
+                                                                                             
+           ▶▶┆ Fixed for torch at version: 2.8.0
+          8377┆ [[package]]
+   
+     ❱ torch - CVE-2025-2148
+          Severity: LOW                                                                                       
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 
+          8377┆ [[package]]
+   
+     ❱ torch - CVE-2025-2953
+          Severity: LOW                                                                      
+          Affected versions of torch are vulnerable to Improper Resource Shutdown or Release.
+                                                                                             
+           ▶▶┆ Fixed for torch at version: 2.7.1-rc1
+          8377┆ [[package]]
+   
+     ❱ torch - CVE-2025-2149
+          Severity: LOW                                                        
+          Affected versions of torch are vulnerable to Improper Initialization.
+                                                                               
+           ▶▶┆ Fixed for torch at version: 
+          8377┆ [[package]]
+   
+    ❯❱ torch - CVE-2025-2998
+          Severity: MODERATE                                                                                  
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 
+          8377┆ [[package]]
+   
+     ❱ torch - CVE-2025-3000
+          Severity: LOW                                                                                       
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 
+          8377┆ [[package]]
+   
+     ❱ torch - CVE-2025-3001
+          Severity: LOW                                                                                       
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 2.10.0
+          8377┆ [[package]]
+   
+    ❯❱ torch - CVE-2025-2999
+          Severity: MODERATE                                                                                  
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 2.9.1
+          8377┆ [[package]]
+   
+     ❱ torch - CVE-2025-3000
+          Severity: LOW                                                                                       
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 
+          8403┆ [[package]]
+   
+     ❱ torch - CVE-2025-3001
+          Severity: LOW                                                                                       
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 2.10.0
+          8403┆ [[package]]
+   
+    ❯❱ torch - CVE-2025-2999
+          Severity: MODERATE                                                                                  
+          Affected versions of torch are vulnerable to Improper Restriction of Operations within the Bounds of
+          a Memory Buffer.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 2.9.1
+          8403┆ [[package]]
+   
+    ❯❱ transformers - CVE-2026-1839
+          Severity: MODERATE                                                                    
+          Affected versions of transformers are vulnerable to Deserialization of Untrusted Data.
+                                                                                                
+           ▶▶┆ Fixed for transformers at version: 5.0.0rc3
+          8564┆ [[package]]
+   
+    ❯❱ ujson - CVE-2026-54911
+          Severity: MODERATE                                                     
+          Affected versions of ujson are vulnerable to Improper Input Validation.
+                                                                                 
+           ▶▶┆ Fixed for ujson at version: 5.13.0
+          8713┆ [[package]]
+   
+    ❯❱ urllib3 - CVE-2025-50181
+          Severity: MODERATE                                                                                 
+          Affected versions of urllib3 are vulnerable to URL Redirection to Untrusted Site ('Open Redirect').
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.5.0
+          8880┆ [[package]]
+   
+    ❯❱ urllib3 - CVE-2025-50182
+          Severity: MODERATE                                                                                 
+          Affected versions of urllib3 are vulnerable to URL Redirection to Untrusted Site ('Open Redirect').
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.5.0
+          8880┆ [[package]]
+   
+    ❯❱ virtualenv - CVE-2026-22702
+          Severity: MODERATE                                                                               
+          Affected versions of virtualenv are vulnerable to Concurrent Execution using Shared Resource with
+          Improper Synchronization ('Race Condition') / Improper Link Resolution Before File Access ('Link 
+          Following').                                                                                     
+                                                                                                           
+           ▶▶┆ Fixed for virtualenv at version: 20.36.1
+          8946┆ [[package]]
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 77 Unreachable Supply Chain Findings │
+└──────────────────────────────────────┘
+           
+    uv.lock
+   ❯❯❱ aiohttp - CVE-2025-69223
+          Severity: HIGH                                                                                     
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Improper Handling of Highly Compressed Data (Data Amplification). Unbounded decompression of     
+          compressed request bodies in aiohttp's server allows an attacker to send a specially crafted "zip  
+          bomb" (e.g. via Content-Encoding: gzip) that expands to an arbitrarily large payload in memory,    
+          exhausting host resources and causing a denial-of-service.                                         
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54273
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          aiohttp did not limit the number of pipelined HTTP/1 requests buffered per connection on the server 
+          side. An attacker can send excessive pipelined requests to an aiohttp server to exhaust memory,     
+          leading to denial of service. Only the aiohttp server API is affected; client-only usage is not.    
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54278
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Improper Handling of Highly Compressed Data (Data   
+          Amplification). aiohttp servers decompress unread compressed request bodies into a single unbounded
+          chunk during lingering-close cleanup, bypassing the client_max_size limit. An attacker can send a  
+          small deflate/gzip-compressed request body that decompresses to a very large size, forcing a large 
+          transient memory allocation and causing a denial of service.                                       
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54276
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Insufficiently Protected Credentials. aiohttp's DigestAuthMiddleware sends HTTP Digest     
+          authentication credentials after cross-origin redirects. When the client follows redirects (the    
+          default behavior), an attacker who controls a redirect destination can capture the digest,         
+          potentially exposing the credentials.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54274
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          aiohttp WebSocket endpoints fail to enforce the max_msg_size memory limit when a peer sends large   
+          incomplete WebSocket frame payloads. An attacker (a malicious client against a server endpoint, or a
+          malicious server against a client connection) can send oversized incomplete frames to bypass the    
+          size limit and exhaust memory, causing denial of service. Any use of aiohttp server-side            
+          WebSocketResponse endpoints or client-side ws_connect connections reaches the vulnerable frame      
+          parser.                                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           88┆ [[package]]
+   
+   ❯❯❱ authlib - CVE-2026-28498
+          Severity: HIGH                                                                                    
+          Affected versions of authlib are vulnerable to Improper Following of Specification by Caller /    
+          Improper Validation of Integrity Check Value. Authlib's OIDC ID Token validation can be bypassed  
+          because `_verify_hash` (used to validate the `at_hash` and `c_hash` claims) fails open: if the ID 
+          Token's `alg` header is set to an unsupported/unknown algorithm, `create_half_hash` returns `None`
+          and `_verify_hash` returns `True`, causing Authlib to accept mismatched or attacker-chosen access 
+          tokens / authorization codes in implicit or hybrid flows (token/code substitution).               
+                                                                                                            
+           ▶▶┆ Fixed for authlib at version: 1.6.9
+          325┆ [[package]]
+   
+   ❯❯❱ authlib - CVE-2026-28490
+          Severity: HIGH                                                                                   
+          Affected versions of authlib are vulnerable to Observable Discrepancy / Use of a Broken or Risky 
+          Cryptographic Algorithm. Authlib's JOSE JWE implementation enables a Bleichenbacher-style padding
+          oracle when decrypting JWEs using the `RSA1_5` key management algorithm: the `unwrap()` code     
+          performs a post-decryption CEK length check and raises a distinct `ValueError('Invalid "cek"     
+          length')` for invalid PKCS#1 v1.5 padding, while valid padding proceeds to AES-GCM and fails with
+          `InvalidTag`. Because `RSA1_5` is available by default and these error conditions are externally 
+          distinguishable (e.g., via HTTP responses/logs in common Python web frameworks), an attacker can 
+          adaptively query a JWE decryption endpoint to recover the CEK and decrypt or forge JWE payloads  
+          without the RSA private key.                                                                     
+                                                                                                           
+           ▶▶┆ Fixed for authlib at version: 1.6.9
+          325┆ [[package]]
+   
+   ❯❯❱ authlib - CVE-2025-61920
+          Severity: HIGH                                                                                     
+          Affected versions of authlib are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Improper Input Validation / Uncontrolled Resource Consumption. Authlib's JOSE implementation does
+          not enforce size limits on JWS/JWT header or signature segments. A remote attacker can submit a    
+          token whose base64url-encoded header or signature spans hundreds of megabytes, forcing Authlib to  
+          decode and parse the entire payload before rejecting it. This drives CPU and memory consumption to 
+          hostile levels, enabling a denial-of-service against any service that verifies such tokens.        
+                                                                                                             
+           ▶▶┆ Fixed for authlib at version: 1.6.5
+          325┆ [[package]]
+   
+   ❯❯❯❱ authlib - CVE-2026-27962
+          Severity: CRITICAL                                                                                  
+          Affected versions of authlib are vulnerable to Improper Verification of Cryptographic Signature.    
+          Authlib's JWS implementation is vulnerable to JWK Header Injection: when `key=None` is passed to any
+          JWS deserialization function (or when a key resolver callable returns `None` for an unknown `kid`), 
+          the library silently extracts and trusts the attacker-embedded `jwk` header field as the            
+          verification key, allowing an unauthenticated attacker to forge arbitrary JWT tokens with any claims
+          (e.g., admin roles, elevated scopes) that pass signature verification — bypassing authentication and
+          authorization entirely.                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for authlib at version: 1.6.9
+          325┆ [[package]]
+   
+   ❯❯❱ cryptography - CVE-2026-26007
+          Severity: HIGH                                                                                     
+          Affected versions of cryptography are vulnerable to Insufficient Verification of Data Authenticity.
+          Missing subgroup validation in cryptography's SECT (binary) curve public‐key APIs: the functions   
+          public_key_from_numbers, EllipticCurvePublicNumbers.public_key(), load_der_public_key(), and       
+          load_pem_public_key() do not check that supplied points lie in the curve's prime‐order subgroup. An
+          attacker can submit a small‐order subgroup point to leak bits of the victim's private key via ECDH 
+          shared‐secret computation or trivially forge ECDSA signatures on affected curves.                  
+                                                                                                             
+           ▶▶┆ Fixed for cryptography at version: 46.0.5
+          1249┆ [[package]]
+   
+   ❯❯❱ deepdiff - CVE-2026-33155
+          Severity: HIGH                                                                                      
+          Affected versions of deepdiff are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Uncontrolled Resource Consumption. This vulnerability allows extremely small pickle or delta      
+          payloads to trigger disproportionately large memory allocations—often in the gigabyte               
+          range—resulting in Denial of Service (DoS) conditions when handling untrusted serialized data.      
+                                                                                                              
+           ▶▶┆ Fixed for deepdiff at version: 8.6.2
+          1367┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-31248
+          Severity: HIGH                                                                                      
+          Affected versions of docling are vulnerable to Improper Restriction of Recursive Entity References  
+          in DTDs ('XML Entity Expansion'). Docling's MetsGbsDocumentBackend parses METS XML and OCR content  
+          from tar.gz archives with lxml.etree.fromstring(...) without disabling entity resolution. A crafted 
+          METS-GBS archive can trigger XML entity expansion ("billion laughs") and exhaust CPU/RAM, leading to
+          denial-of-service.                                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for docling at version: 
+          1487┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-31247
+          Severity: HIGH                                                                                      
+          Affected versions of docling are vulnerable to Uncontrolled Resource Consumption. docling's JATS XML
+          backend (`docling.backend.xml.jats_backend.JatsDocumentBackend`) parses XML with                    
+          `lxml.etree.parse()` and no parser hardening, leaving external entity resolution and entity         
+          expansion enabled. An attacker who supplies a crafted JATS XML file can trigger XML External Entity 
+          (XXE) reads or 'billion laughs' style entity-expansion attacks, leading to information disclosure or
+          denial of service.                                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for docling at version: 
+          1487┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-47214
+          Severity: HIGH                                                                                     
+          Affected versions of docling are vulnerable to External Control of File Name or Path / Uncontrolled
+          Resource Consumption. Docling's HTML backend fails to validate URIs and file paths when resource   
+          fetching is enabled, allowing file:// local file reads, path traversal, SSRF against internal      
+          network resources, unvalidated HTTP redirects, and unbounded resource downloads while parsing      
+          attacker-controlled HTML. This is reachable when HTMLBackendOptions is configured with             
+          enable_local_fetch=True or enable_remote_fetch=True.                                               
+                                                                                                             
+           ▶▶┆ Fixed for docling at version: 2.94.0
+          1487┆ [[package]]
+   
+   ❯❯❱ docling - CVE-2026-44017
+          Severity: HIGH                                                                                      
+          Affected versions of docling are vulnerable to Improper Limitation of a Pathname to a Restricted    
+          Directory ('Path Traversal'). The EasyOCR model download routine in docling extracts downloaded     
+          model ZIP archives without validating member paths ("Zip Slip"). A maliciously crafted model archive
+          can write files outside the intended directory, leading to arbitrary file write and potential remote
+          code execution. Reachable via EasyOcrModel.download_models() and via                                
+          model_downloader.download_models(with_easyocr=True).                                                
+                                                                                                              
+           ▶▶┆ Fixed for docling at version: 2.91.0
+          1487┆ [[package]]
+   
+   ❯❯❱ docling-core - CVE-2026-44023
+          Severity: HIGH                                                                                     
+          Affected versions of docling-core are vulnerable to Improper Limitation of a Pathname to a         
+          Restricted Directory ('Path Traversal') / Server-Side Request Forgery (SSRF). docling-core did not 
+          sufficiently restrict remote request destinations and could resolve a server-provided Content-     
+          Disposition header to a local path in an unsafe manner. An application that passes an untrusted URL
+          to the remote source-resolution helpers (resolve_source_to_stream, resolve_source_to_path, or the  
+          deprecated resolve_file_source) can be exploited for server-side request forgery (SSRF) against    
+          internal addresses and for path traversal outside the intended cache/working directory.            
+                                                                                                             
+           ▶▶┆ Fixed for docling-core at version: 2.74.1
+          1514┆ [[package]]
+   
+    ❯❱ filelock - CVE-2026-22701
+          Severity: MODERATE                                                                               
+          Affected versions of filelock are vulnerable to Concurrent Execution using Shared Resource with  
+          Improper Synchronization ('Race Condition') / Improper Link Resolution Before File Access ('Link 
+          Following') / Time-of-check Time-of-use (TOCTOU) Race Condition. filelock's SoftFileLock acquires
+          locks by creating the lock file after a separate writability check, with no protection against   
+          symlinks. A local attacker who can write to the lock-file directory can plant a symlink in the   
+          window between the check and os.open(), redirecting the lock operation to an attacker-controlled 
+          file. This causes silent lock-acquisition failures, denial of service, or writes to unintended   
+          files. The soft lock is used directly, as the FileLock fallback when fcntl is unavailable, and on
+          platforms lacking os.O_NOFOLLOW.                                                                 
+                                                                                                           
+           ▶▶┆ Fixed for filelock at version: 3.20.3
+          1915┆ [[package]]
+   
+    ❯❱ filelock - CVE-2025-68146
+          Severity: MODERATE                                                                                  
+          Affected versions of filelock are vulnerable to Concurrent Execution using Shared Resource with     
+          Improper Synchronization ('Race Condition') / Improper Link Resolution Before File Access ('Link    
+          Following') / Time-of-check Time-of-use (TOCTOU) Race Condition. filelock is vulnerable to a TOCTOU 
+          race condition in its hard file-lock implementation. Because lock acquisition checks for the lock   
+          file and then opens it with O_TRUNC without O_NOFOLLOW (Unix) or reparse-point detection (Windows), 
+          a local attacker can plant a symlink in the gap between the check and the open, causing filelock to 
+          follow the symlink and truncate/corrupt an arbitrary victim-owned file. SoftFileLock is not affected
+          because it opens with O_CREAT | O_EXCL and does not truncate.                                       
+                                                                                                              
+           ▶▶┆ Fixed for filelock at version: 3.20.1
+          1915┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2024-8966
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption. In Gradio's file upload process, appending excessive characters  
+          to a multipart boundary forces the system to process each character continuously, causing a denial  
+          of service. This vulnerability can render the application inaccessible for extended periods,        
+          disrupting service and potentially affecting user experience.                                       
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2024-47871
+          Severity: HIGH                                                                     
+          Affected versions of gradio are vulnerable to Missing Encryption of Sensitive Data.
+                                                                                             
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2024-10624
+          Severity: HIGH                                                                                    
+          Affected versions of gradio are vulnerable to Inefficient Regular Expression Complexity /         
+          Uncontrolled Resource Consumption. The gr.Datetime component in Gradio is vulnerable to a Regular 
+          Expression Denial of Service (ReDoS) attack. An attacker can supply specially crafted input that  
+          causes the regex to consume excessive CPU resources, potentially driving the server to a denial of
+          service.                                                                                          
+                                                                                                            
+           ▶▶┆ Fixed for gradio at version: 
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2024-10569
+          Severity: HIGH                                                                    
+          Affected versions of gradio are vulnerable to Undefined Behavior for Input to API.
+                                                                                            
+           ▶▶┆ Fixed for gradio at version: 
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2024-47867
+          Severity: HIGH                                                                          
+          Affected versions of gradio are vulnerable to Download of Code Without Integrity Check /
+          Insufficient Verification of Data Authenticity.                                         
+                                                                                                  
+           ▶▶┆ Fixed for gradio at version: 5.0.0
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2026-28414
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Absolute Path Traversal / Improper Limitation of a    
+          Pathname to a Restricted Directory ('Path Traversal'). Gradio's static file serving on Windows can  
+          be bypassed due to incorrect absolute-path detection when safely joining paths: a root-relative path
+          like `/windows/win.ini` is treated as non-absolute and can traverse outside the intended static     
+          directory. An unauthenticated attacker can request a crafted `/static/...` URL to read arbitrary    
+          files from the Gradio server's filesystem (in the context of the Windows user running Gradio), even 
+          if the app is configured with authentication.                                                       
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 6.7.0
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2026-48545
+          Severity: HIGH                                                                                     
+          Affected versions of gradio are vulnerable to Session Fixation. Gradio uses a shared module-level  
+          HTTP client in its /proxy= reverse-proxy endpoint, so a Set-Cookie header returned by one proxied  
+          Space is retained in the client cookie jar and replayed to other proxied Spaces on the same parent 
+          domain, enabling cross-Space cookie injection and session fixation. Loading or proxying an external
+          Gradio app or Hugging Face Space via gr.load()/gradio.load() (or the Interface.load()/Blocks.load()
+          aliases) activates this vulnerable endpoint.                                                       
+                                                                                                             
+           ▶▶┆ Fixed for gradio at version: 6.15.0
+          2260┆ [[package]]
+   
+   ❯❯❯❱ gradio - CVE-2025-23042
+          Severity: CRITICAL                                                                                  
+          Affected versions of gradio are vulnerable to Improper Authorization / Improper Handling of Case    
+          Sensitivity. The `blocked_paths` parameter in Gradio blocks initial configuration is designed to    
+          restrict user access to specific files or directories in the local file system. However, it does not
+          account for case-insensitive operating systems, such as Windows and macOS. This oversight enables   
+          attackers to bypass ACL restrictions by changing the case of file paths.                            
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 5.11.0
+          2260┆ [[package]]
+   
+   ❯❯❱ gradio - CVE-2026-28416
+          Severity: HIGH                                                                                      
+          Affected versions of gradio are vulnerable to Server-Side Request Forgery (SSRF). Gradio's          
+          `gr.load()` can enable SSRF when loading an attacker-controlled Space: the remote Space's untrusted 
+          config can supply a malicious `proxy_url`, which Gradio adds to its trusted proxy allowlist. Because
+          Gradio apps expose a built-in `/proxy=` endpoint that only validates the request host against this  
+          allowlist, an attacker can then make the victim server proxy arbitrary HTTP requests to internal    
+          services or cloud metadata endpoints (e.g., to steal credentials or access private network          
+          resources).                                                                                         
+                                                                                                              
+           ▶▶┆ Fixed for gradio at version: 6.6.0
+          2260┆ [[package]]
+   
+   ❯❯❱ langchain - CVE-2026-45134
+          Severity: HIGH                                                                                     
+          Affected versions of langchain, langchain-classic, and langsmith are vulnerable to Deserialization 
+          of Untrusted Data. LangSmith's prompt pull methods deserialize attacker-controlled manifests when a
+          public prompt is fetched by `owner/name` identifier. A malicious prompt manifest can instantiate   
+          LangChain objects with attacker-supplied constructor arguments (custom `base_url`, headers, model  
+          name, secret references), leading to SSRF, LLM traffic redirection, credential exfiltration, or    
+          prompt-injection-style behavior changes. Vulnerable versions provide no opt-in; fixed versions     
+          require `dangerously_pull_public_prompt=True` / `dangerouslyPullPublicPrompt: true`.               
+                                                                                                             
+           ▶▶┆ Fixed for langchain at version: 0.3.30
+          3518┆ [[package]]
+   
+   ❯❯❱ langchain-community - CVE-2025-6984
+          Severity: HIGH                                                                                    
+          Affected versions of langchain-community are vulnerable to Exposure of Sensitive Information to an
+          Unauthorized Actor / Improper Restriction of XML External Entity Reference. The EverNoteLoader    
+          component in langchain-community parses untrusted XML using etree.iterparse with external entity  
+          resolution enabled. An attacker can supply a crafted XML payload that references local files (e.g.
+          /etc/passwd), leading to disclosure of sensitive data.                                            
+                                                                                                            
+           ▶▶┆ Fixed for langchain-community at version: 0.3.27
+          3570┆ [[package]]
+   
+   ❯❯❱ langchain-core - CVE-2026-44843
+          Severity: HIGH                                                                                      
+          Affected versions of langchain-core are vulnerable to Deserialization of Untrusted Data. Several    
+          runtime code paths in langchain-core deserialize structured run inputs/outputs using overly broad   
+          object allowlists (effectively `allowed_objects="all"`). When attacker-controlled structured data is
+          passed through `RunnableWithMessageHistory`, `Runnable.astream_log()`, or                           
+          `Runnable.astream_events(version="v1")`, an embedded LangChain serialized constructor manifest (e.g.
+          `{"lc": 1, "type": "constructor", "id": [...], "kwargs": {...}}`) is revived as a real              
+          `Serializable` object within the trusted `langchain*` namespace, enabling chat-history poisoning,   
+          prompt injection, secret extraction, SSRF, or arbitrary side-effects in constructors.               
+                                                                                                              
+           ▶▶┆ Fixed for langchain-core at versions: 0.3.85, 1.3.3
+          3591┆ [[package]]
+   
+   ❯❯❱ langchain-core - CVE-2025-65106
+          Severity: HIGH                                                                                   
+          Affected versions of langchain-core are vulnerable to Improper Neutralization of Special Elements
+          Used in a Template Engine. This in langchain-core arises when untrusted template strings are     
+          processed in prompt‑construction APIs, creating pathways for unintended access to internal object
+          data.                                                                                            
+                                                                                                           
+           ▶▶┆ Fixed for langchain-core at versions: 0.3.80, 1.0.7
+          3591┆ [[package]]
+   
+   ❯❯❱ langchain-core - CVE-2026-34070
+          Severity: HIGH                                                                                  
+          Affected versions of langchain-core are vulnerable to Improper Limitation of a Pathname to a    
+          Restricted Directory ('Path Traversal'). `langchain-core`'s legacy prompt-loading APIs read     
+          attacker-controlled `template_path`, `examples`, `suffix_path`, `prefix_path`, or               
+          `example_prompt_path` values from deserialized prompt configs without blocking absolute paths or
+          `..` traversal, allowing arbitrary local file disclosure via `.txt`, `.json`, or `.yaml` reads. 
+                                                                                                          
+           ▶▶┆ Fixed for langchain-core at version: 1.2.22
+          3591┆ [[package]]
+   
+   ❯❯❯❱ langchain-core - CVE-2025-68664
+          Severity: CRITICAL                                                                                  
+          Affected versions of langchain-core are vulnerable to Deserialization of Untrusted Data. A          
+          serialization injection in LangChain's dumps()/dumpd(): these functions fail to escape user‐supplied
+          dictionaries with an "lc" key, so an attacker can embed fake LangChain object manifests in fields   
+          like metadata or additional_kwargs. On later load()/loads(), those manifests are treated as real    
+          Serializable objects (within the trusted langchain namespaces), allowing extraction of environment‐ 
+          based secrets or instantiation of classes with side‐effecting constructors (e.g. network calls, file
+          writes). This impacts any code that serializes then deserializes untrusted data (astream_events v1, 
+          Runnable.astream_log, message‐history runtimes, InMemoryVectorStore.load, hub.pull, etc.), or uses  
+          dumps()/dumpd() on user‐controlled inputs.                                                          
+                                                                                                              
+           ▶▶┆ Fixed for langchain-core at versions: 0.3.81, 1.2.5
+          3591┆ [[package]]
+   
+   ❯❯❱ langchain-text-splitters - CVE-2025-6985
+          Severity: HIGH                                                                                      
+          Affected versions of langchain-text-splitters are vulnerable to Improper Restriction of XML External
+          Entity Reference. The HTMLSectionSplitter in langchain-text-splitters lets users supply arbitrary   
+          XSLT stylesheets that are parsed via lxml.etree.parse() and lxml.etree.XSLT() with no external‐     
+          entity hardening or XSLTAccessControl. A malicious stylesheet can exploit XXE or the XSLT document()
+          function to read any local file or fetch remote URIs accessible to the LangChain process (e.g. SSH  
+          keys, environment files, cloud metadata). No authentication, privileges, or user interaction is     
+          required, and this is exploitable in default deployments that allow custom XSLT.                    
+                                                                                                              
+           ▶▶┆ Fixed for langchain-text-splitters at version: 0.3.9
+          3677┆ [[package]]
+   
+   ❯❯❱ langsmith - CVE-2026-45134
+          Severity: HIGH                                                                                     
+          Affected versions of langchain, langchain-classic, and langsmith are vulnerable to Deserialization 
+          of Untrusted Data. LangSmith's prompt pull methods deserialize attacker-controlled manifests when a
+          public prompt is fetched by `owner/name` identifier. A malicious prompt manifest can instantiate   
+          LangChain objects with attacker-supplied constructor arguments (custom `base_url`, headers, model  
+          name, secret references), leading to SSRF, LLM traffic redirection, credential exfiltration, or    
+          prompt-injection-style behavior changes. Vulnerable versions provide no opt-in; fixed versions     
+          require `dangerously_pull_public_prompt=True` / `dangerouslyPullPublicPrompt: true`.               
+                                                                                                             
+           ▶▶┆ Fixed for langsmith at version: 0.8.0
+          3698┆ [[package]]
+   
+   ❯❯❱ langsmith - GHSA-f4xh-w4cj-qxq8
+          Severity: HIGH                                                                                    
+          Affected versions of langsmith are vulnerable to Access of Resource Using Incompatible Type ('Type
+          Confusion') / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') /    
+          Origin Validation Error. An attacker who can send HTTP requests to a server using langsmith's     
+          TracingMiddleware can inject a crafted tracing-propagation header to make the server read an      
+          arbitrary local file and upload its contents to LangSmith as a trace attachment.                  
+                                                                                                            
+           ▶▶┆ Fixed for langsmith at version: 0.8.18
+          3698┆ [[package]]
+   
+   ❯❯❱ llama-index - CVE-2025-7707
+          Severity: HIGH                                                                                   
+          Affected versions of llama-index are vulnerable to Insecure Temporary File. LlamaIndex configures
+          NLTK to use a shared, world-writable data directory under its codebase by default. In multi-user 
+          environments, local users can overwrite, delete, or corrupt NLTK data files, leading to denial of
+          service, data tampering, or potential privilege escalation.                                      
+                                                                                                           
+           ▶▶┆ Fixed for llama-index at version: 0.13.0
+          3797┆ [[package]]
+   
+   ❯❯❯❱ llama-index - CVE-2025-1793
+          Severity: CRITICAL                                                                                  
+          Affected versions of llama-index are vulnerable to Improper Neutralization of Special Elements used 
+          in an SQL Command ('SQL Injection'). The vector store integrations in LlamaIndex are vulnerable to  
+          SQL injection due to unsanitized inputs in their SQL query handling. This allows an attacker to     
+          craft malicious SQL queries that can read or modify data, potentially leading to unauthorized access
+          to other users' data when the library is used in a web application.                                 
+                                                                                                              
+           ▶▶┆ Fixed for llama-index at version: 0.12.28
+          3797┆ [[package]]
+   
+   ❯❯❱ llama-index - CVE-2024-12911
+          Severity: HIGH                                                                                    
+          Affected versions of llama-index are vulnerable to Creation of Temporary File in Directory with   
+          Insecure Permissions / Improper Neutralization of Special Elements used in an SQL Command ('SQL   
+          Injection'). The default_jsonalyzer in the JSONalyzeQueryEngine of LlamaIndex is vulnerable to SQL
+          injection via prompt injection, allowing attackers to craft queries that lead to arbitrary file   
+          creation and potential denial-of-service scenarios.                                               
+                                                                                                            
+           ▶▶┆ Fixed for llama-index at version: 0.12.3
+          3797┆ [[package]]
+   
+   ❯❯❱ llama-index-core - CVE-2024-12704
+          Severity: HIGH                                                                                     
+          Affected versions of llama-index-core are vulnerable to Improper Handling of Exceptional Conditions
+          / Loop with Unreachable Exit Condition ('Infinite Loop'). The LangChainLLM component is vulnerable 
+          to a Denial of Service due to unhandled premature thread termination. An attacker can trigger an   
+          infinite loop in the response generator by providing an input of an incorrect type, causing the    
+          thread to exit before the prediction is executed, which leaves the process indefinitely stalled.   
+                                                                                                             
+           ▶▶┆ Fixed for llama-index-core at version: 0.12.6
+          3848┆ [[package]]
+   
+   ❯❯❱ llama-index-core - CVE-2025-5302
+          Severity: HIGH                                                                                     
+          Affected versions of llama-index-core are vulnerable to Uncontrolled Recursion. A denial-of-service
+          flaw in LlamaIndex's JSONReader allows an attacker who can supply or control JSON inputs to trigger
+          uncontrolled recursion by feeding deeply nested JSON structures. This exhausts the Python recursion
+          stack (and CPU/memory), causing high resource consumption and ultimately crashing the process.     
+                                                                                                             
+           ▶▶┆ Fixed for llama-index-core at version: 0.12.38
+          3848┆ [[package]]
+   
+   ❯❯❱ lxml - CVE-2026-41066
+          Severity: HIGH                                                                                    
+          Affected versions of lxml are vulnerable to Improper Restriction of XML External Entity Reference.
+          An attacker can exploit the XXE vulnerability in lxml to read arbitrary local files by supplying a
+          crafted XML document containing external entity references to `iterparse()` or                    
+          `ETCompatXMLParser()`.                                                                            
+                                                                                                            
+           ▶▶┆ Fixed for lxml at version: 6.1.0
+          4126┆ [[package]]
+   
+   ❯❯❱ mcp - CVE-2025-66416
+          Severity: HIGH                                                                                      
+          Affected versions of mcp are vulnerable to Insecure Default Initialization of Resource / Reliance on
+          Reverse DNS Resolution for a Security-Critical Action. A HTTP-based MCP server created via FastMCP  
+          (using streamable HTTP or SSE) does not enable DNS rebinding protection by default when run on      
+          localhost without authentication. A malicious website can exploit this to bypass same-origin        
+          restrictions and send unauthorized requests to the local MCP server, potentially invoking tools or  
+          accessing exposed resources.                                                                        
+                                                                                                              
+           ▶▶┆ Fixed for mcp at version: 1.23.0
+          4346┆ [[package]]
+   
+   ❯❯❱ nltk - CVE-2026-0847
+          Severity: HIGH                                                                                
+          Affected versions of nltk are vulnerable to Improper Limitation of a Pathname to a Restricted 
+          Directory ('Path Traversal'). NLTK CorpusReader classes fail to sanitize file identifiers in  
+          CorpusReader.open(), allowing arbitrary file reads via absolute paths or ".." segments when an
+          attacker can influence the fileid passed to reader methods (raw, words, sents, tagged_sents,  
+          parsed_sents, ...).                                                                           
+                                                                                                        
+           ▶▶┆ Fixed for nltk at version: 
+          4749┆ [[package]]
+   
+   ❯❯❱ nltk - CVE-2026-0846
+          Severity: HIGH                                                                                      
+          Affected versions of nltk are vulnerable to Absolute Path Traversal. `nltk.util.filestring()` allows
+          arbitrary file read because it opens user-supplied paths without proper validation or sanitization. 
+          If an application passes attacker-controlled input to this function, absolute paths or path         
+          traversal sequences can be used to read sensitive files, including in web APIs or other remote      
+          interfaces built on NLTK.                                                                           
+                                                                                                              
+           ▶▶┆ Fixed for nltk at version: 3.9.3
+          4749┆ [[package]]
+   
+   ❯❯❱ nltk - CVE-2026-33231
+          Severity: HIGH                                                                                    
+          Affected versions of nltk are vulnerable to Missing Authentication for Critical Function.         
+          `nltk.app.wordnet_app` is vulnerable to unauthenticated remote denial of service: when the WordNet
+          Browser is run in its default mode, any client that can reach the HTTP port can send a crafted    
+          request to `/SHUTDOWN%20THE%20SERVER` and immediately terminate the process.                      
+                                                                                                            
+           ▶▶┆ Fixed for nltk at version: 3.9.4
+          4749┆ [[package]]
+   
+   ❯❯❯❱ nltk - CVE-2025-14009
+          Severity: CRITICAL                                                                                  
+          Affected versions of nltk are vulnerable to Improper Control of Generation of Code ('Code           
+          Injection'). NLTK's downloader extracts downloaded ZIP packages using `zipfile.extractall()` in     
+          `_unzip_iter` without validating entry paths, enabling a "zip slip" path traversal where a malicious
+          package can write files outside the intended install directory. If an attacker can trick a user into
+          downloading a crafted NLTK data package (e.g., containing Python modules like `__init__.py`), those 
+          files may later be imported and executed, leading to arbitrary code execution and full system       
+          compromise.                                                                                         
+                                                                                                              
+           ▶▶┆ Fixed for nltk at version: 3.9.3
+          4749┆ [[package]]
+   
+   ❯❯❱ nltk - CVE-2026-33236
+          Severity: HIGH                                                                                    
+          Affected versions of nltk are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). NLTK's downloader does not validate the `subdir` and `id` attributes
+          when processing remote XML index files, enabling path traversal: an attacker who controls a remote
+          XML index server (or compromises the default one) can provide malicious values containing `../`   
+          sequences, causing `nltk.download()` to create directories and write files at arbitrary filesystem
+          locations — potentially overwriting critical files such as `/etc/passwd` or                       
+          `~/.ssh/authorized_keys`.                                                                         
+                                                                                                            
+           ▶▶┆ Fixed for nltk at version: 
+          4749┆ [[package]]
+   
+   ❯❯❱ nltk - CVE-2026-54293
+          Severity: HIGH                                                                                  
+          Affected versions of nltk are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). nltk.data.load() (and the underlying find()/retrieve()) validate a
+          resource name with the _UNSAFE_NO_PROTOCOL_RE regex before url2pathname() URL-decodes it. An    
+          attacker who controls the resource name can percent-encode traversal/separator sequences (e.g.  
+          %2e%2e, %2f) to bypass the check and read arbitrary local files.                                
+                                                                                                          
+           ▶▶┆ Fixed for nltk at version: 
+          4749┆ [[package]]
+   
+   ❯❯❱ onnx - GHSA-q56x-g2fj-4rj6
+          Severity: HIGH                                                                                      
+          Affected versions of onnx are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal') / Improper Link Resolution Before File Access ('Link Following') /     
+          Time-of-check Time-of-use (TOCTOU) Race Condition. onnx is vulnerable because it performs non-atomic
+          file operations in save_external_data without proper symlink protection, allowing an attacker to    
+          exploit a TOCTOU race and overwrite arbitrary files via symlink manipulation when external data is  
+          saved.                                                                                              
+                                                                                                              
+           ▶▶┆ Fixed for onnx at version: 1.21.0
+          5000┆ [[package]]
+   
+   ❯❯❱ onnx - CVE-2026-27489
+          Severity: HIGH                                                                                     
+          Affected versions of onnx are vulnerable to Relative Path Traversal / UNIX Symbolic Link (Symlink) 
+          Following. ONNX is vulnerable to arbitrary file read when loading models with external tensor data:
+          a symlinked external data file can bypass the regular-file check and cause the loader to read files
+          outside the model or user-specified directory.                                                     
+                                                                                                             
+           ▶▶┆ Fixed for onnx at version: 1.21.0
+          5000┆ [[package]]
+   
+   ❯❯❱ onnx - CVE-2026-28500
+          Severity: HIGH                                                                                     
+          Affected versions of onnx are vulnerable to Download of Code Without Integrity Check / Insufficient
+          Verification of Data Authenticity / Protection Mechanism Failure. ONNX's `onnx.hub.load()`         
+          repository trust check can be bypassed by using `silent=True`, which suppresses the untrusted-     
+          repository warning and user confirmation prompt, allowing models to be downloaded from attacker-   
+          controlled GitHub repos without user interaction. Because the integrity check relies on a manifest 
+          hosted in the same repository, an attacker can supply matching hashes for a malicious model,       
+          enabling silent supply-chain attacks when applications or third-party libraries load models via    
+          `onnx.hub.load()`.                                                                                 
+                                                                                                             
+           ▶▶┆ Fixed for onnx at version: 1.21.0rc1
+          5000┆ [[package]]
+   
+   ❯❯❱ onnx - CVE-2026-34445
+          Severity: HIGH                                                                                    
+          Affected versions of onnx are vulnerable to Improper Input Validation / Improperly Controlled     
+          Modification of Dynamically-Determined Object Attributes / Uncontrolled Resource Consumption. onnx
+          is vulnerable because it uses setattr() on attacker-controlled external_data keys, allowing       
+          arbitrary attribute injection and unsafe values that can corrupt state or cause memory exhaustion.
+                                                                                                            
+           ▶▶┆ Fixed for onnx at version: 1.21.0
+          5000┆ [[package]]
+   
+   ❯❯❱ orjson - CVE-2025-67221
+          Severity: HIGH                                                                                      
+          Affected versions of orjson are vulnerable to Allocation of Resources Without Limits or Throttling. 
+          `orjson.dumps` does not enforce a recursion/depth limit when serializing deeply nested Python/JSON- 
+          like structures, allowing an attacker to supply or trigger extremely deep nesting that can cause    
+          unbounded recursion and crash the process (stack overflow / denial of service) during serialization.
+                                                                                                              
+           ▶▶┆ Fixed for orjson at version: 3.11.6
+          5283┆ [[package]]
+   
+   ❯❯❱ protobuf - CVE-2026-0994
+          Severity: HIGH                                                                                      
+          Affected versions of protobuf are vulnerable to Uncontrolled Recursion. A denial-of-service         
+          vulnerability in the Python protobuf library's JSON parser allows deeply nested google.protobuf.Any 
+          messages to bypass the configured max_recursion_depth in json_format.ParseDict. Because the internal
+          Any-handling logic does not update the recursion counter, an attacker supplying a JSON payload with 
+          repeatedly nested Any messages can exhaust Python's recursion stack (raising RecursionError) instead
+          of a controlled ParseError, potentially crashing or disrupting services that parse untrusted JSON.  
+                                                                                                              
+           ▶▶┆ Fixed for protobuf at versions: 5.29.6, 6.33.5
+          5819┆ [[package]]
+   
+   ❯❯❱ pyasn1 - CVE-2026-23490
+          Severity: HIGH                                                                                      
+          Affected versions of pyasn1 are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption. A malicious BER/DER‐encoded OID containing excessive continuation
+          octets can trigger unbounded integer accumulation in pyasn1's BER decoder (in the RELATIVE-OID      
+          path), causing massive memory allocation and resulting in a denial-of-service when parsing attacker-
+          controlled certificates or ASN.1 streams.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for pyasn1 at version: 0.6.2
+          5972┆ [[package]]
+   
+   ❯❯❱ pyasn1 - CVE-2026-30922
+          Severity: HIGH                                                                                      
+          Affected versions of pyasn1 are vulnerable to Uncontrolled Recursion. `pyasn1`'s BER decoder is     
+          vulnerable to a denial-of-service when decoding attacker-controlled ASN.1 with deeply nested        
+          constructed types: crafted `SEQUENCE` (`0x30`) or `SET` (`0x31`) elements using indefinite-length   
+          (`0x80`) encoding can trigger unbounded recursive calls during decoding (both schema-based and      
+          schemaless paths), leading to a `RecursionError` crash or, if recursion limits are raised, excessive
+          memory consumption and OOM.                                                                         
+                                                                                                              
+           ▶▶┆ Fixed for pyasn1 at version: 0.6.3
+          5972┆ [[package]]
+   
+   ❯❯❱ python-multipart - CVE-2024-53981
+          Severity: HIGH                                                                                      
+          Affected versions of python-multipart are vulnerable to Allocation of Resources Without Limits or   
+          Throttling. A crafted multipart request with excessive line breaks before the first or after the    
+          last boundary can trigger a denial of service in python-multipart. The one-byte-at-a-time logging of
+          each ignored line break leads to high CPU usage and can stall the application’s event loop during   
+          form processing.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for python-multipart at version: 0.0.18
+          6576┆ [[package]]
+   
+   ❯❯❱ python-multipart - CVE-2026-53539
+          Severity: HIGH                                                                                     
+          Affected versions of python-multipart are vulnerable to Inefficient Algorithmic Complexity /       
+          Uncontrolled Resource Consumption. An attacker can cause uncontrolled CPU consumption (denial of   
+          service) by sending a small application/x-www-form-urlencoded body that uses ";" as the field      
+          separator. python-multipart's QuerystringParser performs a full failed scan for "&" over the entire
+          remaining buffer before locating each ";", resulting in quadratic-time parsing.                    
+                                                                                                             
+           ▶▶┆ Fixed for python-multipart at version: 0.0.30
+          6576┆ [[package]]
+   
+   ❯❯❱ python-multipart - CVE-2026-42561
+          Severity: HIGH                                                                                     
+          Affected versions of python-multipart are vulnerable to Allocation of Resources Without Limits or  
+          Throttling. python-multipart's MultipartParser enforced no limits on the number or size of part    
+          headers, so a network attacker can send a multipart/form-data body with many or oversized part     
+          headers to keep the parser in its header state machine and burn CPU before the request is rejected.
+          Any code that instantiates MultipartParser/FormParser or calls parse_form/create_form_parser to    
+          handle multipart bodies is reachable to this DoS.                                                  
+                                                                                                             
+           ▶▶┆ Fixed for python-multipart at version: 0.0.27
+          6576┆ [[package]]
+   
+   ❯❯❱ python-multipart - CVE-2026-24486
+          Severity: HIGH                                                                                      
+          Affected versions of python-multipart are vulnerable to Improper Limitation of a Pathname to a      
+          Restricted Directory ('Path Traversal'). In python-multipart, if you set UPLOAD_DIR and enable      
+          UPLOAD_KEEP_FILENAME=True, an attacker can submit a filename starting with "/" (e.g. "/etc/passwd").
+          Because os.path.join(UPLOAD_DIR, fname) drops preceding components when fname is absolute, the      
+          upload is written to the attacker-controlled path instead of the intended directory, allowing       
+          arbitrary file writes.                                                                              
+                                                                                                              
+           ▶▶┆ Fixed for python-multipart at version: 0.0.22
+          6576┆ [[package]]
+   
+   ❯❯❱ starlette - CVE-2026-48818
+          Severity: HIGH                                                                                      
+          Affected versions of starlette are vulnerable to Server-Side Request Forgery (SSRF). Serving static 
+          files with Starlette's StaticFiles app on Windows resolves requested paths with os.path.realpath()  
+          before checking directory containment. A request for a UNC path (e.g. \\attacker.com\share) triggers
+          an outbound SMB connection, letting an unauthenticated attacker perform server-side request forgery 
+          and leak the service account's NTLMv2 credentials.                                                  
+                                                                                                              
+           ▶▶┆ Fixed for starlette at version: 1.1.0
+          8079┆ [[package]]
+   
+    ❯❱ starlette - CVE-2026-48710
+          Severity: MODERATE                                                                                 
+          Affected versions of starlette are vulnerable to Improper Validation of Unsafe Equivalence in Input
+          / Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). Starlette      
+          reconstructs `request.url` (and `request.base_url`) from the unvalidated HTTP `Host` header. An    
+          attacker can send a malformed `Host` header containing `/`, `?`, or `#` to shift the parsed        
+          path/query boundaries, making `request.url.path` diverge from the path the ASGI server actually    
+          routed against. Middleware or endpoints that apply path-based security restrictions using          
+          `request.url` can be bypassed.                                                                     
+                                                                                                             
+           ▶▶┆ Fixed for starlette at version: 1.0.1
+          8079┆ [[package]]
+   
+    ❯❱ starlette - CVE-2025-54121
+          Severity: MODERATE                                                                                  
+          Affected versions of starlette are vulnerable to Allocation of Resources Without Limits or          
+          Throttling. Starlette parses `multipart/form-data` uploads through `UploadFile.write()`, which      
+          performs the synchronous `SpooledTemporaryFile` disk-rollover write on the async event loop thread  
+          instead of a threadpool. An application that handles multipart file uploads (via `request.form()` or
+          a FastAPI `UploadFile` / `File(...)` parameter) can have its event loop blocked while a large upload
+          rolls over to disk, delaying new connections (denial of service).                                   
+                                                                                                              
+           ▶▶┆ Fixed for starlette at version: 0.47.2
+          8079┆ [[package]]
+   
+   ❯❯❱ starlette - CVE-2024-47874
+          Severity: HIGH                                                                            
+          Affected versions of starlette are vulnerable to Allocation of Resources Without Limits or
+          Throttling.                                                                               
+                                                                                                    
+           ▶▶┆ Fixed for starlette at version: 0.40.0
+          8079┆ [[package]]
+   
+   ❯❯❱ starlette - CVE-2026-54283
+          Severity: HIGH                                                                                    
+          Affected versions of starlette are vulnerable to Allocation of Resources Without Limits or        
+          Throttling. Calling `request.form()` parses `application/x-www-form-urlencoded` bodies without    
+          enforcing the `max_fields` or `max_part_size` limits, so an unauthenticated attacker can send a   
+          request with an extremely large number of fields or an oversized field value to exhaust CPU/memory
+          and cause a denial of service.                                                                    
+                                                                                                            
+           ▶▶┆ Fixed for starlette at version: 1.3.1
+          8079┆ [[package]]
+   
+    ❯❱ starlette - CVE-2026-48817
+          Severity: MODERATE                                                                              
+          Affected versions of starlette are vulnerable to Use of Externally-Controlled Input to Select   
+          Classes or Code ('Unsafe Reflection'). Starlette resolves HTTPEndpoint request handlers by      
+          lowercasing the client-supplied HTTP method and looking it up as an instance attribute with     
+          getattr(), without restricting the lookup to standard HTTP verbs. An attacker can send a non-   
+          standard HTTP method (e.g. `_DO_DELETE`) whose lowercased name matches an internal helper method
+          (e.g. `_do_delete`) on an HTTPEndpoint subclass, invoking that method as if it were a request   
+          handler and bypassing the authorization checks applied by the intended public handlers.         
+                                                                                                          
+           ▶▶┆ Fixed for starlette at version: 1.1.0
+          8079┆ [[package]]
+   
+   ❯❯❯❱ torch - CVE-2025-32434
+          Severity: CRITICAL                                                                                  
+          Affected versions of torch are vulnerable to Deserialization of Untrusted Data. Using torch.load    
+          with the weights_only flag does not fully mitigate the risk of deserialization attacks; an attacker 
+          who crafts a malicious model file can trigger remote command execution despite the weights_only=True
+          safeguard.                                                                                          
+                                                                                                              
+           ▶▶┆ Fixed for torch at version: 2.6.0
+          8377┆ [[package]]
+   
+   ❯❯❱ transformers - CVE-2026-4372
+          Severity: HIGH                                                                                      
+          Affected versions of transformers are vulnerable to Deserialization of Untrusted Data / Missing     
+          Serialization Control Element. HuggingFace transformers blindly deserializes every field of a       
+          model's config.json onto the config object, including internal fields such as                       
+          `_attn_implementation_internal`. A malicious config that points this field at an attacker-controlled
+          Hub repository causes transformers to download and execute arbitrary Python code (via the kernel    
+          integration) when the model is loaded through a `from_pretrained()` API, yielding remote code       
+          execution without requiring `trust_remote_code=True`.                                               
+                                                                                                              
+           ▶▶┆ Fixed for transformers at version: 5.3.0
+          8564┆ [[package]]
+   
+   ❯❯❱ ujson - CVE-2026-32875
+          Severity: HIGH                                                                                     
+          Affected versions of ujson are vulnerable to Integer Overflow or Wraparound / Loop with Unreachable
+          Exit Condition ('Infinite Loop') / Out-of-bounds Write. Improper handling of indentation size      
+          calculations allows crafted input values to trigger memory corruption or non-terminating execution 
+          paths during JSON serialization.                                                                   
+                                                                                                             
+           ▶▶┆ Fixed for ujson at version: 5.12.0
+          8713┆ [[package]]
+   
+   ❯❯❱ ujson - CVE-2026-32874
+          Severity: HIGH                                                                                     
+          Affected versions of ujson are vulnerable to Missing Release of Memory after Effective Lifetime.   
+          Unreleased memory allocations can accumulate over time and exhaust available system resources under
+          repeated execution.                                                                                
+                                                                                                             
+           ▶▶┆ Fixed for ujson at version: 5.12.0
+          8713┆ [[package]]
+   
+   ❯❯❱ ujson - CVE-2026-44660
+          Severity: HIGH                                                                                   
+          Affected versions of ujson are vulnerable to Missing Release of Memory after Effective Lifetime. 
+          When `ujson.dump()` writes a serialized JSON payload to a file-like object and the underlying    
+          `write()` call raises, the intermediate Python string is not decremented, leaking memory equal to
+          the full serialized payload size on every failed call. Repeated failures (e.g. on a long-running 
+          server streaming JSON to flaky sockets or closed files) can lead to memory exhaustion. Only      
+          `ujson.dump()` is affected; `ujson.dumps()`, `ujson.load()`, and `ujson.loads()` are safe.       
+                                                                                                           
+           ▶▶┆ Fixed for ujson at version: 5.12.1
+          8713┆ [[package]]
+   
+   ❯❯❯❱ unstructured - CVE-2025-64712
+          Severity: CRITICAL                                                                                  
+          Affected versions of unstructured are vulnerable to External Control of File Name or Path / Improper
+          Limitation of a Pathname to a Restricted Directory ('Path Traversal'). A specially crafted input    
+          file can cause the application to write files outside the intended extraction directory, potentially
+          overwriting sensitive system or application files with attacker-controlled content.                 
+                                                                                                              
+           ▶▶┆ Fixed for unstructured at version: 0.18.18
+          8808┆ [[package]]
+   
+   ❯❯❱ urllib3 - CVE-2026-21441
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data    
+          Amplification). When using urllib3's streaming API (preload_content=False) with redirects enabled,  
+          redirect responses are fully drained and decompressed before any read calls—ignoring configured read
+          limits—allowing a malicious server to send a compressed payload that expands into massive data and  
+          triggers excessive CPU and memory consumption (decompression bomb).                                 
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.6.3
+          8880┆ [[package]]
+   
+   ❯❯❱ urllib3 - CVE-2025-66418
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The vulnerability in urllib3 arises because a malicious server can provide an unbounded chain of    
+          content-encoding layers that urllib3 will fully decompress, causing unrestrained CPU usage and      
+          memory growth.                                                                                      
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.6.0
+          8880┆ [[package]]
+   
+   ❯❯❱ urllib3 - CVE-2025-66471
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data   
+          Amplification). An attacker hosting a highly-compressed HTTP response can trigger urllib3's        
+          streaming API to decompress entire compressed blocks when the client requests only a small chunk   
+          (via stream(), read(), read1(), read_chunked(), or readinto()). This can cause excessive CPU usage 
+          and large memory allocations on the client (resource exhaustion), resulting in a denial-of-service.
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.6.0
+          8880┆ [[package]]
+   
+   ❯❯❱ urllib3 - CVE-2026-44431
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor. HTTP pools obtained from urllib3 ProxyManager via connection_from_url() or                  
+          connection_from_host() do not strip sensitive headers (Authorization, Cookie, Proxy-Authorization) 
+          when following cross-origin redirects, leaking authentication credentials to the redirect target.  
+          Use ProxyManager.request() (the high-level API) instead, or upgrade to urllib3 >= 2.7.0.           
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.7.0
+          8880┆ [[package]]
+
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192882704)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 313 files tracked by git with 0 Code rules, 17206 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources                             Resolution Method                     Ecosystem   Dependencies   Rules 
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  uv.lock                                        Lockfile                              Pypi        429            17206 
+  libs/ktem/requirements.txt                     Lockfile                              Pypi        0              17206 
+  libs/ktem/ktem/pages/setup.py                  Disabled (use --allow-local-builds)   Unknown     -                  - 
+  templates/project-default/{{cookiecutter.pro   Disabled (use --allow-local-builds)   Unknown     -                  - 
+  ject_name}}/setup.py                                                                                                  
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      11485                                                                                                  
+  Basic           4423                                                                                                  
+  Reachability    1298                                                                                                  
+                                                                                                                        
+  Failed to parse [bold]libs/ktem/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'platformdirs' because
+  it is not pinned to an exact version                                                                                  
+  Failed to parse [bold]libs/ktem/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency 'tzlocal' because it  
+  is not pinned to an exact version                                                                                     
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 251 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 244
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Matching --exclude patterns: 58
+   ◦ Files matching .semgrepignore patterns: 43
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=Cinnamon__kotaemon&ref=HEAD
+  No blocking findings so exiting with code 0

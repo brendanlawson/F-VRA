@@ -1,0 +1,10 @@
+# project: marshmallow-code__flask-marshmallow
+# scanner: pip-audit
+# time: Fri Jul 10 19:33:20 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\marshmallow-code__flask-marshmallow --locked -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\marshmallow-code__flask-marshmallow.json
+# exit code: 1
+# note: project-path fallback
+=== STDOUT ===
+
+=== STDERR ===
+ERROR:pip_audit._cli:no lockfiles found in C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\marshmallow-code__flask-marshmallow

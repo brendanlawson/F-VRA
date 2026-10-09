@@ -1,0 +1,12 @@
+# project: LedFx__LedFx
+# scanner: osv-scanner
+# time: Sat Jul 11 09:20:54 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\LedFx__LedFx.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\LedFx__LedFx
+# exit code: 1
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\LedFx__LedFx
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\LedFx__LedFx\requirements.pinned.txt file and found 82 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 1.5084ms elapsed, 1.5084ms wall time

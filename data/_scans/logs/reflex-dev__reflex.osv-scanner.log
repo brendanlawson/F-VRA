@@ -1,0 +1,12 @@
+# project: reflex-dev__reflex
+# scanner: osv-scanner
+# time: Sat Jul 11 09:26:08 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\reflex-dev__reflex.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\reflex-dev__reflex
+# exit code: 0
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\reflex-dev__reflex
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\reflex-dev__reflex\requirements.pinned.txt file and found 40 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 0s elapsed, 0s wall time

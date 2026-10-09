@@ -1,0 +1,166 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 47 packages in 1.04s
+Downloading mypy (11.8MiB)
+Downloading pygments (1.1MiB)
+Downloading black (1.7MiB)
+ Downloaded pygments
+ Downloaded black
+ Downloaded mypy
+Prepared 45 packages in 58.16s
+Installed 47 packages in 387ms
+ + annotated-types==0.6.0
+ + anyio==4.2.0
+ + bandit==1.7.6
+ + black==24.3.0
+ + certifi==2023.11.17
+ + charset-normalizer==3.3.2
+ + click==8.1.7
+ + colorama==0.4.6
+ + fastapi==0.109.1
+ + flake8==6.1.0
+ + gitdb==4.0.11
+ + gitpython==3.1.40
+ + h11==0.14.0
+ + httpcore==1.0.2
+ + httpx==0.26.0
+ + idna==3.7
+ + iniconfig==2.0.0
+ + isort==5.13.2
+ + joblib==1.3.2
+ + loguru==0.7.2
+ + markdown-it-py==3.0.0
+ + mccabe==0.7.0
+ + mdurl==0.1.2
+ + mypy==1.8.0
+ + mypy-extensions==1.0.0
+ + packaging==23.2
+ + pathspec==0.12.1
+ + pbr==6.0.0
+ + platformdirs==4.1.0
+ + pluggy==1.3.0
+ + pycodestyle==2.11.1
+ + pydantic==2.5.3
+ + pyflakes==3.1.0
+ + pygments==2.17.2
+ + pytest==7.4.3
+ + pytest-cov==4.1.0
+ + requests==2.31.0
+ + rich==13.7.0
+ + smmap==5.0.1
+ + sniffio==1.3.0
+ + starlette==0.35.1
+ + stevedore==5.1.0
+ + threadpoolctl==3.2.0
+ + typing-extensions==4.9.0
+ + urllib3==2.1.0
+ + uvicorn==0.25.0
+ + win32-setctime==1.1.0
+ONE_SHOT_INSTALL_OK
+
+Testing /work/eightBEC__fastapi-ml-skeleton...
+
+Tested 50 dependencies for known issues, found 30 issues, 68 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade anyio@4.2.0 to anyio@4.4.0 to fix
+  ✗ Race Condition [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-ANYIO-7361842] in anyio@4.2.0
+    introduced by anyio@4.2.0 and 3 other path(s)
+
+  Upgrade bandit@1.7.6 to bandit@1.7.7 to fix
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BANDIT-6241859] in bandit@1.7.6
+    introduced by bandit@1.7.6
+
+  Upgrade black@24.3.0 to black@26.3.1 to fix
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-15518063] in black@24.3.0
+    introduced by black@24.3.0
+
+  Upgrade certifi@2023.11.17 to certifi@2024.7.4 to fix
+  ✗ Insufficient Verification of Data Authenticity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CERTIFI-7430173] in certifi@2023.11.17
+    introduced by certifi@2023.11.17 and 4 other path(s)
+
+  Upgrade gitpython@3.1.40 to gitpython@3.1.50 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-16298057] in gitpython@3.1.40
+    introduced by gitpython@3.1.40 and 1 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-16438979] in gitpython@3.1.40
+    introduced by gitpython@3.1.40 and 1 other path(s)
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-16438980] in gitpython@3.1.40
+    introduced by gitpython@3.1.40 and 1 other path(s)
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-16624542] in gitpython@3.1.40
+    introduced by gitpython@3.1.40 and 1 other path(s)
+  ✗ Untrusted Search Path [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-6150683] in gitpython@3.1.40
+    introduced by gitpython@3.1.40 and 1 other path(s)
+  ✗ Arbitrary Argument Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-16298054] in gitpython@3.1.40
+    introduced by gitpython@3.1.40 and 1 other path(s)
+
+  Upgrade h11@0.14.0 to h11@0.16.0 to fix
+  ✗ HTTP Request Smuggling [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-H11-10293728] in h11@0.14.0
+    introduced by h11@0.14.0 and 3 other path(s)
+
+  Upgrade idna@3.7 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.7
+    introduced by idna@3.7 and 6 other path(s)
+
+  Upgrade pygments@2.17.2 to pygments@2.20.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYGMENTS-15746419] in pygments@2.17.2
+    introduced by pygments@2.17.2 and 2 other path(s)
+
+  Upgrade requests@2.31.0 to requests@2.33.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-10305723] in requests@2.31.0
+    introduced by requests@2.31.0
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.31.0
+    introduced by requests@2.31.0
+  ✗ Always-Incorrect Control Flow Implementation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-6928867] in requests@2.31.0
+    introduced by requests@2.31.0
+
+  Upgrade starlette@0.35.1 to starlette@1.3.1 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-10874054] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-13733964] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-8186175] in starlette@0.35.1
+    introduced by starlette@0.35.1 and 1 other path(s)
+
+  Upgrade urllib3@2.1.0 to urllib3@2.7.0 to fix
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-10390194] in urllib3@2.1.0
+    introduced by urllib3@2.1.0 and 1 other path(s)
+  ✗ Improper Removal of Sensitive Information Before Storage or Transfer [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-7267250] in urllib3@2.1.0
+    introduced by urllib3@2.1.0 and 1 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@2.1.0
+    introduced by urllib3@2.1.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@2.1.0
+    introduced by urllib3@2.1.0 and 1 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@2.1.0
+    introduced by urllib3@2.1.0 and 1 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.1.0
+    introduced by urllib3@2.1.0 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      eightBEC__fastapi-ml-skeleton
+Open source:       no
+Project path:      /work/eightBEC__fastapi-ml-skeleton
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

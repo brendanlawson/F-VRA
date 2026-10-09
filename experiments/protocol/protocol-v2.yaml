@@ -1,0 +1,89 @@
+schema_version: f_vra.protocol.v2
+protocol_id: f_vra-main-study-v2
+frozen_on: 2026-09-19
+
+entrypoints:
+  include_types:
+    - main
+    - cli
+    - web
+  ignore_directories:
+    - tests
+    - test
+    - docs
+    - examples
+    - example
+    - tutorials
+    - benchmarks
+    - benchmark
+  include_maintenance_scripts: true
+
+environment:
+  dependency_profile: production_main
+  uv_args:
+    - --frozen
+    - --no-dev
+  poetry_groups:
+    - main
+  pipfile_include_dev: false
+  requirements_entrypoint: requirements.txt
+  build_network: true
+  build_system_packages:
+    - build-essential
+    - gcc
+    - g++
+    - pkg-config
+    - git
+    - libpq-dev
+    - libldap2-dev
+    - libsasl2-dev
+    - libssl-dev
+    - libffi-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - zlib1g-dev
+    - libjpeg-dev
+    - default-libmysqlclient-dev
+  analysis_network: none
+  cpus: 8
+  memory_gb: 16
+
+backend:
+  project_backend: jarvis
+  package_backend: jarvis
+  jarvis_python: "3.8"
+  ast_runtime: target_python
+  ast_adapter_version: ast-boundary-v2-target-runtime
+  fragment_schema_version: "1"
+  precision: true
+  fragment_timeout_s: 300
+  query_timeout_s: 600
+  witness_display_limit: 100
+
+decisions:
+  values:
+    - REACHABLE
+    - UNREACHABLE
+    - UNKNOWN
+  potentially_reachable_mapping: UNKNOWN
+  incomplete_frontier_mapping: UNKNOWN
+
+oracle:
+  accepted_review_status: accepted
+  target_minimum: 300
+  target_maximum: 400
+  require_reachable_witness: true
+  require_unreachable_complete_frontier: true
+
+workload:
+  fixed_orders:
+    - PROJECT_MAJOR
+    - CVE_MAJOR
+  random_seed_start: 1
+  random_seed_end: 30
+
+statistics:
+  proportion_interval: wilson_95
+  dependent_query_interval: project_cluster_bootstrap_95
+  bootstrap_iterations: 2000
+  bootstrap_seed: 17

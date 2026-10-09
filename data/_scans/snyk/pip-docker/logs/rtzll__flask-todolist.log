@@ -1,0 +1,208 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because forgerypy==0.1 has no usable wheels and you require
+      forgerypy==0.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `forgerypy` because building from source is disabled for all packages (i.e., with `--no-build`)ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 73ms
+ + alembic==1.18.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 9ms
+ + blinker==1.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 25ms
+ + click==8.3.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 17ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading deptry (1.8MiB)
+ Downloaded deptry
+Prepared 1 package in 763ms
+Installed 1 package in 26ms
+ + deptry==0.25.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 126ms
+ + dnspython==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 23ms
+ + email-validator==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 27ms
+ + execnet==2.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 256ms
+Installed 1 package in 10ms
+ + flask-login==0.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 239ms
+Installed 1 package in 15ms
+ + flask-migrate==4.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + flask-sqlalchemy==3.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 249ms
+Installed 1 package in 6ms
+ + flask-wtf==1.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 21ms
+ + flask==3.1.3
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because forgerypy==0.1 has no usable wheels and you require
+      forgerypy==0.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `forgerypy` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL forgerypy==0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 500ms
+Installed 1 package in 22ms
+ + greenlet==3.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 405ms
+Installed 1 package in 19ms
+ + gunicorn==25.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 583ms
+Installed 1 package in 6ms
+ + idna==3.13
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 4ms
+ + iniconfig==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 9ms
+ + itsdangerous==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 13ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 331ms
+Installed 1 package in 13ms
+ + mako==1.3.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 10ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + packaging==26.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + pluggy==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 73ms
+ + pygments==2.20.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 249ms
+Installed 1 package in 5ms
+ + pytest-flask==1.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + pytest-xdist==3.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 50ms
+ + pytest==9.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 14ms
+ + python-dotenv==1.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 215ms
+Installed 1 package in 5ms
+ + requirements-parser==0.13.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Installed 1 package in 75ms
+ + ruff==0.15.12
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 229ms
+ + sqlalchemy==2.0.49
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 14ms
+ + tomli==2.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading ty (10.8MiB)
+ Downloaded ty
+Prepared 1 package in 20.55s
+Installed 1 package in 28ms
+ + ty==0.0.32
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 10ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 16ms
+ + werkzeug==3.1.8
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 386ms
+Installed 1 package in 38ms
+ + wtforms==3.2.1
+
+Testing /work/rtzll__flask-todolist...
+
+Tested 36 dependencies for known issues, found 2 issues, 5 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade idna@3.13 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.13
+    introduced by idna@3.13 and 1 other path(s)
+
+  Upgrade mako@1.3.11 to mako@1.3.12 to fix
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MAKO-16439021] in mako@1.3.11
+    introduced by mako@1.3.11 and 2 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      rtzll__flask-todolist
+Open source:       no
+Project path:      /work/rtzll__flask-todolist
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

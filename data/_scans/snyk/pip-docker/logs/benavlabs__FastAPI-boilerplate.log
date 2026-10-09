@@ -1,0 +1,592 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pywin32==311 has no wheels with a matching platform tag (e.g.,
+      `manylinux_2_41_x86_64`) and you require pywin32==311, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are available for `pywin32` (v311) on the following platforms: `win32`, `win_amd64`, `win_arm64`ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 332ms
+Installed 1 package in 8ms
+ + aio-pika==9.6.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + aiohappyeyeballs==2.6.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Downloading aiohttp (1.7MiB)
+ Downloaded aiohttp
+Prepared 1 package in 656ms
+Installed 1 package in 22ms
+ + aiohttp==3.13.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 226ms
+Installed 1 package in 9ms
+ + aiomcache==0.8.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 234ms
+Installed 1 package in 5ms
+ + aiormq==6.9.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 16ms
+ + aiosignal==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 248ms
+Installed 1 package in 5ms
+ + aiosqlite==0.22.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 293ms
+Installed 1 package in 15ms
+ + aiostream==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 451ms
+Installed 1 package in 25ms
+ + alembic==1.18.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 15ms
+ + annotated-doc==0.0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + annotated-types==0.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 328ms
+Installed 1 package in 17ms
+ + anyio==4.13.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading ast-serialize (1.2MiB)
+ Downloaded ast-serialize
+Prepared 1 package in 658ms
+Installed 1 package in 7ms
+ + ast-serialize==0.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + async-timeout==5.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading asyncpg (3.4MiB)
+ Downloaded asyncpg
+Prepared 1 package in 1.09s
+Installed 1 package in 26ms
+ + asyncpg==0.31.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 284ms
+Installed 1 package in 15ms
+ + attrs==26.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 466ms
+Installed 1 package in 5ms
+ + bcrypt==5.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 347ms
+Installed 1 package in 9ms
+ + certifi==2026.4.22
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 379ms
+Installed 1 package in 20ms
+ + charset-normalizer==3.4.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 368ms
+Installed 1 package in 7ms
+ + click==8.3.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 343ms
+Installed 1 package in 18ms
+ + crudauth==0.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 82ms
+ + dnspython==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 455ms
+Installed 1 package in 20ms
+ + docker==7.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 13ms
+ + email-validator==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 310ms
+Installed 1 package in 8ms
+ + execnet==2.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading faker (1.9MiB)
+ Downloaded faker
+Prepared 1 package in 2.75s
+Installed 1 package in 245ms
+ + faker==40.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 249ms
+Installed 1 package in 6ms
+ + fastapi-boilerplate-cli==0.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 233ms
+Installed 1 package in 8ms
+ + fastapi-cli==0.0.24
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 234ms
+Installed 1 package in 9ms
+ + fastapi-cloud-cli==0.17.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 339ms
+Installed 1 package in 16ms
+ + fastapi==0.136.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 575ms
+Installed 1 package in 7ms
+ + fastar==0.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 386ms
+Installed 1 package in 23ms
+ + fastcrud==0.21.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 11ms
+ + frozenlist==1.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 1.51s
+Installed 1 package in 26ms
+ + greenlet==3.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + h11==0.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 19ms
+ + httpcore==1.0.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 18ms
+ + httptools==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 22ms
+ + httpx==0.28.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 330ms
+Installed 1 package in 7ms
+ + idna==3.16
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + iniconfig==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 5ms
+ + itsdangerous==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 1.79s
+Installed 1 package in 8ms
+ + librt==0.10.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 336ms
+Installed 1 package in 14ms
+ + mako==1.3.12
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 328ms
+Installed 1 package in 19ms
+ + markdown-it-py==4.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 7ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + mdurl==0.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 386ms
+Installed 1 package in 6ms
+ + multidict==6.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 245ms
+Installed 1 package in 4ms
+ + mypy-extensions==1.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading mypy (14.3MiB)
+ Downloaded mypy
+Prepared 1 package in 3.28s
+Installed 1 package in 335ms
+ + mypy==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 18ms
+ + packaging==26.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 241ms
+Installed 1 package in 7ms
+ + pamqp==3.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 267ms
+Installed 1 package in 10ms
+ + pathspec==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pluggy==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 277ms
+Installed 1 package in 7ms
+ + propcache==0.5.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 416ms
+Installed 1 package in 15ms
+ + psutil==7.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 216ms
+Installed 1 package in 6ms
+ + pycron==3.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 16ms
+Downloading pydantic-core (2.0MiB)
+ Downloaded pydantic-core
+Prepared 1 package in 747ms
+Installed 1 package in 10ms
+ + pydantic-core==2.46.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 342ms
+Installed 1 package in 18ms
+ + pydantic-extra-types==2.11.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 306ms
+Installed 1 package in 10ms
+ + pydantic-settings==2.14.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 903ms
+Installed 1 package in 35ms
+ + pydantic==2.13.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 1.89s
+ + pygments==2.20.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 281ms
+Installed 1 package in 7ms
+ + pyjwt==2.13.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 249ms
+Installed 1 package in 13ms
+ + pytest-asyncio==1.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pytest-mock==3.15.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 314ms
+Installed 1 package in 14ms
+ + pytest-xdist==3.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 475ms
+Installed 1 package in 24ms
+ + pytest==9.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 271ms
+Installed 1 package in 9ms
+ + python-dotenv==1.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 237ms
+Installed 1 package in 9ms
+ + python-multipart==0.0.27
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pywin32==311 has no wheels with a matching platform tag (e.g.,
+      `manylinux_2_41_x86_64`) and you require pywin32==311, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are available for `pywin32` (v311) on the following platforms: `win32`, `win_amd64`, `win_arm64`FAIL_INSTALL pywin32==311
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 14ms
+ + pyyaml==6.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 477ms
+Installed 1 package in 29ms
+ + redis==7.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 278ms
+Installed 1 package in 7ms
+ + requests==2.33.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 277ms
+Installed 1 package in 16ms
+ + rich-toolkit==0.19.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 59ms
+ + rich==15.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 8ms
+ + rignore==0.7.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading ruff (10.8MiB)
+ Downloaded ruff
+Prepared 1 package in 18.62s
+Installed 1 package in 36ms
+ + ruff==0.15.12
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 521ms
+Installed 1 package in 44ms
+ + sentry-sdk==2.59.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 11ms
+ + shellingham==1.5.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading sqladmin (1.4MiB)
+ Downloaded sqladmin
+Prepared 1 package in 834ms
+Installed 1 package in 17ms
+ + sqladmin==0.26.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 290ms
+Installed 1 package in 16ms
+ + sqlalchemy-utils==0.41.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading sqlalchemy (3.2MiB)
+ Downloaded sqlalchemy
+Prepared 1 package in 3.92s
+Installed 1 package in 80ms
+ + sqlalchemy==2.0.49
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 277ms
+Installed 1 package in 8ms
+ + starlette==1.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 231ms
+Installed 1 package in 5ms
+ + taskiq-aio-pika==0.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 214ms
+Installed 1 package in 8ms
+ + taskiq-dependencies==1.5.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 230ms
+Installed 1 package in 15ms
+ + taskiq-redis==1.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 337ms
+Installed 1 package in 36ms
+ + taskiq==0.12.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 349ms
+Installed 1 package in 27ms
+ + testcontainers==4.14.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 293ms
+Installed 1 package in 21ms
+ + typer==0.25.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 20ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + typing-inspection==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 476ms
+Installed 1 package in 136ms
+ + tzdata==2026.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 307ms
+Installed 1 package in 5ms
+ + ua-parser-builtins==202605
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 272ms
+Installed 1 package in 6ms
+ + ua-parser==1.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 589ms
+Installed 1 package in 13ms
+ + urllib3==2.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 262ms
+Installed 1 package in 10ms
+ + user-agents==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 332ms
+Installed 1 package in 16ms
+ + uvicorn==0.46.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 82ms
+ + uvloop==0.22.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 17ms
+ + watchfiles==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 8ms
+Installed 1 package in 93ms
+ + websockets==16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 13ms
+Prepared 1 package in 405ms
+Installed 1 package in 8ms
+ + wrapt==2.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 391ms
+Installed 1 package in 36ms
+ + wtforms==3.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 11ms
+Prepared 1 package in 389ms
+Installed 1 package in 7ms
+ + yarl==1.23.0
+
+Testing /work/benavlabs__FastAPI-boilerplate...
+
+Tested 103 dependencies for known issues, found 21 issues, 82 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.5 to aiohttp@3.14.1 to fix
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5 and 3 other path(s)
+
+  Upgrade pydantic-settings@2.14.1 to pydantic-settings@2.14.2 to fix
+  ✗ Symlink Attack (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYDANTICSETTINGS-17675228] in pydantic-settings@2.14.1
+    introduced by pydantic-settings@2.14.1
+
+  Upgrade python-multipart@0.0.27 to python-multipart@0.0.31 to fix
+  ✗ HTTP Request Smuggling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17344732] in python-multipart@0.0.27
+    introduced by python-multipart@0.0.27 and 2 other path(s)
+  ✗ Interpretation Conflict (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345733] in python-multipart@0.0.27
+    introduced by python-multipart@0.0.27 and 2 other path(s)
+  ✗ Improper Validation of Specified Quantity in Input (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345735] in python-multipart@0.0.27
+    introduced by python-multipart@0.0.27 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345663] in python-multipart@0.0.27
+    introduced by python-multipart@0.0.27 and 2 other path(s)
+
+  Upgrade starlette@1.0.0 to starlette@1.3.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@1.0.0
+    introduced by starlette@1.0.0 and 4 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@1.0.0
+    introduced by starlette@1.0.0 and 4 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@1.0.0
+    introduced by starlette@1.0.0 and 4 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@1.0.0
+    introduced by starlette@1.0.0 and 4 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@1.0.0
+    introduced by starlette@1.0.0 and 4 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      benavlabs__FastAPI-boilerplate
+Open source:       no
+Project path:      /work/benavlabs__FastAPI-boilerplate
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

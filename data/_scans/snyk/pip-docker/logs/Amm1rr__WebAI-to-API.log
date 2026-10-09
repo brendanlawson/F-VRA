@@ -1,0 +1,486 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pywin32==308 has no wheels with a matching platform tag (e.g.,
+      `manylinux_2_41_x86_64`) and you require pywin32==308, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are available for `pywin32` (v308) on the following platforms: `win32`, `win_amd64`, `win_arm64`ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 257ms
+Installed 1 package in 6ms
+ + aiohappyeyeballs==2.6.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 250ms
+Installed 1 package in 5ms
+ + aiohttp-socks==0.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading aiohttp (1.7MiB)
+ Downloaded aiohttp
+Prepared 1 package in 681ms
+Installed 1 package in 26ms
+ + aiohttp==3.13.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 258ms
+Installed 1 package in 10ms
+ + aiosignal==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 232ms
+Installed 1 package in 6ms
+ + annotated-doc==0.0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 245ms
+Installed 1 package in 15ms
+ + annotated-types==0.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 345ms
+Installed 1 package in 19ms
+ + anyio==4.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 238ms
+Installed 1 package in 6ms
+ + async-timeout==5.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 351ms
+Installed 1 package in 29ms
+ + attrs==25.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 318ms
+Installed 1 package in 6ms
+ + browser-cookie3==0.20.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 346ms
+Installed 1 package in 7ms
+ + certifi==2025.11.12
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 1.64s
+Installed 1 package in 20ms
+ + cffi==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 381ms
+Installed 1 package in 17ms
+ + click==8.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 291ms
+Installed 1 package in 8ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 1.22s
+Installed 1 package in 47ms
+ + coverage==7.14.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading curl-cffi (10.6MiB)
+ Downloaded curl-cffi
+Prepared 1 package in 49.01s
+Installed 1 package in 60ms
+ + curl-cffi==0.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 269ms
+Installed 1 package in 6ms
+ + exceptiongroup==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 394ms
+Installed 1 package in 21ms
+ + fastapi==0.128.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 381ms
+Installed 1 package in 13ms
+ + frozenlist==1.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 444ms
+Installed 1 package in 13ms
+ + gemini-webapi==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 11ms
+Prepared 1 package in 818ms
+Installed 1 package in 44ms
+ + greenlet==3.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 312ms
+Installed 1 package in 40ms
+ + h11==0.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 282ms
+Installed 1 package in 15ms
+ + httpcore==1.0.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 935ms
+Installed 1 package in 9ms
+ + httptools==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 286ms
+Installed 1 package in 12ms
+ + httpx==0.28.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 315ms
+Installed 1 package in 6ms
+ + idna==3.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 247ms
+Installed 1 package in 7ms
+ + iniconfig==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 417ms
+Installed 1 package in 29ms
+ + jeepney==0.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 345ms
+Installed 1 package in 10ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 325ms
+Installed 1 package in 15ms
+ + loguru==0.7.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading lz4 (1.3MiB)
+ Downloaded lz4
+Prepared 1 package in 749ms
+Installed 1 package in 12ms
+ + lz4==4.4.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 363ms
+Installed 1 package in 23ms
+ + markdown-it-py==4.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 256ms
+Installed 1 package in 6ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 212ms
+Installed 1 package in 5ms
+ + mdurl==0.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 12ms
+Prepared 1 package in 473ms
+Installed 1 package in 24ms
+ + multidict==6.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 472ms
+Installed 1 package in 12ms
+ + orjson==3.11.8
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 419ms
+Installed 1 package in 41ms
+ + packaging==26.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading playwright (45.3MiB)
+FAIL_INSTALL playwright==1.60.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 250ms
+Installed 1 package in 14ms
+ + pluggy==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 428ms
+Installed 1 package in 10ms
+ + propcache==0.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 460ms
+Installed 1 package in 24ms
+ + pycparser==2.23
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading pycryptodomex (2.2MiB)
+ Downloaded pycryptodomex
+Prepared 1 package in 944ms
+Installed 1 package in 86ms
+ + pycryptodomex==3.23.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 18ms
+Downloading pydantic-core (2.0MiB)
+ Downloaded pydantic-core
+Prepared 1 package in 928ms
+Installed 1 package in 15ms
+ + pydantic-core==2.41.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 600ms
+Installed 1 package in 62ms
+ + pydantic==2.12.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 235ms
+Installed 1 package in 7ms
+ + pyee==13.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading pygments (1.2MiB)
+ Downloaded pygments
+Prepared 1 package in 1.23s
+Installed 1 package in 100ms
+ + pygments==2.20.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 252ms
+Installed 1 package in 19ms
+ + pytest-asyncio==0.26.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 256ms
+Installed 1 package in 7ms
+ + pytest-cov==6.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 241ms
+Installed 1 package in 8ms
+ + pytest-mock==3.15.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 264ms
+Installed 1 package in 9ms
+ + pytest-timeout==2.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 1.76s
+Installed 1 package in 24ms
+ + pytest==8.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 285ms
+Installed 1 package in 10ms
+ + python-dotenv==1.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 525ms
+Installed 1 package in 8ms
+ + python-multipart==0.0.21
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 1.34s
+Installed 1 package in 42ms
+ + python-socks==2.8.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pywin32==308 has no wheels with a matching platform tag (e.g.,
+      `manylinux_2_41_x86_64`) and you require pywin32==308, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are available for `pywin32` (v308) on the following platforms: `win32`, `win_amd64`, `win_arm64`FAIL_INSTALL pywin32==308
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 1.30s
+Installed 1 package in 23ms
+ + pyyaml==6.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 13ms
+Prepared 1 package in 441ms
+Installed 1 package in 26ms
+ + rich==15.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 209ms
+Installed 1 package in 7ms
+ + shadowcopy==0.0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 302ms
+Installed 1 package in 14ms
+ + starlette==0.50.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 400ms
+Installed 1 package in 7ms
+ + tomli==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 282ms
+Installed 1 package in 5ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 238ms
+Installed 1 package in 13ms
+ + typing-inspection==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 368ms
+Installed 1 package in 15ms
+ + uvicorn==0.40.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 846ms
+Installed 1 package in 9ms
+ + watchfiles==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 406ms
+Installed 1 package in 29ms
+ + websockets==15.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 219ms
+Installed 1 package in 12ms
+ + win32-setctime==1.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 271ms
+Installed 1 package in 8ms
+ + wmi==1.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 598ms
+Installed 1 package in 10ms
+ + yarl==1.22.0
+
+Testing /work/Amm1rr__WebAI-to-API...
+
+Tested 67 dependencies for known issues, found 44 issues, 88 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.2 to aiohttp@3.14.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871873] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871888] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871929] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871954] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Logging of Excessive Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14872000] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871876] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871877] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871979] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 1 other path(s)
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 1 other path(s)
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 9 other path(s)
+
+  Upgrade python-dotenv@1.2.1 to python-dotenv@1.2.2 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONDOTENV-16115271] in python-dotenv@1.2.1
+    introduced by python-dotenv@1.2.1
+
+  Upgrade python-multipart@0.0.21 to python-multipart@0.0.31 to fix
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16078395] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+  ✗ HTTP Request Smuggling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17344732] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+  ✗ Interpretation Conflict (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345733] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+  ✗ Improper Validation of Specified Quantity in Input (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345735] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-15117506] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16438952] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+  ✗ Inefficient Algorithmic Complexity (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345663] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21
+
+  Upgrade starlette@0.50.0 to starlette@1.3.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      Amm1rr__WebAI-to-API
+Open source:       no
+Project path:      /work/Amm1rr__WebAI-to-API
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

@@ -1,0 +1,53 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyobjc-core==12.1 has no usable wheels and you require
+      pyobjc-core==12.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pyobjc-core` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyobjc-framework-accessibility==12.1 has no usable wheels and
+      you require pyobjc-framework-accessibility==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-accessibility` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=2) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyobjc-framework-addressbook==12.1 has no usable wheels and you
+      require pyobjc-framework-addressbook==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-addressbook` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=3) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyobjc-framework-applicationservices==12.1 has no usable wheels
+      and you require pyobjc-framework-applicationservices==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-applicationservices` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=4) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyobjc-framework-audiovideobridging==12.1 has no usable wheels
+      and you require pyobjc-framework-audiovideobridging==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-audiovideobridging` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=5) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyobjc-framework-authenticationservices==12.1 has no usable
+      wheels and you require pyobjc-framework-authenticationservices==12.1, we
+      can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-authenticationservices` because building from source is disabled for all packages (i.e., with `--no-build`)

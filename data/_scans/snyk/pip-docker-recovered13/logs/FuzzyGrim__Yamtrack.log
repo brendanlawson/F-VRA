@@ -1,0 +1,194 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 75 packages in 663ms
+Downloading django-allauth (2.0MiB)
+Downloading psycopg-binary (4.9MiB)
+Downloading apprise (1.4MiB)
+Downloading cryptography (4.3MiB)
+ Downloaded apprise
+ Downloaded cryptography
+ Downloaded django-allauth
+ Downloaded psycopg-binary
+Prepared 35 packages in 1.34s
+Installed 75 packages in 5.00s
+ + aiohappyeyeballs==2.6.1
+ + aiohttp==3.13.5
+ + aiosignal==1.4.0
+ + amqp==5.3.1
+ + apprise==1.9.9
+ + asgiref==3.11.1
+ + attrs==26.1.0
+ + beautifulsoup4==4.14.3
+ + billiard==4.2.4
+ + celery==5.6.3
+ + certifi==2026.2.25
+ + cffi==2.0.0
+ + charset-normalizer==3.4.7
+ + click==8.3.2
+ + click-didyoumean==0.3.1
+ + click-plugins==1.1.1.2
+ + click-repl==0.3.0
+ + colorama==0.4.6
+ + cron-descriptor==1.4.5
+ + croniter==6.2.2
+ + cryptography==46.0.7
+ + defusedxml==0.7.1
+ + django==5.2.14
+ + django-allauth==65.16.1
+ + django-appconf==1.2.0
+ + django-celery-beat==2.9.0
+ + django-celery-results==2.6.0
+ + django-debug-toolbar==6.3.0
+ + django-health-check==4.4.1
+ + django-model-utils==5.0.0
+ + django-redis==6.0.0
+ + django-select2==8.4.8
+ + django-simple-history==3.11.0
+ + django-timezone-field==7.2.1
+ + django-widget-tweaks==1.5.1
+ + dnspython==2.8.0
+ + frozenlist==1.8.0
+ + gunicorn==25.3.0
+ + hiredis==3.3.1
+ + icalendar==7.0.3
+ + idna==3.15
+ + kombu==5.6.2
+ + markdown==3.10.2
+ + multidict==6.7.1
+ + oauthlib==3.3.1
+ + packaging==26.1
+ + pillow==12.2.0
+ + prompt-toolkit==3.0.52
+ + propcache==0.4.1
+ + psycopg==3.3.4
+ + psycopg-binary==3.3.4
+ + psycopg-pool==3.3.0
+ + pycparser==3.0
+ + pyjwt==2.12.1
+ + pyrate-limiter==4.1.0
+ + python-crontab==3.3.0
+ + python-dateutil==2.9.0.post0
+ + python-decouple==3.8
+ + pyyaml==6.0.3
+ + redis==7.4.0
+ + requests==2.33.1
+ + requests-oauthlib==2.0.0
+ + requests-ratelimiter==0.9.3
+ + six==1.17.0
+ + soupsieve==2.8.3
+ + sqlparse==0.5.5
+ + supervisor==4.3.0
+ + typing-extensions==4.15.0
+ + tzdata==2026.1
+ + tzlocal==5.3.1
+ + unidecode==1.4.0
+ + urllib3==2.7.0
+ + vine==5.1.0
+ + wcwidth==0.6.0
+ + yarl==1.23.0
+ONE_SHOT_INSTALL_OK
+
+Testing /work/FuzzyGrim__Yamtrack...
+
+Tested 75 dependencies for known issues, found 33 issues, 163 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.5 to aiohttp@3.14.1 to fix
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.5
+    introduced by aiohttp@3.13.5
+
+  Upgrade click@8.3.2 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.2
+    introduced by click@8.3.2 and 16 other path(s)
+
+  Upgrade cryptography@46.0.7 to cryptography@48.0.1 to fix
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@46.0.7
+    introduced by cryptography@46.0.7
+
+  Upgrade django@5.2.14 to django@5.2.16 to fix
+  ✗ Improper Handling of Case Sensitivity [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151726] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Cleartext Transmission of Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151727] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151728] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Incomplete Comparison with Missing Factors [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151772] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151780] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Use of Cache Containing Sensitive Information (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881428] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Improper Neutralization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881426] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+  ✗ Buffer Access with Incorrect Length Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881427] in django@5.2.14
+    introduced by django@5.2.14 and 14 other path(s)
+
+  Upgrade pillow@12.2.0 to pillow@12.3.0 to fix
+  ✗ Command Injection (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824467] in pillow@12.2.0
+    introduced by pillow@12.2.0
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824465] in pillow@12.2.0
+    introduced by pillow@12.2.0
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824466] in pillow@12.2.0
+    introduced by pillow@12.2.0
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824468] in pillow@12.2.0
+    introduced by pillow@12.2.0
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824469] in pillow@12.2.0
+    introduced by pillow@12.2.0
+
+  Upgrade pyjwt@2.12.1 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+
+  Upgrade soupsieve@2.8.3 to soupsieve@2.8.4 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911084] in soupsieve@2.8.3
+    introduced by soupsieve@2.8.3 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911087] in soupsieve@2.8.3
+    introduced by soupsieve@2.8.3 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      FuzzyGrim__Yamtrack
+Open source:       no
+Project path:      /work/FuzzyGrim__Yamtrack
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

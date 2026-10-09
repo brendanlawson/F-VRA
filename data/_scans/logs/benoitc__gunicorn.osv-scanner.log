@@ -1,0 +1,12 @@
+# project: benoitc__gunicorn
+# scanner: osv-scanner
+# time: Sat Jul 11 08:52:59 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\benoitc__gunicorn.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\benoitc__gunicorn
+# exit code: 1
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\benoitc__gunicorn
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\benoitc__gunicorn\requirements.pinned.txt file and found 34 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 1.6475ms elapsed, 1.6475ms wall time

@@ -1,0 +1,12 @@
+# project: tropicoo__yt-dlp-bot
+# scanner: pip-audit
+# time: Sat Jul 11 10:09:36 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\tropicoo__yt-dlp-bot.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\tropicoo__yt-dlp-bot.json
+# exit code: 1
+# note: OK skipped(4)=['pyaes', 'uvloop', 'yt-dlp-bot', 'yt-shared']
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 83 known vulnerabilities in 10 packages

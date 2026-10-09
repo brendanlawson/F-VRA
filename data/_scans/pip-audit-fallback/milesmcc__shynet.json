@@ -1,0 +1,1324 @@
+{
+  "dependencies": [
+    {
+      "name": "aiohttp",
+      "version": "3.9.2",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-237",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-4m7w-qmgq-4wj5",
+            "CVE-2026-54275"
+          ],
+          "description": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections"
+        },
+        {
+          "id": "PYSEC-2026-1097",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-54jq-c3m8-4m76",
+            "CVE-2025-69226"
+          ],
+          "description": "AIOHTTP vulnerable to brute-force leak of internal static \ufb01le path components"
+        },
+        {
+          "id": "PYSEC-2026-1098",
+          "fix_versions": [
+            "3.9.4"
+          ],
+          "aliases": [
+            "GHSA-5m98-qgg9-wh84",
+            "CVE-2024-30251"
+          ],
+          "description": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests"
+        },
+        {
+          "id": "PYSEC-2026-1099",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69224",
+            "GHSA-69f9-5gxw-wvc2"
+          ],
+          "description": "AIOHTTP's unicode processing of header values could cause parsing discrepancies"
+        },
+        {
+          "id": "PYSEC-2026-1100",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69228",
+            "GHSA-6jhg-hg63-jvvf"
+          ],
+          "description": "AIOHTTP vulnerable to  denial of service through large payloads"
+        },
+        {
+          "id": "PYSEC-2026-1101",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69223",
+            "GHSA-6mq8-rvhq-8wgg"
+          ],
+          "description": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb"
+        },
+        {
+          "id": "PYSEC-2026-1102",
+          "fix_versions": [
+            "3.9.4"
+          ],
+          "aliases": [
+            "GHSA-7gpw-8wmc-pm8g",
+            "CVE-2024-27306"
+          ],
+          "description": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling"
+        },
+        {
+          "id": "PYSEC-2026-1103",
+          "fix_versions": [
+            "3.10.11"
+          ],
+          "aliases": [
+            "CVE-2024-52304",
+            "GHSA-8495-4g3g-x7pr"
+          ],
+          "description": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions"
+        },
+        {
+          "id": "PYSEC-2026-1104",
+          "fix_versions": [
+            "3.12.14"
+          ],
+          "aliases": [
+            "CVE-2025-53643",
+            "GHSA-9548-qrrj-x5pj"
+          ],
+          "description": " AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections"
+        },
+        {
+          "id": "PYSEC-2026-1105",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-fh55-r93g-j68g",
+            "CVE-2025-69230"
+          ],
+          "description": "AIOHTTP Vulnerable to Cookie Parser Warning Storm"
+        },
+        {
+          "id": "PYSEC-2026-1106",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-g84x-mcqj-x9qq",
+            "CVE-2025-69229"
+          ],
+          "description": "AIOHTTP vulnerable to DoS through chunked messages"
+        },
+        {
+          "id": "PYSEC-2026-1107",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69227",
+            "GHSA-jj3x-wxrx-4x23"
+          ],
+          "description": "AIOHTTP vulnerable to DoS when bypassing asserts"
+        },
+        {
+          "id": "PYSEC-2026-1109",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-mqqc-3gqh-h2x8",
+            "CVE-2025-69225"
+          ],
+          "description": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements"
+        },
+        {
+          "id": "PYSEC-2026-237",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-4m7w-qmgq-4wj5",
+            "CVE-2026-54275"
+          ],
+          "description": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.1, the server_hostname TLS SNI check can be bypassed when an existing connection is reused. If an application makes multiple requests to the same domain, but with different per-request server_hostname parameters, then the later calls may succeed by reusing the existing connection when they should have been rejected due to the TLS SNI check. This vulnerability is fixed in 3.14.1."
+        },
+        {
+          "id": "CVE-2026-54279",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-2fqr-mr3j-6wp8"
+          ],
+          "description": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence"
+        },
+        {
+          "id": "CVE-2026-34514",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-2vrm-gr82-f7m5"
+          ],
+          "description": "AIOHTTP has CRLF injection through multipart part content type header construction"
+        },
+        {
+          "id": "CVE-2026-34517",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-3wq7-rqq7-wx6j"
+          ],
+          "description": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS"
+        },
+        {
+          "id": "CVE-2026-54273",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-4fvr-rgm6-gqmc"
+          ],
+          "description": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit"
+        },
+        {
+          "id": "CVE-2026-34520",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-63hf-3vf5-4wqf"
+          ],
+          "description": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass"
+        },
+        {
+          "id": "CVE-2026-54277",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-63hw-fmq6-xxg2"
+          ],
+          "description": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines"
+        },
+        {
+          "id": "CVE-2026-34518",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-966j-vmvw-g2g9"
+          ],
+          "description": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect"
+        },
+        {
+          "id": "CVE-2026-54280",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-9x8q-7h8h-wcw9"
+          ],
+          "description": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect"
+        },
+        {
+          "id": "CVE-2026-34525",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-c427-h43c-vf67"
+          ],
+          "description": "AIOHTTP accepts duplicate Host headers"
+        },
+        {
+          "id": "CVE-2026-54278",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-g3cq-j2xw-wf74"
+          ],
+          "description": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup"
+        },
+        {
+          "id": "CVE-2026-34513",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-hcc4-c3v8-rx92"
+          ],
+          "description": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector"
+        },
+        {
+          "id": "CVE-2026-47265",
+          "fix_versions": [
+            "3.14.0"
+          ],
+          "aliases": [
+            "GHSA-hg6j-4rv6-33pg"
+          ],
+          "description": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies"
+        },
+        {
+          "id": "CVE-2026-54276",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-hpj7-wq8m-9hgp"
+          ],
+          "description": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges"
+        },
+        {
+          "id": "CVE-2026-34993",
+          "fix_versions": [
+            "3.14.0"
+          ],
+          "aliases": [
+            "GHSA-jg22-mg44-37j8"
+          ],
+          "description": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data"
+        },
+        {
+          "id": "CVE-2026-34516",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-m5qp-6w8w-w647"
+          ],
+          "description": "AIOHTTP has a Multipart Header Size Bypass"
+        },
+        {
+          "id": "CVE-2026-50269",
+          "fix_versions": [
+            "3.14.0"
+          ],
+          "aliases": [
+            "GHSA-m6qw-4cw2-hm4m"
+          ],
+          "description": "aiohttp: CRLF injection in multipart headers"
+        },
+        {
+          "id": "CVE-2026-34519",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-mwh4-6h8g-pg8w"
+          ],
+          "description": "AIOHTTP has HTTP response splitting via \\r in reason phrase"
+        },
+        {
+          "id": "CVE-2026-34515",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-p998-jp59-783m"
+          ],
+          "description": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows"
+        },
+        {
+          "id": "CVE-2026-22815",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-w2fm-2cpv-w7v5"
+          ],
+          "description": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage"
+        },
+        {
+          "id": "CVE-2026-54274",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-xcgm-r5h9-7989"
+          ],
+          "description": "aiohttp: Incomplete websocket frame payloads bypass memory limits"
+        }
+      ]
+    },
+    {
+      "name": "multidict",
+      "version": "6.7.1",
+      "vulns": []
+    },
+    {
+      "name": "yarl",
+      "version": "1.24.2",
+      "vulns": []
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "vulns": []
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "vulns": []
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "vulns": []
+    },
+    {
+      "name": "idna",
+      "version": "3.18",
+      "vulns": []
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.2",
+      "vulns": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "vulns": []
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.2.0",
+      "vulns": []
+    },
+    {
+      "name": "amqp",
+      "version": "5.1.1",
+      "vulns": []
+    },
+    {
+      "name": "vine",
+      "version": "5.1.0",
+      "vulns": []
+    },
+    {
+      "name": "asgiref",
+      "version": "3.5.2",
+      "vulns": []
+    },
+    {
+      "name": "async-timeout",
+      "version": "4.0.2",
+      "vulns": []
+    },
+    {
+      "name": "attrs",
+      "version": "22.1.0",
+      "vulns": []
+    },
+    {
+      "name": "backports-zoneinfo",
+      "version": "0.2.1",
+      "vulns": []
+    },
+    {
+      "name": "billiard",
+      "version": "3.6.4.0",
+      "vulns": []
+    },
+    {
+      "name": "celery",
+      "version": "5.2.7",
+      "vulns": []
+    },
+    {
+      "name": "click",
+      "version": "8.4.2",
+      "vulns": []
+    },
+    {
+      "name": "kombu",
+      "version": "5.6.2",
+      "vulns": []
+    },
+    {
+      "name": "amqp",
+      "version": "5.3.1",
+      "vulns": []
+    },
+    {
+      "name": "click-didyoumean",
+      "version": "0.3.1",
+      "vulns": []
+    },
+    {
+      "name": "click-plugins",
+      "version": "1.1.1.2",
+      "vulns": []
+    },
+    {
+      "name": "click-repl",
+      "version": "0.3.0",
+      "vulns": []
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.52",
+      "vulns": []
+    },
+    {
+      "name": "pytz",
+      "version": "2026.2",
+      "vulns": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.3",
+      "vulns": []
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.8.2",
+      "vulns": []
+    },
+    {
+      "name": "certifi",
+      "version": "2023.7.22",
+      "vulns": [
+        {
+          "id": "PYSEC-2024-230",
+          "fix_versions": [
+            "2024.7.4"
+          ],
+          "aliases": [
+            "CVE-2024-39689",
+            "GHSA-248v-346w-9cwc"
+          ],
+          "description": "Certifi removes GLOBALTRUST root certificate"
+        },
+        {
+          "id": "PYSEC-2024-230",
+          "fix_versions": [
+            "2024.7.4"
+          ],
+          "aliases": [
+            "CVE-2024-39689",
+            "GHSA-248v-346w-9cwc"
+          ],
+          "description": "Certifi is a curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. Certifi starting in 2021.05.30 and prior to 2024.07.4 recognized root certificates from `GLOBALTRUST`. Certifi 2024.07.04 removes root certificates from `GLOBALTRUST` from the root store. These are in the process of being removed from Mozilla's trust store. `GLOBALTRUST`'s root certificates are being removed pursuant to an investigation which identified \"long-running and unresolved compliance issues.\""
+        }
+      ]
+    },
+    {
+      "name": "cffi",
+      "version": "1.15.1",
+      "vulns": []
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "vulns": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "2.1.1",
+      "vulns": []
+    },
+    {
+      "name": "click-didyoumean",
+      "version": "0.3.0",
+      "vulns": []
+    },
+    {
+      "name": "click-plugins",
+      "version": "1.1.1",
+      "vulns": []
+    },
+    {
+      "name": "click-repl",
+      "version": "0.2.0",
+      "vulns": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "vulns": []
+    },
+    {
+      "name": "click",
+      "version": "8.1.3",
+      "vulns": []
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.5",
+      "vulns": []
+    },
+    {
+      "name": "cryptography",
+      "version": "42.0.4",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1284",
+          "fix_versions": [
+            "44.0.1"
+          ],
+          "aliases": [
+            "GHSA-79v4-65xg-pq4g",
+            "CVE-2024-12797"
+          ],
+          "description": "Vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "id": "PYSEC-2026-35",
+          "fix_versions": [
+            "46.0.6"
+          ],
+          "aliases": [
+            "GHSA-m959-cc7f-wv43",
+            "CVE-2026-34073"
+          ],
+          "description": "cryptography has incomplete DNS name constraint enforcement on peer names"
+        },
+        {
+          "id": "PYSEC-2026-35",
+          "fix_versions": [
+            "46.0.6"
+          ],
+          "aliases": [
+            "GHSA-m959-cc7f-wv43",
+            "CVE-2026-34073"
+          ],
+          "description": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6."
+        },
+        {
+          "id": "GHSA-537c-gmf6-5ccf",
+          "fix_versions": [
+            "48.0.1"
+          ],
+          "aliases": [],
+          "description": "Vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "id": "GHSA-h4gh-qq45-vh27",
+          "fix_versions": [
+            "43.0.1"
+          ],
+          "aliases": [],
+          "description": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "id": "CVE-2026-26007",
+          "fix_versions": [
+            "46.0.5"
+          ],
+          "aliases": [
+            "GHSA-r6ph-v2qm-q3c2"
+          ],
+          "description": "cryptography Vulnerable to a Subgroup Attack Due to Missing Subgroup Validation for SECT Curves"
+        }
+      ]
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "vulns": []
+    },
+    {
+      "name": "django-cors-headers",
+      "version": "3.13.0",
+      "vulns": []
+    },
+    {
+      "name": "django",
+      "version": "6.0.7",
+      "vulns": []
+    },
+    {
+      "name": "asgiref",
+      "version": "3.11.1",
+      "vulns": []
+    },
+    {
+      "name": "sqlparse",
+      "version": "0.5.5",
+      "vulns": []
+    },
+    {
+      "name": "django-debug-toolbar",
+      "version": "3.6.0",
+      "vulns": []
+    },
+    {
+      "name": "django-health-check",
+      "version": "3.17.0",
+      "vulns": []
+    },
+    {
+      "name": "django-ipware",
+      "version": "4.0.2",
+      "vulns": []
+    },
+    {
+      "name": "django-npm",
+      "version": "1.0.0",
+      "vulns": []
+    },
+    {
+      "name": "django-redis-cache",
+      "version": "3.0.1",
+      "vulns": []
+    },
+    {
+      "name": "redis",
+      "version": "3.5.3",
+      "vulns": []
+    },
+    {
+      "name": "django",
+      "version": "4.1.13",
+      "vulns": [
+        {
+          "id": "PYSEC-2025-105",
+          "fix_versions": [
+            "5.2.6"
+          ],
+          "aliases": [
+            "CVE-2025-57833",
+            "GHSA-6w2r-r2m5-xq5w",
+            "BIT-django-2025-57833"
+          ],
+          "description": "Django is subject to SQL injection through its column aliases"
+        },
+        {
+          "id": "PYSEC-2025-47",
+          "fix_versions": [
+            "4.2.22"
+          ],
+          "aliases": [
+            "CVE-2025-48432",
+            "BIT-django-2025-48432",
+            "GHSA-7xr5-9hcq-chf9"
+          ],
+          "description": "Django Improper Output Neutralization for Logs vulnerability"
+        },
+        {
+          "id": "PYSEC-2025-108",
+          "fix_versions": [
+            "4.2.26"
+          ],
+          "aliases": [
+            "CVE-2025-64459",
+            "GHSA-frmv-pr5f-9mcr",
+            "BIT-django-2025-64459"
+          ],
+          "description": "Django vulnerable to SQL injection via _connector keyword argument in QuerySet and Q objects."
+        },
+        {
+          "id": "PYSEC-2025-107",
+          "fix_versions": [
+            "4.2.26"
+          ],
+          "aliases": [
+            "CVE-2025-64458",
+            "BIT-django-2025-64458",
+            "GHSA-qw25-v68c-qjf3"
+          ],
+          "description": "Django has a denial-of-service vulnerability in HttpResponseRedirect and HttpResponsePermanentRedirect on Windows"
+        },
+        {
+          "id": "PYSEC-2026-1297",
+          "fix_versions": [
+            "4.2.16"
+          ],
+          "aliases": [
+            "BIT-django-2024-45231",
+            "CVE-2024-45231",
+            "GHSA-rrqc-c2jx-6jgv"
+          ],
+          "description": "Django allows enumeration of user e-mail addresses"
+        },
+        {
+          "id": "PYSEC-2026-1297",
+          "fix_versions": [
+            "4.2.16",
+            "5.0.9",
+            "5.1.1"
+          ],
+          "aliases": [
+            "BIT-django-2024-45231",
+            "CVE-2024-45231",
+            "GHSA-rrqc-c2jx-6jgv"
+          ],
+          "description": "Django allows enumeration of user e-mail addresses"
+        }
+      ]
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "geoip2",
+      "version": "4.6.0",
+      "vulns": []
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.1",
+      "vulns": []
+    },
+    {
+      "name": "maxminddb",
+      "version": "2.8.2",
+      "vulns": []
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "vulns": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.9",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "1.26.20",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1994",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "GHSA-2xpw-w6gg-jr37",
+            "CVE-2025-66471"
+          ],
+          "description": "urllib3 streaming API improperly handles highly compressed data"
+        },
+        {
+          "id": "PYSEC-2026-1996",
+          "fix_versions": [
+            "2.6.3"
+          ],
+          "aliases": [
+            "CVE-2026-21441",
+            "GHSA-38jv-5279-wg99"
+          ],
+          "description": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)"
+        },
+        {
+          "id": "PYSEC-2026-1998",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "GHSA-gm62-xv2j-4w53",
+            "CVE-2025-66418"
+          ],
+          "description": "urllib3 allows an unbounded number of links in the decompression chain"
+        },
+        {
+          "id": "PYSEC-2026-1999",
+          "fix_versions": [
+            "2.5.0"
+          ],
+          "aliases": [
+            "GHSA-pq67-6m6q-mj2v",
+            "CVE-2025-50181"
+          ],
+          "description": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "CVE-2026-44431",
+            "GHSA-qccp-gfcp-xxvc"
+          ],
+          "description": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "CVE-2026-44431",
+            "GHSA-qccp-gfcp-xxvc"
+          ],
+          "description": "urllib3 is an HTTP client library for Python. From 1.23 to before 2.7.0, cross-origin redirects followed from the low-level API via ProxyManager.connection_from_url().urlopen(..., assert_same_host=False) still forward these sensitive headers. This vulnerability is fixed in 2.7.0."
+        }
+      ]
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "vulns": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.6.17",
+      "vulns": []
+    },
+    {
+      "name": "gunicorn",
+      "version": "20.1.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1433",
+          "fix_versions": [
+            "22.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-6827",
+            "GHSA-hc5x-x2vx-497g"
+          ],
+          "description": "Gunicorn HTTP Request/Response Smuggling vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1434",
+          "fix_versions": [
+            "22.0.0"
+          ],
+          "aliases": [
+            "GHSA-w3h3-4rj7-4ph4",
+            "CVE-2024-1135"
+          ],
+          "description": "Request smuggling leading to endpoint restriction bypass in Gunicorn"
+        }
+      ]
+    },
+    {
+      "name": "html2text",
+      "version": "2020.1.16",
+      "vulns": []
+    },
+    {
+      "name": "idna",
+      "version": "3.3",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-215",
+          "fix_versions": [
+            "3.15"
+          ],
+          "aliases": [
+            "GHSA-65pc-fj4g-8rjx",
+            "CVE-2026-45409"
+          ],
+          "description": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix"
+        },
+        {
+          "id": "PYSEC-2024-60",
+          "fix_versions": [
+            "3.7"
+          ],
+          "aliases": [
+            "CVE-2024-3651",
+            "GHSA-jjg7-2v4v-x38h"
+          ],
+          "description": "Internationalized Domain Names in Applications (IDNA) vulnerable to denial of service from specially crafted inputs to idna.encode"
+        },
+        {
+          "id": "PYSEC-2024-60",
+          "fix_versions": [
+            "3.7"
+          ],
+          "aliases": [
+            "CVE-2024-3651",
+            "GHSA-jjg7-2v4v-x38h"
+          ],
+          "description": "A vulnerability was identified in the kjd/idna library, specifically within the `idna.encode()` function, affecting version 3.6. The issue arises from the function's handling of crafted input strings, which can lead to quadratic complexity and consequently, a denial of service condition. This vulnerability is triggered by a crafted input that causes the `idna.encode()` function to process the input with considerable computational load, significantly increasing the processing time in a quadratic manner relative to the input size."
+        },
+        {
+          "id": "PYSEC-2026-215",
+          "fix_versions": [
+            "3.15"
+          ],
+          "aliases": [
+            "GHSA-65pc-fj4g-8rjx",
+            "CVE-2026-45409"
+          ],
+          "description": "Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application."
+        }
+      ]
+    },
+    {
+      "name": "kombu",
+      "version": "5.2.4",
+      "vulns": []
+    },
+    {
+      "name": "maxminddb",
+      "version": "2.2.0",
+      "vulns": []
+    },
+    {
+      "name": "multidict",
+      "version": "6.0.2",
+      "vulns": []
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.2.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2022-269",
+          "fix_versions": [
+            "3.2.2"
+          ],
+          "aliases": [
+            "GHSA-3pgj-pg6c-r5p7",
+            "CVE-2022-36087"
+          ],
+          "description": "OAuthLib vulnerable to DoS when attacker provides malicious IPV6 URI"
+        }
+      ]
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.31",
+      "vulns": []
+    },
+    {
+      "name": "pycountry",
+      "version": "20.7.3",
+      "vulns": []
+    },
+    {
+      "name": "pycparser",
+      "version": "2.21",
+      "vulns": []
+    },
+    {
+      "name": "python-dotenv",
+      "version": "0.18.0",
+      "vulns": [
+        {
+          "id": "CVE-2026-28684",
+          "fix_versions": [
+            "1.2.2"
+          ],
+          "aliases": [
+            "GHSA-mf9w-mj56-hr94"
+          ],
+          "description": "python-dotenv: Symlink following in set_key allows arbitrary file overwrite via cross-device rename fallback"
+        }
+      ]
+    },
+    {
+      "name": "python3-openid",
+      "version": "3.2.0",
+      "vulns": []
+    },
+    {
+      "name": "pytz",
+      "version": "2022.2.1",
+      "vulns": []
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.3.1",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "vulns": []
+    },
+    {
+      "name": "requests",
+      "version": "2.31.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1872",
+          "fix_versions": [
+            "2.32.4"
+          ],
+          "aliases": [
+            "GHSA-9hjg-9r4m-mvj7",
+            "CVE-2024-47081"
+          ],
+          "description": "Requests vulnerable to .netrc credentials leak via malicious URLs"
+        },
+        {
+          "id": "PYSEC-2026-1873",
+          "fix_versions": [
+            "2.32.0"
+          ],
+          "aliases": [
+            "GHSA-9wx4-h78v-vm56",
+            "CVE-2024-35195"
+          ],
+          "description": "Requests `Session` object does not verify requests after making first request with verify=False"
+        },
+        {
+          "id": "CVE-2026-25645",
+          "fix_versions": [
+            "2.33.0"
+          ],
+          "aliases": [
+            "GHSA-gc5v-m9x4-r6x2"
+          ],
+          "description": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function"
+        }
+      ]
+    },
+    {
+      "name": "rules",
+      "version": "3.3",
+      "vulns": []
+    },
+    {
+      "name": "setuptools",
+      "version": "65.6.3",
+      "vulns": [
+        {
+          "id": "PYSEC-2025-49",
+          "fix_versions": [
+            "78.1.1"
+          ],
+          "aliases": [
+            "BIT-setuptools-2025-47273",
+            "CVE-2025-47273",
+            "GHSA-5rjg-fvgr-3xxf"
+          ],
+          "description": "setuptools has a path traversal vulnerability in PackageIndex.download that leads to Arbitrary File Write"
+        },
+        {
+          "id": "PYSEC-2026-1918",
+          "fix_versions": [
+            "70.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-6345",
+            "GHSA-cx63-2mw6-8hw5",
+            "BIT-setuptools-2024-6345"
+          ],
+          "description": "setuptools vulnerable to Command Injection via package URL"
+        },
+        {
+          "id": "PYSEC-2025-49",
+          "fix_versions": [
+            "78.1.1"
+          ],
+          "aliases": [
+            "GHSA-5rjg-fvgr-3xxf",
+            "BIT-setuptools-2025-47273",
+            "CVE-2025-47273"
+          ],
+          "description": "setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. A path traversal vulnerability in `PackageIndex` is present in setuptools prior to version 78.1.1. An attacker would be allowed to write files to arbitrary locations on the filesystem with the permissions of the process running the Python code, which could escalate to remote code execution depending on the context. Version 78.1.1 fixes the issue."
+        }
+      ]
+    },
+    {
+      "name": "six",
+      "version": "1.16.0",
+      "vulns": []
+    },
+    {
+      "name": "sqlparse",
+      "version": "0.4.4",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1940",
+          "fix_versions": [
+            "0.5.0"
+          ],
+          "aliases": [
+            "CVE-2024-4340",
+            "GHSA-2m57-hf25-phgg"
+          ],
+          "description": "sqlparse parsing heavily nested list leads to Denial of Service"
+        },
+        {
+          "id": "GHSA-27jp-wm6q-gp25",
+          "fix_versions": [
+            "0.5.4"
+          ],
+          "aliases": [],
+          "description": "sqlparse: formatting list of tuples leads to denial of service"
+        }
+      ]
+    },
+    {
+      "name": "tzdata",
+      "version": "2022.2",
+      "vulns": []
+    },
+    {
+      "name": "ua-parser",
+      "version": "0.16.1",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "1.26.18",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1994",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "GHSA-2xpw-w6gg-jr37",
+            "CVE-2025-66471"
+          ],
+          "description": "urllib3 streaming API improperly handles highly compressed data"
+        },
+        {
+          "id": "PYSEC-2026-1995",
+          "fix_versions": [
+            "2.2.2"
+          ],
+          "aliases": [
+            "GHSA-34jh-p97f-mpxf",
+            "CVE-2024-37891"
+          ],
+          "description": "urllib3's Proxy-Authorization request header isn't stripped during cross-origin redirects"
+        },
+        {
+          "id": "PYSEC-2026-1996",
+          "fix_versions": [
+            "2.6.3"
+          ],
+          "aliases": [
+            "CVE-2026-21441",
+            "GHSA-38jv-5279-wg99"
+          ],
+          "description": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)"
+        },
+        {
+          "id": "PYSEC-2026-1998",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "GHSA-gm62-xv2j-4w53",
+            "CVE-2025-66418"
+          ],
+          "description": "urllib3 allows an unbounded number of links in the decompression chain"
+        },
+        {
+          "id": "PYSEC-2026-1999",
+          "fix_versions": [
+            "2.5.0"
+          ],
+          "aliases": [
+            "GHSA-pq67-6m6q-mj2v",
+            "CVE-2025-50181"
+          ],
+          "description": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-qccp-gfcp-xxvc",
+            "CVE-2026-44431"
+          ],
+          "description": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-qccp-gfcp-xxvc",
+            "CVE-2026-44431"
+          ],
+          "description": "urllib3 is an HTTP client library for Python. From 1.23 to before 2.7.0, cross-origin redirects followed from the low-level API via ProxyManager.connection_from_url().urlopen(..., assert_same_host=False) still forward these sensitive headers. This vulnerability is fixed in 2.7.0."
+        },
+        {
+          "id": "PYSEC-2026-1995",
+          "fix_versions": [
+            "1.26.19",
+            "2.2.2"
+          ],
+          "aliases": [
+            "GHSA-34jh-p97f-mpxf",
+            "CVE-2024-37891"
+          ],
+          "description": "urllib3's Proxy-Authorization request header isn't stripped during cross-origin redirects"
+        }
+      ]
+    },
+    {
+      "name": "user-agents",
+      "version": "2.2.0",
+      "vulns": []
+    },
+    {
+      "name": "ua-parser",
+      "version": "1.0.2",
+      "vulns": []
+    },
+    {
+      "name": "ua-parser-builtins",
+      "version": "202606",
+      "vulns": []
+    },
+    {
+      "name": "vine",
+      "version": "5.0.0",
+      "vulns": []
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.2.5",
+      "vulns": []
+    },
+    {
+      "name": "whitenoise",
+      "version": "5.3.0",
+      "vulns": []
+    },
+    {
+      "name": "yarl",
+      "version": "1.8.1",
+      "vulns": []
+    }
+  ],
+  "fixes": [],
+  "fallback": {
+    "failed": [
+      "django-allauth==0.45.0",
+      "psycopg2-binary==2.9.3",
+      "pyyaml==5.4.1"
+    ],
+    "dropped": []
+  }
+}

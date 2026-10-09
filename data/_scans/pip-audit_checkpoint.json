@@ -1,0 +1,193 @@
+{
+  "alexferl__flask-simpleldap": {
+    "project": "alexferl__flask-simpleldap",
+    "status": "vulns",
+    "scanned": 22,
+    "vulns": 4,
+    "vuln_pkgs": 3,
+    "skipped": 1,
+    "rc": 1,
+    "secs": 55.5
+  },
+  "Amm1rr__WebAI-to-API": {
+    "project": "Amm1rr__WebAI-to-API",
+    "status": "vulns",
+    "scanned": 67,
+    "vulns": 59,
+    "vuln_pkgs": 6,
+    "skipped": 1,
+    "rc": 1,
+    "secs": 73.4
+  },
+  "benavlabs__FastAPI-boilerplate": {
+    "project": "benavlabs__FastAPI-boilerplate",
+    "status": "error",
+    "rc": 1,
+    "skipped": 2,
+    "secs": 170.5
+  },
+  "djangostarter__web": {
+    "project": "djangostarter__web",
+    "status": "vulns",
+    "scanned": 89,
+    "vulns": 89,
+    "vuln_pkgs": 19,
+    "skipped": 3,
+    "rc": 1,
+    "secs": 134.0
+  },
+  "Open-LLM-VTuber__Open-LLM-VTuber": {
+    "project": "Open-LLM-VTuber__Open-LLM-VTuber",
+    "status": "error",
+    "rc": 1,
+    "skipped": 6,
+    "secs": 299.9
+  },
+  "yezz123__authx": {
+    "project": "yezz123__authx",
+    "status": "error",
+    "rc": 1,
+    "skipped": 5,
+    "secs": 124.8
+  },
+  "evansd__whitenoise": {
+    "project": "evansd__whitenoise",
+    "status": "vulns",
+    "scanned": 42,
+    "vulns": 5,
+    "vuln_pkgs": 1,
+    "skipped": 1,
+    "rc": 1,
+    "secs": 90.7
+  },
+  "fastapi__asyncer": {
+    "project": "fastapi__asyncer",
+    "status": "vulns",
+    "scanned": 82,
+    "vulns": 25,
+    "vuln_pkgs": 6,
+    "skipped": 0,
+    "rc": 1,
+    "secs": 74.4
+  },
+  "iktakahiro__dddpy": {
+    "project": "iktakahiro__dddpy",
+    "status": "error",
+    "rc": 1,
+    "skipped": 1,
+    "secs": 104.4
+  },
+  "marshmallow-code__flask-marshmallow": {
+    "project": "marshmallow-code__flask-marshmallow",
+    "status": "clean",
+    "scanned": 57,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "skipped": 1,
+    "rc": 0,
+    "secs": 60.7
+  },
+  "marshmallow-code__flask-smorest": {
+    "project": "marshmallow-code__flask-smorest",
+    "status": "clean",
+    "scanned": 58,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "skipped": 1,
+    "rc": 0,
+    "secs": 75.0
+  },
+  "sloria__environs": {
+    "project": "sloria__environs",
+    "status": "clean",
+    "scanned": 41,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "skipped": 2,
+    "rc": 0,
+    "secs": 88.4
+  },
+  "spiral-project__ihatemoney": {
+    "project": "spiral-project__ihatemoney",
+    "status": "timeout",
+    "skipped": 3,
+    "secs": 900.2
+  },
+  "sunscrapers__djoser": {
+    "project": "sunscrapers__djoser",
+    "status": "vulns",
+    "scanned": 86,
+    "vulns": 91,
+    "vuln_pkgs": 17,
+    "skipped": 1,
+    "rc": 1,
+    "secs": 105.3
+  },
+  "tinyfish-io__agentql": {
+    "project": "tinyfish-io__agentql",
+    "status": "clean",
+    "scanned": 53,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "skipped": 1,
+    "rc": 0,
+    "secs": 115.1
+  },
+  "tomasvotava__fastapi-sso": {
+    "project": "tomasvotava__fastapi-sso",
+    "status": "vulns",
+    "scanned": 85,
+    "vulns": 4,
+    "vuln_pkgs": 1,
+    "skipped": 1,
+    "rc": 1,
+    "secs": 132.7
+  },
+  "tropicoo__yt-dlp-bot": {
+    "project": "tropicoo__yt-dlp-bot",
+    "status": "error",
+    "rc": 1,
+    "skipped": 3,
+    "secs": 210.5
+  },
+  "eightBEC__fastapi-ml-skeleton": {
+    "project": "eightBEC__fastapi-ml-skeleton",
+    "status": "vulns",
+    "scanned": 50,
+    "vulns": 46,
+    "vuln_pkgs": 10,
+    "skipped": 6,
+    "rc": 1,
+    "secs": 141.3
+  },
+  "laurentS__slowapi": {
+    "project": "laurentS__slowapi",
+    "status": "vulns",
+    "scanned": 57,
+    "vulns": 75,
+    "vuln_pkgs": 14,
+    "skipped": 9,
+    "rc": 1,
+    "secs": 100.9
+  },
+  "rtzll__flask-todolist": {
+    "project": "rtzll__flask-todolist",
+    "status": "vulns",
+    "scanned": 36,
+    "vulns": 3,
+    "vuln_pkgs": 2,
+    "skipped": 1,
+    "rc": 1,
+    "secs": 118.5
+  },
+  "teamhide__fastapi-boilerplate": {
+    "project": "teamhide__fastapi-boilerplate",
+    "status": "vulns",
+    "scanned": 51,
+    "vulns": 52,
+    "vuln_pkgs": 11,
+    "skipped": 9,
+    "rc": 1,
+    "secs": 97.1
+  }
+}

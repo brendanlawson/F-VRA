@@ -1,0 +1,43 @@
+# project=Open-LLM-VTuber__Open-LLM-VTuber
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.1.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.1.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 23 known vulnerabilities in 2 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.2.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.2.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 14 known vulnerabilities in 2 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.3.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.3.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 2 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.4.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.4.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 17 known vulnerabilities in 4 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.5.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.5.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.6.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Open-LLM-VTuber__Open-LLM-VTuber-6e9vx_kx/Open-LLM-VTuber__Open-LLM-VTuber.6.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 14 known vulnerabilities in 3 packages
+

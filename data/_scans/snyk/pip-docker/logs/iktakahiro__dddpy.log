@@ -1,0 +1,132 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 51 packages in 461ms
+Downloading pyrefly (39.3MiB)
+Downloading ruff (10.7MiB)
+Downloading sqlalchemy (3.2MiB)
+ Downloaded sqlalchemy
+ Downloaded ruff
+ Downloaded pyrefly
+Prepared 13 packages in 2m 19s
+Installed 51 packages in 321ms
+ + annotated-doc==0.0.4
+ + annotated-types==0.7.0
+ + anyio==4.13.0
+ + certifi==2026.2.25
+ + click==8.3.1
+ + colorama==0.4.6
+ + dnspython==2.8.0
+ + email-validator==2.3.0
+ + fastapi==0.135.3
+ + fastapi-cli==0.0.24
+ + fastapi-cloud-cli==0.15.1
+ + fastar==0.9.0
+ + greenlet==3.3.2
+ + h11==0.16.0
+ + httpcore==1.0.9
+ + httptools==0.7.1
+ + httpx==0.28.1
+ + idna==3.11
+ + iniconfig==2.3.0
+ + jinja2==3.1.6
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + mdurl==0.1.2
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pydantic==2.12.5
+ + pydantic-core==2.41.5
+ + pydantic-extra-types==2.11.1
+ + pydantic-settings==2.13.1
+ + pygments==2.20.0
+ + pyrefly==0.59.1
+ + pytest==9.0.2
+ + python-dotenv==1.2.2
+ + python-multipart==0.0.22
+ + pyyaml==6.0.3
+ + rich==14.3.3
+ + rich-toolkit==0.19.7
+ + rignore==0.7.6
+ + ruff==0.15.9
+ + sentry-sdk==2.57.0
+ + shellingham==1.5.4
+ + sqlalchemy==2.0.48
+ + starlette==0.50.0
+ + typer==0.24.1
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + urllib3==2.6.3
+ + uvicorn==0.42.0
+ + uvloop==0.22.1
+ + watchfiles==1.1.1
+ + websockets==16.0
+ONE_SHOT_INSTALL_OK
+
+Testing /work/iktakahiro__dddpy...
+
+Tested 51 dependencies for known issues, found 16 issues, 43 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 9 other path(s)
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 9 other path(s)
+
+  Upgrade pydantic-settings@2.13.1 to pydantic-settings@2.14.2 to fix
+  ✗ Symlink Attack (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYDANTICSETTINGS-17675228] in pydantic-settings@2.13.1
+    introduced by pydantic-settings@2.13.1
+
+  Upgrade python-multipart@0.0.22 to python-multipart@0.0.31 to fix
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16078395] in python-multipart@0.0.22
+    introduced by python-multipart@0.0.22
+  ✗ HTTP Request Smuggling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17344732] in python-multipart@0.0.22
+    introduced by python-multipart@0.0.22
+  ✗ Interpretation Conflict (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345733] in python-multipart@0.0.22
+    introduced by python-multipart@0.0.22
+  ✗ Improper Validation of Specified Quantity in Input (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345735] in python-multipart@0.0.22
+    introduced by python-multipart@0.0.22
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16438952] in python-multipart@0.0.22
+    introduced by python-multipart@0.0.22
+  ✗ Inefficient Algorithmic Complexity (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345663] in python-multipart@0.0.22
+    introduced by python-multipart@0.0.22
+
+  Upgrade starlette@0.50.0 to starlette@1.3.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 1 other path(s)
+
+  Upgrade urllib3@2.6.3 to urllib3@2.7.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 2 other path(s)
+  ✗ Decompression Bomb [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642059] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 2 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      iktakahiro__dddpy
+Open source:       no
+Project path:      /work/iktakahiro__dddpy
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

@@ -1,0 +1,20 @@
+# project: Cinnamon__kotaemon
+# scanner: snyk
+# time: Fri Jul 10 19:24:54 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\Cinnamon__kotaemon.json
+# exit code: 2
+=== STDOUT ===
+
+ ERROR   Unspecified Error (SNYK-CLI-0000)
+                                                                                        
+           Failed to get dependencies for all 1 potential projects.                     
+                                                                                        
+           C:\Users\admin\Documents\Lab Workplace\f-                                    
+           vra\pyshare\data\raw\projects\cinnamon__kotaemon\libs\ktem\requirements.txt: 
+           Missing required packages                                                    
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0000 
+                                                                         
+ID:      urn:snyk:interaction:308d4839-4ae7-44ec-84e2-8f9532b21020 
+
+=== STDERR ===

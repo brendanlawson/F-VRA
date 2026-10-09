@@ -1,0 +1,47 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+WARN Fixing invalid version specifier by removing trailing comma (before: `>=3.5,`; after: `>=3.5`)
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pyflac==3.0.0 has no usable wheels and you require
+      pyflac==3.0.0, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyflac` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because python-rtmidi==1.5.8 has no usable wheels and you require
+      python-rtmidi==1.5.8, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `python-rtmidi` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=2) rc=0 ---
+ray==0.19.5
+ + python-dotenv==1.2.2
+ + python-osc==1.10.2
+ + pyzmq==27.1.0
+ - requests==2.34.2
+ + requests==2.33.1
+ + requests-toolbelt==1.0.0
+ + sacn==1.11.0
+ + samplerate-ledfx==0.2.6
+ + sentry-sdk==2.57.0
+ + six==1.17.0
+ + sounddevice==0.5.5
+ + soundfile==0.13.1
+ + stupidartnet==1.6.0
+ + tornado==6.5.5
+ + typing-extensions==4.15.0
+ - urllib3==2.7.0
+ + urllib3==2.6.3
+ + voluptuous==0.16.0
+ + webcolors==25.10.0
+ + wheel==0.46.3
+ + winloop==0.6.0
+ + winrt-runtime==3.2.1
+ + winrt-windows-foundation==3.2.1
+ + winrt-windows-media-control==3.2.1
+ + xled==0.7.0
+ + yarl==1.23.0
+ + zeroconf==0.148.0

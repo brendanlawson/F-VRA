@@ -1,0 +1,88 @@
+# project: benoitc__gunicorn
+# scanner: snyk
+# time: Fri Jul 10 19:29:29 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\benoitc__gunicorn.json
+# exit code: 1
+=== STDOUT ===
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn...
+
+Tested 6 dependencies for known issues, found 1 issue, 2 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Pin idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by httpx@0.28.1 > idna@3.11 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       examples\http2_features\requirements.txt
+Project name:      http2_features
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn
+Licenses:          enabled
+
+-------------------------------------------------------
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn...
+
+Tested 10 dependencies for known issues, found 3 issues, 3 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Pin idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by fastapi@0.136.3 > starlette@1.1.0 > anyio@4.13.0 > idna@3.11
+
+  Pin starlette@1.1.0 to starlette@1.3.1 to fix
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@1.1.0
+    introduced by fastapi@0.136.3 > starlette@1.1.0
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@1.1.0
+    introduced by fastapi@0.136.3 > starlette@1.1.0
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       examples\streaming_chat\requirements.txt
+Project name:      streaming_chat
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn
+Licenses:          enabled
+
+
+Tested 2 projects, 2 contained vulnerable paths.
+
+
+
+
+=== STDERR ===
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\examples\celery_alternative\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\examples\embedding_service\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\examples\frameworks\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\frameworks\blacksheep_app\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\frameworks\django_app\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\frameworks\fastapi_app\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\frameworks\litestar_app\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\frameworks\quart_app\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\benoitc__gunicorn\tests\docker\asgi_framework_compat\frameworks\starlette_app\requirements.txt:
+  Missing required packages
+✗ 10/12 potential projects failed to get dependencies.
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

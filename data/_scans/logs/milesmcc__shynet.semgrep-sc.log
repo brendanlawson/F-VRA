@@ -1,0 +1,720 @@
+# project: milesmcc__shynet
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 21:42:36 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=milesmcc__shynet -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/milesmcc__shynet:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/milesmcc__shynet.json
+# exit code: 0
+# note: native lock: poetry.lock
+=== STDOUT ===
+                                     
+                                     
+┌───────────────────────────────────┐
+│ 5 Reachable Supply Chain Findings │
+└───────────────────────────────────┘
+               
+    poetry.lock
+   ❯❯❱ aiohttp - CVE-2025-69223
+          Severity: HIGH                                                                                     
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Improper Handling of Highly Compressed Data (Data Amplification). Unbounded decompression of     
+          compressed request bodies in aiohttp's server allows an attacker to send a specially crafted "zip  
+          bomb" (e.g. via Content-Encoding: gzip) that expands to an arbitrarily large payload in memory,    
+          exhausting host resources and causing a denial-of-service.                                         
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+   ❯❯❱ cryptography - GHSA-537c-gmf6-5ccf
+          Severity: HIGH                                                                                      
+          Affected versions of cryptography are vulnerable to Dependency on Vulnerable Third-Party Component /
+          Out-of-bounds Read. The PyPI wheels for the cryptography package statically link a version of       
+          OpenSSL that contains security vulnerabilities (including a high-severity use-after-free in         
+          PKCS7_verify and several denial-of-service and forgery issues). Any application installed from an   
+          affected wheel ships the vulnerable OpenSSL binary, so an attacker may trigger out-of-bounds reads, 
+          crashes, or other memory-safety issues through cryptographic operations that reach the bundled      
+          OpenSSL code.                                                                                       
+                                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 48.0.1
+          498┆ name = "cryptography"
+   
+   ❯❯❱ gunicorn - CVE-2024-1135
+          Severity: HIGH                                                                                     
+          Affected versions of gunicorn are vulnerable to Inconsistent Interpretation Of Http Requests ('Http
+          Request/Response Smuggling'). The vulnerability in Gunicorn arises from its failure to properly    
+          validate Transfer-Encoding headers, potentially exposing it to HTTP Request Smuggling (HRS) attacks
+          by mishandling requests with multiple Transfer-Encoding headers, leading to a CL-TE attack where   
+          both Content-Length and Transfer-Encoding headers confuse the server.                              
+                                                                                                             
+           ▶▶┆ Fixed for gunicorn at version: 22.0.0
+          852┆ name = "gunicorn"
+   
+   ❯❯❱ gunicorn - CVE-2024-6827
+          Severity: HIGH                                                                                      
+          Affected versions of gunicorn are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP 
+          Request/Response Smuggling'). Gunicorn fails to properly validate the HTTP Transfer-Encoding header,
+          defaulting to content-length processing. This behavior enables TE.CL request smuggling, which       
+          attackers can exploit to trigger cache poisoning, data exposure, session manipulation, SSRF, XSS,   
+          and DoS attacks.                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for gunicorn at version: 22.0.0
+          852┆ name = "gunicorn"
+                                                       
+    shynet/dashboard/views.py with lockfile poetry.lock
+   ❯❯❱ django - CVE-2025-64458
+          Severity: HIGH                                                                                     
+          Affected versions of django are vulnerable to Inefficient Algorithmic Complexity. Denial of service
+          via slow NFKC normalization of user-supplied redirect targets in django.http.HttpResponseRedirect, 
+          HttpResponsePermanentRedirect, and the django.shortcuts.redirect shortcut on Windows: an attacker  
+          can supply a URL containing a very large number of Unicode characters to trigger excessive CPU     
+          usage.                                                                                             
+                                                                                                             
+           ▶▶┆ Fixed for django at versions: 4.2.26, 5.1.14, 5.2.8
+          194┆ return redirect("account_change_password")
+                                         
+                                         
+┌───────────────────────────────────────┐
+│ 46 Undetermined Supply Chain Findings │
+└───────────────────────────────────────┘
+               
+    poetry.lock
+    ❯❱ aiohttp - CVE-2024-52304
+          Severity: MODERATE                                                                                
+          Affected versions of aiohttp are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.10.11
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-54279
+          Severity: LOW                                                          
+          Affected versions of aiohttp are vulnerable to Improper Initialization.
+                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-34518
+          Severity: LOW                                                                                      
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor.                                                                                             
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2025-69224
+          Severity: LOW                                                                                     
+          Affected versions of aiohttp are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-34515
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Absolute Path Traversal / Server-Side Request Forgery
+          (SSRF).                                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2025-53643
+          Severity: LOW                                                                                     
+          Affected versions of aiohttp are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.12.14
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-54280
+          Severity: LOW                                                                        
+          Affected versions of aiohttp are vulnerable to Improper Resource Shutdown or Release.
+                                                                                               
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-54275
+          Severity: LOW                                                                              
+          Affected versions of aiohttp are vulnerable to Improper Validation of Certificate with Host
+          Mismatch.                                                                                  
+                                                                                                     
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-34513
+          Severity: LOW                                                                                       
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-50269
+          Severity: LOW                                                                                  
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF
+          Injection') / Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response
+          Splitting').                                                                                   
+                                                                                                         
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-34519
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-34525
+          Severity: MODERATE                                                                     
+          Affected versions of aiohttp are vulnerable to Improper Input Validation / Inconsistent
+          Interpretation of HTTP Requests ('HTTP Request/Response Smuggling').                   
+                                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-47265
+          Severity: MODERATE                                                     
+          Affected versions of aiohttp are vulnerable to Origin Validation Error.
+                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-34514
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-34517
+          Severity: LOW                                                                                       
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2025-69226
+          Severity: LOW                                                                                
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information Through Data
+          Queries / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').    
+                                                                                                       
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2026-34520
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-34516
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2025-69227
+          Severity: MODERATE                                                                            
+          Affected versions of aiohttp are vulnerable to Loop with Unreachable Exit Condition ('Infinite
+          Loop').                                                                                       
+                                                                                                        
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2025-69230
+          Severity: LOW                                                            
+          Affected versions of aiohttp are vulnerable to Logging of Excessive Data.
+                                                                                   
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2025-69229
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+     ❱ aiohttp - CVE-2025-69225
+          Severity: LOW                                                                                     
+          Affected versions of aiohttp are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                     
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-34993
+          Severity: MODERATE                                                               
+          Affected versions of aiohttp are vulnerable to Deserialization of Untrusted Data.
+                                                                                           
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2025-69228
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-22815
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Uncontrolled Resource Consumption.                                                               
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+            4┆ name = "aiohttp"
+   
+     ❱ cryptography - CVE-2026-34073
+          Severity: LOW                                                                       
+          Affected versions of cryptography are vulnerable to Improper Certificate Validation.
+                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 46.0.6
+          498┆ name = "cryptography"
+   
+     ❱ cryptography - CVE-2024-12797
+          Severity: LOW                                                                                       
+          Affected versions of cryptography are vulnerable to Dependency on Vulnerable Third-Party Component /
+          Missing Report of Error Condition.                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 44.0.1
+          498┆ name = "cryptography"
+   
+    ❯❱ cryptography - GHSA-h4gh-qq45-vh27
+          Severity: MODERATE                                                                                 
+          Affected versions of cryptography are vulnerable to Dependency on Vulnerable Third-Party Component.
+                                                                                                             
+           ▶▶┆ Fixed for cryptography at version: 43.0.1
+          498┆ name = "cryptography"
+   
+    ❯❱ django - CVE-2025-48432
+          Severity: MODERATE                                                                    
+          Affected versions of Django are vulnerable to Improper Output Neutralization for Logs.
+                                                                                                
+           ▶▶┆ Fixed for django at versions: 4.2.22, 5.1.10, 5.2.2
+          563┆ name = "django"
+   
+    ❯❱ django - CVE-2024-45231
+          Severity: MODERATE                                                                        
+          Affected versions of Django are vulnerable to Observable Discrepancy / Observable Response
+          Discrepancy.                                                                              
+                                                                                                    
+           ▶▶┆ Fixed for django at versions: 4.2.16, 5.0.9, 5.1.1
+          563┆ name = "django"
+   
+    ❯❱ django-allauth - CVE-2025-65431
+          Severity: MODERATE                                                            
+          Affected versions of django-allauth are vulnerable to Improper Authentication.
+                                                                                        
+           ▶▶┆ Fixed for django-allauth at version: 65.13.0
+          584┆ name = "django-allauth"
+   
+    ❯❱ django-allauth - CVE-2025-65430
+          Severity: MODERATE                                                                    
+          Affected versions of django-allauth are vulnerable to Insufficient Session Expiration.
+                                                                                                
+           ▶▶┆ Fixed for django-allauth at version: 65.13.0
+          584┆ name = "django-allauth"
+   
+    ❯❱ django-allauth - CVE-2026-27982
+          Severity: MODERATE                                                                            
+          Affected versions of django-allauth are vulnerable to URL Redirection to Untrusted Site ('Open
+          Redirect').                                                                                   
+                                                                                                        
+           ▶▶┆ Fixed for django-allauth at version: 65.14.1
+          584┆ name = "django-allauth"
+   
+    ❯❱ idna - CVE-2026-45409
+          Severity: MODERATE                                                                    
+          Affected versions of idna are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                
+           ▶▶┆ Fixed for idna at version: 3.15
+          883┆ name = "idna"
+   
+    ❯❱ idna - CVE-2024-3651
+          Severity: MODERATE                                                                                  
+          Affected versions of idna are vulnerable to Inefficient Regular Expression Complexity / Uncontrolled
+          Resource Consumption.                                                                               
+                                                                                                              
+           ▶▶┆ Fixed for idna at version: 3.7
+          883┆ name = "idna"
+   
+    ❯❱ oauthlib - CVE-2022-36087
+          Severity: MODERATE                                                                            
+          Affected versions of oauthlib are vulnerable to Improper Input Validation / URL Redirection to
+          Untrusted Site ('Open Redirect').                                                             
+                                                                                                        
+           ▶▶┆ Fixed for oauthlib at version: 3.2.2
+          1066┆ name = "oauthlib"
+   
+    ❯❱ pyjwt - CVE-2026-48522
+          Severity: MODERATE                                                                                
+          Affected versions of PyJWT are vulnerable to Server-Side Request Forgery (SSRF) / Unintended Proxy
+          or Intermediary ('Confused Deputy').                                                              
+                                                                                                            
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          1225┆ name = "pyjwt"
+   
+     ❱ pyjwt - CVE-2026-48524
+          Severity: LOW                                                                               
+          Affected versions of pyjwt are vulnerable to Improper Cleanup on Thrown Exception / Improper
+          Handling of Exceptional Conditions.                                                         
+                                                                                                      
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          1225┆ name = "pyjwt"
+   
+    ❯❱ pytest - CVE-2025-71176
+          Severity: MODERATE                                                                                 
+          Affected versions of pytest are vulnerable to Creation of Temporary File in Directory with Insecure
+          Permissions.                                                                                       
+                                                                                                             
+           ▶▶┆ Fixed for pytest at version: 9.0.3
+          1259┆ name = "pytest"
+   
+    ❯❱ python-dotenv - CVE-2026-28684
+          Severity: MODERATE                                                                              
+          Affected versions of python-dotenv are vulnerable to Improper Link Resolution Before File Access
+          ('Link Following') / UNIX Symbolic Link (Symlink) Following.                                    
+                                                                                                          
+           ▶▶┆ Fixed for python-dotenv at version: 1.2.2
+          1330┆ name = "python-dotenv"
+   
+    ❯❱ requests - CVE-2024-35195
+          Severity: MODERATE                                                                           
+          Affected versions of requests are vulnerable to Always-Incorrect Control Flow Implementation.
+                                                                                                       
+           ▶▶┆ Fixed for requests at version: 2.32.0
+          1425┆ name = "requests"
+   
+    ❯❱ requests - CVE-2024-47081
+          Severity: MODERATE                                                                   
+          Affected versions of requests are vulnerable to Insufficiently Protected Credentials.
+                                                                                               
+           ▶▶┆ Fixed for requests at version: 2.32.4
+          1425┆ name = "requests"
+   
+    ❯❱ requests - CVE-2026-25645
+          Severity: MODERATE                                                      
+          Affected versions of requests are vulnerable to Insecure Temporary File.
+                                                                                  
+           ▶▶┆ Fixed for requests at version: 2.33.0
+          1425┆ name = "requests"
+   
+    ❯❱ sqlparse - GHSA-27jp-wm6q-gp25
+          Severity: MODERATE                                                                       
+          Affected versions of sqlparse are vulnerable to Allocation of Resources Without Limits or
+          Throttling.                                                                              
+                                                                                                   
+           ▶▶┆ Fixed for sqlparse at version: 0.5.4
+          1502┆ name = "sqlparse"
+   
+    ❯❱ urllib3 - CVE-2024-37891
+          Severity: MODERATE                                                                         
+          Affected versions of urllib3 are vulnerable to Incorrect Resource Transfer Between Spheres.
+                                                                                                     
+           ▶▶┆ Fixed for urllib3 at versions: 1.26.19, 2.2.2
+          1609┆ name = "urllib3"
+   
+    ❯❱ urllib3 - CVE-2025-50181
+          Severity: MODERATE                                                                                 
+          Affected versions of urllib3 are vulnerable to URL Redirection to Untrusted Site ('Open Redirect').
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.5.0
+          1609┆ name = "urllib3"
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 21 Unreachable Supply Chain Findings │
+└──────────────────────────────────────┘
+               
+    poetry.lock
+    ❯❱ aiohttp - CVE-2024-27306
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of Input During Web Page     
+          Generation ('Cross-site Scripting'). aiohttp is vulnerable to cross-site scripting (XSS) in its     
+          static file handling. When directory index listing is enabled (show_index=True), file names are     
+          rendered into the generated HTML index page without HTML escaping, so a file with a maliciously     
+          crafted name placed in the served directory can inject script that executes in the browser of anyone
+          viewing the index.                                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.9.4
+            4┆ name = "aiohttp"
+   
+   ❯❯❱ aiohttp - CVE-2025-69223
+          Severity: HIGH                                                                                     
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Improper Handling of Highly Compressed Data (Data Amplification). Unbounded decompression of     
+          compressed request bodies in aiohttp's server allows an attacker to send a specially crafted "zip  
+          bomb" (e.g. via Content-Encoding: gzip) that expands to an arbitrarily large payload in memory,    
+          exhausting host resources and causing a denial-of-service.                                         
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.3
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-54273
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          aiohttp did not limit the number of pipelined HTTP/1 requests buffered per connection on the server 
+          side. An attacker can send excessive pipelined requests to an aiohttp server to exhaust memory,     
+          leading to denial of service. Only the aiohttp server API is affected; client-only usage is not.    
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-54278
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Improper Handling of Highly Compressed Data (Data   
+          Amplification). aiohttp servers decompress unread compressed request bodies into a single unbounded
+          chunk during lingering-close cleanup, bypassing the client_max_size limit. An attacker can send a  
+          small deflate/gzip-compressed request body that decompresses to a very large size, forcing a large 
+          transient memory allocation and causing a denial of service.                                       
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-54276
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Insufficiently Protected Credentials. aiohttp's DigestAuthMiddleware sends HTTP Digest     
+          authentication credentials after cross-origin redirects. When the client follows redirects (the    
+          default behavior), an attacker who controls a redirect destination can capture the digest,         
+          potentially exposing the credentials.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-54277
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The optimized C HTTP parser in aiohttp validates each fragment of an HTTP request/response line     
+          individually against max_line_size instead of the accumulated total. An attacker can split an       
+          oversized line across multiple network reads, bypassing the limit and causing excessive memory      
+          consumption, leading to denial of service. This affects both server-side request-target parsing and 
+          client-side response reason-phrase parsing.                                                         
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+   ❯❯❱ aiohttp - CVE-2024-30251
+          Severity: HIGH                                                                                    
+          Affected versions of aiohttp are vulnerable to Loop with Unreachable Exit Condition ('Infinite    
+          Loop'). The vulnerability lies in an attackers ability to exploit a multipart/form-data POST      
+          request, causing an aiohttp server to enter an infinite loop, thus incapacitating it from handling
+          further requests.                                                                                 
+                                                                                                            
+           ▶▶┆ Fixed for aiohttp at version: 3.9.4
+            4┆ name = "aiohttp"
+   
+    ❯❱ aiohttp - CVE-2026-54274
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          aiohttp WebSocket endpoints fail to enforce the max_msg_size memory limit when a peer sends large   
+          incomplete WebSocket frame payloads. An attacker (a malicious client against a server endpoint, or a
+          malicious server against a client connection) can send oversized incomplete frames to bypass the    
+          size limit and exhaust memory, causing denial of service. Any use of aiohttp server-side            
+          WebSocketResponse endpoints or client-side ws_connect connections reaches the vulnerable frame      
+          parser.                                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+            4┆ name = "aiohttp"
+   
+     ❱ certifi - CVE-2024-39689
+          Severity: LOW                                                                                 
+          Affected versions of certifi are vulnerable to Insufficient Verification of Data Authenticity.
+                                                                                                        
+           ▶▶┆ Fixed for certifi at version: 2024.7.4
+          263┆ name = "certifi"
+   
+   ❯❯❱ cryptography - CVE-2026-26007
+          Severity: HIGH                                                                                     
+          Affected versions of cryptography are vulnerable to Insufficient Verification of Data Authenticity.
+          Missing subgroup validation in cryptography's SECT (binary) curve public‐key APIs: the functions   
+          public_key_from_numbers, EllipticCurvePublicNumbers.public_key(), load_der_public_key(), and       
+          load_pem_public_key() do not check that supplied points lie in the curve's prime‐order subgroup. An
+          attacker can submit a small‐order subgroup point to leak bits of the victim's private key via ECDH 
+          shared‐secret computation or trivially forge ECDSA signatures on affected curves.                  
+                                                                                                             
+           ▶▶┆ Fixed for cryptography at version: 46.0.5
+          498┆ name = "cryptography"
+   
+   ❯❯❱ django - CVE-2025-57833
+          Severity: HIGH                                                                                      
+          Affected versions of Django are vulnerable to Improper Neutralization of Special Elements used in an
+          SQL Command ('SQL Injection'). An attacker can craft a malicious dictionary and pass it via Python's
+          `**kwargs` expansion to `QuerySet.annotate()` or `QuerySet.alias()`, causing uncontrolled column    
+          aliases in a `FilteredRelation` to inject arbitrary SQL. This leads to SQL injection in Django's ORM
+          layer when alias names aren't properly sanitized.                                                   
+                                                                                                              
+           ▶▶┆ Fixed for django at versions: 4.2.24, 5.1.12, 5.2.6
+          563┆ name = "django"
+   
+   ❯❯❯❱ django - CVE-2025-64459
+          Severity: CRITICAL                                                                                  
+          Affected versions of django are vulnerable to Improper Neutralization of Special Elements used in an
+          SQL Command ('SQL Injection'). The ORM methods QuerySet.filter(), QuerySet.exclude(), QuerySet.get()
+          and the Q() class can be tricked into SQL injection when you pass a specially crafted dictionary via
+          **kwargs that includes a malicious `_connector` entry. This bypasses the normal query               
+          parameterization and lets an attacker inject arbitrary SQL into the WHERE clause.                   
+                                                                                                              
+           ▶▶┆ Fixed for django at versions: 4.2.26, 5.1.14, 5.2.8
+          563┆ name = "django"
+   
+   ❯❯❱ pyjwt - CVE-2026-32597
+          Severity: HIGH                                                                                     
+          Affected versions of PyJWT are vulnerable to Incorrect Authorization / Insufficient Verification of
+          Data Authenticity. PyJWT's JWS decoder does not enforce RFC 7515 `crit` (Critical) header handling:
+          tokens that declare unknown critical header extensions in `crit` are accepted instead of being     
+          rejected. This can enable JWT policy/authorization bypass in deployments that rely on              
+          `crit`-signaled requirements (e.g., MFA/token binding/PoP such as `cnf`), and can cause "split-    
+          brain" verification where RFC-compliant components reject a token but PyJWT accepts it.            
+                                                                                                             
+           ▶▶┆ Fixed for pyjwt at version: 2.12.0
+          1225┆ name = "pyjwt"
+   
+   ❯❯❱ pyjwt - CVE-2026-48526
+          Severity: HIGH                                                                                      
+          Affected versions of pyjwt are vulnerable to Improper Authentication / Improper Verification of     
+          Cryptographic Signature. PyJWT does not reject JSON Web Key (JWK) strings passed as raw HMAC secrets
+          in `HMACAlgorithm.prepare_key`. When a verifier allows both HMAC and asymmetric algorithms and a raw
+          JWK string is supplied as the verification key, an attacker can forge an HS256 token signed with the
+          public JWK string used as the HMAC secret, enabling token forgery and authentication bypass.        
+                                                                                                              
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          1225┆ name = "pyjwt"
+   
+   ❯❯❱ setuptools - CVE-2025-47273
+          Severity: HIGH                                                                                      
+          Affected versions of setuptools are vulnerable to Improper Limitation of a Pathname to a Restricted 
+          Directory ('Path Traversal'). Occurs in `PackageIndex.download`. An attacker would be allowed to    
+          write files to arbitrary locations on the filesystem with the permissions of the process running the
+          Python code, which could escalate to RCE depending on the context.                                  
+                                                                                                              
+           ▶▶┆ Fixed for setuptools at version: 78.1.1
+          1475┆ name = "setuptools"
+   
+   ❯❯❱ setuptools - CVE-2024-6345
+          Severity: HIGH                                                                                 
+          Affected versions of setuptools are vulnerable to Improper Control of Generation of Code ('Code
+          Injection').                                                                                   
+                                                                                                         
+           ▶▶┆ Fixed for setuptools at version: 70.0.0
+          1475┆ name = "setuptools"
+   
+   ❯❯❱ sqlparse - CVE-2024-4340
+          Severity: HIGH                                                                                     
+          Affected versions of sqlparse are vulnerable to Uncontrolled Recursion. The vulnerability arises   
+          when a nested list is passed to `sqlparse.parse()`, resulting in a denial-of-service (DoS) scenario
+          due to a recursion error.                                                                          
+                                                                                                             
+           ▶▶┆ Fixed for sqlparse at version: 0.5.0
+          1502┆ name = "sqlparse"
+   
+   ❯❯❱ urllib3 - CVE-2026-21441
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data    
+          Amplification). When using urllib3's streaming API (preload_content=False) with redirects enabled,  
+          redirect responses are fully drained and decompressed before any read calls—ignoring configured read
+          limits—allowing a malicious server to send a compressed payload that expands into massive data and  
+          triggers excessive CPU and memory consumption (decompression bomb).                                 
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.6.3
+          1609┆ name = "urllib3"
+   
+   ❯❯❱ urllib3 - CVE-2025-66418
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The vulnerability in urllib3 arises because a malicious server can provide an unbounded chain of    
+          content-encoding layers that urllib3 will fully decompress, causing unrestrained CPU usage and      
+          memory growth.                                                                                      
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.6.0
+          1609┆ name = "urllib3"
+   
+   ❯❯❱ urllib3 - CVE-2025-66471
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data   
+          Amplification). An attacker hosting a highly-compressed HTTP response can trigger urllib3's        
+          streaming API to decompress entire compressed blocks when the client requests only a small chunk   
+          (via stream(), read(), read1(), read_chunked(), or readinto()). This can cause excessive CPU usage 
+          and large memory allocations on the client (resource exhaustion), resulting in a denial-of-service.
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.6.0
+          1609┆ name = "urllib3"
+   
+   ❯❯❱ urllib3 - CVE-2026-44431
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor. HTTP pools obtained from urllib3 ProxyManager via connection_from_url() or                  
+          connection_from_host() do not strip sensitive headers (Authorization, Cookie, Proxy-Authorization) 
+          when following cross-origin redirects, leaking authentication credentials to the redirect target.  
+          Use ProxyManager.request() (the high-level API) instead, or upgrade to urllib3 >= 2.7.0.           
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.7.0
+          1609┆ name = "urllib3"
+
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192912605)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 179 files tracked by git with 0 Code rules, 102192 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources   Resolution Method   Ecosystem   Dependencies   Rules                                             
+ ───────────────────────────────────────────────────────────────────────────                                            
+  poetry.lock          Lockfile            Pypi        83             17206                                             
+  package-lock.json    Lockfile            Npm         77             84986                                             
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      89015                                                                                                  
+  Basic           9494                                                                                                  
+  Reachability    3683                                                                                                  
+                                                                                                                        
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 72 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 74
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 2
+   ◦ Files matching .semgrepignore patterns: 8
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=milesmcc__shynet&ref=HEAD
+  No blocking findings so exiting with code 0

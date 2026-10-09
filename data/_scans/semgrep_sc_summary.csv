@@ -1,0 +1,35 @@
+project,status,findings,reachable,undetermined,unreachable,blocking,vuln_pkgs,direct,transitive,sev_critical,sev_high,sev_moderate,sev_low,note
+ATH-MaaS__Pixelle-MCP,findings,120,28,55,37,0,22,63,57,4,43,51,22,native lock: uv.lock
+Amm1rr__WebAI-to-API,findings,134,5,104,25,0,6,7,38,,,,,native lock: poetry.lock
+Chainlit__chainlit,findings,203,44,68,91,0,55,80,123,9,62,111,21,native lock: uv.lock
+Cinnamon__kotaemon,findings,251,46,128,77,0,50,0,251,7,108,100,36,native lock: uv.lock
+FuzzyGrim__Yamtrack,findings,23,6,12,5,0,4,15,8,0,4,14,5,native lock: uv.lock
+LedFx__LedFx,findings,43,14,18,11,0,11,24,19,0,11,26,6,native lock: uv.lock
+OWASP__Nettacker,findings,32,2,21,9,0,5,24,8,0,5,14,13,native lock: poetry.lock
+Open-LLM-VTuber__Open-LLM-VTuber,clean,0,0,0,0,0,,,,,,,,native lock: uv.lock
+Thysrael__Horizon,findings,48,0,33,15,0,14,1,48,0,11,21,17,native lock: uv.lock
+alerta__alerta,findings,8,0,6,2,0,4,0,0,0,3,5,1,requirements.txt (--allow-local-builds)
+alexferl__flask-simpleldap,findings,6,0,2,4,0,3,0,3,,,,,native lock: uv.lock
+benavlabs__FastAPI-boilerplate,findings,20,0,15,5,0,4,0,0,,,,,native lock: uv.lock
+benoitc__gunicorn,findings,7,0,4,3,0,4,0,7,0,2,3,2,native lock: uv.lock
+djangostarter__web,clean,0,0,0,0,0,,,,,,,,native lock: uv.lock
+eightBEC__fastapi-ml-skeleton,findings,60,4,26,30,0,,,,,,,,native lock: poetry.lock
+eosphoros-ai__DB-GPT,findings,708,145,296,267,0,117,133,416,30,278,307,93,native lock: uv.lock
+evansd__whitenoise,clean,0,0,0,0,0,0,0,0,,,,,native lock: uv.lock
+fastapi__asyncer,findings,28,2,18,8,0,6,0,14,,,,,native lock: uv.lock
+iktakahiro__dddpy,findings,32,0,20,12,0,6,0,16,,,,,native lock: uv.lock
+laurentS__slowapi,findings,80,4,46,30,0,,,,,,,,native lock: poetry.lock
+marshmallow-code__flask-marshmallow,clean,0,0,0,0,0,0,0,0,,,,,native lock: uv.lock
+marshmallow-code__flask-smorest,clean,0,0,0,0,0,0,0,0,,,,,native lock: uv.lock
+milesmcc__shynet,findings,72,5,46,21,0,15,11,61,1,18,34,19,native lock: poetry.lock
+reflex-dev__reflex,clean,0,0,0,0,0,0,0,0,0,0,0,0,native lock: uv.lock
+rtzll__flask-todolist,findings,6,2,2,2,0,2,0,3,,,,,native lock: uv.lock
+sloria__environs,clean,0,0,0,0,0,0,0,0,,,,,native lock: uv.lock
+sparckles__Robyn,findings,161,34,62,65,0,57,72,80,3,59,86,13,native lock: poetry.lock
+spiral-project__ihatemoney,clean,0,0,0,0,0,,,,,,,,native lock: uv.lock
+sunscrapers__djoser,clean,0,0,0,0,0,,,,,,,,native lock: poetry.lock
+teamhide__fastapi-boilerplate,clean,0,0,0,0,0,,,,,,,,native lock: poetry.lock
+tinyfish-io__agentql,clean,0,0,0,0,0,0,0,0,,,,,requirements.txt
+tomasvotava__fastapi-sso,findings,2,0,2,0,0,1,0,2,,,,,native lock: poetry.lock
+tropicoo__yt-dlp-bot,findings,184,14,127,43,0,9,40,84,,,,,native lock: uv.lock
+yezz123__authx,findings,55,7,24,24,0,16,0,32,,,,,native lock: uv.lock

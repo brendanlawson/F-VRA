@@ -1,0 +1,17 @@
+# project: evansd__whitenoise
+# scanner: snyk
+# time: Fri Jul 10 19:25:54 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\evansd__whitenoise.json
+# exit code: 3
+=== STDOUT ===
+
+ FATAL   No supported files found (SNYK-CLI-0008)
+                                                                                                                                                      
+           Could not detect supported target files in C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\evansd__whitenoise.      
+           Please see our documentation for supported languages and target files: https://snyk.co/udVgQ and make sure you are in the right directory. 
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0008 
+                                                                         
+ID:      urn:snyk:interaction:e1fd8365-7461-4548-b9ef-97b56f8d76f2 
+
+=== STDERR ===

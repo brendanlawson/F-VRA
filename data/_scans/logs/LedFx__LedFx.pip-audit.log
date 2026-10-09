@@ -1,0 +1,12 @@
+# project: LedFx__LedFx
+# scanner: pip-audit
+# time: Sat Jul 11 09:20:42 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\LedFx__LedFx.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\LedFx__LedFx.json
+# exit code: 1
+# note: OK skipped(2)=['pyflac', 'python-rtmidi']
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 30 known vulnerabilities in 6 packages

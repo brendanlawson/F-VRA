@@ -1,0 +1,295 @@
+# project: milesmcc__shynet
+# scanner: snyk
+# time: Fri Jul 10 19:31:35 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\milesmcc__shynet.json
+# exit code: 1
+=== STDOUT ===
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\milesmcc__shynet...
+
+Tested 77 dependencies for known issues, found 1 issue, 1 vulnerable path.
+
+
+Issues to fix by upgrading:
+
+  Upgrade apexcharts@3.26.2 to apexcharts@3.27.0 to fix
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-APEXCHARTS-1300579] in apexcharts@3.26.2
+    introduced by apexcharts@3.26.2
+
+
+
+Organization:      wuwuyn
+Package manager:   npm
+Target file:       package-lock.json
+Project name:      shynet
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\milesmcc__shynet
+Licenses:          enabled
+
+-------------------------------------------------------
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\milesmcc__shynet...
+
+Tested 59 dependencies for known issues, found 105 issues, 268 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade django@4.1.13 to django@5.2.16 to fix
+  ✗ Improper Handling of Case Sensitivity [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151726] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Cleartext Transmission of Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151727] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151728] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Incomplete Comparison with Missing Factors [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151772] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151780] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Use of Cache Containing Sensitive Information (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881428] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-10074036] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Improper Output Neutralization for Logs [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-10302884] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ SQL Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13836728] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Improper Neutralization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881426] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Buffer Access with Incorrect Length Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881427] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-6370660] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7435780] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Timing Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7436273] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7436514] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7436646] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642790] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642791] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642813] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Improper Check for Unusual or Exceptional Conditions [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7886958] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7886959] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-12485156] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13837025] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-14157807] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-14157810] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15183335] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-8456315] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-9296408] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642814] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-8456316] in django@4.1.13
+    introduced by django@4.1.13 and 4 other path(s)
+
+  Upgrade django-allauth@0.45.0 to django-allauth@65.14.1 to fix
+  ✗ Open Redirect [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-15426544] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+  ✗ Insufficient Session Expiration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-14425438] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+  ✗ Cross-site Request Forgery (CSRF) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-7413652] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-7577207] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+  ✗ Timing Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-8600545] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+  ✗ Improper Certificate Validation [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-14425069] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+  ✗ Timing Attack [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-5406296] in django-allauth@0.45.0
+    introduced by django-allauth@0.45.0
+
+  Upgrade gunicorn@20.1.0 to gunicorn@23.0.0 to fix
+  ✗ Improper Check for Unusual or Exceptional Conditions [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GUNICORN-7856105] in gunicorn@20.1.0
+    introduced by gunicorn@20.1.0
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GUNICORN-6615672] in gunicorn@20.1.0
+    introduced by gunicorn@20.1.0
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GUNICORN-9510910] in gunicorn@20.1.0
+    introduced by gunicorn@20.1.0
+
+  Upgrade python-dotenv@0.18.0 to python-dotenv@1.2.2 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONDOTENV-16115271] in python-dotenv@0.18.0
+    introduced by python-dotenv@0.18.0
+
+  Upgrade redis@3.5.3 to redis@4.3.6 to fix
+  ✗ Exposure of Data Element to Wrong Session [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REDIS-5291195] in redis@3.5.3
+    introduced by redis@3.5.3 and 1 other path(s)
+
+  Pin aiohttp@3.9.2 to aiohttp@3.14.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871873] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871888] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871929] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871954] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Logging of Excessive Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14872000] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-6645291] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ UNIX Symbolic Link (Symlink) Following [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-7675597] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-10742466] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871876] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871877] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871979] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-6808823] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-8383923] in aiohttp@3.9.2
+    introduced by geoip2@4.6.0 > aiohttp@3.9.2
+
+  Pin certifi@2023.7.22 to certifi@2024.7.4 to fix
+  ✗ Insufficient Verification of Data Authenticity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CERTIFI-7430173] in certifi@2023.7.22
+    introduced by django-allauth@0.45.0 > requests@2.31.0 > certifi@2023.7.22 and 2 other path(s)
+
+  Pin cryptography@42.0.4 to cryptography@48.0.1 to fix
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6592767] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6913422] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+  ✗ Missing Report of Error Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-8715586] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+  ✗ Type Confusion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-7886970] in cryptography@42.0.4
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0 > cryptography@42.0.4
+
+  Pin idna@3.3 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.3
+    introduced by django-allauth@0.45.0 > requests@2.31.0 > idna@3.3 and 3 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975] in idna@3.3
+    introduced by django-allauth@0.45.0 > requests@2.31.0 > idna@3.3 and 3 other path(s)
+
+  Pin oauthlib@3.2.1 to oauthlib@3.2.2 to fix
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-OAUTHLIB-3021142] in oauthlib@3.2.1
+    introduced by django-allauth@0.45.0 > requests-oauthlib@1.3.1 > oauthlib@3.2.1
+
+  Pin pyjwt@2.4.0 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+  ✗ Inadequate Encryption Strength [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-11356591] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-15518059] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.4.0
+    introduced by django-allauth@0.45.0 > pyjwt@2.4.0
+
+  Pin requests@2.31.0 to requests@2.33.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-10305723] in requests@2.31.0
+    introduced by django-allauth@0.45.0 > requests@2.31.0 and 2 other path(s)
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.31.0
+    introduced by django-allauth@0.45.0 > requests@2.31.0 and 2 other path(s)
+  ✗ Always-Incorrect Control Flow Implementation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-6928867] in requests@2.31.0
+    introduced by django-allauth@0.45.0 > requests@2.31.0 and 2 other path(s)
+
+  Pin sqlparse@0.4.4 to sqlparse@0.5.4 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SQLPARSE-14157217] in sqlparse@0.4.4
+    introduced by django@4.1.13 > sqlparse@0.4.4 and 5 other path(s)
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SQLPARSE-6615674] in sqlparse@0.4.4
+    introduced by django@4.1.13 > sqlparse@0.4.4 and 5 other path(s)
+
+  Pin urllib3@1.26.18 to urllib3@2.7.0 to fix
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-10390194] in urllib3@1.26.18
+    introduced by geoip2@4.6.0 > urllib3@1.26.18 and 3 other path(s)
+  ✗ Improper Removal of Sensitive Information Before Storage or Transfer [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-7267250] in urllib3@1.26.18
+    introduced by geoip2@4.6.0 > urllib3@1.26.18 and 3 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@1.26.18
+    introduced by geoip2@4.6.0 > urllib3@1.26.18 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@1.26.18
+    introduced by geoip2@4.6.0 > urllib3@1.26.18 and 3 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@1.26.18
+    introduced by geoip2@4.6.0 > urllib3@1.26.18 and 3 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@1.26.18
+    introduced by geoip2@4.6.0 > urllib3@1.26.18 and 3 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   poetry
+Target file:       pyproject.toml
+Project name:      shynet
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\milesmcc__shynet
+Licenses:          enabled
+
+
+Tested 2 projects, 2 contained vulnerable paths.
+
+
+
+
+=== STDERR ===
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

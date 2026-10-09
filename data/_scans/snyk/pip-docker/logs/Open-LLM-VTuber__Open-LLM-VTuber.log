@@ -1,0 +1,1775 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-core==12.1 has no usable wheels and you require
+      pyobjc-core==12.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pyobjc-core` because building from source is disabled for all packages (i.e., with `--no-build`)ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 11ms
+ + aiohappyeyeballs==2.6.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Downloading aiohttp (1.7MiB)
+ Downloaded aiohttp
+Prepared 1 package in 17.68s
+Installed 1 package in 60ms
+ + aiohttp==3.13.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 9ms
+ + aiosignal==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + annotated-doc==0.0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + annotated-types==0.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 1.01s
+Installed 1 package in 94ms
+ + anthropic==0.76.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 336ms
+Installed 1 package in 13ms
+ + anyio==4.12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 16ms
+ + async-timeout==5.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 25ms
+ + attrs==25.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading azure-cognitiveservices-speech (33.8MiB)
+FAIL_INSTALL azure-cognitiveservices-speech==1.47.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 551ms
+Installed 1 package in 53ms
+ + azure-core==1.38.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 465ms
+Installed 1 package in 15ms
+ + beautifulsoup4==4.14.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Downloading brotli (2.8MiB)
+ Downloaded brotli
+Prepared 1 package in 6.33s
+Installed 1 package in 8ms
+ + brotli==1.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 379ms
+Installed 1 package in 48ms
+ + cartesia==2.0.17
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 386ms
+Installed 1 package in 5ms
+ + certifi==2026.1.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 30ms
+ + cffi==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 242ms
+Installed 1 package in 5ms
+ + cfgv==3.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 363ms
+Installed 1 package in 17ms
+ + chardet==5.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 8ms
+Prepared 1 package in 388ms
+Installed 1 package in 8ms
+ + charset-normalizer==3.4.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + click==8.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 33ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 308ms
+Installed 1 package in 8ms
+ + coloredlogs==15.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 1.03s
+Installed 1 package in 43ms
+ + comtypes==1.4.15
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading cryptography (4.3MiB)
+ Downloaded cryptography
+Prepared 1 package in 1.18s
+Installed 1 package in 38ms
+ + cryptography==46.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 689ms
+Installed 1 package in 20ms
+ + distlib==0.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 225ms
+Installed 1 package in 14ms
+ + distro==1.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 459ms
+Installed 1 package in 35ms
+ + dnspython==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 301ms
+Installed 1 package in 8ms
+ + docstring-parser==0.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 1.10s
+Installed 1 package in 18ms
+ + duckduckgo-mcp-server==0.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 276ms
+Installed 1 package in 13ms
+ + edge-tts==7.2.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading elevenlabs (1.1MiB)
+ Downloaded elevenlabs
+Prepared 1 package in 2.44s
+Installed 1 package in 310ms
+ + elevenlabs==2.31.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 257ms
+Installed 1 package in 8ms
+ + email-validator==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + exceptiongroup==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 223ms
+Installed 1 package in 11ms
+ + fastapi-cli==0.0.20
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 252ms
+Installed 1 package in 13ms
+ + fastapi-cloud-cli==0.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 35ms
+ + fastapi==0.128.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 573ms
+Installed 1 package in 6ms
+ + fastar==0.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 254ms
+Installed 1 package in 11ms
+ + filelock==3.20.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 258ms
+Installed 1 package in 14ms
+ + flatbuffers==25.12.19
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 13ms
+ + frozenlist==1.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 394ms
+Installed 1 package in 17ms
+ + fsspec==2026.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 341ms
+Installed 1 package in 26ms
+ + groq==1.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 16ms
+ + h11==0.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 38ms
+ + httpcore==1.0.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 17ms
+ + httptools==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 252ms
+Installed 1 package in 9ms
+ + httpx-sse==0.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 30ms
+ + httpx==0.28.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 304ms
+Installed 1 package in 38ms
+ + humanfriendly==10.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 338ms
+Installed 1 package in 8ms
+ + identify==2.6.16
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 22ms
+ + idna==3.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 251ms
+Installed 1 package in 6ms
+ + iterators==0.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 25ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 592ms
+Installed 1 package in 10ms
+ + jiter==0.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 264ms
+Installed 1 package in 13ms
+ + jsonschema-specifications==2025.9.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 476ms
+Installed 1 package in 15ms
+ + jsonschema==4.26.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 475ms
+Installed 1 package in 74ms
+ + letta-client==1.7.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 12ms
+ + loguru==0.7.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 55ms
+ + markdown-it-py==4.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 10ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 531ms
+Installed 1 package in 31ms
+ + mcp==1.26.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 15ms
+ + mdurl==0.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 667ms
+Installed 1 package in 30ms
+ + mpmath==1.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 13ms
+ + multidict==6.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading networkx (1.6MiB)
+ Downloaded networkx
+Prepared 1 package in 688ms
+Installed 1 package in 152ms
+ + networkx==3.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 298ms
+Installed 1 package in 10ms
+ + nodeenv==1.10.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading openai (1.0MiB)
+ Downloaded openai
+Prepared 1 package in 668ms
+Installed 1 package in 212ms
+ + openai==2.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 313ms
+Installed 1 package in 10ms
+ + packaging==26.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 327ms
+Installed 1 package in 5ms
+ + platformdirs==4.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 410ms
+Installed 1 package in 24ms
+ + pre-commit==4.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 11ms
+ + propcache==0.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 493ms
+Installed 1 package in 16ms
+ + protobuf==6.33.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 294ms
+Installed 1 package in 8ms
+ + pycparser==3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 14ms
+Installed 1 package in 32ms
+ + pydantic-core==2.41.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 312ms
+Installed 1 package in 14ms
+ + pydantic-extra-types==2.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 289ms
+Installed 1 package in 10ms
+ + pydantic-settings==2.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 171ms
+ + pydantic==2.12.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 285ms
+Installed 1 package in 11ms
+ + pydub==0.25.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading pygments (1.2MiB)
+ Downloaded pygments
+Prepared 1 package in 951ms
+Installed 1 package in 91ms
+ + pygments==2.19.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 257ms
+Installed 1 package in 22ms
+ + pyjwt==2.10.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-core==12.1 has no usable wheels and you require
+      pyobjc-core==12.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pyobjc-core` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-core==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-accessibility==12.1 has no usable wheels and
+      you require pyobjc-framework-accessibility==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-accessibility` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-accessibility==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 225ms
+Installed 1 package in 8ms
+ + pyobjc-framework-accounts==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-addressbook==12.1 has no usable wheels and you
+      require pyobjc-framework-addressbook==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-addressbook` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-addressbook==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 239ms
+Installed 1 package in 6ms
+ + pyobjc-framework-adservices==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 252ms
+Installed 1 package in 10ms
+ + pyobjc-framework-adsupport==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 248ms
+Installed 1 package in 7ms
+ + pyobjc-framework-applescriptkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 254ms
+Installed 1 package in 12ms
+ + pyobjc-framework-applescriptobjc==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-applicationservices==12.1 has no usable wheels
+      and you require pyobjc-framework-applicationservices==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-applicationservices` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-applicationservices==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 233ms
+Installed 1 package in 9ms
+ + pyobjc-framework-apptrackingtransparency==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 246ms
+Installed 1 package in 9ms
+ + pyobjc-framework-arkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-audiovideobridging==12.1 has no usable wheels
+      and you require pyobjc-framework-audiovideobridging==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-audiovideobridging` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-audiovideobridging==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-authenticationservices==12.1 has no usable
+      wheels and you require pyobjc-framework-authenticationservices==12.1, we
+      can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-authenticationservices` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-authenticationservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-automaticassessmentconfiguration==12.1
+      has no usable wheels and you require
+      pyobjc-framework-automaticassessmentconfiguration==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-automaticassessmentconfiguration` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-automaticassessmentconfiguration==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-automator==12.1 has no usable wheels and you
+      require pyobjc-framework-automator==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-automator` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-automator==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-avfoundation==12.1 has no usable wheels and you
+      require pyobjc-framework-avfoundation==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-avfoundation` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-avfoundation==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-avkit==12.1 has no usable wheels and you
+      require pyobjc-framework-avkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-avkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-avkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-avrouting==12.1 has no usable wheels and you
+      require pyobjc-framework-avrouting==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-avrouting` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-avrouting==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-backgroundassets==12.1 has no usable wheels
+      and you require pyobjc-framework-backgroundassets==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-backgroundassets` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-backgroundassets==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-browserenginekit==12.1 has no usable wheels
+      and you require pyobjc-framework-browserenginekit==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-browserenginekit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-browserenginekit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 255ms
+Installed 1 package in 19ms
+ + pyobjc-framework-businesschat==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 290ms
+Installed 1 package in 8ms
+ + pyobjc-framework-calendarstore==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-callkit==12.1 has no usable wheels and you
+      require pyobjc-framework-callkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-callkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-callkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 239ms
+Installed 1 package in 14ms
+ + pyobjc-framework-carbon==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-cfnetwork==12.1 has no usable wheels and you
+      require pyobjc-framework-cfnetwork==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-cfnetwork` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-cfnetwork==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 259ms
+Installed 1 package in 4ms
+ + pyobjc-framework-cinematic==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-classkit==12.1 has no usable wheels and you
+      require pyobjc-framework-classkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-classkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-classkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 235ms
+Installed 1 package in 6ms
+ + pyobjc-framework-cloudkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-cocoa==12.1 has no usable wheels and you
+      require pyobjc-framework-cocoa==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-cocoa` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-cocoa==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 238ms
+Installed 1 package in 5ms
+ + pyobjc-framework-collaboration==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 234ms
+Installed 1 package in 8ms
+ + pyobjc-framework-colorsync==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 245ms
+Installed 1 package in 5ms
+ + pyobjc-framework-compositorservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-contacts==12.1 has no usable wheels and you
+      require pyobjc-framework-contacts==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-contacts` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-contacts==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-contactsui==12.1 has no usable wheels and you
+      require pyobjc-framework-contactsui==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-contactsui` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-contactsui==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coreaudio==12.1 has no usable wheels and you
+      require pyobjc-framework-coreaudio==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coreaudio` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coreaudio==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coreaudiokit==12.1 has no usable wheels and you
+      require pyobjc-framework-coreaudiokit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coreaudiokit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coreaudiokit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-corebluetooth==12.1 has no usable wheels and
+      you require pyobjc-framework-corebluetooth==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-corebluetooth` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-corebluetooth==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coredata==12.1 has no usable wheels and you
+      require pyobjc-framework-coredata==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coredata` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coredata==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 264ms
+Installed 1 package in 5ms
+ + pyobjc-framework-corehaptics==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-corelocation==12.1 has no usable wheels and you
+      require pyobjc-framework-corelocation==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-corelocation` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-corelocation==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coremedia==12.1 has no usable wheels and you
+      require pyobjc-framework-coremedia==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coremedia` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coremedia==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coremediaio==12.1 has no usable wheels and you
+      require pyobjc-framework-coremediaio==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coremediaio` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coremediaio==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coremidi==12.1 has no usable wheels and you
+      require pyobjc-framework-coremidi==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coremidi` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coremidi==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coreml==12.1 has no usable wheels and you
+      require pyobjc-framework-coreml==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coreml` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coreml==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coremotion==12.1 has no usable wheels and you
+      require pyobjc-framework-coremotion==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coremotion` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coremotion==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coreservices==12.1 has no usable wheels and you
+      require pyobjc-framework-coreservices==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coreservices` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coreservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-corespotlight==12.1 has no usable wheels and
+      you require pyobjc-framework-corespotlight==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-corespotlight` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-corespotlight==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-coretext==12.1 has no usable wheels and you
+      require pyobjc-framework-coretext==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-coretext` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-coretext==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-corewlan==12.1 has no usable wheels and you
+      require pyobjc-framework-corewlan==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-corewlan` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-corewlan==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-cryptotokenkit==12.1 has no usable wheels and
+      you require pyobjc-framework-cryptotokenkit==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-cryptotokenkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-cryptotokenkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 231ms
+Installed 1 package in 23ms
+ + pyobjc-framework-datadetection==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 294ms
+Installed 1 package in 7ms
+ + pyobjc-framework-devicecheck==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 237ms
+Installed 1 package in 5ms
+ + pyobjc-framework-devicediscoveryextension==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 303ms
+Installed 1 package in 4ms
+ + pyobjc-framework-dictionaryservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-discrecording==12.1 has no usable wheels and
+      you require pyobjc-framework-discrecording==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-discrecording` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-discrecording==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 221ms
+Installed 1 package in 7ms
+ + pyobjc-framework-discrecordingui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 239ms
+Installed 1 package in 5ms
+ + pyobjc-framework-diskarbitration==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 214ms
+Installed 1 package in 4ms
+ + pyobjc-framework-dvdplayback==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 252ms
+Installed 1 package in 13ms
+ + pyobjc-framework-eventkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 214ms
+Installed 1 package in 14ms
+ + pyobjc-framework-exceptionhandling==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 224ms
+Installed 1 package in 5ms
+ + pyobjc-framework-executionpolicy==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-extensionkit==12.1 has no usable wheels and you
+      require pyobjc-framework-extensionkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-extensionkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-extensionkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-externalaccessory==12.1 has no usable wheels
+      and you require pyobjc-framework-externalaccessory==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-externalaccessory` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-externalaccessory==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-fileprovider==12.1 has no usable wheels and you
+      require pyobjc-framework-fileprovider==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-fileprovider` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-fileprovider==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 213ms
+Installed 1 package in 12ms
+ + pyobjc-framework-fileproviderui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 330ms
+Installed 1 package in 20ms
+ + pyobjc-framework-findersync==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-fsevents==12.1 has no usable wheels and you
+      require pyobjc-framework-fsevents==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-fsevents` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-fsevents==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-fskit==12.1 has no usable wheels and you
+      require pyobjc-framework-fskit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-fskit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-fskit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-gamecenter==12.1 has no usable wheels and you
+      require pyobjc-framework-gamecenter==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-gamecenter` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-gamecenter==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-gamecontroller==12.1 has no usable wheels and
+      you require pyobjc-framework-gamecontroller==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-gamecontroller` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-gamecontroller==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-gamekit==12.1 has no usable wheels and you
+      require pyobjc-framework-gamekit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-gamekit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-gamekit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-gameplaykit==12.1 has no usable wheels and you
+      require pyobjc-framework-gameplaykit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-gameplaykit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-gameplaykit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 263ms
+Installed 1 package in 6ms
+ + pyobjc-framework-gamesave==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-healthkit==12.1 has no usable wheels and you
+      require pyobjc-framework-healthkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-healthkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-healthkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-imagecapturecore==12.1 has no usable wheels
+      and you require pyobjc-framework-imagecapturecore==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-imagecapturecore` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-imagecapturecore==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-inputmethodkit==12.1 has no usable wheels and
+      you require pyobjc-framework-inputmethodkit==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-inputmethodkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-inputmethodkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 251ms
+Installed 1 package in 10ms
+ + pyobjc-framework-installerplugins==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 229ms
+Installed 1 package in 5ms
+ + pyobjc-framework-instantmessage==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-intents==12.1 has no usable wheels and you
+      require pyobjc-framework-intents==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-intents` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-intents==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-intentsui==12.1 has no usable wheels and you
+      require pyobjc-framework-intentsui==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-intentsui` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-intentsui==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-iobluetooth==12.1 has no usable wheels and you
+      require pyobjc-framework-iobluetooth==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-iobluetooth` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-iobluetooth==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 251ms
+Installed 1 package in 6ms
+ + pyobjc-framework-iobluetoothui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 249ms
+Installed 1 package in 5ms
+ + pyobjc-framework-iosurface==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 268ms
+Installed 1 package in 6ms
+ + pyobjc-framework-ituneslibrary==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 234ms
+Installed 1 package in 8ms
+ + pyobjc-framework-kernelmanagement==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 246ms
+Installed 1 package in 6ms
+ + pyobjc-framework-latentsemanticmapping==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 555ms
+Installed 1 package in 5ms
+ + pyobjc-framework-launchservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-libdispatch==12.1 has no usable wheels and you
+      require pyobjc-framework-libdispatch==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-libdispatch` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-libdispatch==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-libxpc==12.1 has no usable wheels and you
+      require pyobjc-framework-libxpc==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-libxpc` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-libxpc==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 219ms
+Installed 1 package in 8ms
+ + pyobjc-framework-linkpresentation==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-localauthentication==12.1 has no usable wheels
+      and you require pyobjc-framework-localauthentication==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-localauthentication` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-localauthentication==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 252ms
+Installed 1 package in 11ms
+ + pyobjc-framework-localauthenticationembeddedui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 280ms
+Installed 1 package in 9ms
+ + pyobjc-framework-mailkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-mapkit==12.1 has no usable wheels and you
+      require pyobjc-framework-mapkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-mapkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-mapkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 259ms
+Installed 1 package in 12ms
+ + pyobjc-framework-mediaaccessibility==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-mediaextension==12.1 has no usable wheels and
+      you require pyobjc-framework-mediaextension==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-mediaextension` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-mediaextension==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 263ms
+Installed 1 package in 13ms
+ + pyobjc-framework-medialibrary==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 288ms
+Installed 1 package in 11ms
+ + pyobjc-framework-mediaplayer==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-mediatoolbox==12.1 has no usable wheels and you
+      require pyobjc-framework-mediatoolbox==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-mediatoolbox` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-mediatoolbox==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-metal==12.1 has no usable wheels and you
+      require pyobjc-framework-metal==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-metal` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-metal==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-metalfx==12.1 has no usable wheels and you
+      require pyobjc-framework-metalfx==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-metalfx` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-metalfx==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-metalkit==12.1 has no usable wheels and you
+      require pyobjc-framework-metalkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-metalkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-metalkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-metalperformanceshaders==12.1 has no usable
+      wheels and you require pyobjc-framework-metalperformanceshaders==12.1,
+      we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-metalperformanceshaders` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-metalperformanceshaders==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 250ms
+Installed 1 package in 10ms
+ + pyobjc-framework-metalperformanceshadersgraph==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-metrickit==12.1 has no usable wheels and you
+      require pyobjc-framework-metrickit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-metrickit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-metrickit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 239ms
+Installed 1 package in 5ms
+ + pyobjc-framework-mlcompute==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-modelio==12.1 has no usable wheels and you
+      require pyobjc-framework-modelio==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-modelio` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-modelio==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-multipeerconnectivity==12.1 has no usable
+      wheels and you require pyobjc-framework-multipeerconnectivity==12.1, we
+      can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-multipeerconnectivity` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-multipeerconnectivity==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 240ms
+Installed 1 package in 6ms
+ + pyobjc-framework-naturallanguage==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 251ms
+Installed 1 package in 5ms
+ + pyobjc-framework-netfs==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-network==12.1 has no usable wheels and you
+      require pyobjc-framework-network==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-network` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-network==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-networkextension==12.1 has no usable wheels
+      and you require pyobjc-framework-networkextension==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-networkextension` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-networkextension==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-notificationcenter==12.1 has no usable wheels
+      and you require pyobjc-framework-notificationcenter==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-notificationcenter` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-notificationcenter==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 248ms
+Installed 1 package in 6ms
+ + pyobjc-framework-opendirectory==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 241ms
+Installed 1 package in 4ms
+ + pyobjc-framework-osakit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-oslog==12.1 has no usable wheels and you
+      require pyobjc-framework-oslog==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-oslog` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-oslog==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-passkit==12.1 has no usable wheels and you
+      require pyobjc-framework-passkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-passkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-passkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 224ms
+Installed 1 package in 4ms
+ + pyobjc-framework-pencilkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 247ms
+Installed 1 package in 4ms
+ + pyobjc-framework-phase==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-photos==12.1 has no usable wheels and you
+      require pyobjc-framework-photos==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-photos` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-photos==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-photosui==12.1 has no usable wheels and you
+      require pyobjc-framework-photosui==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-photosui` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-photosui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 243ms
+Installed 1 package in 4ms
+ + pyobjc-framework-preferencepanes==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-pushkit==12.1 has no usable wheels and you
+      require pyobjc-framework-pushkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-pushkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-pushkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-quartz==12.1 has no usable wheels and you
+      require pyobjc-framework-quartz==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-quartz` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-quartz==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 284ms
+Installed 1 package in 5ms
+ + pyobjc-framework-quicklookthumbnailing==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-replaykit==12.1 has no usable wheels and you
+      require pyobjc-framework-replaykit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-replaykit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-replaykit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-safariservices==12.1 has no usable wheels and
+      you require pyobjc-framework-safariservices==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-safariservices` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-safariservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-safetykit==12.1 has no usable wheels and you
+      require pyobjc-framework-safetykit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-safetykit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-safetykit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-scenekit==12.1 has no usable wheels and you
+      require pyobjc-framework-scenekit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-scenekit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-scenekit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-screencapturekit==12.1 has no usable wheels
+      and you require pyobjc-framework-screencapturekit==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-screencapturekit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-screencapturekit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-screensaver==12.1 has no usable wheels and you
+      require pyobjc-framework-screensaver==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-screensaver` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-screensaver==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 215ms
+Installed 1 package in 4ms
+ + pyobjc-framework-screentime==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-scriptingbridge==12.1 has no usable wheels and
+      you require pyobjc-framework-scriptingbridge==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-scriptingbridge` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-scriptingbridge==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 224ms
+Installed 1 package in 18ms
+ + pyobjc-framework-searchkit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-security==12.1 has no usable wheels and you
+      require pyobjc-framework-security==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-security` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-security==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 258ms
+Installed 1 package in 6ms
+ + pyobjc-framework-securityfoundation==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-securityinterface==12.1 has no usable wheels
+      and you require pyobjc-framework-securityinterface==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-securityinterface` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-securityinterface==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 233ms
+Installed 1 package in 10ms
+ + pyobjc-framework-securityui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 272ms
+Installed 1 package in 15ms
+ + pyobjc-framework-sensitivecontentanalysis==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 261ms
+Installed 1 package in 7ms
+ + pyobjc-framework-servicemanagement==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-sharedwithyou==12.1 has no usable wheels and
+      you require pyobjc-framework-sharedwithyou==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-sharedwithyou` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-sharedwithyou==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-sharedwithyoucore==12.1 has no usable wheels
+      and you require pyobjc-framework-sharedwithyoucore==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-sharedwithyoucore` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-sharedwithyoucore==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-shazamkit==12.1 has no usable wheels and you
+      require pyobjc-framework-shazamkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-shazamkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-shazamkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 222ms
+Installed 1 package in 6ms
+ + pyobjc-framework-social==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 249ms
+Installed 1 package in 10ms
+ + pyobjc-framework-soundanalysis==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-speech==12.1 has no usable wheels and you
+      require pyobjc-framework-speech==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-speech` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-speech==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-spritekit==12.1 has no usable wheels and you
+      require pyobjc-framework-spritekit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-spritekit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-spritekit==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-storekit==12.1 has no usable wheels and you
+      require pyobjc-framework-storekit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-storekit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-storekit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 224ms
+Installed 1 package in 4ms
+ + pyobjc-framework-symbols==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-syncservices==12.1 has no usable wheels and you
+      require pyobjc-framework-syncservices==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-syncservices` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-syncservices==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-systemconfiguration==12.1 has no usable wheels
+      and you require pyobjc-framework-systemconfiguration==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-systemconfiguration` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-systemconfiguration==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-systemextensions==12.1 has no usable wheels
+      and you require pyobjc-framework-systemextensions==12.1, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-systemextensions` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-systemextensions==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 257ms
+Installed 1 package in 7ms
+ + pyobjc-framework-threadnetwork==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 242ms
+Installed 1 package in 4ms
+ + pyobjc-framework-uniformtypeidentifiers==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-usernotifications==12.1 has no usable wheels
+      and you require pyobjc-framework-usernotifications==12.1, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-usernotifications` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-usernotifications==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 784ms
+Installed 1 package in 5ms
+ + pyobjc-framework-usernotificationsui==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 225ms
+Installed 1 package in 4ms
+ + pyobjc-framework-videosubscriberaccount==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-videotoolbox==12.1 has no usable wheels and you
+      require pyobjc-framework-videotoolbox==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-videotoolbox` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-videotoolbox==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-virtualization==12.1 has no usable wheels and
+      you require pyobjc-framework-virtualization==12.1, we can conclude that
+      your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-virtualization` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-virtualization==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-vision==12.1 has no usable wheels and you
+      require pyobjc-framework-vision==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-vision` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-vision==12.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyobjc-framework-webkit==12.1 has no usable wheels and you
+      require pyobjc-framework-webkit==12.1, we can conclude that your
+      requirements are unsatisfiable.
+
+hint: Wheels are required for `pyobjc-framework-webkit` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyobjc-framework-webkit==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 243ms
+Installed 1 package in 10ms
+ + pyobjc==12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 241ms
+Installed 1 package in 9ms
+ + pypiwin32==223
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 338ms
+Installed 1 package in 17ms
+ + pyreadline3==3.5.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 318ms
+Installed 1 package in 19ms
+ + pysbd==0.3.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 29ms
+ + python-dotenv==1.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 14ms
+ + python-multipart==0.0.21
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 291ms
+Installed 1 package in 7ms
+ + pyttsx3==2.99
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pywin32==311 has no wheels with a matching platform tag (e.g.,
+      `manylinux_2_41_x86_64`) and you require pywin32==311, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are available for `pywin32` (v311) on the following platforms: `win32`, `win_amd64`, `win_arm64`FAIL_INSTALL pywin32==311
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 25ms
+ + pyyaml==6.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 270ms
+Installed 1 package in 10ms
+ + referencing==0.37.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 285ms
+Installed 1 package in 8ms
+ + requests==2.32.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 284ms
+Installed 1 package in 10ms
+ + rich-toolkit==0.17.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 614ms
+Installed 1 package in 28ms
+ + rich==14.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 649ms
+Installed 1 package in 8ms
+ + rignore==0.7.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 10ms
+Prepared 1 package in 881ms
+Installed 1 package in 14ms
+ + rpds-py==0.30.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 8ms
+Prepared 1 package in 368ms
+Installed 1 package in 24ms
+ + ruamel-yaml==0.19.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 9ms
+Downloading ruff (10.7MiB)
+ Downloaded ruff
+Prepared 1 package in 31.50s
+Installed 1 package in 35ms
+ + ruff==0.14.14
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading scipy (35.6MiB)
+FAIL_INSTALL scipy==1.15.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 621ms
+Installed 1 package in 53ms
+ + sentry-sdk==2.50.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading setuptools (1.0MiB)
+ Downloaded setuptools
+Prepared 1 package in 6.92s
+Installed 1 package in 115ms
+ + setuptools==80.10.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 233ms
+Installed 1 package in 6ms
+ + shellingham==1.5.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Downloading sherpa-onnx (21.2MiB)
+FAIL_INSTALL sherpa-onnx==1.10.46
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 319ms
+Installed 1 package in 5ms
+ + six==1.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 216ms
+Installed 1 package in 6ms
+ + sniffio==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading soundfile (1.3MiB)
+ Downloaded soundfile
+Prepared 1 package in 3.29s
+Installed 1 package in 24ms
+ + soundfile==0.13.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 262ms
+Installed 1 package in 5ms
+ + soupsieve==2.8.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 233ms
+Installed 1 package in 6ms
+ + sse-starlette==3.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 214ms
+Installed 1 package in 23ms
+ + starlette==0.50.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading sympy (6.0MiB)
+ Downloaded sympy
+Prepared 1 package in 11.55s
+Installed 1 package in 395ms
+ + sympy==1.14.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 284ms
+Installed 1 package in 7ms
+ + tabulate==0.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 765ms
+Prepared 1 package in 389ms
+Installed 1 package in 7ms
+ + tomli==2.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 331ms
+Installed 1 package in 18ms
+ + tqdm==4.67.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 1.31s
+Installed 1 package in 9ms
+ + typer==0.21.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 227ms
+Installed 1 package in 12ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 290ms
+Installed 1 package in 9ms
+ + typing-inspection==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 856ms
+Installed 1 package in 25ms
+ + urllib3==2.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 244ms
+Installed 1 package in 55ms
+ + uvicorn==0.40.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading uvloop (4.2MiB)
+ Downloaded uvloop
+Prepared 1 package in 12.36s
+Installed 1 package in 31ms
+ + uvloop==0.22.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading virtualenv (5.7MiB)
+ Downloaded virtualenv
+Prepared 1 package in 1.68s
+Installed 1 package in 37ms
+ + virtualenv==20.36.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 220ms
+Installed 1 package in 21ms
+ + watchfiles==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 356ms
+Installed 1 package in 13ms
+ + websocket-client==1.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 229ms
+Prepared 1 package in 362ms
+Installed 1 package in 28ms
+ + websockets==16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 239ms
+Installed 1 package in 8ms
+ + win32-setctime==1.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 275ms
+Installed 1 package in 39ms
+ + yarl==1.22.0
+
+Testing /work/Open-LLM-VTuber__Open-LLM-VTuber...
+
+Tested 215 dependencies for known issues, found 56 issues, 243 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.3 to aiohttp@3.14.1 to fix
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3 and 2 other path(s)
+
+  Upgrade brotli@1.1.0 to brotli@1.2.0 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BROTLI-13821834] in brotli@1.1.0
+    introduced by brotli@1.1.0
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 11 other path(s)
+
+  Upgrade cryptography@46.0.3 to cryptography@48.0.1 to fix
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@46.0.3
+    introduced by cryptography@46.0.3
+  ✗ Out-of-bounds Write [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15953315] in cryptography@46.0.3
+    introduced by cryptography@46.0.3
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@46.0.3
+    introduced by cryptography@46.0.3
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@46.0.3
+    introduced by cryptography@46.0.3
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 48 other path(s)
+
+  Upgrade protobuf@6.33.4 to protobuf@6.33.5 to fix
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PROTOBUF-15090738] in protobuf@6.33.4
+    introduced by protobuf@6.33.4
+
+  Upgrade pydantic-settings@2.12.0 to pydantic-settings@2.14.2 to fix
+  ✗ Symlink Attack (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYDANTICSETTINGS-17675228] in pydantic-settings@2.12.0
+    introduced by pydantic-settings@2.12.0 and 2 other path(s)
+
+  Upgrade pygments@2.19.2 to pygments@2.20.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYGMENTS-15746419] in pygments@2.19.2
+    introduced by pygments@2.19.2 and 7 other path(s)
+
+  Upgrade pyjwt@2.10.1 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+  ✗ Inadequate Encryption Strength [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-11356591] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-15518059] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 2 other path(s)
+
+  Upgrade python-dotenv@1.2.1 to python-dotenv@1.2.2 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONDOTENV-16115271] in python-dotenv@1.2.1
+    introduced by python-dotenv@1.2.1 and 3 other path(s)
+
+  Upgrade python-multipart@0.0.21 to python-multipart@0.0.31 to fix
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16078395] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+  ✗ HTTP Request Smuggling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17344732] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+  ✗ Interpretation Conflict (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345733] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+  ✗ Improper Validation of Specified Quantity in Input (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345735] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-15117506] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16438952] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345663] in python-multipart@0.0.21
+    introduced by python-multipart@0.0.21 and 2 other path(s)
+
+  Upgrade requests@2.32.5 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.5
+    introduced by requests@2.32.5 and 2 other path(s)
+
+  Upgrade soupsieve@2.8.3 to soupsieve@2.8.4 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911084] in soupsieve@2.8.3
+    introduced by soupsieve@2.8.3 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911087] in soupsieve@2.8.3
+    introduced by soupsieve@2.8.3 and 2 other path(s)
+
+  Upgrade starlette@0.50.0 to starlette@1.3.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 6 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 6 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 6 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 6 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 6 other path(s)
+
+  Upgrade urllib3@2.6.3 to urllib3@2.7.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 5 other path(s)
+  ✗ Decompression Bomb [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642059] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 5 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      Open-LLM-VTuber__Open-LLM-VTuber
+Open source:       no
+Project path:      /work/Open-LLM-VTuber__Open-LLM-VTuber
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

@@ -1,0 +1,737 @@
+# project=milesmcc__shynet
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      Traceback (most recent call last):
+        File "/tmp/tmpgl_rtkb8/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+        File "/tmp/tmpgl_rtkb8/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/tmpgl_rtkb8/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 143, in get_requires_for_build_wheel
+          return hook(config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-i8h_33ht/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-i8h_33ht/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-i8h_33ht/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+        File "/tmp/pip-build-env-i8h_33ht/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+        File "<string>", line 9, in <module>
+      ImportError: cannot import name 'convert_path' from 'setuptools' (/tmp/pip-build-env-i8h_33ht/overlay/lib/python3.12/site-packages/setuptools/__init__.py)
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'django-allauth' when getting requirements to build wheel
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmpgl_rtkb8/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmp4d7qwp95/tmpujvbgopw', '-r', '/tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1001.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 46 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1005.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1007.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1009.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1010.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 2 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1012.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1016.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1018.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 7 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1020.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      Traceback (most recent call last):
+        File "/tmp/tmp5msj66ro/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+        File "/tmp/tmp5msj66ro/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/tmp5msj66ro/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 143, in get_requires_for_build_wheel
+          return hook(config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-wa0uoqw3/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-wa0uoqw3/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-wa0uoqw3/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+        File "/tmp/pip-build-env-wa0uoqw3/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+        File "<string>", line 9, in <module>
+      ImportError: cannot import name 'convert_path' from 'setuptools' (/tmp/pip-build-env-wa0uoqw3/overlay/lib/python3.12/site-packages/setuptools/__init__.py)
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'django-allauth' when getting requirements to build wheel
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp5msj66ro/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmp1nj1x1t2/tmpa20r8x9_', '-r', '/tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.1020.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [34 lines of output]
+      /tmp/pip-build-env-8filstlm/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running egg_info
+      writing psycopg2_binary.egg-info/PKG-INFO
+      writing dependency_links to psycopg2_binary.egg-info/dependency_links.txt
+      writing top-level names to psycopg2_binary.egg-info/top_level.txt
+      
+      Error: pg_config executable not found.
+      
+      pg_config is required to build psycopg2 from source.  Please add the directory
+      containing pg_config to the $PATH or specify the full executable path with the
+      option:
+      
+          python setup.py build_ext --pg-config /path/to/pg_config build ...
+      
+      or with the pg_config option in 'setup.cfg'.
+      
+      If you prefer to avoid building psycopg2 from source, please install the PyPI
+      'psycopg2-binary' package instead.
+      
+      For further information please check the 'doc/src/install.rst' file (also at
+      <https://www.psycopg.org/docs/install.html>).
+      
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'psycopg2-binary' when getting requirements to build wheel
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmphi289_u_/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpwxydhpvi/tmpc61_ziwp', '-r', '/tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2001.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2005.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2007.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 6 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2009.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2010.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 4 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2012.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 4 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2016.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 1 known vulnerability in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2018.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [34 lines of output]
+      /tmp/pip-build-env-_utr5925/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running egg_info
+      writing psycopg2_binary.egg-info/PKG-INFO
+      writing dependency_links to psycopg2_binary.egg-info/dependency_links.txt
+      writing top-level names to psycopg2_binary.egg-info/top_level.txt
+      
+      Error: pg_config executable not found.
+      
+      pg_config is required to build psycopg2 from source.  Please add the directory
+      containing pg_config to the $PATH or specify the full executable path with the
+      option:
+      
+          python setup.py build_ext --pg-config /path/to/pg_config build ...
+      
+      or with the pg_config option in 'setup.cfg'.
+      
+      If you prefer to avoid building psycopg2 from source, please install the PyPI
+      'psycopg2-binary' package instead.
+      
+      For further information please check the 'doc/src/install.rst' file (also at
+      <https://www.psycopg.org/docs/install.html>).
+      
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'psycopg2-binary' when getting requirements to build wheel
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp4pa2h4li/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpxhw5xv7i/tmpawt927u_', '-r', '/tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2018.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.2020.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [67 lines of output]
+      /tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/wheel/bdist_wheel.py:4: FutureWarning: The 'wheel' package is no longer the canonical location of the 'bdist_wheel' command, and will be removed in a future release. Please update to setuptools v70.1 or later which contains an integrated version of this command.
+        warn(
+      /tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: MIT License
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running egg_info
+      writing lib3/PyYAML.egg-info/PKG-INFO
+      writing dependency_links to lib3/PyYAML.egg-info/dependency_links.txt
+      writing top-level names to lib3/PyYAML.egg-info/top_level.txt
+      Traceback (most recent call last):
+        File "/tmp/tmpl9idsnmf/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+        File "/tmp/tmpl9idsnmf/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/tmpl9idsnmf/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 143, in get_requires_for_build_wheel
+          return hook(config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+        File "<string>", line 271, in <module>
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/__init__.py", line 117, in setup
+          return distutils.core.setup(**attrs)  # type: ignore[return-value]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 186, in setup
+          return run_commands(dist)
+                 ^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+          dist.run_commands()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 1001, in run_commands
+          self.run_command(cmd)
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/dist.py", line 1107, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 1020, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 338, in run
+          self.find_sources()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 346, in find_sources
+          mm.run()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 568, in run
+          self.add_defaults()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 606, in add_defaults
+          sdist.add_defaults(self)
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/command/sdist.py", line 110, in add_defaults
+          super().add_defaults()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py", line 245, in add_defaults
+          self._add_defaults_ext()
+        File "/tmp/pip-build-env-f8rqlkfm/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py", line 330, in _add_defaults_ext
+          self.filelist.extend(build_ext.get_source_files())
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "<string>", line 201, in get_source_files
+      AttributeError: 'build_ext' object has no attribute 'cython_sources'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'pyyaml' when getting requirements to build wheel
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmpl9idsnmf/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpl7v7umg9/tmp231nlmxj', '-r', '/tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3001.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 1 known vulnerability in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3004.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [67 lines of output]
+      /tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/wheel/bdist_wheel.py:4: FutureWarning: The 'wheel' package is no longer the canonical location of the 'bdist_wheel' command, and will be removed in a future release. Please update to setuptools v70.1 or later which contains an integrated version of this command.
+        warn(
+      /tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: MIT License
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running egg_info
+      writing lib3/PyYAML.egg-info/PKG-INFO
+      writing dependency_links to lib3/PyYAML.egg-info/dependency_links.txt
+      writing top-level names to lib3/PyYAML.egg-info/top_level.txt
+      Traceback (most recent call last):
+        File "/tmp/tmpvepxro0c/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
+          main()
+        File "/tmp/tmpvepxro0c/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/tmpvepxro0c/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 143, in get_requires_for_build_wheel
+          return hook(config_settings)
+                 ^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 317, in run_setup
+          exec(code, locals())
+        File "<string>", line 271, in <module>
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/__init__.py", line 117, in setup
+          return distutils.core.setup(**attrs)  # type: ignore[return-value]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 186, in setup
+          return run_commands(dist)
+                 ^^^^^^^^^^^^^^^^^^
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+          dist.run_commands()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 1001, in run_commands
+          self.run_command(cmd)
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/dist.py", line 1107, in run_command
+          super().run_command(command)
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py", line 1020, in run_command
+          cmd_obj.run()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 338, in run
+          self.find_sources()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 346, in find_sources
+          mm.run()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 568, in run
+          self.add_defaults()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py", line 606, in add_defaults
+          sdist.add_defaults(self)
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/command/sdist.py", line 110, in add_defaults
+          super().add_defaults()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py", line 245, in add_defaults
+          self._add_defaults_ext()
+        File "/tmp/pip-build-env-dfv14pme/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py", line 330, in _add_defaults_ext
+          self.filelist.extend(build_ext.get_source_files())
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "<string>", line 201, in get_source_files
+      AttributeError: 'build_ext' object has no attribute 'cython_sources'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'pyyaml' when getting requirements to build wheel
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmpvepxro0c/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpwf57_iv3/tmpds572_kc', '-r', '/tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3004.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3005.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3007.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 5 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3009.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 4 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3011.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 3 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3012.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3014.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 12 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3016.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3018.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-milesmcc__shynet-f8roiorx/milesmcc__shynet.3019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+

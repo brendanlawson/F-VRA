@@ -1,0 +1,17 @@
+# project: tropicoo__yt-dlp-bot
+# scanner: snyk
+# time: Fri Jul 10 19:28:19 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\tropicoo__yt-dlp-bot.json
+# exit code: 3
+=== STDOUT ===
+
+ FATAL   No supported files found (SNYK-CLI-0008)
+                                                                                                                                                      
+           Could not detect supported target files in C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\tropicoo__yt-dlp-bot.    
+           Please see our documentation for supported languages and target files: https://snyk.co/udVgQ and make sure you are in the right directory. 
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0008 
+                                                                         
+ID:      urn:snyk:interaction:a9aa9c66-3405-46e1-986f-54e9ad538f2f 
+
+=== STDERR ===

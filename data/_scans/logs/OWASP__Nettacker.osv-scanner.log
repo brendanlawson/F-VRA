@@ -1,0 +1,12 @@
+# project: OWASP__Nettacker
+# scanner: osv-scanner
+# time: Sat Jul 11 09:24:50 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\OWASP__Nettacker.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\OWASP__Nettacker
+# exit code: 1
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\OWASP__Nettacker
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\OWASP__Nettacker\requirements.pinned.txt file and found 55 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 1.0062ms elapsed, 1.0062ms wall time

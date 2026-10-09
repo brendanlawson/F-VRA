@@ -1,0 +1,208 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because psycopg2==2.9.11 has no usable wheels and you require
+      psycopg2==2.9.11, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `psycopg2` because building from source is disabled for all packages (i.e., with `--no-build`)ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 482ms
+Installed 1 package in 11ms
+ + backports-zstd==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 6ms
+ + bcrypt==5.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 6ms
+ + blinker==1.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 21ms
+ + brotli==1.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 35ms
+ + certifi==2026.6.17
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 405ms
+Installed 1 package in 13ms
+ + cffi==2.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 400ms
+Installed 1 package in 10ms
+ + charset-normalizer==3.4.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 22ms
+ + click==8.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 46ms
+ + cryptography==46.0.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 9ms
+ + defusedxml==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 55ms
+ + dnspython==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 270ms
+Installed 1 package in 9ms
+ + flask-compress==1.23
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + flask-cors==6.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + flask==3.1.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 14ms
+ + idna==3.18
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 8ms
+ + itsdangerous==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 10ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 7ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 246ms
+Installed 1 package in 7ms
+ + mohawk==1.1.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because psycopg2==2.9.11 has no usable wheels and you require
+      psycopg2==2.9.11, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `psycopg2` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL psycopg2==2.9.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pycparser==3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 10ms
+ + pyjwt==2.12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading pymongo (1.6MiB)
+ Downloaded pymongo
+Prepared 1 package in 631ms
+Installed 1 package in 43ms
+ + pymongo==4.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 228ms
+Prepared 1 package in 345ms
+Installed 1 package in 9ms
+ + pyparsing==3.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 11ms
+ + python-dateutil==2.9.0.post0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 209ms
+Prepared 1 package in 443ms
+Installed 1 package in 138ms
+ + pytz==2026.1.post1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pyyaml==6.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 233ms
+Installed 1 package in 7ms
+ + requests-hawk==1.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 11ms
+ + requests==2.32.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 475ms
+Installed 1 package in 50ms
+ + sentry-sdk==2.56.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 4ms
+ + six==1.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 248ms
+Installed 1 package in 10ms
+ + strenum==0.4.15
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 20ms
+ + urllib3==2.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 369ms
+Installed 1 package in 19ms
+ + werkzeug==3.1.7
+
+Testing /work/alerta__alerta...
+
+Tested 33 dependencies for known issues, found 8 issues, 9 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade cryptography@46.0.6 to cryptography@48.0.1 to fix
+  ✗ Out-of-bounds Write [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15953315] in cryptography@46.0.6
+    introduced by cryptography@46.0.6
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@46.0.6
+    introduced by cryptography@46.0.6
+
+  Upgrade pyjwt@2.12.1 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.12.1
+    introduced by pyjwt@2.12.1
+
+  Upgrade requests@2.32.5 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.5
+    introduced by requests@2.32.5 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      alerta__alerta
+Open source:       no
+Project path:      /work/alerta__alerta
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

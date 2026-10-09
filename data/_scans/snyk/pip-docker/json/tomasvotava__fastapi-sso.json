@@ -1,0 +1,3078 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824465",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "x-forwarded-sudo"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-08T05:26:06.811993Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:03:33.580736Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:03:33.580736Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T05:26:06.811993Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value via the `PcfFontFile._load_bitmaps` process. An attacker can cause excessive memory allocation by supplying crafted PCF font data that bypasses decompression bomb checks.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.27402",
+        "probability": "0.00354",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54059"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-8v84-f9pq-wr9x"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:44:33.060877Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:21.083000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:44:33.231381Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:03:33.580736Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824466",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "dino320"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-07T15:34:04.535644Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:03:32.542818Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:03:32.542818Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:34:04.535644Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `FontFile.compile` process. An attacker can cause excessive memory allocation by providing a specially crafted font file that triggers uncontrolled resource consumption during image conversion or saving.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.28131",
+        "probability": "0.00361",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54060"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-5x94-69rx-g8h2"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:45:08.467710Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:07.601000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:45:08.632134Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:03:32.542818Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824467",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+      "credit": [
+        "sakura 1121984919"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "low",
+      "cvssScore": 2,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "cvssV3BaseScore": 4.5,
+          "modificationTime": "2026-07-08T05:26:21.919413Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 2,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:04:47.314061Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:04:47.314061Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T05:26:21.919413Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `get_command` function. An attacker can execute arbitrary commands by supplying a file path containing shell metacharacters.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.03461",
+        "probability": "0.00136",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-55798"
+        ],
+        "CWE": [
+          "CWE-78"
+        ],
+        "GHSA": [
+          "GHSA-4x4j-2g7c-83w6"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:46:12.248283Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:39:27.290000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:46:12.471863Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:04:47.314061Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "low",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824468",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "x-forwarded-sudo"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-07T15:34:04.473059Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:04:47.323025Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:04:47.323025Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:34:04.473059Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `bdf_char` process when attacker-controlled dimensions from a BDF font file are passed to `Image.new()` without invoking the `_decompression_bomb_check` function. An attacker can cause excessive memory allocation by supplying specially crafted font files.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.28440",
+        "probability": "0.00364",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-55379"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-45hq-cxwh-f6vc"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:46:56.559331Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:07.557000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:46:56.734068Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:04:47.323025Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824469",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "x-forwarded-sudo"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-07T15:34:06.786134Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:04:47.287453Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:04:47.287453Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:34:06.786134Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `GdImageFile._open` process. An attacker can cause excessive memory allocation by supplying a crafted `.gd` file that bypasses decompression bomb checks.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.28131",
+        "probability": "0.00361",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-55380"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-phj9-mv4w-65pm"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:47:21.459205Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:10.806000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:47:21.626067Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:04:47.287453Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824465",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "x-forwarded-sudo"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-08T05:26:06.811993Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:03:33.580736Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:03:33.580736Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T05:26:06.811993Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value via the `PcfFontFile._load_bitmaps` process. An attacker can cause excessive memory allocation by supplying crafted PCF font data that bypasses decompression bomb checks.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.27402",
+        "probability": "0.00354",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54059"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-8v84-f9pq-wr9x"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:44:33.060877Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:21.083000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:44:33.231381Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:03:33.580736Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "cairosvg@2.9.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824466",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "dino320"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-07T15:34:04.535644Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:03:32.542818Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:03:32.542818Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:34:04.535644Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `FontFile.compile` process. An attacker can cause excessive memory allocation by providing a specially crafted font file that triggers uncontrolled resource consumption during image conversion or saving.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.28131",
+        "probability": "0.00361",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54060"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-5x94-69rx-g8h2"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:45:08.467710Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:07.601000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:45:08.632134Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:03:32.542818Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "cairosvg@2.9.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824467",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+      "credit": [
+        "sakura 1121984919"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "low",
+      "cvssScore": 2,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "cvssV3BaseScore": 4.5,
+          "modificationTime": "2026-07-08T05:26:21.919413Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 2,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:04:47.314061Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:04:47.314061Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T05:26:21.919413Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `get_command` function. An attacker can execute arbitrary commands by supplying a file path containing shell metacharacters.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.03461",
+        "probability": "0.00136",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-55798"
+        ],
+        "CWE": [
+          "CWE-78"
+        ],
+        "GHSA": [
+          "GHSA-4x4j-2g7c-83w6"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:46:12.248283Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:39:27.290000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:46:12.471863Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:04:47.314061Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "low",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "cairosvg@2.9.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824468",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "x-forwarded-sudo"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-07T15:34:04.473059Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:04:47.323025Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:04:47.323025Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:34:04.473059Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `bdf_char` process when attacker-controlled dimensions from a BDF font file are passed to `Image.new()` without invoking the `_decompression_bomb_check` function. An attacker can cause excessive memory allocation by supplying specially crafted font files.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.28440",
+        "probability": "0.00364",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-55379"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-45hq-cxwh-f6vc"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:46:56.559331Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:07.557000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:46:56.734068Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:04:47.323025Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "cairosvg@2.9.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PILLOW-17824469",
+      "title": "Memory Allocation with Excessive Size Value",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "x-forwarded-sudo"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,12.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "12.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pillow",
+      "references": [
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+          "title": "Release Notes"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-07T15:34:06.786134Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-08T14:04:47.287453Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-08T14:04:47.287453Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:34:06.786134Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `GdImageFile._open` process. An attacker can cause excessive memory allocation by supplying a crafted `.gd` file that bypasses decompression bomb checks.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+      "epssDetails": {
+        "percentile": "0.28131",
+        "probability": "0.00361",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-55380"
+        ],
+        "CWE": [
+          "CWE-789"
+        ],
+        "GHSA": [
+          "GHSA-phj9-mv4w-65pm"
+        ]
+      },
+      "packageName": "pillow",
+      "proprietary": false,
+      "creationTime": "2026-07-06T20:47:21.459205Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-07-06T20:42:10.806000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-07-06T20:47:21.626067Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-08T14:04:47.287453Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "cairosvg@2.9.0",
+        "pillow@12.2.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pillow",
+      "version": "12.2.0"
+    },
+    {
+      "id": "SNYK-PYTHON-STARLETTE-17342515",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Ethan Kim",
+        "Z-Bra0",
+        "Abdul Moiz",
+        "Moaaz",
+        "SeongHun Pak",
+        "oxqnd"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0.4.1,1.3.1)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.3.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "starlette",
+      "references": [
+        {
+          "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/Kludex/starlette/commit/dba1c4babc4f99ad2622bb913d87045775dda735",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-02T15:54:16.295898Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-02T11:05:24.946707Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-02T15:54:16.749185Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T15:54:16.749185Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T15:54:16.295898Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:24.946707Z"
+        }
+      ],
+      "description": "## Overview\n[starlette](https://www.pypi.org/project/starlette) is a The little ASGI library that shines.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the `request.form`. An attacker can exhaust system resources and disrupt service availability by submitting a specially crafted `application/x-www-form-urlencoded` request containing either an excessive number of fields or a very large field value, leading to event loop blocking or unbounded memory allocation.\n## Remediation\nUpgrade `starlette` to version 1.3.1 or higher.\n## References\n- [GitHub Advisory](https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq)\n- [GitHub Commit](https://github.com/Kludex/starlette/commit/dba1c4babc4f99ad2622bb913d87045775dda735)\n",
+      "epssDetails": {
+        "percentile": "0.19040",
+        "probability": "0.00275",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54283"
+        ],
+        "CWE": [
+          "CWE-770"
+        ],
+        "GHSA": [
+          "GHSA-82w8-qh3p-5jfq"
+        ]
+      },
+      "packageName": "starlette",
+      "proprietary": false,
+      "creationTime": "2026-06-16T10:46:25.320045Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:39:53Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-17T13:11:47.451505Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-02T15:54:16.749185Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "starlette@1.2.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "starlette",
+      "version": "1.2.1"
+    },
+    {
+      "id": "SNYK-PYTHON-STARLETTE-17342519",
+      "title": "Use of Incorrectly-Resolved Name or Reference",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "credit": [
+        "Nicolas Lamoureux"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "starlette",
+      "references": [
+        {
+          "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/Kludex/starlette/commit/167b5850e809f38b27fbfed62d58bf6442855975",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 4.8,
+          "modificationTime": "2026-06-29T08:29:58.090643Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2026-07-02T11:05:28.082453Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-07T15:25:52.490753Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:25:52.490753Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-29T08:29:58.090643Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:28.082453Z"
+        }
+      ],
+      "description": "## Overview\n[starlette](https://www.pypi.org/project/starlette) is a The little ASGI library that shines.\n\nAffected versions of this package are vulnerable to Use of Incorrectly-Resolved Name or Reference in the reconstruction of `request.url` when the HTTP request path does not begin with `/`. An attacker can mislead the application into trusting an attacker-controlled hostname by sending a specially crafted request path that manipulates the authority component of the URL. \n\n**Note:** This is only exploitable if the ASGI server forwards a request-target lacking a leading `/` into `scope[\"path\"]`, and the application uses `request.url`, `request.url.netloc`, or `request.url.hostname` for security-sensitive decisions before routing or in 404/exception handlers.\n## Remediation\nUpgrade `starlette` to version 1.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3)\n- [GitHub Commit](https://github.com/Kludex/starlette/commit/167b5850e809f38b27fbfed62d58bf6442855975)\n",
+      "epssDetails": {
+        "percentile": "0.08530",
+        "probability": "0.00187",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54282"
+        ],
+        "CWE": [
+          "CWE-706"
+        ],
+        "GHSA": [
+          "GHSA-jp82-jpqv-5vv3"
+        ]
+      },
+      "packageName": "starlette",
+      "proprietary": false,
+      "creationTime": "2026-06-16T10:50:53.328532Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:38:08Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-16T10:50:53.509979Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-07T15:25:52.490753Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "starlette@1.2.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "starlette",
+      "version": "1.2.1"
+    },
+    {
+      "id": "SNYK-PYTHON-STARLETTE-17342515",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Ethan Kim",
+        "Z-Bra0",
+        "Abdul Moiz",
+        "Moaaz",
+        "SeongHun Pak",
+        "oxqnd"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0.4.1,1.3.1)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.3.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "starlette",
+      "references": [
+        {
+          "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/Kludex/starlette/commit/dba1c4babc4f99ad2622bb913d87045775dda735",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-02T15:54:16.295898Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-07-02T11:05:24.946707Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-02T15:54:16.749185Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T15:54:16.749185Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T15:54:16.295898Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:24.946707Z"
+        }
+      ],
+      "description": "## Overview\n[starlette](https://www.pypi.org/project/starlette) is a The little ASGI library that shines.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the `request.form`. An attacker can exhaust system resources and disrupt service availability by submitting a specially crafted `application/x-www-form-urlencoded` request containing either an excessive number of fields or a very large field value, leading to event loop blocking or unbounded memory allocation.\n## Remediation\nUpgrade `starlette` to version 1.3.1 or higher.\n## References\n- [GitHub Advisory](https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq)\n- [GitHub Commit](https://github.com/Kludex/starlette/commit/dba1c4babc4f99ad2622bb913d87045775dda735)\n",
+      "epssDetails": {
+        "percentile": "0.19040",
+        "probability": "0.00275",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54283"
+        ],
+        "CWE": [
+          "CWE-770"
+        ],
+        "GHSA": [
+          "GHSA-82w8-qh3p-5jfq"
+        ]
+      },
+      "packageName": "starlette",
+      "proprietary": false,
+      "creationTime": "2026-06-16T10:46:25.320045Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:39:53Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-17T13:11:47.451505Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-02T15:54:16.749185Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "fastapi@0.139.0",
+        "starlette@1.2.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "starlette",
+      "version": "1.2.1"
+    },
+    {
+      "id": "SNYK-PYTHON-STARLETTE-17342519",
+      "title": "Use of Incorrectly-Resolved Name or Reference",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "credit": [
+        "Nicolas Lamoureux"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.3.0)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.3.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "starlette",
+      "references": [
+        {
+          "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/Kludex/starlette/commit/167b5850e809f38b27fbfed62d58bf6442855975",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 4.8,
+          "modificationTime": "2026-06-29T08:29:58.090643Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2026-07-02T11:05:28.082453Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-07T15:25:52.490753Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-07T15:25:52.490753Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-06-29T08:29:58.090643Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "assigner": "SUSE",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:05:28.082453Z"
+        }
+      ],
+      "description": "## Overview\n[starlette](https://www.pypi.org/project/starlette) is a The little ASGI library that shines.\n\nAffected versions of this package are vulnerable to Use of Incorrectly-Resolved Name or Reference in the reconstruction of `request.url` when the HTTP request path does not begin with `/`. An attacker can mislead the application into trusting an attacker-controlled hostname by sending a specially crafted request path that manipulates the authority component of the URL. \n\n**Note:** This is only exploitable if the ASGI server forwards a request-target lacking a leading `/` into `scope[\"path\"]`, and the application uses `request.url`, `request.url.netloc`, or `request.url.hostname` for security-sensitive decisions before routing or in 404/exception handlers.\n## Remediation\nUpgrade `starlette` to version 1.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3)\n- [GitHub Commit](https://github.com/Kludex/starlette/commit/167b5850e809f38b27fbfed62d58bf6442855975)\n",
+      "epssDetails": {
+        "percentile": "0.08530",
+        "probability": "0.00187",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-54282"
+        ],
+        "CWE": [
+          "CWE-706"
+        ],
+        "GHSA": [
+          "GHSA-jp82-jpqv-5vv3"
+        ]
+      },
+      "packageName": "starlette",
+      "proprietary": false,
+      "creationTime": "2026-06-16T10:50:53.328532Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-06-15T20:38:08Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-06-16T10:50:53.509979Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-07T15:25:52.490753Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "tomasvotava__fastapi-sso@0.0.0",
+        "fastapi@0.139.0",
+        "starlette@1.2.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "starlette",
+      "version": "1.2.1"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 86,
+  "org": "wuwuyn",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "pip",
+  "ignoreSettings": {
+    "adminOnly": false,
+    "reasonRequired": false,
+    "disregardFilesystemIgnores": false
+  },
+  "summary": "14 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [
+      {
+        "id": "SNYK-PYTHON-PILLOW-17824465",
+        "title": "Memory Allocation with Excessive Size Value",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "x-forwarded-sudo"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,12.3.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "12.3.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pillow",
+        "references": [
+          {
+            "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+            "title": "Release Notes"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-08T05:26:06.811993Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-08T14:03:33.580736Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T14:03:33.580736Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T05:26:06.811993Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value via the `PcfFontFile._load_bitmaps` process. An attacker can cause excessive memory allocation by supplying crafted PCF font data that bypasses decompression bomb checks.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+        "epssDetails": {
+          "percentile": "0.27402",
+          "probability": "0.00354",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-54059"
+          ],
+          "CWE": [
+            "CWE-789"
+          ],
+          "GHSA": [
+            "GHSA-8v84-f9pq-wr9x"
+          ]
+        },
+        "packageName": "pillow",
+        "proprietary": false,
+        "creationTime": "2026-07-06T20:44:33.060877Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-07-06T20:42:21.083000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-07-06T20:44:33.231381Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-08T14:03:33.580736Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "cairosvg@2.9.0",
+          "pillow@12.2.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pillow",
+        "version": "12.2.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-PILLOW-17824466",
+        "title": "Memory Allocation with Excessive Size Value",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "dino320"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,12.3.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "12.3.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pillow",
+        "references": [
+          {
+            "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+            "title": "Release Notes"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-07T15:34:04.535644Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-08T14:03:32.542818Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T14:03:32.542818Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-07T15:34:04.535644Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `FontFile.compile` process. An attacker can cause excessive memory allocation by providing a specially crafted font file that triggers uncontrolled resource consumption during image conversion or saving.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+        "epssDetails": {
+          "percentile": "0.28131",
+          "probability": "0.00361",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-54060"
+          ],
+          "CWE": [
+            "CWE-789"
+          ],
+          "GHSA": [
+            "GHSA-5x94-69rx-g8h2"
+          ]
+        },
+        "packageName": "pillow",
+        "proprietary": false,
+        "creationTime": "2026-07-06T20:45:08.467710Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-07-06T20:42:07.601000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-07-06T20:45:08.632134Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-08T14:03:32.542818Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "cairosvg@2.9.0",
+          "pillow@12.2.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pillow",
+        "version": "12.2.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-PILLOW-17824467",
+        "title": "Command Injection",
+        "CVSSv3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+        "credit": [
+          "sakura 1121984919"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,12.3.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "12.3.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "low",
+        "cvssScore": 2,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pillow",
+        "references": [
+          {
+            "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+            "title": "Release Notes"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "cvssV3BaseScore": 4.5,
+            "modificationTime": "2026-07-08T05:26:21.919413Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "low",
+            "baseScore": 2,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-08T14:04:47.314061Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 4.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T14:04:47.314061Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 4.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T05:26:21.919413Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `get_command` function. An attacker can execute arbitrary commands by supplying a file path containing shell metacharacters.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/8404ea5fe5df40fc34aa1e51403dd6fce0778b8a)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+        "epssDetails": {
+          "percentile": "0.03461",
+          "probability": "0.00136",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-55798"
+          ],
+          "CWE": [
+            "CWE-78"
+          ],
+          "GHSA": [
+            "GHSA-4x4j-2g7c-83w6"
+          ]
+        },
+        "packageName": "pillow",
+        "proprietary": false,
+        "creationTime": "2026-07-06T20:46:12.248283Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-07-06T20:39:27.290000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-07-06T20:46:12.471863Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-08T14:04:47.314061Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "cairosvg@2.9.0",
+          "pillow@12.2.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pillow",
+        "version": "12.2.0",
+        "severityWithCritical": "low"
+      },
+      {
+        "id": "SNYK-PYTHON-PILLOW-17824468",
+        "title": "Memory Allocation with Excessive Size Value",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "x-forwarded-sudo"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,12.3.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "12.3.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pillow",
+        "references": [
+          {
+            "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+            "title": "Release Notes"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-07T15:34:04.473059Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-08T14:04:47.323025Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T14:04:47.323025Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-07T15:34:04.473059Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `bdf_char` process when attacker-controlled dimensions from a BDF font file are passed to `Image.new()` without invoking the `_decompression_bomb_check` function. An attacker can cause excessive memory allocation by supplying specially crafted font files.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-45hq-cxwh-f6vc)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+        "epssDetails": {
+          "percentile": "0.28440",
+          "probability": "0.00364",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-55379"
+          ],
+          "CWE": [
+            "CWE-789"
+          ],
+          "GHSA": [
+            "GHSA-45hq-cxwh-f6vc"
+          ]
+        },
+        "packageName": "pillow",
+        "proprietary": false,
+        "creationTime": "2026-07-06T20:46:56.559331Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-07-06T20:42:07.557000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-07-06T20:46:56.734068Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-08T14:04:47.323025Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "cairosvg@2.9.0",
+          "pillow@12.2.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pillow",
+        "version": "12.2.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-PILLOW-17824469",
+        "title": "Memory Allocation with Excessive Size Value",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "x-forwarded-sudo"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,12.3.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "12.3.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pillow",
+        "references": [
+          {
+            "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+            "title": "Release Notes"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-07T15:34:06.786134Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-08T14:04:47.287453Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-08T14:04:47.287453Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-07T15:34:06.786134Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Memory Allocation with Excessive Size Value in the `GdImageFile._open` process. An attacker can cause excessive memory allocation by supplying a crafted `.gd` file that bypasses decompression bomb checks.\n## Remediation\nUpgrade `pillow` to version 12.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm)\n- [GitHub Commit](https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675)\n- [Release Notes](https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst)\n",
+        "epssDetails": {
+          "percentile": "0.28131",
+          "probability": "0.00361",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-55380"
+          ],
+          "CWE": [
+            "CWE-789"
+          ],
+          "GHSA": [
+            "GHSA-phj9-mv4w-65pm"
+          ]
+        },
+        "packageName": "pillow",
+        "proprietary": false,
+        "creationTime": "2026-07-06T20:47:21.459205Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-07-06T20:42:10.806000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-07-06T20:47:21.626067Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-08T14:04:47.287453Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "cairosvg@2.9.0",
+          "pillow@12.2.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "pillow",
+        "version": "12.2.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-STARLETTE-17342515",
+        "title": "Allocation of Resources Without Limits or Throttling",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "Ethan Kim",
+          "Z-Bra0",
+          "Abdul Moiz",
+          "Moaaz",
+          "SeongHun Pak",
+          "oxqnd"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0.4.1,1.3.1)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "1.3.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "starlette",
+        "references": [
+          {
+            "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/Kludex/starlette/commit/dba1c4babc4f99ad2622bb913d87045775dda735",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-02T15:54:16.295898Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 7.5,
+            "modificationTime": "2026-07-02T11:05:24.946707Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-02T15:54:16.749185Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T15:54:16.749185Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T15:54:16.295898Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "SUSE",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:24.946707Z"
+          }
+        ],
+        "description": "## Overview\n[starlette](https://www.pypi.org/project/starlette) is a The little ASGI library that shines.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the `request.form`. An attacker can exhaust system resources and disrupt service availability by submitting a specially crafted `application/x-www-form-urlencoded` request containing either an excessive number of fields or a very large field value, leading to event loop blocking or unbounded memory allocation.\n## Remediation\nUpgrade `starlette` to version 1.3.1 or higher.\n## References\n- [GitHub Advisory](https://github.com/Kludex/starlette/security/advisories/GHSA-82w8-qh3p-5jfq)\n- [GitHub Commit](https://github.com/Kludex/starlette/commit/dba1c4babc4f99ad2622bb913d87045775dda735)\n",
+        "epssDetails": {
+          "percentile": "0.19040",
+          "probability": "0.00275",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-54283"
+          ],
+          "CWE": [
+            "CWE-770"
+          ],
+          "GHSA": [
+            "GHSA-82w8-qh3p-5jfq"
+          ]
+        },
+        "packageName": "starlette",
+        "proprietary": false,
+        "creationTime": "2026-06-16T10:46:25.320045Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-15T20:39:53Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-17T13:11:47.451505Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-02T15:54:16.749185Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "fastapi@0.139.0",
+          "starlette@1.2.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "starlette",
+        "version": "1.2.1",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-STARLETTE-17342519",
+        "title": "Use of Incorrectly-Resolved Name or Reference",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "credit": [
+          "Nicolas Lamoureux"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,1.3.0)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "1.3.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.3,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "starlette",
+        "references": [
+          {
+            "url": "https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/Kludex/starlette/commit/167b5850e809f38b27fbfed62d58bf6442855975",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "cvssV3BaseScore": 4.8,
+            "modificationTime": "2026-06-29T08:29:58.090643Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "low",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "cvssV3BaseScore": 3.7,
+            "modificationTime": "2026-07-02T11:05:28.082453Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.3,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-07T15:25:52.490753Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-07T15:25:52.490753Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+            "assigner": "Red Hat",
+            "severity": "medium",
+            "baseScore": 4.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-06-29T08:29:58.090643Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "assigner": "SUSE",
+            "severity": "low",
+            "baseScore": 3.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:05:28.082453Z"
+          }
+        ],
+        "description": "## Overview\n[starlette](https://www.pypi.org/project/starlette) is a The little ASGI library that shines.\n\nAffected versions of this package are vulnerable to Use of Incorrectly-Resolved Name or Reference in the reconstruction of `request.url` when the HTTP request path does not begin with `/`. An attacker can mislead the application into trusting an attacker-controlled hostname by sending a specially crafted request path that manipulates the authority component of the URL. \n\n**Note:** This is only exploitable if the ASGI server forwards a request-target lacking a leading `/` into `scope[\"path\"]`, and the application uses `request.url`, `request.url.netloc`, or `request.url.hostname` for security-sensitive decisions before routing or in 404/exception handlers.\n## Remediation\nUpgrade `starlette` to version 1.3.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/Kludex/starlette/security/advisories/GHSA-jp82-jpqv-5vv3)\n- [GitHub Commit](https://github.com/Kludex/starlette/commit/167b5850e809f38b27fbfed62d58bf6442855975)\n",
+        "epssDetails": {
+          "percentile": "0.08530",
+          "probability": "0.00187",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-54282"
+          ],
+          "CWE": [
+            "CWE-706"
+          ],
+          "GHSA": [
+            "GHSA-jp82-jpqv-5vv3"
+          ]
+        },
+        "packageName": "starlette",
+        "proprietary": false,
+        "creationTime": "2026-06-16T10:50:53.328532Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-06-15T20:38:08Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-06-16T10:50:53.509979Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-07T15:25:52.490753Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "tomasvotava__fastapi-sso@0.0.0",
+          "fastapi@0.139.0",
+          "starlette@1.2.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "starlette",
+        "version": "1.2.1",
+        "severityWithCritical": "high"
+      }
+    ],
+    "upgrade": {},
+    "patch": {},
+    "ignore": {},
+    "pin": {
+      "pillow@12.2.0": {
+        "upgradeTo": "pillow@12.3.0",
+        "vulns": [
+          "SNYK-PYTHON-PILLOW-17824465",
+          "SNYK-PYTHON-PILLOW-17824466",
+          "SNYK-PYTHON-PILLOW-17824467",
+          "SNYK-PYTHON-PILLOW-17824468",
+          "SNYK-PYTHON-PILLOW-17824469"
+        ],
+        "isTransitive": false
+      },
+      "starlette@1.2.1": {
+        "upgradeTo": "starlette@1.3.1",
+        "vulns": [
+          "SNYK-PYTHON-STARLETTE-17342515",
+          "SNYK-PYTHON-STARLETTE-17342519"
+        ],
+        "isTransitive": false
+      }
+    }
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 7,
+  "projectName": "tomasvotava__fastapi-sso",
+  "displayTargetFile": "requirements.txt",
+  "hasUnknownVersions": false,
+  "path": "/work/tomasvotava__fastapi-sso"
+}

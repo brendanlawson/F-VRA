@@ -1,0 +1,7 @@
+project,status,scanned,vulns,vuln_pkgs,failed,dropped
+Cinnamon__kotaemon,partial-vulns,559,318,49,1,23
+Open-LLM-VTuber__Open-LLM-VTuber,vulns,170,75,14,0,182
+eosphoros-ai__DB-GPT,vulns,341,156,26,0,4
+milesmcc__shynet,partial-vulns,92,78,13,3,0
+spiral-project__ihatemoney,vulns,151,26,12,0,0
+yezz123__authx,vulns,182,36,12,0,0

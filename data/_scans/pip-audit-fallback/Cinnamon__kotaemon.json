@@ -1,0 +1,6211 @@
+{
+  "dependencies": [
+    {
+      "name": "aiofiles",
+      "version": "23.2.1",
+      "vulns": []
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.6.1",
+      "vulns": []
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.12.15",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-237",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-4m7w-qmgq-4wj5",
+            "CVE-2026-54275"
+          ],
+          "description": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections"
+        },
+        {
+          "id": "PYSEC-2026-1097",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69226",
+            "GHSA-54jq-c3m8-4m76"
+          ],
+          "description": "AIOHTTP vulnerable to brute-force leak of internal static \ufb01le path components"
+        },
+        {
+          "id": "PYSEC-2026-1099",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-69f9-5gxw-wvc2",
+            "CVE-2025-69224"
+          ],
+          "description": "AIOHTTP's unicode processing of header values could cause parsing discrepancies"
+        },
+        {
+          "id": "PYSEC-2026-1100",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69228",
+            "GHSA-6jhg-hg63-jvvf"
+          ],
+          "description": "AIOHTTP vulnerable to  denial of service through large payloads"
+        },
+        {
+          "id": "PYSEC-2026-1101",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-6mq8-rvhq-8wgg",
+            "CVE-2025-69223"
+          ],
+          "description": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb"
+        },
+        {
+          "id": "PYSEC-2026-1105",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "CVE-2025-69230",
+            "GHSA-fh55-r93g-j68g"
+          ],
+          "description": "AIOHTTP Vulnerable to Cookie Parser Warning Storm"
+        },
+        {
+          "id": "PYSEC-2026-1106",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-g84x-mcqj-x9qq",
+            "CVE-2025-69229"
+          ],
+          "description": "AIOHTTP vulnerable to DoS through chunked messages"
+        },
+        {
+          "id": "PYSEC-2026-1107",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-jj3x-wxrx-4x23",
+            "CVE-2025-69227"
+          ],
+          "description": "AIOHTTP vulnerable to DoS when bypassing asserts"
+        },
+        {
+          "id": "PYSEC-2026-1109",
+          "fix_versions": [
+            "3.13.3"
+          ],
+          "aliases": [
+            "GHSA-mqqc-3gqh-h2x8",
+            "CVE-2025-69225"
+          ],
+          "description": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements"
+        },
+        {
+          "id": "PYSEC-2026-237",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-4m7w-qmgq-4wj5",
+            "CVE-2026-54275"
+          ],
+          "description": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.1, the server_hostname TLS SNI check can be bypassed when an existing connection is reused. If an application makes multiple requests to the same domain, but with different per-request server_hostname parameters, then the later calls may succeed by reusing the existing connection when they should have been rejected due to the TLS SNI check. This vulnerability is fixed in 3.14.1."
+        },
+        {
+          "id": "CVE-2026-54279",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-2fqr-mr3j-6wp8"
+          ],
+          "description": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence"
+        },
+        {
+          "id": "CVE-2026-34514",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-2vrm-gr82-f7m5"
+          ],
+          "description": "AIOHTTP has CRLF injection through multipart part content type header construction"
+        },
+        {
+          "id": "CVE-2026-34517",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-3wq7-rqq7-wx6j"
+          ],
+          "description": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS"
+        },
+        {
+          "id": "CVE-2026-54273",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-4fvr-rgm6-gqmc"
+          ],
+          "description": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit"
+        },
+        {
+          "id": "CVE-2026-34520",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-63hf-3vf5-4wqf"
+          ],
+          "description": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass"
+        },
+        {
+          "id": "CVE-2026-54277",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-63hw-fmq6-xxg2"
+          ],
+          "description": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines"
+        },
+        {
+          "id": "CVE-2026-34518",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-966j-vmvw-g2g9"
+          ],
+          "description": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect"
+        },
+        {
+          "id": "CVE-2026-54280",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-9x8q-7h8h-wcw9"
+          ],
+          "description": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect"
+        },
+        {
+          "id": "CVE-2026-34525",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-c427-h43c-vf67"
+          ],
+          "description": "AIOHTTP accepts duplicate Host headers"
+        },
+        {
+          "id": "CVE-2026-54278",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-g3cq-j2xw-wf74"
+          ],
+          "description": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup"
+        },
+        {
+          "id": "CVE-2026-34513",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-hcc4-c3v8-rx92"
+          ],
+          "description": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector"
+        },
+        {
+          "id": "CVE-2026-47265",
+          "fix_versions": [
+            "3.14.0"
+          ],
+          "aliases": [
+            "GHSA-hg6j-4rv6-33pg"
+          ],
+          "description": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies"
+        },
+        {
+          "id": "CVE-2026-54276",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-hpj7-wq8m-9hgp"
+          ],
+          "description": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges"
+        },
+        {
+          "id": "CVE-2026-34993",
+          "fix_versions": [
+            "3.14.0"
+          ],
+          "aliases": [
+            "GHSA-jg22-mg44-37j8"
+          ],
+          "description": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data"
+        },
+        {
+          "id": "CVE-2026-34516",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-m5qp-6w8w-w647"
+          ],
+          "description": "AIOHTTP has a Multipart Header Size Bypass"
+        },
+        {
+          "id": "CVE-2026-50269",
+          "fix_versions": [
+            "3.14.0"
+          ],
+          "aliases": [
+            "GHSA-m6qw-4cw2-hm4m"
+          ],
+          "description": "aiohttp: CRLF injection in multipart headers"
+        },
+        {
+          "id": "CVE-2026-34519",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-mwh4-6h8g-pg8w"
+          ],
+          "description": "AIOHTTP has HTTP response splitting via \\r in reason phrase"
+        },
+        {
+          "id": "CVE-2026-34515",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-p998-jp59-783m"
+          ],
+          "description": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows"
+        },
+        {
+          "id": "CVE-2026-22815",
+          "fix_versions": [
+            "3.13.4"
+          ],
+          "aliases": [
+            "GHSA-w2fm-2cpv-w7v5"
+          ],
+          "description": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage"
+        },
+        {
+          "id": "CVE-2026-54274",
+          "fix_versions": [
+            "3.14.1"
+          ],
+          "aliases": [
+            "GHSA-xcgm-r5h9-7989"
+          ],
+          "description": "aiohttp: Incomplete websocket frame payloads bypass memory limits"
+        }
+      ]
+    },
+    {
+      "name": "aiolimiter",
+      "version": "1.2.1",
+      "vulns": []
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "vulns": []
+    },
+    {
+      "name": "alabaster",
+      "version": "1.0.0",
+      "vulns": []
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "vulns": []
+    },
+    {
+      "name": "anthropic",
+      "version": "0.69.0",
+      "vulns": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.11.0",
+      "vulns": []
+    },
+    {
+      "name": "arrow",
+      "version": "1.3.0",
+      "vulns": []
+    },
+    {
+      "name": "asgiref",
+      "version": "3.9.2",
+      "vulns": []
+    },
+    {
+      "name": "asttokens",
+      "version": "3.0.0",
+      "vulns": []
+    },
+    {
+      "name": "async-timeout",
+      "version": "4.0.3",
+      "vulns": []
+    },
+    {
+      "name": "attrs",
+      "version": "25.3.0",
+      "vulns": []
+    },
+    {
+      "name": "authlib",
+      "version": "1.6.4",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1201",
+          "fix_versions": [
+            "1.6.6"
+          ],
+          "aliases": [
+            "GHSA-fg6f-75jq-6523",
+            "CVE-2025-68158"
+          ],
+          "description": "Authlib has 1-click Account Takeover vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1202",
+          "fix_versions": [
+            "1.6.5"
+          ],
+          "aliases": [
+            "CVE-2025-62706",
+            "GHSA-g7f3-828f-7h7m"
+          ],
+          "description": "Authlib : JWE zip=DEF decompression bomb enables DoS"
+        },
+        {
+          "id": "PYSEC-2026-25",
+          "fix_versions": [
+            "1.6.11"
+          ],
+          "aliases": [
+            "CVE-2026-41425",
+            "GHSA-jj8c-mmj3-mmgv"
+          ],
+          "description": "Authlib: Cross-site request forging when using cache"
+        },
+        {
+          "id": "PYSEC-2026-1203",
+          "fix_versions": [
+            "1.6.5"
+          ],
+          "aliases": [
+            "GHSA-pq5p-34cr-23v9",
+            "CVE-2025-61920"
+          ],
+          "description": "Authlib is vulnerable to Denial of Service via Oversized JOSE Segments"
+        },
+        {
+          "id": "PYSEC-2026-188",
+          "fix_versions": [
+            "1.6.12"
+          ],
+          "aliases": [
+            "CVE-2026-44681",
+            "GHSA-r95x-qfjj-fjj2"
+          ],
+          "description": "Authlib OIDC Implicit/Hybrid Authorization Vulnerable to Open Redirect"
+        },
+        {
+          "id": "PYSEC-2026-287",
+          "fix_versions": [
+            "1.6.9"
+          ],
+          "aliases": [
+            "GHSA-wvwj-cvrp-7pv5",
+            "CVE-2026-27962"
+          ],
+          "description": "Authlib JWS JWK Header Injection: Signature Verification Bypass"
+        },
+        {
+          "id": "PYSEC-2026-188",
+          "fix_versions": [
+            "1.6.12"
+          ],
+          "aliases": [
+            "CVE-2026-44681",
+            "GHSA-r95x-qfjj-fjj2"
+          ],
+          "description": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to 1.6.12 and 1.7.1, an unauthenticated open redirect in Authlib's OpenIDImplicitGrant and OpenIDHybridGrant authorization endpoint lets a remote attacker cause the authorization server to issue an HTTP 302 to an attacker-chosen URL by submitting an authorization request that omits the openid scope. This vulnerability is fixed in 1.6.12 and 1.7.1."
+        },
+        {
+          "id": "PYSEC-2026-25",
+          "fix_versions": [
+            "1.6.11"
+          ],
+          "aliases": [
+            "CVE-2026-41425",
+            "GHSA-jj8c-mmj3-mmgv"
+          ],
+          "description": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to 1.6.11, there is no CSRF protection on the cache feature in authlib.integrations.starlette_client.OAuth.  This vulnerability is fixed in 1.6.11."
+        },
+        {
+          "id": "CVE-2026-28490",
+          "fix_versions": [
+            "1.6.9"
+          ],
+          "aliases": [
+            "GHSA-7432-952r-cw78"
+          ],
+          "description": "Authlib Vulnerable to JWE RSA1_5 Bleichenbacher Padding Oracle"
+        },
+        {
+          "id": "CVE-2026-28498",
+          "fix_versions": [
+            "1.6.9"
+          ],
+          "aliases": [
+            "GHSA-m344-f55w-2m6j"
+          ],
+          "description": "Authlib: Fail-Open Cryptographic Verification in OIDC Hash Binding"
+        },
+        {
+          "id": "CVE-2026-41479",
+          "fix_versions": [
+            "1.7.1"
+          ],
+          "aliases": [
+            "GHSA-w8p2-r796-3vmq"
+          ],
+          "description": "Authlib OAuth 2.0 has Open Redirect in Authorization API that allows attacker-controlled redirect_uri through unsupported response_type"
+        }
+      ]
+    },
+    {
+      "name": "azure-ai-documentintelligence",
+      "version": "1.0.2",
+      "vulns": []
+    },
+    {
+      "name": "azure-core",
+      "version": "1.35.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1208",
+          "fix_versions": [
+            "1.38.0"
+          ],
+          "aliases": [
+            "GHSA-jm66-cg57-jjv5",
+            "CVE-2026-21226"
+          ],
+          "description": "Azure Core is vulnerable to deserialization of untrusted data"
+        }
+      ]
+    },
+    {
+      "name": "babel",
+      "version": "2.17.0",
+      "vulns": []
+    },
+    {
+      "name": "backoff",
+      "version": "2.2.1",
+      "vulns": []
+    },
+    {
+      "name": "bcrypt",
+      "version": "5.0.0",
+      "vulns": []
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "vulns": []
+    },
+    {
+      "name": "docstring-parser",
+      "version": "0.18.0",
+      "vulns": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "vulns": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "vulns": []
+    },
+    {
+      "name": "jiter",
+      "version": "0.16.0",
+      "vulns": []
+    },
+    {
+      "name": "multidict",
+      "version": "6.7.1",
+      "vulns": []
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.4",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.4",
+      "vulns": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "vulns": []
+    },
+    {
+      "name": "yarl",
+      "version": "1.24.2",
+      "vulns": []
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "vulns": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "vulns": []
+    },
+    {
+      "name": "idna",
+      "version": "3.18",
+      "vulns": []
+    },
+    {
+      "name": "isodate",
+      "version": "0.7.2",
+      "vulns": []
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.2",
+      "vulns": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "vulns": []
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "vulns": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.9",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "vulns": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.6.17",
+      "vulns": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "vulns": []
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "types-python-dateutil",
+      "version": "2.9.0.20260518",
+      "vulns": []
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "vulns": []
+    },
+    {
+      "name": "cryptography",
+      "version": "49.0.0",
+      "vulns": []
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "vulns": []
+    },
+    {
+      "name": "beautifulsoup4",
+      "version": "4.12.3",
+      "vulns": []
+    },
+    {
+      "name": "soupsieve",
+      "version": "2.8.4",
+      "vulns": []
+    },
+    {
+      "name": "binaryornot",
+      "version": "0.4.4",
+      "vulns": []
+    },
+    {
+      "name": "chardet",
+      "version": "7.4.3",
+      "vulns": []
+    },
+    {
+      "name": "black",
+      "version": "25.9.0",
+      "vulns": [
+        {
+          "id": "CVE-2026-32274",
+          "fix_versions": [
+            "26.3.1"
+          ],
+          "aliases": [
+            "GHSA-3936-cmfr-pm3m"
+          ],
+          "description": "Black: Arbitrary file writes from unsanitized user input in cache file name"
+        }
+      ]
+    },
+    {
+      "name": "click",
+      "version": "8.4.2",
+      "vulns": []
+    },
+    {
+      "name": "mypy-extensions",
+      "version": "1.1.0",
+      "vulns": []
+    },
+    {
+      "name": "pathspec",
+      "version": "1.1.1",
+      "vulns": []
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.10.0",
+      "vulns": []
+    },
+    {
+      "name": "pytokens",
+      "version": "0.4.1",
+      "vulns": []
+    },
+    {
+      "name": "build",
+      "version": "1.3.0",
+      "vulns": []
+    },
+    {
+      "name": "pyproject-hooks",
+      "version": "1.2.0",
+      "vulns": []
+    },
+    {
+      "name": "cachetools",
+      "version": "6.2.0",
+      "vulns": []
+    },
+    {
+      "name": "certifi",
+      "version": "2025.8.3",
+      "vulns": []
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "cfgv",
+      "version": "3.4.0",
+      "vulns": []
+    },
+    {
+      "name": "chardet",
+      "version": "5.2.0",
+      "vulns": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.3",
+      "vulns": []
+    },
+    {
+      "name": "chromadb",
+      "version": "0.5.16",
+      "vulns": []
+    },
+    {
+      "name": "chroma-hnswlib",
+      "version": "0.7.6",
+      "vulns": []
+    },
+    {
+      "name": "build",
+      "version": "1.5.1",
+      "vulns": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.139.0",
+      "vulns": []
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.4",
+      "vulns": []
+    },
+    {
+      "name": "grpcio",
+      "version": "1.82.1",
+      "vulns": []
+    },
+    {
+      "name": "kubernetes",
+      "version": "36.0.2",
+      "vulns": []
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.1",
+      "vulns": []
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "vulns": []
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "vulns": []
+    },
+    {
+      "name": "durationpy",
+      "version": "0.10",
+      "vulns": []
+    },
+    {
+      "name": "mmh3",
+      "version": "5.2.1",
+      "vulns": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.1",
+      "vulns": []
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.27.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.43.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-grpc",
+      "version": "1.43.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-common",
+      "version": "1.43.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-proto",
+      "version": "1.43.0",
+      "vulns": []
+    },
+    {
+      "name": "googleapis-common-protos",
+      "version": "1.75.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-sdk",
+      "version": "1.43.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-semantic-conventions",
+      "version": "0.64b0",
+      "vulns": []
+    },
+    {
+      "name": "protobuf",
+      "version": "7.35.1",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-instrumentation-fastapi",
+      "version": "0.64b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-instrumentation",
+      "version": "0.64b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-instrumentation-asgi",
+      "version": "0.64b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-util-http",
+      "version": "0.64b0",
+      "vulns": []
+    },
+    {
+      "name": "asgiref",
+      "version": "3.11.1",
+      "vulns": []
+    },
+    {
+      "name": "wrapt",
+      "version": "2.2.2",
+      "vulns": []
+    },
+    {
+      "name": "orjson",
+      "version": "3.11.9",
+      "vulns": []
+    },
+    {
+      "name": "overrides",
+      "version": "7.7.0",
+      "vulns": []
+    },
+    {
+      "name": "posthog",
+      "version": "7.22.1",
+      "vulns": []
+    },
+    {
+      "name": "pypika",
+      "version": "0.51.1",
+      "vulns": []
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "vulns": []
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "vulns": []
+    },
+    {
+      "name": "pygments",
+      "version": "2.20.0",
+      "vulns": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "vulns": []
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "vulns": []
+    },
+    {
+      "name": "starlette",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.1",
+      "vulns": []
+    },
+    {
+      "name": "tenacity",
+      "version": "9.1.4",
+      "vulns": []
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.1",
+      "vulns": []
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "1.23.0",
+      "vulns": []
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.5.1",
+      "vulns": []
+    },
+    {
+      "name": "filelock",
+      "version": "3.29.7",
+      "vulns": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.6.0",
+      "vulns": []
+    },
+    {
+      "name": "tqdm",
+      "version": "4.68.4",
+      "vulns": []
+    },
+    {
+      "name": "typer",
+      "version": "0.26.8",
+      "vulns": []
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "vulns": []
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.51.0",
+      "vulns": []
+    },
+    {
+      "name": "httptools",
+      "version": "0.8.0",
+      "vulns": []
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "vulns": []
+    },
+    {
+      "name": "uvloop",
+      "version": "0.22.1",
+      "vulns": []
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.2.0",
+      "vulns": []
+    },
+    {
+      "name": "websocket-client",
+      "version": "1.9.0",
+      "vulns": []
+    },
+    {
+      "name": "websockets",
+      "version": "16.1",
+      "vulns": []
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "vulns": []
+    },
+    {
+      "name": "importlib-resources",
+      "version": "7.1.0",
+      "vulns": []
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.3.1",
+      "vulns": []
+    },
+    {
+      "name": "click",
+      "version": "8.3.0",
+      "vulns": []
+    },
+    {
+      "name": "cohere",
+      "version": "5.18.0",
+      "vulns": []
+    },
+    {
+      "name": "httpx-sse",
+      "version": "0.4.0",
+      "vulns": []
+    },
+    {
+      "name": "fastavro",
+      "version": "1.12.2",
+      "vulns": []
+    },
+    {
+      "name": "types-requests",
+      "version": "2.33.0.20260518",
+      "vulns": []
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "vulns": []
+    },
+    {
+      "name": "coloredlogs",
+      "version": "15.0.1",
+      "vulns": []
+    },
+    {
+      "name": "humanfriendly",
+      "version": "10.0",
+      "vulns": []
+    },
+    {
+      "name": "colorlog",
+      "version": "6.9.0",
+      "vulns": []
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.2",
+      "vulns": []
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3",
+      "vulns": []
+    },
+    {
+      "name": "cookiecutter",
+      "version": "2.6.0",
+      "vulns": []
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "vulns": []
+    },
+    {
+      "name": "binaryornot",
+      "version": "0.6.0",
+      "vulns": []
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "vulns": []
+    },
+    {
+      "name": "python-slugify",
+      "version": "8.0.4",
+      "vulns": []
+    },
+    {
+      "name": "text-unidecode",
+      "version": "1.3",
+      "vulns": []
+    },
+    {
+      "name": "arrow",
+      "version": "1.4.0",
+      "vulns": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.3",
+      "vulns": []
+    },
+    {
+      "name": "coverage",
+      "version": "7.10.7",
+      "vulns": []
+    },
+    {
+      "name": "cryptography",
+      "version": "46.0.2",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-35",
+          "fix_versions": [
+            "46.0.6"
+          ],
+          "aliases": [
+            "CVE-2026-34073",
+            "GHSA-m959-cc7f-wv43"
+          ],
+          "description": "cryptography has incomplete DNS name constraint enforcement on peer names"
+        },
+        {
+          "id": "PYSEC-2026-36",
+          "fix_versions": [
+            "46.0.7"
+          ],
+          "aliases": [
+            "GHSA-p423-j2cm-9vmq",
+            "CVE-2026-39892"
+          ],
+          "description": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs"
+        },
+        {
+          "id": "PYSEC-2026-35",
+          "fix_versions": [
+            "46.0.6"
+          ],
+          "aliases": [
+            "CVE-2026-34073",
+            "GHSA-m959-cc7f-wv43"
+          ],
+          "description": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6."
+        },
+        {
+          "id": "PYSEC-2026-36",
+          "fix_versions": [
+            "46.0.7"
+          ],
+          "aliases": [
+            "GHSA-p423-j2cm-9vmq",
+            "CVE-2026-39892"
+          ],
+          "description": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. From 45.0.0 to before 46.0.7, if a non-contiguous buffer was passed to APIs which accepted Python buffers (e.g. Hash.update()), this could lead to buffer overflows. This vulnerability is fixed in 46.0.7."
+        },
+        {
+          "id": "GHSA-537c-gmf6-5ccf",
+          "fix_versions": [
+            "48.0.1"
+          ],
+          "aliases": [],
+          "description": "Vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "id": "CVE-2026-26007",
+          "fix_versions": [
+            "46.0.5"
+          ],
+          "aliases": [
+            "GHSA-r6ph-v2qm-q3c2"
+          ],
+          "description": "cryptography Vulnerable to a Subgroup Attack Due to Missing Subgroup Validation for SECT Curves"
+        }
+      ]
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "vulns": []
+    },
+    {
+      "name": "dataclasses-json",
+      "version": "0.6.7",
+      "vulns": []
+    },
+    {
+      "name": "decorator",
+      "version": "5.2.1",
+      "vulns": []
+    },
+    {
+      "name": "deepdiff",
+      "version": "8.6.1",
+      "vulns": [
+        {
+          "id": "CVE-2026-33155",
+          "fix_versions": [
+            "8.6.2"
+          ],
+          "aliases": [
+            "GHSA-54jj-px8x-5w5q"
+          ],
+          "description": "DeepDiff has Memory Exhaustion DoS through SAFE_TO_IMPORT"
+        }
+      ]
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "vulns": []
+    },
+    {
+      "name": "deprecated",
+      "version": "1.2.18",
+      "vulns": []
+    },
+    {
+      "name": "deprecation",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "dirtyjson",
+      "version": "1.0.8",
+      "vulns": []
+    },
+    {
+      "name": "diskcache",
+      "version": "5.6.3",
+      "vulns": [
+        {
+          "id": "CVE-2025-69872",
+          "fix_versions": [],
+          "aliases": [
+            "GHSA-w8v5-vhqr-4h9v"
+          ],
+          "description": "DiskCache has unsafe pickle deserialization"
+        }
+      ]
+    },
+    {
+      "name": "distlib",
+      "version": "0.4.0",
+      "vulns": []
+    },
+    {
+      "name": "docstring-parser",
+      "version": "0.17.0",
+      "vulns": []
+    },
+    {
+      "name": "docutils",
+      "version": "0.21.2",
+      "vulns": []
+    },
+    {
+      "name": "duckduckgo-search",
+      "version": "6.1.12",
+      "vulns": []
+    },
+    {
+      "name": "elastic-transport",
+      "version": "8.17.1",
+      "vulns": []
+    },
+    {
+      "name": "elasticsearch",
+      "version": "8.13.2",
+      "vulns": []
+    },
+    {
+      "name": "emoji",
+      "version": "2.15.0",
+      "vulns": []
+    },
+    {
+      "name": "et-xmlfile",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "marshmallow",
+      "version": "3.26.2",
+      "vulns": []
+    },
+    {
+      "name": "orderly-set",
+      "version": "5.5.0",
+      "vulns": []
+    },
+    {
+      "name": "typing-inspect",
+      "version": "0.9.0",
+      "vulns": []
+    },
+    {
+      "name": "wrapt",
+      "version": "1.17.3",
+      "vulns": []
+    },
+    {
+      "name": "pyreqwest-impersonate",
+      "version": "0.5.5",
+      "vulns": []
+    },
+    {
+      "name": "exceptiongroup",
+      "version": "1.3.0",
+      "vulns": []
+    },
+    {
+      "name": "executing",
+      "version": "2.2.1",
+      "vulns": []
+    },
+    {
+      "name": "fast-langdetect",
+      "version": "1.0.0",
+      "vulns": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.112.1",
+      "vulns": []
+    },
+    {
+      "name": "fastavro",
+      "version": "1.12.0",
+      "vulns": []
+    },
+    {
+      "name": "fastembed",
+      "version": "0.4.2",
+      "vulns": []
+    },
+    {
+      "name": "fasttext-predict",
+      "version": "0.9.2.4",
+      "vulns": []
+    },
+    {
+      "name": "ffmpy",
+      "version": "0.6.1",
+      "vulns": []
+    },
+    {
+      "name": "filelock",
+      "version": "3.19.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1374",
+          "fix_versions": [
+            "3.20.3"
+          ],
+          "aliases": [
+            "CVE-2026-22701",
+            "GHSA-qmgc-5h2g-mvrw"
+          ],
+          "description": "filelock Time-of-Check-Time-of-Use (TOCTOU) Symlink Vulnerability in SoftFileLock"
+        },
+        {
+          "id": "PYSEC-2026-1375",
+          "fix_versions": [
+            "3.20.1"
+          ],
+          "aliases": [
+            "CVE-2025-68146",
+            "GHSA-w853-jp5j-5j7f"
+          ],
+          "description": "filelock has a TOCTOU race condition which allows symlink attacks during lock file creation"
+        }
+      ]
+    },
+    {
+      "name": "filetype",
+      "version": "1.2.0",
+      "vulns": []
+    },
+    {
+      "name": "flake8",
+      "version": "7.3.0",
+      "vulns": []
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.9.23",
+      "vulns": []
+    },
+    {
+      "name": "fonttools",
+      "version": "4.60.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1389",
+          "fix_versions": [
+            "4.60.2"
+          ],
+          "aliases": [
+            "GHSA-768j-98cg-p3fv",
+            "CVE-2025-66034"
+          ],
+          "description": "fontTools is Vulnerable to Arbitrary File Write and XML injection in fontTools.varLib"
+        }
+      ]
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.7.0",
+      "vulns": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2025.9.0",
+      "vulns": []
+    },
+    {
+      "name": "google-ai-generativelanguage",
+      "version": "0.6.6",
+      "vulns": []
+    },
+    {
+      "name": "google-api-core",
+      "version": "2.25.1",
+      "vulns": []
+    },
+    {
+      "name": "google-auth",
+      "version": "2.41.1",
+      "vulns": []
+    },
+    {
+      "name": "google-api-python-client",
+      "version": "2.184.0",
+      "vulns": []
+    },
+    {
+      "name": "google-auth-httplib2",
+      "version": "0.2.0",
+      "vulns": []
+    },
+    {
+      "name": "cachetools",
+      "version": "6.2.6",
+      "vulns": []
+    },
+    {
+      "name": "grpcio-status",
+      "version": "1.62.3",
+      "vulns": []
+    },
+    {
+      "name": "httplib2",
+      "version": "0.32.0",
+      "vulns": []
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.36.2",
+      "vulns": []
+    },
+    {
+      "name": "loguru",
+      "version": "0.7.3",
+      "vulns": []
+    },
+    {
+      "name": "mccabe",
+      "version": "0.7.0",
+      "vulns": []
+    },
+    {
+      "name": "mmh3",
+      "version": "4.1.0",
+      "vulns": []
+    },
+    {
+      "name": "onnx",
+      "version": "1.22.0",
+      "vulns": []
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.19.2",
+      "vulns": []
+    },
+    {
+      "name": "pillow",
+      "version": "10.4.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-165",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-42308",
+            "CVE-2026-42308",
+            "GHSA-wjx4-4jcj-g98j"
+          ],
+          "description": "Pillow has an integer overflow when processing fonts"
+        },
+        {
+          "id": "PYSEC-2026-165",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-42308",
+            "CVE-2026-42308",
+            "GHSA-wjx4-4jcj-g98j"
+          ],
+          "description": "Pillow is a Python imaging library. Prior to version 12.2.0, if a font advances for each glyph by an exceeding large amount, when Pillow keeps track of the current position, it may lead to an integer overflow. This issue has been patched in version 12.2.0."
+        },
+        {
+          "id": "CVE-2026-25990",
+          "fix_versions": [
+            "12.1.1"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-25990",
+            "GHSA-cfh3-3jmp-rvhc"
+          ],
+          "description": "Pillow affected by out-of-bounds write when loading PSD images"
+        },
+        {
+          "id": "CVE-2026-42311",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "GHSA-pwv6-vv43-88gr",
+            "BIT-pillow-2026-42311"
+          ],
+          "description": "Pillow has an OOB Write with Invalid PSD Tile Extents (Integer Overflow)"
+        },
+        {
+          "id": "CVE-2026-42310",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "GHSA-r73j-pqj5-w3x7",
+            "BIT-pillow-2026-42310"
+          ],
+          "description": "Pillow has a PDF Parsing Trailer Infinite Loop (DoS)"
+        },
+        {
+          "id": "CVE-2026-40192",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-40192",
+            "GHSA-whj4-6x5x-4v2j"
+          ],
+          "description": "FITS GZIP decompression bomb in Pillow"
+        },
+        {
+          "id": "PYSEC-2026-165",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "GHSA-wjx4-4jcj-g98j",
+            "CVE-2026-42308",
+            "BIT-pillow-2026-42308"
+          ],
+          "description": "Pillow has an integer overflow when processing fonts"
+        },
+        {
+          "id": "PYSEC-2026-165",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "CVE-2026-42308",
+            "GHSA-wjx4-4jcj-g98j",
+            "BIT-pillow-2026-42308"
+          ],
+          "description": "Pillow is a Python imaging library. Prior to version 12.2.0, if a font advances for each glyph by an exceeding large amount, when Pillow keeps track of the current position, it may lead to an integer overflow. This issue has been patched in version 12.2.0."
+        },
+        {
+          "id": "CVE-2026-25990",
+          "fix_versions": [
+            "12.1.1"
+          ],
+          "aliases": [
+            "GHSA-cfh3-3jmp-rvhc",
+            "BIT-pillow-2026-25990"
+          ],
+          "description": "Pillow affected by out-of-bounds write when loading PSD images"
+        },
+        {
+          "id": "CVE-2026-42311",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-42311",
+            "GHSA-pwv6-vv43-88gr"
+          ],
+          "description": "Pillow has an OOB Write with Invalid PSD Tile Extents (Integer Overflow)"
+        },
+        {
+          "id": "CVE-2026-42310",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-42310",
+            "GHSA-r73j-pqj5-w3x7"
+          ],
+          "description": "Pillow has a PDF Parsing Trailer Infinite Loop (DoS)"
+        }
+      ]
+    },
+    {
+      "name": "proto-plus",
+      "version": "1.28.1",
+      "vulns": []
+    },
+    {
+      "name": "protobuf",
+      "version": "4.25.9",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1805",
+          "fix_versions": [
+            "5.29.6"
+          ],
+          "aliases": [
+            "CVE-2026-0994",
+            "GHSA-7gcm-g887-7qv7"
+          ],
+          "description": "protobuf affected by a JSON recursion depth bypass"
+        },
+        {
+          "id": "PYSEC-2026-1805",
+          "fix_versions": [
+            "5.29.6",
+            "6.33.5"
+          ],
+          "aliases": [
+            "CVE-2026-0994",
+            "GHSA-7gcm-g887-7qv7"
+          ],
+          "description": "protobuf affected by a JSON recursion depth bypass"
+        },
+        {
+          "id": "PYSEC-2026-1805",
+          "fix_versions": [
+            "5.29.6"
+          ],
+          "aliases": [
+            "GHSA-7gcm-g887-7qv7",
+            "CVE-2026-0994"
+          ],
+          "description": "protobuf affected by a JSON recursion depth bypass"
+        },
+        {
+          "id": "PYSEC-2026-1805",
+          "fix_versions": [
+            "5.29.6",
+            "6.33.5"
+          ],
+          "aliases": [
+            "GHSA-7gcm-g887-7qv7",
+            "CVE-2026-0994"
+          ],
+          "description": "protobuf affected by a JSON recursion depth bypass"
+        }
+      ]
+    },
+    {
+      "name": "py-rust-stemmers",
+      "version": "0.1.8",
+      "vulns": []
+    },
+    {
+      "name": "pycodestyle",
+      "version": "2.14.0",
+      "vulns": []
+    },
+    {
+      "name": "pyflakes",
+      "version": "3.4.0",
+      "vulns": []
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.2",
+      "vulns": []
+    },
+    {
+      "name": "rsa",
+      "version": "4.9.1",
+      "vulns": []
+    },
+    {
+      "name": "starlette",
+      "version": "0.38.6",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1941",
+          "fix_versions": [
+            "0.47.2"
+          ],
+          "aliases": [
+            "CVE-2025-54121",
+            "GHSA-2c2j-9gv5-cj73"
+          ],
+          "description": "Starlette has possible denial-of-service vector when parsing large files in multipart forms"
+        },
+        {
+          "id": "PYSEC-2026-249",
+          "fix_versions": [
+            "1.3.1"
+          ],
+          "aliases": [
+            "CVE-2026-54283",
+            "GHSA-82w8-qh3p-5jfq"
+          ],
+          "description": "Starlette: request.form() limits silently ignored for application/x-www-form-urlencoded enable DoS"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "CVE-2026-48710",
+            "GHSA-86qp-5c8j-p5mr",
+            "X41-2026-002"
+          ],
+          "description": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks"
+        },
+        {
+          "id": "PYSEC-2026-1943",
+          "fix_versions": [
+            "0.40.0"
+          ],
+          "aliases": [
+            "CVE-2024-47874",
+            "GHSA-f96h-pmfr-66vw"
+          ],
+          "description": "Starlette Denial of service (DoS) via multipart/form-data"
+        },
+        {
+          "id": "PYSEC-2026-248",
+          "fix_versions": [
+            "1.3.0"
+          ],
+          "aliases": [
+            "CVE-2026-54282",
+            "GHSA-jp82-jpqv-5vv3"
+          ],
+          "description": "Starlette: Unvalidated request path concatenated into authority poisons request.url.hostname"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "X41-2026-002",
+            "CVE-2026-48710",
+            "GHSA-86qp-5c8j-p5mr"
+          ],
+          "description": "BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks"
+        },
+        {
+          "id": "PYSEC-2026-248",
+          "fix_versions": [
+            "1.3.0"
+          ],
+          "aliases": [
+            "CVE-2026-54282",
+            "GHSA-jp82-jpqv-5vv3"
+          ],
+          "description": "Starlette is a lightweight ASGI framework/toolkit. Prior to 1.3.0, the HTTP request path is not validated before being used to reconstruct request.url. Because request.url is rebuilt by concatenating {scheme}://{host}{path} and re-parsing the result, a path that does not begin with / (for example @google.com) moves the authority boundary during re-parsing, so request.url.hostname and request.url.netloc become attacker-controlled. Code that reads request.url.hostname (rather than the Host header or scope) can therefore be misled into trusting an attacker-supplied host. This vulnerability is fixed in 1.3.0."
+        },
+        {
+          "id": "PYSEC-2026-249",
+          "fix_versions": [
+            "1.3.1"
+          ],
+          "aliases": [
+            "CVE-2026-54283",
+            "GHSA-82w8-qh3p-5jfq"
+          ],
+          "description": "Starlette is a lightweight ASGI framework/toolkit. From 0.4.1 until 1.3.1, request.form() accepts max_fields and max_part_size to bound resource consumption while parsing form data. These limits are enforced for multipart/form-data, but silently ignored for application/x-www-form-urlencoded. An unauthenticated attacker can therefore send a urlencoded body with an arbitrarily large number of fields or an arbitrarily large field, even when the application configured limits it believed would apply. This vulnerability is fixed in 1.3.1."
+        },
+        {
+          "id": "CVE-2026-48818",
+          "fix_versions": [
+            "1.1.0"
+          ],
+          "aliases": [
+            "GHSA-wqp7-x3pw-xc5r"
+          ],
+          "description": "Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows"
+        },
+        {
+          "id": "CVE-2026-48817",
+          "fix_versions": [
+            "1.1.0"
+          ],
+          "aliases": [
+            "GHSA-x746-7m8f-x49c"
+          ],
+          "description": "Starlette: Arbitrary HTTP method dispatched to `HTTPEndpoint` attributes via `getattr`"
+        },
+        {
+          "id": "PYSEC-2026-1941",
+          "fix_versions": [
+            "0.47.2"
+          ],
+          "aliases": [
+            "GHSA-2c2j-9gv5-cj73",
+            "CVE-2025-54121"
+          ],
+          "description": "Starlette has possible denial-of-service vector when parsing large files in multipart forms"
+        },
+        {
+          "id": "PYSEC-2026-1943",
+          "fix_versions": [
+            "0.40.0"
+          ],
+          "aliases": [
+            "GHSA-f96h-pmfr-66vw",
+            "CVE-2024-47874"
+          ],
+          "description": "Starlette Denial of service (DoS) via multipart/form-data"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "CVE-2026-48710",
+            "X41-2026-002",
+            "GHSA-86qp-5c8j-p5mr"
+          ],
+          "description": "BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks"
+        }
+      ]
+    },
+    {
+      "name": "uritemplate",
+      "version": "4.2.0",
+      "vulns": []
+    },
+    {
+      "name": "ml-dtypes",
+      "version": "0.5.4",
+      "vulns": []
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.4",
+      "vulns": []
+    },
+    {
+      "name": "pyasn1-modules",
+      "version": "0.4.2",
+      "vulns": []
+    },
+    {
+      "name": "robust-downloader",
+      "version": "0.0.2",
+      "vulns": []
+    },
+    {
+      "name": "colorlog",
+      "version": "6.10.1",
+      "vulns": []
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "vulns": []
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "vulns": []
+    },
+    {
+      "name": "google-generativeai",
+      "version": "0.7.2",
+      "vulns": []
+    },
+    {
+      "name": "googleapis-common-protos",
+      "version": "1.70.0",
+      "vulns": []
+    },
+    {
+      "name": "googlesearch-python",
+      "version": "1.2.5",
+      "vulns": []
+    },
+    {
+      "name": "gradio-client",
+      "version": "1.1.1",
+      "vulns": []
+    },
+    {
+      "name": "gradio",
+      "version": "4.39.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2024-219",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-279j-x4gx-hfrh",
+            "CVE-2024-47871"
+          ],
+          "description": "Gradio uses insecure communication between the FRP client and server"
+        },
+        {
+          "id": "PYSEC-2024-197",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "CVE-2024-47166",
+            "GHSA-37qc-qgx6-9xjv"
+          ],
+          "description": "Gradio has a one-level read path traversal in `/custom_component`"
+        },
+        {
+          "id": "PYSEC-2026-64",
+          "fix_versions": [
+            "6.7.0"
+          ],
+          "aliases": [
+            "CVE-2026-28414",
+            "GHSA-39mp-8hj3-5c49"
+          ],
+          "description": "Gradio is Vulnerable to Absolute Path Traversal on Windows with Python 3.13+"
+        },
+        {
+          "id": "PYSEC-2024-196",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "CVE-2024-47084",
+            "GHSA-3c67-5hwx-f6wx"
+          ],
+          "description": "Gradios's CORS origin validation is not performed when the request has a cookie"
+        },
+        {
+          "id": "PYSEC-2026-1408",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2024-48052",
+            "GHSA-3gf9-wv65-gwh9"
+          ],
+          "description": "gradio Server Side Request Forgery vulnerability"
+        },
+        {
+          "id": "PYSEC-2024-217",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-4q3c-cj7g-jcwf",
+            "CVE-2024-47868"
+          ],
+          "description": "Gradio has several components with post-process steps allow arbitrary file leaks"
+        },
+        {
+          "id": "PYSEC-2024-215",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47167",
+            "GHSA-576c-3j53-r9jj"
+          ],
+          "description": "Gradio vulnerable to SSRF in the path parameter of /queue/join"
+        },
+        {
+          "id": "PYSEC-2026-1410",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2024-8966",
+            "GHSA-5cpq-9538-jm2j"
+          ],
+          "description": "Gradio DOS in multipart boundry while uploading the file"
+        },
+        {
+          "id": "PYSEC-2024-213",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-77xq-6g77-h274",
+            "CVE-2024-47164"
+          ],
+          "description": "Gradio's `is_in_or_equal` function may be bypassed"
+        },
+        {
+          "id": "PYSEC-2026-1412",
+          "fix_versions": [],
+          "aliases": [
+            "GHSA-7xmc-vhjp-qv5q",
+            "CVE-2024-10569"
+          ],
+          "description": "Gradio Vulnerable to Denial of Service (DoS) via Crafted Zip Bomb"
+        },
+        {
+          "id": "PYSEC-2024-214",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47165",
+            "GHSA-89v2-pqfv-c5r9"
+          ],
+          "description": "Gradio's CORS origin validation accepts the null origin"
+        },
+        {
+          "id": "PYSEC-2024-216",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47867",
+            "GHSA-8c87-gvhj-xm8m"
+          ],
+          "description": "Gradio lacks integrity checking on the downloaded FRP client"
+        },
+        {
+          "id": "PYSEC-2025-119",
+          "fix_versions": [
+            "5.31.0"
+          ],
+          "aliases": [
+            "CVE-2025-48889",
+            "GHSA-8jw3-6x8j-v96g"
+          ],
+          "description": "Gradio Allows Unauthorized File Copy via Path Manipulation"
+        },
+        {
+          "id": "PYSEC-2024-220",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47872",
+            "GHSA-gvv6-33j7-884g"
+          ],
+          "description": "Gradio has an XSS on every Gradio server via upload of HTML files, JS files, or SVG files"
+        },
+        {
+          "id": "PYSEC-2026-63",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-h3h8-3v2v-rg7m",
+            "CVE-2026-27167"
+          ],
+          "description": "Gradio: Mocked OAuth Login Exposes Server Credentials and Uses Hardcoded Session Secret"
+        },
+        {
+          "id": "PYSEC-2024-198",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "GHSA-hm3c-93pg-4cxw",
+            "CVE-2024-47168"
+          ],
+          "description": "In Gradio, the `enable_monitoring` flag set to `False` does not disable monitoring"
+        },
+        {
+          "id": "PYSEC-2025-118",
+          "fix_versions": [
+            "5.11.0"
+          ],
+          "aliases": [
+            "CVE-2025-23042",
+            "GHSA-j2jg-fq62-7c3h"
+          ],
+          "description": "Gradio Blocked Path ACL Bypass Vulnerability"
+        },
+        {
+          "id": "PYSEC-2024-199",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "GHSA-j757-pf57-f8r4",
+            "CVE-2024-47869"
+          ],
+          "description": "Gradio performs a non-constant-time comparison when comparing hashes"
+        },
+        {
+          "id": "PYSEC-2026-66",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "CVE-2026-28416",
+            "GHSA-jmh7-g254-2cq9"
+          ],
+          "description": "Gradio has SSRF via Malicious `proxy_url` Injection in `gr.load()` Config Processing"
+        },
+        {
+          "id": "PYSEC-2026-65",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-pfjf-5gxr-995x",
+            "CVE-2026-28415"
+          ],
+          "description": "Gradio has an Open Redirect in its OAuth Flow"
+        },
+        {
+          "id": "PYSEC-2026-1417",
+          "fix_versions": [],
+          "aliases": [
+            "GHSA-pgfv-gvc5-prfg",
+            "CVE-2024-10648"
+          ],
+          "description": "Gradio Vulnerable to Arbitrary File Deletion"
+        },
+        {
+          "id": "PYSEC-2026-1418",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2024-12217",
+            "GHSA-prpg-p95c-32fv"
+          ],
+          "description": "Gradio Path Traversal vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1421",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2024-10624",
+            "GHSA-rvgh-pr46-x7gg"
+          ],
+          "description": "Gradio Vulnerable to Denial of Service (DoS) via Crafted HTTP Request"
+        },
+        {
+          "id": "PYSEC-2024-218",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-xh2x-3mrm-fwqm",
+            "CVE-2024-47870"
+          ],
+          "description": "Gradio has a race condition in update_root_in_config may redirect user traffic"
+        },
+        {
+          "id": "PYSEC-2024-196",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "CVE-2024-47084",
+            "GHSA-3c67-5hwx-f6wx"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability is related to **CORS origin validation**, where the Gradio server fails to validate the request origin when a cookie is present. This allows an attacker\u2019s website to make unauthorized requests to a local Gradio server. Potentially, attackers can upload files, steal authentication tokens, and access user data if the victim visits a malicious website while logged into Gradio. This impacts users who have deployed Gradio locally and use basic authentication. Users are advised to upgrade to `gradio>4.44` to address this issue. As a workaround, users can manually enforce stricter CORS origin validation by modifying the `CustomCORSMiddleware` class in their local Gradio server code. Specifically, they can bypass the condition that skips CORS validation for requests containing cookies to prevent potential exploitation."
+        },
+        {
+          "id": "PYSEC-2024-197",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "CVE-2024-47166",
+            "GHSA-37qc-qgx6-9xjv"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability involves a **one-level read path traversal** in the `/custom_component` endpoint. Attackers can exploit this flaw to access and leak source code from custom Gradio components by manipulating the file path in the request. Although the traversal is limited to a single directory level, it could expose proprietary or sensitive code that developers intended to keep private. This impacts users who have developed custom Gradio components and are hosting them on publicly accessible servers. Users are advised to upgrade to `gradio>=4.44` to address this issue. As a workaround, developers can sanitize the file paths and ensure that components are not stored in publicly accessible directories."
+        },
+        {
+          "id": "PYSEC-2024-198",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "GHSA-hm3c-93pg-4cxw",
+            "CVE-2024-47168"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability involves data exposure due to the enable_monitoring flag not properly disabling monitoring when set to False. Even when monitoring is supposedly disabled, an attacker or unauthorized user can still access the monitoring dashboard by directly requesting the /monitoring endpoint. This means that sensitive application analytics may still be exposed, particularly in environments where monitoring is expected to be disabled. Users who set enable_monitoring=False to prevent unauthorized access to monitoring data are impacted. Users are advised to upgrade to gradio>=4.44 to address this issue. There are no known workarounds for this vulnerability."
+        },
+        {
+          "id": "PYSEC-2024-199",
+          "fix_versions": [
+            "4.44.0"
+          ],
+          "aliases": [
+            "GHSA-j757-pf57-f8r4",
+            "CVE-2024-47869"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability involves a **timing attack** in the way Gradio compares hashes for the `analytics_dashboard` function. Since the comparison is not done in constant time, an attacker could exploit this by measuring the response time of different requests to infer the correct hash byte-by-byte. This can lead to unauthorized access to the analytics dashboard, especially if the attacker can repeatedly query the system with different keys. Users are advised to upgrade to `gradio>4.44` to mitigate this issue. To mitigate the risk before applying the patch, developers can manually patch the `analytics_dashboard` dashboard to use a **constant-time comparison** function for comparing sensitive values, such as hashes. Alternatively, access to the analytics dashboard can be disabled."
+        },
+        {
+          "id": "PYSEC-2024-213",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-77xq-6g77-h274",
+            "CVE-2024-47164"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability relates to the **bypass of directory traversal checks** within the `is_in_or_equal` function. This function, intended to check if a file resides within a given directory, can be bypassed with certain payloads that manipulate file paths using `..` (parent directory) sequences. Attackers could potentially access restricted files if they are able to exploit this flaw, although the difficulty is high. This primarily impacts users relying on Gradio\u2019s blocklist or directory access validation, particularly when handling file uploads. Users are advised to upgrade to `gradio>=5.0` to address this issue. As a workaround, users can manually sanitize and normalize file paths in their Gradio deployment before passing them to the `is_in_or_equal` function. Ensuring that all file paths are properly resolved and absolute can help mitigate the bypass vulnerabilities caused by the improper handling of `..` sequences or malformed paths."
+        },
+        {
+          "id": "PYSEC-2024-214",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47165",
+            "GHSA-89v2-pqfv-c5r9"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability relates to **CORS origin validation accepting a null origin**. When a Gradio server is deployed locally, the `localhost_aliases` variable includes \"null\" as a valid origin. This allows attackers to make unauthorized requests from sandboxed iframes or other sources with a null origin, potentially leading to data theft, such as user authentication tokens or uploaded files. This impacts users running Gradio locally, especially those using basic authentication. Users are advised to upgrade to `gradio>=5.0` to address this issue. As a workaround, users can manually modify the `localhost_aliases` list in their local Gradio deployment to exclude \"null\" as a valid origin. By removing this value, the Gradio server will no longer accept requests from sandboxed iframes or sources with a null origin, mitigating the potential for exploitation."
+        },
+        {
+          "id": "PYSEC-2024-215",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47167",
+            "GHSA-576c-3j53-r9jj"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability relates to **Server-Side Request Forgery (SSRF)** in the `/queue/join` endpoint. Gradio\u2019s `async_save_url_to_cache` function allows attackers to force the Gradio server to send HTTP requests to user-controlled URLs. This could enable attackers to target internal servers or services within a local network and possibly exfiltrate data or cause unwanted internal requests. Additionally, the content from these URLs is stored locally, making it easier for attackers to upload potentially malicious files to the server. This impacts users deploying Gradio servers that use components like the Video component which involve URL fetching. Users are advised to upgrade to `gradio>=5` to address this issue.  As a workaround, users can disable or heavily restrict URL-based inputs in their Gradio applications to trusted domains only. Additionally, implementing stricter URL validation (such as allowinglist-based validation) and ensuring that local or internal network addresses cannot be requested via the `/queue/join` endpoint can help mitigate the risk of SSRF attacks."
+        },
+        {
+          "id": "PYSEC-2024-216",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47867",
+            "GHSA-8c87-gvhj-xm8m"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability is a **lack of integrity check** on the downloaded FRP client, which could potentially allow attackers to introduce malicious code. If an attacker gains access to the remote URL from which the FRP client is downloaded, they could modify the binary without detection, as the Gradio server does not verify the file's checksum or signature.  Any users utilizing the Gradio server's sharing mechanism that downloads the FRP client could be affected by this vulnerability, especially those relying on the executable binary for secure data tunneling. There is no direct workaround for this issue without upgrading. However, users can manually validate the integrity of the downloaded FRP client by implementing checksum or signature verification in their own environment to ensure the binary hasn't been tampered with."
+        },
+        {
+          "id": "PYSEC-2024-217",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-4q3c-cj7g-jcwf",
+            "CVE-2024-47868"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This is a **data validation vulnerability** affecting several Gradio components, which allows arbitrary file leaks through the post-processing step. Attackers can exploit these components by crafting requests that bypass expected input constraints. This issue could lead to sensitive files being exposed to unauthorized users, especially when combined with other vulnerabilities, such as issue TOB-GRADIO-15. The components most at risk are those that return or handle file data. Vulnerable Components: 1. **String to FileData:** DownloadButton, Audio, ImageEditor, Video, Model3D, File, UploadButton. 2. **Complex data to FileData:** Chatbot, MultimodalTextbox. 3. **Direct file read in preprocess:** Code. 4. **Dictionary converted to FileData:** ParamViewer, Dataset. Exploit Scenarios: 1. A developer creates a Dropdown list that passes values to a DownloadButton. An attacker bypasses the allowed inputs, sends an arbitrary file path (like `/etc/passwd`), and downloads sensitive files. 2. An attacker crafts a malicious payload in a ParamViewer component, leaking sensitive files from a server through the arbitrary file leak. This issue has been resolved in `gradio>5.0`. Upgrading to the latest version will mitigate this vulnerability. There are no known workarounds for this vulnerability."
+        },
+        {
+          "id": "PYSEC-2024-218",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-xh2x-3mrm-fwqm",
+            "CVE-2024-47870"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability involves a **race condition** in the `update_root_in_config` function, allowing an attacker to modify the `root` URL used by the Gradio frontend to communicate with the backend. By exploiting this flaw, an attacker can redirect user traffic to a malicious server. This could lead to the interception of sensitive data such as authentication credentials or uploaded files. This impacts all users who connect to a Gradio server, especially those exposed to the internet, where malicious actors could exploit this race condition. Users are advised to upgrade to `gradio>=5` to address this issue. There are no known workarounds for this issue."
+        },
+        {
+          "id": "PYSEC-2024-219",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "GHSA-279j-x4gx-hfrh",
+            "CVE-2024-47871"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability involves **insecure communication** between the FRP (Fast Reverse Proxy) client and server when Gradio's `share=True` option is used. HTTPS is not enforced on the connection, allowing attackers to intercept and read files uploaded to the Gradio server, as well as modify responses or data sent between the client and server. This impacts users who are sharing Gradio demos publicly over the internet using `share=True` without proper encryption, exposing sensitive data to potential eavesdroppers. Users are advised to upgrade to `gradio>=5` to address this issue. As a workaround, users can avoid using `share=True` in production environments and instead host their Gradio applications on servers with HTTPS enabled to ensure secure communication."
+        },
+        {
+          "id": "PYSEC-2024-220",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-47872",
+            "GHSA-gvv6-33j7-884g"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. This vulnerability involves **Cross-Site Scripting (XSS)** on any Gradio server that allows file uploads. Authenticated users can upload files such as HTML, JavaScript, or SVG files containing malicious scripts. When other users download or view these files, the scripts will execute in their browser, allowing attackers to perform unauthorized actions or steal sensitive information from their sessions. This impacts any Gradio server that allows file uploads, particularly those using components that process or display user-uploaded files. Users are advised to upgrade to `gradio>=5` to address this issue. As a workaround, users can restrict the types of files that can be uploaded to the Gradio server by limiting uploads to non-executable file types such as images or text. Additionally, developers can implement server-side validation to sanitize uploaded files, ensuring that HTML, JavaScript, and SVG files are properly handled or rejected before being stored or displayed to users."
+        },
+        {
+          "id": "PYSEC-2025-118",
+          "fix_versions": [
+            "5.6.0"
+          ],
+          "aliases": [
+            "CVE-2025-23042",
+            "GHSA-j2jg-fq62-7c3h"
+          ],
+          "description": "Gradio is an open-source Python package that allows quick building of demos and web application for machine learning models, API, or any arbitrary Python function. Gradio's Access Control List (ACL) for file paths can be bypassed by altering the letter case of a blocked file or directory path. This vulnerability arises due to the lack of case normalization in the file path validation logic. On case-insensitive file systems, such as those used by Windows and macOS, this flaw enables attackers to circumvent security restrictions and access sensitive files that should be protected. This issue can lead to unauthorized data access, exposing sensitive information and undermining the integrity of Gradio's security model. Given Gradio's popularity for building web applications, particularly in machine learning and AI, this vulnerability may pose a substantial threat if exploited in production environments. This issue has been addressed in release version 5.6.0. Users are advised to upgrade. There are no known workarounds for this vulnerability."
+        },
+        {
+          "id": "PYSEC-2026-211",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2026-10783"
+          ],
+          "description": "A security flaw has been discovered in gradio-app gradio 6.14.0. This affects the function save_audio_to_cache of the component Audio Cache Key Handler. Performing a manipulation results in use of weak hash. The attack must be initiated from a local position. The attack is considered to have high complexity. It is indicated that the exploitability is difficult. The exploit has been released to the public and may be used for attacks. The patch is named 13394. To fix this issue, it is recommended to deploy a patch."
+        },
+        {
+          "id": "PYSEC-2026-63",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-h3h8-3v2v-rg7m",
+            "CVE-2026-27167"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. Starting in version 4.16.0 and prior to version 6.6.0, Gradio applications running outside of Hugging Face Spaces automatically enable \"mocked\" OAuth routes when OAuth components (e.g. `gr.LoginButton`) are used. When a user visits `/login/huggingface`, the server retrieves its own Hugging Face access token via `huggingface_hub.get_token()` and stores it in the visitor's session cookie. If the application is network-accessible, any remote attacker can trigger this flow to steal the server owner's HF token. The session cookie is signed with a hardcoded secret derived from the string `\"-v4\"`, making the payload trivially decodable. Version 6.6.0 fixes the issue."
+        },
+        {
+          "id": "PYSEC-2026-64",
+          "fix_versions": [
+            "6.7.0"
+          ],
+          "aliases": [
+            "CVE-2026-28414",
+            "GHSA-39mp-8hj3-5c49"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. Prior to version 6.7, Gradio apps running on Window with Python 3.13+ are vulnerable to an absolute path traversal issue that enables unauthenticated attackers to read arbitrary files from the file system. Python 3.13+ changed the definition of `os.path.isabs` so that root-relative paths like `/windows/win.ini` on Windows are no longer considered absolute paths, resulting in a vulnerability in Gradio's logic for joining paths safely. This can be exploited by unauthenticated attackers to read arbitrary files from the Gradio server, even when Gradio is set up with authentication. Version 6.7 fixes the issue."
+        },
+        {
+          "id": "PYSEC-2026-65",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-pfjf-5gxr-995x",
+            "CVE-2026-28415"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. Prior to version 6.6.0, the _redirect_to_target() function in Gradio's OAuth flow accepts an unvalidated _target_url query parameter, allowing redirection to arbitrary external URLs. This affects the /logout and /login/callback endpoints on Gradio apps with OAuth enabled (i.e. apps running on Hugging Face Spaces with gr.LoginButton). Starting in version 6.6.0, the _target_url parameter is sanitized to only use the path, query, and fragment, stripping any scheme or host."
+        },
+        {
+          "id": "PYSEC-2026-66",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "CVE-2026-28416",
+            "GHSA-jmh7-g254-2cq9"
+          ],
+          "description": "Gradio is an open-source Python package designed for quick prototyping. Prior to version 6.6.0, a Server-Side Request Forgery (SSRF) vulnerability in Gradio allows an attacker to make arbitrary HTTP requests from a victim's server by hosting a malicious Gradio Space. When a victim application uses `gr.load()` to load an attacker-controlled Space, the malicious `proxy_url` from the config is trusted and added to the allowlist, enabling the attacker to access internal services, cloud metadata endpoints, and private networks through the victim's infrastructure. Version 6.6.0 fixes the issue."
+        },
+        {
+          "id": "GHSA-26jh-r8g2-6fpr",
+          "fix_versions": [
+            "5.0.0"
+          ],
+          "aliases": [],
+          "description": "Gradio's dropdown component pre-process step does not limit the values to those in the dropdown list"
+        },
+        {
+          "id": "CVE-2026-48545",
+          "fix_versions": [
+            "6.15.0"
+          ],
+          "aliases": [
+            "GHSA-7hp7-4p35-3cx2"
+          ],
+          "description": "Gradio contains a cookie injection vulnerability"
+        }
+      ]
+    },
+    {
+      "name": "gradiologin",
+      "version": "0.1.0",
+      "vulns": []
+    },
+    {
+      "name": "greenlet",
+      "version": "3.2.4",
+      "vulns": []
+    },
+    {
+      "name": "grpcio-tools",
+      "version": "1.62.3",
+      "vulns": []
+    },
+    {
+      "name": "grpcio",
+      "version": "1.75.1",
+      "vulns": []
+    },
+    {
+      "name": "h2",
+      "version": "4.3.0",
+      "vulns": []
+    },
+    {
+      "name": "hpack",
+      "version": "4.1.0",
+      "vulns": []
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.1.10",
+      "vulns": []
+    },
+    {
+      "name": "html2text",
+      "version": "2024.2.26",
+      "vulns": []
+    },
+    {
+      "name": "httplib2",
+      "version": "0.31.0",
+      "vulns": []
+    },
+    {
+      "name": "httptools",
+      "version": "0.6.4",
+      "vulns": []
+    },
+    {
+      "name": "tomlkit",
+      "version": "0.12.0",
+      "vulns": []
+    },
+    {
+      "name": "google-api-core",
+      "version": "2.30.3",
+      "vulns": []
+    },
+    {
+      "name": "google-auth",
+      "version": "2.55.2",
+      "vulns": []
+    },
+    {
+      "name": "hyperframe",
+      "version": "6.1.0",
+      "vulns": []
+    },
+    {
+      "name": "importlib-resources",
+      "version": "6.5.2",
+      "vulns": []
+    },
+    {
+      "name": "markupsafe",
+      "version": "2.1.5",
+      "vulns": []
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.0",
+      "vulns": []
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "vulns": []
+    },
+    {
+      "name": "semantic-version",
+      "version": "2.10.0",
+      "vulns": []
+    },
+    {
+      "name": "websockets",
+      "version": "11.0.3",
+      "vulns": []
+    },
+    {
+      "name": "beautifulsoup4",
+      "version": "4.15.0",
+      "vulns": []
+    },
+    {
+      "name": "fonttools",
+      "version": "4.63.0",
+      "vulns": []
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.0",
+      "vulns": []
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "vulns": []
+    },
+    {
+      "name": "pytz",
+      "version": "2026.2",
+      "vulns": []
+    },
+    {
+      "name": "ruff",
+      "version": "0.15.21",
+      "vulns": []
+    },
+    {
+      "name": "authlib",
+      "version": "1.7.2",
+      "vulns": []
+    },
+    {
+      "name": "joserfc",
+      "version": "1.7.3",
+      "vulns": []
+    },
+    {
+      "name": "ffmpy",
+      "version": "1.0.0",
+      "vulns": []
+    },
+    {
+      "name": "google-api-python-client",
+      "version": "2.198.0",
+      "vulns": []
+    },
+    {
+      "name": "google-auth-httplib2",
+      "version": "0.4.0",
+      "vulns": []
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "vulns": []
+    },
+    {
+      "name": "pydub",
+      "version": "0.25.1",
+      "vulns": []
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.35.3",
+      "vulns": []
+    },
+    {
+      "name": "identify",
+      "version": "2.6.14",
+      "vulns": []
+    },
+    {
+      "name": "idna",
+      "version": "3.10",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-215",
+          "fix_versions": [
+            "3.15"
+          ],
+          "aliases": [
+            "GHSA-65pc-fj4g-8rjx",
+            "CVE-2026-45409"
+          ],
+          "description": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix"
+        },
+        {
+          "id": "PYSEC-2026-215",
+          "fix_versions": [
+            "3.15"
+          ],
+          "aliases": [
+            "GHSA-65pc-fj4g-8rjx",
+            "CVE-2026-45409"
+          ],
+          "description": "Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application."
+        }
+      ]
+    },
+    {
+      "name": "imagesize",
+      "version": "1.4.1",
+      "vulns": []
+    },
+    {
+      "name": "importlib-metadata",
+      "version": "8.4.0",
+      "vulns": []
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.0",
+      "vulns": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "ipython-pygments-lexers",
+      "version": "1.1.1",
+      "vulns": []
+    },
+    {
+      "name": "ipython",
+      "version": "8.37.0",
+      "vulns": []
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.52",
+      "vulns": []
+    },
+    {
+      "name": "jedi",
+      "version": "0.20.0",
+      "vulns": []
+    },
+    {
+      "name": "parso",
+      "version": "0.8.7",
+      "vulns": []
+    },
+    {
+      "name": "pexpect",
+      "version": "4.9.0",
+      "vulns": []
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.7.0",
+      "vulns": []
+    },
+    {
+      "name": "traitlets",
+      "version": "5.15.1",
+      "vulns": []
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.1",
+      "vulns": []
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.2.2",
+      "vulns": []
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.3",
+      "vulns": []
+    },
+    {
+      "name": "asttokens",
+      "version": "3.0.1",
+      "vulns": []
+    },
+    {
+      "name": "pure-eval",
+      "version": "0.2.3",
+      "vulns": []
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.8.2",
+      "vulns": []
+    },
+    {
+      "name": "ipython",
+      "version": "9.6.0",
+      "vulns": []
+    },
+    {
+      "name": "jedi",
+      "version": "0.19.2",
+      "vulns": []
+    },
+    {
+      "name": "jiter",
+      "version": "0.11.0",
+      "vulns": []
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.2",
+      "vulns": []
+    },
+    {
+      "name": "jsonpatch",
+      "version": "1.33",
+      "vulns": []
+    },
+    {
+      "name": "jsonpointer",
+      "version": "3.1.1",
+      "vulns": []
+    },
+    {
+      "name": "jsonpath-python",
+      "version": "1.0.6",
+      "vulns": []
+    },
+    {
+      "name": "jsonpointer",
+      "version": "3.0.0",
+      "vulns": []
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "vulns": []
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "vulns": []
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.4.9",
+      "vulns": []
+    },
+    {
+      "name": "kubernetes",
+      "version": "34.1.0",
+      "vulns": []
+    },
+    {
+      "name": "lance-namespace-urllib3-client",
+      "version": "0.0.17",
+      "vulns": []
+    },
+    {
+      "name": "lance-namespace",
+      "version": "0.0.6",
+      "vulns": []
+    },
+    {
+      "name": "lancedb",
+      "version": "0.25.1",
+      "vulns": []
+    },
+    {
+      "name": "langchain-anthropic",
+      "version": "0.1.23",
+      "vulns": [
+        {
+          "id": "CVE-2026-55443",
+          "fix_versions": [
+            "1.4.6"
+          ],
+          "aliases": [
+            "GHSA-gr75-jv2w-4656"
+          ],
+          "description": "LangChain: Path traversal and sandbox escape in LangChain file-search middleware and loaders"
+        }
+      ]
+    },
+    {
+      "name": "langchain-core",
+      "version": "0.2.43",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1518",
+          "fix_versions": [
+            "0.3.80"
+          ],
+          "aliases": [
+            "GHSA-6qv9-48xg-fc7f",
+            "CVE-2025-65106"
+          ],
+          "description": "LangChain Vulnerable to Template Injection via Attribute Access in Prompt Templates"
+        },
+        {
+          "id": "PYSEC-2026-373",
+          "fix_versions": [
+            "0.3.81"
+          ],
+          "aliases": [
+            "GHSA-c67j-w6g6-q2cm",
+            "CVE-2025-68664"
+          ],
+          "description": "LangChain serialization injection vulnerability enables secret extraction in dumps/loads APIs"
+        },
+        {
+          "id": "PYSEC-2026-1518",
+          "fix_versions": [
+            "0.3.80",
+            "1.0.7"
+          ],
+          "aliases": [
+            "GHSA-6qv9-48xg-fc7f",
+            "CVE-2025-65106"
+          ],
+          "description": "LangChain Vulnerable to Template Injection via Attribute Access in Prompt Templates"
+        },
+        {
+          "id": "PYSEC-2026-373",
+          "fix_versions": [
+            "0.3.81",
+            "1.2.5"
+          ],
+          "aliases": [
+            "GHSA-c67j-w6g6-q2cm",
+            "CVE-2025-68664"
+          ],
+          "description": "LangChain serialization injection vulnerability enables secret extraction in dumps/loads APIs"
+        },
+        {
+          "id": "CVE-2026-26013",
+          "fix_versions": [
+            "1.2.11"
+          ],
+          "aliases": [
+            "GHSA-2g6r-c272-w58r"
+          ],
+          "description": "LangChain affected by SSRF via image_url token counting in ChatOpenAI.get_num_tokens_from_messages"
+        },
+        {
+          "id": "CVE-2026-40087",
+          "fix_versions": [
+            "1.2.28"
+          ],
+          "aliases": [
+            "GHSA-926x-3r5x-gfhw"
+          ],
+          "description": "LangChain has incomplete f-string validation in prompt templates"
+        },
+        {
+          "id": "CVE-2026-44843",
+          "fix_versions": [
+            "0.3.85"
+          ],
+          "aliases": [
+            "GHSA-pjwx-r37v-7724"
+          ],
+          "description": "LangChain vulnerable to unsafe deserialization of attacker-controlled objects through overly broad `load()` allowlists"
+        },
+        {
+          "id": "CVE-2026-34070",
+          "fix_versions": [
+            "1.2.22"
+          ],
+          "aliases": [
+            "GHSA-qh6h-p6c9-ff54"
+          ],
+          "description": "LangChain Core has Path Traversal vulnerabilites in legacy `load_prompt` functions"
+        }
+      ]
+    },
+    {
+      "name": "langchain-cohere",
+      "version": "0.2.4",
+      "vulns": []
+    },
+    {
+      "name": "langchain-community",
+      "version": "0.2.11",
+      "vulns": [
+        {
+          "id": "PYSEC-2024-115",
+          "fix_versions": [
+            "0.2.19"
+          ],
+          "aliases": [
+            "PYSEC-2026-1507",
+            "GHSA-45pg-36p6-83v9",
+            "CVE-2024-8309"
+          ],
+          "description": "Langchain SQL Injection vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1515",
+          "fix_versions": [
+            "0.3.27"
+          ],
+          "aliases": [
+            "CVE-2025-6984",
+            "GHSA-pc6w-59fv-rh23"
+          ],
+          "description": "Langchain Community Vulnerable to XML External Entity (XXE) Attacks"
+        }
+      ]
+    },
+    {
+      "name": "langchain",
+      "version": "0.2.15",
+      "vulns": [
+        {
+          "id": "CVE-2026-45134",
+          "fix_versions": [
+            "0.3.30"
+          ],
+          "aliases": [
+            "GHSA-3644-q5cj-c5c7"
+          ],
+          "description": "LangSmith SDK: Public prompt pull deserializes untrusted manifests without trust boundary warning"
+        },
+        {
+          "id": "CVE-2026-55443",
+          "fix_versions": [
+            "1.3.9"
+          ],
+          "aliases": [
+            "GHSA-gr75-jv2w-4656"
+          ],
+          "description": "LangChain: Path traversal and sandbox escape in LangChain file-search middleware and loaders"
+        }
+      ]
+    },
+    {
+      "name": "langchain-text-splitters",
+      "version": "0.2.4",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-77",
+          "fix_versions": [
+            "1.1.2"
+          ],
+          "aliases": [
+            "GHSA-fv5p-p927-qmxr",
+            "CVE-2026-41481"
+          ],
+          "description": "LangChain Text Splitters: HTMLHeaderTextSplitter.split_text_from_url SSRF Redirect Bypass"
+        },
+        {
+          "id": "PYSEC-2026-1520",
+          "fix_versions": [
+            "0.3.9"
+          ],
+          "aliases": [
+            "CVE-2025-6985",
+            "GHSA-m42m-m8cr-8m58"
+          ],
+          "description": "LangChain Text Splitters is vulnerable to XML External Entity (XXE) attacks due to unsafe XSLT parsing"
+        },
+        {
+          "id": "PYSEC-2026-77",
+          "fix_versions": [
+            "1.1.2"
+          ],
+          "aliases": [
+            "GHSA-fv5p-p927-qmxr",
+            "CVE-2026-41481"
+          ],
+          "description": "LangChain is a framework for building agents and LLM-powered applications. Prior to langchain-text-splitters  1.1.2, HTMLHeaderTextSplitter.split_text_from_url() validated the initial URL using validate_safe_url() but then performed the fetch with requests.get() with redirects enabled (the default). Because redirect targets were not revalidated, a URL pointing to an attacker-controlled server could redirect to internal, localhost, or cloud metadata endpoints, bypassing SSRF protections. The response body is parsed and returned as Document objects to the calling application code. Whether this constitutes a data exfiltration path depends on the application: if it exposes Document contents (or derivatives) back to the requester who supplied the URL, sensitive data from internal endpoints could be leaked. Applications that store or process Documents internally without returning raw content to the requester are not directly exposed to data exfiltration through this issue. This vulnerability is fixed in 1.1.2."
+        }
+      ]
+    },
+    {
+      "name": "langchain-experimental",
+      "version": "0.0.64",
+      "vulns": [
+        {
+          "id": "PYSEC-2023-194",
+          "fix_versions": [
+            "0.0.15"
+          ],
+          "aliases": [
+            "GHSA-gjjr-63x4-v8cq",
+            "CVE-2023-44467"
+          ],
+          "description": "langchain_experimental 0.0.14 allows an attacker to bypass the CVE-2023-36258 fix and execute arbitrary code via the PALChain in the python exec method."
+        },
+        {
+          "id": "PYSEC-2024-53",
+          "fix_versions": [
+            "0.0.61"
+          ],
+          "aliases": [
+            "GHSA-wmvm-9vqv-5qpp",
+            "CVE-2024-38459"
+          ],
+          "description": "langchain_experimental (aka LangChain Experimental) before 0.0.61 for LangChain provides Python REPL access without an opt-in step. NOTE; this issue exists because of an incomplete fix for CVE-2024-27444."
+        },
+        {
+          "id": "PYSEC-2024-62",
+          "fix_versions": [
+            "0.0.21"
+          ],
+          "aliases": [
+            "CVE-2024-21513",
+            "GHSA-cgcg-p68q-3w7v"
+          ],
+          "description": "Versions of the package langchain-experimental from 0.0.15 and before 0.0.21 are vulnerable to Arbitrary Code Execution when retrieving values from the database, the code will attempt to call 'eval' on all values. An attacker can exploit this vulnerability and execute arbitrary python code if they can control the input prompt and the server is configured with VectorSQLDatabaseChain.\r\r**Notes:**\r\rImpact on the Confidentiality, Integrity and Availability of the vulnerable component:\r \rConfidentiality: Code execution happens within the impacted component, in this case langchain-experimental, so all resources are necessarily accessible.\r\rIntegrity: There is nothing protected by the impacted component inherently. Although anything returned from the component counts as 'information' for which the trustworthiness can be compromised.\r\rAvailability: The loss of availability isn't caused by the attack itself, but it happens as a result during the attacker's post-exploitation steps.\r\r\rImpact on the Confidentiality, Integrity and Availability of the subsequent system:\r\rAs a legitimate low-privileged user of the package (PR:L) the attacker does not have more access to data owned by the package as a result of this vulnerability than they did with normal usage (e.g. can query the DB). The unintended action that one can perform by breaking out of the app environment and exfiltrating files, making remote connections etc. happens during the post exploitation phase in the subsequent system - in this case, the OS.\r\rAT:P: An attacker needs to be able to influence the input prompt, whilst the server is configured with the VectorSQLDatabaseChain plugin."
+        }
+      ]
+    },
+    {
+      "name": "langchain-google-genai",
+      "version": "1.0.10",
+      "vulns": []
+    },
+    {
+      "name": "langchain-mistralai",
+      "version": "0.1.13",
+      "vulns": []
+    },
+    {
+      "name": "langchain-ollama",
+      "version": "0.1.3",
+      "vulns": []
+    },
+    {
+      "name": "langchain-openai",
+      "version": "0.1.25",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-76",
+          "fix_versions": [
+            "1.1.14"
+          ],
+          "aliases": [
+            "CVE-2026-41488",
+            "GHSA-r7w7-9xr2-qq2r"
+          ],
+          "description": "langchain-openai: Image token counting SSRF protection can be bypassed via DNS rebinding"
+        },
+        {
+          "id": "PYSEC-2026-76",
+          "fix_versions": [
+            "1.1.14"
+          ],
+          "aliases": [
+            "CVE-2026-41488",
+            "GHSA-r7w7-9xr2-qq2r"
+          ],
+          "description": "LangChain is a framework for building agents and LLM-powered applications. Prior to 1.1.14, langchain-openai's _url_to_size() helper (used by get_num_tokens_from_messages for image token counting) validated URLs for SSRF protection and then fetched them in a separate network operation with independent DNS resolution. This left a TOCTOU / DNS rebinding window: an attacker-controlled hostname could resolve to a public IP during validation and then to a private/localhost IP during the actual fetch."
+        }
+      ]
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "vulns": []
+    },
+    {
+      "name": "anthropic",
+      "version": "0.116.0",
+      "vulns": []
+    },
+    {
+      "name": "cohere",
+      "version": "5.21.1",
+      "vulns": []
+    },
+    {
+      "name": "httpx-sse",
+      "version": "0.4.3",
+      "vulns": []
+    },
+    {
+      "name": "langsmith",
+      "version": "0.1.147",
+      "vulns": [
+        {
+          "id": "CVE-2026-45134",
+          "fix_versions": [
+            "0.8.0"
+          ],
+          "aliases": [
+            "GHSA-3644-q5cj-c5c7"
+          ],
+          "description": "LangSmith SDK: Public prompt pull deserializes untrusted manifests without trust boundary warning"
+        },
+        {
+          "id": "CVE-2026-59152",
+          "fix_versions": [
+            "0.8.18"
+          ],
+          "aliases": [
+            "GHSA-f4xh-w4cj-qxq8"
+          ],
+          "description": "LangSmith SDK TracingMiddleware: Arbitrary server-side file read"
+        },
+        {
+          "id": "CVE-2026-41182",
+          "fix_versions": [
+            "0.7.31"
+          ],
+          "aliases": [
+            "GHSA-rr7j-v2q5-chgv"
+          ],
+          "description": "LangSmith SDK: Streaming token events bypass output redaction"
+        }
+      ]
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "vulns": []
+    },
+    {
+      "name": "ollama",
+      "version": "0.6.2",
+      "vulns": []
+    },
+    {
+      "name": "openai",
+      "version": "1.109.1",
+      "vulns": []
+    },
+    {
+      "name": "packaging",
+      "version": "24.2",
+      "vulns": []
+    },
+    {
+      "name": "requests-toolbelt",
+      "version": "1.0.0",
+      "vulns": []
+    },
+    {
+      "name": "sqlalchemy",
+      "version": "2.0.51",
+      "vulns": []
+    },
+    {
+      "name": "tabulate",
+      "version": "0.9.0",
+      "vulns": []
+    },
+    {
+      "name": "tenacity",
+      "version": "8.5.0",
+      "vulns": []
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.13.0",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.3.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1994",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "CVE-2025-66471",
+            "GHSA-2xpw-w6gg-jr37"
+          ],
+          "description": "urllib3 streaming API improperly handles highly compressed data"
+        },
+        {
+          "id": "PYSEC-2026-1996",
+          "fix_versions": [
+            "2.6.3"
+          ],
+          "aliases": [
+            "CVE-2026-21441",
+            "GHSA-38jv-5279-wg99"
+          ],
+          "description": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)"
+        },
+        {
+          "id": "PYSEC-2026-1997",
+          "fix_versions": [
+            "2.5.0"
+          ],
+          "aliases": [
+            "CVE-2025-50182",
+            "GHSA-48p4-8xcf-vxj5"
+          ],
+          "description": "urllib3 does not control redirects in browsers and Node.js"
+        },
+        {
+          "id": "PYSEC-2026-1998",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "CVE-2025-66418",
+            "GHSA-gm62-xv2j-4w53"
+          ],
+          "description": "urllib3 allows an unbounded number of links in the decompression chain"
+        },
+        {
+          "id": "PYSEC-2026-1999",
+          "fix_versions": [
+            "2.5.0"
+          ],
+          "aliases": [
+            "CVE-2025-50181",
+            "GHSA-pq67-6m6q-mj2v"
+          ],
+          "description": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-qccp-gfcp-xxvc",
+            "CVE-2026-44431"
+          ],
+          "description": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-qccp-gfcp-xxvc",
+            "CVE-2026-44431"
+          ],
+          "description": "urllib3 is an HTTP client library for Python. From 1.23 to before 2.7.0, cross-origin redirects followed from the low-level API via ProxyManager.connection_from_url().urlopen(..., assert_same_host=False) still forward these sensitive headers. This vulnerability is fixed in 2.7.0."
+        },
+        {
+          "id": "PYSEC-2026-1994",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "GHSA-2xpw-w6gg-jr37",
+            "CVE-2025-66471"
+          ],
+          "description": "urllib3 streaming API improperly handles highly compressed data"
+        },
+        {
+          "id": "PYSEC-2026-1996",
+          "fix_versions": [
+            "2.6.3"
+          ],
+          "aliases": [
+            "GHSA-38jv-5279-wg99",
+            "CVE-2026-21441"
+          ],
+          "description": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)"
+        },
+        {
+          "id": "PYSEC-2026-1997",
+          "fix_versions": [
+            "2.5.0"
+          ],
+          "aliases": [
+            "GHSA-48p4-8xcf-vxj5",
+            "CVE-2025-50182"
+          ],
+          "description": "urllib3 does not control redirects in browsers and Node.js"
+        },
+        {
+          "id": "PYSEC-2026-1998",
+          "fix_versions": [
+            "2.6.0"
+          ],
+          "aliases": [
+            "GHSA-gm62-xv2j-4w53",
+            "CVE-2025-66418"
+          ],
+          "description": "urllib3 allows an unbounded number of links in the decompression chain"
+        },
+        {
+          "id": "PYSEC-2026-1999",
+          "fix_versions": [
+            "2.5.0"
+          ],
+          "aliases": [
+            "GHSA-pq67-6m6q-mj2v",
+            "CVE-2025-50181"
+          ],
+          "description": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation"
+        }
+      ]
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.3",
+      "vulns": []
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.3",
+      "vulns": []
+    },
+    {
+      "name": "pyarrow",
+      "version": "25.0.0",
+      "vulns": []
+    },
+    {
+      "name": "pylance",
+      "version": "0.38.3",
+      "vulns": []
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "vulns": []
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.6.3",
+      "vulns": []
+    },
+    {
+      "name": "regex",
+      "version": "2026.7.10",
+      "vulns": []
+    },
+    {
+      "name": "linkify-it-py",
+      "version": "2.0.3",
+      "vulns": []
+    },
+    {
+      "name": "uc-micro-py",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "llama-cloud",
+      "version": "0.1.42",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-agent-openai",
+      "version": "0.2.9",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-core",
+      "version": "0.10.68.post1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1559",
+          "fix_versions": [
+            "0.12.38"
+          ],
+          "aliases": [
+            "GHSA-3wxx-q3gv-pvvv",
+            "CVE-2025-5472"
+          ],
+          "description": "LlamaIndex vulnerable to DoS attack through uncontrolled recursive JSON parsing"
+        },
+        {
+          "id": "PYSEC-2026-1560",
+          "fix_versions": [
+            "0.12.41"
+          ],
+          "aliases": [
+            "GHSA-488g-hw5f-x29p",
+            "CVE-2025-6208"
+          ],
+          "description": "llama-index-core vulnerable to Uncontrolled Resource Consumption"
+        },
+        {
+          "id": "PYSEC-2026-1561",
+          "fix_versions": [
+            "0.12.38"
+          ],
+          "aliases": [
+            "GHSA-7753-xrfw-ch36",
+            "CVE-2025-5302"
+          ],
+          "description": "LlamaIndex affected by a Denial of Service (DOS) in JSONReader"
+        },
+        {
+          "id": "PYSEC-2026-1562",
+          "fix_versions": [
+            "0.13.0"
+          ],
+          "aliases": [
+            "CVE-2025-7647",
+            "GHSA-cr7q-2w66-hjcm"
+          ],
+          "description": "llama-index-core insecurely handles temporary files"
+        },
+        {
+          "id": "PYSEC-2026-1563",
+          "fix_versions": [
+            "0.12.6"
+          ],
+          "aliases": [
+            "GHSA-j3wr-m6xh-64hg",
+            "CVE-2024-12704"
+          ],
+          "description": "LlamaIndex Improper Handling of Exceptional Conditions vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1559",
+          "fix_versions": [
+            "0.12.38"
+          ],
+          "aliases": [
+            "CVE-2025-5472",
+            "GHSA-3wxx-q3gv-pvvv"
+          ],
+          "description": "LlamaIndex vulnerable to DoS attack through uncontrolled recursive JSON parsing"
+        },
+        {
+          "id": "PYSEC-2026-1562",
+          "fix_versions": [
+            "0.13.0"
+          ],
+          "aliases": [
+            "GHSA-cr7q-2w66-hjcm",
+            "CVE-2025-7647"
+          ],
+          "description": "llama-index-core insecurely handles temporary files"
+        },
+        {
+          "id": "PYSEC-2026-1560",
+          "fix_versions": [
+            "0.12.41"
+          ],
+          "aliases": [
+            "CVE-2025-6208",
+            "GHSA-488g-hw5f-x29p"
+          ],
+          "description": "llama-index-core vulnerable to Uncontrolled Resource Consumption"
+        },
+        {
+          "id": "PYSEC-2026-1563",
+          "fix_versions": [
+            "0.12.6"
+          ],
+          "aliases": [
+            "CVE-2024-12704",
+            "GHSA-j3wr-m6xh-64hg"
+          ],
+          "description": "LlamaIndex Improper Handling of Exceptional Conditions vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1561",
+          "fix_versions": [
+            "0.12.38"
+          ],
+          "aliases": [
+            "CVE-2025-5302",
+            "GHSA-7753-xrfw-ch36"
+          ],
+          "description": "LlamaIndex affected by a Denial of Service (DOS) in JSONReader"
+        }
+      ]
+    },
+    {
+      "name": "llama-index-llms-openai",
+      "version": "0.1.31",
+      "vulns": []
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.6.0",
+      "vulns": []
+    },
+    {
+      "name": "deprecated",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "vulns": []
+    },
+    {
+      "name": "nltk",
+      "version": "3.10.0",
+      "vulns": []
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "vulns": []
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.3",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-cli",
+      "version": "0.1.13",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1557",
+          "fix_versions": [
+            "0.4.1"
+          ],
+          "aliases": [
+            "CVE-2025-1753",
+            "GHSA-g99h-56mw-8263"
+          ],
+          "description": "LLama-Index CLI OS command injection vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1557",
+          "fix_versions": [
+            "0.4.1"
+          ],
+          "aliases": [
+            "GHSA-g99h-56mw-8263",
+            "CVE-2025-1753"
+          ],
+          "description": "LLama-Index CLI OS command injection vulnerability"
+        }
+      ]
+    },
+    {
+      "name": "llama-index-embeddings-openai",
+      "version": "0.1.11",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-indices-managed-llama-cloud",
+      "version": "0.2.7",
+      "vulns": []
+    },
+    {
+      "name": "llama-cloud",
+      "version": "2.11.0",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-legacy",
+      "version": "0.9.48.post4",
+      "vulns": []
+    },
+    {
+      "name": "openai",
+      "version": "2.45.0",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-multi-modal-llms-openai",
+      "version": "0.1.9",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-program-openai",
+      "version": "0.1.7",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-question-gen-openai",
+      "version": "0.1.3",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-readers-file",
+      "version": "0.1.33",
+      "vulns": []
+    },
+    {
+      "name": "pypdf",
+      "version": "4.3.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1827",
+          "fix_versions": [
+            "6.6.2"
+          ],
+          "aliases": [
+            "CVE-2026-24688",
+            "GHSA-2q4j-m29v-hq73"
+          ],
+          "description": "pypdf has possible Infinite Loop when processing outlines/bookmarks"
+        },
+        {
+          "id": "PYSEC-2026-1828",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-4f6g-68pf-7vhv",
+            "CVE-2026-22691"
+          ],
+          "description": "pypdf has possible long runtimes for malformed startxref"
+        },
+        {
+          "id": "PYSEC-2026-1829",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-4xc4-762w-m6cg",
+            "CVE-2026-22690"
+          ],
+          "description": "pypdf has possible long runtimes for missing /Root object with large /Size values"
+        },
+        {
+          "id": "PYSEC-2026-1830",
+          "fix_versions": [
+            "6.0.0"
+          ],
+          "aliases": [
+            "GHSA-7hfw-26vp-jp8m",
+            "CVE-2025-55197"
+          ],
+          "description": "PyPDF's Manipulated FlateDecode streams can exhaust RAM"
+        },
+        {
+          "id": "PYSEC-2026-1831",
+          "fix_versions": [
+            "6.1.3"
+          ],
+          "aliases": [
+            "CVE-2025-62708",
+            "GHSA-jfx9-29x2-rv3j"
+          ],
+          "description": "pypdf can exhaust RAM via manipulated LZWDecode streams"
+        },
+        {
+          "id": "PYSEC-2026-1832",
+          "fix_versions": [
+            "6.4.0"
+          ],
+          "aliases": [
+            "CVE-2025-66019",
+            "GHSA-m449-cwjh-6pw7"
+          ],
+          "description": "pypdf's LZWDecode streams be manipulated to exhaust RAM"
+        },
+        {
+          "id": "PYSEC-2026-1833",
+          "fix_versions": [
+            "6.1.3"
+          ],
+          "aliases": [
+            "CVE-2025-62707",
+            "GHSA-vr63-x8vc-m265"
+          ],
+          "description": "pypdf possibly loops infinitely when reading DCT inline images without EOF marker"
+        },
+        {
+          "id": "CVE-2026-48156",
+          "fix_versions": [
+            "6.12.0"
+          ],
+          "aliases": [
+            "GHSA-248m-82v9-q6g6"
+          ],
+          "description": "pypdf: Possible long runtimes for zero-only width values in cross-reference streamsuntimes for zero-only width values in cross-reference streams"
+        },
+        {
+          "id": "CVE-2026-27628",
+          "fix_versions": [
+            "6.7.2"
+          ],
+          "aliases": [
+            "GHSA-2rw7-x74f-jg35"
+          ],
+          "description": "pypdf has a possible infinite loop when loading circular /Prev entries in cross-reference streams"
+        },
+        {
+          "id": "CVE-2026-40260",
+          "fix_versions": [
+            "6.10.0"
+          ],
+          "aliases": [
+            "GHSA-3crg-w4f6-42mx"
+          ],
+          "description": "pypdf: Manipulated XMP metadata entity declarations can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-41313",
+          "fix_versions": [
+            "6.10.2"
+          ],
+          "aliases": [
+            "GHSA-4pxv-j86v-mhcw"
+          ],
+          "description": "pypdf: Possible long runtimes for wrong size values in incremental mode"
+        },
+        {
+          "id": "CVE-2026-54530",
+          "fix_versions": [
+            "6.13.0"
+          ],
+          "aliases": [
+            "GHSA-52x6-gq3r-vpf4"
+          ],
+          "description": "pypdf: Possible infinite loop when retrieving fonts for layout-mode text extraction"
+        },
+        {
+          "id": "CVE-2026-49460",
+          "fix_versions": [
+            "6.12.2"
+          ],
+          "aliases": [
+            "GHSA-5hgr-hg42-57jg"
+          ],
+          "description": "pypdf: Inefficient decoding of FlateDecode PNG predictor streams"
+        },
+        {
+          "id": "CVE-2026-41312",
+          "fix_versions": [
+            "6.10.2"
+          ],
+          "aliases": [
+            "GHSA-7gw9-cf7v-778f"
+          ],
+          "description": "pypdf: Manipulated FlateDecode predictor parameters can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-33699",
+          "fix_versions": [
+            "6.9.2"
+          ],
+          "aliases": [
+            "GHSA-87mj-5ggw-8qc3"
+          ],
+          "description": "pypdf: Possible infinite loop during recovery attempts in DictionaryObject.read_from_stream"
+        },
+        {
+          "id": "CVE-2026-27024",
+          "fix_versions": [
+            "6.7.1"
+          ],
+          "aliases": [
+            "GHSA-996q-pr4m-cvgq"
+          ],
+          "description": "pypdf has a possible infinite loop when processing TreeObject"
+        },
+        {
+          "id": "CVE-2026-28804",
+          "fix_versions": [
+            "6.7.5"
+          ],
+          "aliases": [
+            "GHSA-9m86-7pmv-2852"
+          ],
+          "description": "pypdf vulnerable to inefficient decoding of ASCIIHexDecode streams"
+        },
+        {
+          "id": "CVE-2026-27026",
+          "fix_versions": [
+            "6.7.1"
+          ],
+          "aliases": [
+            "GHSA-9mvc-8737-8j8h"
+          ],
+          "description": "pypdf possibly has long runtimes for malformed FlateDecode streams"
+        },
+        {
+          "id": "CVE-2026-48155",
+          "fix_versions": [
+            "6.12.0"
+          ],
+          "aliases": [
+            "GHSA-cj93-chg6-vgv8"
+          ],
+          "description": "pypdf: Possible large memory usage for large offsets for layout mode text"
+        },
+        {
+          "id": "CVE-2026-28351",
+          "fix_versions": [
+            "6.7.4"
+          ],
+          "aliases": [
+            "GHSA-f2v5-7jq9-h8cg"
+          ],
+          "description": "pypdf: Manipulated RunLengthDecode streams can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-54651",
+          "fix_versions": [
+            "6.13.1"
+          ],
+          "aliases": [
+            "GHSA-g9xf-7f8q-9mcj"
+          ],
+          "description": "pypdf: Possible infinite loop when processing threads/articles in writer"
+        },
+        {
+          "id": "CVE-2026-31826",
+          "fix_versions": [
+            "6.8.0"
+          ],
+          "aliases": [
+            "GHSA-hqmh-ppp3-xvm7"
+          ],
+          "description": "pypdf: manipulated stream length values can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-49461",
+          "fix_versions": [
+            "6.12.2"
+          ],
+          "aliases": [
+            "GHSA-j543-4vmf-qm7v"
+          ],
+          "description": "pypdf: Possible large memory usage for form XObjects during text extraction"
+        },
+        {
+          "id": "CVE-2026-41168",
+          "fix_versions": [
+            "6.10.1"
+          ],
+          "aliases": [
+            "GHSA-jj6c-8h6c-hppx"
+          ],
+          "description": "pypdf has long runtimes for wrong size values in cross-reference and object streams"
+        },
+        {
+          "id": "CVE-2026-57204",
+          "fix_versions": [
+            "6.13.3"
+          ],
+          "aliases": [
+            "GHSA-jm82-fx9c-mx94"
+          ],
+          "description": "pypdf: Missing stream length values ignore defined limits"
+        },
+        {
+          "id": "CVE-2026-54531",
+          "fix_versions": [
+            "6.13.0"
+          ],
+          "aliases": [
+            "GHSA-m2v9-299j-rv96"
+          ],
+          "description": "pypdf: Possible infinite loop when processing outlines/bookmarks in writer"
+        },
+        {
+          "id": "CVE-2026-33123",
+          "fix_versions": [
+            "6.9.1"
+          ],
+          "aliases": [
+            "GHSA-qpxp-75px-xjcp"
+          ],
+          "description": "pypdf has inefficient decoding of array-based streams"
+        },
+        {
+          "id": "CVE-2026-27025",
+          "fix_versions": [
+            "6.7.1"
+          ],
+          "aliases": [
+            "GHSA-wgvp-vg3v-2xq3"
+          ],
+          "description": "pypdf has possible long runtimes/large memory usage for large /ToUnicode streams"
+        },
+        {
+          "id": "CVE-2026-48735",
+          "fix_versions": [
+            "6.12.1"
+          ],
+          "aliases": [
+            "GHSA-wjqc-6w8f-h24c"
+          ],
+          "description": "pypdf: Manipulated XMP metadata streams can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-41314",
+          "fix_versions": [
+            "6.10.2"
+          ],
+          "aliases": [
+            "GHSA-x284-j5p8-9c5p"
+          ],
+          "description": "pypdf: Manipulated FlateDecode image dimensions can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-27888",
+          "fix_versions": [
+            "6.7.3"
+          ],
+          "aliases": [
+            "GHSA-x7hp-r3qg-r3cj"
+          ],
+          "description": "pypdf: Manipulated FlateDecode XFA streams can exhaust RAM"
+        },
+        {
+          "id": "PYSEC-2026-1827",
+          "fix_versions": [
+            "6.6.2"
+          ],
+          "aliases": [
+            "GHSA-2q4j-m29v-hq73",
+            "CVE-2026-24688"
+          ],
+          "description": "pypdf has possible Infinite Loop when processing outlines/bookmarks"
+        },
+        {
+          "id": "PYSEC-2026-1830",
+          "fix_versions": [
+            "6.0.0"
+          ],
+          "aliases": [
+            "CVE-2025-55197",
+            "GHSA-7hfw-26vp-jp8m"
+          ],
+          "description": "PyPDF's Manipulated FlateDecode streams can exhaust RAM"
+        },
+        {
+          "id": "PYSEC-2026-1832",
+          "fix_versions": [
+            "6.4.0"
+          ],
+          "aliases": [
+            "GHSA-m449-cwjh-6pw7",
+            "CVE-2025-66019"
+          ],
+          "description": "pypdf's LZWDecode streams be manipulated to exhaust RAM"
+        }
+      ]
+    },
+    {
+      "name": "striprtf",
+      "version": "0.0.26",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-readers-llama-parse",
+      "version": "0.1.6",
+      "vulns": []
+    },
+    {
+      "name": "llama-parse",
+      "version": "0.4.9",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-vector-stores-chroma",
+      "version": "0.1.10",
+      "vulns": []
+    },
+    {
+      "name": "chromadb",
+      "version": "0.5.23",
+      "vulns": []
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.20.3",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-vector-stores-lancedb",
+      "version": "0.1.7",
+      "vulns": []
+    },
+    {
+      "name": "lancedb",
+      "version": "0.34.0",
+      "vulns": []
+    },
+    {
+      "name": "lance-namespace",
+      "version": "0.9.0",
+      "vulns": []
+    },
+    {
+      "name": "lance-namespace-urllib3-client",
+      "version": "0.9.0",
+      "vulns": []
+    },
+    {
+      "name": "tantivy",
+      "version": "0.26.0",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-vector-stores-milvus",
+      "version": "0.1.23",
+      "vulns": []
+    },
+    {
+      "name": "pymilvus",
+      "version": "2.6.16",
+      "vulns": []
+    },
+    {
+      "name": "cachetools",
+      "version": "7.1.4",
+      "vulns": []
+    },
+    {
+      "name": "llama-index-vector-stores-qdrant",
+      "version": "0.2.17",
+      "vulns": []
+    },
+    {
+      "name": "qdrant-client",
+      "version": "1.18.0",
+      "vulns": []
+    },
+    {
+      "name": "portalocker",
+      "version": "3.2.0",
+      "vulns": []
+    },
+    {
+      "name": "hpack",
+      "version": "4.2.0",
+      "vulns": []
+    },
+    {
+      "name": "llama-index",
+      "version": "0.10.68",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1566",
+          "fix_versions": [
+            "0.12.41"
+          ],
+          "aliases": [
+            "GHSA-5hq9-5r78-2gjh",
+            "CVE-2025-6211"
+          ],
+          "description": "LlamaIndex vulnerable to data loss through hash collisions in its DocugamiReader class "
+        },
+        {
+          "id": "PYSEC-2026-1555",
+          "fix_versions": [
+            "0.12.3"
+          ],
+          "aliases": [
+            "GHSA-jmgm-gx32-vp4w",
+            "CVE-2024-12911"
+          ],
+          "description": "LlamaIndex vulnerable to Creation of Temporary File in Directory with Insecure Permissions"
+        },
+        {
+          "id": "PYSEC-2025-11",
+          "fix_versions": [
+            "0.12.9"
+          ],
+          "aliases": [
+            "CVE-2024-12910",
+            "GHSA-jvpf-xf32-2w4q"
+          ],
+          "description": "LlamaIndex Uncontrolled Resource Consumption vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-1556",
+          "fix_versions": [
+            "0.13.0"
+          ],
+          "aliases": [
+            "GHSA-rg9h-vx28-xxp5",
+            "CVE-2025-7707"
+          ],
+          "description": "llama-index has Insecure Temporary File"
+        },
+        {
+          "id": "PYSEC-2026-394",
+          "fix_versions": [
+            "0.12.28"
+          ],
+          "aliases": [
+            "CVE-2025-1793",
+            "GHSA-v3c8-3pr6-gr7p"
+          ],
+          "description": "llama_index vulnerable to SQL Injection"
+        },
+        {
+          "id": "PYSEC-2025-11",
+          "fix_versions": [
+            "0.12.9"
+          ],
+          "aliases": [
+            "CVE-2024-12910",
+            "GHSA-jvpf-xf32-2w4q"
+          ],
+          "description": "A vulnerability in the `KnowledgeBaseWebReader` class of the run-llama/llama_index repository, version latest, allows an attacker to cause a Denial of Service (DoS) by controlling a URL variable to contain the root URL. This leads to infinite recursive calls to the `get_article_urls` method, exhausting system resources and potentially crashing the application."
+        },
+        {
+          "id": "PYSEC-2026-85",
+          "fix_versions": [
+            "0.11.7"
+          ],
+          "aliases": [
+            "CVE-2024-14021"
+          ],
+          "description": "LlamaIndex (run-llama/llama_index) versions up to and including 0.11.6 contain an unsafe deserialization vulnerability in BGEM3Index.load_from_disk() in llama_index/indices/managed/bge_m3/base.py. The function uses pickle.load() to deserialize multi_embed_store.pkl from a user-supplied persist_dir without validation. An attacker who can provide a crafted persist directory containing a malicious pickle file can trigger arbitrary code execution when the victim loads the index from disk."
+        },
+        {
+          "id": "PYSEC-2026-86",
+          "fix_versions": [
+            "0.12.3"
+          ],
+          "aliases": [
+            "CVE-2024-58339"
+          ],
+          "description": "LlamaIndex (run-llama/llama_index) versions up to and including 0.12.2 contain an uncontrolled resource consumption vulnerability in the VannaPack VannaQueryEngine implementation. The custom_query() logic generates SQL statements from a user-supplied prompt and executes them via vn.run_sql() without enforcing query execution limits In downstream deployments where untrusted users can supply prompts, an attacker can trigger expensive or unbounded SQL operations that exhaust CPU or memory resources, resulting in a denial-of-service condition. The vulnerable execution path occurs in llama_index/packs/vanna/base.py within custom_query()."
+        }
+      ]
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.45.1",
+      "vulns": []
+    },
+    {
+      "name": "lxml",
+      "version": "4.9.4",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-87",
+          "fix_versions": [
+            "6.1.0"
+          ],
+          "aliases": [
+            "CVE-2026-41066",
+            "GHSA-vfmq-68hx-4jfw"
+          ],
+          "description": "lxml: Default configuration of iterparse() and ETCompatXMLParser() allows XXE to local files"
+        },
+        {
+          "id": "PYSEC-2026-87",
+          "fix_versions": [
+            "6.1.0"
+          ],
+          "aliases": [
+            "CVE-2026-41066",
+            "GHSA-vfmq-68hx-4jfw"
+          ],
+          "description": "lxml is a library for processing XML and HTML in the Python language. Prior to 6.1.0, using either of the two parsers in the default configuration (with resolve_entities=True) allows untrusted XML input to read local files. Setting the resolve_entities option explicitly to resolve_entities='internal' or resolve_entities=False disables the local file access. This vulnerability is fixed in 6.1.0."
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.0.0",
+      "vulns": []
+    },
+    {
+      "name": "markdown",
+      "version": "3.9",
+      "vulns": []
+    },
+    {
+      "name": "marshmallow",
+      "version": "3.26.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1605",
+          "fix_versions": [
+            "4.1.2"
+          ],
+          "aliases": [
+            "GHSA-428g-f7cq-pgp5",
+            "CVE-2025-68480"
+          ],
+          "description": "Marshmallow has DoS in Schema.load(many)"
+        },
+        {
+          "id": "PYSEC-2026-1605",
+          "fix_versions": [
+            "3.26.2",
+            "4.1.2"
+          ],
+          "aliases": [
+            "GHSA-428g-f7cq-pgp5",
+            "CVE-2025-68480"
+          ],
+          "description": "Marshmallow has DoS in Schema.load(many)"
+        }
+      ]
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.1.7",
+      "vulns": []
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.10.6",
+      "vulns": []
+    },
+    {
+      "name": "mcp",
+      "version": "1.12.4",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1617",
+          "fix_versions": [
+            "1.23.0"
+          ],
+          "aliases": [
+            "GHSA-9h52-p55h-vw2f",
+            "CVE-2025-66416"
+          ],
+          "description": "Model Context Protocol (MCP) Python SDK does not enable DNS rebinding protection by default"
+        }
+      ]
+    },
+    {
+      "name": "mdit-py-plugins",
+      "version": "0.5.0",
+      "vulns": []
+    },
+    {
+      "name": "milvus-lite",
+      "version": "2.5.1",
+      "vulns": []
+    },
+    {
+      "name": "ml-dtypes",
+      "version": "0.4.1",
+      "vulns": []
+    },
+    {
+      "name": "multidict",
+      "version": "6.6.4",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.14.2",
+      "vulns": []
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.4.5",
+      "vulns": []
+    },
+    {
+      "name": "networkx",
+      "version": "3.4.2",
+      "vulns": []
+    },
+    {
+      "name": "networkx",
+      "version": "3.5",
+      "vulns": []
+    },
+    {
+      "name": "nltk",
+      "version": "3.9.2",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-98",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2026-0847",
+            "GHSA-68j8-pq59-fqgm"
+          ],
+          "description": "NLTK has a Path Traversal issue"
+        },
+        {
+          "id": "PYSEC-2026-96",
+          "fix_versions": [
+            "3.9.3"
+          ],
+          "aliases": [
+            "CVE-2025-14009",
+            "GHSA-7p94-766c-hgjp"
+          ],
+          "description": "NLTK has a Zip Slip Vulnerability"
+        },
+        {
+          "id": "PYSEC-2026-97",
+          "fix_versions": [
+            "3.9.3"
+          ],
+          "aliases": [
+            "GHSA-h8wq-7xc4-p3qx",
+            "CVE-2026-0846"
+          ],
+          "description": "NLTK has Arbitrary File Read via Absolute Path Input in nltk.util.filestring()"
+        },
+        {
+          "id": "PYSEC-2026-2078",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2026-54293",
+            "GHSA-p4gq-832x-fm9v"
+          ],
+          "description": "Natural Language Toolkit (NLTK): URL-Encoded Path Traversal in nltk.data.load() Allows Arbitrary Local File Read"
+        },
+        {
+          "id": "PYSEC-2026-2078",
+          "fix_versions": [
+            "3.10.0"
+          ],
+          "aliases": [
+            "CVE-2026-54293",
+            "GHSA-p4gq-832x-fm9v"
+          ],
+          "description": "NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. Prior to 3.10.0-rc1, nltk.data.load() in NLTK is vulnerable to path traversal via URL-encoded path separators and traversal segments when using the nltk: URL scheme. The unsafe-path regex check is performed before url2pathname() decodes the %xx sequences (a classic decode-after-check / TOCTOU-style flaw), allowing an attacker to bypass the protection documented in NLTK's SECURITY.md and read arbitrary files from the filesystem. While literal traversal strings such as ../../../etc/passwd are correctly blocked, encoded variants such as %2fetc%2fpasswd, %2e%2e%2f..., and ..%2f..%2f slip past the regex and are subsequently decoded into a real filesystem path. This vulnerability is fixed in 3.10.0-rc1."
+        },
+        {
+          "id": "PYSEC-2026-2085",
+          "fix_versions": [
+            "3.9.4"
+          ],
+          "aliases": [
+            "CVE-2026-12252"
+          ],
+          "description": "In nltk/nltk versions 3.9.3 and earlier, five Stanford interface classes (StanfordPOSTagger, StanfordNERTagger, StanfordParser, StanfordDependencyParser, and StanfordNeuralDependencyParser) are vulnerable to untrusted JAR code execution. These classes accept user-controllable JAR paths and execute them via the `java()` function, which invokes `subprocess.Popen()` without integrity verification. This vulnerability is identical to CVE-2026-0848, which was fixed for StanfordSegmenter by adding SHA256 verification. However, the fix was not applied to these additional classes, leaving them susceptible to arbitrary code execution when loading untrusted JAR files."
+        },
+        {
+          "id": "PYSEC-2026-597",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2026-12243"
+          ],
+          "description": "NLTK version 3.9.4 is vulnerable to a path traversal attack due to an incomplete fix for GitHub Issue #3504. The `_UNSAFE_NO_PROTOCOL_RE` regex in `nltk/data.py` checks for literal `../` sequences but fails to account for percent-encoded traversal sequences such as `..%2f`. The `url2pathname()` function decodes these sequences after the validation step, allowing an attacker to bypass the protection. This vulnerability enables an attacker to read arbitrary files accessible to the Python process by controlling the resource name parameter passed to `nltk.data.load()` or `nltk.data.find()`. The issue affects applications that rely on NLTK for resource loading, including NLP web applications, Jupyter notebooks, and CLI tools. The default `pathsec.ENFORCE=False` setting exacerbates the impact by not blocking the file read at the `open()` stage."
+        },
+        {
+          "id": "PYSEC-2026-96",
+          "fix_versions": [
+            "3.9.3"
+          ],
+          "aliases": [
+            "CVE-2025-14009",
+            "GHSA-7p94-766c-hgjp"
+          ],
+          "description": "A critical vulnerability exists in the NLTK downloader component of nltk/nltk, affecting all versions. The _unzip_iter function in nltk/downloader.py uses zipfile.extractall() without performing path validation or security checks. This allows attackers to craft malicious zip packages that, when downloaded and extracted by NLTK, can execute arbitrary code. The vulnerability arises because NLTK assumes all downloaded packages are trusted and extracts them without validation. If a malicious package contains Python files, such as __init__.py, these files are executed automatically upon import, leading to remote code execution. This issue can result in full system compromise, including file system access, network access, and potential persistence mechanisms."
+        },
+        {
+          "id": "PYSEC-2026-97",
+          "fix_versions": [],
+          "aliases": [
+            "GHSA-h8wq-7xc4-p3qx",
+            "CVE-2026-0846"
+          ],
+          "description": "A vulnerability in the `filestring()` function of the `nltk.util` module in nltk version 3.9.2 allows arbitrary file read due to improper validation of input paths. The function directly opens files specified by user input without sanitization, enabling attackers to access sensitive system files by providing absolute paths or traversal paths. This vulnerability can be exploited locally or remotely, particularly in scenarios where the function is used in web APIs or other interfaces that accept user-supplied input."
+        },
+        {
+          "id": "PYSEC-2026-98",
+          "fix_versions": [
+            "3.9.3"
+          ],
+          "aliases": [
+            "CVE-2026-0847",
+            "GHSA-68j8-pq59-fqgm"
+          ],
+          "description": "A vulnerability in NLTK versions up to and including 3.9.2 allows arbitrary file read via path traversal in multiple CorpusReader classes, including WordListCorpusReader, TaggedCorpusReader, and BracketParseCorpusReader. These classes fail to properly sanitize or validate file paths, enabling attackers to traverse directories and access sensitive files on the server. This issue is particularly critical in scenarios where user-controlled file inputs are processed, such as in machine learning APIs, chatbots, or NLP pipelines. Exploitation of this vulnerability can lead to unauthorized access to sensitive files, including system files, SSH private keys, and API tokens, and may potentially escalate to remote code execution when combined with other vulnerabilities."
+        },
+        {
+          "id": "PYSEC-2026-99",
+          "fix_versions": [
+            "3.9.3"
+          ],
+          "aliases": [
+            "CVE-2026-0848"
+          ],
+          "description": "NLTK versions <=3.9.2 are vulnerable to arbitrary code execution due to improper input validation in the StanfordSegmenter module. The module dynamically loads external Java .jar files without verification or sandboxing. An attacker can supply or replace the JAR file, enabling the execution of arbitrary Java bytecode at import time. This vulnerability can be exploited through methods such as model poisoning, MITM attacks, or dependency poisoning, leading to remote code execution. The issue arises from the direct execution of the JAR file via subprocess with unvalidated classpath input, allowing malicious classes to execute when loaded by the JVM."
+        },
+        {
+          "id": "CVE-2026-33236",
+          "fix_versions": [],
+          "aliases": [
+            "GHSA-469j-vmhf-r6v7"
+          ],
+          "description": "NLTK has a Downloader Path Traversal Vulnerability (AFO) - Arbitrary File Overwrite"
+        },
+        {
+          "id": "CVE-2026-33230",
+          "fix_versions": [
+            "3.9.4"
+          ],
+          "aliases": [
+            "GHSA-gfwx-w7gr-fvh7"
+          ],
+          "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in nltk"
+        },
+        {
+          "id": "CVE-2026-33231",
+          "fix_versions": [
+            "3.9.4"
+          ],
+          "aliases": [
+            "GHSA-jm6w-m3j8-898g"
+          ],
+          "description": "Unauthenticated remote shutdown in nltk.app.wordnet_app"
+        },
+        {
+          "id": "GHSA-rf74-v2fm-23pw",
+          "fix_versions": [],
+          "aliases": [],
+          "description": "Natural Language Toolkit (NLTK) has unbounded recursion in JSONTaggedDecoder.decode_obj() may cause DoS"
+        }
+      ]
+    },
+    {
+      "name": "nodeenv",
+      "version": "1.9.1",
+      "vulns": []
+    },
+    {
+      "name": "numba",
+      "version": "0.62.1",
+      "vulns": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.3.5",
+      "vulns": []
+    },
+    {
+      "name": "olefile",
+      "version": "0.47",
+      "vulns": []
+    },
+    {
+      "name": "ollama",
+      "version": "0.6.0",
+      "vulns": []
+    },
+    {
+      "name": "onnx",
+      "version": "1.19.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-103",
+          "fix_versions": [
+            "1.21.0rc1"
+          ],
+          "aliases": [
+            "GHSA-hqmj-h5c6-369m",
+            "CVE-2026-28500"
+          ],
+          "description": "ONNX Untrusted Model Repository Warnings Suppressed by silent=True in onnx.hub.load() \u2014 Silent Supply-Chain Attack"
+        },
+        {
+          "id": "PYSEC-2026-104",
+          "fix_versions": [
+            "1.21.0"
+          ],
+          "aliases": [
+            "CVE-2026-34447",
+            "GHSA-p433-9wv8-28xj"
+          ],
+          "description": "ONNX: External Data Symlink Traversal"
+        },
+        {
+          "id": "PYSEC-2026-103",
+          "fix_versions": [
+            "1.21.0rc1"
+          ],
+          "aliases": [
+            "GHSA-hqmj-h5c6-369m",
+            "CVE-2026-28500"
+          ],
+          "description": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. In versions up to and including 1.20.1, a security control bypass exists in onnx.hub.load() due to improper logic in the repository trust verification mechanism. While the function is designed to warn users when loading models from non-official sources, the use of the silent=True parameter completely suppresses all security warnings and confirmation prompts. This vulnerability transforms a standard model-loading function into a vector for Zero-Interaction Supply-Chain Attacks. When chained with file-system vulnerabilities, an attacker can silently exfiltrate sensitive files (SSH keys, cloud credentials) from the victim's machine the moment the model is loaded. As of time of publication, no known patched versions are available."
+        },
+        {
+          "id": "PYSEC-2026-104",
+          "fix_versions": [
+            "1.21.0"
+          ],
+          "aliases": [
+            "CVE-2026-34447",
+            "GHSA-p433-9wv8-28xj"
+          ],
+          "description": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. Prior to version 1.21.0, there is a symlink traversal vulnerability in external data loading allows reading files outside the model directory. This issue has been patched in version 1.21.0."
+        },
+        {
+          "id": "CVE-2026-27489",
+          "fix_versions": [
+            "1.21.0"
+          ],
+          "aliases": [
+            "GHSA-3r9x-f23j-gc73"
+          ],
+          "description": "onnx Vulnerable to Path Traversal via Symlink"
+        },
+        {
+          "id": "CVE-2026-34445",
+          "fix_versions": [
+            "1.21.0"
+          ],
+          "aliases": [
+            "GHSA-538c-55jv-c5g9"
+          ],
+          "description": "ONNX: Malicious ONNX models can crash servers by exploiting unprotected object settings."
+        },
+        {
+          "id": "CVE-2026-34446",
+          "fix_versions": [
+            "1.21.0"
+          ],
+          "aliases": [
+            "GHSA-cmw6-hcpp-c6jp"
+          ],
+          "description": "ONNX: Arbitrary File Read via ExternalData Hardlink Bypass in ONNX load"
+        },
+        {
+          "id": "CVE-2026-44512",
+          "fix_versions": [
+            "1.22.0"
+          ],
+          "aliases": [
+            "GHSA-hwpq-hmq9-wj77"
+          ],
+          "description": "ONNX has Null Pointer Dereference in Upsample Version Converter Adapter (Zero Inputs)"
+        },
+        {
+          "id": "GHSA-q56x-g2fj-4rj6",
+          "fix_versions": [
+            "1.21.0"
+          ],
+          "aliases": [],
+          "description": "ONNX: TOCTOU arbitrary file read/write in save_external_dat "
+        }
+      ]
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.27.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-common",
+      "version": "1.27.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-proto",
+      "version": "1.27.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-grpc",
+      "version": "1.27.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-sdk",
+      "version": "1.27.0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-semantic-conventions",
+      "version": "0.48b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-instrumentation-asgi",
+      "version": "0.48b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-instrumentation",
+      "version": "0.48b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-util-http",
+      "version": "0.48b0",
+      "vulns": []
+    },
+    {
+      "name": "opentelemetry-instrumentation-fastapi",
+      "version": "0.48b0",
+      "vulns": []
+    },
+    {
+      "name": "orjson",
+      "version": "3.11.3",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-107",
+          "fix_versions": [
+            "3.11.6"
+          ],
+          "aliases": [
+            "CVE-2025-67221",
+            "GHSA-hx9q-6w63-j58v"
+          ],
+          "description": "orjson does not limit recursion for deeply nested JSON documents"
+        },
+        {
+          "id": "PYSEC-2026-107",
+          "fix_versions": [
+            "3.11.5"
+          ],
+          "aliases": [
+            "CVE-2025-67221",
+            "GHSA-hx9q-6w63-j58v"
+          ],
+          "description": "The orjson.dumps function in orjson thru 3.11.4 does not limit recursion for deeply nested JSON documents."
+        }
+      ]
+    },
+    {
+      "name": "pandas",
+      "version": "2.2.3",
+      "vulns": []
+    },
+    {
+      "name": "parso",
+      "version": "0.8.5",
+      "vulns": []
+    },
+    {
+      "name": "pathspec",
+      "version": "0.12.1",
+      "vulns": []
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.4.0",
+      "vulns": []
+    },
+    {
+      "name": "plotly",
+      "version": "5.24.1",
+      "vulns": []
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "vulns": []
+    },
+    {
+      "name": "portalocker",
+      "version": "2.10.1",
+      "vulns": []
+    },
+    {
+      "name": "posthog",
+      "version": "6.7.6",
+      "vulns": []
+    },
+    {
+      "name": "pre-commit",
+      "version": "4.3.0",
+      "vulns": []
+    },
+    {
+      "name": "cfgv",
+      "version": "3.5.0",
+      "vulns": []
+    },
+    {
+      "name": "identify",
+      "version": "2.6.19",
+      "vulns": []
+    },
+    {
+      "name": "nodeenv",
+      "version": "1.10.0",
+      "vulns": []
+    },
+    {
+      "name": "virtualenv",
+      "version": "21.6.1",
+      "vulns": []
+    },
+    {
+      "name": "distlib",
+      "version": "0.4.3",
+      "vulns": []
+    },
+    {
+      "name": "python-discovery",
+      "version": "1.4.4",
+      "vulns": []
+    },
+    {
+      "name": "propcache",
+      "version": "0.3.2",
+      "vulns": []
+    },
+    {
+      "name": "proto-plus",
+      "version": "1.26.1",
+      "vulns": []
+    },
+    {
+      "name": "protobuf",
+      "version": "4.25.8",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1805",
+          "fix_versions": [
+            "5.29.6"
+          ],
+          "aliases": [
+            "GHSA-7gcm-g887-7qv7",
+            "CVE-2026-0994"
+          ],
+          "description": "protobuf affected by a JSON recursion depth bypass"
+        },
+        {
+          "id": "PYSEC-2026-1805",
+          "fix_versions": [
+            "5.29.6",
+            "6.33.5"
+          ],
+          "aliases": [
+            "GHSA-7gcm-g887-7qv7",
+            "CVE-2026-0994"
+          ],
+          "description": "protobuf affected by a JSON recursion depth bypass"
+        }
+      ]
+    },
+    {
+      "name": "psutil",
+      "version": "7.1.0",
+      "vulns": []
+    },
+    {
+      "name": "py-rust-stemmers",
+      "version": "0.1.5",
+      "vulns": []
+    },
+    {
+      "name": "pyaml",
+      "version": "23.12.0",
+      "vulns": []
+    },
+    {
+      "name": "pyarrow",
+      "version": "16.1.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-113",
+          "fix_versions": [
+            "23.0.1"
+          ],
+          "aliases": [
+            "CVE-2026-25087",
+            "GHSA-rgxp-2hwp-jwgg"
+          ],
+          "description": "Apache Arrow: Potential use-after-free when reading IPC file with pre-buffering"
+        },
+        {
+          "id": "PYSEC-2024-161",
+          "fix_versions": [
+            "17.0.0"
+          ],
+          "aliases": [
+            "CVE-2024-52338"
+          ],
+          "description": "Deserialization of untrusted data in IPC and Parquet readers in the Apache Arrow R package versions\u00a04.0.0 through 16.1.0 allows arbitrary code execution. An application is vulnerable if it  reads Arrow IPC, Feather or Parquet data from untrusted sources (for  example, user-supplied input files). This vulnerability only affects the arrow R package, not other Apache Arrow  implementations or bindings unless those bindings are specifically used via the R package (for example, an R application that embeds a Python interpreter and uses PyArrow to read files from untrusted sources is still vulnerable if the arrow R package is an affected version). It is recommended that users of the arrow R package upgrade to 17.0.0 or later. Similarly, it  is recommended that downstream libraries upgrade their dependency  requirements to arrow 17.0.0 or later. If using an affected version of the package, untrusted data can read into a Table and its internal to_data_frame() method can be used as a workaround (e.g., read_parquet(..., as_data_frame = FALSE)$to_data_frame()).   This issue affects the Apache Arrow R package: from 4.0.0 through 16.1.0.   Users are recommended to upgrade to version 17.0.0, which fixes the issue."
+        },
+        {
+          "id": "PYSEC-2026-113",
+          "fix_versions": [
+            "23.0.1"
+          ],
+          "aliases": [
+            "CVE-2026-25087",
+            "GHSA-rgxp-2hwp-jwgg"
+          ],
+          "description": "Use After Free vulnerability in Apache Arrow C++.  This issue affects Apache Arrow C++ from 15.0.0 through 23.0.0. It can be triggered when reading an Arrow IPC file (but not an IPC stream) with pre-buffering enabled, if the IPC file contains data with variadic buffers (such as Binary View and String View data). Depending on the number of variadic buffers in a record batch column and on the temporal sequence of multi-threaded IO, a write to a dangling pointer could occur. The value (a `std::shared_ptr<Buffer>` object)\u00a0that is written to the dangling pointer is not under direct control of the attacker.  Pre-buffering is disabled by default but can be enabled using a specific C++ API call (`RecordBatchFileReader::PreBufferMetadata`). The functionality is not exposed in language bindings (Python, Ruby, C GLib), so these bindings are not vulnerable.  The most likely consequence of this issue would be random crashes or memory corruption when reading specific kinds of IPC files. If the application allows ingesting IPC files from untrusted sources, this could plausibly be exploited for denial of service. Inducing more targeted kinds of misbehavior (such as confidential data extraction from the running process) depends on memory allocation and multi-threaded IO temporal patterns that are unlikely to be easily controlled by an attacker.  Advice for users of Arrow C++:  1. check whether you enable pre-buffering on the IPC file reader (using\u00a0`RecordBatchFileReader::PreBufferMetadata`)   2. if so, either disable pre-buffering (which may have adverse performance consequences), or switch to Arrow 23.0.1 which is not vulnerable"
+        }
+      ]
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1810",
+          "fix_versions": [
+            "0.6.2"
+          ],
+          "aliases": [
+            "CVE-2026-23490",
+            "GHSA-63vm-454h-vhhq"
+          ],
+          "description": "pyasn1 has a DoS vulnerability in decoder"
+        },
+        {
+          "id": "CVE-2026-30922",
+          "fix_versions": [
+            "0.6.3"
+          ],
+          "aliases": [
+            "GHSA-jr27-m4p2-rc6r"
+          ],
+          "description": "Denial of Service in pyasn1 via Unbounded Recursion"
+        }
+      ]
+    },
+    {
+      "name": "pycparser",
+      "version": "2.23",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.27.2",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.13.1",
+      "vulns": [
+        {
+          "id": "CVE-2026-58203",
+          "fix_versions": [
+            "2.14.2"
+          ],
+          "aliases": [
+            "GHSA-4xgf-cpjx-pc3j"
+          ],
+          "description": "pydantic-settings: NestedSecretsSettingsSource follows symlinks outside secrets_dir, enabling local file read and bypassing secrets_dir_max_size"
+        }
+      ]
+    },
+    {
+      "name": "pydantic",
+      "version": "2.10.6",
+      "vulns": []
+    },
+    {
+      "name": "pygments",
+      "version": "2.19.2",
+      "vulns": [
+        {
+          "id": "CVE-2026-4539",
+          "fix_versions": [
+            "2.20.0"
+          ],
+          "aliases": [
+            "GHSA-5239-wwwm-4pmq"
+          ],
+          "description": "Pygments has Regular Expression Denial of Service (ReDoS) due to Inefficient Regex for GUID Matching"
+        }
+      ]
+    },
+    {
+      "name": "pylance",
+      "version": "0.38.0",
+      "vulns": []
+    },
+    {
+      "name": "pymilvus",
+      "version": "2.5.16",
+      "vulns": []
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.0.1",
+      "vulns": [
+        {
+          "id": "CVE-2026-28684",
+          "fix_versions": [
+            "1.2.2"
+          ],
+          "aliases": [
+            "GHSA-mf9w-mj56-hr94"
+          ],
+          "description": "python-dotenv: Symlink following in set_key allows arbitrary file overwrite via cross-device rename fallback"
+        }
+      ]
+    },
+    {
+      "name": "pymupdf",
+      "version": "1.24.11",
+      "vulns": []
+    },
+    {
+      "name": "pynndescent",
+      "version": "0.5.13",
+      "vulns": []
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.2.5",
+      "vulns": []
+    },
+    {
+      "name": "pypdf",
+      "version": "4.2.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1827",
+          "fix_versions": [
+            "6.6.2"
+          ],
+          "aliases": [
+            "CVE-2026-24688",
+            "GHSA-2q4j-m29v-hq73"
+          ],
+          "description": "pypdf has possible Infinite Loop when processing outlines/bookmarks"
+        },
+        {
+          "id": "PYSEC-2026-1828",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-4f6g-68pf-7vhv",
+            "CVE-2026-22691"
+          ],
+          "description": "pypdf has possible long runtimes for malformed startxref"
+        },
+        {
+          "id": "PYSEC-2026-1829",
+          "fix_versions": [
+            "6.6.0"
+          ],
+          "aliases": [
+            "GHSA-4xc4-762w-m6cg",
+            "CVE-2026-22690"
+          ],
+          "description": "pypdf has possible long runtimes for missing /Root object with large /Size values"
+        },
+        {
+          "id": "PYSEC-2026-1830",
+          "fix_versions": [
+            "6.0.0"
+          ],
+          "aliases": [
+            "CVE-2025-55197",
+            "GHSA-7hfw-26vp-jp8m"
+          ],
+          "description": "PyPDF's Manipulated FlateDecode streams can exhaust RAM"
+        },
+        {
+          "id": "PYSEC-2026-1831",
+          "fix_versions": [
+            "6.1.3"
+          ],
+          "aliases": [
+            "CVE-2025-62708",
+            "GHSA-jfx9-29x2-rv3j"
+          ],
+          "description": "pypdf can exhaust RAM via manipulated LZWDecode streams"
+        },
+        {
+          "id": "PYSEC-2026-1832",
+          "fix_versions": [
+            "6.4.0"
+          ],
+          "aliases": [
+            "CVE-2025-66019",
+            "GHSA-m449-cwjh-6pw7"
+          ],
+          "description": "pypdf's LZWDecode streams be manipulated to exhaust RAM"
+        },
+        {
+          "id": "PYSEC-2026-1833",
+          "fix_versions": [
+            "6.1.3"
+          ],
+          "aliases": [
+            "CVE-2025-62707",
+            "GHSA-vr63-x8vc-m265"
+          ],
+          "description": "pypdf possibly loops infinitely when reading DCT inline images without EOF marker"
+        },
+        {
+          "id": "CVE-2026-48156",
+          "fix_versions": [
+            "6.12.0"
+          ],
+          "aliases": [
+            "GHSA-248m-82v9-q6g6"
+          ],
+          "description": "pypdf: Possible long runtimes for zero-only width values in cross-reference streamsuntimes for zero-only width values in cross-reference streams"
+        },
+        {
+          "id": "CVE-2026-27628",
+          "fix_versions": [
+            "6.7.2"
+          ],
+          "aliases": [
+            "GHSA-2rw7-x74f-jg35"
+          ],
+          "description": "pypdf has a possible infinite loop when loading circular /Prev entries in cross-reference streams"
+        },
+        {
+          "id": "CVE-2026-40260",
+          "fix_versions": [
+            "6.10.0"
+          ],
+          "aliases": [
+            "GHSA-3crg-w4f6-42mx"
+          ],
+          "description": "pypdf: Manipulated XMP metadata entity declarations can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-41313",
+          "fix_versions": [
+            "6.10.2"
+          ],
+          "aliases": [
+            "GHSA-4pxv-j86v-mhcw"
+          ],
+          "description": "pypdf: Possible long runtimes for wrong size values in incremental mode"
+        },
+        {
+          "id": "CVE-2026-54530",
+          "fix_versions": [
+            "6.13.0"
+          ],
+          "aliases": [
+            "GHSA-52x6-gq3r-vpf4"
+          ],
+          "description": "pypdf: Possible infinite loop when retrieving fonts for layout-mode text extraction"
+        },
+        {
+          "id": "CVE-2026-49460",
+          "fix_versions": [
+            "6.12.2"
+          ],
+          "aliases": [
+            "GHSA-5hgr-hg42-57jg"
+          ],
+          "description": "pypdf: Inefficient decoding of FlateDecode PNG predictor streams"
+        },
+        {
+          "id": "CVE-2026-41312",
+          "fix_versions": [
+            "6.10.2"
+          ],
+          "aliases": [
+            "GHSA-7gw9-cf7v-778f"
+          ],
+          "description": "pypdf: Manipulated FlateDecode predictor parameters can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-33699",
+          "fix_versions": [
+            "6.9.2"
+          ],
+          "aliases": [
+            "GHSA-87mj-5ggw-8qc3"
+          ],
+          "description": "pypdf: Possible infinite loop during recovery attempts in DictionaryObject.read_from_stream"
+        },
+        {
+          "id": "CVE-2026-27024",
+          "fix_versions": [
+            "6.7.1"
+          ],
+          "aliases": [
+            "GHSA-996q-pr4m-cvgq"
+          ],
+          "description": "pypdf has a possible infinite loop when processing TreeObject"
+        },
+        {
+          "id": "CVE-2026-28804",
+          "fix_versions": [
+            "6.7.5"
+          ],
+          "aliases": [
+            "GHSA-9m86-7pmv-2852"
+          ],
+          "description": "pypdf vulnerable to inefficient decoding of ASCIIHexDecode streams"
+        },
+        {
+          "id": "CVE-2026-27026",
+          "fix_versions": [
+            "6.7.1"
+          ],
+          "aliases": [
+            "GHSA-9mvc-8737-8j8h"
+          ],
+          "description": "pypdf possibly has long runtimes for malformed FlateDecode streams"
+        },
+        {
+          "id": "CVE-2026-48155",
+          "fix_versions": [
+            "6.12.0"
+          ],
+          "aliases": [
+            "GHSA-cj93-chg6-vgv8"
+          ],
+          "description": "pypdf: Possible large memory usage for large offsets for layout mode text"
+        },
+        {
+          "id": "CVE-2026-28351",
+          "fix_versions": [
+            "6.7.4"
+          ],
+          "aliases": [
+            "GHSA-f2v5-7jq9-h8cg"
+          ],
+          "description": "pypdf: Manipulated RunLengthDecode streams can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-54651",
+          "fix_versions": [
+            "6.13.1"
+          ],
+          "aliases": [
+            "GHSA-g9xf-7f8q-9mcj"
+          ],
+          "description": "pypdf: Possible infinite loop when processing threads/articles in writer"
+        },
+        {
+          "id": "CVE-2026-31826",
+          "fix_versions": [
+            "6.8.0"
+          ],
+          "aliases": [
+            "GHSA-hqmh-ppp3-xvm7"
+          ],
+          "description": "pypdf: manipulated stream length values can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-49461",
+          "fix_versions": [
+            "6.12.2"
+          ],
+          "aliases": [
+            "GHSA-j543-4vmf-qm7v"
+          ],
+          "description": "pypdf: Possible large memory usage for form XObjects during text extraction"
+        },
+        {
+          "id": "CVE-2026-41168",
+          "fix_versions": [
+            "6.10.1"
+          ],
+          "aliases": [
+            "GHSA-jj6c-8h6c-hppx"
+          ],
+          "description": "pypdf has long runtimes for wrong size values in cross-reference and object streams"
+        },
+        {
+          "id": "CVE-2026-57204",
+          "fix_versions": [
+            "6.13.3"
+          ],
+          "aliases": [
+            "GHSA-jm82-fx9c-mx94"
+          ],
+          "description": "pypdf: Missing stream length values ignore defined limits"
+        },
+        {
+          "id": "CVE-2026-54531",
+          "fix_versions": [
+            "6.13.0"
+          ],
+          "aliases": [
+            "GHSA-m2v9-299j-rv96"
+          ],
+          "description": "pypdf: Possible infinite loop when processing outlines/bookmarks in writer"
+        },
+        {
+          "id": "CVE-2026-33123",
+          "fix_versions": [
+            "6.9.1"
+          ],
+          "aliases": [
+            "GHSA-qpxp-75px-xjcp"
+          ],
+          "description": "pypdf has inefficient decoding of array-based streams"
+        },
+        {
+          "id": "CVE-2026-27025",
+          "fix_versions": [
+            "6.7.1"
+          ],
+          "aliases": [
+            "GHSA-wgvp-vg3v-2xq3"
+          ],
+          "description": "pypdf has possible long runtimes/large memory usage for large /ToUnicode streams"
+        },
+        {
+          "id": "CVE-2026-48735",
+          "fix_versions": [
+            "6.12.1"
+          ],
+          "aliases": [
+            "GHSA-wjqc-6w8f-h24c"
+          ],
+          "description": "pypdf: Manipulated XMP metadata streams can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-41314",
+          "fix_versions": [
+            "6.10.2"
+          ],
+          "aliases": [
+            "GHSA-x284-j5p8-9c5p"
+          ],
+          "description": "pypdf: Manipulated FlateDecode image dimensions can exhaust RAM"
+        },
+        {
+          "id": "CVE-2026-27888",
+          "fix_versions": [
+            "6.7.3"
+          ],
+          "aliases": [
+            "GHSA-x7hp-r3qg-r3cj"
+          ],
+          "description": "pypdf: Manipulated FlateDecode XFA streams can exhaust RAM"
+        }
+      ]
+    },
+    {
+      "name": "pypika",
+      "version": "0.48.9",
+      "vulns": []
+    },
+    {
+      "name": "pyreqwest-impersonate",
+      "version": "0.5.3",
+      "vulns": []
+    },
+    {
+      "name": "pytest-mock",
+      "version": "3.15.1",
+      "vulns": []
+    },
+    {
+      "name": "pytest",
+      "version": "8.4.2",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1845",
+          "fix_versions": [
+            "9.0.3"
+          ],
+          "aliases": [
+            "CVE-2025-71176",
+            "GHSA-6w46-j5rx-g56g"
+          ],
+          "description": "pytest has vulnerable tmpdir handling"
+        }
+      ]
+    },
+    {
+      "name": "python-decouple",
+      "version": "3.8",
+      "vulns": []
+    },
+    {
+      "name": "python-docx",
+      "version": "1.1.2",
+      "vulns": []
+    },
+    {
+      "name": "python-iso639",
+      "version": "2025.2.18",
+      "vulns": []
+    },
+    {
+      "name": "python-magic",
+      "version": "0.4.27",
+      "vulns": []
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.12",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1851",
+          "fix_versions": [
+            "0.0.18"
+          ],
+          "aliases": [
+            "GHSA-59g5-xgcq-4qw3",
+            "CVE-2024-53981"
+          ],
+          "description": "Denial of service (DoS) via deformation `multipart/form-data` boundary"
+        },
+        {
+          "id": "PYSEC-2026-1852",
+          "fix_versions": [
+            "0.0.22"
+          ],
+          "aliases": [
+            "CVE-2026-24486",
+            "GHSA-wp53-j4wj-2cfg"
+          ],
+          "description": "Python-Multipart has Arbitrary File Write via Non-Default Configuration"
+        },
+        {
+          "id": "CVE-2026-53539",
+          "fix_versions": [
+            "0.0.30"
+          ],
+          "aliases": [
+            "GHSA-5rvq-cxj2-64vf"
+          ],
+          "description": "python-multipart: Quadratic-time querystring parsing with semicolon separators causes CPU denial of service"
+        },
+        {
+          "id": "CVE-2026-53538",
+          "fix_versions": [
+            "0.0.30"
+          ],
+          "aliases": [
+            "GHSA-6jv3-5f52-599m"
+          ],
+          "description": "python-multipart: Semicolon treated as querystring field separator enables parameter smuggling"
+        },
+        {
+          "id": "CVE-2026-40347",
+          "fix_versions": [
+            "0.0.26"
+          ],
+          "aliases": [
+            "GHSA-mj87-hwqh-73pj"
+          ],
+          "description": "python-multipart affected by Denial of Service via large multipart preamble or epilogue data"
+        },
+        {
+          "id": "CVE-2026-42561",
+          "fix_versions": [
+            "0.0.27"
+          ],
+          "aliases": [
+            "GHSA-pp6c-gr5w-3c5g"
+          ],
+          "description": "python-multipart has Denial of Service via unbounded multipart part headers"
+        },
+        {
+          "id": "CVE-2026-53540",
+          "fix_versions": [
+            "0.0.31"
+          ],
+          "aliases": [
+            "GHSA-v9pg-7xvm-68hf"
+          ],
+          "description": "python-multipart: Negative Content-Length in parse_form buffers the entire body in memory"
+        },
+        {
+          "id": "CVE-2026-53537",
+          "fix_versions": [
+            "0.0.30"
+          ],
+          "aliases": [
+            "GHSA-vffw-93wf-4j4q"
+          ],
+          "description": "python-multipart: Content-Disposition parameter smuggling via RFC 2231/5987 extended parameters"
+        }
+      ]
+    },
+    {
+      "name": "python-oxmsg",
+      "version": "0.0.2",
+      "vulns": []
+    },
+    {
+      "name": "pytokens",
+      "version": "0.1.10",
+      "vulns": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "vulns": []
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.48.0",
+      "vulns": []
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.1",
+      "vulns": []
+    },
+    {
+      "name": "milvus-lite",
+      "version": "3.0",
+      "vulns": []
+    },
+    {
+      "name": "faiss-cpu",
+      "version": "1.14.3",
+      "vulns": []
+    },
+    {
+      "name": "numba",
+      "version": "0.66.0",
+      "vulns": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.6",
+      "vulns": []
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.0",
+      "vulns": []
+    },
+    {
+      "name": "narwhals",
+      "version": "2.23.0",
+      "vulns": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.0",
+      "vulns": []
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.6.0",
+      "vulns": []
+    },
+    {
+      "name": "ujson",
+      "version": "5.13.0",
+      "vulns": []
+    },
+    {
+      "name": "pytz",
+      "version": "2025.2",
+      "vulns": []
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.2",
+      "vulns": []
+    },
+    {
+      "name": "qdrant-client",
+      "version": "1.12.1",
+      "vulns": []
+    },
+    {
+      "name": "grpcio-tools",
+      "version": "1.82.1",
+      "vulns": []
+    },
+    {
+      "name": "rapidfuzz",
+      "version": "3.14.1",
+      "vulns": []
+    },
+    {
+      "name": "regex",
+      "version": "2025.9.18",
+      "vulns": []
+    },
+    {
+      "name": "requests",
+      "version": "2.32.5",
+      "vulns": [
+        {
+          "id": "CVE-2026-25645",
+          "fix_versions": [
+            "2.33.0"
+          ],
+          "aliases": [
+            "GHSA-gc5v-m9x4-r6x2"
+          ],
+          "description": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function"
+        }
+      ]
+    },
+    {
+      "name": "retrying",
+      "version": "1.4.2",
+      "vulns": []
+    },
+    {
+      "name": "rich",
+      "version": "13.9.4",
+      "vulns": []
+    },
+    {
+      "name": "roman-numerals-py",
+      "version": "3.1.0",
+      "vulns": []
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.30.0",
+      "vulns": []
+    },
+    {
+      "name": "ruff",
+      "version": "0.15.4",
+      "vulns": []
+    },
+    {
+      "name": "safetensors",
+      "version": "0.7.0",
+      "vulns": []
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.7.2",
+      "vulns": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.15.3",
+      "vulns": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.16.2",
+      "vulns": []
+    },
+    {
+      "name": "sentence-transformers",
+      "version": "5.1.1",
+      "vulns": []
+    },
+    {
+      "name": "transformers",
+      "version": "4.57.6",
+      "vulns": [
+        {
+          "id": "PYSEC-2025-217",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2025-14929"
+          ],
+          "description": "Hugging Face Transformers X-CLIP Checkpoint Conversion Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Hugging Face Transformers. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.  The specific flaw exists within the parsing of checkpoints. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28308."
+        },
+        {
+          "id": "CVE-2026-4372",
+          "fix_versions": [
+            "5.3.0"
+          ],
+          "aliases": [
+            "GHSA-29pf-2h5f-8g72"
+          ],
+          "description": "HuggingFace transformers vulnerable to remote code execution"
+        },
+        {
+          "id": "CVE-2026-1839",
+          "fix_versions": [
+            "5.0.0rc3"
+          ],
+          "aliases": [
+            "GHSA-69w3-r845-3855"
+          ],
+          "description": "HuggingFace Transformers allows for arbitrary code execution in the `Trainer` class"
+        }
+      ]
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2",
+      "vulns": []
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "vulns": []
+    },
+    {
+      "name": "torch",
+      "version": "2.13.0",
+      "vulns": []
+    },
+    {
+      "name": "cuda-toolkit",
+      "version": "13.0.3.0",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cudnn-cu13",
+      "version": "9.20.0.48",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cusparselt-cu13",
+      "version": "0.8.1",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-nccl-cu13",
+      "version": "2.29.7",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-nvshmem-cu13",
+      "version": "3.4.5",
+      "vulns": []
+    },
+    {
+      "name": "triton",
+      "version": "3.7.1",
+      "vulns": []
+    },
+    {
+      "name": "cuda-bindings",
+      "version": "13.3.1",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cublas",
+      "version": "13.1.1.3",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cuda-cupti",
+      "version": "13.0.85",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cuda-nvrtc",
+      "version": "13.0.88",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cuda-runtime",
+      "version": "13.0.96",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cufft",
+      "version": "12.0.0.61",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cufile",
+      "version": "1.15.1.6",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-curand",
+      "version": "10.4.0.35",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cusolver",
+      "version": "12.0.4.66",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-cusparse",
+      "version": "12.6.3.3",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-nvjitlink",
+      "version": "13.3.33",
+      "vulns": []
+    },
+    {
+      "name": "nvidia-nvtx",
+      "version": "13.0.85",
+      "vulns": []
+    },
+    {
+      "name": "cuda-pathfinder",
+      "version": "1.5.6",
+      "vulns": []
+    },
+    {
+      "name": "setuptools",
+      "version": "80.9.0",
+      "vulns": []
+    },
+    {
+      "name": "snowballstemmer",
+      "version": "3.0.1",
+      "vulns": []
+    },
+    {
+      "name": "soupsieve",
+      "version": "2.8",
+      "vulns": [
+        {
+          "id": "CVE-2026-49476",
+          "fix_versions": [
+            "2.8.4"
+          ],
+          "aliases": [
+            "GHSA-2wc2-fm75-p42x"
+          ],
+          "description": "Soup Sieve has Memory Exhaustion via Large Comma-Separated Selector Lists"
+        },
+        {
+          "id": "CVE-2026-49477",
+          "fix_versions": [
+            "2.8.4"
+          ],
+          "aliases": [
+            "GHSA-836r-79rf-4m37"
+          ],
+          "description": "Soup Sieve: Regular Expression Denial of Service (ReDoS) via Selector Parser"
+        }
+      ]
+    },
+    {
+      "name": "sphinx",
+      "version": "8.1.3",
+      "vulns": []
+    },
+    {
+      "name": "babel",
+      "version": "2.18.0",
+      "vulns": []
+    },
+    {
+      "name": "imagesize",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "snowballstemmer",
+      "version": "3.1.1",
+      "vulns": []
+    },
+    {
+      "name": "sphinxcontrib-applehelp",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "sphinxcontrib-devhelp",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "sphinxcontrib-htmlhelp",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "sphinxcontrib-jsmath",
+      "version": "1.0.1",
+      "vulns": []
+    },
+    {
+      "name": "sphinxcontrib-qthelp",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "sphinxcontrib-serializinghtml",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "sphinx",
+      "version": "8.2.3",
+      "vulns": []
+    },
+    {
+      "name": "roman-numerals-py",
+      "version": "4.1.0",
+      "vulns": []
+    },
+    {
+      "name": "roman-numerals",
+      "version": "4.1.0",
+      "vulns": []
+    },
+    {
+      "name": "sqlalchemy",
+      "version": "2.0.43",
+      "vulns": []
+    },
+    {
+      "name": "sqlmodel",
+      "version": "0.0.25",
+      "vulns": []
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.0.3",
+      "vulns": []
+    },
+    {
+      "name": "tantivy",
+      "version": "0.25.0",
+      "vulns": []
+    },
+    {
+      "name": "tavily-python",
+      "version": "0.7.12",
+      "vulns": []
+    },
+    {
+      "name": "tenacity",
+      "version": "8.2.3",
+      "vulns": []
+    },
+    {
+      "name": "textual",
+      "version": "6.2.1",
+      "vulns": []
+    },
+    {
+      "name": "theflow",
+      "version": "0.8.6",
+      "vulns": []
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.11.0",
+      "vulns": []
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.1",
+      "vulns": []
+    },
+    {
+      "name": "tomli",
+      "version": "2.2.1",
+      "vulns": []
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "vulns": []
+    },
+    {
+      "name": "traitlets",
+      "version": "5.14.3",
+      "vulns": []
+    },
+    {
+      "name": "transformers",
+      "version": "4.56.2",
+      "vulns": [
+        {
+          "id": "PYSEC-2025-214",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2025-14926"
+          ],
+          "description": "Hugging Face Transformers SEW convert_config Code Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Hugging Face Transformers. User interaction is required to exploit this vulnerability in that the target must convert a malicious checkpoint.  The specific flaw exists within the convert_config function. The issue results from the lack of proper validation of a user-supplied string before using it to execute Python code. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-28251."
+        },
+        {
+          "id": "PYSEC-2025-215",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2025-14927"
+          ],
+          "description": "Hugging Face Transformers SEW-D convert_config Code Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Hugging Face Transformers. User interaction is required to exploit this vulnerability in that the target must convert a malicious checkpoint.  The specific flaw exists within the convert_config function. The issue results from the lack of proper validation of a user-supplied string before using it to execute Python code. An attacker can leverage this vulnerability to execute code in the context of the current user.  . Was ZDI-CAN-28252."
+        },
+        {
+          "id": "PYSEC-2025-216",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2025-14928"
+          ],
+          "description": "Hugging Face Transformers HuBERT convert_config Code Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Hugging Face Transformers. User interaction is required to exploit this vulnerability in that the target must convert a malicious checkpoint.  The specific flaw exists within the convert_config function. The issue results from the lack of proper validation of a user-supplied string before using it to execute Python code. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-28253."
+        },
+        {
+          "id": "PYSEC-2025-217",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2025-14929"
+          ],
+          "description": "Hugging Face Transformers X-CLIP Checkpoint Conversion Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Hugging Face Transformers. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.  The specific flaw exists within the parsing of checkpoints. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28308."
+        },
+        {
+          "id": "PYSEC-2025-218",
+          "fix_versions": [],
+          "aliases": [
+            "CVE-2025-14930"
+          ],
+          "description": "Hugging Face Transformers GLM4 Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Hugging Face Transformers. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.  The specific flaw exists within the parsing of weights. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28309."
+        },
+        {
+          "id": "CVE-2026-4372",
+          "fix_versions": [
+            "5.3.0"
+          ],
+          "aliases": [
+            "GHSA-29pf-2h5f-8g72"
+          ],
+          "description": "HuggingFace transformers vulnerable to remote code execution"
+        },
+        {
+          "id": "CVE-2026-1839",
+          "fix_versions": [
+            "5.0.0rc3"
+          ],
+          "aliases": [
+            "GHSA-69w3-r845-3855"
+          ],
+          "description": "HuggingFace Transformers allows for arbitrary code execution in the `Trainer` class"
+        }
+      ]
+    },
+    {
+      "name": "trogon",
+      "version": "0.5.0",
+      "vulns": []
+    },
+    {
+      "name": "typer",
+      "version": "0.19.2",
+      "vulns": []
+    },
+    {
+      "name": "linkify-it-py",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "mdit-py-plugins",
+      "version": "0.6.1",
+      "vulns": []
+    },
+    {
+      "name": "types-python-dateutil",
+      "version": "2.9.0.20250822",
+      "vulns": []
+    },
+    {
+      "name": "types-requests",
+      "version": "2.32.4.20250913",
+      "vulns": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "vulns": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2025.2",
+      "vulns": []
+    },
+    {
+      "name": "tzlocal",
+      "version": "5.3.1",
+      "vulns": []
+    },
+    {
+      "name": "uc-micro-py",
+      "version": "1.0.3",
+      "vulns": []
+    },
+    {
+      "name": "ujson",
+      "version": "5.11.0",
+      "vulns": [
+        {
+          "id": "CVE-2026-54911",
+          "fix_versions": [
+            "5.13.0"
+          ],
+          "aliases": [
+            "GHSA-3j69-69wj-xqx2"
+          ],
+          "description": "UltraJSON: Malformed/Truncated UTF-8 Accepted and Silently Rewritten in ujson.dumps()"
+        },
+        {
+          "id": "CVE-2026-44660",
+          "fix_versions": [
+            "5.12.1"
+          ],
+          "aliases": [
+            "GHSA-c38f-wx89-p2xg"
+          ],
+          "description": "UltraJSON has a Memory Leak in ujson.dump() on Write Failure"
+        },
+        {
+          "id": "CVE-2026-32875",
+          "fix_versions": [
+            "5.12.0"
+          ],
+          "aliases": [
+            "GHSA-c8rr-9gxc-jprv"
+          ],
+          "description": "UltraJSON has an integer overflow handling large indent leads to buffer overflow or infinite loop"
+        },
+        {
+          "id": "CVE-2026-32874",
+          "fix_versions": [
+            "5.12.0"
+          ],
+          "aliases": [
+            "GHSA-wgvc-ghv9-3pmm"
+          ],
+          "description": "UltraJSON has a Memory Leak parsing large integers allows DoS "
+        }
+      ]
+    },
+    {
+      "name": "umap-learn",
+      "version": "0.5.5",
+      "vulns": []
+    },
+    {
+      "name": "unstructured-client",
+      "version": "0.25.9",
+      "vulns": []
+    },
+    {
+      "name": "unstructured",
+      "version": "0.15.14",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-558",
+          "fix_versions": [
+            "0.18.18"
+          ],
+          "aliases": [
+            "GHSA-gm8q-m8mv-jj5m",
+            "CVE-2025-64712"
+          ],
+          "description": "Unstructured has Path Traversal via Malicious MSG Attachment that Allows Arbitrary File Write"
+        }
+      ]
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.37.0",
+      "vulns": []
+    },
+    {
+      "name": "uvloop",
+      "version": "0.21.0",
+      "vulns": []
+    },
+    {
+      "name": "virtualenv",
+      "version": "20.34.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-2009",
+          "fix_versions": [
+            "20.36.1"
+          ],
+          "aliases": [
+            "BIT-virtualenv-2026-22702",
+            "GHSA-597g-3phw-6986",
+            "CVE-2026-22702"
+          ],
+          "description": "virtualenv Has TOCTOU Vulnerabilities in Directory Creation"
+        }
+      ]
+    },
+    {
+      "name": "voyageai",
+      "version": "0.3.2",
+      "vulns": []
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.1.0",
+      "vulns": []
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.2.14",
+      "vulns": []
+    },
+    {
+      "name": "deepdiff",
+      "version": "9.1.0",
+      "vulns": []
+    },
+    {
+      "name": "cachebox",
+      "version": "5.2.3",
+      "vulns": []
+    },
+    {
+      "name": "jsonpath-python",
+      "version": "1.1.6",
+      "vulns": []
+    },
+    {
+      "name": "pynndescent",
+      "version": "0.6.0",
+      "vulns": []
+    },
+    {
+      "name": "pypdf",
+      "version": "6.14.2",
+      "vulns": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1",
+      "vulns": []
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "vulns": []
+    },
+    {
+      "name": "python-iso639",
+      "version": "2026.4.20",
+      "vulns": []
+    },
+    {
+      "name": "rapidfuzz",
+      "version": "3.14.5",
+      "vulns": []
+    },
+    {
+      "name": "tabulate",
+      "version": "0.10.0",
+      "vulns": []
+    },
+    {
+      "name": "websocket-client",
+      "version": "1.8.0",
+      "vulns": []
+    },
+    {
+      "name": "wikipedia",
+      "version": "1.4.0",
+      "vulns": []
+    },
+    {
+      "name": "yarl",
+      "version": "1.20.1",
+      "vulns": []
+    },
+    {
+      "name": "zipp",
+      "version": "3.23.0",
+      "vulns": []
+    }
+  ],
+  "fixes": [],
+  "fallback": {
+    "failed": [
+      "llama-hub==0.0.79.post1"
+    ],
+    "dropped": [
+      "pyreadline3==3.5.4",
+      "pywin32==311",
+      "win32-setctime==1.2.0",
+      "chroma-hnswlib==0.7.6",
+      "llama-cpp-python==0.2.7",
+      "nvidia-cublas-cu12==12.8.4.1",
+      "nvidia-cuda-cupti-cu12==12.8.90",
+      "nvidia-cuda-nvrtc-cu12==12.8.93",
+      "nvidia-cuda-runtime-cu12==12.8.90",
+      "nvidia-cudnn-cu12==9.10.2.21",
+      "nvidia-cufft-cu12==11.3.3.83",
+      "nvidia-cufile-cu12==1.13.1.3",
+      "nvidia-curand-cu12==10.3.9.90",
+      "nvidia-cusolver-cu12==11.7.3.90",
+      "nvidia-cusparse-cu12==12.5.8.93",
+      "nvidia-cusparselt-cu12==0.7.1",
+      "nvidia-nccl-cu12==2.27.3",
+      "nvidia-nvjitlink-cu12==12.8.93",
+      "nvidia-nvtx-cu12==12.8.90",
+      "onnxruntime==1.19.2",
+      "torch==2.2.2",
+      "torch==2.8.0",
+      "triton==3.4.0"
+    ]
+  }
+}

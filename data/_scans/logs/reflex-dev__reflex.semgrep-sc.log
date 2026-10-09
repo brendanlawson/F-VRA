@@ -1,0 +1,70 @@
+# project: reflex-dev__reflex
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 21:13:55 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=reflex-dev__reflex -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/reflex-dev__reflex:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/reflex-dev__reflex.json
+# exit code: 0
+# note: native lock: uv.lock
+=== STDOUT ===
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192899230)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 773 files tracked by git with 0 Code rules, 17206 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources   Resolution Method   Ecosystem   Dependencies   Rules                                             
+ ───────────────────────────────────────────────────────────────────────────                                            
+  uv.lock              Lockfile            Pypi        154            17206                                             
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      11485                                                                                                  
+  Basic           4422                                                                                                  
+  Reachability    1299                                                                                                  
+                                                                                                                        
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 0 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 1
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Matching --exclude patterns: 499
+   ◦ Files matching .semgrepignore patterns: 259
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=reflex-dev__reflex&ref=HEAD
+  No blocking findings so exiting with code 0

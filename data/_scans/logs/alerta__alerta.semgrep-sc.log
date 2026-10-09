@@ -1,0 +1,243 @@
+# project: alerta__alerta
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 20:31:36 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=alerta__alerta -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/alerta__alerta:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/alerta__alerta.json --allow-local-builds
+# exit code: 0
+# note: requirements.txt (--allow-local-builds)
+=== STDOUT ===
+                                    
+                                    
+┌──────────────────────────────────┐
+│ 1 Reachable Supply Chain Finding │
+└──────────────────────────────────┘
+                    
+    requirements.txt
+   ❯❯❱ cryptography - GHSA-537c-gmf6-5ccf
+          Severity: HIGH                                                                                      
+          Affected versions of cryptography are vulnerable to Dependency on Vulnerable Third-Party Component /
+          Out-of-bounds Read. The PyPI wheels for the cryptography package statically link a version of       
+          OpenSSL that contains security vulnerabilities (including a high-severity use-after-free in         
+          PKCS7_verify and several denial-of-service and forgery issues). Any application installed from an   
+          affected wheel ships the vulnerable OpenSSL binary, so an attacker may trigger out-of-bounds reads, 
+          crashes, or other memory-safety issues through cryptographic operations that reach the bundled      
+          OpenSSL code.                                                                                       
+                                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 48.0.1
+            3┆ cryptography==46.0.6
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 6 Undetermined Supply Chain Findings │
+└──────────────────────────────────────┘
+                    
+    requirements.txt
+    ❯❱ cryptography - CVE-2026-39892
+          Severity: MODERATE                                                                               
+          Affected versions of cryptography are vulnerable to Improper Restriction of Operations within the
+          Bounds of a Memory Buffer.                                                                       
+                                                                                                           
+           ▶▶┆ Fixed for cryptography at version: 46.0.7
+            3┆ cryptography==46.0.6
+   
+    ❯❱ pyjwt - CVE-2026-48522
+          Severity: MODERATE                                                                                
+          Affected versions of PyJWT are vulnerable to Server-Side Request Forgery (SSRF) / Unintended Proxy
+          or Intermediary ('Confused Deputy').                                                              
+                                                                                                            
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+           10┆ PyJWT==2.12.1
+   
+    ❯❱ pyjwt - CVE-2026-48523
+          Severity: MODERATE                                                                            
+          Affected versions of pyjwt are vulnerable to Improper Verification of Cryptographic Signature.
+                                                                                                        
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+           10┆ PyJWT==2.12.1
+   
+    ❯❱ pyjwt - CVE-2026-48525
+          Severity: MODERATE                                                             
+          Affected versions of pyjwt are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+           10┆ PyJWT==2.12.1
+   
+     ❱ pyjwt - CVE-2026-48524
+          Severity: LOW                                                                               
+          Affected versions of pyjwt are vulnerable to Improper Cleanup on Thrown Exception / Improper
+          Handling of Exceptional Conditions.                                                         
+                                                                                                      
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+           10┆ PyJWT==2.12.1
+   
+    ❯❱ requests - CVE-2026-25645
+          Severity: MODERATE                                                      
+          Affected versions of requests are vulnerable to Insecure Temporary File.
+                                                                                  
+           ▶▶┆ Fixed for requests at version: 2.33.0
+           16┆ requests==2.32.5
+                                       
+                                       
+┌─────────────────────────────────────┐
+│ 2 Unreachable Supply Chain Findings │
+└─────────────────────────────────────┘
+                       
+    requirements-ci.txt
+   ❯❯❱ lxml - CVE-2026-41066
+          Severity: HIGH                                                                                    
+          Affected versions of lxml are vulnerable to Improper Restriction of XML External Entity Reference.
+          An attacker can exploit the XXE vulnerability in lxml to read arbitrary local files by supplying a
+          crafted XML document containing external entity references to `iterparse()` or                    
+          `ETCompatXMLParser()`.                                                                            
+                                                                                                            
+           ▶▶┆ Fixed for lxml at version: 6.1.0
+            1┆ lxml==5.2.1
+                    
+    requirements.txt
+   ❯❯❱ pyjwt - CVE-2026-48526
+          Severity: HIGH                                                                                      
+          Affected versions of pyjwt are vulnerable to Improper Authentication / Improper Verification of     
+          Cryptographic Signature. PyJWT does not reject JSON Web Key (JWK) strings passed as raw HMAC secrets
+          in `HMACAlgorithm.prepare_key`. When a verifier allows both HMAC and asymmetric algorithms and a raw
+          JWK string is supplied as the verification key, an attacker can forge an HS256 token signed with the
+          public JWK string used as the HMAC secret, enabling token forgery and authentication bypass.        
+                                                                                                              
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+           10┆ PyJWT==2.12.1
+
+
+=== STDERR ===
+Unable to find image 'semgrep/semgrep:latest' locally
+latest: Pulling from semgrep/semgrep
+e08e74f806c1: Pulling fs layer
+538aed312edf: Pulling fs layer
+bd9ddc54bea9: Pulling fs layer
+d44f2628839e: Pulling fs layer
+9049ecc4ddce: Pulling fs layer
+ffca6f36b8c4: Pulling fs layer
+e6f31ffc071e: Pulling fs layer
+e86718175e55: Pulling fs layer
+94e01ae9a186: Pulling fs layer
+6be285c53517: Pulling fs layer
+ccb2114c27e1: Pulling fs layer
+e227f139f3f0: Pulling fs layer
+f4cbfaba6e2b: Pulling fs layer
+9049ecc4ddce: Download complete
+e86718175e55: Download complete
+6be285c53517: Download complete
+e227f139f3f0: Download complete
+e08e74f806c1: Download complete
+f4cbfaba6e2b: Download complete
+7316ee489c6c: Download complete
+bd9ddc54bea9: Download complete
+e6f31ffc071e: Download complete
+e6f31ffc071e: Pull complete
+d44f2628839e: Download complete
+94e01ae9a186: Download complete
+ccb2114c27e1: Download complete
+ccb2114c27e1: Pull complete
+bd9ddc54bea9: Pull complete
+94e01ae9a186: Pull complete
+538aed312edf: Download complete
+538aed312edf: Pull complete
+ffca6f36b8c4: Download complete
+d44f2628839e: Pull complete
+ffca6f36b8c4: Pull complete
+9049ecc4ddce: Pull complete
+e86718175e55: Pull complete
+6be285c53517: Pull complete
+e227f139f3f0: Pull complete
+e08e74f806c1: Pull complete
+f4cbfaba6e2b: Pull complete
+Digest: sha256:59fbed6127ea7c5dde3ba6a85142733bb20ea9aaa36120c953904f1539aaf66e
+Status: Downloaded newer image for semgrep/semgrep:latest
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192878392)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 176 files tracked by git with 0 Code rules, 17206 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources                                            Resolution Method   Ecosystem   Dependencies   Rules    
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   
+  requirements-ci.txt, requirements-dev.txt, requirements.txt   Local build         Pypi        57             17206    
+  contrib/plugins/gitlab/setup.py                               Failed              Unknown     -                  -    
+  contrib/routing/setup.py                                      Failed              Unknown     -                  -    
+  examples/backends/custom/setup.py                             Failed              Unknown     -                  -    
+  examples/plugins/routing/setup.py                             Failed              Unknown     -                  -    
+  examples/plugins/transient/setup.py                           Failed              Unknown     -                  -    
+  setup.py                                                      Failed              Unknown     -                  -    
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      11485                                                                                                  
+  Basic           4423                                                                                                  
+  Reachability    1298                                                                                                  
+                                                                                                                        
+  Failed to resolve dependencies for contrib/plugins/gitlab/setup.py. Resolution Command Failed.
+  Command: python setup.py --name                                                               
+  Output from third-party command:                                                              
+    > "")                                                                                       
+  Failed to resolve dependencies for contrib/routing/setup.py. Resolution Command Failed.
+  Command: python setup.py --name                                                        
+  Output from third-party command:                                                       
+    > "")                                                                                
+  Failed to resolve dependencies for examples/backends/custom/setup.py. Resolution Command Failed.
+  Command: python setup.py --name                                                                 
+  Output from third-party command:                                                                
+    > "")                                                                                         
+  Failed to resolve dependencies for examples/plugins/routing/setup.py. Resolution Command Failed.
+  Command: python setup.py --name                                                                 
+  Output from third-party command:                                                                
+    > "")                                                                                         
+  Failed to resolve dependencies for examples/plugins/transient/setup.py. Resolution Command Failed.
+  Command: python setup.py --name                                                                   
+  Output from third-party command:                                                                  
+    > "")                                                                                           
+  Failed to resolve dependencies for setup.py. Resolution Command Failed.
+  Command: python setup.py --name                                        
+  Output from third-party command:                                       
+    > "")                                                                
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 9 (0 blocking)
+ • Rules run: 127477
+ • Targets scanned: 120
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Matching --exclude patterns: 13
+   ◦ Files matching .semgrepignore patterns: 46
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=alerta__alerta&ref=HEAD
+  No blocking findings so exiting with code 0

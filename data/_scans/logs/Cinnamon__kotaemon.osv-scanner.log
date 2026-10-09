@@ -1,0 +1,12 @@
+# project: Cinnamon__kotaemon
+# scanner: osv-scanner
+# time: Sat Jul 11 09:08:14 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\Cinnamon__kotaemon.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\Cinnamon__kotaemon
+# exit code: 1
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\Cinnamon__kotaemon
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\Cinnamon__kotaemon\requirements.pinned.txt file and found 369 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 0s elapsed, 0s wall time

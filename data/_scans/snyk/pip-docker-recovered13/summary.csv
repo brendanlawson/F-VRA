@@ -1,0 +1,14 @@
+project,pinned,gpu_excluded,installed,install_fail,snyk_exit,vulns,critical,high,medium,low,status
+ATH-MaaS__Pixelle-MCP,180,0,174,6,1,559,6,280,268,5,vulns
+Chainlit__chainlit,295,0,284,7,1,3231,29,1698,1462,42,vulns
+Cinnamon__kotaemon,369,18,338,7,1,9363,269,4584,4414,96,vulns
+FuzzyGrim__Yamtrack,75,0,75,0,1,163,0,32,39,92,vulns
+LedFx__LedFx,82,0,70,10,1,95,0,57,35,3,vulns
+OWASP__Nettacker,55,0,52,2,1,80,2,25,42,11,vulns
+Thysrael__Horizon,152,0,150,2,1,3324,0,1178,2074,72,vulns
+alerta__alerta,34,0,33,1,1,9,0,2,6,1,vulns
+benoitc__gunicorn,34,0,33,1,1,12,0,1,11,0,vulns
+eosphoros-ai__DB-GPT,218,1,213,3,1,440,17,235,183,5,vulns
+milesmcc__shynet,59,0,46,12,1,268,8,92,140,28,vulns
+reflex-dev__reflex,40,0,40,0,0,0,0,0,0,0,clean
+sparckles__Robyn,18,0,18,0,0,0,0,0,0,0,clean

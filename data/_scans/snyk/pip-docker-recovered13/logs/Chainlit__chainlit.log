@@ -1,0 +1,1869 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because you require scipy==1.15.3 and scipy==1.16.3, we can conclude
+      that your requirements are unsatisfiable.
+ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + aiofiles==24.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + aiohappyeyeballs==2.6.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 9ms
+Installed 1 package in 71ms
+ + aiohttp==3.13.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 984ms
+Installed 1 package in 9ms
+ + aioice==0.10.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 326ms
+Installed 1 package in 12ms
+ + aiortc==1.14.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + aiosignal==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 226ms
+Installed 1 package in 7ms
+ + aiosqlite==0.21.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 13ms
+ + annotated-doc==0.0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + annotated-types==0.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 541ms
+Installed 1 package in 101ms
+ + anthropic==0.75.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 31ms
+ + anyio==4.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 264ms
+Installed 1 package in 5ms
+ + async-timeout==4.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 223ms
+Installed 1 package in 5ms
+ + asyncer==0.0.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 96ms
+ + asyncpg==0.31.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 30ms
+ + attrs==25.4.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because audioop-lts==0.2.2 has no usable wheels and you require
+      audioop-lts==0.2.2, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `audioop-lts` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL audioop-lts==0.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading av (38.7MiB)
+ Downloaded av
+Prepared 1 package in 4.12s
+Installed 1 package in 164ms
+ + av==16.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 423ms
+Installed 1 package in 14ms
+ + azure-ai-agents==1.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 330ms
+Installed 1 package in 17ms
+ + azure-ai-projects==1.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 414ms
+Installed 1 package in 20ms
+ + azure-core==1.36.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 579ms
+Installed 1 package in 26ms
+ + azure-identity==1.25.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 467ms
+Installed 1 package in 28ms
+ + azure-storage-blob==12.27.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 436ms
+Installed 1 package in 23ms
+ + azure-storage-file-datalake==12.22.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 246ms
+Installed 1 package in 9ms
+ + backports-asyncio-runner==1.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 981ms
+Installed 1 package in 9ms
+ + banks==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + beautifulsoup4==4.14.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + bidict==0.23.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 331ms
+Installed 1 package in 22ms
+ + botbuilder-core==4.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 240ms
+Installed 1 package in 5ms
+ + botbuilder-schema==4.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 369ms
+Installed 1 package in 25ms
+ + botframework-connector==4.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 292ms
+Installed 1 package in 18ms
+ + botframework-streaming==4.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 387ms
+Installed 1 package in 44ms
+ + boto3==1.42.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 8ms
+Downloading botocore (13.8MiB)
+ Downloaded botocore
+Prepared 1 package in 16.29s
+Installed 1 package in 514ms
+ + botocore==1.42.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 219ms
+Installed 1 package in 5ms
+ + cachetools==6.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + certifi==2025.11.12
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 22ms
+ + cffi==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 39ms
+ + chardet==5.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 38ms
+ + charset-normalizer==3.4.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + chevron==0.14.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 18ms
+ + click==8.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 270ms
+Installed 1 package in 14ms
+ + cloudevents==1.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 403ms
+Installed 1 package in 9ms
+ + contourpy==1.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 453ms
+Uninstalled 1 package in 1ms
+Installed 1 package in 12ms
+ - contourpy==1.3.2
+ + contourpy==1.3.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 439ms
+Installed 1 package in 17ms
+ + coverage==7.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 137ms
+ + cryptography==46.0.3
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because cuid==0.4 has no usable wheels and you require cuid==0.4, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `cuid` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL cuid==0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 214ms
+Installed 1 package in 7ms
+ + cycler==0.12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 9ms
+ + dataclasses-json==0.6.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + defusedxml==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 12ms
+ + deprecated==1.2.18
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 225ms
+Installed 1 package in 6ms
+ + deprecation==2.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 247ms
+Installed 1 package in 7ms
+ + dirtyjson==1.0.8
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading discord-py (1.2MiB)
+ Downloaded discord-py
+Prepared 1 package in 535ms
+Installed 1 package in 41ms
+ + discord-py==2.6.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 210ms
+Installed 1 package in 7ms
+ + discord==2.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + distro==1.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 93ms
+ + dnspython==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 11ms
+ + docstring-parser==0.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + exceptiongroup==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 366ms
+Installed 1 package in 17ms
+ + fastapi==0.123.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 248ms
+Installed 1 package in 7ms
+ + filelock==3.20.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 13ms
+ + filetype==1.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 9ms
+Downloading fonttools (4.7MiB)
+ Downloaded fonttools
+Prepared 1 package in 1.50s
+Installed 1 package in 102ms
+ + fonttools==4.61.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 11ms
+ + frozenlist==1.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 363ms
+Installed 1 package in 18ms
+ + fsspec==2025.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 385ms
+Installed 1 package in 21ms
+ + google-api-core==2.28.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 409ms
+Installed 1 package in 25ms
+ + google-auth==2.43.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 297ms
+Installed 1 package in 15ms
+ + google-cloud-core==2.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 356ms
+Installed 1 package in 11ms
+ + google-cloud-storage==2.19.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 309ms
+Installed 1 package in 8ms
+ + google-crc32c==1.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 352ms
+Installed 1 package in 9ms
+ + google-resumable-media==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 442ms
+Installed 1 package in 47ms
+ + googleapis-common-protos==1.72.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 544ms
+Installed 1 package in 23ms
+ + greenlet==3.2.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 392ms
+Installed 1 package in 16ms
+ + griffe==1.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Downloading grpcio (6.3MiB)
+ Downloaded grpcio
+Prepared 1 package in 824ms
+Installed 1 package in 30ms
+ + grpcio==1.76.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + h11==0.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading hf-xet (4.0MiB)
+ Downloaded hf-xet
+Prepared 1 package in 831ms
+Installed 1 package in 14ms
+ + hf-xet==1.4.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 18ms
+ + httpcore==1.0.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 223ms
+Installed 1 package in 5ms
+ + httpx-sse==0.4.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + httpx==0.28.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 538ms
+Installed 1 package in 44ms
+ + huggingface-hub==1.9.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + idna==3.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 221ms
+Installed 1 package in 6ms
+ + ifaddr==0.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 8ms
+ + importlib-metadata==8.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + inflection==0.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 23ms
+ + iniconfig==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + isodate==0.7.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 11ms
+ + jiter==0.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 6ms
+ + jmespath==1.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 463ms
+Installed 1 package in 35ms
+ + joblib==1.5.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 229ms
+Installed 1 package in 14ms
+ + jsonpatch==1.33
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 269ms
+Installed 1 package in 7ms
+ + jsonpickle==1.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 224ms
+Installed 1 package in 6ms
+ + jsonpointer==3.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + jsonschema-path==0.3.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 19ms
+ + jsonschema-specifications==2025.9.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + jsonschema==4.25.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading kiwisolver (1.4MiB)
+ Downloaded kiwisolver
+Prepared 1 package in 543ms
+Installed 1 package in 9ms
+ + kiwisolver==1.4.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 487ms
+Installed 1 package in 45ms
+ + langchain-core==1.2.27
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 367ms
+Installed 1 package in 12ms
+ + langchain==1.2.15
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 294ms
+Installed 1 package in 10ms
+ + langgraph-checkpoint==4.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 271ms
+Installed 1 package in 6ms
+ + langgraph-prebuilt==1.0.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 330ms
+Installed 1 package in 13ms
+ + langgraph-sdk==0.3.12
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 418ms
+Installed 1 package in 29ms
+ + langgraph==1.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 435ms
+Installed 1 package in 23ms
+ + langsmith==0.7.26
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + lazify==0.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + lazy-object-proxy==1.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 315ms
+Installed 1 package in 6ms
+ + librt==0.6.3
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because literalai==0.1.201 has no usable wheels and you require
+      literalai==0.1.201, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `literalai` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL literalai==0.1.201
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 308ms
+Installed 1 package in 12ms
+ + llama-cloud-services==0.6.54
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 396ms
+Installed 1 package in 87ms
+ + llama-cloud==0.1.35
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 292ms
+Installed 1 package in 11ms
+ + llama-index-cli==0.5.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading llama-index-core (11.4MiB)
+ Downloaded llama-index-core
+Prepared 1 package in 1.15s
+Installed 1 package in 174ms
+ + llama-index-core==0.14.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 248ms
+Installed 1 package in 5ms
+ + llama-index-embeddings-openai==0.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 221ms
+Installed 1 package in 6ms
+ + llama-index-indices-managed-llama-cloud==0.9.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 239ms
+Installed 1 package in 11ms
+ + llama-index-instrumentation==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 257ms
+Installed 1 package in 6ms
+ + llama-index-llms-openai==0.6.10
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 275ms
+Installed 1 package in 19ms
+ + llama-index-readers-file==0.5.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 227ms
+Installed 1 package in 4ms
+ + llama-index-readers-llama-parse==0.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 295ms
+Installed 1 package in 20ms
+ + llama-index-workflows==2.11.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 214ms
+Installed 1 package in 7ms
+ + llama-index==0.14.9
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 239ms
+Installed 1 package in 6ms
+ + llama-parse==0.6.54
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 22ms
+ + markdown-it-py==4.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 13ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + marshmallow==3.26.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Downloading matplotlib (8.3MiB)
+ Downloaded matplotlib
+Prepared 1 package in 1.40s
+Installed 1 package in 148ms
+ + matplotlib==3.10.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 370ms
+Installed 1 package in 31ms
+ + mcp==1.23.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + mdurl==0.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 313ms
+Installed 1 package in 5ms
+ + more-itertools==10.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading moto (6.1MiB)
+ Downloaded moto
+Prepared 1 package in 4.26s
+Installed 1 package in 428ms
+ + moto==5.1.18
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 253ms
+Installed 1 package in 6ms
+ + msal-extensions==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 363ms
+Installed 1 package in 8ms
+ + msal==1.34.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 310ms
+Installed 1 package in 10ms
+ + msrest==0.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 14ms
+ + multidict==6.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 324ms
+Installed 1 package in 17ms
+ + mypy-boto3-dynamodb==1.41.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 8ms
+ + mypy-extensions==1.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading mypy (13.0MiB)
+ Downloaded mypy
+Prepared 1 package in 1.34s
+Installed 1 package in 341ms
+ + mypy==1.19.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 5ms
+ + nest-asyncio==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 300ms
+ + networkx==3.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading networkx (2.0MiB)
+ Downloaded networkx
+Prepared 1 package in 596ms
+Uninstalled 1 package in 13ms
+Installed 1 package in 136ms
+ - networkx==3.4.2
+ + networkx==3.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading nltk (1.4MiB)
+ Downloaded nltk
+Prepared 1 package in 645ms
+Installed 1 package in 99ms
+ + nltk==3.9.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading numpy (17.1MiB)
+ Downloaded numpy
+Prepared 1 package in 2.70s
+Installed 1 package in 233ms
+ + numpy==1.26.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 44ms
+ + oauthlib==3.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading openai (1.1MiB)
+ Downloaded openai
+Prepared 1 package in 734ms
+Installed 1 package in 238ms
+ + openai==2.30.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 46ms
+ + openapi-core==0.19.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 8ms
+ + openapi-schema-validator==0.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 26ms
+ + openapi-spec-validator==0.7.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 315ms
+Installed 1 package in 17ms
+ + opentelemetry-api==1.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 222ms
+Installed 1 package in 9ms
+ + opentelemetry-exporter-otlp-proto-common==1.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 227ms
+Installed 1 package in 6ms
+ + opentelemetry-exporter-otlp-proto-grpc==1.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 235ms
+Installed 1 package in 11ms
+ + opentelemetry-exporter-otlp-proto-http==1.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 246ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-agno==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 213ms
+Installed 1 package in 7ms
+ + opentelemetry-instrumentation-alephalpha==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 265ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-anthropic==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 248ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-bedrock==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 238ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-chromadb==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 241ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-cohere==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 220ms
+Installed 1 package in 9ms
+ + opentelemetry-instrumentation-crewai==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 248ms
+Installed 1 package in 7ms
+ + opentelemetry-instrumentation-google-generativeai==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 245ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-groq==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 246ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-haystack==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 209ms
+Installed 1 package in 4ms
+ + opentelemetry-instrumentation-lancedb==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 256ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-langchain==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 222ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-llamaindex==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 220ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-logging==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 241ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-marqo==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 238ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-mcp==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 248ms
+Installed 1 package in 7ms
+ + opentelemetry-instrumentation-milvus==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 214ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-mistralai==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 218ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-ollama==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 238ms
+Installed 1 package in 4ms
+ + opentelemetry-instrumentation-openai-agents==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 273ms
+Installed 1 package in 8ms
+ + opentelemetry-instrumentation-openai==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 240ms
+Installed 1 package in 4ms
+ + opentelemetry-instrumentation-pinecone==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 216ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-qdrant==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 232ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-redis==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 221ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-replicate==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 246ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-requests==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 243ms
+Installed 1 package in 8ms
+ + opentelemetry-instrumentation-sagemaker==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 223ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-sqlalchemy==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 1.21s
+Installed 1 package in 7ms
+ + opentelemetry-instrumentation-threading==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 218ms
+Installed 1 package in 7ms
+ + opentelemetry-instrumentation-together==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 247ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-transformers==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 242ms
+Installed 1 package in 4ms
+ + opentelemetry-instrumentation-urllib3==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 242ms
+Installed 1 package in 6ms
+ + opentelemetry-instrumentation-vertexai==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 220ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-watsonx==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 218ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-weaviate==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 218ms
+Installed 1 package in 5ms
+ + opentelemetry-instrumentation-writer==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 263ms
+Installed 1 package in 9ms
+ + opentelemetry-instrumentation==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 276ms
+Installed 1 package in 19ms
+ + opentelemetry-proto==1.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 377ms
+Installed 1 package in 20ms
+ + opentelemetry-sdk==1.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 4ms
+ + opentelemetry-semantic-conventions-ai==0.4.13
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 416ms
+Installed 1 package in 32ms
+ + opentelemetry-semantic-conventions==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 218ms
+Installed 1 package in 5ms
+ + opentelemetry-util-http==0.60b0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 9ms
+ + orjson==3.11.8
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 441ms
+Installed 1 package in 6ms
+ + ormsgpack==1.12.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 276ms
+Installed 1 package in 8ms
+ + packaging==24.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 388ms
+Installed 1 package in 44ms
+ + pandas-stubs==2.3.3.251201
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading pandas (12.1MiB)
+ Downloaded pandas
+Prepared 1 package in 1.31s
+Installed 1 package in 374ms
+ + pandas==2.2.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 5ms
+ + parse==1.20.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + pathable==0.4.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pathspec==0.12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Downloading pillow (6.7MiB)
+ Downloaded pillow
+Prepared 1 package in 1.02s
+Installed 1 package in 53ms
+ + pillow==12.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 238ms
+Installed 1 package in 6ms
+ + platformdirs==4.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading plotly (18.2MiB)
+ Downloaded plotly
+Prepared 1 package in 14.69s
+Installed 1 package in 3.27s
+ + plotly==5.24.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 19ms
+ + pluggy==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading polars-runtime-32 (44.7MiB)
+ Downloaded polars-runtime-32
+Prepared 1 package in 3.49s
+Installed 1 package in 156ms
+ + polars-runtime-32==1.39.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 491ms
+Installed 1 package in 51ms
+ + polars==1.39.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 283ms
+Installed 1 package in 17ms
+ + prance==25.4.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 30ms
+ + propcache==0.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 266ms
+Installed 1 package in 10ms
+ + proto-plus==1.26.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 444ms
+Installed 1 package in 17ms
+ + protobuf==6.33.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 71ms
+ + pyasn1-modules==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 287ms
+Installed 1 package in 15ms
+ + pyasn1==0.6.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pybars4==0.9.13 has no usable wheels and you require
+      pybars4==0.9.13, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pybars4` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pybars4==0.9.13
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 24ms
+ + pycparser==2.23
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 12ms
+Installed 1 package in 12ms
+ + pydantic-core==2.33.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 18ms
+ + pydantic-settings==2.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 693ms
+Installed 1 package in 31ms
+ + pydantic==2.11.10
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pyee==13.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 81ms
+ + pygments==2.19.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + pyjwt==2.10.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading pylibsrtp (2.3MiB)
+ Downloaded pylibsrtp
+Prepared 1 package in 592ms
+Installed 1 package in 13ms
+ + pylibsrtp==1.0.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pymeta3==0.5.1 has no usable wheels and you require
+      pymeta3==0.5.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pymeta3` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pymeta3==0.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + pyopenssl==25.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 325ms
+Installed 1 package in 11ms
+ + pyparsing==3.2.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 402ms
+Installed 1 package in 18ms
+ + pypdf==6.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 8ms
+ + pytest-asyncio==1.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 13ms
+ + pytest-cov==6.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 56ms
+ + pytest==8.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 9ms
+ + python-dateutil==2.9.0.post0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 11ms
+ + python-dotenv==1.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 311ms
+Installed 1 package in 11ms
+ + python-engineio==4.12.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + python-multipart==0.0.20
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 325ms
+Installed 1 package in 11ms
+ + python-socketio==5.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 497ms
+Installed 1 package in 123ms
+ + pytz==2025.2
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pywin32==311 has no wheels with a matching platform tag (e.g.,
+      `manylinux_2_41_x86_64`) and you require pywin32==311, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: Wheels are available for `pywin32` (v311) on the following platforms: `win32`, `win_amd64`, `win_arm64`FAIL_INSTALL pywin32==311
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 24ms
+ + pyyaml==6.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + referencing==0.36.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 10ms
+Prepared 1 package in 1.07s
+Installed 1 package in 18ms
+ + regex==2025.11.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 19ms
+ + requests-oauthlib==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 39ms
+ + requests-toolbelt==1.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 17ms
+ + requests==2.32.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 270ms
+Installed 1 package in 7ms
+ + responses==0.25.8
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + rfc3339-validator==0.1.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 101ms
+ + rich==14.3.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Installed 1 package in 14ms
+ + rpds-py==0.30.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 263ms
+Installed 1 package in 10ms
+ + rsa==4.9.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 558ms
+Installed 1 package in 11ms
+ + ruamel-yaml-clib==0.2.15
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 408ms
+Installed 1 package in 31ms
+ + ruamel-yaml==0.18.16
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Prepared 1 package in 395ms
+Installed 1 package in 10ms
+ + s3transfer==0.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 466ms
+Installed 1 package in 13ms
+ + safetensors==0.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading scipy (35.6MiB)
+ Downloaded scipy
+Prepared 1 package in 4.16s
+Installed 1 package in 477ms
+ + scipy==1.15.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading scipy (34.0MiB)
+ Downloaded scipy
+Prepared 1 package in 2.99s
+Uninstalled 1 package in 52ms
+Installed 1 package in 407ms
+ - scipy==1.15.3
+ + scipy==1.16.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 584ms
+Installed 1 package in 132ms
+ + semantic-kernel==1.36.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading setuptools (1.1MiB)
+ Downloaded setuptools
+Prepared 1 package in 618ms
+Installed 1 package in 127ms
+ + setuptools==80.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + shellingham==1.5.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + simple-websocket==1.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + six==1.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 369ms
+Installed 1 package in 67ms
+ + slack-bolt==1.27.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 445ms
+Installed 1 package in 49ms
+ + slack-sdk==3.39.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 9ms
+ + sniffio==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 242ms
+Installed 1 package in 7ms
+ + soupsieve==2.8
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading sqlalchemy (3.2MiB)
+ Downloaded sqlalchemy
+Prepared 1 package in 717ms
+Installed 1 package in 74ms
+ + sqlalchemy==2.0.44
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 228ms
+Installed 1 package in 5ms
+ + sse-starlette==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 32ms
+ + starlette==0.50.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 250ms
+Installed 1 package in 8ms
+ + striprtf==0.0.26
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because syncer==2.0.3 has no usable wheels and you require
+      syncer==2.0.3, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `syncer` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL syncer==2.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 233ms
+Installed 1 package in 19ms
+ + tenacity==9.1.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Downloading tiktoken (1.1MiB)
+ Downloaded tiktoken
+Prepared 1 package in 574ms
+Installed 1 package in 10ms
+ + tiktoken==0.12.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading tokenizers (3.1MiB)
+ Downloaded tokenizers
+Prepared 1 package in 611ms
+Installed 1 package in 19ms
+ + tokenizers==0.22.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 30ms
+ + tomli==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 17ms
+ + tqdm==4.67.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 273ms
+Installed 1 package in 16ms
+ + traceloop-sdk==0.49.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading transformers (9.8MiB)
+ Downloaded transformers
+Prepared 1 package in 1.28s
+Installed 1 package in 571ms
+ + transformers==5.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 15ms
+ + typer==0.24.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 220ms
+Installed 1 package in 9ms
+ + types-aiofiles==23.2.0.20240623
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + types-pytz==2025.2.0.20251108
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 239ms
+Installed 1 package in 9ms
+ + types-requests==2.32.4.20250913
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + typing-inspect==0.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + typing-inspection==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 372ms
+ + tzdata==2025.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 13ms
+ + urllib3==2.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 440ms
+Installed 1 package in 7ms
+ + uuid-utils==0.14.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 329ms
+Installed 1 package in 32ms
+ + uvicorn==0.38.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 16ms
+ + watchfiles==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 17ms
+ + websockets==15.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 20ms
+ + werkzeug==3.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 6ms
+ + wrapt==1.17.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 11ms
+ + wsproto==1.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + xmltodict==1.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 9ms
+Prepared 1 package in 354ms
+Installed 1 package in 7ms
+ + xxhash==3.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 25ms
+ + yarl==1.22.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + zipp==3.23.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading zstandard (5.3MiB)
+ Downloaded zstandard
+Prepared 1 package in 716ms
+Installed 1 package in 28ms
+ + zstandard==0.25.0
+
+Testing /work/Chainlit__chainlit...
+
+Tested 287 dependencies for known issues, found 156 issues, 3231 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.2 to aiohttp@3.14.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871873] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871888] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871929] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871954] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Logging of Excessive Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14872000] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871876] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871877] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871979] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.2
+    introduced by aiohttp@3.13.2 and 26 other path(s)
+
+  Upgrade azure-core@1.36.0 to azure-core@1.38.0 to fix
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AZURECORE-14927372] in azure-core@1.36.0
+    introduced by azure-core@1.36.0 and 26 other path(s)
+
+  Upgrade banks@2.2.0 to banks@2.4.2 to fix
+  ✗ Improper Neutralization of Special Elements Used in a Template Engine [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-BANKS-16635495] in banks@2.2.0
+    introduced by banks@2.2.0 and 22 other path(s)
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 38 other path(s)
+
+  Upgrade cryptography@46.0.3 to cryptography@48.0.1 to fix
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 22 other path(s)
+  ✗ Out-of-bounds Write [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15953315] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 22 other path(s)
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 22 other path(s)
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 22 other path(s)
+
+  Upgrade filelock@3.20.0 to filelock@3.20.3 to fix
+  ✗ Time-of-check Time-of-use (TOCTOU) Race Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FILELOCK-14458335] in filelock@3.20.0
+    introduced by filelock@3.20.0 and 6 other path(s)
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FILELOCK-14912448] in filelock@3.20.0
+    introduced by filelock@3.20.0 and 6 other path(s)
+
+  Upgrade fonttools@4.61.0 to fonttools@4.62.0 to fix
+  ✗ Arbitrary Code Execution [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FONTTOOLS-15869939] in fonttools@4.61.0
+    introduced by fonttools@4.61.0 and 1 other path(s)
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 341 other path(s)
+
+  Upgrade jsonpickle@1.4.2 to jsonpickle@4.0.2 to fix
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JSONPICKLE-16755449] in jsonpickle@1.4.2
+    introduced by jsonpickle@1.4.2 and 1 other path(s)
+  ✗ Arbitrary Code Execution [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JSONPICKLE-8136229] in jsonpickle@1.4.2
+    introduced by jsonpickle@1.4.2 and 1 other path(s)
+
+  Upgrade langchain@1.2.15 to langchain@1.3.9 to fix
+  ✗ Symlink Attack (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGCHAIN-17356217] in langchain@1.2.15
+    introduced by langchain@1.2.15
+
+  Upgrade langchain-core@1.2.27 to langchain-core@1.3.3 to fix
+  ✗ Improper Neutralization of Special Elements Used in a Template Engine [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGCHAINCORE-15953340] in langchain-core@1.2.27
+    introduced by langchain-core@1.2.27 and 12 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGCHAINCORE-16624521] in langchain-core@1.2.27
+    introduced by langchain-core@1.2.27 and 12 other path(s)
+
+  Upgrade langgraph-checkpoint@4.0.1 to langgraph-checkpoint@4.1.1 to fix
+  ✗ Deserialization of Untrusted Data (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGGRAPHCHECKPOINT-17356491] in langgraph-checkpoint@4.0.1
+    introduced by langgraph-checkpoint@4.0.1 and 5 other path(s)
+
+  Upgrade langgraph-sdk@0.3.12 to langgraph-sdk@0.3.15 to fix
+  ✗ Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGGRAPHSDK-17372912] in langgraph-sdk@0.3.12
+    introduced by langgraph-sdk@0.3.12 and 2 other path(s)
+
+  Upgrade langsmith@0.7.26 to langsmith@0.8.18 to fix
+  ✗ Insertion of Sensitive Information into Log File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGSMITH-16082038] in langsmith@0.7.26
+    introduced by langsmith@0.7.26 and 13 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGSMITH-16658748] in langsmith@0.7.26
+    introduced by langsmith@0.7.26 and 13 other path(s)
+  ✗ Access of Resource Using Incompatible Type ('Type Confusion') (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGSMITH-17391446] in langsmith@0.7.26
+    introduced by langsmith@0.7.26 and 13 other path(s)
+
+  Upgrade marshmallow@3.26.1 to marshmallow@3.26.2 to fix
+  ✗ Asymmetric Resource Consumption (Amplification) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MARSHMALLOW-14550833] in marshmallow@3.26.1
+    introduced by marshmallow@3.26.1 and 23 other path(s)
+
+  Upgrade nltk@3.9.2 to nltk@3.9.4 to fix
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15692478] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15692479] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15317401] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15460762] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15460783] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Missing Authentication for Critical Function [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15692504] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15692505] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Missing Authentication for Critical Function (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-17391908] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  ✗ Unsafe Dependency Resolution [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-15763329] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+
+  Upgrade pillow@12.0.0 to pillow@12.3.0 to fix
+  ✗ Command Injection (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824467] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Infinite loop [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419304] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Integer Overflow or Wraparound [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419307] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Heap-based Buffer Overflow [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419315] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Out-of-bounds Write [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-15265439] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16032068] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Out-of-bounds Write [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419303] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824465] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824466] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824468] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824469] in pillow@12.0.0
+    introduced by pillow@12.0.0 and 23 other path(s)
+
+  Upgrade protobuf@6.33.1 to protobuf@6.33.5 to fix
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PROTOBUF-15090738] in protobuf@6.33.1
+    introduced by protobuf@6.33.1 and 29 other path(s)
+
+  Upgrade pyasn1@0.6.1 to pyasn1@0.6.3 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYASN1-15032639] in pyasn1@0.6.1
+    introduced by pyasn1@0.6.1 and 18 other path(s)
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYASN1-15674561] in pyasn1@0.6.1
+    introduced by pyasn1@0.6.1 and 18 other path(s)
+
+  Upgrade pydantic-settings@2.12.0 to pydantic-settings@2.14.2 to fix
+  ✗ Symlink Attack (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYDANTICSETTINGS-17675228] in pydantic-settings@2.12.0
+    introduced by pydantic-settings@2.12.0 and 2 other path(s)
+
+  Upgrade pygments@2.19.2 to pygments@2.20.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYGMENTS-15746419] in pygments@2.19.2
+    introduced by pygments@2.19.2 and 12 other path(s)
+
+  Upgrade pyjwt@2.10.1 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+  ✗ Inadequate Encryption Strength [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-11356591] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-15518059] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1 and 15 other path(s)
+
+  Upgrade pyopenssl@25.3.0 to pyopenssl@26.0.0 to fix
+  ✗ Not Failing Securely ('Failing Open') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674458] in pyopenssl@25.3.0
+    introduced by pyopenssl@25.3.0 and 2 other path(s)
+  ✗ Buffer Overflow [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674459] in pyopenssl@25.3.0
+    introduced by pyopenssl@25.3.0 and 2 other path(s)
+
+  Upgrade pypdf@6.4.0 to pypdf@6.14.2 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-14912439] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Unchecked Input for Loop Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-14912440] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15117508] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15309440] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15309441] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15309551] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15340922] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15366148] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15369130] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15457706] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15683822] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ XML Entity Expansion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15989793] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Memory Allocation with Excessive Size Value [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-16097899] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Memory Allocation with Excessive Size Value [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-16097901] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-16097903] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17054918] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17054919] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17054920] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17356472] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17356481] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17356482] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17356485] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17420043] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17895063] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Excessive Iteration (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17895064] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15353400] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-15766701] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Improper Validation of Specified Quantity in Input [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-16081092] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17378777] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17900047] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+  ✗ Infinite loop (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYPDF-17900050] in pypdf@6.4.0
+    introduced by pypdf@6.4.0 and 2 other path(s)
+
+  Upgrade python-dotenv@1.2.1 to python-dotenv@1.2.2 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONDOTENV-16115271] in python-dotenv@1.2.1
+    introduced by python-dotenv@1.2.1 and 7 other path(s)
+
+  Upgrade python-engineio@4.12.3 to python-engineio@4.13.2 to fix
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONENGINEIO-17660884] in python-engineio@4.12.3
+    introduced by python-engineio@4.12.3 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONENGINEIO-17660885] in python-engineio@4.12.3
+    introduced by python-engineio@4.12.3 and 1 other path(s)
+
+  Upgrade python-multipart@0.0.20 to python-multipart@0.0.31 to fix
+  ✗ Excessive Iteration [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16078395] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+  ✗ HTTP Request Smuggling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17344732] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+  ✗ Interpretation Conflict (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345733] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+  ✗ Improper Validation of Specified Quantity in Input (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345735] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-15117506] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-16438952] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+  ✗ Inefficient Algorithmic Complexity (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONMULTIPART-17345663] in python-multipart@0.0.20
+    introduced by python-multipart@0.0.20 and 1 other path(s)
+
+  Upgrade python-socketio@5.15.0 to python-socketio@5.16.2 to fix
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONSOCKETIO-17660883] in python-socketio@5.15.0
+    introduced by python-socketio@5.15.0
+
+  Upgrade requests@2.32.5 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.5
+    introduced by requests@2.32.5 and 156 other path(s)
+
+  Upgrade semantic-kernel@1.36.0 to semantic-kernel@1.39.4 to fix
+  ✗ Arbitrary Code Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SEMANTICKERNEL-15323118] in semantic-kernel@1.36.0
+    introduced by semantic-kernel@1.36.0
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SEMANTICKERNEL-15248428] in semantic-kernel@1.36.0
+    introduced by semantic-kernel@1.36.0
+
+  Upgrade soupsieve@2.8 to soupsieve@2.8.4 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911084] in soupsieve@2.8
+    introduced by soupsieve@2.8 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SOUPSIEVE-17911087] in soupsieve@2.8
+    introduced by soupsieve@2.8 and 3 other path(s)
+
+  Upgrade starlette@0.50.0 to starlette@1.3.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-16881242] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 2 other path(s)
+  ✗ Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342514] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 2 other path(s)
+  ✗ Server-side Request Forgery (SSRF) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342498] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 2 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342515] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 2 other path(s)
+  ✗ Use of Incorrectly-Resolved Name or Reference (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-STARLETTE-17342519] in starlette@0.50.0
+    introduced by starlette@0.50.0 and 2 other path(s)
+
+  Upgrade urllib3@2.5.0 to urllib3@2.7.0 to fix
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 175 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 175 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 175 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.5.0
+    introduced by urllib3@2.5.0 and 175 other path(s)
+
+  Upgrade werkzeug@3.1.1 to werkzeug@3.1.6 to fix
+  ✗ Improper Handling of Windows Device Names [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-WERKZEUG-14151620] in werkzeug@3.1.1
+    introduced by werkzeug@3.1.1 and 3 other path(s)
+  ✗ Improper Handling of Windows Device Names [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-WERKZEUG-14908843] in werkzeug@3.1.1
+    introduced by werkzeug@3.1.1 and 3 other path(s)
+  ✗ Improper Handling of Windows Device Names [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-WERKZEUG-15322677] in werkzeug@3.1.1
+    introduced by werkzeug@3.1.1 and 3 other path(s)
+
+  Pin setuptools@80.9.0 to setuptools@83.0.0 to fix
+  ✗ Improper Handling of Unicode Encoding (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-17895075] in setuptools@80.9.0
+    introduced by llama-index-core@0.14.9 > setuptools@80.9.0 and 21 other path(s)
+
+
+Issues with no direct upgrade or patch:
+  ✗ Authorization Bypass Through User-Controlled Key [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-LANGGRAPH-17817813] in langgraph@1.1.6
+    introduced by langgraph@1.1.6 and 1 other path(s)
+  No upgrade or patch available
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-17356385] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  No upgrade or patch available
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-17817780] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  No upgrade or patch available
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-NLTK-17821336] in nltk@3.9.2
+    introduced by nltk@3.9.2 and 23 other path(s)
+  No upgrade or patch available
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14560695] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14563374] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14564275] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14564363] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14564364] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14564365] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TRANSFORMERS-14564366] in transformers@5.5.0
+    introduced by transformers@5.5.0
+  No upgrade or patch available
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      Chainlit__chainlit
+Open source:       no
+Project path:      /work/Chainlit__chainlit
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

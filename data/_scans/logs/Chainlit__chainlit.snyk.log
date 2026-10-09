@@ -1,0 +1,232 @@
+# project: Chainlit__chainlit
+# scanner: snyk
+# time: Fri Jul 10 19:29:49 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\Chainlit__chainlit.json
+# exit code: 1
+=== STDOUT ===
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit...
+
+Organization:      wuwuyn
+Package manager:   pnpm
+Target file:       package.json
+Project name:      package.json
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit
+Licenses:          enabled
+
+✔ Tested C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit for known issues, no vulnerable paths found.
+
+Next steps:
+- Run `snyk monitor` to be notified about new related vulnerabilities.
+- Run `snyk test` as part of your CI/test.
+
+-------------------------------------------------------
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit...
+
+Tested 653 dependencies for known issues, found 22 issues, 62 vulnerable paths.
+
+
+Issues to fix by upgrading:
+
+  Upgrade lodash@4.17.21 to lodash@4.18.1 to fix
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869619] in lodash@4.17.21
+    introduced by lodash@4.17.21
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15053838] in lodash@4.17.21
+    introduced by lodash@4.17.21
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869625] in lodash@4.17.21
+    introduced by lodash@4.17.21
+
+  Upgrade react-router-dom@6.15.0 to react-router-dom@6.30.4 to fix
+  ✗ Open Redirect [High Severity][https://security.snyk.io/vuln/SNYK-JS-REACTROUTER-17138887] in react-router@6.15.0
+    introduced by react-router-dom@6.15.0 > react-router@6.15.0
+  ✗ Cross-site Scripting (XSS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-REMIXRUNROUTER-14908530] in @remix-run/router@1.8.0
+    introduced by react-router-dom@6.15.0 > @remix-run/router@1.8.0 and 1 other path(s)
+  ✗ Open Redirect [High Severity][https://security.snyk.io/vuln/SNYK-JS-REACTROUTER-14908286] in react-router@6.15.0
+    introduced by react-router-dom@6.15.0 > react-router@6.15.0
+  ✗ Open Redirect [High Severity][https://security.snyk.io/vuln/SNYK-JS-REMIXRUNROUTER-14908287] in @remix-run/router@1.8.0
+    introduced by react-router-dom@6.15.0 > @remix-run/router@1.8.0 and 1 other path(s)
+
+  Upgrade uuid@9.0.0 to uuid@11.1.1 to fix
+  ✗ Improper Validation of Specified Index, Position, or Offset in Input [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UUID-16133035] in uuid@9.0.0
+    introduced by uuid@9.0.0
+
+
+Issues with no direct upgrade or patch:
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-BABELRUNTIME-10044504] in @babel/runtime@7.23.5
+    introduced by cmdk@1.0.0 > @radix-ui/react-dialog@1.0.5 > @babel/runtime@7.25.6 and 20 other path(s)
+  This issue was fixed in versions: 7.26.10, 8.0.0-alpha.17
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-15789759] in brace-expansion@2.0.2
+    introduced by react-runner@1.0.5 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 > brace-expansion@2.0.2 and 1 other path(s)
+  This issue was fixed in versions: 1.1.13, 2.0.3, 3.0.2, 5.0.5
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-17706650] in brace-expansion@2.0.2
+    introduced by react-runner@1.0.5 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 > brace-expansion@2.0.2 and 1 other path(s)
+  This issue was fixed in versions: 5.0.7
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-GLOB-14040952] in glob@10.4.5
+    introduced by react-runner@1.0.5 > sucrase@3.35.0 > glob@10.4.5 and 1 other path(s)
+  This issue was fixed in versions: 10.5.0, 11.1.0
+  ✗ Improperly Controlled Modification of Dynamically-Determined Object Attributes [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-MDASTUTILTOHAST-14157221] in mdast-util-to-hast@13.1.0
+    introduced by react-markdown@9.0.1 > mdast-util-to-hast@13.1.0 and 2 other path(s)
+  This issue was fixed in versions: 13.2.1
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15309438] in minimatch@9.0.5
+    introduced by react-runner@1.0.5 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 and 1 other path(s)
+  This issue was fixed in versions: 3.1.3, 4.2.4, 5.1.7, 6.2.1, 7.4.7, 8.0.5, 9.0.6, 10.2.1
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15353387] in minimatch@9.0.5
+    introduced by react-runner@1.0.5 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 and 1 other path(s)
+  This issue was fixed in versions: 8.0.6, 9.0.7, 10.2.3
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15353389] in minimatch@9.0.5
+    introduced by react-runner@1.0.5 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 and 1 other path(s)
+  This issue was fixed in versions: 3.1.3, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7, 10.2.3
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-PICOMATCH-15765511] in picomatch@2.3.1
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > chokidar@3.6.0 > anymatch@3.1.3 > picomatch@2.3.1 and 2 other path(s)
+  This issue was fixed in versions: 2.3.2, 3.0.2, 4.0.4
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-PICOMATCH-15765513] in picomatch@2.3.1
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > chokidar@3.6.0 > anymatch@3.1.3 > picomatch@2.3.1 and 2 other path(s)
+  This issue was fixed in versions: 2.3.2, 3.0.2, 4.0.4
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSS-16189065] in postcss@8.4.49
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > postcss@8.4.49 and 4 other path(s)
+  This issue was fixed in versions: 8.5.10
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSSSELECTORPARSER-16873882] in postcss-selector-parser@6.1.2
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > postcss-selector-parser@6.1.2 and 1 other path(s)
+  This issue was fixed in versions: 6.1.3, 7.1.2
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-PROTOCOLBUFFERSSCHEMA-16420259] in protocol-buffers-schema@3.6.0
+    introduced by plotly.js@2.30.1 > @plotly/mapbox-gl@1.13.4 > @mapbox/mapbox-gl-supported@1.5.0 > mapbox-gl@1.13.3 > pbf@3.3.0 > resolve-protobuf-schema@2.1.0 > protocol-buffers-schema@3.6.0 and 1 other path(s)
+  This issue was fixed in versions: 3.6.1
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-YAML-15765520] in yaml@2.4.1
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > postcss-load-config@4.0.2 > yaml@2.4.1
+  This issue was fixed in versions: 1.10.3, 2.8.3
+
+
+
+Organization:      wuwuyn
+Package manager:   pnpm
+Target file:       frontend\pnpm-lock.yaml
+Project name:      @chainlit/app
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit
+Licenses:          enabled
+
+-------------------------------------------------------
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit...
+
+Tested 131 dependencies for known issues, found 16 issues, 27 vulnerable paths.
+
+
+Issues to fix by upgrading:
+
+  Upgrade lodash@4.17.21 to lodash@4.18.1 to fix
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869619] in lodash@4.17.21
+    introduced by lodash@4.17.21
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15053838] in lodash@4.17.21
+    introduced by lodash@4.17.21
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869625] in lodash@4.17.21
+    introduced by lodash@4.17.21
+
+  Upgrade uuid@9.0.0 to uuid@11.1.1 to fix
+  ✗ Improper Validation of Specified Index, Position, or Offset in Input [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UUID-16133035] in uuid@9.0.0
+    introduced by uuid@9.0.0
+
+
+Issues with no direct upgrade or patch:
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-BABELRUNTIME-10044504] in @babel/runtime@7.26.0
+    introduced by i18next@23.16.8 > @babel/runtime@7.23.8 and 2 other path(s)
+  This issue was fixed in versions: 7.26.10, 8.0.0-alpha.17
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-15789759] in brace-expansion@2.0.2
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 > brace-expansion@2.0.2
+  This issue was fixed in versions: 1.1.13, 2.0.3, 3.0.2, 5.0.5
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-17706650] in brace-expansion@2.0.2
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5 > brace-expansion@2.0.2
+  This issue was fixed in versions: 5.0.7
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-GLOB-14040952] in glob@10.4.5
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > sucrase@3.35.0 > glob@10.4.5
+  This issue was fixed in versions: 10.5.0, 11.1.0
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15309438] in minimatch@9.0.5
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5
+  This issue was fixed in versions: 3.1.3, 4.2.4, 5.1.7, 6.2.1, 7.4.7, 8.0.5, 9.0.6, 10.2.1
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15353387] in minimatch@9.0.5
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5
+  This issue was fixed in versions: 8.0.6, 9.0.7, 10.2.3
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15353389] in minimatch@9.0.5
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > sucrase@3.35.0 > glob@10.4.5 > minimatch@9.0.5
+  This issue was fixed in versions: 3.1.3, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7, 10.2.3
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-PICOMATCH-15765511] in picomatch@2.3.1
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > chokidar@3.6.0 > anymatch@3.1.3 > picomatch@2.3.1 and 2 other path(s)
+  This issue was fixed in versions: 2.3.2, 3.0.2, 4.0.4
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-PICOMATCH-15765513] in picomatch@2.3.1
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > chokidar@3.6.0 > anymatch@3.1.3 > picomatch@2.3.1 and 2 other path(s)
+  This issue was fixed in versions: 2.3.2, 3.0.2, 4.0.4
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSS-16189065] in postcss@8.4.49
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > postcss@8.4.49 and 4 other path(s)
+  This issue was fixed in versions: 8.5.10
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSSSELECTORPARSER-16873882] in postcss-selector-parser@6.1.2
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > postcss-selector-parser@6.1.2 and 1 other path(s)
+  This issue was fixed in versions: 6.1.3, 7.1.2
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-YAML-15765520] in yaml@2.6.1
+    introduced by tailwindcss-animate@1.0.7 > tailwindcss@3.4.17 > postcss-load-config@4.0.2 > yaml@2.6.1
+  This issue was fixed in versions: 1.10.3, 2.8.3
+
+
+
+Organization:      wuwuyn
+Package manager:   pnpm
+Target file:       libs\copilot\pnpm-lock.yaml
+Project name:      @chainlit/copilot
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit
+Licenses:          enabled
+
+-------------------------------------------------------
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit...
+
+Tested 26 dependencies for known issues, found 7 issues, 7 vulnerable paths.
+
+
+Issues to fix by upgrading:
+
+  Upgrade lodash@4.17.21 to lodash@4.18.1 to fix
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869619] in lodash@4.17.21
+    introduced by lodash@4.17.21
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15053838] in lodash@4.17.21
+    introduced by lodash@4.17.21
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869625] in lodash@4.17.21
+    introduced by lodash@4.17.21
+
+  Upgrade socket.io-client@4.7.2 to socket.io-client@4.8.0 to fix
+  ✗ Use of Uninitialized Resource [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-WS-16722635] in ws@8.18.0
+    introduced by socket.io-client@4.7.2 > engine.io-client@6.5.3 > ws@8.18.0
+  ✗ Asymmetric Resource Consumption (Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-JS-WS-17344547] in ws@8.18.0
+    introduced by socket.io-client@4.7.2 > engine.io-client@6.5.3 > ws@8.18.0
+
+  Upgrade uuid@9.0.0 to uuid@11.1.1 to fix
+  ✗ Improper Validation of Specified Index, Position, or Offset in Input [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UUID-16133035] in uuid@9.0.0
+    introduced by uuid@9.0.0
+
+
+Issues with no direct upgrade or patch:
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-SOCKETIOPARSER-15680278] in socket.io-parser@4.2.4
+    introduced by socket.io-client@4.7.2 > socket.io-parser@4.2.4
+  This issue was fixed in versions: 3.3.5, 3.4.4, 4.2.6
+
+
+
+Organization:      wuwuyn
+Package manager:   pnpm
+Target file:       libs\react-client\pnpm-lock.yaml
+Project name:      @chainlit/react-client
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\chainlit__chainlit
+Licenses:          enabled
+
+
+Tested 4 projects, 3 contained vulnerable paths.
+
+
+
+
+=== STDERR ===
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

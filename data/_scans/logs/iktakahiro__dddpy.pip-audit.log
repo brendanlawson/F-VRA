@@ -1,0 +1,12 @@
+# project: iktakahiro__dddpy
+# scanner: pip-audit
+# time: Sat Jul 11 09:55:47 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\iktakahiro__dddpy.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\iktakahiro__dddpy.json
+# exit code: 1
+# note: OK skipped(1)=['uvloop']
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 23 known vulnerabilities in 6 packages

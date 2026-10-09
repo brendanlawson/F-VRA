@@ -1,0 +1,81 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+WARN Fixing invalid version specifier by removing star after comparison operator other than equal and not equal (before: `>=3.5.*`; after: `>=3.5`)
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because cuid==0.4 has no usable wheels and you require cuid==0.4, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `cuid` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because literalai==0.1.201 has no usable wheels and you require
+      literalai==0.1.201, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `literalai` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=2) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because numpy==1.26.4 has no usable wheels and you require
+      numpy==1.26.4, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `numpy` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=3) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pybars4==0.9.13 has no usable wheels and you require
+      pybars4==0.9.13, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pybars4` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=4) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because pymeta3==0.5.1 has no usable wheels and you require
+      pymeta3==0.5.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pymeta3` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=5) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because syncer==2.0.3 has no usable wheels and you require
+      syncer==2.0.3, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `syncer` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=6) rc=0 ---
+ tokenizers==0.22.1
+ - tomli==2.4.1
+ + tomli==2.3.0
+ + tqdm==4.67.1
+ + traceloop-sdk==0.49.6
+ + transformers==5.5.0
+ + typer==0.24.1
+ + types-aiofiles==23.2.0.20240623
+ + types-pytz==2025.2.0.20251108
+ + types-requests==2.32.4.20250913
+ + typing-extensions==4.15.0
+ + typing-inspect==0.9.0
+ + typing-inspection==0.4.2
+ + tzdata==2025.2
+ - urllib3==2.7.0
+ + urllib3==2.5.0
+ + uuid-utils==0.14.1
+ + uvicorn==0.38.0
+ + watchfiles==1.1.1
+ + websockets==15.0.1
+ + werkzeug==3.1.1
+ + wrapt==1.17.3
+ + wsproto==1.3.2
+ + xmltodict==1.0.2
+ + xxhash==3.6.0
+ + yarl==1.22.0
+ + zipp==3.23.0
+ + zstandard==0.25.0

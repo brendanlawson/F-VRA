@@ -1,0 +1,123 @@
+# project: OWASP__Nettacker
+# scanner: snyk
+# time: Fri Jul 10 19:31:18 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\OWASP__Nettacker.json
+# exit code: 1
+=== STDOUT ===
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\owasp__nettacker...
+
+Tested 55 dependencies for known issues, found 39 issues, 82 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.3 to aiohttp@3.14.1 to fix
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+
+  Upgrade paramiko@3.5.1 to paramiko@5.0.0 to fix
+  ✗ Use of a Broken or Risky Cryptographic Algorithm [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PARAMIKO-16425764] in paramiko@3.5.1
+    introduced by paramiko@3.5.1
+
+  Upgrade pyopenssl@23.3.0 to pyopenssl@26.0.0 to fix
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-6592766] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 2 other path(s)
+  ✗ Not Failing Securely ('Failing Open') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674458] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 2 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-6157250] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 2 other path(s)
+  ✗ Buffer Overflow [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674459] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 2 other path(s)
+
+  Pin click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by flask@3.1.3 > click@8.3.1 and 1 other path(s)
+
+  Pin cryptography@41.0.7 to cryptography@48.0.1 to fix
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6592767] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6913422] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6050294] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6157248] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ NULL Pointer Dereference [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6210214] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ NULL Pointer Dereference [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6261585] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Observable Timing Discrepancy [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6126975] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+  ✗ Type Confusion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-7886970] in cryptography@41.0.7
+    introduced by pyopenssl@23.3.0 > cryptography@41.0.7 and 3 other path(s)
+
+  Pin idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by requests@2.33.0 > idna@3.11 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   poetry
+Target file:       pyproject.toml
+Project name:      nettacker
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\owasp__nettacker
+Licenses:          enabled
+
+
+
+=== STDERR ===
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\owasp__nettacker\docs\requirements.txt:
+  Missing required packages
+✗ 1/2 potential projects failed to get dependencies.
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

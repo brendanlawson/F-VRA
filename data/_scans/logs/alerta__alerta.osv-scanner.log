@@ -1,0 +1,12 @@
+# project: alerta__alerta
+# scanner: osv-scanner
+# time: Sat Jul 11 08:48:37 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\alerta__alerta.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\alerta__alerta
+# exit code: 1
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\alerta__alerta
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\alerta__alerta\requirements.pinned.txt file and found 34 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 999.2Âµs elapsed, 999.2Âµs wall time

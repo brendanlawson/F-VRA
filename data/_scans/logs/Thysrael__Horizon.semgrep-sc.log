@@ -1,0 +1,529 @@
+# project: Thysrael__Horizon
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 21:22:59 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=Thysrael__Horizon -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/Thysrael__Horizon:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/Thysrael__Horizon.json
+# exit code: 0
+# note: native lock: uv.lock
+=== STDOUT ===
+                                    
+                                    
+┌──────────────────────────────────┐
+│ 1 Reachable Supply Chain Finding │
+└──────────────────────────────────┘
+           
+    uv.lock
+   ❯❯❱ cryptography - GHSA-537c-gmf6-5ccf
+          Severity: HIGH                                                                                      
+          Affected versions of cryptography are vulnerable to Dependency on Vulnerable Third-Party Component /
+          Out-of-bounds Read. The PyPI wheels for the cryptography package statically link a version of       
+          OpenSSL that contains security vulnerabilities (including a high-severity use-after-free in         
+          PKCS7_verify and several denial-of-service and forgery issues). Any application installed from an   
+          affected wheel ships the vulnerable OpenSSL binary, so an attacker may trigger out-of-bounds reads, 
+          crashes, or other memory-safety issues through cryptographic operations that reach the bundled      
+          OpenSSL code.                                                                                       
+                                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 48.0.1
+          611┆ [[package]]
+                                         
+                                         
+┌───────────────────────────────────────┐
+│ 33 Undetermined Supply Chain Findings │
+└───────────────────────────────────────┘
+           
+    uv.lock
+     ❱ aiohttp - CVE-2026-54279
+          Severity: LOW                                                          
+          Affected versions of aiohttp are vulnerable to Improper Initialization.
+                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34518
+          Severity: LOW                                                                                      
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor.                                                                                             
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34515
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Absolute Path Traversal / Server-Side Request Forgery
+          (SSRF).                                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-54280
+          Severity: LOW                                                                        
+          Affected versions of aiohttp are vulnerable to Improper Resource Shutdown or Release.
+                                                                                               
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-54275
+          Severity: LOW                                                                              
+          Affected versions of aiohttp are vulnerable to Improper Validation of Certificate with Host
+          Mismatch.                                                                                  
+                                                                                                     
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34513
+          Severity: LOW                                                                                       
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-50269
+          Severity: LOW                                                                                  
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF
+          Injection') / Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response
+          Splitting').                                                                                   
+                                                                                                         
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34519
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34525
+          Severity: MODERATE                                                                     
+          Affected versions of aiohttp are vulnerable to Improper Input Validation / Inconsistent
+          Interpretation of HTTP Requests ('HTTP Request/Response Smuggling').                   
+                                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-47265
+          Severity: MODERATE                                                     
+          Affected versions of aiohttp are vulnerable to Origin Validation Error.
+                                                                                 
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34514
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34517
+          Severity: LOW                                                                                       
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+     ❱ aiohttp - CVE-2026-34520
+          Severity: LOW                                                                                   
+          Affected versions of aiohttp are vulnerable to Improper Neutralization of CRLF Sequences in HTTP
+          Headers ('HTTP Request/Response Splitting').                                                    
+                                                                                                          
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34516
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-34993
+          Severity: MODERATE                                                               
+          Affected versions of aiohttp are vulnerable to Deserialization of Untrusted Data.
+                                                                                           
+           ▶▶┆ Fixed for aiohttp at version: 3.14.0
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-22815
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling
+          / Uncontrolled Resource Consumption.                                                               
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.13.4
+           25┆ [[package]]
+   
+     ❱ cryptography - CVE-2026-34073
+          Severity: LOW                                                                       
+          Affected versions of cryptography are vulnerable to Improper Certificate Validation.
+                                                                                              
+           ▶▶┆ Fixed for cryptography at version: 46.0.6
+          611┆ [[package]]
+   
+    ❯❱ cryptography - CVE-2026-39892
+          Severity: MODERATE                                                                               
+          Affected versions of cryptography are vulnerable to Improper Restriction of Operations within the
+          Bounds of a Memory Buffer.                                                                       
+                                                                                                           
+           ▶▶┆ Fixed for cryptography at version: 46.0.7
+          611┆ [[package]]
+   
+    ❯❱ idna - CVE-2026-45409
+          Severity: MODERATE                                                                    
+          Affected versions of idna are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                
+           ▶▶┆ Fixed for idna at version: 3.15
+          1198┆ [[package]]
+   
+    ❯❱ pydantic-settings - GHSA-4xgf-cpjx-pc3j
+          Severity: MODERATE                                                                             
+          Affected versions of pydantic-settings are vulnerable to Improper Limitation of a Pathname to a
+          Restricted Directory ('Path Traversal') / Improper Link Resolution Before File Access ('Link   
+          Following') / Uncontrolled Resource Consumption.                                               
+                                                                                                         
+           ▶▶┆ Fixed for pydantic-settings at version: 2.14.2
+          2611┆ [[package]]
+   
+     ❱ pygments - CVE-2026-4539
+          Severity: LOW                                                                              
+          Affected versions of Pygments are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                         
+                                                                                                     
+           ▶▶┆ Fixed for pygments at version: 2.20.0
+          2637┆ [[package]]
+   
+    ❯❱ pyjwt - CVE-2026-48522
+          Severity: MODERATE                                                                                
+          Affected versions of PyJWT are vulnerable to Server-Side Request Forgery (SSRF) / Unintended Proxy
+          or Intermediary ('Confused Deputy').                                                              
+                                                                                                            
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          2646┆ [[package]]
+   
+    ❯❱ pyjwt - CVE-2026-48523
+          Severity: MODERATE                                                                            
+          Affected versions of pyjwt are vulnerable to Improper Verification of Cryptographic Signature.
+                                                                                                        
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          2646┆ [[package]]
+   
+    ❯❱ pyjwt - CVE-2026-48525
+          Severity: MODERATE                                                             
+          Affected versions of pyjwt are vulnerable to Uncontrolled Resource Consumption.
+                                                                                         
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          2646┆ [[package]]
+   
+     ❱ pyjwt - CVE-2026-48524
+          Severity: LOW                                                                               
+          Affected versions of pyjwt are vulnerable to Improper Cleanup on Thrown Exception / Improper
+          Handling of Exceptional Conditions.                                                         
+                                                                                                      
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          2646┆ [[package]]
+   
+    ❯❱ pytest - CVE-2025-71176
+          Severity: MODERATE                                                                                 
+          Affected versions of pytest are vulnerable to Creation of Temporary File in Directory with Insecure
+          Permissions.                                                                                       
+                                                                                                             
+           ▶▶┆ Fixed for pytest at version: 9.0.3
+          2660┆ [[package]]
+   
+    ❯❱ python-dotenv - CVE-2026-28684
+          Severity: MODERATE                                                                              
+          Affected versions of python-dotenv are vulnerable to Improper Link Resolution Before File Access
+          ('Link Following') / UNIX Symbolic Link (Symlink) Following.                                    
+                                                                                                          
+           ▶▶┆ Fixed for python-dotenv at version: 1.2.2
+          2702┆ [[package]]
+   
+     ❱ python-multipart - CVE-2026-53540
+          Severity: LOW                                                                                       
+          Affected versions of python-multipart are vulnerable to Improper Validation of Specified Quantity in
+          Input.                                                                                              
+                                                                                                              
+           ▶▶┆ Fixed for python-multipart at version: 0.0.31
+          2711┆ [[package]]
+   
+     ❱ python-multipart - CVE-2026-53537
+          Severity: LOW                                                                                     
+          Affected versions of python-multipart are vulnerable to Improper Input Validation / Interpretation
+          Conflict.                                                                                         
+                                                                                                            
+           ▶▶┆ Fixed for python-multipart at version: 0.0.30
+          2711┆ [[package]]
+   
+     ❱ python-multipart - CVE-2026-53538
+          Severity: LOW                                                                                       
+          Affected versions of python-multipart are vulnerable to Inconsistent Interpretation of HTTP Requests
+          ('HTTP Request/Response Smuggling') / Interpretation Conflict.                                      
+                                                                                                              
+           ▶▶┆ Fixed for python-multipart at version: 0.0.30
+          2711┆ [[package]]
+   
+   ❯❯❱ soupsieve - CVE-2026-49476
+          Severity: HIGH                                                                            
+          Affected versions of soupsieve are vulnerable to Allocation of Resources Without Limits or
+          Throttling / Uncontrolled Resource Consumption.                                           
+                                                                                                    
+           ▶▶┆ Fixed for soupsieve at version: 2.8.4
+          2994┆ [[package]]
+   
+   ❯❯❱ soupsieve - CVE-2026-49477
+          Severity: HIGH                                                                              
+          Affected versions of soupsieve are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                          
+                                                                                                      
+           ▶▶┆ Fixed for soupsieve at version: 2.8.4
+          2994┆ [[package]]
+   
+     ❱ starlette - CVE-2026-54282
+          Severity: LOW                                                                                   
+          Affected versions of Starlette are vulnerable to Improper Input Validation / Use of Incorrectly-
+          Resolved Name or Reference.                                                                     
+                                                                                                          
+           ▶▶┆ Fixed for starlette at version: 1.3.0
+          3016┆ [[package]]
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 15 Unreachable Supply Chain Findings │
+└──────────────────────────────────────┘
+           
+    uv.lock
+    ❯❱ aiohttp - CVE-2026-54273
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          aiohttp did not limit the number of pipelined HTTP/1 requests buffered per connection on the server 
+          side. An attacker can send excessive pipelined requests to an aiohttp server to exhaust memory,     
+          leading to denial of service. Only the aiohttp server API is affected; client-only usage is not.    
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54278
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Improper Handling of Highly Compressed Data (Data   
+          Amplification). aiohttp servers decompress unread compressed request bodies into a single unbounded
+          chunk during lingering-close cleanup, bypassing the client_max_size limit. An attacker can send a  
+          small deflate/gzip-compressed request body that decompresses to a very large size, forcing a large 
+          transient memory allocation and causing a denial of service.                                       
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54276
+          Severity: MODERATE                                                                                 
+          Affected versions of aiohttp are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Insufficiently Protected Credentials. aiohttp's DigestAuthMiddleware sends HTTP Digest     
+          authentication credentials after cross-origin redirects. When the client follows redirects (the    
+          default behavior), an attacker who controls a redirect destination can capture the digest,         
+          potentially exposing the credentials.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54277
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The optimized C HTTP parser in aiohttp validates each fragment of an HTTP request/response line     
+          individually against max_line_size instead of the accumulated total. An attacker can split an       
+          oversized line across multiple network reads, bypassing the limit and causing excessive memory      
+          consumption, leading to denial of service. This affects both server-side request-target parsing and 
+          client-side response reason-phrase parsing.                                                         
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+    ❯❱ aiohttp - CVE-2026-54274
+          Severity: MODERATE                                                                                  
+          Affected versions of aiohttp are vulnerable to Allocation of Resources Without Limits or Throttling.
+          aiohttp WebSocket endpoints fail to enforce the max_msg_size memory limit when a peer sends large   
+          incomplete WebSocket frame payloads. An attacker (a malicious client against a server endpoint, or a
+          malicious server against a client connection) can send oversized incomplete frames to bypass the    
+          size limit and exhaust memory, causing denial of service. Any use of aiohttp server-side            
+          WebSocketResponse endpoints or client-side ws_connect connections reaches the vulnerable frame      
+          parser.                                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for aiohttp at version: 3.14.1
+           25┆ [[package]]
+   
+   ❯❯❱ lxml - CVE-2026-41066
+          Severity: HIGH                                                                                    
+          Affected versions of lxml are vulnerable to Improper Restriction of XML External Entity Reference.
+          An attacker can exploit the XXE vulnerability in lxml to read arbitrary local files by supplying a
+          crafted XML document containing external entity references to `iterparse()` or                    
+          `ETCompatXMLParser()`.                                                                            
+                                                                                                            
+           ▶▶┆ Fixed for lxml at version: 6.1.0
+          1349┆ [[package]]
+   
+   ❯❯❱ pyasn1 - CVE-2026-30922
+          Severity: HIGH                                                                                      
+          Affected versions of pyasn1 are vulnerable to Uncontrolled Recursion. `pyasn1`'s BER decoder is     
+          vulnerable to a denial-of-service when decoding attacker-controlled ASN.1 with deeply nested        
+          constructed types: crafted `SEQUENCE` (`0x30`) or `SET` (`0x31`) elements using indefinite-length   
+          (`0x80`) encoding can trigger unbounded recursive calls during decoding (both schema-based and      
+          schemaless paths), leading to a `RecursionError` crash or, if recursion limits are raised, excessive
+          memory consumption and OOM.                                                                         
+                                                                                                              
+           ▶▶┆ Fixed for pyasn1 at version: 0.6.3
+          2469┆ [[package]]
+   
+   ❯❯❱ pyjwt - CVE-2026-48526
+          Severity: HIGH                                                                                      
+          Affected versions of pyjwt are vulnerable to Improper Authentication / Improper Verification of     
+          Cryptographic Signature. PyJWT does not reject JSON Web Key (JWK) strings passed as raw HMAC secrets
+          in `HMACAlgorithm.prepare_key`. When a verifier allows both HMAC and asymmetric algorithms and a raw
+          JWK string is supplied as the verification key, an attacker can forge an HS256 token signed with the
+          public JWK string used as the HMAC secret, enabling token forgery and authentication bypass.        
+                                                                                                              
+           ▶▶┆ Fixed for pyjwt at version: 2.13.0
+          2646┆ [[package]]
+   
+   ❯❯❱ python-multipart - CVE-2026-53539
+          Severity: HIGH                                                                                     
+          Affected versions of python-multipart are vulnerable to Inefficient Algorithmic Complexity /       
+          Uncontrolled Resource Consumption. An attacker can cause uncontrolled CPU consumption (denial of   
+          service) by sending a small application/x-www-form-urlencoded body that uses ";" as the field      
+          separator. python-multipart's QuerystringParser performs a full failed scan for "&" over the entire
+          remaining buffer before locating each ";", resulting in quadratic-time parsing.                    
+                                                                                                             
+           ▶▶┆ Fixed for python-multipart at version: 0.0.30
+          2711┆ [[package]]
+   
+   ❯❯❱ starlette - CVE-2026-48818
+          Severity: HIGH                                                                                      
+          Affected versions of starlette are vulnerable to Server-Side Request Forgery (SSRF). Serving static 
+          files with Starlette's StaticFiles app on Windows resolves requested paths with os.path.realpath()  
+          before checking directory containment. A request for a UNC path (e.g. \\attacker.com\share) triggers
+          an outbound SMB connection, letting an unauthenticated attacker perform server-side request forgery 
+          and leak the service account's NTLMv2 credentials.                                                  
+                                                                                                              
+           ▶▶┆ Fixed for starlette at version: 1.1.0
+          3016┆ [[package]]
+   
+    ❯❱ starlette - CVE-2026-48710
+          Severity: MODERATE                                                                                 
+          Affected versions of starlette are vulnerable to Improper Validation of Unsafe Equivalence in Input
+          / Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). Starlette      
+          reconstructs `request.url` (and `request.base_url`) from the unvalidated HTTP `Host` header. An    
+          attacker can send a malformed `Host` header containing `/`, `?`, or `#` to shift the parsed        
+          path/query boundaries, making `request.url.path` diverge from the path the ASGI server actually    
+          routed against. Middleware or endpoints that apply path-based security restrictions using          
+          `request.url` can be bypassed.                                                                     
+                                                                                                             
+           ▶▶┆ Fixed for starlette at version: 1.0.1
+          3016┆ [[package]]
+   
+   ❯❯❱ starlette - CVE-2026-54283
+          Severity: HIGH                                                                                    
+          Affected versions of starlette are vulnerable to Allocation of Resources Without Limits or        
+          Throttling. Calling `request.form()` parses `application/x-www-form-urlencoded` bodies without    
+          enforcing the `max_fields` or `max_part_size` limits, so an unauthenticated attacker can send a   
+          request with an extremely large number of fields or an oversized field value to exhaust CPU/memory
+          and cause a denial of service.                                                                    
+                                                                                                            
+           ▶▶┆ Fixed for starlette at version: 1.3.1
+          3016┆ [[package]]
+   
+    ❯❱ starlette - CVE-2026-48817
+          Severity: MODERATE                                                                              
+          Affected versions of starlette are vulnerable to Use of Externally-Controlled Input to Select   
+          Classes or Code ('Unsafe Reflection'). Starlette resolves HTTPEndpoint request handlers by      
+          lowercasing the client-supplied HTTP method and looking it up as an instance attribute with     
+          getattr(), without restricting the lookup to standard HTTP verbs. An attacker can send a non-   
+          standard HTTP method (e.g. `_DO_DELETE`) whose lowercased name matches an internal helper method
+          (e.g. `_do_delete`) on an HTTPEndpoint subclass, invoking that method as if it were a request   
+          handler and bypassing the authorization checks applied by the intended public handlers.         
+                                                                                                          
+           ▶▶┆ Fixed for starlette at version: 1.1.0
+          3016┆ [[package]]
+   
+   ❯❯❱ urllib3 - CVE-2026-44432
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data    
+          Amplification). urllib3 fails to enforce its decompression-bomb safeguards in two streaming-API code
+          paths: (1) the second and subsequent HTTPResponse.read(amt=N) or HTTPResponse.stream(amt=N) calls on
+          a Brotli-encoded response, and (2) HTTPResponse.drain_conn() invoked after the body has been        
+          partially decompressed. A malicious server can return a highly compressed payload to force the      
+          client to fully decompress it in a single operation, consuming excessive CPU and memory.            
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.7.0
+          3146┆ [[package]]
+   
+   ❯❯❱ urllib3 - CVE-2026-44431
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor. HTTP pools obtained from urllib3 ProxyManager via connection_from_url() or                  
+          connection_from_host() do not strip sensitive headers (Authorization, Cookie, Proxy-Authorization) 
+          when following cross-origin redirects, leaking authentication credentials to the redirect target.  
+          Use ProxyManager.request() (the high-level API) instead, or upgrade to urllib3 >= 2.7.0.           
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.7.0
+          3146┆ [[package]]
+
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192903821)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 69 files tracked by git with 0 Code rules, 17206 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources   Resolution Method   Ecosystem   Dependencies   Rules                                             
+ ───────────────────────────────────────────────────────────────────────────                                            
+  uv.lock              Lockfile            Pypi        152            17206                                             
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      11485                                                                                                  
+  Basic           4422                                                                                                  
+  Reachability    1299                                                                                                  
+                                                                                                                        
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 49 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 46
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Matching --exclude patterns: 22
+   ◦ Files matching .semgrepignore patterns: 22
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=Thysrael__Horizon&ref=HEAD
+  No blocking findings so exiting with code 0

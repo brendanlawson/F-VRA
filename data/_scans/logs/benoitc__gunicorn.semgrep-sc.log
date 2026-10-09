@@ -1,0 +1,228 @@
+# project: benoitc__gunicorn
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 21:16:41 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=benoitc__gunicorn -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/benoitc__gunicorn:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/benoitc__gunicorn.json
+# exit code: 0
+# note: native lock: uv.lock
+=== STDOUT ===
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 4 Undetermined Supply Chain Findings │
+└──────────────────────────────────────┘
+           
+    uv.lock
+    ❯❱ idna - CVE-2026-45409
+          Severity: MODERATE                                                                    
+          Affected versions of idna are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                
+           ▶▶┆ Fixed for idna at version: 3.15
+          460┆ [[package]]
+   
+     ❱ pygments - CVE-2026-4539
+          Severity: LOW                                                                              
+          Affected versions of Pygments are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                         
+                                                                                                     
+           ▶▶┆ Fixed for pygments at version: 2.20.0
+          505┆ [[package]]
+   
+    ❯❱ pytest - CVE-2025-71176
+          Severity: MODERATE                                                                                 
+          Affected versions of pytest are vulnerable to Creation of Temporary File in Directory with Insecure
+          Permissions.                                                                                       
+                                                                                                             
+           ▶▶┆ Fixed for pytest at version: 9.0.3
+          514┆ [[package]]
+   
+     ❱ tornado - CVE-2026-49854
+          Severity: LOW                                                   
+          Affected versions of tornado are vulnerable to Buffer Over-read.
+                                                                          
+           ▶▶┆ Fixed for tornado at version: 6.5.6
+          698┆ [[package]]
+                                       
+                                       
+┌─────────────────────────────────────┐
+│ 3 Unreachable Supply Chain Findings │
+└─────────────────────────────────────┘
+           
+    uv.lock
+   ❯❯❱ tornado - CVE-2026-49853
+          Severity: HIGH                                                                                     
+          Affected versions of tornado are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor. Tornado's SimpleAsyncHTTPClient (the default client behind AsyncHTTPClient/HTTPClient)      
+          forwards the Authorization, Cookie, auth_username, and auth_password values, as well as credentials
+          embedded in the request URL (user:password@host), to the redirect target when following a 3xx      
+          redirect to a different origin. An attacker who controls or can influence a redirect response can  
+          capture credentials intended for the original origin whenever an authenticated request follows     
+          redirects.                                                                                         
+                                                                                                             
+           ▶▶┆ Fixed for tornado at version: 6.5.6
+          698┆ [[package]]
+   
+    ❯❱ tornado - GHSA-pw6j-qg29-8w7f
+          Severity: MODERATE                                                                                 
+          Affected versions of tornado are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Operation on a Resource after Expiration or Release. The optional CurlAsyncHTTPClient      
+          backend pools and reuses pycurl handles without fully resetting them between requests. Per-request 
+          client TLS certificates (SSLCERT/SSLKEY), proxy basic-auth credentials (PROXYUSERPWD), and network 
+          interface bindings (INTERFACE) can persist onto later requests on the same client that did not set 
+          them, leaking credentials to unintended hosts.                                                     
+                                                                                                             
+           ▶▶┆ Fixed for tornado at version: 6.5.7
+          698┆ [[package]]
+   
+   ❯❯❱ tornado - CVE-2026-49855
+          Severity: HIGH                                                                                  
+          Affected versions of tornado are vulnerable to Improper Handling of Highly Compressed Data (Data
+          Amplification). Tornado does not enforce an overall limit on the cumulative size of gzip-       
+          decompressed data. A malicious server (when using the default                                   
+          `SimpleAsyncHTTPClient`/`AsyncHTTPClient`/`HTTPClient` to fetch responses) or a malicious client
+          (when the `HTTPServer` is started with `decompress_request=True`) can supply a small, highly    
+          compressed payload that expands into effectively unlimited memory, causing a denial of service  
+          ("gzip bomb").                                                                                  
+                                                                                                          
+           ▶▶┆ Fixed for tornado at version: 6.5.6
+          698┆ [[package]]
+
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192901159)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 227 files tracked by git with 0 Code rules, 17206 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources                                               Resolution Method   Ecosystem   Dependencies   Rules 
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  uv.lock                                                          Lockfile            Pypi        34             17206 
+  examples/celery_alternative/requirements.txt                     Lockfile            Pypi        0              17206 
+  examples/embedding_service/requirements.txt                      Lockfile            Pypi        0              17206 
+  examples/frameworks/requirements.txt,                            Lockfile            Pypi        0              17206 
+  examples/frameworks/requirements_cherryapp.txt,                                                                       
+  examples/frameworks/requirements_flaskapp.txt,                                                                        
+  examples/frameworks/requirements_pyramidapp.txt,                                                                      
+  examples/frameworks/requirements_tornadoapp.txt,                                                                      
+  examples/frameworks/requirements_webpyapp.txt                                                                         
+  examples/http2_features/requirements.txt                         Lockfile            Pypi        0              17206 
+  examples/streaming_chat/requirements.txt                         Lockfile            Pypi        0              17206 
+  requirements_dev.txt, requirements_test.txt                      Lockfile            Pypi        0              17206 
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      11485                                                                                                  
+  Basic           4422                                                                                                  
+  Reachability    1299                                                                                                  
+                                                                                                                        
+  Failed to parse [bold]examples/celery_alternative/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency     
+  'fastapi' because it is not pinned to an exact version                                                                
+  Failed to parse [bold]examples/celery_alternative/requirements.txt[/bold] at [bold]3[/bold] - Skipping dependency     
+  'uvloop' because it is not pinned to an exact version                                                                 
+  Failed to parse [bold]examples/celery_alternative/requirements.txt[/bold] at [bold]4[/bold] - Skipping dependency     
+  'httpx' because it is not pinned to an exact version                                                                  
+  Failed to parse [bold]examples/celery_alternative/requirements.txt[/bold] at [bold]5[/bold] - Skipping dependency     
+  'pytest' because it is not pinned to an exact version                                                                 
+  Failed to parse [bold]examples/celery_alternative/requirements.txt[/bold] at [bold]6[/bold] - Skipping dependency     
+  'pytest-asyncio' because it is not pinned to an exact version                                                         
+  Failed to parse [bold]examples/embedding_service/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency      
+  'sentence-transformers' because it is not pinned to an exact version                                                  
+  Failed to parse [bold]examples/embedding_service/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency      
+  'fastapi' because it is not pinned to an exact version                                                                
+  Failed to parse [bold]examples/embedding_service/requirements.txt[/bold] at [bold]3[/bold] - Skipping dependency      
+  'pydantic' because it is not pinned to an exact version                                                               
+  Failed to parse [bold]examples/embedding_service/requirements.txt[/bold] at [bold]4[/bold] - Skipping dependency      
+  'requests' because it is not pinned to an exact version                                                               
+  Failed to parse [bold]examples/embedding_service/requirements.txt[/bold] at [bold]5[/bold] - Skipping dependency      
+  'numpy' because it is not pinned to an exact version                                                                  
+  Failed to parse [bold]examples/frameworks/requirements_cherryapp.txt[/bold] at [bold]1[/bold] - Skipping dependency   
+  'cherrypy' because it is not pinned to an exact version                                                               
+  Failed to parse [bold]examples/frameworks/requirements_flaskapp.txt[/bold] at [bold]1[/bold] - Skipping dependency    
+  'flask' because it is not pinned to an exact version                                                                  
+  Failed to parse [bold]examples/frameworks/requirements_pyramidapp.txt[/bold] at [bold]1[/bold] - Skipping dependency  
+  'pyramid' because it is not pinned to an exact version                                                                
+  Failed to parse [bold]examples/frameworks/requirements_tornadoapp.txt[/bold] at [bold]1[/bold] - Skipping dependency  
+  'tornado' because it is not pinned to an exact version                                                                
+  Failed to parse [bold]examples/frameworks/requirements_webpyapp.txt[/bold] at [bold]1[/bold] - Skipping dependency    
+  'web-py' because it is not pinned to an exact version                                                                 
+  Failed to parse [bold]examples/http2_features/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency 'httpx' 
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]examples/streaming_chat/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency         
+  'fastapi' because it is not pinned to an exact version                                                                
+  Failed to parse [bold]examples/streaming_chat/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency         
+  'pydantic' because it is not pinned to an exact version                                                               
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]6[/bold] - Skipping dependency 'setuptools' because it is  
+  not pinned to an exact version                                                                                        
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]8[/bold] - Skipping dependency 'mkdocs' because it is not  
+  pinned to an exact version                                                                                            
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]9[/bold] - Skipping dependency 'mkdocs-material' because it
+  is not pinned to an exact version                                                                                     
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]10[/bold] - Skipping dependency 'mkdocs-gen-files' because 
+  it is not pinned to an exact version                                                                                  
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]11[/bold] - Skipping dependency 'markdown-grid-tables'     
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]12[/bold] - Skipping dependency 'mkdocs-macros-plugin'     
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]requirements_dev.txt[/bold] at [bold]13[/bold] - Skipping dependency 'pymdown-extensions'       
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]1[/bold] - Skipping dependency 'gevent' because it is not 
+  pinned to an exact version                                                                                            
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]2[/bold] - Skipping dependency 'coverage' because it is   
+  not pinned to an exact version                                                                                        
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]3[/bold] - Skipping dependency 'pytest' because it is not 
+  pinned to an exact version                                                                                            
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]4[/bold] - Skipping dependency 'pytest-cov' because it is 
+  not pinned to an exact version                                                                                        
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]5[/bold] - Skipping dependency 'pytest-asyncio' because it
+  is not pinned to an exact version                                                                                     
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]6[/bold] - Skipping dependency 'gunicorn_h1c' because it  
+  is not pinned to an exact version                                                                                     
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]7[/bold] - Skipping dependency 'h2' because it is not     
+  pinned to an exact version                                                                                            
+  Failed to parse [bold]requirements_test.txt[/bold] at [bold]8[/bold] - Skipping dependency 'uvloop' because it is not 
+  pinned to an exact version                                                                                            
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 7 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 160
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Matching --exclude patterns: 45
+   ◦ Files matching .semgrepignore patterns: 472
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=benoitc__gunicorn&ref=HEAD
+  No blocking findings so exiting with code 0

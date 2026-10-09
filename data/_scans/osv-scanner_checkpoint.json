@@ -1,0 +1,191 @@
+{
+  "alexferl__flask-simpleldap": {
+    "project": "alexferl__flask-simpleldap",
+    "status": "vulns",
+    "scanned": 3,
+    "vulns": 4,
+    "vuln_pkgs": 3,
+    "rc": 1,
+    "secs": 1.0
+  },
+  "Amm1rr__WebAI-to-API": {
+    "project": "Amm1rr__WebAI-to-API",
+    "status": "vulns",
+    "scanned": 6,
+    "vulns": 59,
+    "vuln_pkgs": 6,
+    "rc": 1,
+    "secs": 10.5
+  },
+  "benavlabs__FastAPI-boilerplate": {
+    "project": "benavlabs__FastAPI-boilerplate",
+    "status": "vulns",
+    "scanned": 4,
+    "vulns": 25,
+    "vuln_pkgs": 4,
+    "rc": 1,
+    "secs": 2.1
+  },
+  "djangostarter__web": {
+    "project": "djangostarter__web",
+    "status": "vulns",
+    "scanned": 19,
+    "vulns": 89,
+    "vuln_pkgs": 19,
+    "rc": 1,
+    "secs": 2.2
+  },
+  "Open-LLM-VTuber__Open-LLM-VTuber": {
+    "project": "Open-LLM-VTuber__Open-LLM-VTuber",
+    "status": "vulns",
+    "scanned": 15,
+    "vulns": 94,
+    "vuln_pkgs": 15,
+    "rc": 1,
+    "secs": 2.7
+  },
+  "yezz123__authx": {
+    "project": "yezz123__authx",
+    "status": "vulns",
+    "scanned": 11,
+    "vulns": 31,
+    "vuln_pkgs": 11,
+    "rc": 1,
+    "secs": 2.8
+  },
+  "evansd__whitenoise": {
+    "project": "evansd__whitenoise",
+    "status": "vulns",
+    "scanned": 2,
+    "vulns": 10,
+    "vuln_pkgs": 2,
+    "rc": 1,
+    "secs": 1.0
+  },
+  "fastapi__asyncer": {
+    "project": "fastapi__asyncer",
+    "status": "vulns",
+    "scanned": 6,
+    "vulns": 25,
+    "vuln_pkgs": 6,
+    "rc": 1,
+    "secs": 1.2
+  },
+  "iktakahiro__dddpy": {
+    "project": "iktakahiro__dddpy",
+    "status": "vulns",
+    "scanned": 6,
+    "vulns": 23,
+    "vuln_pkgs": 6,
+    "rc": 1,
+    "secs": 1.3
+  },
+  "marshmallow-code__flask-marshmallow": {
+    "project": "marshmallow-code__flask-marshmallow",
+    "status": "clean",
+    "scanned": 0,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "rc": 0,
+    "secs": 0.8
+  },
+  "marshmallow-code__flask-smorest": {
+    "project": "marshmallow-code__flask-smorest",
+    "status": "clean",
+    "scanned": 0,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "rc": 0,
+    "secs": 0.8
+  },
+  "sloria__environs": {
+    "project": "sloria__environs",
+    "status": "clean",
+    "scanned": 0,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "rc": 0,
+    "secs": 0.7
+  },
+  "spiral-project__ihatemoney": {
+    "project": "spiral-project__ihatemoney",
+    "status": "vulns",
+    "scanned": 12,
+    "vulns": 35,
+    "vuln_pkgs": 12,
+    "rc": 1,
+    "secs": 14.5
+  },
+  "sunscrapers__djoser": {
+    "project": "sunscrapers__djoser",
+    "status": "vulns",
+    "scanned": 17,
+    "vulns": 91,
+    "vuln_pkgs": 17,
+    "rc": 1,
+    "secs": 14.4
+  },
+  "tinyfish-io__agentql": {
+    "project": "tinyfish-io__agentql",
+    "status": "clean",
+    "scanned": 0,
+    "vulns": 0,
+    "vuln_pkgs": 0,
+    "rc": 0,
+    "secs": 7.8
+  },
+  "tomasvotava__fastapi-sso": {
+    "project": "tomasvotava__fastapi-sso",
+    "status": "vulns",
+    "scanned": 1,
+    "vulns": 4,
+    "vuln_pkgs": 1,
+    "rc": 1,
+    "secs": 13.6
+  },
+  "tropicoo__yt-dlp-bot": {
+    "project": "tropicoo__yt-dlp-bot",
+    "status": "vulns",
+    "scanned": 10,
+    "vulns": 83,
+    "vuln_pkgs": 10,
+    "rc": 1,
+    "secs": 2.2
+  },
+  "eightBEC__fastapi-ml-skeleton": {
+    "project": "eightBEC__fastapi-ml-skeleton",
+    "status": "vulns",
+    "scanned": 11,
+    "vulns": 48,
+    "vuln_pkgs": 11,
+    "rc": 1,
+    "secs": 9.8
+  },
+  "laurentS__slowapi": {
+    "project": "laurentS__slowapi",
+    "status": "vulns",
+    "scanned": 15,
+    "vulns": 77,
+    "vuln_pkgs": 15,
+    "rc": 1,
+    "secs": 10.1
+  },
+  "rtzll__flask-todolist": {
+    "project": "rtzll__flask-todolist",
+    "status": "vulns",
+    "scanned": 2,
+    "vulns": 3,
+    "vuln_pkgs": 2,
+    "rc": 1,
+    "secs": 0.9
+  },
+  "teamhide__fastapi-boilerplate": {
+    "project": "teamhide__fastapi-boilerplate",
+    "status": "vulns",
+    "scanned": 12,
+    "vulns": 56,
+    "vuln_pkgs": 12,
+    "rc": 1,
+    "secs": 9.8
+  }
+}

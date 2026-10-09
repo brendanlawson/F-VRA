@@ -1,0 +1,12 @@
+# project: benoitc__gunicorn
+# scanner: pip-audit
+# time: Sat Jul 11 08:52:53 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\benoitc__gunicorn.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\benoitc__gunicorn.json
+# exit code: 1
+# note: OK skipped(2)=['gunicorn-h1c', 'uvloop']
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 9 known vulnerabilities in 4 packages

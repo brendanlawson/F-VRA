@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+sdist/
+.eggs/
+MANIFEST
+
+# Virtual environments
+.venv/
+.venv-rq3/
+venv/
+env/
+ENV/
+# Local runtimes, downloaded tools, and caches
+.tools/
+
+# Vendored JARVIS source is intentionally tracked under vendor/.
+vendor/pythonJaRvis/**/__pycache__/
+vendor/pythonJaRvis/**/*.py[cod]
+
+# Environment variables
+.env
+
+# Pytest & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tmp/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# F-VRA runtime data
+.f_vra/
+*.npz
+data/raw/projects/*/
+!data/raw/projects/mock_transitive_project/
+!data/raw/projects/mock_transitive_project/**
+
+# Artifact caches
+artifacts/query_cache/**
+!artifacts/query_cache/
+!artifacts/query_cache/.gitkeep
+artifacts/witnesses/**
+!artifacts/witnesses/
+!artifacts/witnesses/.gitkeep
+artifacts/pipeline_runs/**
+!artifacts/pipeline_runs/
+!artifacts/pipeline_runs/.gitkeep
+artifacts/patch_diffs/**
+!artifacts/patch_diffs/
+!artifacts/patch_diffs/.gitkeep
+docs/output_file/**
+
+# Experiment outputs
+experiments/vf/source_cache/**
+experiments/vf/inventory_cache/**
+experiments/vf/inputs/**/catalogs/**
+experiments/vf/inputs/**/inventory_cache/**
+experiments/vf/inputs/**/embedding_cache.sqlite*
+experiments/vf/embedding_cache.sqlite*
+experiments/dataset/current/**
+!experiments/dataset/current/.gitkeep
+experiments/dependency_build/current/**
+!experiments/dependency_build/current/.gitkeep
+results/logs/**
+!results/logs/
+!results/logs/.gitkeep
+results/metrics/*.json
+results/metrics/*.csv
+results/tables/*.csv
+!results/tables/project_cve_overview.csv
+!results/tables/project_cve_details.csv
+!results/tables/project_cve_source_findings.csv
+!results/tables/cve_vf_annotation_coverage.csv
+results/figures/*.png
+results/figures/*.svg
+
+# Scanner scratch/cache output
+data/_scans/_tmp/
+data/_scans/snyk/uvcache/
+data/_scans/snyk/*.partial*
+data/_scans/snyk/*.previous*
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

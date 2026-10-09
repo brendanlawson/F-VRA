@@ -1,0 +1,27 @@
+--- uv dry-run (skipped=0) rc=0 ---
+numerals==4.1.0
+ + ruff==0.14.13
+ + secretstorage==3.3.3
+ + setuptools==75.1.0
+ + six==1.16.0
+ + snowballstemmer==2.2.0
+ + sphinx==9.0.4
+ + sphinxcontrib-applehelp==2.0.0
+ + sphinxcontrib-devhelp==2.0.0
+ + sphinxcontrib-htmlhelp==2.1.0
+ + sphinxcontrib-jsmath==1.0.1
+ + sphinxcontrib-qthelp==2.0.0
+ + sphinxcontrib-serializinghtml==2.0.0
+ + sqlalchemy==2.0.45
+ + sqlalchemy-continuum==1.5.2
+ + twine==5.1.1
+ + typing-extensions==4.12.2
+ - urllib3==2.7.0
+ + urllib3==2.2.3
+ + vermin==1.8.0
+ + werkzeug==3.1.5
+ + wheel==0.45.1
+ + wrapt==1.16.0
+ + wtforms==3.2.1
+ + zest-releaser==9.8.0
+ + zipp==3.20.2

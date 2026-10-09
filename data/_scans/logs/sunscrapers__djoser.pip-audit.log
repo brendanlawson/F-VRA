@@ -1,0 +1,10 @@
+# project: sunscrapers__djoser
+# scanner: pip-audit
+# time: Fri Jul 10 19:33:27 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sunscrapers__djoser --locked -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\sunscrapers__djoser.json
+# exit code: 1
+# note: project-path fallback
+=== STDOUT ===
+
+=== STDERR ===
+ERROR:pip_audit._cli:no lockfiles found in C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sunscrapers__djoser

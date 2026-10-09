@@ -1,0 +1,298 @@
+# project: sparckles__Robyn
+# scanner: snyk
+# time: Fri Jul 10 19:32:09 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\sparckles__Robyn.json
+# exit code: 1
+=== STDOUT ===
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn...
+
+Tested 13 dependencies for known issues, found 6 issues, 6 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade jinja2@3.0.1 to jinja2@3.1.6 to fix
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-6150717] in jinja2@3.0.1
+    introduced by jinja2@3.0.1
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-6809379] in jinja2@3.0.1
+    introduced by jinja2@3.0.1
+  ✗ Template Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-8548181] in jinja2@3.0.1
+    introduced by jinja2@3.0.1
+  ✗ Improper Neutralization [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-8548987] in jinja2@3.0.1
+    introduced by jinja2@3.0.1
+  ✗ Template Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JINJA2-9292516] in jinja2@3.0.1
+    introduced by jinja2@3.0.1
+
+  Upgrade orjson@3.11.5 to orjson@3.11.6 to fix
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-ORJSON-15123465] in orjson@3.11.5
+    introduced by orjson@3.11.5
+
+
+
+Organization:      wuwuyn
+Package manager:   poetry
+Target file:       pyproject.toml
+Project name:      robyn
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn
+Licenses:          enabled
+
+-------------------------------------------------------
+
+Testing C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn...
+
+Tested 700 dependencies for known issues, found 90 issues, 221 vulnerable paths.
+
+
+Issues to fix by upgrading:
+
+  Upgrade @mapbox/rehype-prism@0.8.0 to @mapbox/rehype-prism@0.9.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Low Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-9789073] in brace-expansion@1.1.11
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > glob@7.1.7 > minimatch@3.1.2 > brace-expansion@1.1.11 and 2 other path(s)
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-GOT-2932019] in got@6.7.1
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > libnpx@10.2.4 > update-notifier@2.5.0 > latest-version@3.1.0 > package-json@4.0.1 > got@6.7.1 and 1 other path(s)
+  ✗ Missing Release of Resource after Effective Lifetime [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-INFLIGHT-6095116] in inflight@1.0.6
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > glob@7.1.7 > inflight@1.0.6 and 2 other path(s)
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-PARSEGITCONFIG-9403763] in parse-git-config@1.1.1
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > git-username@1.0.0 > remote-origin-url@1.0.0 > parse-git-config@1.1.1
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-TMP-11501554] in tmp@0.0.33
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > inquirer@7.3.3 > external-editor@3.1.0 > tmp@0.0.33
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-15789759] in brace-expansion@1.1.11
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > glob@7.1.7 > minimatch@3.1.2 > brace-expansion@1.1.11 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity (new) [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACEEXPANSION-17706650] in brace-expansion@1.1.11
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > glob@7.1.7 > minimatch@3.1.2 > brace-expansion@1.1.11 and 2 other path(s)
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230] in cross-spawn@5.1.0
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > libnpx@10.2.4 > update-notifier@2.5.0 > boxen@1.3.0 > term-size@1.2.0 > execa@0.7.0 > cross-spawn@5.1.0
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15309438] in minimatch@3.1.2
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > glob@7.1.7 > minimatch@3.1.2 and 2 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-15353389] in minimatch@3.1.2
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > glob@7.1.7 > minimatch@3.1.2 and 2 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-JS-TMP-16881240] in tmp@0.0.33
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > inquirer@7.3.3 > external-editor@3.1.0 > tmp@0.0.33
+  ✗ Directory Traversal (new) [High Severity][https://security.snyk.io/vuln/SNYK-JS-TMP-17315641] in tmp@0.0.33
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > inquirer@7.3.3 > external-editor@3.1.0 > tmp@0.0.33
+
+  Upgrade axios@1.4.0 to axios@1.16.0 to fix
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17111081] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17172532] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Insertion of Sensitive Information Into Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17172930] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Improper Encoding or Escaping of Output [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16298055] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Server-side Request Forgery (SSRF) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16298095] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16298130] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16298162] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Insertion of Sensitive Information Into Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16299478] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ CRLF Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16299819] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16299925] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-15965856] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-12613773] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Server-side Request Forgery (SSRF) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-9403194] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Server-side Request Forgery (SSRF) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-9292519] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-6124857] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17111062] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17111079] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17172681] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Improperly Controlled Modification of Dynamically-Determined Object Attributes [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16299921] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-17111060] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16299923] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ HTTP Response Splitting [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-15969258] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-15252993] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-7361793] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-6144788] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Cross-site Request Forgery (CSRF) [High Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-6032459] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16417750] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ HTTP Response Splitting [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16298058] in axios@1.4.0
+    introduced by axios@1.4.0
+  ✗ Prototype Pollution [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-AXIOS-16299904] in axios@1.4.0
+    introduced by axios@1.4.0
+
+  Upgrade next@13.4.2 to next@16.1.7 to fix
+  ✗ Missing Origin Validation in WebSockets [Low Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-10259370] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Missing Source Correlation of Multiple Independent Data [Low Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-12265451] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-15674556] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Acceptance of Extraneous Untrusted Data With Trusted Data [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-16638675] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-16638681] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-15674558] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Race Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-10176058] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Use of Cache Containing Sensitive Information [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-12301496] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Improper Input Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NANOID-8492085] in nanoid@3.3.4
+    introduced by next@13.4.2 > postcss@8.4.14 > nanoid@3.3.4 and 1 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-6032387] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-8602067] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Improper Input Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSS-5926692] in postcss@8.4.14
+    introduced by next@13.4.2 > postcss@8.4.14 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-16638674] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-16638680] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Incorrect Authorization [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-16638683] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-15954202] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-15104645] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-15921797] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-12299318] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-14400636] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Server-Side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-6828457] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-8186172] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-6828456] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Denial of Service (DoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-7442548] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Missing Authorization [High Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-8520073] in next@13.4.2
+    introduced by next@13.4.2
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617] in zod@3.21.4
+    introduced by next@13.4.2 > zod@3.21.4
+  ✗ Improper Authorization [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-NEXT-9508709] in next@13.4.2
+    introduced by next@13.4.2
+
+  Upgrade prismjs@1.29.0 to prismjs@1.30.0 to fix
+  ✗ Arbitrary Code Injection [Low Severity][https://security.snyk.io/vuln/SNYK-JS-PRISMJS-9055448] in prismjs@1.27.0
+    introduced by @mapbox/rehype-prism@0.8.0 > refractor@3.6.0 > prismjs@1.27.0 and 1 other path(s)
+
+
+Issues with no direct upgrade or patch:
+  ✗ Excessive Platform Resource Consumption within a Loop [High Severity][https://security.snyk.io/vuln/SNYK-JS-BRACES-6838727] in braces@3.0.2
+    introduced by fast-glob@3.2.12 > micromatch@4.0.5 > braces@3.0.2 and 4 other path(s)
+  This issue was fixed in versions: 3.0.3
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-DIFF-14917201] in diff@5.1.0
+    introduced by react-markdown@8.0.7 > remark-parse@10.0.1 > mdast-util-from-markdown@1.2.0 > uvu@0.5.6 > diff@5.1.0 and 77 other path(s)
+  This issue was fixed in versions: 3.5.1, 4.0.4, 5.2.2, 8.0.3
+  ✗ Improper Removal of Sensitive Information Before Storage or Transfer [High Severity][https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-16032162] in follow-redirects@1.15.2
+    introduced by axios@1.4.0 > follow-redirects@1.15.2
+  This issue was fixed in versions: 1.16.0
+  ✗ Improper Handling of Extra Parameters [High Severity][https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-6141137] in follow-redirects@1.15.2
+    introduced by axios@1.4.0 > follow-redirects@1.15.2
+  This issue was fixed in versions: 1.15.4
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-6444610] in follow-redirects@1.15.2
+    introduced by axios@1.4.0 > follow-redirects@1.15.2
+  This issue was fixed in versions: 1.15.6
+  ✗ Predictable Value Range from Previous Values [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-FORMDATA-10841150] in form-data@4.0.0
+    introduced by axios@1.4.0 > form-data@4.0.0
+  This issue was fixed in versions: 2.5.4, 3.0.4, 4.0.4
+  ✗ CRLF Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-FORMDATA-17337015] in form-data@4.0.0
+    introduced by axios@1.4.0 > form-data@4.0.0
+  This issue was fixed in versions: 2.5.6, 3.0.5, 4.0.6
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783] in http-cache-semantics@4.1.0
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > update-notifier@4.1.3 > latest-version@5.1.0 > package-json@6.5.0 > got@9.6.0 > cacheable-request@6.1.0 > http-cache-semantics@4.1.0
+  This issue was fixed in versions: 4.1.1
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-JSYAML-17342520] in js-yaml@3.14.2
+    introduced by gray-matter@4.0.3 > js-yaml@3.14.2
+  This issue was fixed in versions: 4.2.0
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-JS-JSYAML-17900054] in js-yaml@3.14.2
+    introduced by gray-matter@4.0.3 > js-yaml@3.14.2
+  This issue was fixed in versions: 3.15.0, 4.3.0
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15053838] in lodash@4.17.21
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > lodash@4.17.21 and 3 other path(s)
+  This issue was fixed in versions: 4.17.23
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869619] in lodash@4.17.21
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > lodash@4.17.21 and 3 other path(s)
+  This issue was fixed in versions: 4.18.1
+  ✗ Arbitrary Code Injection [High Severity][https://security.snyk.io/vuln/SNYK-JS-LODASH-15869625] in lodash@4.17.21
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > lodash@4.17.21 and 3 other path(s)
+  This issue was fixed in versions: 4.18.1
+  ✗ Inefficient Regular Expression Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-MICROMATCH-6838728] in micromatch@4.0.5
+    introduced by fast-glob@3.2.12 > micromatch@4.0.5 and 3 other path(s)
+  This issue was fixed in versions: 4.0.8
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-PICOMATCH-15765511] in picomatch@2.3.1
+    introduced by fast-glob@3.2.12 > micromatch@4.0.5 > picomatch@2.3.1 and 5 other path(s)
+  This issue was fixed in versions: 2.3.2, 3.0.2, 4.0.4
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-PICOMATCH-15765513] in picomatch@2.3.1
+    introduced by fast-glob@3.2.12 > micromatch@4.0.5 > picomatch@2.3.1 and 5 other path(s)
+  This issue was fixed in versions: 2.3.2, 3.0.2, 4.0.4
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSS-16189065] in postcss@8.4.18
+    introduced by next@13.4.2 > postcss@8.4.14 and 1 other path(s)
+  This issue was fixed in versions: 8.5.10
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSSSELECTORPARSER-16873882] in postcss-selector-parser@6.0.11
+    introduced by postcss-focus-visible@6.0.4 > postcss-selector-parser@6.0.11 and 2 other path(s)
+  This issue was fixed in versions: 6.1.3, 7.1.2
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795] in semver@6.3.0
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > libnpx@10.2.4 > npm-package-arg@6.1.1 > semver@5.7.1 and 7 other path(s)
+  This issue was fixed in versions: 5.7.2, 6.3.1, 7.5.2
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-YAML-15765520] in yaml@1.10.2
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > mrm-core@6.1.7 > yaml@2.1.1 and 2 other path(s)
+  This issue was fixed in versions: 1.10.3, 2.8.3
+  ✗ Uncaught Exception [High Severity][https://security.snyk.io/vuln/SNYK-JS-YAML-5458867] in yaml@2.1.1
+    introduced by @mapbox/rehype-prism@0.8.0 > mrm@3.0.10 > mrm-core@6.1.7 > yaml@2.1.1
+  This issue was fixed in versions: 2.2.2, 2.3.0-5
+
+
+
+Organization:      wuwuyn
+Package manager:   npm
+Target file:       docs_src\package-lock.json
+Project name:      robyn-website
+Open source:       no
+Project path:      C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn
+Licenses:          enabled
+
+
+Tested 2 projects, 2 contained vulnerable paths.
+
+
+
+
+=== STDERR ===
+Could not find any lockfile metadata for package: maturin. This package will not be represented in the dependency graph.
+Could not find any lockfile metadata for package: pydantic. This package will not be represented in the dependency graph.
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\mongo\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\no-db\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\postgres\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\prisma\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\sqlalchemy\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\sqlite\requirements.txt:
+  Missing required packages
+C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\sparckles__robyn\robyn\scaffold\sqlmodel\requirements.txt:
+  Missing required packages
+✗ 7/9 potential projects failed to get dependencies.
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

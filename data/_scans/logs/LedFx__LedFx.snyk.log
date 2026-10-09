@@ -1,0 +1,17 @@
+# project: LedFx__LedFx
+# scanner: snyk
+# time: Fri Jul 10 19:30:57 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\LedFx__LedFx.json
+# exit code: 3
+=== STDOUT ===
+
+ FATAL   No supported files found (SNYK-CLI-0008)
+                                                                                                                                                      
+           Could not detect supported target files in C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\raw\projects\ledfx__ledfx.            
+           Please see our documentation for supported languages and target files: https://snyk.co/udVgQ and make sure you are in the right directory. 
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0008 
+                                                                         
+ID:      urn:snyk:interaction:fbd0d23e-7a84-49b1-9761-10e9aa5f5f46 
+
+=== STDERR ===

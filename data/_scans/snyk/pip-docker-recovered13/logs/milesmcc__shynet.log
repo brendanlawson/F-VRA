@@ -1,0 +1,560 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because backports-zoneinfo==0.2.1 has no usable wheels and you require
+      backports-zoneinfo==0.2.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `backports-zoneinfo` because building from source is disabled for all packages (i.e., with `--no-build`)ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Downloading aiohttp (1.3MiB)
+ Downloaded aiohttp
+Prepared 1 package in 613ms
+Installed 1 package in 23ms
+ + aiohttp==3.9.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 237ms
+Installed 1 package in 15ms
+ + aiosignal==1.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 307ms
+Installed 1 package in 14ms
+ + amqp==5.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 249ms
+Installed 1 package in 8ms
+ + asgiref==3.5.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 242ms
+Installed 1 package in 4ms
+ + async-timeout==4.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 321ms
+Installed 1 package in 10ms
+ + attrs==22.1.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because backports-zoneinfo==0.2.1 has no usable wheels and you require
+      backports-zoneinfo==0.2.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `backports-zoneinfo` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL backports-zoneinfo==0.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 348ms
+Installed 1 package in 18ms
+ + billiard==3.6.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 421ms
+Installed 1 package in 37ms
+ + celery==5.2.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 339ms
+Installed 1 package in 7ms
+ + certifi==2023.7.22
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because cffi==1.15.1 has no usable wheels and you require cffi==1.15.1,
+      we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `cffi` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL cffi==1.15.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 277ms
+Installed 1 package in 18ms
+ + charset-normalizer==2.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + click-didyoumean==0.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 11ms
+ + click-plugins==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 249ms
+Installed 1 package in 4ms
+ + click-repl==0.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 35ms
+ + click==8.1.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 237ms
+Installed 1 package in 6ms
+ + colorama==0.4.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 8ms
+Downloading cryptography (4.4MiB)
+ Downloaded cryptography
+Prepared 1 package in 4.08s
+Installed 1 package in 41ms
+ + cryptography==42.0.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + defusedxml==0.7.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because django-allauth==0.45.0 has no usable wheels and you require
+      django-allauth==0.45.0, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `django-allauth` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL django-allauth==0.45.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 252ms
+Installed 1 package in 6ms
+ + django-cors-headers==3.13.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 359ms
+Installed 1 package in 35ms
+ + django-debug-toolbar==3.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 258ms
+Installed 1 package in 16ms
+ + django-health-check==3.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 242ms
+Installed 1 package in 6ms
+ + django-ipware==4.0.2
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because django-npm==1.0.0 has no usable wheels and you require
+      django-npm==1.0.0, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `django-npm` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL django-npm==1.0.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because django-redis-cache==3.0.1 has no usable wheels and you require
+      django-redis-cache==3.0.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `django-redis-cache` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL django-redis-cache==3.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading django (7.7MiB)
+ Downloaded django
+Prepared 1 package in 1.70s
+Installed 1 package in 1.04s
+ + django==4.1.13
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because frozenlist==1.3.1 has no usable wheels and you require
+      frozenlist==1.3.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `frozenlist` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL frozenlist==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 240ms
+Installed 1 package in 7ms
+ + geoip2==4.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 285ms
+Installed 1 package in 13ms
+ + gunicorn==20.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 268ms
+Installed 1 package in 17ms
+ + html2text==2020.1.16
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 292ms
+Installed 1 package in 6ms
+ + idna==3.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 405ms
+Installed 1 package in 20ms
+ + kombu==5.2.4
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because maxminddb==2.2.0 has no usable wheels and you require
+      maxminddb==2.2.0, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `maxminddb` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL maxminddb==2.2.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because multidict==6.0.2 has no usable wheels and you require
+      multidict==6.0.2, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `multidict` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL multidict==6.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 379ms
+Installed 1 package in 21ms
+ + oauthlib==3.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 453ms
+Installed 1 package in 41ms
+ + prompt-toolkit==3.0.31
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because psycopg2-binary==2.9.3 has no usable wheels and you require
+      psycopg2-binary==2.9.3, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `psycopg2-binary` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL psycopg2-binary==2.9.3
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pycountry==20.7.3 has no usable wheels and you require
+      pycountry==20.7.3, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `pycountry` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pycountry==20.7.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 33ms
+ + pycparser==2.21
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 235ms
+Installed 1 package in 8ms
+ + python-dotenv==0.18.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 38ms
+ + python3-openid==3.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 512ms
+Installed 1 package in 126ms
+ + pytz==2022.2.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because pyyaml==5.4.1 has no usable wheels and you require
+      pyyaml==5.4.1, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `pyyaml` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL pyyaml==5.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + redis==3.5.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 238ms
+Installed 1 package in 7ms
+ + requests-oauthlib==1.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 30ms
+ + requests==2.31.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 248ms
+Installed 1 package in 8ms
+ + rules==3.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading setuptools (1.2MiB)
+ Downloaded setuptools
+Prepared 1 package in 524ms
+Installed 1 package in 60ms
+ + setuptools==65.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 13ms
+ + six==1.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 10ms
+ + sqlparse==0.4.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 509ms
+Installed 1 package in 133ms
+ + tzdata==2022.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 292ms
+Installed 1 package in 11ms
+ + ua-parser==0.16.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 393ms
+Installed 1 package in 15ms
+ + urllib3==1.26.18
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 9ms
+ + user-agents==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 237ms
+Installed 1 package in 6ms
+ + vine==5.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 262ms
+Installed 1 package in 6ms
+ + wcwidth==0.2.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 233ms
+Installed 1 package in 12ms
+ + whitenoise==5.3.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because yarl==1.8.1 has no usable wheels and you require yarl==1.8.1, we
+      can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `yarl` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL yarl==1.8.1
+
+Testing /work/milesmcc__shynet...
+
+Tested 52 dependencies for known issues, found 94 issues, 268 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.9.2 to aiohttp@3.14.1 to fix
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871873] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871888] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871929] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871954] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Logging of Excessive Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14872000] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Cross-site Scripting (XSS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-6645291] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ UNIX Symbolic Link (Symlink) Following [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-7675597] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-10742466] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871876] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871877] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-14871979] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ Infinite loop [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-6808823] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-8383923] in aiohttp@3.9.2
+    introduced by aiohttp@3.9.2 and 1 other path(s)
+
+  Upgrade certifi@2023.7.22 to certifi@2024.7.4 to fix
+  ✗ Insufficient Verification of Data Authenticity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CERTIFI-7430173] in certifi@2023.7.22
+    introduced by certifi@2023.7.22 and 3 other path(s)
+
+  Upgrade cryptography@42.0.4 to cryptography@48.0.1 to fix
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6592767] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6913422] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+  ✗ Missing Report of Error Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-8715586] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+  ✗ Type Confusion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-7886970] in cryptography@42.0.4
+    introduced by cryptography@42.0.4
+
+  Upgrade django@4.1.13 to django@5.2.16 to fix
+  ✗ Improper Handling of Case Sensitivity [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151726] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Cleartext Transmission of Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151727] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151728] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Incomplete Comparison with Missing Factors [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151772] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151780] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Use of Cache Containing Sensitive Information (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881428] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-10074036] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Improper Output Neutralization for Logs [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-10302884] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ SQL Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13836728] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Improper Neutralization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881426] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Buffer Access with Incorrect Length Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881427] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-6370660] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7435780] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Timing Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7436273] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7436514] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7436646] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642790] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642791] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642813] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Improper Check for Unusual or Exceptional Conditions [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7886958] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7886959] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-12485156] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-13837025] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-14157807] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-14157810] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15183335] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-8456315] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-9296408] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-7642814] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-8456316] in django@4.1.13
+    introduced by django@4.1.13 and 3 other path(s)
+
+  Upgrade gunicorn@20.1.0 to gunicorn@23.0.0 to fix
+  ✗ Improper Check for Unusual or Exceptional Conditions [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GUNICORN-7856105] in gunicorn@20.1.0
+    introduced by gunicorn@20.1.0
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GUNICORN-6615672] in gunicorn@20.1.0
+    introduced by gunicorn@20.1.0
+  ✗ HTTP Request Smuggling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GUNICORN-9510910] in gunicorn@20.1.0
+    introduced by gunicorn@20.1.0
+
+  Upgrade idna@3.3 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.3
+    introduced by idna@3.3 and 3 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-6597975] in idna@3.3
+    introduced by idna@3.3 and 3 other path(s)
+
+  Upgrade oauthlib@3.2.1 to oauthlib@3.2.2 to fix
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-OAUTHLIB-3021142] in oauthlib@3.2.1
+    introduced by oauthlib@3.2.1 and 1 other path(s)
+
+  Upgrade python-dotenv@0.18.0 to python-dotenv@1.2.2 to fix
+  ✗ Symlink Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYTHONDOTENV-16115271] in python-dotenv@0.18.0
+    introduced by python-dotenv@0.18.0
+
+  Upgrade redis@3.5.3 to redis@4.3.6 to fix
+  ✗ Exposure of Data Element to Wrong Session [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REDIS-5291195] in redis@3.5.3
+    introduced by redis@3.5.3
+
+  Upgrade requests@2.31.0 to requests@2.33.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-10305723] in requests@2.31.0
+    introduced by requests@2.31.0 and 2 other path(s)
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.31.0
+    introduced by requests@2.31.0 and 2 other path(s)
+  ✗ Always-Incorrect Control Flow Implementation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-6928867] in requests@2.31.0
+    introduced by requests@2.31.0 and 2 other path(s)
+
+  Upgrade sqlparse@0.4.4 to sqlparse@0.5.4 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SQLPARSE-14157217] in sqlparse@0.4.4
+    introduced by sqlparse@0.4.4 and 5 other path(s)
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SQLPARSE-6615674] in sqlparse@0.4.4
+    introduced by sqlparse@0.4.4 and 5 other path(s)
+
+  Upgrade urllib3@1.26.18 to urllib3@2.7.0 to fix
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-10390194] in urllib3@1.26.18
+    introduced by urllib3@1.26.18 and 4 other path(s)
+  ✗ Improper Removal of Sensitive Information Before Storage or Transfer [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-7267250] in urllib3@1.26.18
+    introduced by urllib3@1.26.18 and 4 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@1.26.18
+    introduced by urllib3@1.26.18 and 4 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@1.26.18
+    introduced by urllib3@1.26.18 and 4 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@1.26.18
+    introduced by urllib3@1.26.18 and 4 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@1.26.18
+    introduced by urllib3@1.26.18 and 4 other path(s)
+
+  Pin setuptools@65.6.3 to setuptools@83.0.0 to fix
+  ✗ Improper Handling of Unicode Encoding (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-17895075] in setuptools@65.6.3
+    introduced by gunicorn@20.1.0 > setuptools@65.6.3
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-9964606] in setuptools@65.6.3
+    introduced by gunicorn@20.1.0 > setuptools@65.6.3
+  ✗ Improper Control of Generation of Code ('Code Injection') [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-7448482] in setuptools@65.6.3
+    introduced by gunicorn@20.1.0 > setuptools@65.6.3
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      milesmcc__shynet
+Open source:       no
+Project path:      /work/milesmcc__shynet
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

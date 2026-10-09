@@ -1,0 +1,95 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because chroma-hnswlib==0.7.6 has no usable wheels and you require
+      chroma-hnswlib==0.7.6, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `chroma-hnswlib` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because grpcio-tools==1.62.3 has no usable wheels and you require
+      grpcio-tools==1.62.3, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `grpcio-tools` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=2) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because html2text==2024.2.26 has no usable wheels and you require
+      html2text==2024.2.26, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `html2text` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=3) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because langdetect==1.0.9 has no usable wheels and you require
+      langdetect==1.0.9, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `langdetect` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=4) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because llama-cpp-python==0.2.7 has no usable wheels and you require
+      llama-cpp-python==0.2.7, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `llama-cpp-python` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=5) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because lxml==4.9.4 has no usable wheels and you require lxml==4.9.4, we
+      can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `lxml` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=6) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because markupsafe==2.1.5 has no usable wheels and you require
+      markupsafe==2.1.5, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `markupsafe` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=7) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because ml-dtypes==0.4.1 has no usable wheels and you require
+      ml-dtypes==0.4.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `ml-dtypes` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=8) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because mmh3==4.1.0 has no usable wheels and you require mmh3==4.1.0, we
+      can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `mmh3` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=9) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because numpy==1.26.4 has no usable wheels and you require
+      numpy==1.26.4, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `numpy` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=10) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because onnxruntime==1.19.2 has no wheels with a matching Python ABI
+      tag (e.g., `cp313`) and you require onnxruntime==1.19.2, we can conclude
+      that your requirements are unsatisfiable.
+
+hint: You require CPython 3.13 (`cp313`), but we only found wheels for `onnxruntime` (v1.19.2) with the following Python ABI tags: `cp38`, `cp39`, `cp310`, `cp311`, `cp312`

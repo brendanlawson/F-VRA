@@ -1,0 +1,20 @@
+name: f-vra-vf
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - typer[all]>=0.12
+      - rich>=13
+      - pydantic>=2
+      - pydantic-settings>=2
+      - numpy>=1.26
+      - scipy>=1.11
+      - openai>=1.40
+      - requests>=2.31
+      - tenacity>=8.2
+      - tqdm>=4.66
+      - packaging>=24
+      - PyYAML>=6
+      - pytest>=8

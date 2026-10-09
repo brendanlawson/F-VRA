@@ -1,0 +1,79 @@
+# project: Open-LLM-VTuber__Open-LLM-VTuber
+# scanner: pip-audit
+# time: Sat Jul 11 09:44:56 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\Open-LLM-VTuber__Open-LLM-VTuber.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\Open-LLM-VTuber__Open-LLM-VTuber.json
+# exit code: 1
+# note: attempt 3 reject=[] net=True skipped=['pyobjc-core', 'pyobjc-framework-accessibility', 'pyobjc-framework-addressbook', 'pyobjc-framework-applicationservices', 'pyobjc-framework-audiovideobridging']
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure:   error: subprocess-exited-with-error
+
+  
+
+  Getting requirements to build wheel did not run successfully.
+
+  exit code: 1
+
+  
+
+  [23 lines of output]
+
+  Traceback (most recent call last):
+
+    File "C:\Users\admin\AppData\Local\Temp\tmpwddnraj9\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 389, in <module>
+
+      main()
+
+      ~~~~^^
+
+    File "C:\Users\admin\AppData\Local\Temp\tmpwddnraj9\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 373, in main
+
+      json_out["return_val"] = hook(**hook_input["kwargs"])
+
+                               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\tmpwddnraj9\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 143, in get_requires_for_build_wheel
+
+      return hook(config_settings)
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-ufpjka4k\overlay\Lib\site-packages\setuptools\build_meta.py", line 333, in get_requires_for_build_wheel
+
+      return self._get_build_requires(config_settings, requirements=[])
+
+             ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-ufpjka4k\overlay\Lib\site-packages\setuptools\build_meta.py", line 301, in _get_build_requires
+
+      self.run_setup()
+
+      ~~~~~~~~~~~~~~^^
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-build-env-ufpjka4k\overlay\Lib\site-packages\setuptools\build_meta.py", line 317, in run_setup
+
+      exec(code, locals())
+
+      ~~~~^^^^^^^^^^^^^^^^
+
+    File "<string>", line 26, in <module>
+
+    File "C:\Users\admin\AppData\Local\Temp\pip-install-85f71pu9\pyobjc-framework-authenticationservices_26c0a5d2eadc49379d923ba655b5368c\pyobjc_setup.py", line 470, in Extension
+
+      if "clang" in get_config_var("CC"):
+
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  TypeError: argument of type 'NoneType' is not iterable
+
+  [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+ERROR: Failed to build 'pyobjc-framework-authenticationservices' when getting requirements to build wheel
+
+
+ERROR:pip_audit._cli:Failed to install packages: ['C:\\Users\\admin\\AppData\\Local\\Temp\\tmpwddnraj9\\Scripts\\python.exe', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', 'C:\\Users\\admin\\AppData\\Local\\Temp\\tmp04xbzetx\\tmpll4mfbph', '-r', 'C:\\Users\\admin\\Documents\\Lab Workplace\\f-vra\\pyshare\\data\\_scans\\_tmp\\Open-LLM-VTuber__Open-LLM-VTuber.req.txt']

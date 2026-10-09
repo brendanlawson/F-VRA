@@ -1,0 +1,990 @@
+# project=Cinnamon__kotaemon
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.1.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.1.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 55 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Cannot install contourpy==1.3.2 and contourpy==1.3.3 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp5n8qaue4/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmphhca2ik2/tmp66mnsuvv', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2001.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2003.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 1 known vulnerability in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2005.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2007.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2009.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2012.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2016.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2018.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.2020.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.3.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.3.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 8 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.4.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.4.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 26 known vulnerabilities in 5 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.5.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.5.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 58 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Cannot install ipython==8.37.0 and ipython==9.6.0 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp89oxzxms/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmp5srowuj7/tmpcw5ycoc1', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6001.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6005.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 2 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6007.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6009.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6012.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6016.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6018.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.6020.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.7.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.7.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 40 known vulnerabilities in 10 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Ignored the following versions that require a different python version: 0.0.46 Requires-Python >=3.8.1,<3.12; 0.0.47 Requires-Python >=3.8.1,<3.12; 0.0.47.post1 Requires-Python >=3.8.1,<3.12; 0.0.48 Requires-Python >=3.8.1,<3.12; 0.0.50 Requires-Python >=3.8.1,<3.12; 0.0.52 Requires-Python >=3.8.1,<3.12; 0.0.54 Requires-Python >=3.8.1,<3.12; 0.0.55 Requires-Python >=3.8.1,<3.12; 0.0.55.post1 Requires-Python >=3.8.1,<3.12; 0.0.56 Requires-Python >=3.8.1,<3.12; 0.0.56.post1 Requires-Python >=3.8.1,<3.12; 0.0.57 Requires-Python >=3.8.1,<3.12; 0.0.58 Requires-Python >=3.8.1,<3.12; 0.0.58.post1 Requires-Python >=3.8.1,<3.12; 0.0.59 Requires-Python >=3.8.1,<3.12; 0.0.60 Requires-Python >=3.8.1,<3.12; 0.0.61 Requires-Python >=3.8.1,<3.12; 0.0.62 Requires-Python >=3.8.1,<3.12; 0.0.64 Requires-Python >=3.8.1,<3.12; 0.0.65 Requires-Python >=3.8.1,<3.12; 0.0.66 Requires-Python >=3.8.1,<3.12; 0.0.67 Requires-Python >=3.8.1,<3.12; 0.0.68.post1 Requires-Python >=3.8.1,<3.12; 0.0.69 Requires-Python >=3.8.1,<3.12; 0.0.70 Requires-Python >=3.8.1,<3.12; 0.0.71 Requires-Python >=3.8.1,<3.12; 0.0.72 Requires-Python >=3.8.1,<3.12; 0.0.73 Requires-Python >=3.8.1,<3.12; 0.0.74 Requires-Python >=3.8.1,<3.12; 0.0.75 Requires-Python >=3.8.1,<3.12; 0.0.76 Requires-Python >=3.8.1,<3.12; 0.0.77 Requires-Python >=3.8.1,<3.12; 0.0.78 Requires-Python >=3.8.1,<3.12; 0.0.79 Requires-Python >=3.8.1,<3.12; 0.0.79.post1 Requires-Python >=3.8.1,<3.12
+ERROR: Could not find a version that satisfies the requirement llama-hub==0.0.79.post1 (from versions: 0.0.1a1, 0.0.1a2, 0.0.1, 0.0.2, 0.0.3, 0.0.4, 0.0.5, 0.0.6, 0.0.7, 0.0.8, 0.0.9, 0.0.10, 0.0.11, 0.0.12, 0.0.13, 0.0.14, 0.0.15, 0.0.16, 0.0.18, 0.0.19, 0.0.21, 0.0.22, 0.0.23, 0.0.24, 0.0.24.post1, 0.0.25, 0.0.26, 0.0.27, 0.0.29, 0.0.30, 0.0.31, 0.0.32, 0.0.33, 0.0.34, 0.0.35, 0.0.36, 0.0.37, 0.0.38, 0.0.39, 0.0.40, 0.0.41, 0.0.42, 0.0.43, 0.0.44, 0.0.45)
+ERROR: No matching distribution found for llama-hub==0.0.79.post1
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmpq4qw4i87/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpyvp5gah_/tmp_dfrpf65', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8001.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 3 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8004.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Ignored the following versions that require a different python version: 0.0.46 Requires-Python >=3.8.1,<3.12; 0.0.47 Requires-Python >=3.8.1,<3.12; 0.0.47.post1 Requires-Python >=3.8.1,<3.12; 0.0.48 Requires-Python >=3.8.1,<3.12; 0.0.50 Requires-Python >=3.8.1,<3.12; 0.0.52 Requires-Python >=3.8.1,<3.12; 0.0.54 Requires-Python >=3.8.1,<3.12; 0.0.55 Requires-Python >=3.8.1,<3.12; 0.0.55.post1 Requires-Python >=3.8.1,<3.12; 0.0.56 Requires-Python >=3.8.1,<3.12; 0.0.56.post1 Requires-Python >=3.8.1,<3.12; 0.0.57 Requires-Python >=3.8.1,<3.12; 0.0.58 Requires-Python >=3.8.1,<3.12; 0.0.58.post1 Requires-Python >=3.8.1,<3.12; 0.0.59 Requires-Python >=3.8.1,<3.12; 0.0.60 Requires-Python >=3.8.1,<3.12; 0.0.61 Requires-Python >=3.8.1,<3.12; 0.0.62 Requires-Python >=3.8.1,<3.12; 0.0.64 Requires-Python >=3.8.1,<3.12; 0.0.65 Requires-Python >=3.8.1,<3.12; 0.0.66 Requires-Python >=3.8.1,<3.12; 0.0.67 Requires-Python >=3.8.1,<3.12; 0.0.68.post1 Requires-Python >=3.8.1,<3.12; 0.0.69 Requires-Python >=3.8.1,<3.12; 0.0.70 Requires-Python >=3.8.1,<3.12; 0.0.71 Requires-Python >=3.8.1,<3.12; 0.0.72 Requires-Python >=3.8.1,<3.12; 0.0.73 Requires-Python >=3.8.1,<3.12; 0.0.74 Requires-Python >=3.8.1,<3.12; 0.0.75 Requires-Python >=3.8.1,<3.12; 0.0.76 Requires-Python >=3.8.1,<3.12; 0.0.77 Requires-Python >=3.8.1,<3.12; 0.0.78 Requires-Python >=3.8.1,<3.12; 0.0.79 Requires-Python >=3.8.1,<3.12; 0.0.79.post1 Requires-Python >=3.8.1,<3.12
+ERROR: Could not find a version that satisfies the requirement llama-hub==0.0.79.post1 (from versions: 0.0.1a1, 0.0.1a2, 0.0.1, 0.0.2, 0.0.3, 0.0.4, 0.0.5, 0.0.6, 0.0.7, 0.0.8, 0.0.9, 0.0.10, 0.0.11, 0.0.12, 0.0.13, 0.0.14, 0.0.15, 0.0.16, 0.0.18, 0.0.19, 0.0.21, 0.0.22, 0.0.23, 0.0.24, 0.0.24.post1, 0.0.25, 0.0.26, 0.0.27, 0.0.29, 0.0.30, 0.0.31, 0.0.32, 0.0.33, 0.0.34, 0.0.35, 0.0.36, 0.0.37, 0.0.38, 0.0.39, 0.0.40, 0.0.41, 0.0.42, 0.0.43, 0.0.44, 0.0.45)
+ERROR: No matching distribution found for llama-hub==0.0.79.post1
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmpjjnipejw/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmphw0_rpra/tmpc4kbr06r', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8004.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8005.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8006.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 12 known vulnerabilities in 2 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8007.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8008.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8009.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8011.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8012.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8013.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8014.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8015.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 48 known vulnerabilities in 2 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8016.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8017.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8018.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8019.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.8020.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.9.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.9.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 67 known vulnerabilities in 7 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Cannot install networkx==3.4.2 and networkx==3.5 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp99vuvz4r/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpu4sl13x1/tmptctkaa39', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10001.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10005.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 15 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10007.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10009.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10012.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 9 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10016.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 2 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10017.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 2 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10018.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.10020.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.11.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.11.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.12.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.12.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 10 known vulnerabilities in 5 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.13.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.13.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 51 known vulnerabilities in 4 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Cannot install scipy==1.15.3 and scipy==1.16.2 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmp4265qqwj/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmpicy1e47v/tmpy0o8oqi0', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14001.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14002.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14005.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14007.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14008.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14009.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 1 known vulnerability in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14012.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14016.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14018.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.14020.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+ERROR:pip_audit._virtual_env:internal pip failure: ERROR: Cannot install sphinx==8.1.3 and sphinx==8.2.3 because these package versions have conflicting dependencies.
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+ERROR:pip_audit._cli:Failed to install packages: ['/tmp/tmpiuzkxqcg/bin/python', '-m', 'pip', 'install', '--no-input', '--keyring-provider=subprocess', '--dry-run', '--report', '/tmp/tmp0cews6cg/tmp9il2nnw9', '-r', '/tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15.txt']
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15001.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15001.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15002.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15002.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 3 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15003.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15003.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15004.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15004.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15005.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15005.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15006.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15006.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15007.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15007.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15008.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15008.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 2 known vulnerabilities in 1 package
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15009.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15009.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15010.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15010.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15011.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15011.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15012.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15012.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15013.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15013.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15014.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15014.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15015.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15015.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15016.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15016.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15017.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15017.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15018.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15018.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15019.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15019.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15020.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.15020.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.16.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.16.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 20 known vulnerabilities in 3 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.17.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.17.json
+# exit=1
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+Found 20 known vulnerabilities in 4 packages
+
+$ /usr/local/bin/python -m pip_audit -r /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.18.txt --no-deps -s osv --progress-spinner off -f json -o /tmp/pa-fallback-Cinnamon__kotaemon-8yy_hmwj/Cinnamon__kotaemon.18.json
+# exit=0
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+No known vulnerabilities found
+

@@ -1,0 +1,13 @@
+diff --git a/pkg/lib.py b/pkg/lib.py
+index 1111111..2222222 100644
+--- a/pkg/lib.py
++++ b/pkg/lib.py
+@@ -3,7 +3,7 @@ import requests
+ 
+ class Client:
+     def fetch(self, url):
+-        return requests.get(url)
++        return requests.get(url, timeout=5)
+ 
+ 
+ def public_api(url):

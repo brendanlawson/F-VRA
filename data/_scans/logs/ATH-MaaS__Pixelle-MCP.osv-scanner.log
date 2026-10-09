@@ -1,0 +1,17 @@
+# project: ATH-MaaS__Pixelle-MCP
+# scanner: osv-scanner
+# time: Sat Jul 11 08:51:56 2026
+$ C:\Users\admin\AppData\Local\Microsoft\WinGet\Packages\Google.OSVScanner_Microsoft.Winget.Source_8wekyb3d8bbwe\osv-scanner.EXE scan source --recursive --allow-no-lockfiles --format json --output-file C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\osv-scanner\ATH-MaaS__Pixelle-MCP.json C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\ATH-MaaS__Pixelle-MCP
+# exit code: 1
+=== STDOUT ===
+
+=== STDERR ===
+Scanning dir C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\ATH-MaaS__Pixelle-MCP
+Starting filesystem walk for root: C:\
+Scanned C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\inventory-recovered13\ATH-MaaS__Pixelle-MCP\requirements.pinned.txt file and found 180 packages
+End status: 1 dirs visited, 2 inodes visited, 1 Extract calls, 2.6208ms elapsed, 2.6208ms wall time
+failed resolution for Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/snyk/inventory-recovered13/ATH-MaaS__Pixelle-MCP/requirements.pinned.txt: resolution impossible:
+requirements conflict: urllib3: "==2.5.0,<1.27,>=1.25.4"
+Error during extraction: (extracting as transitivedependency/requirements) failed resolution for Users/admin/Documents/Lab Workplace/f-vra/pyshare/data/_scans/snyk/inventory-recovered13/ATH-MaaS__Pixelle-MCP/requirements.pinned.txt: resolution impossible:
+requirements conflict: urllib3: "==2.5.0,<1.27,>=1.25.4"
+

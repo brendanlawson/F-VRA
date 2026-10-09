@@ -1,0 +1,22 @@
+# project: reflex-dev__reflex
+# scanner: snyk
+# time: Fri Jul 10 19:28:50 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\reflex-dev__reflex.json
+# exit code: 2
+=== STDOUT ===
+
+ ERROR   Unspecified Error (SNYK-CLI-0000)
+                                                                                        
+           Failed to get dependencies for all 1 potential projects.                     
+                                                                                        
+           C:\Users\admin\Documents\Lab Workplace\f-                                    
+           vra\pyshare\data\raw\projects\reflex-                                        
+           dev__reflex\docs\app\reflex.lock\package.json:                               
+           Missing node_modules folder: we can't test without dependencies.             
+           Please run 'npm install' first.                                              
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0000 
+                                                                         
+ID:      urn:snyk:interaction:432b5564-9499-4c5f-8b0e-a2cf54d5125f 
+
+=== STDERR ===

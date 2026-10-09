@@ -1,0 +1,20 @@
+# project: alexferl__flask-simpleldap
+# scanner: snyk
+# time: Fri Jul 10 19:24:05 2026
+$ C:\Users\admin\AppData\Roaming\npm\snyk.cmd test --all-projects --json-file-output=C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\snyk\alexferl__flask-simpleldap.json
+# exit code: 2
+=== STDOUT ===
+
+ ERROR   Unspecified Error (SNYK-CLI-0000)
+                                                                                        
+           Failed to get dependencies for all 1 potential projects.                     
+                                                                                        
+           C:\Users\admin\Documents\Lab Workplace\f-                                    
+           vra\pyshare\data\raw\projects\alexferl__flask-simpleldap\requirements.txt:   
+           Missing required packages                                                    
+
+Docs:    https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-cli-0000 
+                                                                         
+ID:      urn:snyk:interaction:d378aede-9829-4c12-870c-0df9aa6fb7ad 
+
+=== STDERR ===

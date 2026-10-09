@@ -1,0 +1,987 @@
+{
+  "CWE-1021": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Restriction of Rendered UI Layers or Frames The web application does not restrict or incorrectly restricts frame objects or UI layers that belong to another application or domain."
+  },
+  "CWE-1023": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incomplete Comparison with Missing Factors The product performs a comparison between entities that must consider multiple factors or characteristics of each entity, but the comparison does not include one or more of these factors."
+  },
+  "CWE-1112": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incomplete Documentation of Program Execution The document does not fully define all mechanisms that are used\n\t\t\t\t\tto control or influence how product-specific programs are\n\t\t\t\t\texecuted. This includes environmental variables, configuration files, registry keys, command-line switches or options, or system settings."
+  },
+  "CWE-113": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting') The product receives data from an HTTP agent/component (e.g., web server, proxy, browser, etc.), but it does not neutralize or incorrectly neutralizes CR and LF characters before the data is included in outgoing HTTP headers. HTTP agents or components may include a web server, load balancer, reverse proxy, web caching proxy, application firewall, web browser, etc. Regardless of the role, they are expected to maintain coherent, consistent HTTP communication state across all components. However, including unexpected data in an HTTP header allows an attacker to specify the entirety of the HTTP message that is rendered by the client HTTP agent (e.g., web browser) or back-end HTTP agent (e.g., web server), whether the message is part of a request or a response. \n\n\nWhen an HTTP request contains unexpected CR and LF characters, the server may respond with an output stream that is interpreted as \"splitting\" the stream into two different HTTP messages instead of one. CR is carriage return, also given by %0d or \\r, and LF is line feed, also given by %0a or \\n.\n\n\nIn addition to CR and LF characters, other valid/RFC compliant special characters and unique character encodings can be utilized, such as HT (horizontal tab, also given by %09 or \\t) and SP (space, also given as + sign or %20).\n\n\nThese types of unvalidated and unexpected data in HTTP message headers allow an attacker to control the second \"split\" message to mount attacks such as server-side request forgery, cross-site scripting, and cache poisoning attacks.\n\n\nHTTP response splitting weaknesses may be present when:\n\n\n  1. Data enters a web application through an untrusted source, most frequently an HTTP request.\n\n  1. The data is included in an HTTP response header sent to a web user without neutralizing malicious characters that can be interpreted as separator characters for headers."
+  },
+  "CWE-116": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Encoding or Escaping of Output The product prepares a structured message for communication with another component, but encoding or escaping of the data is either missing or done incorrectly. As a result, the intended structure of the message is not preserved. Improper encoding or escaping can allow attackers to change the commands that are sent to another component, inserting malicious commands instead.\n\n\nMost products follow a certain protocol that uses structured messages for communication between components, such as queries or commands. These structured messages can contain raw data interspersed with metadata or control information. For example, \"GET /index.html HTTP/1.1\" is a structured message containing a command (\"GET\") with a single argument (\"/index.html\") and metadata about which protocol version is being used (\"HTTP/1.1\").\n\n\nIf an application uses attacker-supplied inputs to construct a structured message without properly encoding or escaping, then the attacker could insert special characters that will cause the data to be interpreted as control information or metadata. Consequently, the component that receives the output will perform the wrong operations, or otherwise interpret the data incorrectly."
+  },
+  "CWE-117": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Output Neutralization for Logs The product constructs a log message from external input, but it does not neutralize or incorrectly neutralizes special elements when the message is written to a log file."
+  },
+  "CWE-1188": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Initialization of a Resource with an Insecure Default The product initializes or sets a resource with a default that is intended to be changed by the product's installer, administrator, or maintainer, but the default is not secure."
+  },
+  "CWE-1220": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insufficient Granularity of Access Control The product implements access controls via a policy or other feature with the intention to disable or restrict accesses (reads and/or writes) to assets in a system from untrusted agents. However, implemented access controls lack required granularity, which renders the control policy too broad because it allows accesses from unauthorized agents to the security-sensitive assets. Integrated circuits and hardware engines can expose accesses to assets (device configuration, keys, etc.) to trusted firmware or a software module (commonly set by BIOS/bootloader). This access is typically access-controlled. Upon a power reset, the hardware or system usually starts with default values in registers, and the trusted firmware (Boot firmware) configures the necessary access-control protection.\n\n\nA common weakness that can exist in such protection schemes is that access controls or policies are not granular enough. This condition allows agents beyond trusted agents to access assets and could lead to a loss of functionality or the ability to set up the device securely. This further results in security risks from leaked, sensitive, key material to modification of device configuration."
+  },
+  "CWE-123": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Write-what-where Condition Any condition where the attacker has the ability to write an arbitrary value to an arbitrary location, often as the result of a buffer overflow."
+  },
+  "CWE-1236": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Formula Elements in a CSV File The product saves user-provided information into a Comma-Separated Value (CSV) file, but it does not neutralize or incorrectly neutralizes special elements that could be interpreted as a command when the file is opened by a spreadsheet product."
+  },
+  "CWE-125": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Out-of-bounds Read The product reads data past the end, or before the beginning, of the intended buffer."
+  },
+  "CWE-1284": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Validation of Specified Quantity in Input The product receives input that is expected to specify a quantity (such as size or length), but it does not validate or incorrectly validates that the quantity has the required properties. Specified quantities include size, length, frequency, price, rate, number of operations, time, and others. Code may rely on specified quantities to allocate resources, perform calculations, control iteration, etc."
+  },
+  "CWE-1286": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Validation of Syntactic Correctness of Input The product receives input that is expected to be well-formed - i.e., to comply with a certain syntax - but it does not validate or incorrectly validates that the input complies with the syntax. Often, complex inputs are expected to follow a particular syntax, which is either assumed by the input itself, or declared within metadata such as headers. The syntax could be for data exchange formats, markup languages, or even programming languages. When untrusted input is not properly validated for the expected syntax, attackers could cause parsing failures, trigger unexpected errors, or expose latent vulnerabilities that might not be directly exploitable if the input had conformed to the syntax."
+  },
+  "CWE-1287": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Validation of Specified Type of Input The product receives input that is expected to be of a certain type, but it does not validate or incorrectly validates that the input is actually of the expected type. When input does not comply with the expected type, attackers could trigger unexpected errors, cause incorrect actions to take place, or exploit latent vulnerabilities that would not be possible if the input conformed with the expected type.\n\n\nThis weakness can appear in type-unsafe programming languages, or in programming languages that support casting or conversion of an input to another type."
+  },
+  "CWE-1288": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Validation of Consistency within Input The product receives a complex input with multiple elements or fields that must be consistent with each other, but it does not validate or incorrectly validates that the input is actually consistent. Some input data can be structured with multiple elements or fields that must be consistent with each other, e.g. a number-of-items field that is followed by the expected number of elements. When such complex inputs are inconsistent, attackers could trigger unexpected errors, cause incorrect actions to take place, or exploit latent vulnerabilities."
+  },
+  "CWE-130": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Length Parameter Inconsistency The product parses a formatted message or structure, but it does not handle or incorrectly handles a length field that is inconsistent with the actual length of the associated data. If an attacker can manipulate the length parameter associated with an input such that it is inconsistent with the actual length of the input, this can be leveraged to cause the target application to behave in unexpected, and possibly, malicious ways. One of the possible motives for doing so is to pass in arbitrarily large input to the application. Another possible motivation is the modification of application state by including invalid data for subsequent properties of the application. Such weaknesses commonly lead to attacks such as buffer overflows and execution of arbitrary code."
+  },
+  "CWE-1333": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Inefficient Regular Expression Complexity The product uses a regular expression with a worst-case computational complexity that is inefficient and possibly exponential."
+  },
+  "CWE-1336": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Special Elements Used in a Template Engine The product uses a template engine to insert or process externally-influenced input, but it does not neutralize or incorrectly neutralizes special elements or syntax that can be interpreted as template expressions or other code directives when processed by the engine. Many web applications use template engines that allow developers to insert externally-influenced values into free text or messages in order to generate a full web page, document, message, etc. Such engines include Twig, Jinja2, Pug, Java Server Pages, FreeMarker, Velocity, ColdFusion, Smarty, and many others - including PHP itself. Some CMS (Content Management Systems) also use templates.\n\n\nTemplate engines often have their own custom command or expression language. If an attacker can influence input into a template before it is processed, then the attacker can invoke arbitrary expressions, i.e. perform injection attacks. For example, in some template languages, an attacker could inject the expression \"{{7*7}}\" and determine if the output returns \"49\" instead. The syntax varies depending on the language.\n\n\nIn some cases, XSS-style attacks can work, which can obscure the root cause if the developer does not closely investigate the root cause of the error.\n\n\nTemplate engines can be used on the server or client, so both \"sides\" could be affected by injection. The mechanisms of attack or the affected technologies might be different, but the mistake is fundamentally the same."
+  },
+  "CWE-134": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Externally-Controlled Format String The product uses a function that accepts a format string as an argument, but the format string originates from an external source."
+  },
+  "CWE-1395": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Dependency on Vulnerable Third-Party Component The product has a dependency on a third-party component that contains one or more known vulnerabilities. Many products are large enough or complex enough that part of their functionality uses libraries, modules, or other intellectual property developed by third parties who are not the product creator. For example, even an entire operating system might be from a third-party supplier in some hardware products. Whether open or closed source, these components may contain publicly known vulnerabilities or hidden functionality such as malware that could be exploited by adversaries to compromise the product."
+  },
+  "CWE-140": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Delimiters The product does not neutralize or incorrectly neutralizes delimiters."
+  },
+  "CWE-150": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Escape, Meta, or Control Sequences The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could be interpreted as escape, meta, or control character sequences when they are sent to a downstream component."
+  },
+  "CWE-17": {
+    "source": "MITRE_CWE_REST/category",
+    "status": "resolved",
+    "text": "DEPRECATED: Code"
+  },
+  "CWE-176": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Unicode Encoding The product does not properly handle when an input contains Unicode encoding."
+  },
+  "CWE-178": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Case Sensitivity The product does not properly account for differences in case sensitivity when accessing or determining the properties of a resource, leading to inconsistent results. Improperly handled case sensitive data can lead to several possible consequences, including:\n\n\n  - case-insensitive passwords reducing the size of the key space, making brute force attacks easier\n\n  - bypassing filters or access controls using alternate names\n\n  - multiple interpretation errors using alternate names."
+  },
+  "CWE-184": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incomplete List of Disallowed Inputs The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other action to neutralize before additional processing takes place, but the list is incomplete."
+  },
+  "CWE-185": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Regular Expression The product specifies a regular expression in a way that causes data to be improperly matched or compared. When the regular expression is used in protection mechanisms such as filtering or validation, this may allow an attacker to bypass the intended restrictions on the incoming data."
+  },
+  "CWE-190": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Integer Overflow or Wraparound The product performs a calculation that can\n         produce an integer overflow or wraparound when the logic\n         assumes that the resulting value will always be larger than\n         the original value. This occurs when an integer value is\n         incremented to a value that is too large to store in the\n         associated representation. When this occurs, the value may\n         become a very small or negative number."
+  },
+  "CWE-20": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Input Validation The product receives input or data, but it does\n        not validate or incorrectly validates that the input has the\n        properties that are required to process the data safely and\n        correctly. Input validation is a frequently-used technique for checking potentially dangerous inputs in order to ensure that the inputs are safe for processing within the code, or when communicating with other components.\n\n\nInput can consist of:\n\n\n  - raw data - strings, numbers, parameters, file contents, etc.\n\n  - metadata - information about the raw data, such as headers or size\n\nData can be simple or structured. Structured data can be composed of many nested layers, composed of combinations of metadata and raw data, with other simple or structured data.\n\nMany properties of raw data or metadata may need to be validated upon entry into the code, such as:\n\n\n  - specified quantities such as size, length, frequency, price, rate, number of operations, time, etc.\n\n  - implied or derived quantities, such as the actual size of a file instead of a specified size\n\n  - indexes, offsets, or positions into more complex data structures\n\n  - symbolic keys or other elements into hash tables, associative arrays, etc.\n\n  - well-formedness, i.e. syntactic correctness - compliance with expected syntax \n\n  - lexical token correctness - compliance with rules for what is treated as a token\n\n  - specified or derived type - the actual type of the input (or what the input appears to be)\n\n  - consistency - between individual data elements, between raw data and metadata, between references, etc.\n\n  - conformance to domain-specific rules, e.g. business logic \n\n  - equivalence - ensuring that equivalent inputs are treated the same\n\n  - authenticity, ownership, or other attestations about the input, e.g. a cryptographic signature to prove the source of the data\n\nImplied or derived properties of data must often be calculated or inferred by the code itself. Errors in deriving properties may be considered a contributing factor to improper input validation."
+  },
+  "CWE-200": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Exposure of Sensitive Information to an Unauthorized Actor The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information. There are many different kinds of mistakes that introduce information exposures. The severity of the error can range widely, depending on the context in which the product operates, the type of sensitive information that is revealed, and the benefits it may provide to an attacker. Some kinds of sensitive information include:\n\n\n  - private, personal information, such as personal messages, financial data, health records, geographic location, or contact details\n\n  - system status and environment, such as the operating system and installed packages\n\n  - business secrets and intellectual property\n\n  - network status and configuration\n\n  - the product's own code or internal state\n\n  - metadata, e.g. logging of connections or message headers\n\n  - indirect information, such as a discrepancy between two internal operations that can be observed by an outsider\n\nInformation might be sensitive to different parties, each of which may have their own expectations for whether the information should be protected. These parties include:\n\n  - the product's own users\n\n  - people or organizations whose information is created or used by the product, even if they are not direct product users\n\n  - the product's administrators, including the admins of the system(s) and/or networks on which the product operates\n\n  - the developer\n\nInformation exposures can occur in different ways:\n\n  - the code  **explicitly inserts**  sensitive information into resources or messages that are intentionally made accessible to unauthorized actors, but should not contain the information - i.e., the information should have been \"scrubbed\" or \"sanitized\"\n\n  - a different weakness or mistake  **indirectly inserts**  the sensitive information into resources, such as a web script error revealing the full system path of the program.\n\n  - the code manages resources that intentionally contain sensitive information, but the resources are  **unintentionally made accessible**  to unauthorized actors. In this case, the information exposure is resultant - i.e., a different weakness enabled the access to the information in the first place.\n\nIt is common practice to describe any loss of confidentiality as an \"information exposure,\" but this can lead to overuse of CWE-200 in CWE mapping. From the CWE perspective, loss of confidentiality is a technical impact that can arise from dozens of different weaknesses, such as insecure file permissions or out-of-bounds read. CWE-200 and its lower-level descendants are intended to cover the mistakes that occur in behaviors that explicitly manage, store, transfer, or cleanse sensitive information."
+  },
+  "CWE-201": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insertion of Sensitive Information Into Sent Data The code transmits data to another actor, but a portion of the data includes sensitive information that should not be accessible to that actor."
+  },
+  "CWE-203": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Observable Discrepancy The product behaves differently or sends different responses under different circumstances in a way that is observable to an unauthorized actor."
+  },
+  "CWE-204": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Observable Response Discrepancy The product provides different responses to incoming requests in a way that reveals internal state information to an unauthorized actor outside of the intended control sphere."
+  },
+  "CWE-208": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Observable Timing Discrepancy Two separate operations in a product require different amounts of time to complete, in a way that is observable to an actor and reveals security-relevant information about the state of the product, such as whether a particular operation was successful or not. In security-relevant contexts, even small variations in timing can be exploited by attackers to indirectly infer certain details about the product's internal operations. For example, in some cryptographic algorithms, attackers can use timing differences to infer certain properties about a private key, making the key easier to guess. Timing discrepancies effectively form a timing side channel."
+  },
+  "CWE-209": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Generation of Error Message Containing Sensitive Information The product generates an error message that includes sensitive information about its environment, users, or associated data."
+  },
+  "CWE-212": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Removal of Sensitive Information Before Storage or Transfer The product stores, transfers, or shares a resource that contains sensitive information, but it does not properly remove that information before the product makes the resource available to unauthorized actors. Resources that may contain sensitive data include documents, packets, messages, databases, etc. While this data may be useful to an individual user or small set of users who share the resource, it may need to be removed before the resource can be shared outside of the trusted group. The process of removal is sometimes called cleansing or scrubbing.\n\n\nFor example, a product for editing documents might not remove sensitive data such as reviewer comments or the local pathname where the document is stored. Or, a proxy might not remove an internal IP address from headers before making an outgoing request to an Internet site."
+  },
+  "CWE-213": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Exposure of Sensitive Information Due to Incompatible Policies The product's intended functionality exposes information to certain actors in accordance with the developer's security policy, but this information is regarded as sensitive according to the intended security policies of other stakeholders such as the product's administrator, users, or others whose information is being processed. When handling information, the developer must consider whether the information is regarded as sensitive by different stakeholders, such as users or administrators. Each stakeholder effectively has its own intended security policy that the product is expected to uphold. When a developer does not treat that information as sensitive, this can introduce a vulnerability that violates the expectations of the product's users."
+  },
+  "CWE-22": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') The product uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the product does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory. Many file operations are intended to take place within a restricted directory. By using special elements such as \"..\" and \"/\" separators, attackers can escape outside of the restricted location to access files or directories that are elsewhere on the system. One of the most common special elements is the \"../\" sequence, which in most modern operating systems is interpreted as the parent directory of the current location. This is referred to as relative path traversal. Path traversal also covers the use of absolute pathnames such as \"/usr/local/bin\" to access unexpected files. This is referred to as absolute path traversal."
+  },
+  "CWE-23": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Relative Path Traversal The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as \"..\" that can resolve to a location that is outside of that directory."
+  },
+  "CWE-248": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Uncaught Exception An exception is thrown from a function, but it is not caught. When an exception is not caught, it may cause the program to crash or expose sensitive information."
+  },
+  "CWE-25": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Path Traversal: '/../filedir' The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize \"/../\" sequences that can resolve to a location that is outside of that directory. This allows attackers to traverse the file system to access files or directories that are outside of the restricted directory.\n\n\nSometimes a program checks for \"../\" at the beginning of the input, so a \"/../\" can bypass that check."
+  },
+  "CWE-250": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Execution with Unnecessary Privileges The product performs an operation at a privilege level that is higher than the minimum level required, which creates new weaknesses or amplifies the consequences of other weaknesses."
+  },
+  "CWE-254": {
+    "source": "MITRE_CWE_REST/category",
+    "status": "resolved",
+    "text": "7PK - Security Features"
+  },
+  "CWE-255": {
+    "source": "MITRE_CWE_REST/category",
+    "status": "resolved",
+    "text": "Credentials Management Errors"
+  },
+  "CWE-26": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Path Traversal: '/dir/../filename' The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize \"/dir/../filename\" sequences that can resolve to a location that is outside of that directory. This allows attackers to traverse the file system to access files or directories that are outside of the restricted directory.\n\n\nThe '/dir/../filename' manipulation is useful for bypassing some path traversal protection schemes. Sometimes a program only checks for \"../\" at the beginning of the input, so a \"/../\" can bypass that check."
+  },
+  "CWE-264": {
+    "source": "MITRE_CWE_REST/category",
+    "status": "resolved",
+    "text": "Permissions, Privileges, and Access Controls"
+  },
+  "CWE-266": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Privilege Assignment A product incorrectly assigns a privilege to a particular actor, creating an unintended sphere of control for that actor."
+  },
+  "CWE-269": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Privilege Management The product does not properly assign, modify, track, or check privileges for an actor, creating an unintended sphere of control for that actor."
+  },
+  "CWE-270": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Privilege Context Switching Error The product does not properly manage privileges while it is switching between different contexts that have different privileges or spheres of control."
+  },
+  "CWE-274": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Insufficient Privileges The product does not handle or incorrectly handles when it has insufficient privileges to perform an operation, leading to resultant weaknesses."
+  },
+  "CWE-276": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Default Permissions During installation, installed file permissions are set to allow anyone to modify those files."
+  },
+  "CWE-277": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insecure Inherited Permissions A product defines a set of insecure permissions that are inherited by objects that are created by the program."
+  },
+  "CWE-279": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Execution-Assigned Permissions While it is executing, the product sets the permissions of an object in a way that violates the intended permissions that have been specified by the user."
+  },
+  "CWE-280": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Insufficient Permissions or Privileges The product does not handle or incorrectly handles when it has insufficient privileges to access resources or functionality as specified by their permissions. This may cause it to follow unexpected code paths that may leave the product in an invalid state."
+  },
+  "CWE-281": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Preservation of Permissions The product does not preserve permissions or incorrectly preserves permissions when copying, restoring, or sharing objects, which can cause them to have less restrictive permissions than intended."
+  },
+  "CWE-284": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Access Control The product does not restrict or incorrectly restricts access to a resource from an unauthorized actor. Access control involves the use of several protection mechanisms such as:\n\n\n  - Authentication (proving the identity of an actor)\n\n  - Authorization (ensuring that a given actor can access a resource), and\n\n  - Accountability (tracking of activities that were performed)\n\nWhen any mechanism is not applied or otherwise fails, attackers can compromise the security of the product by gaining privileges, reading sensitive information, executing commands, evading detection, etc.\n\nThere are two distinct behaviors that can introduce access control weaknesses:\n\n\n  - Specification: incorrect privileges, permissions, ownership, etc. are explicitly specified for either the user or the resource (for example, setting a password file to be world-writable, or giving administrator capabilities to a guest user). This action could be performed by the program or the administrator.\n\n  - Enforcement: the mechanism contains errors that prevent it from properly enforcing the specified access control requirements (e.g., allowing the user to specify their own privileges, or allowing a syntactically-incorrect ACL to produce insecure settings). This problem occurs within the program itself, in that it does not actually enforce the intended security policy that the administrator specifies."
+  },
+  "CWE-285": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Authorization The product does not perform or incorrectly performs an authorization check when an actor attempts to access a resource or perform an action."
+  },
+  "CWE-286": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect User Management The product does not properly manage a user within its environment. Users can be assigned to the wrong group (class) of permissions resulting in unintended access rights to sensitive objects."
+  },
+  "CWE-287": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Authentication When an actor claims to have a given identity, the product does not prove or insufficiently proves that the claim is correct."
+  },
+  "CWE-288": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Authentication Bypass Using an Alternate Path or Channel The product requires authentication, but the product has an alternate path or channel that does not require authentication."
+  },
+  "CWE-29": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Path Traversal: '\\..\\filename' The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize '\\..\\filename' (leading backslash dot dot) sequences that can resolve to a location that is outside of that directory. This allows attackers to traverse the file system to access files or directories that are outside of the restricted directory.\n\n\nThis is similar to CWE-25, except using \"\\\" instead of \"/\". Sometimes a program checks for \"..\\\" at the beginning of the input, so a \"\\..\\\" can bypass that check. It is also useful for bypassing path traversal protection schemes that only assume that the \"/\" separator is valid."
+  },
+  "CWE-290": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Authentication Bypass by Spoofing This attack-focused weakness is caused by incorrectly implemented authentication schemes that are subject to spoofing attacks."
+  },
+  "CWE-292": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "DEPRECATED: Trusting Self-reported DNS Name This entry has been deprecated because it was a duplicate of CWE-350. All content has been transferred to CWE-350."
+  },
+  "CWE-294": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Authentication Bypass by Capture-replay A capture-replay flaw exists when the design of the product makes it possible for a malicious user to sniff network traffic and bypass authentication by replaying it to the server in question to the same effect as the original message (or with minor changes). Capture-replay attacks are common and can be difficult to defeat without cryptography. They are a subset of network injection attacks that rely on observing previously-sent valid commands, then changing them slightly if necessary and resending the same commands to the server."
+  },
+  "CWE-295": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Certificate Validation The product does not validate, or incorrectly validates, a certificate."
+  },
+  "CWE-303": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Implementation of Authentication Algorithm The requirements for the product dictate the use of an established authentication algorithm, but the implementation of the algorithm is incorrect. This incorrect implementation may allow authentication to be bypassed."
+  },
+  "CWE-305": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Authentication Bypass by Primary Weakness The authentication algorithm is sound, but the implemented mechanism can be bypassed as the result of a separate weakness that is primary to the authentication error."
+  },
+  "CWE-306": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Missing Authentication for Critical Function The product does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources."
+  },
+  "CWE-307": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Restriction of Excessive Authentication Attempts The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame."
+  },
+  "CWE-31": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Path Traversal: 'dir\\..\\..\\filename' The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize 'dir\\..\\..\\filename' (multiple internal backslash dot dot) sequences that can resolve to a location that is outside of that directory. This allows attackers to traverse the file system to access files or directories that are outside of the restricted directory.\n\n\nThe 'dir\\..\\..\\filename' manipulation is useful for bypassing some path traversal protection schemes. Sometimes a program only removes one \"..\\\" sequence, so multiple \"..\\\" can bypass that check. Alternately, this manipulation could be used to bypass a check for \"..\\\" at the beginning of the pathname, moving up more than one directory level."
+  },
+  "CWE-311": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Missing Encryption of Sensitive Data The product does not encrypt sensitive or critical information before storage or transmission."
+  },
+  "CWE-312": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Cleartext Storage of Sensitive Information The product stores sensitive information in cleartext within a resource that might be accessible to another control sphere."
+  },
+  "CWE-319": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Cleartext Transmission of Sensitive Information The product transmits sensitive or security-critical data in cleartext in a communication channel that can be sniffed by unauthorized actors."
+  },
+  "CWE-321": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Hard-coded Cryptographic Key The product uses a hard-coded, unchangeable cryptographic key."
+  },
+  "CWE-327": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of a Broken or Risky Cryptographic Algorithm The product uses a broken or risky cryptographic algorithm or protocol. Cryptographic algorithms are the methods by which data is scrambled to prevent observation or influence by unauthorized actors. Insecure cryptography can be exploited to expose sensitive information, modify data in unexpected ways, spoof identities of other users or devices, or other impacts.\n\n\nIt is very difficult to produce a secure algorithm, and even high-profile algorithms by accomplished cryptographic experts have been broken. Well-known techniques exist to break or weaken various kinds of cryptography. Accordingly, there are a small number of well-understood and heavily studied algorithms that should be used by most products. Using a non-standard or known-insecure algorithm is dangerous because a determined adversary may be able to break the algorithm and compromise whatever data has been protected.\n\n\nSince the state of cryptography advances so rapidly, it is common for an algorithm to be considered \"unsafe\" even if it was once thought to be strong. This can happen when new attacks are discovered, or if computing power increases so much that the cryptographic algorithm no longer provides the amount of protection that was originally thought.\n\n\nFor a number of reasons, this weakness is even more challenging to manage with hardware deployment of cryptographic algorithms as opposed to software implementation. First, if a flaw is discovered with hardware-implemented cryptography, the flaw cannot be fixed in most cases without a recall of the product, because hardware is not easily replaceable like software. Second, because the hardware product is expected to work for years, the adversary's computing power will only increase over time."
+  },
+  "CWE-328": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Weak Hash The product uses an algorithm that produces a digest (output value) that does not meet security expectations for a hash function that allows an adversary to reasonably determine the original input (preimage attack), find another input that can produce the same hash (2nd preimage attack), or find multiple inputs that evaluate to the same hash (birthday attack). A hash function is defined as an algorithm that maps arbitrarily sized data into a fixed-sized digest (output) such that the following properties hold:\n\n\n  1. The algorithm is not invertible (also called \"one-way\" or \"not reversible\")\n\n  1. The algorithm is deterministic; the same input produces the same digest every time\n\n Building on this definition, a cryptographic hash function must also ensure that a malicious actor cannot leverage the hash function to have a reasonable chance of success at determining any of the following:\n\n  1. the original input (preimage attack), given only the digest\n\n  1. another input that can produce the same digest (2nd preimage attack), given the original input\n\n  1. a set of two or more inputs that evaluate to the same digest (birthday attack), given the actor can arbitrarily choose the inputs to be hashed and can do so a reasonable amount of times\n\nWhat is regarded as \"reasonable\" varies by context and threat model, but in general, \"reasonable\" could cover any attack that is more efficient than brute force (i.e., on average, attempting half of all possible combinations). Note that some attacks might be more efficient than brute force but are still not regarded as achievable in the real world.\n\nAny algorithm that does not meet the above conditions will generally be considered weak for general use in hashing.\n\n\nIn addition to algorithmic weaknesses, a hash function can be made weak by using the hash in a security context that breaks its security guarantees. For example, using a hash function without a salt for storing passwords (that are sufficiently short) could enable an adversary to create a \"rainbow table\" [REF-637] to recover the password under certain conditions; this attack works against such hash functions as MD5, SHA-1, and SHA-2."
+  },
+  "CWE-330": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Insufficiently Random Values The product uses insufficiently random numbers or values in a security context that depends on unpredictable numbers."
+  },
+  "CWE-338": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG) The product uses a Pseudo-Random Number Generator (PRNG) in a security context, but the PRNG's algorithm is not cryptographically strong. When a non-cryptographic PRNG is used in a cryptographic context, it can expose the cryptography to certain types of attacks.\n\n\nOften a pseudo-random number generator (PRNG) is not designed for cryptography. Sometimes a mediocre source of randomness is sufficient or preferable for algorithms that use random numbers. Weak generators generally take less processing power and/or do not use the precious, finite, entropy sources on a system. While such PRNGs might have very useful features, these same features could be used to break the cryptography."
+  },
+  "CWE-345": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insufficient Verification of Data Authenticity The product does not sufficiently verify the origin or authenticity of data, in a way that causes it to accept invalid data."
+  },
+  "CWE-346": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Origin Validation Error The product does not properly verify that the source of data or communication is valid."
+  },
+  "CWE-347": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Verification of Cryptographic Signature The product does not verify, or incorrectly verifies, the cryptographic signature for data."
+  },
+  "CWE-352": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Cross-Site Request Forgery (CSRF) The web application does not, or cannot, sufficiently verify whether a request was intentionally provided by the user who sent the request, which could have originated from an unauthorized actor."
+  },
+  "CWE-354": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Validation of Integrity Check Value The product does not validate or incorrectly validates the integrity check values or \"checksums\" of a message. This may prevent it from detecting if the data has been modified or corrupted in transmission. Improper validation of checksums before use results in an unnecessary risk that can easily be mitigated. The protocol specification describes the algorithm used for calculating the checksum. It is then a simple matter of implementing the calculation and verifying that the calculated checksum and the received checksum match. Improper verification of the calculated checksum and the received checksum can lead to far greater consequences."
+  },
+  "CWE-359": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Exposure of Private Personal Information to an Unauthorized Actor The product does not properly prevent a person's private, personal information from being accessed by actors who either (1) are not explicitly authorized to access the information or (2) do not have the implicit consent of the person about whom the information is collected."
+  },
+  "CWE-36": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Absolute Path Traversal The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as \"/abs/path\" that can resolve to a location that is outside of that directory. This allows attackers to traverse the file system to access files or directories that are outside of the restricted directory."
+  },
+  "CWE-362": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') The product contains a concurrent code sequence that requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence operating concurrently. A race condition occurs within concurrent environments, and it is effectively a property of a code sequence. Depending on the context, a code sequence may be in the form of a function call, a small number of instructions, a series of program invocations, etc.\n\n\nA race condition violates these properties, which are closely related:\n\n\n  - Exclusivity - the code sequence is given exclusive access to the shared resource, i.e., no other code sequence can modify properties of the shared resource before the original sequence has completed execution.\n\n  - Atomicity - the code sequence is behaviorally atomic, i.e., no other thread or process can concurrently execute the same sequence of instructions (or a subset) against the same resource.\n\nA race condition exists when an \"interfering code sequence\" can still access the shared resource, violating exclusivity.\n\nThe interfering code sequence could be \"trusted\" or \"untrusted.\" A trusted interfering code sequence occurs within the product; it cannot be modified by the attacker, and it can only be invoked indirectly. An untrusted interfering code sequence can be authored directly by the attacker, and typically it is external to the vulnerable product."
+  },
+  "CWE-366": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Race Condition within a Thread If two threads of execution use a resource simultaneously, there exists the possibility that resources may be used while invalid, in turn making the state of execution undefined."
+  },
+  "CWE-367": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Time-of-check Time-of-use (TOCTOU) Race Condition The product checks the state of a resource before using that resource, but the resource's state can change between the check and the use in a way that invalidates the results of the check."
+  },
+  "CWE-377": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insecure Temporary File Creating and using insecure temporary files can leave application and system data vulnerable to attack."
+  },
+  "CWE-378": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Creation of Temporary File With Insecure Permissions Opening temporary files without appropriate measures or controls can leave the file, its contents and any function that it impacts vulnerable to attack."
+  },
+  "CWE-384": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Session Fixation Authenticating a user, or otherwise establishing a new user session, without invalidating any existing session identifier gives an attacker the opportunity to steal authenticated sessions. Such a scenario is commonly observed when:\n\n\n  - A web application authenticates a user without first invalidating the existing session, thereby continuing to use the session already associated with the user.\n\n  - An attacker is able to force a known session identifier on a user so that, once the user authenticates, the attacker has access to the authenticated session.\n\n  - The application or container uses predictable session identifiers.\n\nIn the generic exploit of session fixation vulnerabilities, an attacker creates a new session on a web application and records the associated session identifier. The attacker then causes the victim to associate, and possibly authenticate, against the server using that session identifier, giving the attacker access to the user's account through the active session."
+  },
+  "CWE-385": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Covert Timing Channel Covert timing channels convey information by modulating some aspect of system behavior over time, so that the program receiving the information can observe system behavior and infer protected information. In some instances, knowing when data is transmitted between parties can provide a malicious user with privileged information. Also, externally monitoring the timing of operations can potentially reveal sensitive data. For example, a cryptographic operation can expose its internal state if the time it takes to perform the operation varies, based on the state.\n\n\nCovert channels are frequently classified as either storage or timing channels. Some examples of covert timing channels are the system's paging rate, the time a certain transaction requires to execute, and the time it takes to gain access to a shared bus."
+  },
+  "CWE-396": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Declaration of Catch for Generic Exception Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Multiple catch blocks can get ugly and repetitive, but \"condensing\" catch blocks by catching a high-level class like Exception can obscure exceptions that deserve special treatment or that should not be caught at this point in the program. Catching an overly broad exception essentially defeats the purpose of a language's typed exceptions, and can become particularly dangerous if the program grows and begins to throw new types of exceptions. The new exception types will not receive any attention."
+  },
+  "CWE-399": {
+    "source": "MITRE_CWE_REST/category",
+    "status": "resolved",
+    "text": "Resource Management Errors"
+  },
+  "CWE-400": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Uncontrolled Resource Consumption The product does not properly control the allocation and maintenance of a limited resource."
+  },
+  "CWE-402": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Transmission of Private Resources into a New Sphere ('Resource Leak') The product makes resources available to untrusted parties when those resources are only intended to be accessed by the product."
+  },
+  "CWE-404": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Resource Shutdown or Release The product does not release or incorrectly releases a resource before it is made available for re-use. When a resource is created or allocated, the developer is responsible for properly releasing the resource as well as accounting for all potential paths of expiration or invalidation, such as a set period of time or revocation."
+  },
+  "CWE-405": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Asymmetric Resource Consumption (Amplification) The product does not properly control situations in which an adversary can cause the product to consume or produce excessive resources without requiring the adversary to invest equivalent work or otherwise prove authorization, i.e., the adversary's influence is \"asymmetric.\" This can lead to poor performance due to \"amplification\" of resource consumption, typically in a non-linear fashion. This situation is worsened if the product allows malicious users or attackers to consume more resources than their access level permits."
+  },
+  "CWE-407": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Inefficient Algorithmic Complexity An algorithm in a product has an inefficient worst-case computational complexity that may be detrimental to system performance and can be triggered by an attacker, typically using crafted manipulations that ensure that the worst case is being reached."
+  },
+  "CWE-409": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Highly Compressed Data (Data Amplification) The product does not handle or incorrectly handles a compressed input with a very high compression ratio that produces a large output. An example of data amplification is a \"decompression bomb,\" a small ZIP file that can produce a large amount of data when it is decompressed."
+  },
+  "CWE-41": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Resolution of Path Equivalence The product is vulnerable to file system contents disclosure through path equivalence. Path equivalence involves the use of special characters in file and directory names. The associated manipulations are intended to generate multiple names for the same object. Path equivalence is usually employed in order to circumvent access controls expressed using an incomplete set of file name or file path representations. This is different from path traversal, wherein the manipulations are performed to generate a name for a different object."
+  },
+  "CWE-420": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Unprotected Alternate Channel The product protects a primary channel, but it does not use the same level of protection for an alternate channel."
+  },
+  "CWE-425": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Direct Request ('Forced Browsing') The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files."
+  },
+  "CWE-426": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Untrusted Search Path The product searches for critical resources using an externally-supplied search path that can point to resources that are not under the product's direct control. This might allow attackers to execute their own programs, access unauthorized data files, or modify configuration in unexpected ways. If the product uses a search path to locate critical resources such as programs, then an attacker could modify that search path to point to a malicious program, which the targeted product would then execute. The problem extends to any type of critical resource that the product trusts.\n\n\nSome of the most common variants of untrusted search path are:\n\n\n  - In various UNIX and Linux-based systems, the PATH environment variable may be consulted to locate executable programs, and LD_PRELOAD may be used to locate a separate library.\n\n  - In various Microsoft-based systems, the PATH environment variable is consulted to locate a DLL, if the DLL is not found in other paths that appear earlier in the search order."
+  },
+  "CWE-434": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Unrestricted Upload of File with Dangerous Type The product allows the upload or transfer of dangerous file types that are automatically processed within its environment."
+  },
+  "CWE-440": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Expected Behavior Violation A feature, API, or function does not perform according to its specification."
+  },
+  "CWE-441": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Unintended Proxy or Intermediary ('Confused Deputy') The product receives a request, message, or directive from an upstream component, but the product does not sufficiently preserve the original source of the request before forwarding the request to an external actor that is outside of the product's control sphere. This causes the product to appear to be the source of the request, leading it to act as a proxy or other intermediary between the upstream component and the external actor. If an attacker cannot directly contact a target, but the product has access to the target, then the attacker can send a request to the product and have it be forwarded to the target. The request would appear to be coming from the product's system, not the attacker's system. As a result, the attacker can bypass access controls (such as firewalls) or hide the source of malicious requests, since the requests would not be coming directly from the attacker.\n\n\nSince proxy functionality and message-forwarding often serve a legitimate purpose, this issue only becomes a vulnerability when:\n\n\n  - The product runs with different privileges or on a different system, or otherwise has different levels of access than the upstream component;\n\n  - The attacker is prevented from making the request directly to the target; and\n\n  - The attacker can create a request that the proxy does not explicitly intend to be forwarded on the behalf of the requester. Such a request might point to an unexpected hostname, port number, hardware IP, or service. Or, the request might be sent to an allowed service, but the request could contain disallowed directives, commands, or resources."
+  },
+  "CWE-444": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') The product acts as an intermediary HTTP agent\n         (such as a proxy or firewall) in the data flow between two\n         entities such as a client and server, but it does not\n         interpret malformed HTTP requests or responses in ways that\n         are consistent with how the messages will be processed by\n         those entities that are at the ultimate destination. HTTP requests or responses (\"messages\") can be malformed or unexpected in ways that cause web servers or clients to interpret the messages in different ways than intermediary HTTP agents such as load balancers, reverse proxies, web caching proxies, application firewalls, etc. For example, an adversary may be able to add duplicate or different header fields that a client or server might interpret as one set of messages, whereas the intermediary might interpret the same sequence of bytes as a different set of messages. For example, discrepancies can arise in how to handle duplicate headers like two Transfer-encoding (TE) or two Content-length (CL), or the malicious HTTP message will have different headers for TE and CL.\n\n\nThe inconsistent parsing and interpretation of messages can allow the adversary to \"smuggle\" a message to the client/server without the intermediary being aware of it.\n\n\nThis weakness is usually the result of the usage of outdated or incompatible HTTP protocol versions in the HTTP agents."
+  },
+  "CWE-460": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Cleanup on Thrown Exception The product does not clean up its state or incorrectly cleans up its state when an exception is thrown, leading to unexpected state or control flow. Often, when functions or loops become complicated, some level of resource cleanup is needed throughout execution. Exceptions can disturb the flow of the code and prevent the necessary cleanup from happening."
+  },
+  "CWE-470": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') The product uses external input with reflection to select which classes or code to use, but it does not sufficiently prevent the input from selecting improper classes or code. If the product uses external inputs to determine which class to instantiate or which method to invoke, then an attacker could supply values to select unexpected classes or methods. If this occurs, then the attacker could create control flow paths that were not intended by the developer. These paths could bypass authentication or access control checks, or otherwise cause the product to behave in an unexpected manner. This situation becomes a doomsday scenario if the attacker can upload files into a location that appears on the product's classpath (CWE-427) or add new entries to the product's classpath (CWE-426). Under either of these conditions, the attacker can use reflection to introduce new, malicious behavior into the product."
+  },
+  "CWE-475": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Undefined Behavior for Input to API The behavior of this function is undefined unless its control parameter is set to a specific value."
+  },
+  "CWE-488": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Exposure of Data Element to Wrong Session The product does not sufficiently enforce boundaries between the states of different sessions, causing data to be provided to, or used by, the wrong session. Data can \"bleed\" from one session to another through member variables of singleton objects, such as Servlets, and objects from a shared pool.\n\n\nIn the case of Servlets, developers sometimes do not understand that, unless a Servlet implements the SingleThreadModel interface, the Servlet is a singleton; there is only one instance of the Servlet, and that single instance is used and re-used to handle multiple requests that are processed simultaneously by different threads. A common result is that developers use Servlet member fields in such a way that one user may inadvertently see another user's data. In other words, storing user data in Servlet member fields introduces a data access race condition."
+  },
+  "CWE-497": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Exposure of Sensitive System Information to an Unauthorized Control Sphere The product does not properly prevent sensitive system-level information from being accessed by unauthorized actors who do not have the same level of access to the underlying system as the product does. Network-based products, such as web applications, often run on top of an operating system or similar environment. When the product communicates with outside parties, details about the underlying system are expected to remain hidden, such as path names for data files, other OS users, installed packages, the application environment, etc. This system information may be provided by the product itself, or buried within diagnostic or debugging messages. Debugging information helps an adversary learn about the system and form an attack plan.\n\n\nAn information exposure occurs when system data or debugging information leaves the program through an output stream or logging function that makes it accessible to unauthorized parties. Using other weaknesses, an attacker could cause errors to occur; the response to these errors can reveal detailed system information, along with other impacts. An attacker can use messages that reveal technologies, operating systems, and product versions to tune the attack against known vulnerabilities in these technologies. A product may use diagnostic methods that provide significant implementation details such as stack traces as part of its error handling mechanism."
+  },
+  "CWE-501": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Trust Boundary Violation The product mixes trusted and untrusted data in the same data structure or structured message. A trust boundary can be thought of as line drawn through a program. On one side of the line, data is untrusted. On the other side of the line, data is assumed to be trustworthy. The purpose of validation logic is to allow data to safely cross the trust boundary - to move from untrusted to trusted. A trust boundary violation occurs when a program blurs the line between what is trusted and what is untrusted. By combining trusted and untrusted data in the same data structure, it becomes easier for programmers to mistakenly trust unvalidated data."
+  },
+  "CWE-502": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Deserialization of Untrusted Data The product deserializes untrusted data without sufficiently ensuring that the resulting data will be valid."
+  },
+  "CWE-521": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Weak Password Requirements The product does not require that users should have strong passwords."
+  },
+  "CWE-522": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insufficiently Protected Credentials The product transmits or stores authentication credentials, but it uses an insecure method that is susceptible to unauthorized interception and/or retrieval."
+  },
+  "CWE-524": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Cache Containing Sensitive Information The code uses a cache that contains sensitive information, but the cache can be read by an actor outside of the intended control sphere. Applications may use caches to improve efficiency when communicating with remote entities or performing intensive calculations. A cache maintains a pool of objects, threads, connections, pages, financial data, passwords, or other resources to minimize the time it takes to initialize and access these resources. If the cache is accessible to unauthorized actors, attackers can read the cache and obtain this sensitive information."
+  },
+  "CWE-532": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insertion of Sensitive Information into Log File The product writes sensitive information to a log file."
+  },
+  "CWE-534": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "DEPRECATED: Information Exposure Through Debug Log Files This entry has been deprecated because its abstraction was too low-level.  See CWE-532."
+  },
+  "CWE-539": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Persistent Cookies Containing Sensitive Information The web application uses persistent cookies, but the cookies contain sensitive information. Cookies are small bits of data that are sent by the web application but stored locally in the browser. This lets the application use the cookie to pass information between pages and store variable information. The web application controls what information is stored in a cookie and how it is used. Typical types of information stored in cookies are session identifiers, personalization and customization information, and in rare cases even usernames to enable automated logins. There are two different types of cookies: session cookies and persistent cookies. Session cookies just live in the browser's memory and are not stored anywhere, but persistent cookies are stored on the browser's hard drive. This can cause security and privacy issues depending on the information stored in the cookie and how it is accessed."
+  },
+  "CWE-552": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Files or Directories Accessible to External Parties The product makes files or directories accessible to unauthorized actors, even though they should not be. Web servers, FTP servers, and similar servers may store a set of files underneath a \"root\" directory that is accessible to the server's users. Applications may store sensitive files underneath this root without also using access control to limit which users may request those files, if any. Alternately, an application might package multiple files or directories into an archive file (e.g., ZIP or tar), but the application might not exclude sensitive files that are underneath those directories.\n\n\nIn cloud technologies and containers, this weakness might present itself in the form of misconfigured storage accounts that can be read or written by a public or anonymous user."
+  },
+  "CWE-565": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Reliance on Cookies without Validation and Integrity Checking The product relies on the existence or values of cookies when performing security-critical operations, but it does not properly ensure that the setting is valid for the associated user."
+  },
+  "CWE-573": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Following of Specification by Caller The product does not follow or incorrectly follows the specifications as required by the implementation language, environment, framework, protocol, or platform. When leveraging external functionality, such as an API, it is important that the caller does so in accordance with the requirements of the external functionality or else unintended behaviors may result, possibly leaving the system vulnerable to any number of exploits."
+  },
+  "CWE-59": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Link Resolution Before File Access ('Link Following') The product attempts to access a file based on the filename, but it does not properly prevent that filename from identifying a link or shortcut that resolves to an unintended resource."
+  },
+  "CWE-598": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of HTTP Request With Sensitive Query String The web application uses an HTTP method to process a request, but the request includes sensitive information in the query string."
+  },
+  "CWE-601": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "URL Redirection to Untrusted Site ('Open Redirect') The web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a redirect."
+  },
+  "CWE-61": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "UNIX Symbolic Link (Symlink) Following The product, when opening a file or directory, does not sufficiently account for when the file is a symbolic link that resolves to a target outside of the intended control sphere. This could allow an attacker to cause the product to operate on unauthorized files. A product that allows UNIX symbolic links (symlink) as part of paths whether in internal code or through user input can allow an attacker to spoof the symbolic link and traverse the file system to unintended locations or access arbitrary files. The symbolic link can permit an attacker to read/write/corrupt a file that they originally did not have permissions to access."
+  },
+  "CWE-611": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Restriction of XML External Entity Reference The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output."
+  },
+  "CWE-613": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insufficient Session Expiration According to WASC, \"Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization.\""
+  },
+  "CWE-614": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Sensitive Cookie in HTTPS Session Without 'Secure' Attribute The Secure attribute for sensitive cookies in HTTPS sessions is not set."
+  },
+  "CWE-617": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Reachable Assertion The product contains an assert() or similar statement that can be triggered by an attacker, which leads to an application exit or other behavior that is more severe than necessary. While assertion is good for catching logic errors and reducing the chances of reaching more serious vulnerability conditions, it can still lead to a denial of service.\n\n\nFor example, if a server handles multiple simultaneous connections, and an assert() occurs in one single connection that causes all other connections to be dropped, this is a reachable assertion that leads to a denial of service."
+  },
+  "CWE-620": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Unverified Password Change When setting a new password for a user, the product does not require knowledge of the original password, or using another form of authentication. This could be used by an attacker to change passwords for another user, thus gaining the privileges associated with that user."
+  },
+  "CWE-627": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Dynamic Variable Evaluation In a language where the user can influence the name of a variable at runtime, if the variable names are not controlled, an attacker can read or write to arbitrary variables, or access arbitrary functions. The resultant vulnerabilities depend on the behavior of the application, both at the crossover point and in any control/data flow that is reachable by the related variables or functions."
+  },
+  "CWE-636": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Not Failing Securely ('Failing Open') When the product encounters an error condition or failure, its design requires it to fall back to a state that is less secure than other options that are available, such as selecting the weakest encryption algorithm or using the most permissive access control restrictions. By entering a less secure state, the product inherits the weaknesses associated with that state, making it easier to compromise. At the least, it causes administrators to have a false sense of security. This weakness typically occurs as a result of wanting to \"fail functional\" to minimize administration and support costs, instead of \"failing safe.\""
+  },
+  "CWE-639": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Authorization Bypass Through User-Controlled Key The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data. Retrieval of a user record occurs in the system based on some key value that is under user control. The key would typically identify a user-related record stored in the system and would be used to lookup that record for presentation to the user. It is likely that an attacker would have to be an authenticated user in the system. However, the authorization process would not properly check the data access operation to ensure that the authenticated user performing the operation has sufficient entitlements to perform the requested data access, hence bypassing any other authorization checks present in the system.\n\n\nFor example, attackers can look at places where user specific data is retrieved (e.g. search screens) and determine whether the key for the item being looked up is controllable externally. The key may be a hidden field in the HTML form field, might be passed as a URL parameter or as an unencrypted cookie variable, then in each of these cases it will be possible to tamper with the key value.\n\n\nOne manifestation of this weakness is when a system uses sequential or otherwise easily-guessable session IDs that would allow one user to easily switch to another user's session and read/modify their data."
+  },
+  "CWE-644": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of HTTP Headers for Scripting Syntax The product does not neutralize or incorrectly neutralizes web scripting syntax in HTTP headers that can be used by web browser components that can process raw headers, such as Flash. An attacker may be able to conduct cross-site scripting and other attacks against users who have these components enabled.\n\n\nIf a product does not neutralize user controlled data being placed in the header of an HTTP response coming from the server, the header may contain a script that will get executed in the client's browser context, potentially resulting in a cross site scripting vulnerability or possibly an HTTP response splitting attack. It is important to carefully control data that is being placed both in HTTP response header and in the HTTP response body to ensure that no scripting syntax is present, taking various encodings into account."
+  },
+  "CWE-647": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Non-Canonical URL Paths for Authorization Decisions The product defines policy namespaces and makes authorization decisions based on the assumption that a URL is canonical. This can allow a non-canonical URL to bypass the authorization. If an application defines policy namespaces and makes authorization decisions based on the URL, but it does not require or convert to a canonical URL before making the authorization decision, then it opens the application to attack. For example, if the application only wants to allow access to http://www.example.com/mypage, then the attacker might be able to bypass this restriction using equivalent URLs such as:\n\n\n  - http://WWW.EXAMPLE.COM/mypage\n\n  - http://www.example.com/%6Dypage (alternate encoding)\n\n  - http://192.168.1.1/mypage (IP address)\n\n  - http://www.example.com/mypage/ (trailing /)\n\n  - http://www.example.com:80/mypage\n\nTherefore it is important to specify access control policy that is based on the path information in some canonical form with all alternate encodings rejected (which can be accomplished by a default deny rule)."
+  },
+  "CWE-648": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Use of Privileged APIs The product does not conform to the API requirements for a function call that requires extra privileges. This could allow attackers to gain privileges by causing the function to be called incorrectly. When a product contains certain functions that perform operations requiring an elevated level of privilege, the caller of a privileged API must be careful to:\n\n\n  - ensure that assumptions made by the APIs are valid, such as validity of arguments\n\n  - account for known weaknesses in the design/implementation of the API\n\n  - call the API from a safe context\n\nIf the caller of the API does not follow these requirements, then it may allow a malicious user or process to elevate their privilege, hijack the process, or steal sensitive data.\n\nFor instance, it is important to know if privileged APIs do not shed their privileges before returning to the caller or if the privileged function might make certain assumptions about the data, context or state information passed to it by the caller. It is important to always know when and how privileged APIs can be called in order to ensure that their elevated level of privilege cannot be exploited."
+  },
+  "CWE-653": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Isolation or Compartmentalization The product does not properly compartmentalize or isolate functionality, processes, or resources that require different privilege levels, rights, or permissions. When a weakness occurs in functionality that is accessible by lower-privileged users, then without strong boundaries, an attack might extend the scope of the damage to higher-privileged users."
+  },
+  "CWE-668": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Exposure of Resource to Wrong Sphere The product exposes a resource to the wrong control sphere, providing unintended actors with inappropriate access to the resource. Resources such as files and directories may be inadvertently exposed through mechanisms such as insecure permissions, or when a program accidentally operates on the wrong object. For example, a program may intend that private files can only be provided to a specific user. This effectively defines a control sphere that is intended to prevent attackers from accessing these private files. If the file permissions are insecure, then parties other than the user will be able to access those files.\n\n\nA separate control sphere might effectively require that the user can only access the private files, but not any other files on the system. If the program does not ensure that the user is only requesting private files, then the user might be able to access other files on the system.\n\n\nIn either case, the end result is that a resource has been exposed to the wrong party."
+  },
+  "CWE-669": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Resource Transfer Between Spheres The product does not properly transfer a resource/behavior to another sphere, or improperly imports a resource/behavior from another sphere, in a manner that provides unintended control over that resource."
+  },
+  "CWE-67": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Windows Device Names The product constructs pathnames from user input, but it does not handle or incorrectly handles a pathname containing a Windows device name such as AUX or CON. This typically leads to denial of service or an information exposure when the application attempts to process the pathname as a regular file. Not properly handling virtual filenames (e.g. AUX, CON, PRN, COM1, LPT1) can result in different types of vulnerabilities. In some cases an attacker can request a device via injection of a virtual filename in a URL, which may cause an error that leads to a denial of service or an error page that reveals sensitive information. A product that allows device names to bypass filtering runs the risk of an attacker injecting malicious code in a file with the name of a device."
+  },
+  "CWE-670": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Always-Incorrect Control Flow Implementation The code contains a control flow path that does not reflect the algorithm that the path is intended to implement, leading to incorrect behavior any time this path is navigated. This weakness captures cases in which a particular code segment is always incorrect with respect to the algorithm that it is implementing. For example, if a C programmer intends to include multiple statements in a single block but does not include the enclosing braces (CWE-483), then the logic is always incorrect. This issue is in contrast to most weaknesses in which the code usually behaves correctly, except when it is externally manipulated in malicious ways."
+  },
+  "CWE-674": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Uncontrolled Recursion The product does not properly control the amount of recursion that takes place,  consuming excessive resources, such as allocated memory or the program stack."
+  },
+  "CWE-683": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Function Call With Incorrect Order of Arguments The product calls a function, procedure, or routine, but the caller specifies the arguments in an incorrect order, leading to resultant weaknesses. While this weakness might be caught by the compiler in some languages, it can occur more frequently in cases in which the called function accepts variable numbers or types of arguments, such as format strings in C. It also can occur in languages or environments that do not enforce strong typing."
+  },
+  "CWE-693": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Protection Mechanism Failure The product does not use or incorrectly uses a protection mechanism that provides sufficient defense against directed attacks against the product. This weakness covers three distinct situations. A \"missing\" protection mechanism occurs when the application does not define any mechanism against a certain class of attack. An \"insufficient\" protection mechanism might provide some defenses - for example, against the most common attacks - but it does not protect against everything that is intended. Finally, an \"ignored\" mechanism occurs when a mechanism is available and in active use within the product, but the developer has not applied it in some code path."
+  },
+  "CWE-696": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Behavior Order The product performs multiple related behaviors, but the behaviors are performed in the wrong order in ways that may produce resultant weaknesses."
+  },
+  "CWE-697": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Comparison The product compares two entities in a security-relevant context, but the comparison is incorrect. This Pillar covers several possibilities:\n\n\n  - the comparison checks one factor incorrectly;\n\n  - the comparison should consider multiple factors, but it does not check at least one of those factors at all;\n\n  - the comparison checks the wrong factor."
+  },
+  "CWE-703": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Check or Handling of Exceptional Conditions The product does not properly anticipate or handle exceptional conditions that rarely occur during normal operation of the product."
+  },
+  "CWE-706": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Incorrectly-Resolved Name or Reference The product uses a name or reference to access a resource, but the name/reference resolves to a resource that is outside of the intended control sphere."
+  },
+  "CWE-707": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization The product does not ensure or incorrectly ensures that structured messages or data are well-formed and that certain security properties are met before being read from an upstream component or sent to a downstream component. If a message is malformed, it may cause the message to be incorrectly interpreted.\n\n\nNeutralization is an abstract term for any technique that ensures that input (and output) conforms with expectations and is \"safe.\" This can be done by:\n\n\n  - checking that the input/output is already \"safe\" (e.g. validation)\n\n  - transformation of the input/output to be \"safe\" using techniques such as filtering, encoding/decoding, escaping/unescaping, quoting/unquoting, or canonicalization\n\n  - preventing the input/output from being directly provided by an attacker (e.g. \"indirect selection\" that maps externally-provided values to internally-controlled values)\n\n  - preventing the input/output from being processed at all\n\nThis weakness typically applies in cases where the product prepares a control message that another process must act on, such as a command or query, and malicious input that was intended as data, can enter the control plane instead. However, this weakness also applies to more general cases where there are not always control implications."
+  },
+  "CWE-708": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Ownership Assignment The product assigns an owner to a resource, but the owner is outside of the intended control sphere. This may allow the resource to be manipulated by actors outside of the intended control sphere."
+  },
+  "CWE-73": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "External Control of File Name or Path The product allows user input to control or influence paths or file names that are used in filesystem operations. This could allow an attacker to access or modify system files or other files that are critical to the application.\n\n\nPath manipulation errors occur when the following two conditions are met:\n\n```\n\t\t1. An attacker can specify a path used in an operation on the filesystem.\n\t\t2. By specifying the resource, the attacker gains a capability that would not otherwise be permitted.\n```\nFor example, the program may give the attacker the ability to overwrite the specified file or run with a configuration controlled by the attacker."
+  },
+  "CWE-732": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Permission Assignment for Critical Resource The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors. When a resource is given a permission setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution, or sensitive user data. For example, consider a misconfigured storage account for the cloud that can be read or written by a public or anonymous user."
+  },
+  "CWE-74": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') The product constructs all or part of a command, data structure, or record using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify how it is parsed or interpreted when it is sent to a downstream component."
+  },
+  "CWE-75": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Failure to Sanitize Special Elements into a Different Plane (Special Element Injection) The product does not adequately filter user-controlled input for special elements with control implications."
+  },
+  "CWE-754": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Check for Unusual or Exceptional Conditions The product does not check or incorrectly checks for unusual or exceptional conditions that are not expected to occur frequently during day to day operation of the product. The programmer may assume that certain events or conditions will never occur or do not need to be worried about, such as low memory conditions, lack of access to resources due to restrictive permissions, or misbehaving clients or components. However, attackers may intentionally trigger these unusual conditions, thus violating the programmer's assumptions, possibly introducing instability, incorrect behavior, or a vulnerability.\n\n\nNote that this entry is not exclusively about the use of exceptions and exception handling, which are mechanisms for both checking and handling unusual or unexpected conditions."
+  },
+  "CWE-755": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Handling of Exceptional Conditions The product does not handle or incorrectly handles an exceptional condition."
+  },
+  "CWE-76": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Equivalent Special Elements The product correctly neutralizes certain special elements, but it improperly neutralizes equivalent special elements. The product may have a fixed list of special characters it believes is complete. However, there may be alternate encodings, or representations that also have the same meaning. For example, the product may filter out a leading slash (/) to prevent absolute path names, but does not account for a tilde (~) followed by a user name, which on some *nix systems could be expanded to an absolute pathname. Alternately, the product might filter a dangerous \"-e\" command-line switch when calling an external program, but it might not account for \"--exec\" or other switches that have the same semantics."
+  },
+  "CWE-77": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Special Elements used in a Command ('Command Injection') The product constructs all or part of a command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended command when it is sent to a downstream component. Many protocols and products have their own custom command language. While OS or shell command strings are frequently discovered and targeted, developers may not realize that these other command languages might also be vulnerable to attacks."
+  },
+  "CWE-770": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Allocation of Resources Without Limits or Throttling The product allocates a reusable resource or group of resources on behalf of an actor without imposing any intended restrictions on the size or number of resources that can be allocated."
+  },
+  "CWE-772": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Missing Release of Resource after Effective Lifetime The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed."
+  },
+  "CWE-776": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion') The product uses XML documents and allows their structure to be defined with a Document Type Definition (DTD), but it does not properly control the number of recursive definitions of entities. If the DTD contains a large number of nested or recursive entities, this can lead to explosive growth of data when parsed, causing a denial of service."
+  },
+  "CWE-777": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Regular Expression without Anchors The product uses a regular expression to perform neutralization, but the regular expression is not anchored and may allow malicious or malformed data to slip through. When performing tasks such as validating against a set of allowed inputs (allowlist), data is examined and possibly modified to ensure that it is well-formed and adheres to a list of safe values. If the regular expression is not anchored, malicious or malformed data may be included before or after any string matching the regular expression. The type of malicious data that is allowed will depend on the context of the application and which anchors are omitted from the regular expression."
+  },
+  "CWE-779": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Logging of Excessive Data The product logs too much information, making log files hard to process and possibly hindering recovery efforts or forensic analysis after an attack. While logging is a good practice in general, and very high levels of logging are appropriate for debugging stages of development, too much logging in a production environment might hinder a system administrator's ability to detect anomalous conditions. This can provide cover for an attacker while attempting to penetrate a system, clutter the audit trail for forensic analysis, or make it more difficult to debug problems in a production environment."
+  },
+  "CWE-78": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') The product constructs all or part of an OS command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended OS command when it is sent to a downstream component. This weakness can lead to a vulnerability in environments in which the attacker does not have direct access to the operating system, such as in web applications. Alternately, if the weakness occurs in a privileged program, it could allow the attacker to specify commands that normally would not be accessible, or to call alternate commands with privileges that the attacker does not have. The problem is exacerbated if the compromised process does not follow the principle of least privilege, because the attacker-controlled commands may run with special system privileges that increases the amount of damage.\n\n\nThere are at least two subtypes of OS command injection:\n\n\n  - The application intends to execute a single, fixed program that is under its own control. It intends to use externally-supplied inputs as arguments to that program. For example, the program might use system(\"nslookup [HOSTNAME]\") to run nslookup and allow the user to supply a HOSTNAME, which is used as an argument. Attackers cannot prevent nslookup from executing. However, if the program does not remove command separators from the HOSTNAME argument, attackers could place the separators into the arguments, which allows them to execute their own program after nslookup has finished executing.\n\n  - The application accepts an input that it uses to fully select which program to run, as well as which commands to use. The application simply redirects this entire command to the operating system. For example, the program might use \"exec([COMMAND])\" to execute the [COMMAND] that was supplied by the user. If the COMMAND is under attacker control, then the attacker can execute arbitrary commands or programs. If the command is being executed using functions like exec() and CreateProcess(), the attacker might not be able to combine multiple commands together in the same line.\n\nFrom a weakness standpoint, these variants represent distinct programmer errors. In the first variant, the programmer clearly intends that input from untrusted parties will be part of the arguments in the command to be executed. In the second variant, the programmer does not intend for the command to be accessible to any untrusted party, but the programmer probably has not accounted for alternate ways in which malicious attackers can provide input."
+  },
+  "CWE-787": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Out-of-bounds Write The product writes data past the end, or before the beginning, of the intended buffer."
+  },
+  "CWE-79": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users. There are many variants of cross-site scripting, characterized by a variety of terms or involving different attack topologies. However, they all indicate the same fundamental weakness: improper neutralization of dangerous input between the adversary and a victim."
+  },
+  "CWE-798": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Hard-coded Credentials The product contains hard-coded credentials, such as a password or cryptographic key. There are two main variations:\n\n\n  - Inbound: the product contains an authentication mechanism that checks the input credentials against a hard-coded set of credentials. In this variant, a default administration account is created, and a simple password is hard-coded into the product and associated with that account. This hard-coded password is the same for each installation of the product, and it usually cannot be changed or disabled by system administrators without manually modifying the program, or otherwise patching the product. It can also be difficult for the administrator to detect.\n\n  - Outbound: the product connects to another system or component, and it contains hard-coded credentials for connecting to that component. This variant applies to front-end systems that authenticate with a back-end service. The back-end service may require a fixed password that can be easily discovered. The programmer may simply hard-code those back-end credentials into the front-end product."
+  },
+  "CWE-80": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special characters such as \"<\", \">\", and \"&\" that could be interpreted as web-scripting elements when they are sent to a downstream component that processes web pages."
+  },
+  "CWE-807": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Reliance on Untrusted Inputs in a Security Decision The product uses a protection mechanism that relies on the existence or values of an input, but the input can be modified by an untrusted actor in a way that bypasses the protection mechanism. Developers may assume that inputs such as cookies, environment variables, and hidden form fields cannot be modified. However, an attacker could change these inputs using customized clients or other attacks. This change might not be detected. When security decisions such as authentication and authorization are made based on the values of these inputs, attackers can bypass the security of the software.\n\n\nWithout sufficient encryption, integrity checking, or other mechanism, any input that originates from an outsider cannot be trusted."
+  },
+  "CWE-829": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Inclusion of Functionality from Untrusted Control Sphere The product imports, requires, or includes executable functionality (such as a library) from a source that is outside of the intended control sphere."
+  },
+  "CWE-83": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Script in Attributes in a Web Page The product does not neutralize or incorrectly neutralizes \"javascript:\" or other URIs from dangerous attributes within tags, such as onmouseover, onload, onerror, or style."
+  },
+  "CWE-830": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Inclusion of Web Functionality from an Untrusted Source The product includes web functionality (such as a web widget) from another domain, which causes it to operate within the domain of the product, potentially granting total access and control of the product to the untrusted source. Including third party functionality in a web-based environment is risky, especially if the source of the functionality is untrusted.\n\n\nEven if the third party is a trusted source, the product may still be exposed to attacks and malicious behavior if that trusted source is compromised, or if the code is modified in transmission from the third party to the product.\n\n\nThis weakness is common in \"mashup\" development on the web, which may include source functionality from other domains. For example, Javascript-based web widgets may be inserted by using '<SCRIPT SRC=\"http://other.domain.here\">' tags, which causes the code to run in the domain of the product, not the remote site from which the widget was loaded. As a result, the included code has access to the local DOM, including cookies and other data that the developer might not want the remote site to be able to access.\n\n\nSuch dependencies may be desirable, or even required, but sometimes programmers are not aware that a dependency exists."
+  },
+  "CWE-833": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Deadlock The product contains multiple threads or executable segments that are waiting for each other to release a necessary lock, resulting in deadlock."
+  },
+  "CWE-834": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Excessive Iteration The product performs an iteration or loop without sufficiently limiting the number of times that the loop is executed. If the iteration can be influenced by an attacker, this weakness could allow attackers to consume excessive resources such as CPU or memory. In many cases, a loop does not need to be infinite in order to cause enough resource consumption to adversely affect the product or its host system; it depends on the amount of resources consumed per iteration."
+  },
+  "CWE-835": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Loop with Unreachable Exit Condition ('Infinite Loop') The product contains an iteration or loop with an exit condition that cannot be reached, i.e., an infinite loop."
+  },
+  "CWE-841": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Enforcement of Behavioral Workflow The product supports a session in which more than one behavior must be performed by an actor, but it does not properly ensure that the actor performs the behaviors in the required sequence. By performing actions in an unexpected order, or by omitting steps, an attacker could manipulate the business logic of the product or cause it to enter an invalid state. In some cases, this can also expose resultant weaknesses.\n\n\nFor example, a file-sharing protocol might require that an actor perform separate steps to provide a username, then a password, before being able to transfer files. If the file-sharing server accepts a password command followed by a transfer command, without any username being provided, the product might still perform the transfer.\n\n\nNote that this is different than CWE-696, which focuses on when the product performs actions in the wrong sequence; this entry is closely related, but it is focused on ensuring that the actor performs actions in the correct sequence.\n\n\nWorkflow-related behaviors include:\n\n\n  - Steps are performed in the expected order.\n\n  - Required steps are not omitted.\n\n  - Steps are not interrupted.\n\n  - Steps are performed in a timely fashion."
+  },
+  "CWE-842": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Placement of User into Incorrect Group The product or the administrator places a user into an incorrect group. If the incorrect group has more access or privileges than the intended group, the user might be able to bypass intended security policy to access unexpected resources or perform unexpected actions. The access-control system might not be able to detect malicious usage of this group membership."
+  },
+  "CWE-843": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Access of Resource Using Incompatible Type ('Type Confusion') The product allocates or initializes a resource such as a pointer, object, or variable using one type, but it later accesses that resource using a type that is incompatible with the original type. When the product accesses the resource using an incompatible type, this could trigger logical errors because the resource does not have expected properties. In languages without memory safety, such as C and C++, type confusion can lead to out-of-bounds memory access.\n\n\nWhile this weakness is frequently associated with unions when parsing data with many different embedded object types in C, it can be present in any application that can interpret the same variable or memory location in multiple ways.\n\n\nThis weakness is not unique to C and C++. For example, errors in PHP applications can be triggered by providing array parameters when scalars are expected, or vice versa. Languages such as Perl, which perform automatic conversion of a variable of one type when it is accessed as if it were another type, can also contain these issues."
+  },
+  "CWE-862": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Missing Authorization The product does not perform an authorization check when an actor attempts to access a resource or perform an action."
+  },
+  "CWE-863": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Incorrect Authorization The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check."
+  },
+  "CWE-88": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') The product constructs a string for a command to be executed by a separate component\nin another control sphere, but it does not properly delimit the\nintended arguments, options, or switches within that command string. When creating commands using interpolation into a string, developers may assume that only the arguments/options that they specify will be processed. This assumption may be even stronger when the programmer has encoded the command in a way that prevents separate commands from being provided maliciously, e.g. in the case of shell metacharacters. When constructing the command, the developer may use whitespace or other delimiters that are required to separate arguments when the command. However, if an attacker can provide an untrusted input that contains argument-separating delimiters, then the resulting command will have more arguments than intended by the developer. The attacker may then be able to change the behavior of the command. Depending on the functionality supported by the extraneous arguments, this may have security-relevant consequences."
+  },
+  "CWE-89": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') The product constructs all or part of an SQL command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended SQL command when it is sent to a downstream component. Without sufficient removal or quoting of SQL syntax in user-controllable inputs, the generated SQL query can cause those inputs to be interpreted as SQL instead of ordinary user data."
+  },
+  "CWE-90": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection') The product constructs all or part of an LDAP query using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended LDAP query when it is sent to a downstream component."
+  },
+  "CWE-908": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Use of Uninitialized Resource The product uses or accesses a resource that has not been initialized. When a resource has not been properly initialized, the product may behave unexpectedly. This may lead to a crash or invalid memory access, but the consequences vary depending on the type of resource and how it is used within the product."
+  },
+  "CWE-91": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "XML Injection (aka Blind XPath Injection) The product does not properly neutralize special elements that are used in XML, allowing attackers to modify the syntax, content, or commands of the XML before it is processed by an end system. Within XML, special elements could include reserved words or characters such as \"<\", \">\", \"\"\", and \"&\", which could then be used to add new data or modify XML syntax."
+  },
+  "CWE-913": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Control of Dynamically-Managed Code Resources The product does not properly restrict reading from or writing to dynamically-managed code resources such as variables, objects, classes, attributes, functions, or executable instructions or statements. Many languages offer powerful features that allow the programmer to dynamically create or modify existing code, or resources used by code such as variables and objects. While these features can offer significant flexibility and reduce development time, they can be extremely dangerous if attackers can directly influence these code resources in unexpected ways."
+  },
+  "CWE-915": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improperly Controlled Modification of Dynamically-Determined Object Attributes The product receives input from an upstream component that specifies multiple attributes, properties, or fields that are to be initialized or updated in an object, but it does not properly control which attributes can be modified. If the object contains attributes that were only intended for internal use, then their unexpected modification could lead to a vulnerability.\n\n\nThis weakness is sometimes known by the language-specific mechanisms that make it possible, such as mass assignment, autobinding, or object injection."
+  },
+  "CWE-918": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Server-Side Request Forgery (SSRF) The web server receives a URL or similar request from an upstream component and retrieves the contents of this URL, but it does not sufficiently ensure that the request is being sent to the expected destination."
+  },
+  "CWE-922": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Insecure Storage of Sensitive Information The product stores sensitive information without properly limiting read or write access by unauthorized actors. If read access is not properly restricted, then attackers can steal the sensitive information. If write access is not properly restricted, then attackers can modify and possibly delete the data, causing incorrect results and possibly a denial of service."
+  },
+  "CWE-93": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of CRLF Sequences ('CRLF Injection') The product uses CRLF (carriage return line feeds) as a special element, e.g. to separate lines or records, but it does not neutralize or incorrectly neutralizes CRLF sequences from inputs."
+  },
+  "CWE-94": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Control of Generation of Code ('Code Injection') The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment."
+  },
+  "CWE-940": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Verification of Source of a Communication Channel The product establishes a communication channel to handle an incoming request that has been initiated by an actor, but it does not properly verify that the request is coming from the expected origin. When an attacker can successfully establish a communication channel from an untrusted origin, the attacker may be able to gain privileges and access unexpected functionality."
+  },
+  "CWE-942": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Permissive Cross-domain Security Policy with Untrusted Domains The product uses a web-client protection\n         mechanism such as a Content Security Policy (CSP) or\n         cross-domain policy file, but the policy includes untrusted\n         domains with which the web client is allowed to\n         communicate. If a cross-domain policy file includes domains that should not be trusted, such as when using wildcards under a high-level domain, then the application could be attacked by these untrusted domains. In many cases, the attack can be launched without the victim even being aware of it."
+  },
+  "CWE-95": {
+    "source": "MITRE_CWE_REST/weakness",
+    "status": "resolved",
+    "text": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes code syntax before using the input in a dynamic evaluation call (e.g. \"eval\")."
+  }
+}

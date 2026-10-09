@@ -1,0 +1,211 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+Resolved 98 packages in 2.16s
+Downloading psycopg2-binary (4.0MiB)
+Downloading ihatemoney (1.9MiB)
+Downloading setuptools (1.2MiB)
+Downloading sqlalchemy (3.2MiB)
+Downloading cryptography (3.8MiB)
+Downloading pygments (1.1MiB)
+Downloading ruff (13.2MiB)
+Downloading sphinx (3.7MiB)
+Downloading babel (9.1MiB)
+ Downloaded pygments
+ Downloaded setuptools
+ Downloaded ihatemoney
+ Downloaded sqlalchemy
+ Downloaded sphinx
+ Downloaded cryptography
+ Downloaded psycopg2-binary
+ Downloaded babel
+ Downloaded ruff
+Prepared 69 packages in 31.08s
+Installed 98 packages in 417ms
+ + alabaster==1.0.0
+ + alembic==1.13.3
+ + aniso8601==9.0.1
+ + babel==2.16.0
+ + backports-tarfile==1.2.0
+ + blinker==1.9.0
+ + build==1.2.2
+ + cachetools==6.2.4
+ + certifi==2024.8.30
+ + cffi==1.17.1
+ + charset-normalizer==3.3.2
+ + click==8.1.7
+ + colorama==0.4.6
+ + commonmark==0.9.1
+ + cryptography==43.0.1
+ + deprecated==1.2.14
+ + dnspython==2.6.1
+ + docutils==0.22.4
+ + email-validator==2.3.0
+ + flask==3.1.2
+ + flask-babel==4.0.0
+ + flask-cors==6.0.2
+ + flask-limiter==4.1.1
+ + flask-mail==0.10.0
+ + flask-migrate==4.1.0
+ + flask-restful==0.3.10
+ + flask-sqlalchemy==3.1.1
+ + flask-talisman==1.1.0
+ + flask-wtf==1.2.2
+ + greenlet==3.1.1
+ + idna==3.10
+ + ihatemoney==7.1.1
+ + imagesize==1.4.1
+ + importlib-metadata==8.5.0
+ + importlib-resources==6.4.5
+ + iniconfig==2.0.0
+ + isort==7.0.0
+ + itsdangerous==2.2.0
+ + jaraco-classes==3.4.0
+ + jaraco-context==6.0.1
+ + jaraco-functools==4.1.0
+ + jeepney==0.8.0
+ + jinja2==3.1.6
+ + keyring==25.4.1
+ + limits==3.13.0
+ + mako==1.3.5
+ + markdown-it-py==4.0.0
+ + mdit-py-plugins==0.5.0
+ + mdurl==0.1.2
+ + more-itertools==10.5.0
+ + myst-parser==5.0.0
+ + nh3==0.2.18
+ + ordered-set==4.1.0
+ + packaging==24.1
+ + pkginfo==1.10.0
+ + pluggy==1.5.0
+ + psycopg2-binary==2.9.11
+ + pycparser==2.22
+ + pygments==2.18.0
+ + pymysql==1.1.2
+ + pyproject-hooks==1.2.0
+ + pytest==9.0.2
+ + pytest-flask==1.3.0
+ + python-dateutil==2.9.0.post0
+ + pytz==2024.2
+ + pywin32-ctypes==0.2.3
+ + pyyaml==6.0.2
+ + qrcode==8.2
+ + readme-renderer==43.0
+ + requests==2.32.5
+ + requests-toolbelt==1.0.0
+ + rfc3986==2.0.0
+ + rich==12.6.0
+ + roman-numerals==4.1.0
+ + ruff==0.14.13
+ + secretstorage==3.3.3
+ + setuptools==75.1.0
+ + six==1.16.0
+ + snowballstemmer==2.2.0
+ + sphinx==9.0.4
+ + sphinxcontrib-applehelp==2.0.0
+ + sphinxcontrib-devhelp==2.0.0
+ + sphinxcontrib-htmlhelp==2.1.0
+ + sphinxcontrib-jsmath==1.0.1
+ + sphinxcontrib-qthelp==2.0.0
+ + sphinxcontrib-serializinghtml==2.0.0
+ + sqlalchemy==2.0.45
+ + sqlalchemy-continuum==1.5.2
+ + twine==5.1.1
+ + typing-extensions==4.12.2
+ + urllib3==2.2.3
+ + vermin==1.8.0
+ + werkzeug==3.1.5
+ + wheel==0.45.1
+ + wrapt==1.16.0
+ + wtforms==3.2.1
+ + zest-releaser==9.8.0
+ + zipp==3.20.2
+ONE_SHOT_INSTALL_OK
+
+Testing /work/spiral-project__ihatemoney...
+
+Tested 100 dependencies for known issues, found 21 issues, 195 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade cryptography@43.0.1 to cryptography@48.0.1 to fix
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@43.0.1
+    introduced by cryptography@43.0.1 and 4 other path(s)
+  ✗ Missing Report of Error Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-8715586] in cryptography@43.0.1
+    introduced by cryptography@43.0.1 and 4 other path(s)
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@43.0.1
+    introduced by cryptography@43.0.1 and 4 other path(s)
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@43.0.1
+    introduced by cryptography@43.0.1 and 4 other path(s)
+
+  Upgrade flask@3.1.2 to flask@3.1.3 to fix
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-FLASK-15322678] in flask@3.1.2
+    introduced by flask@3.1.2 and 20 other path(s)
+
+  Upgrade idna@3.10 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.10
+    introduced by idna@3.10 and 12 other path(s)
+
+  Upgrade jaraco.context@6.0.1 to jaraco.context@6.1.0 to fix
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-JARACOCONTEXT-14928153] in jaraco.context@6.0.1
+    introduced by jaraco.context@6.0.1 and 3 other path(s)
+
+  Upgrade mako@1.3.5 to mako@1.3.12 to fix
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MAKO-16098253] in mako@1.3.5
+    introduced by mako@1.3.5 and 3 other path(s)
+  ✗ Directory Traversal [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MAKO-16439021] in mako@1.3.5
+    introduced by mako@1.3.5 and 3 other path(s)
+
+  Upgrade pygments@2.18.0 to pygments@2.20.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYGMENTS-15746419] in pygments@2.18.0
+    introduced by pygments@2.18.0 and 11 other path(s)
+
+  Upgrade requests@2.32.5 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.5
+    introduced by requests@2.32.5 and 9 other path(s)
+
+  Upgrade urllib3@2.2.3 to urllib3@2.7.0 to fix
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-10390193] in urllib3@2.2.3
+    introduced by urllib3@2.2.3 and 12 other path(s)
+  ✗ Open Redirect [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-10390194] in urllib3@2.2.3
+    introduced by urllib3@2.2.3 and 12 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192442] in urllib3@2.2.3
+    introduced by urllib3@2.2.3 and 12 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14192443] in urllib3@2.2.3
+    introduced by urllib3@2.2.3 and 12 other path(s)
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-14896210] in urllib3@2.2.3
+    introduced by urllib3@2.2.3 and 12 other path(s)
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.2.3
+    introduced by urllib3@2.2.3 and 12 other path(s)
+
+  Upgrade werkzeug@3.1.5 to werkzeug@3.1.6 to fix
+  ✗ Improper Handling of Windows Device Names [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-WERKZEUG-15322677] in werkzeug@3.1.5
+    introduced by werkzeug@3.1.5 and 25 other path(s)
+
+  Pin setuptools@75.1.0 to setuptools@83.0.0 to fix
+  ✗ Improper Handling of Unicode Encoding (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-17895075] in setuptools@75.1.0
+    introduced by zest.releaser@9.8.0 > setuptools@75.1.0
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-9964606] in setuptools@75.1.0
+    introduced by zest.releaser@9.8.0 > setuptools@75.1.0
+
+  Pin wheel@0.45.1 to wheel@0.46.2 to fix
+  ✗ Directory Traversal [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-WHEEL-15053866] in wheel@0.45.1
+    introduced by zest.releaser@9.8.0 > wheel@0.45.1
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      spiral-project__ihatemoney
+Open source:       no
+Project path:      /work/spiral-project__ihatemoney
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

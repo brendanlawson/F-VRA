@@ -1,0 +1,368 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because impacket==0.11.0 has no usable wheels and you require
+      impacket==0.11.0, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `impacket` because building from source is disabled for all packages (i.e., with `--no-build`)ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 6ms
+ + aiohappyeyeballs==2.6.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 91ms
+ + aiohttp==3.13.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + aiosignal==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading apsw (6.9MiB)
+ Downloaded apsw
+Prepared 1 package in 2.33s
+Installed 1 package in 28ms
+ + apsw==3.51.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 273ms
+Installed 1 package in 6ms
+ + argparse==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 5ms
+ + async-timeout==5.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 327ms
+Installed 1 package in 11ms
+ + asyncio==3.4.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 25ms
+ + attrs==25.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 9ms
+ + bcrypt==5.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + blinker==1.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 5ms
+ + certifi==2026.2.25
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 12ms
+ + cffi==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 394ms
+Installed 1 package in 16ms
+ + charset-normalizer==3.4.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 39ms
+ + click==8.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 13ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 127ms
+ + cryptography==41.0.7
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 44ms
+ + dill==0.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 41ms
+ + dnspython==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 387ms
+Installed 1 package in 50ms
+ + dsinternals==1.2.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 22ms
+ + flask==3.1.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 8ms
+ + frozenlist==1.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 120ms
+ + future==1.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 70ms
+ + greenlet==3.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + idna==3.11
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because impacket==0.11.0 has no usable wheels and you require
+      impacket==0.11.0, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `impacket` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL impacket==0.11.0
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because ipaddr==2.2.0 has no usable wheels and you require
+      ipaddr==2.2.0, we can conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `ipaddr` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL ipaddr==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 6ms
+ + itsdangerous==2.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 472ms
+Installed 1 package in 45ms
+ + ldap3==2.9.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 225ms
+Installed 1 package in 9ms
+ + ldapdomaindump==0.10.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 14ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 13ms
+ + multidict==6.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 390ms
+Installed 1 package in 18ms
+ + multiprocess==0.70.19
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading netaddr (2.1MiB)
+ Downloaded netaddr
+Prepared 1 package in 633ms
+Installed 1 package in 21ms
+ + netaddr==0.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 351ms
+Installed 1 package in 16ms
+ + paramiko==3.5.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 15ms
+ + propcache==0.4.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 259ms
+Installed 1 package in 10ms
+ + py3dns==4.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 318ms
+Installed 1 package in 14ms
+ + pyasn1==0.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 10ms
+ + pycparser==3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 238ms
+ + pycryptodomex==3.23.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 14ms
+ + pymysql==1.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 47ms
+ + pynacl==1.6.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 310ms
+Installed 1 package in 6ms
+ + pyopenssl==23.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 8ms
+ + pysocks==1.7.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 14ms
+ + pyyaml==6.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 280ms
+Installed 1 package in 11ms
+ + requests==2.33.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 13ms
+ + six==1.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 251ms
+ + sqlalchemy==2.0.48
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 236ms
+Installed 1 package in 6ms
+ + texttable==1.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 6ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 13ms
+ + urllib3==2.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 36ms
+ + uvloop==0.21.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 373ms
+Installed 1 package in 18ms
+ + werkzeug==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 7ms
+ + yarl==1.23.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + zipp==3.23.0
+
+Testing /work/OWASP__Nettacker...
+
+Tested 52 dependencies for known issues, found 39 issues, 80 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade aiohttp@3.13.3 to aiohttp@3.14.1 to fix
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873704] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873731] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873733] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873734] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Information Exposure [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873735] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Response Splitting [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873736] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873737] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873739] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Origin Validation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146580] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Insufficiently Protected Credentials (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342365] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ HTTP Response Splitting (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342380] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Exposure of Private Personal Information to an Unauthorized Actor (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342393] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Improper Validation of Certificate with Host Mismatch (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342400] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Improper Resource Shutdown or Release (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342415] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873732] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Server-side Request Forgery (SSRF) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-15873738] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Deserialization of Untrusted Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17146576] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342364] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342401] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Improper Handling of Highly Compressed Data (Data Amplification) (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342413] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+  ✗ Allocation of Resources Without Limits or Throttling (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-AIOHTTP-17342416] in aiohttp@3.13.3
+    introduced by aiohttp@3.13.3
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 1 other path(s)
+
+  Upgrade cryptography@41.0.7 to cryptography@48.0.1 to fix
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6592767] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6913422] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Denial of Service (DoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6050294] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6157248] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ NULL Pointer Dereference [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6210214] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ NULL Pointer Dereference [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6261585] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Observable Timing Discrepancy [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-6126975] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+  ✗ Type Confusion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-7886970] in cryptography@41.0.7
+    introduced by cryptography@41.0.7 and 3 other path(s)
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 3 other path(s)
+
+  Upgrade paramiko@3.5.1 to paramiko@5.0.0 to fix
+  ✗ Use of a Broken or Risky Cryptographic Algorithm [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PARAMIKO-16425764] in paramiko@3.5.1
+    introduced by paramiko@3.5.1
+
+  Upgrade pyopenssl@23.3.0 to pyopenssl@26.0.0 to fix
+  ✗ Uncontrolled Resource Consumption ('Resource Exhaustion') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-6592766] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 1 other path(s)
+  ✗ Not Failing Securely ('Failing Open') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674458] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 1 other path(s)
+  ✗ Resource Exhaustion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-6157250] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 1 other path(s)
+  ✗ Buffer Overflow [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674459] in pyopenssl@23.3.0
+    introduced by pyopenssl@23.3.0 and 1 other path(s)
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      OWASP__Nettacker
+Open source:       no
+Project path:      /work/OWASP__Nettacker
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

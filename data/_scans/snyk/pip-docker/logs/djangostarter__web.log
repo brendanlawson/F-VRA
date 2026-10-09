@@ -1,0 +1,645 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3.12
+Creating virtual environment with seed packages at: /venv
+ + pip==26.1.2
+Activate with: source venv/bin/activate
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because py-ubjson==0.16.1 has no usable wheels and you require
+      py-ubjson==0.16.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `py-ubjson` because building from source is disabled for all packages (i.e., with `--no-build`)ONE_SHOT_FAILED/TIMEOUT -> per-line tolerant install
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 7ms
+ + annotated-types==0.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 26ms
+ + anyio==4.12.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 347ms
+Installed 1 package in 7ms
+ + argon2-cffi-bindings==25.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 255ms
+Installed 1 package in 17ms
+ + argon2-cffi==25.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 255ms
+Installed 1 package in 17ms
+ + asgiref==3.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 22ms
+ + attrs==25.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading autobahn (2.1MiB)
+ Downloaded autobahn
+Prepared 1 package in 3.86s
+Installed 1 package in 70ms
+ + autobahn==25.12.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 268ms
+Installed 1 package in 12ms
+ + automat==25.4.16
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 413ms
+Installed 1 package in 8ms
+ + cbor2==5.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 13ms
+ + certifi==2026.1.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 20ms
+ + cffi==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 29ms
+ + charset-normalizer==3.4.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 21ms
+ + click==8.3.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 15ms
+ + colorama==0.4.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 257ms
+Installed 1 package in 9ms
+ + constantly==23.10.4
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 89ms
+ + cryptography==46.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 292ms
+Installed 1 package in 15ms
+ + daphne==4.2.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading django-allauth (1.7MiB)
+ Downloaded django-allauth
+Prepared 1 package in 835ms
+Installed 1 package in 339ms
+ + django-allauth==65.14.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 238ms
+Installed 1 package in 12ms
+ + django-cors-headers==4.9.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 510ms
+Installed 1 package in 35ms
+ + django-debug-toolbar==6.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading django-jazzmin (2.0MiB)
+ Downloaded django-jazzmin
+Prepared 1 package in 850ms
+Installed 1 package in 59ms
+ + django-jazzmin==3.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading django-ninja (2.3MiB)
+ Downloaded django-ninja
+Prepared 1 package in 801ms
+Installed 1 package in 24ms
+ + django-ninja==1.5.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 327ms
+Installed 1 package in 26ms
+ + django-otp==1.7.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 756ms
+Installed 1 package in 5ms
+ + django-ratelimit==4.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 275ms
+Installed 1 package in 19ms
+ + django-redis==6.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 1.16s
+Installed 1 package in 27ms
+ + django-simple-captcha==0.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 306ms
+Installed 1 package in 20ms
+ + django-simple-history==3.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 239ms
+Installed 1 package in 5ms
+ + django-split-settings==1.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 250ms
+Installed 1 package in 8ms
+ + django-watchfiles==1.4.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Downloading django (8.0MiB)
+ Downloaded django
+Prepared 1 package in 23.01s
+Installed 1 package in 1.15s
+ + django==6.0.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Downloading faker (1.9MiB)
+ Downloaded faker
+Prepared 1 package in 7.57s
+Installed 1 package in 261ms
+ + faker==40.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 7ms
+Downloading granian (3.2MiB)
+ Downloaded granian
+Prepared 1 package in 5.37s
+Installed 1 package in 18ms
+ + granian==2.6.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 314ms
+Installed 1 package in 12ms
+ + gunicorn==23.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 12ms
+ + h11==0.16.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 269ms
+Installed 1 package in 12ms
+ + h2==4.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 264ms
+Installed 1 package in 10ms
+ + hpack==4.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 323ms
+Installed 1 package in 28ms
+ + hypercorn==0.18.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 256ms
+Installed 1 package in 5ms
+ + hyperframe==6.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 302ms
+Installed 1 package in 7ms
+ + hyperlink==21.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 14ms
+ + idna==3.11
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 711ms
+Installed 1 package in 15ms
+ + incremental==24.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 18ms
+ + iniconfig==2.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 44ms
+ + jinja2==3.1.6
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 333ms
+Installed 1 package in 12ms
+ + markdown==3.10
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 21ms
+ + markupsafe==3.0.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 543ms
+Installed 1 package in 9ms
+ + msgpack==1.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 253ms
+Installed 1 package in 8ms
+ + optionaldict==0.1.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 8ms
+Prepared 1 package in 380ms
+Installed 1 package in 7ms
+ + orjson==3.11.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 300ms
+Installed 1 package in 12ms
+ + packaging==25.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Downloading pillow (6.7MiB)
+ Downloaded pillow
+Prepared 1 package in 17.97s
+Installed 1 package in 66ms
+ + pillow==12.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 14ms
+ + pluggy==1.6.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 288ms
+Installed 1 package in 12ms
+ + priority==2.0.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Prepared 1 package in 316ms
+Installed 1 package in 11ms
+ + prometheus-client==0.24.1
+Using Python 3.12.13 environment at: /venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because py-ubjson==0.16.1 has no usable wheels and you require
+      py-ubjson==0.16.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `py-ubjson` because building from source is disabled for all packages (i.e., with `--no-build`)FAIL_INSTALL py-ubjson==0.16.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Installed 1 package in 71ms
+ + pyasn1-modules==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 31ms
+ + pyasn1==0.6.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 50ms
+ + pycparser==2.23
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Downloading pycryptodome (2.2MiB)
+ Downloaded pycryptodome
+Prepared 1 package in 778ms
+Installed 1 package in 116ms
+ + pycryptodome==3.23.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 14ms
+Installed 1 package in 19ms
+ + pydantic-core==2.41.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Installed 1 package in 63ms
+ + pydantic==2.12.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Installed 1 package in 228ms
+ + pygments==2.19.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 270ms
+Installed 1 package in 13ms
+ + pyjwt==2.10.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 358ms
+Installed 1 package in 15ms
+ + pyopenssl==25.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 13ms
+ + pytest-asyncio==1.3.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 4ms
+Prepared 1 package in 234ms
+Installed 1 package in 7ms
+ + pytest-django==4.11.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 471ms
+Installed 1 package in 23ms
+ + pytest==9.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 398ms
+Installed 1 package in 23ms
+ + python-dateutil==2.9.0.post0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 286ms
+Installed 1 package in 21ms
+ + qrcode==8.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 428ms
+Installed 1 package in 30ms
+ + redis==7.1.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 213ms
+Installed 1 package in 19ms
+ + requests==2.32.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 1.26s
+Installed 1 package in 12ms
+ + service-identity==24.2.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 218ms
+Installed 1 package in 7ms
+ + six==1.17.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 277ms
+Installed 1 package in 12ms
+ + sqlparse==0.5.5
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Prepared 1 package in 219ms
+Installed 1 package in 6ms
+ + tblib==3.2.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 1ms
+Downloading twisted (3.1MiB)
+ Downloaded twisted
+Prepared 1 package in 9.89s
+Installed 1 package in 250ms
+ + twisted==25.5.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 263ms
+Installed 1 package in 12ms
+ + txaio==25.12.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Installed 1 package in 12ms
+ + typing-extensions==4.15.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 14ms
+ + typing-inspection==0.4.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 1.03s
+Installed 1 package in 143ms
+ + tzdata==2025.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 248ms
+Installed 1 package in 5ms
+ + u-msgpack-python==2.8.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 273ms
+Installed 1 package in 6ms
+ + ujson==5.11.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 250ms
+Installed 1 package in 40ms
+ + urllib3==2.6.3
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Installed 1 package in 40ms
+ + uvicorn==0.40.0
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 6ms
+Installed 1 package in 35ms
+ + watchfiles==1.1.1
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 452ms
+Installed 1 package in 29ms
+ + wechatpy==1.8.18
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 3ms
+Prepared 1 package in 255ms
+Installed 1 package in 7ms
+ + wsproto==1.3.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 2ms
+Prepared 1 package in 253ms
+Installed 1 package in 6ms
+ + xmltodict==1.0.2
+Using Python 3.12.13 environment at: /venv
+Resolved 1 package in 5ms
+Prepared 1 package in 453ms
+Installed 1 package in 18ms
+ + zope-interface==8.2
+
+Testing /work/djangostarter__web...
+
+Tested 89 dependencies for known issues, found 69 issues, 373 vulnerable paths.
+
+
+Issues to fix by upgrading dependencies:
+
+  Upgrade cbor2@5.8.0 to cbor2@5.9.0 to fix
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CBOR2-15762225] in cbor2@5.8.0
+    introduced by cbor2@5.8.0 and 2 other path(s)
+
+  Upgrade click@8.3.1 to click@8.3.3 to fix
+  ✗ Command Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CLICK-16347201] in click@8.3.1
+    introduced by click@8.3.1 and 2 other path(s)
+
+  Upgrade cryptography@46.0.3 to cryptography@48.0.1 to fix
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15809188] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 4 other path(s)
+  ✗ Out-of-bounds Write [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15953315] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 4 other path(s)
+  ✗ Insufficient Verification of Data Authenticity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-15263096] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 4 other path(s)
+  ✗ Out-of-bounds Read (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-CRYPTOGRAPHY-17344551] in cryptography@46.0.3
+    introduced by cryptography@46.0.3 and 4 other path(s)
+
+  Upgrade daphne@4.2.1 to daphne@4.2.2 to fix
+  ✗ HTTP Request Smuggling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DAPHNE-17675111] in daphne@4.2.1
+    introduced by daphne@4.2.1
+  ✗ Allocation of Resources Without Limits or Throttling (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DAPHNE-17675131] in daphne@4.2.1
+    introduced by daphne@4.2.1
+
+  Upgrade django@6.0.1 to django@6.0.7 to fix
+  ✗ Race Condition [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15371388] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ User Impersonation [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923569] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-16425745] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Use of Persistent Cookies Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-16425761] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Improper Handling of Case Sensitivity [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151726] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Cleartext Transmission of Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151727] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Improper Verification of Cryptographic Signature [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151728] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Incomplete Comparison with Missing Factors [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151772] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Use of Cache Containing Sensitive Information [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17151780] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Use of Cache Containing Sensitive Information (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881428] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198929] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Timing Attack [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198930] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15199281] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15371389] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Missing Authorization [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923535] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923566] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Inefficient Algorithmic Complexity [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923567] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Missing Authorization [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15923568] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Improper Handling of Length Parameter Inconsistency [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-16425762] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Improper Neutralization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881426] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ Buffer Access with Incorrect Length Value (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-17881427] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ SQL Injection [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15183335] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198931] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+  ✗ SQL Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGO-15198932] in django@6.0.1
+    introduced by django@6.0.1 and 10 other path(s)
+
+  Upgrade django-allauth@65.14.0 to django-allauth@65.14.1 to fix
+  ✗ Open Redirect [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-DJANGOALLAUTH-15426544] in django-allauth@65.14.0
+    introduced by django-allauth@65.14.0
+
+  Upgrade granian@2.6.1 to granian@2.7.4 to fix
+  ✗ Improper Handling of Exceptional Conditions [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GRANIAN-16635309] in granian@2.6.1
+    introduced by granian@2.6.1
+  ✗ Uncaught Exception [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-GRANIAN-16635313] in granian@2.6.1
+    introduced by granian@2.6.1
+
+  Upgrade idna@3.11 to idna@3.15 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-IDNA-16769942] in idna@3.11
+    introduced by idna@3.11 and 10 other path(s)
+
+  Upgrade msgpack@1.1.2 to msgpack@1.2.1 to fix
+  ✗ Use After Free (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-MSGPACK-17391445] in msgpack@1.1.2
+    introduced by msgpack@1.1.2 and 2 other path(s)
+
+  Upgrade orjson@3.11.5 to orjson@3.11.6 to fix
+  ✗ Uncontrolled Recursion [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-ORJSON-15123465] in orjson@3.11.5
+    introduced by orjson@3.11.5
+
+  Upgrade pillow@12.1.0 to pillow@12.3.0 to fix
+  ✗ Command Injection (new) [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824467] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Infinite loop [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419304] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Integer Overflow or Wraparound [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419307] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Heap-based Buffer Overflow [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419315] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Out-of-bounds Write [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-15265439] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16032068] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Out-of-bounds Write [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-16419303] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824465] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824466] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824468] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+  ✗ Memory Allocation with Excessive Size Value (new) [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-17824469] in pillow@12.1.0
+    introduced by pillow@12.1.0 and 1 other path(s)
+
+  Upgrade pyasn1@0.6.2 to pyasn1@0.6.3 to fix
+  ✗ Uncontrolled Recursion [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYASN1-15674561] in pyasn1@0.6.2
+    introduced by pyasn1@0.6.2 and 3 other path(s)
+
+  Upgrade pygments@2.19.2 to pygments@2.20.0 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYGMENTS-15746419] in pygments@2.19.2
+    introduced by pygments@2.19.2 and 3 other path(s)
+
+  Upgrade pyjwt@2.10.1 to pyjwt@2.13.0 to fix
+  ✗ Unintended Proxy or Intermediary ('Confused Deputy') [Low Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054901] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+  ✗ Inadequate Encryption Strength [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-11356591] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+  ✗ Allocation of Resources Without Limits or Throttling [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053409] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+  ✗ Improper Cleanup on Thrown Exception [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054465] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+  ✗ Improper Verification of Cryptographic Signature [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17054902] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+  ✗ Improper Verification of Cryptographic Signature [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-15518059] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+  ✗ Improper Authentication [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYJWT-17053408] in pyjwt@2.10.1
+    introduced by pyjwt@2.10.1
+
+  Upgrade pyopenssl@25.3.0 to pyopenssl@26.0.0 to fix
+  ✗ Not Failing Securely ('Failing Open') [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674458] in pyopenssl@25.3.0
+    introduced by pyopenssl@25.3.0
+  ✗ Buffer Overflow [Critical Severity][https://security.snyk.io/vuln/SNYK-PYTHON-PYOPENSSL-15674459] in pyopenssl@25.3.0
+    introduced by pyopenssl@25.3.0
+
+  Upgrade requests@2.32.5 to requests@2.33.0 to fix
+  ✗ Insecure Temporary File [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-REQUESTS-15763443] in requests@2.32.5
+    introduced by requests@2.32.5 and 1 other path(s)
+
+  Upgrade twisted@25.5.0 to twisted@26.4.0rc2 to fix
+  ✗ Inefficient Algorithmic Complexity [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TWISTED-16424743] in twisted@25.5.0
+    introduced by twisted@25.5.0 and 1 other path(s)
+
+  Upgrade ujson@5.11.0 to ujson@5.13.0 to fix
+  ✗ Incorrect Authorization (new) [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-UJSON-17391481] in ujson@5.11.0
+    introduced by ujson@5.11.0 and 2 other path(s)
+  ✗ Integer Overflow or Wraparound [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-UJSON-15682605] in ujson@5.11.0
+    introduced by ujson@5.11.0 and 2 other path(s)
+  ✗ Missing Release of Memory after Effective Lifetime [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-UJSON-15682606] in ujson@5.11.0
+    introduced by ujson@5.11.0 and 2 other path(s)
+  ✗ Missing Release of Memory after Effective Lifetime [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-UJSON-16643463] in ujson@5.11.0
+    introduced by ujson@5.11.0 and 2 other path(s)
+
+  Upgrade urllib3@2.6.3 to urllib3@2.7.0 to fix
+  ✗ Insertion of Sensitive Information Into Sent Data [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642024] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 2 other path(s)
+  ✗ Decompression Bomb [High Severity][https://security.snyk.io/vuln/SNYK-PYTHON-URLLIB3-16642059] in urllib3@2.6.3
+    introduced by urllib3@2.6.3 and 2 other path(s)
+
+
+Issues with no direct upgrade or patch:
+  ✗ Arbitrary Command Injection [Medium Severity][https://security.snyk.io/vuln/SNYK-PYTHON-TWISTED-12671201] in twisted@25.5.0
+    introduced by twisted@25.5.0 and 1 other path(s)
+  No upgrade or patch available
+
+
+
+Organization:      wuwuyn
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      djangostarter__web
+Open source:       no
+Project path:      /work/djangostarter__web
+Licenses:          enabled
+
+
+
+You have reached your monthly limit of 200 private tests for your wuwuyn org.
+To learn more about our plans and increase your tests limit visit https://snyk.io/plans.

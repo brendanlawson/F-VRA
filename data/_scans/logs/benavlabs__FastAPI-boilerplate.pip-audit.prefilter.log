@@ -1,0 +1,39 @@
+--- uv dry-run (skipped=0) rc=1 ---
+removing star after comparison operator other than equal and not equal (before: `>3.5.*, <4`; after: `>3.5, <4`)
+WARN Fixing invalid version specifier by removing star after comparison operator other than equal and not equal (before: `>3.6.*, <4`; after: `>3.6, <4`)
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because uvloop==0.22.1 has no usable wheels and you require
+      uvloop==0.22.1, we can conclude that your requirements are
+      unsatisfiable.
+
+hint: Wheels are required for `uvloop` because building from source is disabled for all packages (i.e., with `--no-build`)
+
+--- uv dry-run (skipped=1) rc=0 ---
+s==2.33.1
+ + rich-toolkit==0.19.7
+ + rignore==0.7.6
+ + ruff==0.15.12
+ + sentry-sdk==2.59.0
+ + shellingham==1.5.4
+ + sqladmin==0.26.0
+ + sqlalchemy==2.0.49
+ + sqlalchemy-utils==0.41.2
+ + starlette==1.0.0
+ + taskiq==0.12.4
+ + taskiq-aio-pika==0.6.0
+ + taskiq-dependencies==1.5.7
+ + taskiq-redis==1.2.2
+ + testcontainers==4.14.2
+ + typer==0.25.1
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + tzdata==2026.2
+ + ua-parser==1.0.2
+ + ua-parser-builtins==202605
+ + user-agents==2.2.0
+ + uvicorn==0.46.0
+ + watchfiles==1.1.1
+ + websockets==16.0
+ + wrapt==2.1.2
+ + wtforms==3.1.2
+ + yarl==1.23.0

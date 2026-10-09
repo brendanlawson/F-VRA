@@ -1,0 +1,8 @@
+--- uv dry-run (skipped=0) rc=1 ---
+Using Python 3.13.11 environment at: tools\.venv
+  Ã— No solution found when resolving dependencies:
+  â•°â”€â–¶ Because aiohttp{python_full_version < '4'}==3.9.2 has no usable wheels
+      and you require aiohttp{python_full_version < '4'}==3.9.2, we can
+      conclude that your requirements are unsatisfiable.
+
+hint: Wheels are required for `aiohttp` because building from source is disabled for all packages (i.e., with `--no-build`)

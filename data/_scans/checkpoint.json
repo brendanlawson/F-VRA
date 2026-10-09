@@ -1,0 +1,689 @@
+{
+  "alexferl__flask-simpleldap": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 3,
+      "vulns": 4,
+      "vuln_pkgs": 3,
+      "ts": "2026-07-08 21:45:04",
+      "secs": 1.1
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 22,
+      "vulns": 4,
+      "vuln_pkgs": 3,
+      "skipped": [
+        "python-ldap"
+      ],
+      "ts": "2026-07-08 21:46:16",
+      "secs": 56.0
+    }
+  },
+  "rtzll__flask-todolist": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 2,
+      "vulns": 3,
+      "vuln_pkgs": 2,
+      "ts": "2026-07-08 21:45:06",
+      "secs": 1.1
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 36,
+      "vulns": 3,
+      "vuln_pkgs": 2,
+      "skipped": [
+        "flask-todolist"
+      ],
+      "ts": "2026-07-08 21:48:06",
+      "secs": 110.5
+    }
+  },
+  "spiral-project__ihatemoney": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 12,
+      "vulns": 35,
+      "vuln_pkgs": 12,
+      "ts": "2026-07-08 21:45:08",
+      "secs": 2.1
+    },
+    "pip-audit": {
+      "status": "timeout",
+      "skipped": [],
+      "ts": "2026-07-11 10:05:48",
+      "secs": 420.9
+    }
+  },
+  "Amm1rr__WebAI-to-API": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 6,
+      "vulns": 59,
+      "vuln_pkgs": 6,
+      "ts": "2026-07-08 21:55:57",
+      "secs": 11.8
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 67,
+      "vulns": 59,
+      "vuln_pkgs": 6,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:05",
+      "secs": 2.2
+    }
+  },
+  "Cinnamon__kotaemon": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 48,
+      "vulns": 342,
+      "vuln_pkgs": 48,
+      "ts": "2026-07-11 09:08:14",
+      "secs": 68.8
+    },
+    "pip-audit": {
+      "status": "timeout",
+      "skipped": [
+        "chroma-hnswlib",
+        "grpcio-tools",
+        "html2text",
+        "langdetect",
+        "llama-cpp-python",
+        "lxml",
+        "markupsafe",
+        "ml-dtypes",
+        "mmh3",
+        "numpy",
+        "fastembed",
+        "llama-hub"
+      ],
+      "ts": "2026-07-11 09:40:50",
+      "secs": 537.5
+    }
+  },
+  "FuzzyGrim__Yamtrack": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 5,
+      "vulns": 32,
+      "vuln_pkgs": 5,
+      "ts": "2026-07-11 09:19:04",
+      "secs": 14.7
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 75,
+      "vulns": 32,
+      "vuln_pkgs": 5,
+      "ts": "2026-07-11 09:18:49",
+      "secs": 100.3
+    }
+  },
+  "LedFx__LedFx": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 6,
+      "vulns": 30,
+      "vuln_pkgs": 6,
+      "ts": "2026-07-11 09:20:54",
+      "secs": 11.4
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 69,
+      "vulns": 30,
+      "vuln_pkgs": 6,
+      "skipped": [
+        "pyflac",
+        "python-rtmidi"
+      ],
+      "ts": "2026-07-11 09:20:42",
+      "secs": 99.0
+    }
+  },
+  "OWASP__Nettacker": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 5,
+      "vulns": 38,
+      "vuln_pkgs": 5,
+      "ts": "2026-07-11 09:24:50",
+      "secs": 2.1
+    },
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-11 09:24:48",
+      "secs": 41.5
+    }
+  },
+  "Open-LLM-VTuber__Open-LLM-VTuber": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 15,
+      "vulns": 94,
+      "vuln_pkgs": 15,
+      "ts": "2026-07-08 21:56:26",
+      "secs": 4.2
+    },
+    "pip-audit": {
+      "status": "error",
+      "rc": 1,
+      "skipped": [
+        "pyobjc-core",
+        "pyobjc-framework-accessibility",
+        "pyobjc-framework-addressbook",
+        "pyobjc-framework-applicationservices",
+        "pyobjc-framework-audiovideobridging"
+      ],
+      "ts": "2026-07-11 09:44:56",
+      "secs": 245.9
+    }
+  },
+  "benavlabs__FastAPI-boilerplate": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 4,
+      "vulns": 25,
+      "vuln_pkgs": 4,
+      "ts": "2026-07-08 21:56:35",
+      "secs": 2.1
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 102,
+      "vulns": 25,
+      "vuln_pkgs": 4,
+      "skipped": [
+        "uvloop"
+      ],
+      "ts": "2026-07-11 09:46:48",
+      "secs": 111.5
+    }
+  },
+  "djangostarter__web": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 19,
+      "vulns": 89,
+      "vuln_pkgs": 19,
+      "ts": "2026-07-08 21:56:37",
+      "secs": 2.0
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 89,
+      "vulns": 89,
+      "vuln_pkgs": 19,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:09",
+      "secs": 1.4
+    }
+  },
+  "eightBEC__fastapi-ml-skeleton": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 11,
+      "vulns": 48,
+      "vuln_pkgs": 11,
+      "ts": "2026-07-08 21:56:46",
+      "secs": 9.4
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 50,
+      "vulns": 46,
+      "vuln_pkgs": 10,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:10",
+      "secs": 1.2
+    }
+  },
+  "eosphoros-ai__DB-GPT": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 26,
+      "vulns": 184,
+      "vuln_pkgs": 26,
+      "ts": "2026-07-11 09:17:09",
+      "secs": 44.1
+    },
+    "pip-audit": {
+      "status": "timeout",
+      "skipped": [
+        "aiohttp",
+        "blis",
+        "chroma-hnswlib",
+        "numpy",
+        "onnxruntime"
+      ],
+      "ts": "2026-07-11 09:54:41",
+      "secs": 472.9
+    }
+  },
+  "evansd__whitenoise": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 2,
+      "vulns": 10,
+      "vuln_pkgs": 2,
+      "ts": "2026-07-08 21:56:53",
+      "secs": 1.2
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 42,
+      "vulns": 5,
+      "vuln_pkgs": 1,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:14",
+      "secs": 2.0
+    }
+  },
+  "fastapi__asyncer": {
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 6,
+      "vulns": 25,
+      "vuln_pkgs": 6,
+      "ts": "2026-07-08 21:56:55",
+      "secs": 2.2
+    },
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 82,
+      "vulns": 25,
+      "vuln_pkgs": 6,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:16",
+      "secs": 1.4
+    }
+  },
+  "alerta__alerta": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 35,
+      "vulns": 13,
+      "vuln_pkgs": 3,
+      "ts": "2026-07-11 08:48:29",
+      "secs": 71.3
+    },
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 3,
+      "vulns": 13,
+      "vuln_pkgs": 3,
+      "ts": "2026-07-11 08:48:37",
+      "secs": 7.9
+    }
+  },
+  "iktakahiro__dddpy": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 50,
+      "vulns": 23,
+      "vuln_pkgs": 6,
+      "skipped": [
+        "uvloop"
+      ],
+      "ts": "2026-07-11 09:55:47",
+      "secs": 66.4
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "laurentS__slowapi": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 57,
+      "vulns": 75,
+      "vuln_pkgs": 14,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:18",
+      "secs": 1.6
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "marshmallow-code__flask-marshmallow": {
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 57,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:20",
+      "secs": 1.3
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "marshmallow-code__flask-smorest": {
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 58,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:21",
+      "secs": 1.5
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "sloria__environs": {
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 41,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:24",
+      "secs": 1.2
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "sunscrapers__djoser": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 86,
+      "vulns": 91,
+      "vuln_pkgs": 17,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:27",
+      "secs": 1.4
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "teamhide__fastapi-boilerplate": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 51,
+      "vulns": 52,
+      "vuln_pkgs": 11,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:28",
+      "secs": 1.4
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "tinyfish-io__agentql": {
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 53,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:29",
+      "secs": 1.3
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "tomasvotava__fastapi-sso": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 85,
+      "vulns": 4,
+      "vuln_pkgs": 1,
+      "note": "project-path fallback",
+      "ts": "2026-07-10 19:33:31",
+      "secs": 1.6
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:38",
+      "secs": 0.1
+    }
+  },
+  "tropicoo__yt-dlp-bot": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 69,
+      "vulns": 83,
+      "vuln_pkgs": 10,
+      "skipped": [
+        "pyaes",
+        "uvloop",
+        "yt-dlp-bot",
+        "yt-shared"
+      ],
+      "ts": "2026-07-11 10:09:36",
+      "secs": 228.2
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:39",
+      "secs": 0.1
+    }
+  },
+  "yezz123__authx": {
+    "pip-audit": {
+      "status": "error",
+      "rc": 1,
+      "skipped": [],
+      "ts": "2026-07-11 10:10:53",
+      "secs": 76.3
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-10 19:20:39",
+      "secs": 0.1
+    }
+  },
+  "reflex-dev__reflex": {
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 36,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-11 09:25:59",
+      "secs": 69.3
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-11 09:26:08",
+      "secs": 8.6
+    }
+  },
+  "benoitc__gunicorn": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 28,
+      "vulns": 9,
+      "vuln_pkgs": 4,
+      "skipped": [
+        "gunicorn-h1c",
+        "uvloop"
+      ],
+      "ts": "2026-07-11 08:52:53",
+      "secs": 57.0
+    },
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 4,
+      "vulns": 9,
+      "vuln_pkgs": 4,
+      "ts": "2026-07-11 08:52:59",
+      "secs": 6.3
+    }
+  },
+  "Chainlit__chainlit": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 287,
+      "vulns": 180,
+      "vuln_pkgs": 33,
+      "skipped": [
+        "cuid",
+        "literalai",
+        "numpy",
+        "pybars4",
+        "pymeta3",
+        "syncer"
+      ],
+      "ts": "2026-07-11 08:57:10",
+      "secs": 250.6
+    },
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 33,
+      "vulns": 180,
+      "vuln_pkgs": 33,
+      "ts": "2026-07-11 08:57:43",
+      "secs": 33.1
+    }
+  },
+  "Thysrael__Horizon": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 150,
+      "vulns": 64,
+      "vuln_pkgs": 14,
+      "skipped": [
+        "sgmllib3k"
+      ],
+      "ts": "2026-07-11 09:29:38",
+      "secs": 149.0
+    },
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 14,
+      "vulns": 64,
+      "vuln_pkgs": 14,
+      "ts": "2026-07-11 09:30:05",
+      "secs": 27.1
+    }
+  },
+  "ATH-MaaS__Pixelle-MCP": {
+    "pip-audit": {
+      "status": "vulns",
+      "scanned": 179,
+      "vulns": 157,
+      "vuln_pkgs": 22,
+      "skipped": [
+        "cuid",
+        "literalai",
+        "pyperclip",
+        "syncer"
+      ],
+      "ts": "2026-07-11 08:51:37",
+      "secs": 180.5
+    },
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 22,
+      "vulns": 157,
+      "vuln_pkgs": 22,
+      "ts": "2026-07-11 08:51:56",
+      "secs": 18.4
+    }
+  },
+  "milesmcc__shynet": {
+    "pip-audit": {
+      "status": "error",
+      "rc": 1,
+      "skipped": [],
+      "ts": "2026-07-11 09:58:47",
+      "secs": 180.2
+    },
+    "osv-scanner": {
+      "status": "vulns",
+      "scanned": 14,
+      "vulns": 110,
+      "vuln_pkgs": 14,
+      "ts": "2026-07-11 09:24:06",
+      "secs": 13.0
+    }
+  },
+  "sparckles__Robyn": {
+    "pip-audit": {
+      "status": "clean",
+      "scanned": 17,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "skipped": [
+        "uvloop"
+      ],
+      "ts": "2026-07-11 09:27:05",
+      "secs": 57.1
+    },
+    "osv-scanner": {
+      "status": "clean",
+      "scanned": 0,
+      "vulns": 0,
+      "vuln_pkgs": 0,
+      "ts": "2026-07-11 09:27:09",
+      "secs": 4.3
+    }
+  }
+}

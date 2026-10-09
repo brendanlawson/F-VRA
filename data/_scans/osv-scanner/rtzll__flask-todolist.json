@@ -1,0 +1,419 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "C:/Users/admin/Documents/Lab Workplace/f-vra/feagle/_inventory/rtzll__flask-todolist/uv.lock",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "idna",
+            "version": "3.13",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "PYSEC-2026-215",
+                "GHSA-65pc-fj4g-8rjx"
+              ],
+              "aliases": [
+                "CVE-2026-45409",
+                "GHSA-65pc-fj4g-8rjx",
+                "PYSEC-2026-215"
+              ],
+              "max_severity": "6.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/idna/PYSEC-2026-215.yaml"
+                  },
+                  "ecosystem_specific": {},
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "idna",
+                    "purl": "pkg:pypi/idna"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.2",
+                    "0.3",
+                    "0.4",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "2.0",
+                    "2.1",
+                    "2.10",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "3.0",
+                    "3.1",
+                    "3.10",
+                    "3.11",
+                    "3.12",
+                    "3.13",
+                    "3.14",
+                    "3.2",
+                    "3.3",
+                    "3.4",
+                    "3.5",
+                    "3.6",
+                    "3.7",
+                    "3.8",
+                    "3.9"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-45409",
+                "GHSA-65pc-fj4g-8rjx"
+              ],
+              "details": "Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.",
+              "id": "PYSEC-2026-215",
+              "modified": "2026-06-16T16:15:04.639265054Z",
+              "published": "2026-06-05T23:16:43.343Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx"
+                }
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ]
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-65pc-fj4g-8rjx/GHSA-65pc-fj4g-8rjx.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "idna",
+                    "purl": "pkg:pypi/idna"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.2",
+                    "0.3",
+                    "0.4",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "2.0",
+                    "2.1",
+                    "2.10",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "3.0",
+                    "3.1",
+                    "3.10",
+                    "3.11",
+                    "3.12",
+                    "3.13",
+                    "3.14",
+                    "3.2",
+                    "3.3",
+                    "3.4",
+                    "3.5",
+                    "3.6",
+                    "3.7",
+                    "3.8",
+                    "3.9"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-45409",
+                "PYSEC-2026-215"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-05-19T14:34:32Z",
+                "nvd_published_at": "2026-06-05T23:16:43Z",
+                "severity": "MODERATE"
+              },
+              "details": "This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. Payloads such as `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process.\n\n### Impact\nA specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service.\n\n### Patches\nStarting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support).\n\n### Workarounds\nDomain names cannot exceed 253 characters in length, if this length limit is enforced prior to passing the domain to the `idna.encode()` function it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.",
+              "id": "GHSA-65pc-fj4g-8rjx",
+              "modified": "2026-06-16T16:26:11.904403852Z",
+              "published": "2026-05-19T14:34:32Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45409"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/kjd/idna"
+                }
+              ],
+              "related": [
+                "CGA-whrg-4c86-4mh8"
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mako",
+            "version": "1.3.11",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2h4p-vjrc-8xpq"
+              ],
+              "aliases": [
+                "CVE-2026-44307",
+                "GHSA-2h4p-vjrc-8xpq"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.3.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2h4p-vjrc-8xpq/GHSA-2h4p-vjrc-8xpq.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "mako",
+                    "purl": "pkg:pypi/mako"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.2",
+                    "0.1.3",
+                    "0.1.4",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.2.5",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.3.6",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.14",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-44307"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-05-06T21:45:16Z",
+                "nvd_published_at": "2026-05-12T22:16:37Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\nOn Windows, a URI using backslash traversal (e.g. `\\..\\..\\ secret.txt`) bypasses the directory traversal check in `Template.__init__` and the `posixpath`-based normalization in `TemplateLookup.get_template()`, allowing reads of files outside the configured template directory.\n\n\n## Details\n\nThe root cause is a mismatch between `posixpath` (used for URI normalization in `get_template()`) and `os.path` (used for file access via `os.path.isfile()` and validation via `os.path.normpath()` in `Template.__init__`). On Windows, `os.path` is `ntpath`, which treats `\\` as a path separator, while `posixpath` treats it as a literal character.\n\nThe vulnerability chain:\n\n1. `get_template()` strips only leading `/` via `re.sub(r\"^\\/+\", \"\", uri)` and normalizes with `posixpath` — backslash `\\` is treated as a literal character, so `\\..\\ secret.txt` passes through with `..` undetected.\n2. `Template.__init__()` validation uses `os.path.normpath()` — on Windows this resolves `\\..\\ secret.txt` to `\\secret.txt`, which does not start with `..`, so the `startswith(\"..\")` check passes.\n3. `os.path.isfile()` on Windows interprets `\\` as a path separator, resolving the `..` traversal and finding files outside the template directory.\n\n### Affected code\n\n- `mako/lookup.py`: `TemplateLookup.get_template()` uses `posixpath.normpath`/`posixpath.join` for path construction but `os.path.isfile()` for existence check\n- `mako/template.py`: `Template.__init__()` URI validation uses `os.path.normpath()` which on Windows resolves backslash traversal to a form that passes the `startswith(\"..\")` guard\n\n## Impact\n\nIf an application passes user-controlled template names or include paths to `TemplateLookup.get_template()`, an attacker on Windows may be able to load and disclose readable files outside the configured template directory. The primary impact is local file disclosure. If the targeted file contains Mako/Python template syntax, it may also be parsed and executed as a template.\n\n## Remediation\n\nThe fix should normalize backslashes to forward slashes early in the URI processing pipeline, before any path operations, to ensure consistent behavior across platforms.",
+              "id": "GHSA-2h4p-vjrc-8xpq",
+              "modified": "2026-05-13T16:57:35.961261Z",
+              "published": "2026-05-06T21:45:16Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/security/advisories/GHSA-2h4p-vjrc-8xpq"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44307"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/issues/435"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/commit/72e10c573ca0fbcbddd4455abca8ce92a61780d7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sqlalchemy/mako"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sqlalchemy/mako/releases/tag/rel_1_3_12"
+                }
+              ],
+              "related": [
+                "CGA-5v3q-r344-q4xf"
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Mako vulnerable to path traversal via backslash URI on Windows in TemplateLookup"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

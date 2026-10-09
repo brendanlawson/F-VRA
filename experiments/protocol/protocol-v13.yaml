@@ -1,0 +1,138 @@
+schema_version: f_vra.protocol.v13
+protocol_id: f_vra-main-study-v13
+frozen_on: 2026-09-21
+
+entrypoints:
+  include_types:
+    - main
+    - cli
+    - web
+  ignore_directories:
+    - tests
+    - test
+    - docs
+    - examples
+    - example
+    - tutorials
+    - benchmarks
+    - benchmark
+  include_maintenance_scripts: true
+
+environment:
+  dependency_profile: snapshot_lock_universe
+  historical_version_expectations:
+    source: data/interim/resolved_versions/resolved_packages.csv
+    scope: every project-distribution pair present in query_candidates
+    use: audit-only-never-installed
+    require_candidate_claim_match: true
+    rationale: compare the environment reconstructed from the frozen commit with the earlier scanner observation
+  lock_variant_policy: keep-annotation-version-and-mark-environment-lock-variant-mismatch
+  uv_args:
+    - --frozen
+    - --all-groups
+    - --all-extras
+  uv_conflicting_extras_policy: all-workspace-main-groups-without-extras-for-one-valid-environment
+  uv_workspace_scope: all-packages-without-local-install
+  poetry_lock_policy: install-exact-pins-from-original-lock-without-regeneration
+  poetry_marker_environment: linux-x86_64-cpython-target-version
+  poetry_groups: all
+  poetry_extras: all
+  install_local_project_distribution: false
+  legacy_build_overrides:
+    django-allauth==0.45.0: pip-no-use-pep517-no-deps
+    PyYAML==5.4.1: cython-lt-3-build-constraint-no-deps
+  pipfile_include_dev: true
+  requirements_entrypoint: requirements.txt
+  build_network: true
+  build_system_packages:
+    - build-essential
+    - gcc
+    - g++
+    - pkg-config
+    - git
+    - libpq-dev
+    - libldap2-dev
+    - libsasl2-dev
+    - libssl-dev
+    - libffi-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - zlib1g-dev
+    - libjpeg-dev
+    - default-libmysqlclient-dev
+    - portaudio19-dev
+    - libasound2-dev
+    - libsndfile1-dev
+  docker_context_ignore:
+    - .git
+    - .venv
+    - __pycache__
+    - '*.pyc'
+  python_selection:
+    preserve_exact_patch: true
+    poetry_caret_uses_minimum_minor: true
+    choose_lowest_compatible_minor: true
+    general_preference:
+      - '3.8'
+      - '3.9'
+      - '3.10'
+      - '3.11'
+      - '3.12'
+      - '3.13'
+      - '3.14'
+  build_timeout_s: 7200
+  artifact_identity:
+    python_source_hash: python-files-only
+    native_binary_policy: metadata-plus-abi-platform-unknown-boundary
+    wheel_metadata_hash: normalized-WHEEL-excluding-nonsemantic-Generator
+  analysis_network: none
+  cpus: 8
+  memory_gb: 16
+
+backend:
+  project_backend: jarvis
+  package_backend: jarvis
+  jarvis_python: "3.8"
+  ast_runtime: target_python
+  ast_adapter_version: ast-boundary-v7-source-layout-symbol-resolution
+  vf_symbol_resolution:
+    strip_repository_prefix_before_installed_import_root: true
+    infer_missing_class_only_for_unique_function_name_in_module: true
+    ambiguous_symbol_mapping: UNKNOWN_VF_MISMATCH
+  fragment_schema_version: "1"
+  precision: true
+  fragment_timeout_s: 300
+  query_timeout_s: 600
+  witness_display_limit: 100
+
+decisions:
+  values:
+    - REACHABLE
+    - UNREACHABLE
+    - UNKNOWN
+  potentially_reachable_mapping: UNKNOWN
+  incomplete_frontier_mapping: UNKNOWN
+
+oracle:
+  accepted_review_status: accepted
+  target_minimum: 300
+  target_maximum: 400
+  require_reachable_witness: true
+  require_unreachable_complete_frontier: true
+
+workload:
+  fixed_orders:
+    - PROJECT_MAJOR
+    - CVE_MAJOR
+  random_seed_start: 1
+  random_seed_end: 30
+
+statistics:
+  proportion_interval: wilson_95
+  dependent_query_interval: project_cluster_bootstrap_95
+  bootstrap_iterations: 2000
+  bootstrap_seed: 17
+
+
+
+

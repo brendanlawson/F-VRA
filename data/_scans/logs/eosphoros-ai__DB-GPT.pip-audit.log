@@ -1,0 +1,11 @@
+# project: eosphoros-ai__DB-GPT
+# scanner: pip-audit
+# time: Sat Jul 11 09:54:41 2026
+$ C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\tools\.venv\Scripts\pip-audit.exe -r C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\_tmp\eosphoros-ai__DB-GPT.req.txt --no-deps -s osv --progress-spinner off -f json -o C:\Users\admin\Documents\Lab Workplace\f-vra\pyshare\data\_scans\pip-audit\eosphoros-ai__DB-GPT.json
+# exit code: n/a
+# note: TIMEOUT@420s (skipped=['aiohttp', 'blis', 'chroma-hnswlib', 'numpy', 'onnxruntime'])
+=== STDOUT ===
+
+=== STDERR ===
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes

